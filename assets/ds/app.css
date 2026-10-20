@@ -1,0 +1,271 @@
+/* APP LAYER — Angular Material screen UI · approved 2026-10-14
+   Source: material-theme.css and angular-material.css, "APPROVED APP LAYER · 2026-10-14" blocks.
+   Reference: the running plugin dashboard app (Shell, Plugin0, Advisor Dashboard, OFA).
+   For screen UI only. Print, decks and marketing keep the brand tokens in the other files.
+
+   1. --app-* tokens on :root. Namespaced, so nothing in the brand layer reads them.
+   2. Overrides scoped to .app-layer / [data-layer="app"]. Put the class on the Angular app root.
+
+   Type source: contract § 3.3 and apps/shell/src/theme/_type-scale.scss.
+   FONTS: no remote calls. Roboto and Material Symbols Outlined (both variable) are embedded
+   as @font-face in tokens/app-fonts/, imported from styles.css. */
+
+:root {
+  /* Type — Roboto, Phoenix scale */
+  --app-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --app-display-small: 400 28px/36px var(--app-font);
+  --app-headline-medium: 400 20px/28px var(--app-font);
+  --app-headline-small: 400 18px/24px var(--app-font);
+  --app-title-large: 400 16px/24px var(--app-font);
+  --app-title-medium: 500 14px/20px var(--app-font);
+  --app-title-small: 500 12px/18px var(--app-font);
+  --app-body-large: 400 14px/20px var(--app-font);
+  --app-body-medium: 400 13px/18px var(--app-font);
+  --app-body-small: 400 11px/16px var(--app-font);
+  --app-label-large: 500 13px/18px var(--app-font);
+  --app-label-medium: 500 11px/16px var(--app-font);
+  --app-label-small: 500 10px/14px var(--app-font);
+  /* Letter-spacing is 0 on every role. Tracking only where listed below. */
+  --app-label: 700 13px/18px var(--app-font);       /* buttons, uppercase */
+  --app-label-tonal: 500 13px/18px var(--app-font); /* tonal button, sentence case */
+  --app-label-tracking: 0.06em;                     /* buttons */
+  --app-eyebrow: var(--app-label-medium);           /* uppercase, #404040 */
+  --app-eyebrow-tracking: 0.14em;
+  --app-eyebrow-color: #404040;
+  --app-control-label: var(--app-label-small);      /* uppercase */
+  --app-control-label-tracking: 0.08em;
+  --app-tile-title: var(--app-label-medium);        /* uppercase, #404040, 2 lines in 32px */
+  --app-tile-title-tracking: 0.05em;
+  --app-tile-title-color: #404040;
+  --app-tile-title-block: 32px;
+  --app-tile-height: 112px;
+  --app-tile-range: var(--app-body-small);          /* #404040 */
+  --app-tile-figure: 400 18px/1.05 var(--app-font); /* tabular numerals, black; negative = error colour */
+  --app-tile-negative: var(--mat-sys-error, #A50021);
+  --app-tile-info-icon: 16px;
+  --app-side-menu-top: 700 14px/18px var(--app-font); /* uppercase */
+  --app-side-menu-top-tracking: 0.06em;
+  --app-label-tracking-fab-extended: 0.04em;
+
+  /* Icons — Material Symbols Outlined, weight 300 */
+  --app-icon-font: "Material Symbols Outlined";
+  --app-icon-weight: 300;
+
+  /* Corners. Brand rule "0 everywhere" applies to print only. */
+  --app-radius: 6px;               /* cards, panels, fields, menus, dialogs, chips */
+  --app-radius-pill: 9999px;       /* buttons, toggle groups, avatar, badges, progress tracks */
+  --app-radius-field: 4px 4px 0 0; /* filled form field container */
+  --app-radius-fab: 16px;
+  --app-radius-fab-mini: 12px;
+  --app-radius-chart: 4px;         /* single bars, pie and ring arcs */
+  --app-radius-chart-stack: 2px;   /* each stacked-bar segment */
+
+  /* Surfaces */
+  --app-hairline: #E6E6E6;
+  --app-page: #F2F2F2;
+  --app-band: #F7F7F7;
+  --app-card: #FFFFFF;
+  --app-card-padding: 20px;
+  --app-primary-hover: #C13A0D;     /* filled button hover, snack-bar action */
+  --app-primary-container: #FCE9E2; /* text and outlined button hover, active nav item */
+  --app-outline: #929292;           /* outlined button border, field hover underline, toggle outline */
+  --app-surface-high: #E6E6E6;      /* menu-item hover, expansion-header hover, filled card */
+  --app-tooltip-bg: #404040;
+  --app-field-fill: #F2F2F2;
+  --app-menu-panel: #F2F2F2;
+  --app-tonal-container: #000000;  /* black, replaces navy tint 2026-10-14 */
+  --app-on-tonal: #FFFFFF;
+  --app-text: #000000;
+  --app-text-secondary: #404040;
+  /* Material elevation 2 — menus, selects, autocomplete, calendar, filter panels. No scrim. */
+  --app-elevation-2: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  /* Material elevation 1 — elevated button, raised card, expansion panel */
+  --app-elevation-1: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  --app-scrim: rgba(0,0,0,.32);    /* dialogs only — Material default backdrop */
+  --app-elevation-dialog: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+
+  /* Density −2 */
+  --app-density: -2; /* @kind other */
+  --app-button-height: 32px;
+  --app-field-height: 48px;
+  --app-chip-height: 24px;
+  --app-chip-outline: #E6E6E6;
+  --app-chip-selected-bg: #000000;
+  --app-chip-selected-fg: #FFFFFF;
+  --app-icon-button: 40px;
+  --app-icon-button-glyph: 24px;
+  --app-icon-button-sm: 24px;
+  --app-icon-button-sm-glyph: 16px;
+  --app-toolbar-height: 56px;
+  --app-nav-item-height: 40px;
+  --app-list-two-line-height: 56px;
+  --app-tab-height: 44px;
+  --app-tab-label: 500 12px/18px var(--app-font);
+  --app-tab-ink: #E84810;
+  --app-tab-ink-height: 3px;
+  --app-expansion-header: 40px;
+  --app-expansion-header-open: 56px;
+  --app-menu-item-height: 48px;
+  --app-snackbar-width: 344px;
+  --app-snackbar-bg: #000000;
+  --app-snackbar-action: var(--app-primary-hover);
+
+  /* Tables */
+  --app-table-header-height: 48px;
+  --app-table-row-height: 44px;
+  --app-table-header-font: 500 12px/18px var(--app-font); /* title-small */
+  --app-table-body-font: 400 12px/16px var(--app-font);
+  --app-table-footer-bg: #F7F7F7;
+  --app-table-cell-padding: 4px;
+  --app-table-edge-padding: 24px;
+
+  /* Charts — ECharts. Series in this order. */
+  --app-series-1: #E84810; /* orange */
+  --app-series-2: #1F225E; /* navy */
+  --app-series-3: #007B84; /* teal */
+  --app-series-4: #A9B819; /* lime */
+  --app-series-5: #FFCC00; /* yellow */
+  --app-series-6: #EE7601; /* amber */
+  --app-chart-axis: #E6E6E6;
+  --app-chart-grid: #E6E6E6;
+  --app-chart-label: 400 11px/16px var(--app-font);
+  --app-chart-label-color: #404040;
+}
+
+.app-layer, [data-layer="app"] {
+  font: var(--app-body-medium);
+  letter-spacing: 0;
+  color: var(--app-text);
+  background: var(--app-page);
+
+  /* Material type roles */
+  --mat-sys-display-small-font: "Roboto"; --mat-sys-display-small-size: 28px; --mat-sys-display-small-line-height: 36px; --mat-sys-display-small-weight: 400; --mat-sys-display-small-tracking: 0;
+  --mat-sys-headline-medium-font: "Roboto"; --mat-sys-headline-medium-size: 20px; --mat-sys-headline-medium-line-height: 28px; --mat-sys-headline-medium-weight: 400; --mat-sys-headline-medium-tracking: 0;
+  --mat-sys-headline-small-font: "Roboto"; --mat-sys-headline-small-size: 18px; --mat-sys-headline-small-line-height: 24px; --mat-sys-headline-small-weight: 400; --mat-sys-headline-small-tracking: 0;
+  --mat-sys-title-large-font: "Roboto"; --mat-sys-title-large-size: 16px; --mat-sys-title-large-line-height: 24px; --mat-sys-title-large-weight: 400; --mat-sys-title-large-tracking: 0;
+  --mat-sys-title-medium-font: "Roboto"; --mat-sys-title-medium-size: 14px; --mat-sys-title-medium-line-height: 20px; --mat-sys-title-medium-weight: 500; --mat-sys-title-medium-tracking: 0;
+  --mat-sys-title-small-font: "Roboto"; --mat-sys-title-small-size: 12px; --mat-sys-title-small-line-height: 18px; --mat-sys-title-small-weight: 500; --mat-sys-title-small-tracking: 0;
+  --mat-sys-body-large-font: "Roboto"; --mat-sys-body-large-size: 14px; --mat-sys-body-large-line-height: 20px; --mat-sys-body-large-weight: 400; --mat-sys-body-large-tracking: 0;
+  --mat-sys-body-medium-font: "Roboto"; --mat-sys-body-medium-size: 13px; --mat-sys-body-medium-line-height: 18px; --mat-sys-body-medium-weight: 400; --mat-sys-body-medium-tracking: 0;
+  --mat-sys-body-small-font: "Roboto"; --mat-sys-body-small-size: 11px; --mat-sys-body-small-line-height: 16px; --mat-sys-body-small-weight: 400; --mat-sys-body-small-tracking: 0;
+  --mat-sys-label-large-font: "Roboto"; --mat-sys-label-large-size: 13px; --mat-sys-label-large-line-height: 18px; --mat-sys-label-large-weight: 500; --mat-sys-label-large-tracking: 0;
+  --mat-sys-label-medium-font: "Roboto"; --mat-sys-label-medium-size: 11px; --mat-sys-label-medium-line-height: 16px; --mat-sys-label-medium-weight: 500; --mat-sys-label-medium-tracking: 0;
+  --mat-sys-label-small-font: "Roboto"; --mat-sys-label-small-size: 10px; --mat-sys-label-small-line-height: 14px; --mat-sys-label-small-weight: 500; --mat-sys-label-small-tracking: 0;
+
+  /* Shape and surfaces */
+  --mat-sys-corner-extra-small: 4px; --mat-sys-corner-small: 6px; --mat-sys-corner-medium: 6px;
+  --mat-sys-corner-large: 6px; --mat-sys-corner-extra-large: 6px; --mat-sys-corner-full: 9999px;
+  --mat-sys-outline-variant: #E6E6E6;
+  --mat-sys-surface-container: #F2F2F2;
+  --mat-sys-surface-container-low: #F7F7F7;
+  --mat-sys-background: #F2F2F2;
+  --mat-sys-secondary-container: #000000; --mat-sys-on-secondary-container: #FFFFFF;
+
+  /* Cards, dialogs */
+  --mat-card-outlined-container-shape: 6px; --mat-card-outlined-outline-color: #E6E6E6; --mat-card-outlined-container-elevation: none;
+  --mat-dialog-container-shape: 6px; --mat-dialog-container-elevation-shadow: var(--app-elevation-dialog);
+
+  /* Drop-downs: elevation 2, no scrim */
+  --mat-menu-container-shape: 6px; --mat-menu-container-color: #F2F2F2; --mat-menu-container-elevation-shadow: var(--app-elevation-2);
+  --mat-menu-item-height: 48px;
+  --mat-select-container-elevation-shadow: var(--app-elevation-2); --mat-select-panel-background-color: #F2F2F2;
+  --mat-autocomplete-container-shape: 6px; --mat-autocomplete-container-elevation-shadow: var(--app-elevation-2); --mat-autocomplete-background-color: #F2F2F2;
+  --mat-datepicker-calendar-container-shape: 6px; --mat-datepicker-calendar-container-elevation-shadow: var(--app-elevation-2);
+
+  /* Chips */
+  --mat-chip-container-shape-radius: 6px; --mat-chip-container-height: 24px;
+  --mat-chip-outline-width: 1px; --mat-chip-outline-color: #E6E6E6;
+  --mat-chip-selected-container-color: #000000; --mat-chip-selected-label-text-color: #FFFFFF;
+  --mat-chip-elevated-selected-container-color: #000000;
+
+  /* Fields */
+  --mat-form-field-container-height: 48px; --mat-form-field-filled-container-shape: 4px;
+  --mat-form-field-filled-container-color: #F2F2F2;
+  --mat-form-field-filled-active-indicator-color: transparent;
+  --mat-form-field-filled-hover-active-indicator-color: #929292;
+  --mat-form-field-filled-focus-active-indicator-color: #E84810;
+  --mat-form-field-filled-focus-active-indicator-height: 2px;
+  --mat-form-field-filled-error-active-indicator-color: var(--mat-sys-error);
+  /* No floating label at density −2: omit <mat-label>, use a placeholder. */
+
+  /* Buttons */
+  --mat-button-filled-container-height: 32px; --mat-button-tonal-container-height: 32px;
+  --mat-button-outlined-container-height: 32px; --mat-button-protected-container-height: 32px;
+  --mat-button-text-container-height: 32px;
+  --mat-button-filled-label-text-tracking: 0.06em; --mat-button-outlined-label-text-tracking: 0.06em;
+  --mat-button-protected-label-text-tracking: 0.06em; --mat-button-text-label-text-tracking: 0.06em;
+  --mat-button-tonal-label-text-tracking: 0; --mat-button-tonal-label-text-weight: 500; --mat-button-filled-label-text-weight: 700; --mat-button-outlined-label-text-weight: 700; --mat-button-protected-label-text-weight: 700; --mat-button-text-label-text-weight: 700;
+  --mat-fab-container-shape: 16px; --mat-fab-small-container-shape: 12px;
+  --mat-fab-extended-label-text-tracking: 0.04em;
+  --mat-icon-button-state-layer-size: 40px; --mat-icon-button-icon-size: 24px;
+  --mat-button-toggle-shape: 9999px;
+  --mat-badge-container-shape: 9999px;
+  --mat-progress-bar-track-shape: 9999px;
+
+  /* Tables */
+  --mat-table-header-container-height: 48px; --mat-table-row-item-container-height: 44px;
+  --mat-table-footer-container-height: 44px;
+  --mat-table-header-headline-font: "Roboto"; --mat-table-header-headline-size: 12px; --mat-table-header-headline-line-height: 18px; --mat-table-header-headline-weight: 500;
+  --mat-table-row-item-label-text-font: "Roboto"; --mat-table-row-item-label-text-size: 12px; --mat-table-row-item-label-text-line-height: 16px; --mat-table-row-item-label-text-weight: 400;
+  --mat-table-footer-supporting-text-size: 12px; --mat-table-footer-supporting-text-line-height: 16px;
+  --mat-table-row-item-outline-width: 0; /* @kind other */
+  --mat-table-row-item-outline-color: #E6E6E6;
+
+  /* Navigation and structure */
+  --mat-toolbar-standard-height: 56px;
+  --mat-list-list-item-one-line-container-height: 40px;
+  --mat-list-list-item-two-line-container-height: 56px;
+  --mat-tab-container-height: 44px; --mat-tab-active-indicator-height: 3px; --mat-tab-active-indicator-color: #E84810;
+  --mat-tab-label-text-size: 12px; --mat-tab-label-text-weight: 500; --mat-tab-label-text-tracking: 0.06em;
+  --mat-expansion-header-collapsed-state-height: 40px; --mat-expansion-header-expanded-state-height: 56px;
+  --mat-snack-bar-container-color: #000000; --mat-snack-bar-button-color: #C13A0D;
+}
+
+/* Buttons: 700 13/18 uppercase .06em; tonal 500 sentence case, no tracking */
+.app-layer .mat-mdc-button-base, [data-layer="app"] .mat-mdc-button-base { font: var(--app-label); letter-spacing: var(--app-label-tracking); text-transform: uppercase; }
+.app-layer .mat-tonal-button, [data-layer="app"] .mat-tonal-button { font: var(--app-label-tonal); text-transform: none; letter-spacing: 0; }
+.app-layer .mat-mdc-extended-fab, [data-layer="app"] .mat-mdc-extended-fab { letter-spacing: var(--app-label-tracking-fab-extended); }
+
+/* Icons — optical size 20 */
+.app-layer .material-symbols-outlined, [data-layer="app"] .material-symbols-outlined,
+.app-layer mat-icon, [data-layer="app"] mat-icon {
+  font-family: var(--app-icon-font); font-weight: normal; font-variation-settings: "wght" 300, "FILL" 0, "GRAD" 0, "opsz" 20;
+}
+
+/* Cards */
+.app-layer .mat-mdc-card, [data-layer="app"] .mat-mdc-card { padding: var(--app-card-padding); }
+
+/* Tables: header rule only, banded body, footer rule above, 4px cells with 24px outer edges */
+.app-layer .mat-mdc-header-cell, [data-layer="app"] .mat-mdc-header-cell { vertical-align: top; padding-top: 16px; border-bottom: 1px solid var(--app-hairline); }
+.app-layer .mat-mdc-cell, .app-layer .mat-mdc-header-cell, .app-layer .mat-mdc-footer-cell,
+[data-layer="app"] .mat-mdc-cell, [data-layer="app"] .mat-mdc-header-cell, [data-layer="app"] .mat-mdc-footer-cell { padding-left: 4px; padding-right: 4px; }
+.app-layer :is(.mat-mdc-cell, .mat-mdc-header-cell, .mat-mdc-footer-cell):first-child,
+[data-layer="app"] :is(.mat-mdc-cell, .mat-mdc-header-cell, .mat-mdc-footer-cell):first-child { padding-left: 24px; }
+.app-layer :is(.mat-mdc-cell, .mat-mdc-header-cell, .mat-mdc-footer-cell):last-child,
+[data-layer="app"] :is(.mat-mdc-cell, .mat-mdc-header-cell, .mat-mdc-footer-cell):last-child { padding-right: 24px; }
+.app-layer .mat-mdc-row:nth-child(even), [data-layer="app"] .mat-mdc-row:nth-child(even) { background: var(--app-band); }
+.app-layer .mat-mdc-footer-row, [data-layer="app"] .mat-mdc-footer-row { background: var(--app-table-footer-bg); }
+.app-layer .mat-mdc-footer-cell, [data-layer="app"] .mat-mdc-footer-cell { border-top: 1px solid var(--app-hairline); }
+.app-layer .num, .app-layer .mat-column-numeric, [data-layer="app"] .num, [data-layer="app"] .mat-column-numeric { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Tracked roles */
+.app-layer .app-eyebrow, [data-layer="app"] .app-eyebrow { font: var(--app-eyebrow); letter-spacing: var(--app-eyebrow-tracking); text-transform: uppercase; color: var(--app-eyebrow-color); }
+.app-layer .app-control-label, [data-layer="app"] .app-control-label { font: var(--app-control-label); letter-spacing: var(--app-control-label-tracking); text-transform: uppercase; }
+.app-layer .app-tile-title, [data-layer="app"] .app-tile-title { font: var(--app-tile-title); letter-spacing: var(--app-tile-title-tracking); text-transform: uppercase; color: var(--app-tile-title-color); height: var(--app-tile-title-block); overflow: hidden; white-space: normal; text-overflow: clip; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.app-layer .app-tile, [data-layer="app"] .app-tile { height: var(--app-tile-height); box-sizing: border-box; }
+.app-layer .app-tile-range, [data-layer="app"] .app-tile-range { font: var(--app-tile-range); color: var(--app-text-secondary); }
+.app-layer .app-tile-figure, [data-layer="app"] .app-tile-figure { font: var(--app-tile-figure); font-variant-numeric: tabular-nums; color: var(--app-text); display: flex; align-items: center; gap: 4px; }
+.app-layer .app-tile-figure.is-negative, [data-layer="app"] .app-tile-figure.is-negative { color: var(--app-tile-negative); }
+.app-layer .app-side-menu-top, [data-layer="app"] .app-side-menu-top { font: var(--app-side-menu-top); letter-spacing: var(--app-side-menu-top-tracking); text-transform: uppercase; }
+
+/* Tabs: medium 12px uppercase */
+.app-layer .mdc-tab__text-label, [data-layer="app"] .mdc-tab__text-label { text-transform: uppercase; }
+
+/* Lists: no dividers */
+.app-layer .mat-mdc-list .mat-divider, [data-layer="app"] .mat-mdc-list .mat-divider { display: none; }
+
+/* Snack bar */
+.app-layer .mat-mdc-snack-bar-container .mdc-snackbar__surface, [data-layer="app"] .mat-mdc-snack-bar-container .mdc-snackbar__surface { width: 344px; max-width: 344px; }
+
+/* Drop-downs float without a scrim */
+.app-layer .cdk-overlay-transparent-backdrop, [data-layer="app"] .cdk-overlay-transparent-backdrop { background: transparent; }

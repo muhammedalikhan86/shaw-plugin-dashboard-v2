@@ -1,0 +1,74 @@
+/* Shaw and Partners colour palette — values taken verbatim from ShawandPartners_BrandGuidelines.pdf p.12.
+   Do not deviate. Hex values are the direct conversion of the RGB values printed in the guidelines. */
+:root {
+  /* --- Primary palette --- */
+  /* Shaw Orange — Pantone 173 C · CMYK 0/82/100/0 · RGB 232/72/16 */
+  --shaw-orange: #E84810;
+
+  /* --- Secondary palette (accents) --- */
+  /* CMYK 100/92/6/40 · RGB 31/34/94 */
+  --shaw-navy: #1F225E;
+  /* CMYK 100/0/38/29 · RGB 0/123/132 */
+  --shaw-teal: #007B84;
+  /* CMYK 41/12/100/1 · RGB 169/184/25 */
+  --shaw-lime: #A9B819;
+  /* CMYK 0/20/100/0 · RGB 255/204/0 */
+  --shaw-yellow: #FFCC00;
+  /* CMYK 0/63/100/0 · RGB 238/118/1 */
+  --shaw-amber: #EE7601;
+
+  /* --- Neutrals --- */
+  /* Shaw Black — CMYK 0/0/0/100 · RGB 0/0/0 */
+  --shaw-black: #000000;
+  /* Black 55% — CMYK 0/0/0/55 · RGB 146/146/146 */
+  --shaw-grey: #929292;
+  --shaw-white: #FFFFFF;
+
+  /* Tints of Shaw Black, for rules, borders and surfaces.
+     Derived (not specified in the guidelines) — printed percentages of black. */
+  --shaw-black-05: #F2F2F2;
+  --shaw-black-10: #E6E6E6;
+  --shaw-black-20: #CCCCCC;
+  --shaw-black-75: #404040;
+
+  /* --- Semantic aliases --- */
+  --text-primary: var(--shaw-black);
+  --text-secondary: var(--shaw-grey);
+  --text-accent: var(--shaw-orange);
+  --text-on-dark: var(--shaw-white);
+  --text-link: var(--shaw-orange);
+  --text-link-hover: var(--shaw-black);
+
+  --surface-page: var(--shaw-white);
+  --surface-card: var(--shaw-white);
+  --surface-muted: var(--shaw-black-05);
+  --surface-inverse: var(--shaw-black);
+  --surface-accent: var(--shaw-orange);
+  --surface-navy: var(--shaw-navy);
+
+  --border-hairline: var(--shaw-black-20);
+  --border-rule: var(--shaw-black);
+  --border-accent: var(--shaw-orange);
+
+  --focus-ring: var(--shaw-orange);
+
+  /* --- Extended chart palette ---
+     Source: ShawandPartnersPresentation_Widescreen_WHITE.pptx, slide 19 "Colour palette".
+     These are the deck's secondary/chart colours, taken from the shape fills. They are NOT in the
+     printed brand guidelines — use them only for data visualisation, never for brand surfaces. */
+  --chart-1: #0071A4;  /* RGB 0/113/164 */
+  --chart-2: #A50021;  /* RGB 165/0/33 */
+  --chart-3: #008B95;  /* RGB 0/139/149 */
+  --chart-4: #717171;  /* RGB 113/113/113 */
+  --chart-5: #4B5B7C;  /* swatch labelled RGB 75/91/174 — the fill is 75/91/124; see readme */
+  --chart-6: #008BCA;  /* RGB 0/139/202 */
+  --chart-7: #5B4975;  /* RGB 91/73/117 */
+  --chart-8: #337722;  /* RGB 51/119/34 */
+  --chart-9: #A93E21;  /* RGB 169/62/33 */
+  --chart-10: #121F4A; /* RGB 18/31/74 */
+  --chart-11: #006060; /* RGB 0/96/96 */
+  --chart-12: #7F8D33; /* RGB 127/141/51 */
+
+  /* Deck status stamps (slide masters) */
+  --stamp-green: #084831;
+}

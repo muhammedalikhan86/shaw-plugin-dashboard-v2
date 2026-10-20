@@ -1,0 +1,348 @@
+/* Angular Material 22.1.4 — specimen stylesheet
+   ------------------------------------------------------------------
+   Every rule here is keyed on a real Angular Material selector, so the markup in this design
+   system's component cards is the markup a developer writes in an Angular template:
+
+       <button matButton="filled">Open an account</button>
+       <mat-form-field appearance="outline">…</mat-form-field>
+       <mat-card appearance="outlined">…</mat-card>
+
+   IMPORTANT — this file is documentation, not a dependency. In a real Angular application the
+   components bring their own styles and you theme them with tokens/material-theme.css alone. This
+   stylesheet exists only so that static HTML in this design system can render the same components
+   at the same shape, colour and type without an Angular runtime. Never ship it.
+
+   Values come from tokens/material-theme.css (--mat-sys-*) — nothing is hard-coded here. */
+
+@import url("./material-theme.css");
+
+/* Layout defaults for Angular's custom elements, which are inline until told otherwise. */
+mat-toolbar, mat-card, mat-card-content, mat-card-actions, mat-form-field, mat-tab-group,
+mat-tab-header, mat-nav-list, mat-list, mat-menu, mat-expansion-panel, mat-accordion,
+mat-paginator, mat-progress-bar, mat-divider, mat-dialog, mat-snack-bar, mat-stepper-header,
+mat-horizontal-stepper, mat-radio-group { display: block }
+mat-icon, mat-chip, mat-chip-option, mat-chip-set, mat-checkbox, mat-radio-button, mat-slide-toggle,
+mat-slider, mat-label, mat-hint, mat-error, mat-card-title, mat-card-subtitle, mat-select,
+mat-button-toggle-group, mat-button-toggle, mat-tab, mat-step-header, mat-spinner, mat-tooltip-component,
+mat-list-item, mat-panel-title, mat-select-trigger { display: inline-flex; align-items: center }
+
+/* ---------------- mat-icon ---------------- */
+mat-icon {
+  font-family: "Material Symbols Outlined"; font-weight: 400; font-style: normal; font-size: 20px;
+  line-height: 1; letter-spacing: normal; text-transform: none; white-space: nowrap; direction: ltr;
+  justify-content: center; flex: none; -webkit-font-feature-settings: "liga"; -webkit-font-smoothing: antialiased;
+}
+
+/* ---------------- matButton ---------------- */
+button[matButton], a[matButton] {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 40px; padding: 0 24px; border: none; background: none;
+  font: var(--mat-sys-label-large); letter-spacing: var(--mat-sys-label-large-tracking);
+  text-transform: uppercase; text-decoration: none;
+  border-radius: var(--mat-sys-corner-full); cursor: pointer; white-space: nowrap;
+  /* Label text uses the darker fixed-dim orange (5.42:1 on white). Full-strength
+     --mat-sys-primary is 3.91:1 at 13px and fails AA. */
+  color: var(--mat-sys-primary-fixed-dim);
+  transition: background-color .15s, box-shadow .15s, color .15s;
+}
+button[matButton] mat-icon, a[matButton] mat-icon { font-size: 18px }
+button[matButton=""], button[matButton="text"], a[matButton="text"] { padding: 0 12px }
+button[matButton=""]:hover, button[matButton="text"]:hover { background: var(--mat-sys-primary-container) }
+button[matButton="filled"], a[matButton="filled"] { background: var(--mat-sys-primary); color: var(--mat-sys-on-primary) }
+button[matButton="filled"]:hover, a[matButton="filled"]:hover { background: var(--mat-sys-primary-fixed-dim) }
+button[matButton="tonal"] { background: var(--mat-sys-secondary-container); color: var(--mat-sys-on-secondary-container) }
+button[matButton="tonal"]:hover { background: #D6D8E4 }
+button[matButton="outlined"], a[matButton="outlined"] { border: 1px solid var(--mat-sys-outline); color: var(--mat-sys-on-surface) }
+button[matButton="outlined"]:hover { background: var(--mat-sys-surface-variant) }
+button[matButton="elevated"] { background: var(--mat-sys-surface); color: var(--mat-sys-primary-fixed-dim); box-shadow: var(--mat-sys-level1) }
+button[matButton="elevated"]:hover { box-shadow: var(--mat-sys-level2) }
+button[matButton][disabled] { background: var(--mat-sys-surface-variant); color: var(--mat-sys-outline); border-color: transparent; box-shadow: none; cursor: not-allowed }
+
+button[matIconButton] {
+  width: 40px; height: 40px; padding: 0; display: inline-flex; align-items: center; justify-content: center;
+  border: none; background: none; color: var(--mat-sys-on-surface-variant); font: inherit;
+  border-radius: var(--mat-sys-corner-full); cursor: pointer; transition: background-color .15s;
+}
+button[matIconButton]:hover { background: var(--mat-sys-surface-variant) }
+button[matIconButton="filled"] { background: var(--mat-sys-primary); color: var(--mat-sys-on-primary) }
+button[matIconButton="filled"]:hover { background: var(--mat-sys-primary-fixed-dim) }
+
+button[matFab], button[matMiniFab] {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  height: 56px; min-width: 56px; padding: 0; border: none;
+  background: var(--mat-sys-primary); color: var(--mat-sys-on-primary);
+  border-radius: var(--mat-sys-corner-large); box-shadow: var(--mat-sys-level2); cursor: pointer;
+  font: var(--mat-sys-label-large); letter-spacing: var(--mat-sys-label-large-tracking); text-transform: uppercase;
+}
+button[matFab] mat-icon, button[matMiniFab] mat-icon { font-size: 24px }
+button[matFab][extended] { padding: 0 22px }
+button[matMiniFab] { height: 40px; min-width: 40px; box-shadow: var(--mat-sys-level1) }
+button[matMiniFab] mat-icon { font-size: 20px }
+
+mat-button-toggle-group {
+  display: inline-flex; align-self: flex-start; border: 1px solid var(--mat-sys-outline);
+  border-radius: var(--mat-sys-corner-full); overflow: hidden;
+}
+mat-button-toggle button {
+  height: 40px; padding: 0 20px; border: none; border-right: 1px solid var(--mat-sys-outline);
+  background: var(--mat-sys-surface); color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-label-large); letter-spacing: var(--mat-sys-label-large-tracking);
+  text-transform: uppercase; cursor: pointer;
+}
+mat-button-toggle:last-child button { border-right: none }
+mat-button-toggle[checked] button { background: var(--mat-sys-secondary-container); color: var(--mat-sys-on-secondary-container) }
+
+/* ---------------- matBadge ---------------- */
+[matBadge] { position: relative; display: inline-flex }
+[matBadge]::after {
+  content: attr(matBadge); position: absolute; top: -2px; right: -4px;
+  min-width: 18px; height: 18px; padding: 0 5px; box-sizing: border-box;
+  background: var(--mat-sys-error); color: var(--mat-sys-on-error);
+  font: var(--mat-sys-label-small); letter-spacing: 0;
+  display: flex; align-items: center; justify-content: center; border-radius: var(--mat-sys-corner-full);
+}
+
+/* ---------------- mat-form-field ---------------- */
+mat-form-field { display: flex; flex-direction: column; gap: 6px; min-width: 0 }
+mat-label { font: var(--mat-sys-body-small); color: var(--mat-sys-on-surface-variant) }
+mat-form-field > .field {
+  display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 14px;
+  border: 1px solid var(--mat-sys-outline); border-radius: var(--mat-sys-corner-extra-small);
+  background: var(--mat-sys-surface); font: var(--mat-sys-body-medium); color: var(--mat-sys-on-surface);
+}
+mat-form-field > .field mat-icon { color: var(--mat-sys-on-surface-variant) }
+mat-form-field[appearance="fill"] > .field {
+  border: none; border-bottom: 1px solid var(--mat-sys-outline);
+  border-radius: 4px 4px 0 0; background: var(--mat-sys-surface-variant);
+}
+mat-form-field[focused] > .field { border-color: var(--mat-sys-primary); box-shadow: inset 0 0 0 1px var(--mat-sys-primary) }
+/* Label text uses the darker fixed-dim orange (5.42:1 on white); the focus ring keeps
+   full-strength primary. --mat-sys-primary at 12px is only 3.91:1 and fails AA. */
+mat-form-field[focused] mat-label { color: var(--mat-sys-primary-fixed-dim) }
+mat-form-field.mat-form-field-invalid > .field { border-color: var(--mat-sys-error); box-shadow: inset 0 0 0 1px var(--mat-sys-error) }
+mat-form-field.mat-form-field-invalid mat-label { color: var(--mat-sys-error) }
+mat-form-field[disabled] > .field { background: var(--mat-sys-surface-variant); border-color: var(--mat-sys-outline-variant); color: var(--mat-sys-outline) }
+mat-hint { font: var(--mat-sys-body-small); color: var(--mat-sys-on-surface-variant) }
+mat-error { font: var(--mat-sys-body-small); color: var(--mat-sys-error) }
+input[matInput], textarea[matInput] {
+  flex: 1; min-width: 0; border: none; outline: none; background: none; padding: 0;
+  font: var(--mat-sys-body-medium); color: var(--mat-sys-on-surface);
+}
+input[matInput]::placeholder, textarea[matInput]::placeholder { color: var(--mat-sys-on-surface-variant) }
+mat-select { flex: 1; min-width: 0; justify-content: space-between; font: var(--mat-sys-body-medium) }
+mat-select mat-icon { color: var(--mat-sys-on-surface-variant) }
+
+/* ---------------- selection controls ---------------- */
+mat-checkbox, mat-radio-button, mat-slide-toggle { gap: 12px; font: var(--mat-sys-body-medium); cursor: pointer }
+mat-checkbox > .box {
+  width: 18px; height: 18px; box-sizing: border-box; border: 2px solid var(--mat-sys-outline);
+  border-radius: 2px; flex: none; display: flex; align-items: center; justify-content: center;
+}
+mat-checkbox[checked] > .box { background: var(--mat-sys-primary); border-color: var(--mat-sys-primary); color: var(--mat-sys-on-primary) }
+mat-checkbox > .box mat-icon { font-size: 16px }
+mat-radio-button > .dot {
+  width: 20px; height: 20px; box-sizing: border-box; border: 2px solid var(--mat-sys-outline);
+  border-radius: var(--mat-sys-corner-full); flex: none; display: flex; align-items: center; justify-content: center;
+}
+mat-radio-button[checked] > .dot { border-color: var(--mat-sys-primary) }
+mat-radio-button[checked] > .dot::after { content: ""; width: 10px; height: 10px; border-radius: var(--mat-sys-corner-full); background: var(--mat-sys-primary) }
+mat-slide-toggle > .track {
+  width: 52px; height: 32px; box-sizing: border-box; border: 2px solid var(--mat-sys-outline);
+  border-radius: var(--mat-sys-corner-full); background: var(--mat-sys-surface-variant);
+  flex: none; display: flex; align-items: center; padding: 0 4px;
+}
+mat-slide-toggle > .track::after { content: ""; width: 16px; height: 16px; border-radius: var(--mat-sys-corner-full); background: var(--mat-sys-outline) }
+mat-slide-toggle[checked] > .track { background: var(--mat-sys-primary); border-color: var(--mat-sys-primary); justify-content: flex-end }
+mat-slide-toggle[checked] > .track::after { width: 24px; height: 24px; background: var(--mat-sys-on-primary) }
+mat-slider { flex: 1; min-width: 200px; height: 20px; position: relative }
+mat-slider::before { content: ""; position: absolute; inset-inline: 0; height: 4px; border-radius: var(--mat-sys-corner-full); background: var(--mat-sys-surface-container-highest) }
+mat-slider > .fill { position: absolute; left: 0; height: 4px; border-radius: var(--mat-sys-corner-full); background: var(--mat-sys-primary) }
+mat-slider > .handle { position: absolute; width: 20px; height: 20px; margin-left: -10px; border-radius: var(--mat-sys-corner-full); background: var(--mat-sys-primary) }
+
+/* ---------------- navigation ---------------- */
+mat-toolbar {
+  display: flex; align-items: center; gap: 20px; height: 64px; padding: 0 20px;
+  background: var(--mat-toolbar-container-background-color); color: var(--mat-toolbar-container-text-color);
+  font: var(--mat-sys-title-large);
+}
+mat-toolbar mat-icon { color: inherit }
+mat-tab-group { display: flex; flex-direction: column }
+mat-tab-header { display: flex; border-bottom: 1px solid var(--mat-sys-outline-variant) }
+mat-tab {
+  height: 48px; padding: 0 24px; justify-content: center; border: none; background: none;
+  font: var(--mat-sys-title-small); letter-spacing: var(--mat-sys-label-large-tracking);
+  text-transform: uppercase; color: var(--mat-sys-on-surface-variant);
+  border-bottom: 2px solid transparent; margin-bottom: -1px; cursor: pointer;
+}
+mat-tab[active] { color: var(--mat-sys-primary); border-bottom-color: var(--mat-sys-primary) }
+mat-menu {
+  min-width: 224px; background: var(--mat-sys-surface-container-lowest);
+  border-radius: var(--mat-sys-corner-extra-small); box-shadow: var(--mat-sys-level3); padding: 8px 0;
+}
+button[mat-menu-item] {
+  display: flex; align-items: center; gap: 16px; width: 100%; height: 44px; padding: 0 16px;
+  border: none; background: none; text-align: left;
+  font: var(--mat-sys-body-medium); color: var(--mat-sys-on-surface); cursor: pointer;
+}
+button[mat-menu-item]:hover { background: var(--mat-sys-surface-variant) }
+button[mat-menu-item] mat-icon { color: var(--mat-sys-on-surface-variant) }
+mat-divider { border: none; border-top: 1px solid var(--mat-sys-outline-variant); margin: 8px 0 }
+mat-nav-list, mat-list { padding: 8px 0 }
+mat-nav-list a[mat-list-item] {
+  display: flex; align-items: center; gap: 16px; height: 48px; margin: 2px 8px; padding: 0 16px;
+  border: none; border-radius: var(--mat-sys-corner-small); font: var(--mat-sys-body-medium);
+  color: var(--mat-sys-on-surface); text-decoration: none; cursor: pointer;
+}
+mat-nav-list a[mat-list-item]:hover { background: var(--mat-sys-surface-variant) }
+mat-nav-list a[mat-list-item][activated] { background: var(--mat-sys-primary-container); color: var(--mat-sys-on-primary-container); font-weight: 700 }
+mat-list mat-list-item { display: flex; align-items: center; gap: 16px; padding: 12px 16px; border-bottom: 1px solid var(--mat-sys-outline-variant); width: 100% }
+mat-list mat-list-item:last-child { border-bottom: none }
+[matListItemTitle] { font: var(--mat-sys-body-medium) }
+[matListItemLine] { font: var(--mat-sys-body-small); color: var(--mat-sys-on-surface-variant) }
+mat-list mat-list-item > .lines { display: flex; flex-direction: column; gap: 2px; flex: 1 }
+mat-stepper-header, mat-horizontal-stepper { display: flex; align-items: center }
+mat-step-header { gap: 12px; font: var(--mat-sys-title-small); color: var(--mat-sys-on-surface-variant) }
+mat-step-header > .num {
+  width: 28px; height: 28px; border-radius: var(--mat-sys-corner-full);
+  background: var(--mat-sys-surface-container-highest); color: var(--mat-sys-on-surface-variant);
+  display: flex; align-items: center; justify-content: center; font: var(--mat-sys-label-medium); letter-spacing: 0;
+}
+mat-step-header[state="edit"] { color: var(--mat-sys-on-surface) }
+mat-step-header[state="edit"] > .num { background: var(--mat-sys-primary); color: var(--mat-sys-on-primary) }
+mat-step-header[state="done"] > .num { background: var(--shaw-black); color: var(--shaw-white) }
+mat-horizontal-stepper > .line { flex: 1; height: 1px; background: var(--mat-sys-outline-variant); margin: 0 20px }
+mat-paginator {
+  display: flex; align-items: center; justify-content: flex-end; gap: 28px; height: 56px; padding: 0 8px;
+  font: var(--mat-sys-body-small); color: var(--mat-sys-on-surface-variant);
+  border-top: 1px solid var(--mat-sys-outline-variant);
+}
+
+/* ---------------- containers ---------------- */
+mat-card {
+  display: flex; flex-direction: column; gap: 12px; padding: 24px;
+  background: var(--mat-sys-surface); border-radius: var(--mat-sys-corner-medium);
+  box-shadow: var(--mat-sys-level1);
+}
+mat-card[appearance="outlined"] { box-shadow: none; border: 1px solid var(--mat-card-outlined-outline-color) }
+mat-card[appearance="filled"] { box-shadow: none; background: var(--mat-sys-surface-variant) }
+mat-card-title { font: var(--mat-sys-title-medium) }
+mat-card-subtitle { font: var(--mat-sys-body-small); font-weight: 400; color: var(--mat-sys-on-surface-variant) }
+mat-card-content { font: var(--mat-sys-body-medium) }
+mat-card-actions { display: flex; gap: 8px; padding-top: 4px }
+mat-chip-set { display: flex; flex-wrap: wrap; gap: 8px }
+mat-chip, mat-chip-option {
+  gap: 8px; height: 32px; padding: 0 14px; background: var(--mat-sys-surface-variant);
+  color: var(--mat-sys-on-surface-variant); font: var(--mat-sys-body-small);
+  border-radius: var(--mat-sys-corner-small);
+}
+mat-chip mat-icon, mat-chip-option mat-icon { font-size: 16px }
+mat-chip[appearance="outlined"], mat-chip-option[appearance="outlined"] { background: none; border: 1px solid var(--mat-sys-outline) }
+mat-chip-option[selected] { background: var(--mat-sys-secondary-container); color: var(--mat-sys-on-secondary-container) }
+table[mat-table] { width: 100%; border-collapse: collapse; background: var(--mat-sys-surface) }
+th[mat-header-cell] {
+  text-align: left; font: var(--mat-sys-label-medium); letter-spacing: var(--mat-sys-label-medium-tracking);
+  text-transform: uppercase; color: var(--mat-sys-on-surface-variant);
+  padding: 14px 16px; border-bottom: 1px solid var(--shaw-black);
+}
+td[mat-cell] { font: var(--mat-sys-body-medium); font-weight: 400; padding: 14px 16px; border-bottom: 1px solid var(--mat-sys-outline-variant) }
+th[mat-header-cell].num, td[mat-cell].num { text-align: right; font-variant-numeric: tabular-nums }
+mat-accordion { display: flex; flex-direction: column; gap: 8px }
+mat-expansion-panel { border: 1px solid var(--mat-sys-outline-variant); border-radius: var(--mat-sys-corner-medium); overflow: hidden }
+mat-expansion-panel-header { display: flex; align-items: center; gap: 16px; height: 56px; padding: 0 20px; cursor: pointer }
+mat-panel-title { font: var(--mat-sys-title-small); flex: 1 }
+mat-expansion-panel-header mat-icon { color: var(--mat-sys-on-surface-variant); margin-left: auto }
+mat-expansion-panel > .body { padding: 0 20px 20px; font: var(--mat-sys-body-medium); color: var(--mat-sys-on-surface-variant) }
+
+/* ---------------- overlays and feedback ---------------- */
+mat-dialog {
+  width: fit-content; min-width: 280px; max-width: min(560px, 100%);
+  background: var(--mat-sys-surface); border-radius: var(--mat-sys-corner-extra-large);
+  box-shadow: var(--mat-sys-level5); padding: 28px; height: fit-content;
+}
+[mat-dialog-title] { font: var(--mat-sys-headline-small); margin: 0 0 16px }
+mat-dialog-content { display: block; font: var(--mat-sys-body-medium); color: var(--mat-sys-on-surface-variant) }
+mat-dialog-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 24px }
+mat-snack-bar {
+  display: flex; align-items: center; gap: 24px; max-width: 440px; padding: 14px 16px;
+  border-radius: var(--mat-sys-corner-extra-small); background: var(--mat-sys-inverse-surface);
+  color: var(--mat-sys-inverse-on-surface); font: var(--mat-sys-body-medium); box-shadow: var(--mat-sys-level3);
+}
+mat-snack-bar button[matButton] { margin-left: auto; color: var(--mat-sys-inverse-primary) }
+mat-snack-bar button[matButton]:hover { background: rgba(255,255,255,.12) }
+mat-tooltip-component {
+  padding: 6px 10px; border-radius: var(--mat-sys-corner-extra-small);
+  background: var(--mat-sys-inverse-surface); color: var(--mat-sys-inverse-on-surface);
+  font: var(--mat-sys-body-small);
+}
+mat-progress-bar { height: 4px; border-radius: var(--mat-sys-corner-full); background: var(--mat-sys-surface-container-highest); overflow: hidden }
+mat-progress-bar > .fill { display: block; height: 100%; background: var(--mat-sys-primary) }
+mat-spinner {
+  width: 40px; height: 40px; box-sizing: border-box;
+  border: 4px solid var(--mat-sys-surface-container-highest); border-top-color: var(--mat-sys-primary);
+  border-radius: var(--mat-sys-corner-full); animation: mat-spin 1s linear infinite;
+}
+@keyframes mat-spin { to { transform: rotate(360deg) } }
+
+
+
+/* =====================================================================================
+   APPROVED APP LAYER · 2026-10-14 — component sizes at density −2, as built in the app.
+   ===================================================================================== */
+button[matButton], a[matButton] { height: 32px; padding: 0 24px; border-radius: var(--mat-sys-corner-full); font: 700 13px/18px "Roboto", sans-serif; letter-spacing: .06em; text-transform: uppercase }
+button[matButton] mat-icon, a[matButton] mat-icon { font-size: 18px; width: 18px; height: 18px }
+button[matButton="tonal"] { text-transform: none; letter-spacing: 0; font-weight: 500 }
+button[matButton="outlined"], a[matButton="outlined"] { color: var(--mat-sys-primary); border-color: var(--mat-sys-outline) }
+button[matButton=""], button[matButton="text"], a[matButton="text"] { padding: 0 12px; color: var(--mat-sys-primary) }
+button[matButton=""]:hover, button[matButton="text"]:hover { background: var(--mat-sys-primary-container) }
+button[matButton][disabled] { color: var(--mat-sys-outline) }
+button[matMiniFab] { border-radius: 12px }
+button[matFab] { border-radius: 16px; font:500 13px/18px "Roboto", sans-serif; letter-spacing: .04em }
+button[matIconButton] mat-icon { font-size: 24px; width: 24px; height: 24px }
+/* The tightest target: a 24px button with a 16px glyph, for controls in rows and column headings. */
+button[matIconButton].ib24, button[matIconButton][classname~="ib24"] { width: 24px; height: 24px }
+button[matIconButton].ib24 mat-icon, button[matIconButton][classname~="ib24"] mat-icon { font-size: 16px; width: 16px; height: 16px }
+mat-button-toggle-group { border-radius: var(--mat-sys-corner-full) }
+mat-button-toggle button { height: 40px; padding: 0 16px; font:500 13px/18px "Roboto", sans-serif; text-transform: uppercase }
+
+/* Filled field, no floating label (placeholder instead). Hairline appears on hover; error underline is red. */
+mat-form-field[appearance="fill"] > .field { height: 48px; padding: 0 16px; border: none; border-bottom: 1px solid transparent; border-radius: var(--mat-sys-corner-extra-small-top); background: var(--mat-sys-surface-container) }
+mat-form-field[appearance="fill"]:hover > .field { border-bottom-color: var(--mat-sys-outline) }
+mat-form-field[appearance="fill"][focused] > .field { border-bottom: 2px solid var(--mat-sys-primary); box-shadow: none }
+mat-form-field[appearance="fill"][invalid] > .field, mat-form-field[appearance="fill"].mat-form-field-invalid > .field { border-bottom-color: var(--mat-sys-error); box-shadow: none }
+mat-hint, mat-error { font: var(--mat-sys-body-small); padding: 0 16px }
+mat-checkbox, mat-radio-button { min-height: 32px }
+mat-checkbox:not([checked]) > .box mat-icon { visibility: hidden }
+
+mat-chip, mat-chip-option { height: 24px; padding: 0 10px; border-radius: var(--shaw-sys-corner); font: 400 12px/16px "Roboto", sans-serif; background: var(--mat-sys-surface); border: 1px solid var(--mat-sys-surface-container-high); color: var(--mat-sys-on-surface) }
+mat-chip[appearance="outlined"], mat-chip-option[appearance="outlined"] { border-color: var(--mat-sys-surface-container-high) }
+mat-chip-option[selected], mat-chip[highlighted] { background: var(--mat-sys-secondary-container); border-color: var(--mat-sys-secondary-container); color: var(--mat-sys-on-secondary-container) }
+
+/* Cards: outlined, hairline, 6px, white, flat, on the #F2F2F2 page. */
+mat-card { border-radius: var(--shaw-sys-corner); padding: 20px; gap: 8px }
+mat-card[appearance="outlined"] { border: 1px solid var(--mat-sys-outline-variant); box-shadow: none }
+mat-card-title { font: 700 16px/24px "Roboto", sans-serif }
+mat-card-subtitle { font: 400 11px/16px "Roboto", sans-serif; color: var(--mat-sys-on-surface-variant) }
+
+/* Tables: no rule between rows, banding, one rule above the footer. Columns size to content. */
+table[mat-table] { border-collapse: separate; border-spacing: 0; table-layout: auto }
+th[mat-header-cell] { font:500 12px/18px "Roboto", sans-serif; letter-spacing: 0; text-transform: none; color: var(--mat-sys-on-surface); height: var(--shaw-sys-table-header-height); padding: 16px 4px 0; vertical-align: top; border-bottom: 1px solid var(--mat-sys-outline-variant) }
+td[mat-cell], td[mat-footer-cell] { font: 400 12px/16px "Roboto", sans-serif; height: var(--shaw-sys-table-row-height); padding: 0 4px; border: none; vertical-align: middle }
+tbody tr:nth-child(even) td[mat-cell] { background: var(--shaw-sys-table-band) }
+td[mat-footer-cell] { font-weight: 600; background: var(--shaw-sys-table-band); border-top: 1px solid var(--mat-sys-outline-variant) }
+th[mat-header-cell]:first-child, td[mat-cell]:first-child, td[mat-footer-cell]:first-child { padding-left: 24px }
+th[mat-header-cell]:last-child, td[mat-cell]:last-child, td[mat-footer-cell]:last-child { padding-right: 24px }
+mat-paginator { height: 56px; border-top: none; font: 400 11px/16px "Roboto", sans-serif; color: var(--mat-sys-on-surface) }
+
+mat-list mat-list-item { min-height: 56px; border-bottom: none }
+mat-nav-list a[mat-list-item] { height: 40px; border-radius: var(--shaw-sys-corner) }
+mat-tab { height: 44px; font:500 12px/18px "Roboto", sans-serif; letter-spacing: .06em; text-transform: uppercase }
+mat-tab[active] { color: var(--mat-sys-primary) }
+mat-expansion-panel-header { height: 40px; padding: 0 24px; font:500 14px/20px "Roboto", sans-serif }
+mat-expansion-panel { border-radius: var(--shaw-sys-corner) }
+mat-menu { border-radius: 4px; box-shadow: var(--shaw-sys-popup-shadow); background: var(--mat-sys-surface-container) }
+button[mat-menu-item] { height: 48px; font: 500 13px/20px "Roboto", sans-serif }
+mat-dialog { border-radius: var(--shaw-sys-corner) }
+mat-snack-bar { width: 344px; min-height: 48px; background: #000000; color: #FFFFFF; border-radius: 4px; font: 400 13px/20px "Roboto", sans-serif }
+mat-snack-bar button[matButton] { color: var(--mat-sys-primary-fixed-dim) }
+mat-toolbar { height: 56px }
+

@@ -1,0 +1,194 @@
+/* APP SPECIMEN — stand-in Angular Material for design drawings · 2026-10-14
+   Design files can't run Angular, so drawings use the component tags and attributes a developer
+   writes in a template (<mat-card>, <button matButton="filled">, <table mat-table> …) as plain
+   HTML. This file styles that stand-in markup with the --app-* tokens from tokens/app.css, so a
+   drawing matches the built app at density −2.
+
+   Scope: .app-layer / [data-layer="app"], the same as tokens/app.css. Load it after app.css.
+   Tag-based selectors only, so it never matches the real app's compiled .mat-mdc-* classes.
+   Note for drawing tools that rename class to classname on custom elements: modifier classes are
+   matched both ways, e.g. :is(.ib24,[classname~="ib24"]).
+
+   Markup contract (what a drawing writes):
+     <button matButton="filled|tonal|outlined|elevated|text">   <button matIconButton> (+ .ib24)
+     <button matFab> <button matMiniFab> <button matFab extended="true">
+     <mat-form-field appearance="fill" [focused] [invalid] [disabled]><div class="field">…</div>
+       <mat-hint>/<mat-error></mat-form-field>
+     <mat-checkbox [checked]><span class="box"><mat-icon>check</mat-icon></span>Label</mat-checkbox>
+     <mat-radio-button [checked]><span class="dot"></span>Label</mat-radio-button>
+     <mat-slide-toggle [checked]><span class="track"><span class="thumb"><mat-icon>check</mat-icon></span></span>Label</mat-slide-toggle>
+     <mat-slider><span class="fill"></span><span class="handle"></span></mat-slider>
+     <mat-chip [appearance="outlined"] [highlighted]> <mat-chip-option [selected]>
+     <mat-card appearance="outlined"> <mat-card-title> <mat-card-subtitle> <mat-card-content> <mat-card-actions>
+     <table mat-table> <th mat-header-cell class="num|stick"> <td mat-cell> <td mat-footer-cell>
+     <mat-tab-header><mat-tab [active]>…</mat-tab></mat-tab-header>
+     <mat-accordion><mat-expansion-panel [expanded]><mat-expansion-panel-header>…</mat-expansion-panel-header><div class="body">…</div></mat-expansion-panel>
+     <mat-menu><button mat-menu-item>…</button></mat-menu>   <mat-dialog> <mat-snack-bar> <mat-tooltip-component>
+     <mat-list><mat-list-item><span class="lines"><span matListItemTitle/><span matListItemLine/></span></mat-list-item></mat-list>
+     <mat-nav-list><a mat-list-item [activated]>…</a></mat-nav-list>   <mat-toolbar>   <mat-paginator>
+     <mat-progress-bar><span class="fill"></span></mat-progress-bar>   <mat-spinner>   [matBadge="3"]
+     .pop — a drop-down panel (menu, select, autocomplete, calendar, filter) */
+
+:is(.app-layer, [data-layer="app"]) :is(mat-toolbar, mat-card, mat-card-content, mat-card-actions, mat-form-field, mat-tab-group,
+  mat-tab-header, mat-nav-list, mat-list, mat-menu, mat-expansion-panel, mat-accordion, mat-paginator,
+  mat-progress-bar, mat-divider, mat-dialog, mat-snack-bar, mat-radio-group) { display: block }
+:is(.app-layer, [data-layer="app"]) :is(mat-icon, mat-chip, mat-chip-option, mat-chip-set, mat-checkbox, mat-radio-button, mat-slide-toggle,
+  mat-slider, mat-label, mat-hint, mat-error, mat-card-title, mat-card-subtitle, mat-select, mat-button-toggle-group,
+  mat-button-toggle, mat-tab, mat-spinner, mat-tooltip-component, mat-list-item, mat-panel-title, mat-select-trigger) { display: inline-flex; align-items: center }
+
+/* Icons */
+:is(.app-layer, [data-layer="app"]) mat-icon { font-family: var(--app-icon-font); font-weight: normal; font-style: normal; line-height: 1; font-size: 20px; width: 20px; height: 20px; justify-content: center;
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 20; -webkit-font-smoothing: antialiased }
+
+/* Buttons */
+:is(.app-layer, [data-layer="app"]) :is(button, a)[matButton] { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: var(--app-button-height); padding: 0 24px;
+  border: none; background: none; border-radius: var(--app-radius-pill); font: var(--app-label); letter-spacing: var(--app-label-tracking); text-transform: uppercase;
+  color: var(--app-series-1); cursor: pointer; text-decoration: none; white-space: nowrap; transition: background-color .15s, box-shadow .15s }
+:is(.app-layer, [data-layer="app"]) :is(button, a)[matButton] mat-icon { font-size: 18px; width: 18px; height: 18px }
+:is(.app-layer, [data-layer="app"]) :is(button, a)[matButton="filled"] { background: var(--app-series-1); color: #FFFFFF }
+:is(.app-layer, [data-layer="app"]) :is(button, a)[matButton="filled"]:hover { background: var(--app-primary-hover) }
+:is(.app-layer, [data-layer="app"]) button[matButton="tonal"] { background: var(--app-tonal-container); color: var(--app-on-tonal); font: var(--app-label-tonal); letter-spacing: 0; text-transform: none }
+:is(.app-layer, [data-layer="app"]) :is(button, a)[matButton="outlined"] { border: 1px solid var(--app-outline) }
+:is(.app-layer, [data-layer="app"]) button[matButton="elevated"] { background: var(--app-card); box-shadow: var(--app-elevation-1) }
+:is(.app-layer, [data-layer="app"]) :is(button, a)[matButton="text"], :is(.app-layer, [data-layer="app"]) button[matButton=""] { padding: 0 12px }
+:is(.app-layer, [data-layer="app"]) :is(button, a)[matButton]:is([matButton="outlined"], [matButton="text"], [matButton=""]):hover { background: var(--app-primary-container) }
+:is(.app-layer, [data-layer="app"]) button[matButton][disabled] { background: var(--app-field-fill); color: var(--app-outline); border-color: transparent; box-shadow: none; cursor: not-allowed }
+:is(.app-layer, [data-layer="app"]) button[matButton="text"][disabled] { background: none }
+:is(.app-layer, [data-layer="app"]) button[matIconButton] { width: var(--app-icon-button); height: var(--app-icon-button); padding: 0; display: inline-flex; align-items: center; justify-content: center;
+  border: none; background: none; color: var(--app-text-secondary); border-radius: var(--app-radius-pill); cursor: pointer; transition: background-color .15s }
+:is(.app-layer, [data-layer="app"]) button[matIconButton] mat-icon { font-size: var(--app-icon-button-glyph); width: var(--app-icon-button-glyph); height: var(--app-icon-button-glyph) }
+:is(.app-layer, [data-layer="app"]) button[matIconButton]:hover { background: var(--app-field-fill) }
+:is(.app-layer, [data-layer="app"]) button[matIconButton]:is(.ib24, [classname~="ib24"]) { width: var(--app-icon-button-sm); height: var(--app-icon-button-sm) }
+:is(.app-layer, [data-layer="app"]) button[matIconButton]:is(.ib24, [classname~="ib24"]) mat-icon { font-size: var(--app-icon-button-sm-glyph); width: var(--app-icon-button-sm-glyph); height: var(--app-icon-button-sm-glyph) }
+:is(.app-layer, [data-layer="app"]) :is(button[matFab], button[matMiniFab]) { display: inline-flex; align-items: center; justify-content: center; gap: 12px; height: 56px; min-width: 56px; padding: 0; border: none;
+  background: var(--app-series-1); color: #FFFFFF; border-radius: var(--app-radius-fab); box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  font: var(--app-label); letter-spacing: var(--app-label-tracking-fab-extended); text-transform: uppercase; cursor: pointer }
+:is(.app-layer, [data-layer="app"]) button[matFab] mat-icon { font-size: 24px; width: 24px; height: 24px }
+:is(.app-layer, [data-layer="app"]) button[matFab][extended] { padding: 0 22px }
+:is(.app-layer, [data-layer="app"]) button[matMiniFab] { height: 40px; min-width: 40px; border-radius: var(--app-radius-fab-mini) }
+:is(.app-layer, [data-layer="app"]) mat-button-toggle-group { border: 1px solid var(--app-outline); border-radius: var(--app-radius-pill); overflow: hidden; align-self: flex-start }
+:is(.app-layer, [data-layer="app"]) mat-button-toggle button { height: 40px; padding: 0 16px; border: none; border-right: 1px solid var(--app-outline); background: var(--app-card); color: var(--app-text);
+  font: var(--app-label); letter-spacing: .02em; text-transform: uppercase; cursor: pointer }
+:is(.app-layer, [data-layer="app"]) mat-button-toggle:last-child button { border-right: none }
+:is(.app-layer, [data-layer="app"]) mat-button-toggle[checked] button { background: var(--app-tonal-container); color: var(--app-on-tonal) }
+:is(.app-layer, [data-layer="app"]) [matBadge] { position: relative; display: inline-flex }
+:is(.app-layer, [data-layer="app"]) [matBadge]::after { content: attr(matBadge); position: absolute; top: -2px; right: -4px; min-width: 18px; height: 18px; padding: 0 5px; box-sizing: border-box;
+  background: var(--app-tile-negative); color: #FFFFFF; border-radius: var(--app-radius-pill); font: var(--app-label-small); display: flex; align-items: center; justify-content: center }
+
+/* Form fields — filled, no floating label, underline only on hover / focus / error */
+:is(.app-layer, [data-layer="app"]) mat-form-field { display: flex; flex-direction: column; gap: 4px; min-width: 0 }
+:is(.app-layer, [data-layer="app"]) mat-form-field > .field { display: flex; align-items: center; gap: 12px; height: var(--app-field-height); padding: 0 16px; background: var(--app-field-fill);
+  border-radius: var(--app-radius-field); border-bottom: 1px solid transparent; font: var(--app-body-medium); color: var(--app-text) }
+:is(.app-layer, [data-layer="app"]) mat-form-field > .field mat-icon { color: var(--app-text-secondary) }
+:is(.app-layer, [data-layer="app"]) mat-form-field:hover > .field { border-bottom-color: var(--app-outline) }
+:is(.app-layer, [data-layer="app"]) mat-form-field[focused] > .field { border-bottom: 2px solid var(--app-series-1) }
+:is(.app-layer, [data-layer="app"]) mat-form-field[invalid] > .field { border-bottom-color: var(--app-tile-negative) }
+:is(.app-layer, [data-layer="app"]) mat-form-field[disabled] > .field { border-bottom-color: var(--app-text-secondary); color: var(--app-outline) }
+:is(.app-layer, [data-layer="app"]) :is(mat-hint, mat-error) { font: var(--app-body-small); padding: 0 16px }
+:is(.app-layer, [data-layer="app"]) mat-error { color: var(--app-tile-negative) }
+:is(.app-layer, [data-layer="app"]) :is(input, textarea)[matInput] { flex: 1; min-width: 0; border: none; outline: none; background: none; padding: 0; font: var(--app-body-medium); color: inherit }
+:is(.app-layer, [data-layer="app"]) :is(input, textarea)[matInput]::placeholder { color: var(--app-text-secondary) }
+:is(.app-layer, [data-layer="app"]) mat-select { flex: 1; min-width: 0; justify-content: space-between; font: var(--app-table-body-font) }
+:is(.app-layer, [data-layer="app"]) mat-select mat-icon { font-size: 24px; width: 24px; height: 24px }
+
+/* Selection controls */
+:is(.app-layer, [data-layer="app"]) :is(mat-checkbox, mat-radio-button, mat-slide-toggle) { gap: 12px; min-height: 32px; font: var(--app-body-medium); cursor: pointer }
+:is(.app-layer, [data-layer="app"]) mat-checkbox > .box { width: 18px; height: 18px; box-sizing: border-box; border: 2px solid var(--app-text); border-radius: 2px; flex: none; display: flex; align-items: center; justify-content: center }
+:is(.app-layer, [data-layer="app"]) mat-checkbox > .box mat-icon { font-size: 16px; width: 16px; height: 16px; visibility: hidden }
+:is(.app-layer, [data-layer="app"]) mat-checkbox[checked] > .box { background: var(--app-series-1); border-color: var(--app-series-1); color: #FFFFFF }
+:is(.app-layer, [data-layer="app"]) mat-checkbox[checked] > .box mat-icon { visibility: visible }
+:is(.app-layer, [data-layer="app"]) mat-radio-button > .dot { width: 20px; height: 20px; box-sizing: border-box; border: 2px solid var(--app-text); border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center }
+:is(.app-layer, [data-layer="app"]) mat-radio-button[checked] > .dot { border-color: var(--app-series-1) }
+:is(.app-layer, [data-layer="app"]) mat-radio-button[checked] > .dot::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--app-series-1) }
+:is(.app-layer, [data-layer="app"]) mat-slide-toggle > .track { width: 52px; height: 32px; box-sizing: border-box; border: 2px solid var(--app-outline); border-radius: var(--app-radius-pill); background: var(--app-field-fill);
+  flex: none; display: flex; align-items: center; padding: 0 2px }
+:is(.app-layer, [data-layer="app"]) mat-slide-toggle > .track > .thumb { width: 16px; height: 16px; margin-left: 4px; border-radius: 50%; background: var(--app-outline); display: flex; align-items: center; justify-content: center }
+:is(.app-layer, [data-layer="app"]) mat-slide-toggle > .track > .thumb mat-icon { display: none }
+:is(.app-layer, [data-layer="app"]) mat-slide-toggle[checked] > .track { background: var(--app-series-1); border-color: var(--app-series-1); justify-content: flex-end }
+:is(.app-layer, [data-layer="app"]) mat-slide-toggle[checked] > .track > .thumb { width: 24px; height: 24px; margin: 0; background: #FFFFFF; color: var(--app-text) }
+:is(.app-layer, [data-layer="app"]) mat-slide-toggle[checked] > .track > .thumb mat-icon { display: inline-flex; font-size: 16px; width: 16px; height: 16px }
+:is(.app-layer, [data-layer="app"]) mat-slider { flex: 1; min-width: 0; height: 20px; position: relative }
+:is(.app-layer, [data-layer="app"]) mat-slider::before { content: ""; position: absolute; inset-inline: 0; top: 8px; height: 4px; border-radius: var(--app-radius-pill); background: var(--app-field-fill) }
+:is(.app-layer, [data-layer="app"]) mat-slider > .fill { position: absolute; left: 0; top: 8px; height: 4px; border-radius: var(--app-radius-pill); background: var(--app-series-1) }
+:is(.app-layer, [data-layer="app"]) mat-slider > .handle { position: absolute; top: 0; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: var(--app-series-1) }
+
+/* Chips */
+:is(.app-layer, [data-layer="app"]) mat-chip-set { display: flex; flex-wrap: wrap; gap: 8px }
+:is(.app-layer, [data-layer="app"]) :is(mat-chip, mat-chip-option) { gap: 6px; height: var(--app-chip-height); padding: 0 10px; border-radius: var(--app-radius); border: 1px solid var(--app-chip-outline);
+  background: var(--app-card); color: var(--app-text); font: var(--app-table-body-font) }
+:is(.app-layer, [data-layer="app"]) :is(mat-chip, mat-chip-option) mat-icon { font-size: 16px; width: 16px; height: 16px }
+:is(.app-layer, [data-layer="app"]) :is(mat-chip[highlighted], mat-chip-option[selected]) { background: var(--app-chip-selected-bg); border-color: var(--app-chip-selected-bg); color: var(--app-chip-selected-fg) }
+
+/* Cards */
+:is(.app-layer, [data-layer="app"]) mat-card { display: flex; flex-direction: column; gap: 8px; padding: var(--app-card-padding); background: var(--app-card); border-radius: var(--app-radius); box-shadow: var(--app-elevation-1) }
+:is(.app-layer, [data-layer="app"]) mat-card[appearance="outlined"] { border: 1px solid var(--app-hairline); box-shadow: none }
+:is(.app-layer, [data-layer="app"]) mat-card[appearance="filled"] { background: var(--app-surface-high); box-shadow: none }
+:is(.app-layer, [data-layer="app"]) mat-card-title { font: 700 16px/24px var(--app-font); color: var(--app-text) }
+:is(.app-layer, [data-layer="app"]) mat-card-subtitle { font: var(--app-body-small); color: var(--app-text-secondary) }
+:is(.app-layer, [data-layer="app"]) mat-card-content { font: var(--app-body-medium) }
+:is(.app-layer, [data-layer="app"]) mat-card-actions { display: flex; gap: 8px; padding-top: 4px }
+:is(.app-layer, [data-layer="app"]) mat-divider { border: none; border-top: 1px solid var(--app-hairline); margin: 8px 0 }
+
+/* Tables */
+:is(.app-layer, [data-layer="app"]) table[mat-table] { width: 100%; border-collapse: separate; border-spacing: 0; table-layout: auto; background: var(--app-card) }
+:is(.app-layer, [data-layer="app"]) th[mat-header-cell] { font: var(--app-table-header-font); color: var(--app-text); text-align: left; vertical-align: top; height: var(--app-table-header-height);
+  padding: 16px var(--app-table-cell-padding) 0; border-bottom: 1px solid var(--app-hairline); background: var(--app-card) }
+:is(.app-layer, [data-layer="app"]) :is(td[mat-cell], td[mat-footer-cell]) { font: var(--app-table-body-font); height: var(--app-table-row-height); padding: 0 var(--app-table-cell-padding);
+  border: none; vertical-align: middle; background: var(--app-card); white-space: nowrap }
+:is(.app-layer, [data-layer="app"]) tbody tr:nth-child(even) td[mat-cell] { background: var(--app-band) }
+:is(.app-layer, [data-layer="app"]) td[mat-footer-cell] { font-weight: 500; background: var(--app-table-footer-bg); border-top: 1px solid var(--app-hairline) }
+:is(.app-layer, [data-layer="app"]) :is(th[mat-header-cell], td[mat-cell], td[mat-footer-cell]):first-child { padding-left: var(--app-table-edge-padding) }
+:is(.app-layer, [data-layer="app"]) :is(th[mat-header-cell], td[mat-cell], td[mat-footer-cell]):last-child { padding-right: var(--app-table-edge-padding) }
+:is(.app-layer, [data-layer="app"]) :is(th, td):is(.num, [classname~="num"]) { text-align: right; font-variant-numeric: tabular-nums }
+:is(.app-layer, [data-layer="app"]) :is(th, td):is(.stick, [classname~="stick"]) { position: sticky; left: 0; z-index: 1 }
+:is(.app-layer, [data-layer="app"]) mat-paginator { display: flex; align-items: center; justify-content: flex-end; gap: 8px; height: 56px; padding: 0 16px; font: var(--app-body-small); color: var(--app-text) }
+
+/* Lists and navigation */
+:is(.app-layer, [data-layer="app"]) mat-list { padding: 8px 0 }
+:is(.app-layer, [data-layer="app"]) mat-list mat-list-item { display: flex; align-items: flex-start; gap: 8px; min-height: var(--app-list-two-line-height); padding: 6px 12px; width: 100% }
+:is(.app-layer, [data-layer="app"]) mat-list-item > .lines { display: flex; flex-direction: column; flex: 1; min-width: 0 }
+:is(.app-layer, [data-layer="app"]) [matListItemTitle] { font: var(--app-body-large); color: var(--app-text) }
+:is(.app-layer, [data-layer="app"]) [matListItemLine] { font: var(--app-body-medium); color: var(--app-text-secondary) }
+:is(.app-layer, [data-layer="app"]) mat-nav-list a[mat-list-item] { display: flex; align-items: center; gap: 8px; height: var(--app-nav-item-height); padding: 0 12px; border-radius: var(--app-radius);
+  font: var(--app-body-medium); color: var(--app-text); text-decoration: none; border: none; box-shadow: none; cursor: pointer }
+:is(.app-layer, [data-layer="app"]) mat-nav-list a[mat-list-item]:hover { background: var(--app-field-fill) }
+:is(.app-layer, [data-layer="app"]) mat-nav-list a[mat-list-item]:is([activated], .on, [classname~="on"]) { background: var(--app-primary-container); font-weight: 700 }
+:is(.app-layer, [data-layer="app"]) mat-nav-list a[mat-list-item]:is(.top, [classname~="top"]) { font: var(--app-side-menu-top); letter-spacing: var(--app-side-menu-top-tracking); text-transform: uppercase }
+:is(.app-layer, [data-layer="app"]) mat-toolbar { display: flex; align-items: center; gap: 8px; height: var(--app-toolbar-height); padding: 0 16px; background: #000000; color: #FFFFFF }
+:is(.app-layer, [data-layer="app"]) mat-tab-header { display: flex; position: relative; border-bottom: 1px solid var(--app-hairline) }
+:is(.app-layer, [data-layer="app"]) mat-tab { flex: 1; justify-content: center; height: var(--app-tab-height); font: var(--app-tab-label); letter-spacing: .06em; text-transform: uppercase;
+  color: var(--app-text); cursor: pointer; border-bottom: var(--app-tab-ink-height) solid transparent; margin-bottom: -1px; transition: background-color .15s, color .3s }
+:is(.app-layer, [data-layer="app"]) mat-tab:hover { background: var(--app-field-fill) }
+:is(.app-layer, [data-layer="app"]) mat-tab[active] { color: var(--app-tab-ink); border-bottom-color: var(--app-tab-ink) }
+
+/* Expansion panels */
+:is(.app-layer, [data-layer="app"]) mat-accordion { display: flex; flex-direction: column }
+:is(.app-layer, [data-layer="app"]) mat-expansion-panel { background: var(--app-card); border-top: 1px solid var(--app-field-fill); box-shadow: var(--app-elevation-1); transition: margin 225ms cubic-bezier(.4,0,.2,1) }
+:is(.app-layer, [data-layer="app"]) mat-expansion-panel:first-of-type { border-top: none; border-radius: var(--app-radius) var(--app-radius) 0 0 }
+:is(.app-layer, [data-layer="app"]) mat-expansion-panel:last-of-type { border-radius: 0 0 var(--app-radius) var(--app-radius) }
+:is(.app-layer, [data-layer="app"]) mat-expansion-panel[expanded] { margin: 16px 0; border-top: none; border-radius: var(--app-radius) }
+:is(.app-layer, [data-layer="app"]) mat-expansion-panel[expanded]:first-of-type { margin-top: 0 }
+:is(.app-layer, [data-layer="app"]) mat-expansion-panel[expanded] + mat-expansion-panel { border-top: none }
+:is(.app-layer, [data-layer="app"]) mat-expansion-panel-header { display: flex; align-items: center; gap: 16px; height: var(--app-expansion-header); padding: 0 24px; font: var(--app-title-medium); cursor: pointer }
+:is(.app-layer, [data-layer="app"]) mat-expansion-panel-header:hover { background: var(--app-surface-high) }
+:is(.app-layer, [data-layer="app"]) mat-expansion-panel[expanded] mat-expansion-panel-header { height: var(--app-expansion-header-open) }
+:is(.app-layer, [data-layer="app"]) mat-expansion-panel[expanded] mat-expansion-panel-header:hover { background: transparent }
+:is(.app-layer, [data-layer="app"]) mat-panel-title { flex: 1 }
+:is(.app-layer, [data-layer="app"]) mat-expansion-panel > .body { padding: 0 24px 16px; font: var(--app-body-large) }
+
+/* Floating UI */
+:is(.app-layer, [data-layer="app"]) :is(mat-menu, .pop) { background: var(--app-menu-panel); border-radius: var(--app-radius); box-shadow: var(--app-elevation-2); padding: 8px 0 }
+:is(.app-layer, [data-layer="app"]) button[mat-menu-item] { display: flex; align-items: center; gap: 12px; width: 100%; height: var(--app-menu-item-height); padding: 0 16px; border: none; background: none;
+  font: 500 13px/18px var(--app-font); color: var(--app-text); text-align: left; cursor: pointer }
+:is(.app-layer, [data-layer="app"]) button[mat-menu-item]:hover { background: var(--app-surface-high) }
+:is(.app-layer, [data-layer="app"]) button[mat-menu-item] mat-icon { color: var(--app-text-secondary) }
+:is(.app-layer, [data-layer="app"]) mat-dialog { background: var(--app-card); border-radius: var(--app-radius); box-shadow: var(--app-elevation-dialog); padding: 24px; max-width: 560px }
+:is(.app-layer, [data-layer="app"]) .scrim { background: var(--app-scrim) }
+:is(.app-layer, [data-layer="app"]) mat-snack-bar { display: flex; align-items: center; gap: 16px; width: var(--app-snackbar-width); min-height: 48px; padding: 0 8px 0 16px; background: var(--app-snackbar-bg);
+  color: #FFFFFF; border-radius: 4px; font: var(--app-body-medium) }
+:is(.app-layer, [data-layer="app"]) mat-snack-bar button[matButton] { margin-left: auto; color: var(--app-snackbar-action) }
+:is(.app-layer, [data-layer="app"]) mat-tooltip-component { padding: 4px 8px; border-radius: 4px; background: var(--app-tooltip-bg); color: #FFFFFF; font: 500 11px/16px var(--app-font) }
+:is(.app-layer, [data-layer="app"]) mat-progress-bar { height: 4px; border-radius: var(--app-radius-pill); background: var(--app-field-fill); overflow: hidden; position: relative }
+:is(.app-layer, [data-layer="app"]) mat-progress-bar > .fill { position: absolute; inset: 0 auto 0 0; background: var(--app-series-1); border-radius: var(--app-radius-pill) }
+:is(.app-layer, [data-layer="app"]) mat-spinner { width: 40px; height: 40px; border: 4px solid var(--app-field-fill); border-top-color: var(--app-series-1); border-radius: 50%; box-sizing: border-box; animation: app-spin 1s linear infinite }
+@keyframes app-spin { to { transform: rotate(360deg) } }

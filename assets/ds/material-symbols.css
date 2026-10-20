@@ -1,0 +1,16 @@
+/* Material Symbols Outlined — NETWORK FALLBACK, not the file the designer authored.
+   ------------------------------------------------------------------
+   In the Claude Design project the matching file embeds the variable icon font as a base64
+   data: URI, so the artboard renders its icons with no network (designer brief §3 rule 3).
+   That embedded file is roughly 900 KB and DesignSync's `get_file` caps a single response at
+   256 KiB, so it cannot be pulled down intact — it comes back silently truncated, which would
+   render every icon as a blank box or as the ligature text.
+
+   This stand-in loads the same font from Google Fonts instead. It is visually correct on a
+   machine with internet access and wrong offline. It is NOT design intent — it is a sync gap.
+   Replace it with the embedded original the first time the file can be exported by another
+   route (direct download from Claude Design, or a chunked DesignSync read).
+
+   The same gap is recorded for eight binary assets in docs/design/reference/README.md. */
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');

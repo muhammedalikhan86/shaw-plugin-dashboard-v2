@@ -1,0 +1,356 @@
+/* Shaw and Partners × Angular Material 22.1.4
+   ------------------------------------------------------------------
+   Angular Material 22 is Material 3. A theme defined with the `mat.theme()` mixin emits a set of
+   system tokens as CSS custom properties named --mat-sys-*; every component reads from them, and
+   component-level tokens (--mat-filled-button-*, --mat-toolbar-*, …) inherit from them.
+
+   This file is that layer, written by hand so the brand — not a generated tonal palette — owns the
+   values. Load it AFTER styles.css and after Angular Material's own theme output, on the same
+   element the theme was emitted on (usually :root / html).
+
+   Colour values are the brand palette verbatim (tokens/colors.css). Container and tint values are
+   derived: printed percentages of the brand colours, never new hues.
+
+   Shape and elevation are Material's own. The components keep the geometry they ship with — pill
+   buttons, 12px cards, 28px dialogs, Material's elevation ramp — so a themed Angular Material app
+   still looks and behaves like Angular Material. The brand supplies colour and type only.
+   Print and deck layouts remain square; that rule lives in the brand guidelines, not here.
+*/
+
+/* Roboto is embedded via roboto.css; no remote calls. */
+:root {
+  /* ---------- Colour: primary (Shaw Orange) ---------- */
+  --mat-sys-primary: #E84810;
+  --mat-sys-on-primary: #FFFFFF;
+  --mat-sys-primary-container: #FCE9E2;     /* Shaw Orange 12% on white */
+  --mat-sys-on-primary-container: #000000;
+  --mat-sys-inverse-primary: #FFB699;       /* Shaw Orange 55% on black — for use on dark surfaces */
+  --mat-sys-primary-fixed: #E84810;
+  --mat-sys-primary-fixed-dim: #C13A0D;
+  --mat-sys-on-primary-fixed: #FFFFFF;
+  --mat-sys-on-primary-fixed-variant: #7A2508;
+
+  /* ---------- Colour: secondary (Shaw Navy) ---------- */
+  --mat-sys-secondary: #1F225E;
+  --mat-sys-on-secondary: #FFFFFF;
+  --mat-sys-secondary-container: #E4E5EE;   /* Shaw Navy 12% on white */
+  --mat-sys-on-secondary-container: #1F225E;
+  --mat-sys-secondary-fixed: #1F225E;
+  --mat-sys-secondary-fixed-dim: #171A46;
+  --mat-sys-on-secondary-fixed: #FFFFFF;
+  --mat-sys-on-secondary-fixed-variant: #171A46;
+
+  /* ---------- Colour: tertiary (Shaw Teal) ---------- */
+  --mat-sys-tertiary: #007B84;
+  --mat-sys-on-tertiary: #FFFFFF;
+  --mat-sys-tertiary-container: #DFEFF0;    /* Shaw Teal 12% on white */
+  --mat-sys-on-tertiary-container: #005159;
+  --mat-sys-tertiary-fixed: #007B84;
+  --mat-sys-tertiary-fixed-dim: #005159;
+  --mat-sys-on-tertiary-fixed: #FFFFFF;
+  --mat-sys-on-tertiary-fixed-variant: #005159;
+
+  /* ---------- Colour: error ----------
+     The brand guidelines carry no error colour. The deck's red (--chart-2) is the only brand red,
+     so it serves as the error role; it is dark enough to carry white text at 4.5:1. */
+  --mat-sys-error: #A50021;
+  --mat-sys-on-error: #FFFFFF;
+  --mat-sys-error-container: #F6E0E4;
+  --mat-sys-on-error-container: #6E0016;
+
+  /* ---------- Colour: surfaces and neutrals ---------- */
+  --mat-sys-surface: #FFFFFF;
+  --mat-sys-on-surface: #000000;
+  --mat-sys-surface-variant: #F2F2F2;       /* Shaw Black 5% */
+  --mat-sys-on-surface-variant: #404040;    /* Shaw Black 75% */
+  --mat-sys-surface-dim: #E6E6E6;
+  --mat-sys-surface-bright: #FFFFFF;
+  --mat-sys-surface-container-lowest: #FFFFFF;
+  --mat-sys-surface-container-low: #F7F7F7;
+  --mat-sys-surface-container: #F2F2F2;
+  --mat-sys-surface-container-high: #E6E6E6;
+  --mat-sys-surface-container-highest: #CCCCCC;
+  --mat-sys-inverse-surface: #000000;
+  --mat-sys-inverse-on-surface: #FFFFFF;
+  --mat-sys-background: #FFFFFF;
+  --mat-sys-on-background: #000000;
+  --mat-sys-outline: #929292;               /* Shaw Black 55% — the brand grey */
+  --mat-sys-outline-variant: #E6E6E6;
+  --mat-sys-shadow: #000000;
+  --mat-sys-scrim: #000000;
+  --mat-sys-surface-tint: #E84810;
+  --mat-sys-neutral10: #1A1A1A;
+  --mat-sys-neutral-variant20: #333333;
+
+  /* ---------- Typography ----------
+     Product UI is set in Roboto, Material's own typeface, at Material's role geometry. This is a
+     deliberate split: applications built on Angular Material use Roboto so they read as Material;
+     brand communications — decks, documents, the marketing site — stay on Catalog and Helvetica
+     Neue per the brand guidelines. Weights follow Material: 400 for body,
+     display, headline, title-large and all body roles, 700 for small titles and labels. */
+  --mat-sys-display-large-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-display-large-size: 57px;
+  --mat-sys-display-large-line-height: 60px;
+  --mat-sys-display-large-weight: 400;
+  --mat-sys-display-large-tracking: -0.01em;
+  --mat-sys-display-large: 400 57px/60px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --mat-sys-display-medium-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-display-medium-size: 45px;
+  --mat-sys-display-medium-line-height: 48px;
+  --mat-sys-display-medium-weight: 400;
+  --mat-sys-display-medium-tracking: -0.01em;
+  --mat-sys-display-medium: 400 45px/48px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --mat-sys-display-small-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-display-small-size: 36px;
+  --mat-sys-display-small-line-height: 40px;
+  --mat-sys-display-small-weight: 400;
+  --mat-sys-display-small-tracking: 0;
+  --mat-sys-display-small: 400 36px/40px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --mat-sys-headline-large-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-headline-large-size: 32px;
+  --mat-sys-headline-large-line-height: 36px;
+  --mat-sys-headline-large-weight: 400;
+  --mat-sys-headline-large-tracking: 0;
+  --mat-sys-headline-large: 400 32px/36px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --mat-sys-headline-medium-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-headline-medium-size: 28px;
+  --mat-sys-headline-medium-line-height: 32px;
+  --mat-sys-headline-medium-weight: 400;
+  --mat-sys-headline-medium-tracking: 0;
+  --mat-sys-headline-medium: 400 28px/32px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --mat-sys-headline-small-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-headline-small-size: 24px;
+  --mat-sys-headline-small-line-height: 28px;
+  --mat-sys-headline-small-weight: 400;
+  --mat-sys-headline-small-tracking: 0;
+  --mat-sys-headline-small: 400 24px/28px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --mat-sys-title-large-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-title-large-size: 22px;
+  --mat-sys-title-large-line-height: 28px;
+  --mat-sys-title-large-weight: 400;
+  --mat-sys-title-large-tracking: 0;
+  --mat-sys-title-large: 400 22px/28px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --mat-sys-title-medium-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-title-medium-size: 16px;
+  --mat-sys-title-medium-line-height: 24px;
+  --mat-sys-title-medium-weight: 700;
+  --mat-sys-title-medium-tracking: 0;
+  --mat-sys-title-medium: 700 16px/24px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --mat-sys-title-small-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-title-small-size: 14px;
+  --mat-sys-title-small-line-height: 20px;
+  --mat-sys-title-small-weight: 700;
+  --mat-sys-title-small-tracking: 0;
+  --mat-sys-title-small: 700 14px/20px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --mat-sys-body-large-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-body-large-size: 16px;
+  --mat-sys-body-large-line-height: 24px;
+  --mat-sys-body-large-weight: 400;
+  --mat-sys-body-large-tracking: 0;
+  --mat-sys-body-large: 400 16px/24px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --mat-sys-body-medium-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-body-medium-size: 14px;
+  --mat-sys-body-medium-line-height: 20px;
+  --mat-sys-body-medium-weight: 400;
+  --mat-sys-body-medium-tracking: 0;
+  --mat-sys-body-medium: 400 14px/20px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --mat-sys-body-small-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-body-small-size: 12px;
+  --mat-sys-body-small-line-height: 16px;
+  --mat-sys-body-small-weight: 400;
+  --mat-sys-body-small-tracking: 0;
+  --mat-sys-body-small: 400 12px/16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Labels are the brand's uppercase-tracked style. Angular Material does not uppercase label
+     text itself — set text-transform on the components that should carry it (see overrides). */
+  --mat-sys-label-large-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-label-large-size: 13px;
+  --mat-sys-label-large-line-height: 20px;
+  --mat-sys-label-large-weight: 700;
+  --mat-sys-label-large-tracking: 0.06em;
+  --mat-sys-label-large-weight-prominent: 700;
+  --mat-sys-label-large: 500 13px/18px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --mat-sys-label-medium-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-label-medium-size: 12px;
+  --mat-sys-label-medium-line-height: 16px;
+  --mat-sys-label-medium-weight: 700;
+  --mat-sys-label-medium-tracking: 0.06em;
+  --mat-sys-label-medium-prominent-weight: 700;
+  --mat-sys-label-medium: 700 12px/16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --mat-sys-label-small-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-label-small-size: 11px;
+  --mat-sys-label-small-line-height: 16px;
+  --mat-sys-label-small-weight: 700;
+  --mat-sys-label-small-tracking: 0.06em;
+  --mat-sys-label-small: 700 11px/16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* ---------- Shape ----------
+     Material 3 shape scale, unchanged. Mirrored by --radius-* in tokens/spacing.css so brand
+     components and Material components round identically. */
+  --mat-sys-corner-none: 0;
+  --mat-sys-corner-extra-small: 4px;
+  --mat-sys-corner-extra-small-top: 4px 4px 0 0;
+  --mat-sys-corner-small: 8px;
+  --mat-sys-corner-medium: 12px;
+  --mat-sys-corner-large: 16px;
+  --mat-sys-corner-large-start: 16px 0 0 16px;
+  --mat-sys-corner-large-end: 0 16px 16px 0;
+  --mat-sys-corner-large-top: 16px 16px 0 0;
+  --mat-sys-corner-extra-large: 28px;
+  --mat-sys-corner-extra-large-top: 28px 28px 0 0;
+  --mat-sys-corner-full: 9999px;
+
+  /* ---------- Elevation ----------
+     Material's ramp, with the tint colour replaced by neutral black so no purple cast survives. */
+  --mat-sys-level0: none;
+  --mat-sys-level1: 0 1px 2px rgba(0,0,0,.30), 0 1px 3px 1px rgba(0,0,0,.15);
+  --mat-sys-level2: 0 1px 2px rgba(0,0,0,.30), 0 2px 6px 2px rgba(0,0,0,.15);
+  --mat-sys-level3: 0 4px 8px 3px rgba(0,0,0,.15), 0 1px 3px rgba(0,0,0,.30);
+  --mat-sys-level4: 0 6px 10px 4px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.30);
+  --mat-sys-level5: 0 8px 12px 6px rgba(0,0,0,.15), 0 4px 4px rgba(0,0,0,.30);
+
+  /* ---------- Brand extension roles ----------
+     Material 3 has no positive/negative colour role, and gains and losses are unavoidable in this
+     product. Shaw Lime (#A9B819) is a display colour and fails AA as text (2.20:1 on white), so the
+     positive role is the deck's green — dark enough to carry small figures. Negative reuses the
+     error role. These are not Material tokens; they are named --shaw-sys-* to make that clear. */
+  --shaw-sys-positive: #337722;   /* --chart-8 · 5.66:1 on white */
+  --shaw-sys-on-positive: #FFFFFF;
+  --shaw-sys-positive-container: #E1EBDE;
+  --shaw-sys-negative: #A50021;   /* = --mat-sys-error */
+  --shaw-sys-on-negative: #FFFFFF;
+
+  /* ---------- State ---------- */
+  --mat-sys-hover-state-layer-opacity: 0.08;
+  --mat-sys-focus-state-layer-opacity: 0.12;
+  --mat-sys-pressed-state-layer-opacity: 0.12;
+  --mat-sys-dragged-state-layer-opacity: 0.16;
+}
+
+/* ---------- Component token overrides ----------
+   Everything below exists because the brand asks for something the system tokens cannot express
+   on their own. Keep this list short: each entry should name a brand rule, not a preference. */
+:root {
+  /* Uppercase, tracked labels on actions and tabs — the brand's label style (guidelines p.11). */
+  --mat-filled-button-label-text-tracking: 0.06em;
+  --mat-outlined-button-label-text-tracking: 0.06em;
+  --mat-text-button-label-text-tracking: 0.06em;
+  --mat-tab-header-label-text-tracking: 0.06em;
+
+  /* Toolbar sits on Shaw Black, not primary — orange is an accent, never a large flat field. */
+  --mat-toolbar-container-background-color: #000000;
+  --mat-toolbar-container-text-color: #FFFFFF;
+
+  /* Outlined cards take the brand hairline. */
+  --mat-card-outlined-outline-color: #E6E6E6;
+  --mat-card-outlined-outline-width: 1px;
+
+  /* Form fields: brand grey outline, orange focus, brand red error. */
+  --mat-form-field-focus-select-arrow-color: #E84810;
+  --mat-form-field-state-layer-color: #F2F2F2;
+}
+
+/* Dark surfaces (Shaw Black sections, deck-style panels). Apply .shaw-dark on a wrapper. */
+.shaw-dark {
+  --mat-sys-primary: #FF6A33;
+  --mat-sys-on-primary: #000000;
+  --mat-sys-primary-container: #7A2508;
+  --mat-sys-on-primary-container: #FFFFFF;
+  --mat-sys-surface: #000000;
+  --mat-sys-on-surface: #FFFFFF;
+  --mat-sys-surface-variant: #1A1A1A;
+  --mat-sys-on-surface-variant: #CCCCCC;
+  --mat-sys-surface-container-lowest: #000000;
+  --mat-sys-surface-container-low: #0D0D0D;
+  --mat-sys-surface-container: #1A1A1A;
+  --mat-sys-surface-container-high: #262626;
+  --mat-sys-surface-container-highest: #333333;
+  --mat-sys-inverse-surface: #FFFFFF;
+  --mat-sys-inverse-on-surface: #000000;
+  --mat-sys-background: #000000;
+  --mat-sys-on-background: #FFFFFF;
+  --mat-sys-outline: #929292;
+  --mat-sys-outline-variant: #404040;
+  --mat-sys-error: #FF7A8F;
+  --mat-sys-on-error: #000000;
+  --shaw-sys-positive: #8FC97E;
+  --shaw-sys-on-positive: #000000;
+  --shaw-sys-negative: #FF7A8F;
+  --mat-toolbar-container-background-color: #000000;
+}
+
+
+
+/* =====================================================================================
+   APPROVED APP LAYER · 2026-10-14
+   The running app (Shell, Plugin0, Advisor Dashboard) is the approved reference. These values
+   override the Material defaults above. Source: designer-ui-contract.md, plugin0 and advisor
+   dashboard designer notes of 2026-10-14, apps/shell/src/app/core/chart-theme.ts.
+   ===================================================================================== */
+:root {
+  /* Phoenix type scale (density −2 desktop tool). */
+  --mat-sys-display-small: 400 28px/36px Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-headline-medium: 400 20px/28px Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-headline-small: 400 18px/24px Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-title-large: 400 16px/24px Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-title-medium: 500 14px/20px Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-title-small: 500 12px/18px Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-body-large: 400 14px/20px Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-body-medium: 400 13px/18px Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-body-small: 400 11px/16px Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-label-large: 500 13px/18px Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-label-medium: 500 11px/16px Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mat-sys-label-small: 500 10px/14px Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Letter-spacing 0 on every type role (contract § 3.3). Tracking and caps are added per use. */
+  --mat-sys-display-small-tracking: 0; --mat-sys-headline-medium-tracking: 0; --mat-sys-headline-small-tracking: 0;
+  --mat-sys-title-large-tracking: 0; --mat-sys-title-medium-tracking: 0; --mat-sys-title-small-tracking: 0;
+  --mat-sys-body-large-tracking: 0; --mat-sys-body-medium-tracking: 0; --mat-sys-body-small-tracking: 0;
+  --mat-sys-label-large-tracking: 0; --mat-sys-label-medium-tracking: 0; --mat-sys-label-small-tracking: 0;
+
+  /* Tonal surfaces are black on white text (design system, 2026-10-14): tonal button, selected chips, checked toggle. */
+  --mat-sys-secondary-container: #000000;
+  --mat-sys-on-secondary-container: #FFFFFF;
+
+  /* One corner. Cards, panels, fields, menus, dialogs: 6px. Pills stay pills. */
+  --shaw-sys-corner: 6px;
+  --mat-sys-corner-small: 6px;
+  --mat-sys-corner-medium: 6px;
+  --mat-sys-corner-large: 6px;
+  --mat-sys-corner-large-start: 6px 0 0 6px;
+  --mat-sys-corner-large-end: 0 6px 6px 0;
+  --mat-sys-corner-large-top: 6px 6px 0 0;
+  --mat-sys-corner-extra-large: 6px;
+  --mat-sys-corner-extra-large-top: 6px 6px 0 0;
+
+  /* Drop-down panels (menu, select, autocomplete, calendar, filter): Material elevation 2, no scrim. */
+  --shaw-sys-popup-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+
+  /* Tables. */
+  --shaw-sys-table-header-height: 48px;
+  --shaw-sys-table-row-height: 44px;
+  --shaw-sys-table-band: var(--mat-sys-surface-container-low);   /* #F7F7F7 */
+
+  /* Charts (ECharts). Never reorder: legends index into this sequence. */
+  --shaw-sys-chart-1: #E84810;
+  --shaw-sys-chart-2: #1F225E;
+  --shaw-sys-chart-3: #007B84;
+  --shaw-sys-chart-4: #A9B819;
+  --shaw-sys-chart-5: #FFCC00;
+  --shaw-sys-chart-6: #EE7601;
+  --shaw-sys-chart-corner: 4px;          /* single bars, pie and ring arcs */
+  --shaw-sys-chart-stack-corner: 2px;    /* each segment of a stacked bar */
+}
