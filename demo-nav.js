@@ -32,7 +32,7 @@
   var current = params.get('moment') || moments[moments.length - 1][0];
   var css = document.createElement('style');
   css.textContent =
-    '.demo-moments{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:9999;' +
+    '.demo-moments{position:fixed;left:50%;top:8px;transform:translateX(-50%);z-index:9999;' +
     'display:flex;align-items:center;gap:4px;padding:6px 8px;border-radius:9999px;background:#000;' +
     'box-shadow:0 2px 8px rgba(0,0,0,.3);font:500 12px/16px Roboto,Arial,sans-serif;color:#ccc}' +
     '.demo-moments span{padding:0 8px}' +
