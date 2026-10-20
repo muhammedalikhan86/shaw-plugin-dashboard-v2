@@ -261,7 +261,9 @@ table.ot th[mat-header-cell]{white-space:normal}
 table.ot tr.grp td[mat-cell]{background:var(--mat-sys-surface-container-low);font:500 12px/18px var(--f);height:36px}
 table.ot tr.kid td[mat-cell]{background:var(--mat-sys-surface)}
 table.ot tr.kid td[mat-cell]:first-child{padding-left:56px}
-table.ot tr.hot td[mat-cell]{background:#FDF1EC}
+table.ot tbody tr.bo td[mat-cell]{background:var(--mat-sys-surface)}
+table.ot tbody tr.be td[mat-cell]{background:var(--mat-sys-surface-container-low)}
+table.ot tbody tr.hot td[mat-cell]{background:#FDF1EC}
 table.ot tr.dim td[mat-cell]{color:var(--mat-sys-on-surface-variant)}
 .cl{display:flex;flex-direction:column;gap:2px;min-width:0}
 .cl.h{flex-direction:row;align-items:center;gap:6px;flex-wrap:wrap}
@@ -614,6 +616,7 @@ mat-card[data-fix="true"] .tsc{flex:1 1 auto;min-height:0;overflow:auto}
 .app-layer button[aria-label^="Select all"] mat-icon,.app-layer button[aria-label="Clear selection"] mat-icon,.app-layer button[aria-label="Payment frequency"] mat-icon,.app-layer button[aria-label="Signing method"] mat-icon,.app-layer button[aria-label="Service answers"] mat-icon{font-size:18px!important;width:18px!important;height:18px!important}
 .app-layer td .cl:has(>.stk){flex-direction:column!important;flex-wrap:nowrap!important;align-items:flex-start!important;gap:8px!important}
 .app-layer td .cl>.stk+.stk{padding-top:8px;border-top:1px solid var(--mat-sys-outline-variant)}
+.app-layer td .cl>.stk{align-self:stretch}
 mat-dialog:is(.q3,[classname~="q3"]) .fg{display:flex!important;flex-wrap:wrap;justify-content:center;gap:16px}
 mat-dialog:is(.q3,[classname~="q3"]) .fg>.fgf{flex:0 0 calc((100% - 32px) / 3);min-width:0}
 .app-layer table.ot th.nw,.app-layer table.ot th.nw .hd{white-space:nowrap}
@@ -636,3 +639,5 @@ mat-dialog:is(.q3,[classname~="q3"]) .fg>.fgf{flex:0 0 calc((100% - 32px) / 3);m
 .shell[data-edit="dash"] .rvb{display:none!important}
 .shell[data-edit="dash"] .rvt{text-decoration:underline dashed var(--mat-sys-on-surface-variant);text-decoration-thickness:1px;text-underline-offset:4px;padding:10px 0}
 .shell[data-edit="dash"] .rvt:hover{text-decoration-color:var(--mat-sys-primary);color:var(--mat-sys-primary)!important}
+
+table.ot th[mat-header-cell].nw{white-space:nowrap}
