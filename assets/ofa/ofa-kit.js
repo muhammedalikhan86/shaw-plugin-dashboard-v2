@@ -7,7 +7,7 @@
   const fld = (v, o) => Object.assign({ v, icon: "arrow_drop_down", err: null, errText: null, ph: null, w: null, go: null, tip: null }, o || {});
   const cell = (o) => {
     o = typeof o === "object" && o !== null ? o : { v: o };
-    const c = Object.assign({ v: null, sub: null, chip: null, tone: "", chip2: null, tone2: "", cls: "", color: null, flds: null, stack: null, yn: null, link: null, btns: null, check: null, span: null, rec: null, tip: null, icon: null, h: false, w: null, fw: "500", subColor: null }, o);
+    const c = Object.assign({ v: null, sub: null, chip: null, tone: "", chip2: null, tone2: "", cls: "", color: null, flds: null, stack: null, yn: null, link: null, btns: null, check: null, span: null, rec: null, tip: null, icon: null, h: false, w: null, fw: "500", subColor: null, sub2: null }, o);
     if (c.menu && c.menu.l === undefined) c.menu = Object.assign({}, c.menu, { l: "auto" });
     c.v = c.v === null || c.v === undefined ? null : String(c.v);
     c.cl = c.h ? "cl h" : "cl"; c.plain = c.v !== null && !c.rec; ["flds","stack","btns"].forEach(key => { if (!c[key]) c[key] = []; }); c.btns = c.btns.map(b => Object.assign({ dis: null, tip: null, hasIcon: !!b.icon, icon: null, iconOnly: false }, b, { notIconOnly: !b.iconOnly })); if (c.btns.length && c.btns.every(b => b.iconOnly)) c.h = true, c.cl = "cl h";
