@@ -190,6 +190,7 @@
         }
         return d;
       }, [entry.propsMeta]);
+      window.__demoRefresh = () => entry.subs.forEach((f) => f());
       const fromUrl = {}; new URLSearchParams(location.search).forEach((v, k) => { if (entry.propsMeta && k in entry.propsMeta) fromUrl[k] = v; });
       return h(Root, { ...defaults, ...entry.propOverrides || {}, ...fromUrl });
     }

@@ -14,7 +14,8 @@
 })();
 
 // Demo only: a strip of links to view a page at a moment in the October 2026 cycle,
-// for pages that have the "moment" setting. Each link reloads the page with ?moment=.
+// for pages that have the "moment" setting. A link changes ?moment= without reloading, so the
+// page keeps the view it is on; support.js's window.__demoRefresh re-reads the address.
 (function () {
   var PAGES = {
     'portfolio-services.html': [
@@ -29,8 +30,7 @@
   var page = location.pathname.split('/').pop();
   var moments = PAGES[page];
   if (!moments) return;
-  var params = new URLSearchParams(location.search);
-  var current = params.get('moment') || '07-10-2026 09:40 · Today';
+  var DEFAULT = '07-10-2026 09:40 · Today';
   var css = document.createElement('style');
   css.textContent =
     '.demo-moments{position:fixed;left:50%;top:8px;transform:translateX(-50%);z-index:9999;' +
@@ -41,24 +41,40 @@
     '.demo-moments a:hover{background:#333}' +
     '.demo-moments a[aria-current]{background:#FF6A33;color:#000}';
   document.head.appendChild(css);
-  function render() {
-    var bar = document.createElement('nav');
-    bar.className = 'demo-moments';
-    bar.setAttribute('aria-label', 'View the month at');
-    var lead = document.createElement('span');
-    lead.textContent = 'View the month at';
-    bar.appendChild(lead);
-    moments.forEach(function (m) {
+  var bar = document.createElement('nav');
+  bar.className = 'demo-moments';
+  bar.setAttribute('aria-label', 'View the month at');
+  var lead = document.createElement('span');
+  lead.textContent = 'View the month at';
+  bar.appendChild(lead);
+  var links = moments.map(function (m) {
+    var a = document.createElement('a');
+    a.textContent = m[1];
+    a.addEventListener('click', function (e) {
+      if (typeof window.__demoRefresh !== 'function') return; // falls back to a reload
+      e.preventDefault();
+      history.pushState(null, '', a.href);
+      update();
+      window.__demoRefresh();
+    });
+    bar.appendChild(a);
+    return a;
+  });
+  function update() {
+    var current = new URLSearchParams(location.search).get('moment') || DEFAULT;
+    moments.forEach(function (m, i) {
       var p = new URLSearchParams(location.search);
       p.set('moment', m[0]);
-      var a = document.createElement('a');
-      a.href = '?' + p.toString();
-      a.textContent = m[1];
-      if (m[0] === current) a.setAttribute('aria-current', 'true');
-      bar.appendChild(a);
+      links[i].href = '?' + p.toString();
+      if (m[0] === current) links[i].setAttribute('aria-current', 'true');
+      else links[i].removeAttribute('aria-current');
     });
-    // On <html>, not <body>: the page's runtime rebuilds the body after it loads.
-    document.documentElement.appendChild(bar);
   }
-  render();
+  window.addEventListener('popstate', function () {
+    update();
+    if (typeof window.__demoRefresh === 'function') window.__demoRefresh();
+  });
+  update();
+  // On <html>, not <body>: the page's runtime rebuilds the body after it loads.
+  document.documentElement.appendChild(bar);
 })();

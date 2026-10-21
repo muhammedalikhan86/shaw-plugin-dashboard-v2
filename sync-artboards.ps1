@@ -6,7 +6,9 @@
   Copies four artboard pages, their shared assets and support.js into this folder, then patches
   them for the demo:
     - each page loads demo-nav.js, which makes the Shaw and Partners logo go back to index.html;
-    - support.js lets a page's setting come from the address, e.g. advisor.html?seat=SM%20%C2%B7%20all%20advisors.
+    - support.js lets a page's setting come from the address, e.g. advisor.html?seat=SM%20%C2%B7%20all%20advisors,
+      and exposes window.__demoRefresh, which re-reads the address without reloading, so a page
+      keeps the view it is on when demo-nav.js changes a setting.
   index.html and demo-nav.js are maintained by hand and are not touched.
 
   Run it, check the pages locally, then commit and push. Vercel deploys on push.
@@ -45,7 +47,8 @@ Copy-Item (Join-Path $Source 'ofa\assets') $assets -Recurse
 # support.js, with the address-bar settings patch
 $s = [IO.File]::ReadAllText((Join-Path $Source 'ofa\support.js'), $utf8)
 $s = Replace-Once $s 'return h(Root, { ...defaults, ...entry.propOverrides || {} });' (
-  'const fromUrl = {}; new URLSearchParams(location.search).forEach((v, k) => { if (entry.propsMeta && k in entry.propsMeta) fromUrl[k] = v; });' + "`n" +
+  'window.__demoRefresh = () => entry.subs.forEach((f) => f());' + "`n" +
+  '      const fromUrl = {}; new URLSearchParams(location.search).forEach((v, k) => { if (entry.propsMeta && k in entry.propsMeta) fromUrl[k] = v; });' + "`n" +
   '      return h(Root, { ...defaults, ...entry.propOverrides || {}, ...fromUrl });') 'support.js'
 [IO.File]::WriteAllText((Join-Path $Out 'support.js'), $s, $utf8)
 
