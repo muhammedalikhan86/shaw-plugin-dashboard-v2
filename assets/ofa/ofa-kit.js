@@ -8,6 +8,7 @@
   const cell = (o) => {
     o = typeof o === "object" && o !== null ? o : { v: o };
     const c = Object.assign({ v: null, sub: null, chip: null, tone: "", chip2: null, tone2: "", cls: "", color: null, flds: null, stack: null, yn: null, link: null, btns: null, check: null, span: null, rec: null, tip: null, icon: null, h: false, w: null, fw: "500", subColor: null }, o);
+    if (c.menu && c.menu.l === undefined) c.menu = Object.assign({}, c.menu, { l: "auto" });
     c.v = c.v === null || c.v === undefined ? null : String(c.v);
     c.cl = c.h ? "cl h" : "cl"; c.plain = c.v !== null && !c.rec; ["flds","stack","btns"].forEach(key => { if (!c[key]) c[key] = []; }); c.btns = c.btns.map(b => Object.assign({ dis: null, tip: null, hasIcon: !!b.icon, icon: null, iconOnly: false }, b, { notIconOnly: !b.iconOnly })); if (c.btns.length && c.btns.every(b => b.iconOnly)) c.h = true, c.cl = "cl h";
     c.stack = c.stack.map(s => Object.assign({ v: null, sub: null, chip: null, tone: "", flds: [], btns: [], link: null, ed: null, chg: null }, s)); c.flds = c.flds.map(q => Object.assign({ icon: "arrow_drop_down", err: null, errText: null, ph: null, w: null, go: null, tip: null }, q));
@@ -21,7 +22,7 @@
     if (p.capped === true) p.capped = "true"; if (kind === "Bar") p.btns = (p.btns || []); p.kvCols = p.kvColsX ? p.kvColsX : p.cols4 ? "repeat(4,minmax(0,1fr))" : p.cols3 ? "repeat(3,minmax(0,1fr))" : "repeat(auto-fill,minmax(170px,1fr))";
     return p;
   };
-  const block = (kind, span, o) => Object.assign(flags(BLOCKS, kind), { span: span || 24, title: null, sub: null, asAt: null, actions: [], parts: [], items: [], hasHead: true, text: null, icon: null, tone: "", btns: [], fields: [], dots: [], ticks: [], todayX: null, axisH: "16px", cols: "repeat(auto-fill,minmax(150px,1fr))", chips: [], fix: null, h: "auto", rows: 1, lead: null, legendN: true, foot: null, search: null, days: [], todayCol: "1", todayLabel: null }, o || {});
+  const block = (kind, span, o) => { const r = Object.assign(flags(BLOCKS, kind), { span: span || 24, title: null, sub: null, asAt: null, actions: [], parts: [], items: [], hasHead: true, text: null, icon: null, tone: "", btns: [], fields: [], dots: [], ticks: [], todayX: null, axisH: "16px", cols: "repeat(auto-fill,minmax(150px,1fr))", chips: [], fix: null, h: "auto", rows: 1, lead: null, legendN: true, foot: null, search: null, days: [], todayCol: "1", todayLabel: null , tcols: null }, o || {}); r.tOld = r.tcols ? null : "true"; return r; };
   const tbl = (cols, rows, emptyT, emptyS, o) => rows.length ? part("Table", Object.assign({ cols, rows }, o || {})) : part("Empty", { title: emptyT, text: emptyS || null, icon: "task_alt" });
 
   // dates
@@ -96,18 +97,18 @@
       if (!b.isCard) return b; const ti = (b.parts || []).findIndex(p => p.isTable); if (ti < 0) return b; const bare = !!(b.noTools || b.noMenu);
       const id = b.expId || ("t:" + String(b.title || "").replace(/[\d,]+/g, "").trim()), tp = b.parts[ti], cols = tp.cols, so = (s.sort || {})[id];
       const hidM = Object.assign({}, (o.defHid || {})[id] || {}, ((s.hid || {})[id]) || {});
-      const rows = tp.rows, isG = (r) => /grp/.test(r.cls || ""), isK = (r) => /kid/.test(r.cls || ""), sec = rows.some(isG) && !rows.some(isK);
+      const rows = tp.rows, isG = (r) => /grp/.test(r.cls || ""), isK = (r) => /kid/.test(r.cls || ""), gU = !!b.grpUnits, sec = !gU && rows.some(isG) && !rows.some(isK);
       const cmp = (a, c) => { if (!so) return 0; const x = key(a.cells[so.ci]), y = key(c.cells[so.ci]); if (x[0] !== y[0]) return x[0] - y[0]; return (x[1] < y[1] ? -1 : x[1] > y[1] ? 1 : 0) * so.d; };
       let units = [];
       if (sec) { let cur = null; rows.forEach(r => { if (isG(r)) { cur = [r]; cur.sec = []; units.push(cur); } else if (cur) cur.sec.push(r); else units.push([r]); }); units.forEach(u => { if (u.sec) u.sec.sort(cmp); }); }
-      else { rows.forEach(r => { if (isK(r) && units.length) units[units.length - 1].push(r); else units.push([r]); }); if (so) units = units.slice().sort((a, c) => cmp(a[0], c[0])); }
+      else { rows.forEach(r => { if ((gU ? !isG(r) : isK(r)) && units.length) units[units.length - 1].push(r); else units.push([r]); }); if (so) units = units.slice().sort((a, c) => cmp(a[0], c[0])); }
       const nData = sec ? units.reduce((n, u) => n + (u.sec ? u.sec.length : 1), 0) : units.length;
       let shown = units, pager = null;
       if (b.paged && !sec) { const per = s.expId === id ? 25 : (b.per || 10), n = units.length, pages = Math.max(1, Math.ceil(n / per)), pg = Math.min(((s.gp || {})[id]) || 0, pages - 1), setPg = (v) => comp.setState({ gp: Object.assign({}, comp.state.gp, { [id]: v }) }); shown = units.slice(pg * per, pg * per + per); pager = part("Pager", { per: String(per), text: n ? (pg * per + 1) + "–" + Math.min(n, pg * per + per) + " of " + n : "0 of 0", prevDis: pg === 0 ? "true" : null, nextDis: pg >= pages - 1 ? "true" : null, prev: () => setPg(pg - 1), next: () => setPg(pg + 1) }); }
       const lineK = !sec && rows.some(isK) && !rows.some(isG);
       let flat = []; shown.forEach((u, ui) => { u.forEach(r => flat.push(lineK ? Object.assign({}, r, { cls: (r.cls || "") + (ui % 2 ? " be" : " bo") }) : r)); if (u.sec) u.sec.forEach(r => flat.push(r)); });
       if (b.paged && sec) { const per = s.expId === id ? 25 : (b.per || 10), n = nData, pages = Math.max(1, Math.ceil(n / per)), pg = Math.min(((s.gp || {})[id]) || 0, pages - 1), setPg = (v) => comp.setState({ gp: Object.assign({}, comp.state.gp, { [id]: v }) }); const out = []; let hd = null, done = false, k = 0; flat.forEach(r => { if (isG(r)) { hd = r; done = false; return; } if (k >= pg * per && k < pg * per + per) { if (hd && !done) { out.push(hd); done = true; } out.push(r); } k++; }); flat = out; pager = part("Pager", { per: String(per), text: n ? (pg * per + 1) + "–" + Math.min(n, pg * per + per) + " of " + n : "0 of 0", prevDis: pg === 0 ? "true" : null, nextDis: pg >= pages - 1 ? "true" : null, prev: () => setPg(pg - 1), next: () => setPg(pg + 1) }); }
-      const lock = (c) => /^S account/.test(c.label || ""), vis = cols.map((c, i) => i).filter(i => lock(cols[i]) || !(cols[i].label && hidM[cols[i].label]));
+      const lock = (c) => /^S-Account/.test(c.label || ""), vis = cols.map((c, i) => i).filter(i => lock(cols[i]) || !(cols[i].label && hidM[cols[i].label]));
       const rows2 = flat.map(r => r.cells.length === cols.length ? Object.assign({}, r, { cells: vis.map(i => r.cells[i]) }) : Object.assign({}, r, { cells: r.cells.map((c, j) => j === 0 && c.span ? Object.assign({}, c, { span: String(Math.max(1, Number(c.span) - (cols.length - vis.length))) }) : c) }));
       const setSort = (ci) => () => comp.setState({ sort: Object.assign({}, comp.state.sort, { [id]: !so || so.ci !== ci ? { ci, d: 1 } : so.d === 1 ? { ci, d: -1 } : null }), gp: Object.assign({}, comp.state.gp, { [id]: 0 }) });
       const cols2 = vis.map(i => { const c = cols[i], on = so && so.ci === i; return Object.assign({}, c, { sort: c.label ? setSort(i) : null, cur: c.label ? "pointer" : "default", sortIcon: on ? (so.d > 0 ? "arrow_upward" : "arrow_downward") : null, aria: on ? (so.d > 0 ? "ascending" : "descending") : "none" }); });
