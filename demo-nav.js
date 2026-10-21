@@ -24,12 +24,13 @@
       ['07-10-2026 09:40 · Today', '7 Oct · Today']
     ]
   };
-  PAGES['advisor.html'] = PAGES['portfolio-services.html'];
+  PAGES['advisor.html'] = PAGES['portfolio-services.html'].slice();
+  PAGES['portfolio-services.html'].push(['08-10-2026 10:00 · Ready to issue', '8 Oct · Ready to issue']);
   var page = location.pathname.split('/').pop();
   var moments = PAGES[page];
   if (!moments) return;
   var params = new URLSearchParams(location.search);
-  var current = params.get('moment') || moments[moments.length - 1][0];
+  var current = params.get('moment') || '07-10-2026 09:40 · Today';
   var css = document.createElement('style');
   css.textContent =
     '.demo-moments{position:fixed;left:50%;top:8px;transform:translateX(-50%);z-index:9999;' +

@@ -378,7 +378,7 @@ class Component extends DCLogic {
   state = { tab: "month", page: 0, filt: null, sel: {}, ov: {}, sigSel: {}, pick: null, initOv: {}, closOv: {}, notes: {}, drafts: {}, dlg: null, snack: null, pinned: false };
   componentDidMount() { if (!window.OFAKIT) { this._p = setInterval(() => { if (window.OFAKIT) { clearInterval(this._p); this.forceUpdate(); } }, 60); } }
   componentWillUnmount() { clearInterval(this._p); }
-  componentDidUpdate(pp) { if (pp.seat !== this.props.seat || pp.volume !== this.props.volume) this.setState({ page: 0, sel: {}, pick: null, filt: null, ov: {} }); if (pp.moment !== this.props.moment) this.setState({ page: 0, sel: {}, filt: null, ov: {}, initOv: {}, closOv: {}, rec: null }); }
+  componentDidUpdate(pp) { if (this.state.snack && this.state.snack !== this._snk) { this._snk = this.state.snack; clearTimeout(this._snT); this._snT = setTimeout(() => { this._snk = null; this.setState({ snack: null }); }, 3000); } else if (!this.state.snack) this._snk = null; if (pp.seat !== this.props.seat || pp.volume !== this.props.volume) this.setState({ page: 0, sel: {}, pick: null, filt: null, ov: {} }); if (pp.moment !== this.props.moment) this.setState({ page: 0, sel: {}, filt: null, ov: {}, initOv: {}, closOv: {}, rec: null }); }
   renderVals() {
     const K = window.OFAKIT; if (!K) return {};
     const { btn, part, block, tbl, col, ncol, kv, ff, li, doc, door, money, add, diff } = K;

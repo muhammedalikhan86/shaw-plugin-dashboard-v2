@@ -305,7 +305,6 @@ const OFFN = "Tobias Marlow is on leave until 19-10-2026. His State Manager aske
 const E = (s, nm, a, pas, ws, why, by, at, x) => Object.assign({ s, nm, a, pas, ws, why, by, at, notes: [] }, x || {});
 const EXL = [
   E("S19877", "Kestrel Nominees Pty Ltd", "KA", [["MW", "M-440100", "Macquarie Investment Consolidator II - Elevate"]], "N", "No entity type in DART", "Rule", "01-10-2026 06:00", { perm: true }),
-  E("S19902", "Estate of the late R. Halvorsen", "HI", [["SMA", "7701-300", "PRAEMIUM Shaw SMA"]], "N", "Deceased estate", "Rule", "01-10-2026 06:00"),
   E("S20012", "Brightwater Partnership", "OF", [["NW", "NW-52001", "Netwealth - Investment"]], "N", "An entity type with no signing rule", "Rule", "01-10-2026 06:00"),
   E("—", "Go-live record 2207, from Complii", "PV", [["HUB", "H-88123", "HUB24 Invest"]], "N", "Brought in at go-live and could not be matched", "Rule", "01-10-2026 06:00"),
   E("S20120", "Dunmore Pty Ltd", "HI", [["MW", "M-447702", "Macquarie Investment Consolidator II - Elevate"]], "N", "Account closed", "Corinne Abbott", "01-10-2026 11:02", { notes: [["01-10-2026 11:02", "Corinne Abbott", "Platform shows the account closed 02-06-2026."]] }),
@@ -368,7 +367,7 @@ class Component extends DCLogic {
   state = { view: "exl", from: null, hidePerm: false, sxTab: "pend", sel: "S19611", w: "cat1", pinned: true, dlg: null, snack: null };
   componentDidMount() { if (!window.OFAKIT) { this._p = setInterval(() => { if (window.OFAKIT) { clearInterval(this._p); this.forceUpdate(); } }, 60); } }
   componentWillUnmount() { clearInterval(this._p); }
-  componentDidUpdate() { requestAnimationFrame(() => document.querySelectorAll('mat-list[data-tail="1"]:not([role="dialog"] *)').forEach(el => { const n = String(el.children.length); if (el.dataset.sn !== n) { el.dataset.sn = n; el.scrollTop = el.scrollHeight; } })); if (this.state.dlg !== this._tailDlg) { this._tailDlg = this.state.dlg; requestAnimationFrame(() => document.querySelectorAll('mat-list[data-tail="1"]').forEach(el => { el.scrollTop = el.scrollHeight; })); } }
+  componentDidUpdate() { if (this.state.snack && this.state.snack !== this._snk) { this._snk = this.state.snack; clearTimeout(this._snT); this._snT = setTimeout(() => { this._snk = null; this.setState({ snack: null }); }, 3000); } else if (!this.state.snack) this._snk = null; requestAnimationFrame(() => document.querySelectorAll('mat-list[data-tail="1"]:not([role="dialog"] *)').forEach(el => { const n = String(el.children.length); if (el.dataset.sn !== n) { el.dataset.sn = n; el.scrollTop = el.scrollHeight; } })); if (this.state.dlg !== this._tailDlg) { this._tailDlg = this.state.dlg; requestAnimationFrame(() => document.querySelectorAll('mat-list[data-tail="1"]').forEach(el => { el.scrollTop = el.scrollHeight; })); } }
   go(view, x) { this.setState(Object.assign({ view, dlg: null, expId: null, from: view === "rec" ? this.state.view === "rec" ? this.state.from : this.state.view : null }, x || {})); }
   renderVals() {
     const K = window.OFAKIT; if (!K) return {};
