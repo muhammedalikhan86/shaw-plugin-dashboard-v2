@@ -19,7 +19,7 @@
   const part = (kind, o) => {
     const p = Object.assign(flags(PARTS, kind), { scroll: null, capped: null, title: null, rows: [], cols: [], items: [], entries: [], text: null, label: null, btns: [], fields: [], minW: "0px", ux: null, right: null, icon: null, color: null, lead: null, dots: [], ticks: [], axisH: "0px", foot: null, legendN: true, per: "10", lbtns: null, mt: "0px", tw: "100%" }, o || {});
     if (kind === "Table") p.rows = p.rows.map(r => Object.assign({ cls: "" }, r, { cells: r.cells.map(cell) }));
-    if (p.capped === true) p.capped = "true"; if (kind === "Bar") p.btns = (p.btns || []); p.kvCols = p.kvColsX ? p.kvColsX : p.cols4 ? "repeat(4,minmax(0,1fr))" : p.cols3 ? "repeat(3,minmax(0,1fr))" : "repeat(auto-fill,minmax(170px,1fr))";
+    if (p.cols) p.cols = p.cols.map(c => typeof c === "string" ? { label: c } : c && c.label != null && c.label !== "" ? c : Object.assign({}, c, { label: "\u200b" })); if (p.capped === true) p.capped = "true"; if (kind === "Bar") p.btns = (p.btns || []); p.kvCols = p.kvColsX ? p.kvColsX : p.cols4 ? "repeat(4,minmax(0,1fr))" : p.cols3 ? "repeat(3,minmax(0,1fr))" : "repeat(auto-fill,minmax(170px,1fr))";
     return p;
   };
   const block = (kind, span, o) => { const r = Object.assign(flags(BLOCKS, kind), { span: span || 24, title: null, sub: null, asAt: null, actions: [], parts: [], items: [], hasHead: true, text: null, icon: null, tone: "", btns: [], fields: [], dots: [], ticks: [], todayX: null, axisH: "16px", cols: "repeat(auto-fill,minmax(150px,1fr))", chips: [], fix: null, h: "auto", rows: 1, lead: null, legendN: true, foot: null, search: null, days: [], todayCol: "1", todayLabel: null , tcols: null }, o || {}); r.tOld = r.tcols ? null : "true"; return r; };
@@ -33,16 +33,20 @@
   const money = (v) => v === null || v === undefined ? "—" : "$" + Math.round(v).toLocaleString("en-AU");
   let seed = 7; const rnd = () => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; };
 
+  // attachments: image, .msg or .eml; removable chips before saving, links after
+  const ACCEPT = "image/*,.msg,.eml";
+  const attOf = (comp, key) => { const list = ((comp.state.att || {})[key]) || []; const set = (l) => comp.setState({ att: Object.assign({}, comp.state.att, { [key]: l }) }); return { accept: ACCEPT, list: list.map((n, i) => ({ name: n, rm: () => set(list.filter((_, j) => j !== i)) })), has: list.length ? "true" : null, names: list, pick: (e) => { const fs = [...((e.target && e.target.files) || [])].map(f => f.name); if (e.target) e.target.value = ""; if (fs.length) set(list.concat(fs)); }, clear: () => set([]) }; };
+  const links = (names) => (names || []).map(n => ({ name: n, go: (e) => { if (e && e.preventDefault) e.preventDefault(); } }));
   // notes log: append-only; comp.state.notes[id] holds added entries, comp.state.drafts[id] the box
   function notes(comp, id, base, o) {
     o = o || {};
-    const s = comp.state, added = (s.notes || {})[id] || [], draft = (s.drafts || {})[id] || "";
-    const entries = o.asc ? added.concat(base).slice().reverse() : added.concat(base);
+    const s = comp.state, added = (s.notes || {})[id] || [], draft = (s.drafts || {})[id] || "", at = attOf(comp, "n:" + id);
+    const entries = (o.asc ? added.concat(base).slice().reverse() : added.concat(base)).map(n => Object.assign({}, n, { att: links(n.att), hasAtt: n.att && n.att.length ? "true" : null }));
     return part("Notes", { capped: o.capped ? String(o.capped === true ? "true" : o.capped) : null, tail: o.asc ? "1" : null,
       title: o.title || "Notes", entries, readOnly: !!o.readOnly, canWrite: !o.readOnly, draft,
-      addDis: draft.trim() ? null : "true",
+      addDis: draft.trim() ? null : "true", att: at,
       onDraft: (e) => comp.setState({ drafts: Object.assign({}, s.drafts, { [id]: e.target.value }) }),
-      add: () => { if (!draft.trim()) return; comp.setState({ notes: Object.assign({}, s.notes, { [id]: [{ date: o.now || "07-10-2026 09:40", who: o.me || "You", text: draft.trim() }].concat(added) }), drafts: Object.assign({}, s.drafts, { [id]: "" }) }); },
+      add: () => { if (!draft.trim()) return; comp.setState({ notes: Object.assign({}, s.notes, { [id]: [{ date: o.now || "07-10-2026 09:40", who: o.me || "You", text: draft.trim(), att: at.names }].concat(added) }), drafts: Object.assign({}, s.drafts, { [id]: "" }) }); at.clear(); },
       hasEntries: entries.length > 0, noEntries: entries.length === 0,
     });
   }
@@ -52,16 +56,16 @@
     const d0 = comp.state.dlg; if (!d0) return { dlgOn: false, dlg: null }; const d = typeof d0 === "function" ? d0() : d0;
     const s = comp.state, text = s.dlgText || "", pick = s.dlgPick;
     const needText = true;
-    const close = () => comp.setState({ dlg: null, dlgText: "", dlgPick: null, dlgSel: {}, dlgOpen: null });
+    const close = () => comp.setState({ dlg: null, dlgText: "", dlgPick: null, dlgSel: {}, dlgOpen: null, att: Object.assign({}, comp.state.att, { dlg: [] }) });
     
     return {
       dlgOn: true,
       dlg: Object.assign({ title: "", sub: null, wide: "dlg", kv: [], hasKv: false, text: null, slot: null, ux: null, fields: [], hasFields: false, checks: [], hasChecks: false, reasons: [], hasReasons: false, comment: null, hasComment: false, list: [], hasList: false, ev: null, hasEv: false, docs: [], hasDocs: false, list2: [], hasList2: false, list2Title: null, docsTitle: null, listTitle: null, listMax: "none", list3: [], hasList3: false, list3Title: null, tcols: [] }, d, {
-        wide: d.wide ? "dlg wide" : "dlg", hasKv: !!(d.kv && d.kv.length), hasFields: !!(d.fields && d.fields.length), fields: (d.fields || []).map(q => { if (!q.choices) return q; const cur = (s.dlgSel || {})[q.label] ?? q.v, isOpen = s.dlgOpen === q.label; return Object.assign({}, q, { v: q.upper && cur !== "All" ? String(cur).toUpperCase() : cur, open: isOpen, bc: isOpen ? "var(--mat-sys-primary)" : null, go: () => comp.setState({ dlgOpen: isOpen ? null : q.label }), opts: q.choices.map(o => ({ label: (q.labels && q.labels[o]) || o, on: o === cur, bg: o === cur ? "var(--mat-sys-secondary-container)" : "transparent", fg: o === cur ? "var(--mat-sys-on-secondary-container)" : "var(--mat-sys-on-surface)", pick: () => comp.setState({ dlgSel: Object.assign({}, s.dlgSel, { [q.label]: o }), dlgOpen: null }) })) }); }), hasChecks: !!(d.checks && d.checks.length), hasReasons: !!(d.reasons && d.reasons.length), hasComment: !!d.comment, hasList: !!(d.list && d.list.length), hasEv: !!d.ev, hasDocs: !!(d.docs && d.docs.length), hasList2: !!(d.list2 && d.list2.length),
+        wide: d.wide ? "dlg wide" : "dlg", hasKv: !!(d.kv && d.kv.length), hasFields: !!(d.fields && d.fields.length), fields: (d.fields || []).map(q => { if (!q.choices) return q; const cur = (s.dlgSel || {})[q.label] ?? q.v, isOpen = s.dlgOpen === q.label; return Object.assign({}, q, { v: q.upper && cur !== "All" ? String(cur).toUpperCase() : cur, open: isOpen, bc: isOpen ? "var(--mat-sys-primary)" : null, go: () => comp.setState({ dlgOpen: isOpen ? null : q.label }), opts: q.choices.map(o => ({ label: (q.labels && q.labels[o]) || o, on: o === cur, bg: o === cur ? "var(--mat-sys-secondary-container)" : "transparent", fg: o === cur ? "var(--mat-sys-on-secondary-container)" : "var(--mat-sys-on-surface)", pick: () => comp.setState({ dlgSel: Object.assign({}, s.dlgSel, { [q.label]: o }), dlgOpen: null }) })) }); }), hasChecks: !!(d.checks && d.checks.length), hasReasons: !!(d.reasons && d.reasons.length), hasComment: !!d.comment, att: attOf(comp, "dlg"), hasList: !!(d.list && d.list.length), hasEv: !!d.ev, hasDocs: !!(d.docs && d.docs.length), hasList2: !!(d.list2 && d.list2.length),
         reasons: (d.reasons || []).map((r, i) => ({ label: r, on: pick === i ? "true" : null, go: () => comp.setState({ dlgPick: i }) })),
         commentText: text, onComment: (e) => comp.setState({ dlgText: e.target.value }),
         commentLabel: d.comment ? d.comment.label + (d.comment.required ? " *" : "") : null, commentHint: null,
-        actions: [btn(d.cancel || "Cancel", close, "text")].concat((d.actions || [btn(d.confirm || "Confirm", null, "filled")]).map(a => { const nt = a.needsText !== undefined ? a.needsText : a.kind === "filled" && needText !== false && !!(d.comment && d.comment.required); const np = a.needsPick !== undefined ? a.needsPick : a.kind === "filled" && !!(d.reasons && d.reasons.length); const blocked = (nt && !text.trim()) || (np && pick == null) || !!a.dis; return Object.assign({ hasIcon: !!a.icon, tip: null }, a, { go: a.go || (() => { const d0 = comp.state.dlg, f = a.onDone || d.onDone; if (f) f(text, pick); comp.setState(p => p.dlg === d0 ? { dlg: null, dlgText: "", dlgPick: null, dlgSel: {}, dlgOpen: null } : {}); comp.setState({ snack: a.snack || d.snack || "Recorded, with your name and the time." }); }), dis: blocked ? "true" : null }); })),
+        actions: [btn(d.cancel || "Cancel", close, "text")].concat((d.actions || [btn(d.confirm || "Confirm", null, "filled")]).map(a => { const nt = a.needsText !== undefined ? a.needsText : a.kind === "filled" && needText !== false && !!(d.comment && d.comment.required); const np = a.needsPick !== undefined ? a.needsPick : a.kind === "filled" && !!(d.reasons && d.reasons.length); const blocked = (nt && !text.trim()) || (np && pick == null) || !!a.dis; return Object.assign({ hasIcon: !!a.icon, tip: null }, a, { go: a.go || (() => { const d0 = comp.state.dlg, f = a.onDone || d.onDone; comp._att = ((comp.state.att || {}).dlg || []).slice(); if (f) f(text, pick); comp.setState({ att: Object.assign({}, comp.state.att, { dlg: [] }) }); comp.setState(p => p.dlg === d0 ? { dlg: null, dlgText: "", dlgPick: null, dlgSel: {}, dlgOpen: null } : {}); comp.setState({ snack: a.snack || d.snack || "Recorded, with your name and the time." }); }), dis: blocked ? "true" : null }); })),
       }),
       closeDlg: close,
     };
@@ -88,7 +92,7 @@
   const li = (title, line, o) => Object.assign({ icon: null, title, line: line || null, chip: null, tone: "", btns: [] }, o || {});
   const doc = (name, meta, ok, o) => Object.assign({ name, meta, ok: !!ok, na: !ok, state: "Not yet in DART", go: (e) => { if (e && e.preventDefault) e.preventDefault(); } }, o || {});
   const door = (label, value, sub, go, o) => Object.assign({ info: [sub, (o && o.tip) || null].filter(Boolean).join(" · ") || label, label, value: String(value), sub: sub || "", go, color: "var(--mat-sys-on-surface)", on: null, tip: null, hasBar: false, bar: [], cap: null, hasMini: false, mini: [] }, o || {});
-  const tli = (icon, what, when, who, o) => { const x = Object.assign({ icon, what, when, who, why: null, src: null, ev: null, bg: "var(--mat-sys-surface-container)" }, o || {}); x.fg = x.fg || (x.bg === "var(--mat-sys-surface-container)" ? "var(--mat-sys-on-surface)" : "var(--mat-sys-on-error)"); return x; };
+  const tli = (icon, what, when, who, o) => { const x = Object.assign({ icon, what, when, who, why: null, src: null, ev: null, bg: "var(--mat-sys-surface-container)" }, o || {}); x.att = links(x.att); x.hasAtt = x.att.length ? "true" : null; x.fg = x.fg || (x.bg === "var(--mat-sys-surface-container)" ? "var(--mat-sys-on-surface)" : "var(--mat-sys-on-error)"); return x; };
   // table tools: sort (header click), hide columns, export menu, paging; runs on every card with a table
   function tools(comp, blocks, o) {
     o = o || {}; const s = comp.state;
@@ -122,7 +126,7 @@
       const parts = b.parts.filter((p, j) => !(b.paged && p.isPager && j > ti)).map((p, j) => j === ti ? Object.assign({}, tp, { cols: cols2, rows: rows2 }, vis.length < cols.length && !cols.some(c => c.flex) ? { tw: "100%", minW: "max-content" } : {}) : p);
       if (pager) parts.splice(ti + 1, 0, pager);
       return Object.assign({}, b, { expId: id, parts, actions: bare ? (b.actions || []) : (b.actions || []).concat([expB, colB]) });
-    });
+    }).map(b => !b || !b.parts ? b : Object.assign({}, b, { parts: b.parts.map(p => p && p.cols ? Object.assign({}, p, { cols: p.cols.map(c => typeof c === "string" ? { label: c } : c && c.label != null && c.label !== "" ? c : Object.assign({}, c, { label: "\u200b" })) }) : p) }));
   }
 
   window.OFAKIT = { kv, ff, area, li, doc, door, tli, btn, fld, cell, col, ncol, part, block, tbl, D, f, add, diff, money, rnd, notes, dialog, sidebar, controls, tools };
