@@ -641,3 +641,46 @@ mat-dialog:is(.q3,[classname~="q3"]) .fg>.fgf{flex:0 0 calc((100% - 32px) / 3);m
 .shell[data-edit="dash"] .rvt:hover{text-decoration-color:var(--mat-sys-primary);color:var(--mat-sys-primary)!important}
 
 table.ot th[mat-header-cell].nw{white-space:nowrap}
+
+.page:has(>.g24[data-fill="auto"]){height:100%;min-height:0;box-sizing:border-box}
+.g24[data-fill="auto"]{flex:1;min-height:0;display:flex;flex-direction:column;gap:8px;align-items:stretch}
+.g24[data-fill="auto"]>div{flex:none}
+.g24[data-fill="auto"]>div:last-child{flex:1 1 0;min-height:360px}
+.g24[data-fill="auto"]>div:last-child>mat-card{flex:1;min-height:0;height:auto!important;display:flex;flex-direction:column;overflow:hidden}
+.g24[data-fill="auto"]>div:last-child>mat-card>*{flex:none}
+.g24[data-fill="auto"]>div:last-child>mat-card>.tsc{flex:1 1 auto;min-height:0;overflow:auto}
+.tsc th[mat-header-cell],.tw th[mat-header-cell],.vsv th[mat-header-cell]{position:sticky;top:0;z-index:2;background:var(--mat-sys-surface)}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] :is(.lgd,.trv2,.trdots,.trax,.trfoot,.trlead){display:none!important}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"]{flex-direction:row!important;align-items:center;gap:16px;padding:8px 16px!important}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trb{padding-top:0}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trh{display:contents}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trh>.tl{flex:none!important;order:0;white-space:nowrap}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trh>:not(.tl){order:2}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trw{order:1;flex:1 1 0!important;min-width:0;margin:0!important;padding:0 20px!important;box-sizing:border-box}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trmain{height:24px;display:flex;flex-direction:column;justify-content:center}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trs{padding:0 4px!important}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trbar{margin-top:0}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trb{margin:0!important;padding:0!important}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trh>*{align-self:center}
+.trk[data-collapsed="true"]:not(mat-card) :is(.lgd,.trv2,.trdots,.trax,.trfoot,.trlead){display:none!important}
+.trk[data-collapsed="true"]:not(mat-card) .trw{margin:0!important}
+.trk[data-collapsed="true"]:not(mat-card) .trb{margin:0!important;padding:0!important}
+.trk[data-collapsed="true"]:not(mat-card) .trs{padding:0 4px!important}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trmain>:not(.trb){display:none!important}
+.trk[data-collapsed="true"]:not(mat-card) .trmain>:not(.trb){display:none!important}
+.g24:not([data-fill="auto"])>div:has(>mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"]){align-self:start!important}
+.app-layer mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"]{flex:none!important;height:auto!important}
+.app-layer mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"]{height:auto!important;min-height:0!important}
+.app-layer mat-card:is(.days,[classname~="days"])[data-collapsed="true"]{padding:0 52px 0 20px!important;min-height:42px;height:42px;justify-content:center}
+mat-card:is(.days,[classname~="days"])[data-collapsed="true"] :is(.dyh,.dyt,.dyl){display:none!important}
+mat-card:is(.days,[classname~="days"])[data-collapsed="true"] .dyb{margin-top:0!important}
+mat-card:is(.days,[classname~="days"])[data-collapsed="true"] .dym{top:-7px!important;bottom:-7px!important}
+mat-card:is(.days,[classname~="days"])[data-collapsed="true"] .dyc{top:50%!important;transform:translateY(-50%)}
+mat-card:is(.days,[classname~="days"])[data-collapsed="true"] .dyg>button{margin:-17px -2px!important}
+.bh button:is([aria-label="Collapse to the bar"],[aria-label="Show the figures and legend"]){order:10}
+mat-button-toggle-group:is(.tg,[classname~="tg"]) mat-button-toggle button{white-space:nowrap}
+.app-layer .bh button[matIconButton] mat-icon{font-size:18px!important;width:18px!important;height:18px!important;line-height:18px!important}
+.page:has(>.g24[data-fill="f4"]){height:100%;min-height:0;box-sizing:border-box}
+.g24[data-fill="f4"]{flex:1;min-height:0;align-items:stretch;grid-template-rows:max-content max-content max-content minmax(360px,1fr)}
+.g24[data-fill="f4"]>div:has(>mat-card[data-fix="true"][style*="100%"]){position:relative;min-height:360px}
+.g24[data-fill="f4"]>div>mat-card[data-fix="true"][style*="100%"]{position:absolute;inset:0;height:auto!important}
