@@ -687,3 +687,7 @@ mat-button-toggle-group:is(.tg,[classname~="tg"]) mat-button-toggle button{white
 mat-dialog:is(.dlg,[classname~="dlg"]){max-height:80vh!important;display:flex!important;flex-direction:column;overflow:hidden!important}
 mat-dialog:is(.dlg,[classname~="dlg"])>mat-dialog-content{flex:1 1 auto;min-height:0;overflow-y:auto}
 mat-dialog:is(.dlg,[classname~="dlg"])>:not(mat-dialog-content){flex:none}
+
+mat-card[data-fix="true"]>.nlw:last-child{display:flex;flex-direction:column;overflow:hidden!important;padding-bottom:20px}
+mat-card[data-fix="true"]>.nlw>mat-list{flex:1 1 auto;min-height:0;max-height:none!important;overflow-y:auto;scrollbar-gutter:stable}
+mat-card[data-fix="true"]>.nlw>.nlbox{flex:none;margin-top:auto}
