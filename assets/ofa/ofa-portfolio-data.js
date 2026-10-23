@@ -115,7 +115,7 @@ var CHK = [
   ["Build and freeze the Anniversary List", "BD1", "01-10-2026", [ME, "01-10-2026 06:40"]], ["Cull the Anniversary List", "BD1", "01-10-2026", [ME, "01-10-2026 11:45"]],
   ["Release the questionnaire to advisors", "BD2", "02-10-2026", [ME, "02-10-2026 10:20"]], ["Run the exceptions check", "BD4", "06-10-2026", ["Owen Pritchard", "06-10-2026 15:10"]],
   ["Call advisors who have not answered", "BD5", "07-10-2026", null], ["Review and accept every answer", "BD5", "07-10-2026", null],
-  ["Issue the month", "BD6", "08-10-2026", null], ["Send the pending and expired reports", "Weekly, Monday", "12-10-2026", null],
+  ["Issue the month", "BD6", "08-10-2026", null],
 ];
 
 var NOFA = [
