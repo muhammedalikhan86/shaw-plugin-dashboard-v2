@@ -9,12 +9,12 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="assets/ds/roboto.css">
-<link rel="stylesheet" href="assets/ds/material-symbols.css">
-<link rel="stylesheet" href="assets/ds/colors.css">
+<link rel="stylesheet" href="_ds/shaw-and-partners-design-system-44ae5b7c-3c1c-4780-af7a-1c6e13e433f6/tokens/app-fonts/roboto.css">
+<link rel="stylesheet" href="_ds/shaw-and-partners-design-system-44ae5b7c-3c1c-4780-af7a-1c6e13e433f6/tokens/app-fonts/material-symbols.css">
+<link rel="stylesheet" href="_ds/shaw-and-partners-design-system-44ae5b7c-3c1c-4780-af7a-1c6e13e433f6/tokens/colors.css">
 <link rel="stylesheet" href="assets/ds/angular-material.css">
-<link rel="stylesheet" href="assets/ds/app.css">
-<link rel="stylesheet" href="assets/ds/app-specimen.css">
+<link rel="stylesheet" href="_ds/shaw-and-partners-design-system-44ae5b7c-3c1c-4780-af7a-1c6e13e433f6/tokens/app.css">
+<link rel="stylesheet" href="_ds/shaw-and-partners-design-system-44ae5b7c-3c1c-4780-af7a-1c6e13e433f6/tokens/app-specimen.css">
 <link rel="stylesheet" href="assets/ofa/ofa-frame.css">
 <script src="assets/ofa/ofa-kit.js"></script>
 <script src="assets/ofa/ofa-portfolio-data.js"></script>
@@ -316,7 +316,7 @@ const EXL = [
   E("S20294", "Gallagher Kinross Trust", "TM", [["SMA", "7702-470", "PRAEMIUM Shaw SMA"]], "N", "Advisor taken off the month, to be run separately", "Corinne Abbott", "05-10-2026 15:30", { notes: [["05-10-2026 15:30", "Corinne Abbott", OFFN]] }),
 ];
 const BR = [{ id: "F2", s: "S20091", nm: "Yusra Haddad", a: "KA", pl: ["HUB", "H-90104"], fee: 3310, since: "30-04-2026", found: "06-10-2026 15:10", step: "Advisor told", stepAt: ["Owen Pritchard", "06-10-2026 15:30"], notes: [["06-10-2026 15:20","Owen Pritchard","Nothing in DART or Complii for S20091: no consent and no documents."],["06-10-2026 15:25","Owen Pritchard","Treated as a breach and sent to Compliance."],["06-10-2026 15:30","Owen Pritchard","Advisor told to turn the fee off at the platform and refund every fee since 30-04-2026."],["07-10-2026 09:10","Corinne Abbott","Initial OFA to go to the client once the refund is confirmed."]] }, { id: "F9", s: "S20412", nm: "Tamsin Rourke", a: "TM", pl: ["NW", "NW-55920"], fee: 1240, since: "31-05-2026", found: "04-09-2026 15:10", step: "Initial OFA sent, waiting for the client", stepAt: ["Corinne Abbott", "30-09-2026 09:30"], notes: [["04-09-2026 15:40","Owen Pritchard","Nothing in DART or Complii for S20412: no consent and no documents. Treated as a breach and sent to Compliance."],["04-09-2026 16:05","Owen Pritchard","Advisor told to turn the fee off at the platform and refund every fee since 31-05-2026."],["10-09-2026 11:20","Corinne Abbott","Fee turned off at Netwealth NW-55920, confirmed by Netwealth."],["22-09-2026 14:45","Corinne Abbott","Refund of $1,240 confirmed by Netwealth."],["30-09-2026 09:30","Corinne Abbott","Initial OFA sent to the client through Annature. Waiting for the client to sign."]] }];
-const QREM = "Advisor and State Manager emailed · 06-10-2026 11:05";
+const QREM = "Advisor, State Manager and Compliance emailed · 06-10-2026 11:05";
 const QDUE = { S20114: ["M-448120"], S20131: ["7702-118"] };
 const QUF = () => (window.DATA || []).concat(window.BULK || []).filter(x => x.cyc === "Oct" && x.ans === "quar" && !x.rm && !x.off).map(x => ({ s: x.s, nm: x.nm, a: x.a, pas: x.pas.map(p => [p[0], p[1], p[2]]), ext: x.ext ? [x.ext.to, x.ext.by, x.ext.why] : null }));
 const PEND = [

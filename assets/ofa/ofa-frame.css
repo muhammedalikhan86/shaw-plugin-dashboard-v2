@@ -684,3 +684,6 @@ mat-button-toggle-group:is(.tg,[classname~="tg"]) mat-button-toggle button{white
 .g24[data-fill="f4"]{flex:1;min-height:0;align-items:stretch;grid-template-rows:max-content max-content max-content minmax(360px,1fr)}
 .g24[data-fill="f4"]>div:has(>mat-card[data-fix="true"][style*="100%"]){position:relative;min-height:360px}
 .g24[data-fill="f4"]>div>mat-card[data-fix="true"][style*="100%"]{position:absolute;inset:0;height:auto!important}
+mat-dialog:is(.dlg,[classname~="dlg"]){max-height:80vh!important;display:flex!important;flex-direction:column;overflow:hidden!important}
+mat-dialog:is(.dlg,[classname~="dlg"])>mat-dialog-content{flex:1 1 auto;min-height:0;overflow-y:auto}
+mat-dialog:is(.dlg,[classname~="dlg"])>:not(mat-dialog-content){flex:none}
