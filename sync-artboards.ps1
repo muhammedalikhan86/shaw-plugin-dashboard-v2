@@ -34,6 +34,7 @@ $pages = [ordered]@{
   'portfolio-services.html' = 'ofa\ofa-portfolio-services.dc.html'
   'advisor.html'            = 'ofa\ofa-advisor-dashboard.dc.html'
   'compliance.html'         = 'ofa\ofa-compliance-dashboard.dc.html'
+  'checklist-options.html'  = 'ofa\ofa-checklist-options.dc.html'
 }
 
 # Demo page name -> browser-tab title. Muhammed's own names; edit here, not in the page.
@@ -42,6 +43,7 @@ $titles = @{
   'portfolio-services.html' = 'Shaw Portal - Portfolio Services Dashboard'
   'advisor.html'            = 'Shaw Portal - Advisor Dashboard'
   'compliance.html'         = 'Shaw Portal - Compliance Dashboard'
+  'checklist-options.html'  = 'Shaw Portal - OFA Checklist Options'
 }
 
 function Replace-Once([string]$text, [string]$find, [string]$with, [string]$what) {
@@ -68,7 +70,13 @@ foreach ($name in $pages.Keys) {
   $p = [IO.File]::ReadAllText($from, $utf8)
   $p = Replace-Once $p '<script src="./support.js"></script>' ('<script src="./support.js"></script>' + "`n" + '<script src="./demo-nav.js"></script>' + "`n" + '<title>' + $titles[$name] + '</title>') $name
   # The designer's pages link their tokens from the design project's _ds folder; the same files are in assets/ds.
+  # A page that links the whole system (styles.css) gets the token files the demo has, and the system's
+  # component bundle is dropped: the pages draw their own markup and do not use it.
+  $p = [regex]::Replace($p, '<link rel="stylesheet" href="_ds/[^/"]+/styles\.css">', (
+    @('roboto', 'material-symbols', 'colors', 'app', 'app-specimen') | ForEach-Object { '<link rel="stylesheet" href="assets/ds/' + $_ + '.css">' }) -join "`n  ")
+  $p = [regex]::Replace($p, '\s*<script src="_ds/[^/"]+/_ds_bundle\.js"></script>', '')
   $p = [regex]::Replace($p, '_ds/[^/"]+/tokens/(app-fonts/)?', 'assets/ds/')
+  if ($p -match '_ds/') { throw "$name : still links the design project's _ds folder, which the demo does not have. Update this script." }
   [IO.File]::WriteAllText((Join-Path $Out $name), $p, $utf8)
   Write-Host ("{0,-24} <- {1}" -f $name, $pages[$name])
 }
