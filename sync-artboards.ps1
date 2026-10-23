@@ -6,6 +6,9 @@
   Copies four artboard pages, their shared assets and support.js into this folder, then patches
   them for the demo:
     - each page loads demo-nav.js, which makes the Shaw and Partners logo go back to index.html;
+    - each page gets its browser-tab title from $titles below (the artboards carry none);
+    - stylesheet links into the design project's _ds/<system>/tokens/ folder are pointed at assets/ds/,
+      which holds the same files;
     - support.js lets a page's setting come from the address, e.g. advisor.html?seat=SM%20%C2%B7%20all%20advisors,
       and exposes window.__demoRefresh, which re-reads the address without reloading, so a page
       keeps the view it is on when demo-nav.js changes a setting.
@@ -33,6 +36,14 @@ $pages = [ordered]@{
   'compliance.html'         = 'ofa\ofa-compliance-dashboard.dc.html'
 }
 
+# Demo page name -> browser-tab title. Muhammed's own names; edit here, not in the page.
+$titles = @{
+  'plugin0.html'            = 'Shaw Portal - Component Library'
+  'portfolio-services.html' = 'Shaw Portal - Portfolio Services Dashboard'
+  'advisor.html'            = 'Shaw Portal - Advisor Dashboard'
+  'compliance.html'         = 'Shaw Portal - Compliance Dashboard'
+}
+
 function Replace-Once([string]$text, [string]$find, [string]$with, [string]$what) {
   $n = ([regex]::Matches($text, [regex]::Escape($find))).Count
   if ($n -ne 1) { throw "$what : expected one match for '$find', found $n. The artboard changed shape; update this script." }
@@ -55,7 +66,9 @@ $s = Replace-Once $s 'return h(Root, { ...defaults, ...entry.propOverrides || {}
 foreach ($name in $pages.Keys) {
   $from = Join-Path $Source $pages[$name]
   $p = [IO.File]::ReadAllText($from, $utf8)
-  $p = Replace-Once $p '<script src="./support.js"></script>' ('<script src="./support.js"></script>' + "`n" + '<script src="./demo-nav.js"></script>') $name
+  $p = Replace-Once $p '<script src="./support.js"></script>' ('<script src="./support.js"></script>' + "`n" + '<script src="./demo-nav.js"></script>' + "`n" + '<title>' + $titles[$name] + '</title>') $name
+  # The designer's pages link their tokens from the design project's _ds folder; the same files are in assets/ds.
+  $p = [regex]::Replace($p, '_ds/[^/"]+/tokens/(app-fonts/)?', 'assets/ds/')
   [IO.File]::WriteAllText((Join-Path $Out $name), $p, $utf8)
   Write-Host ("{0,-24} <- {1}" -f $name, $pages[$name])
 }
