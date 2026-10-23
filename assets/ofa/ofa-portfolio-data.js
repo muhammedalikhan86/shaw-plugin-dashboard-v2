@@ -103,6 +103,9 @@ var EXR = [
   { id: "F4", kind: "A terminated account still charged", pl: ["SMA", "7701-210"], s: "S19950", nm: "Lachlan Pryor", a: "RA", fee: 1290, since: "31-08-2026", lastCh: "30-09-2026", termD: "14-08-2026", note: "TERMINATED 14-08-2026, still charged at the platform." },
   { id: "F6", kind: "A fee charged after the Expiry Date", pl: ["HUB", "H-90215"], s: "S18984", nm: "Marisol Quint", a: "TM", fee: 640, since: "05-10-2026", note: "Expired 30-09-2026 · not yet confirmed off" },
   { id: "F10", kind: "A fee with no record in the master", ws: "Y", pl: ["MW", "M-449015"], s: "S20451", nm: "Ravenscourt Investments Pty Ltd", a: "RA", fee: 5820, since: "31-08-2026", note: "Wholesale client. No OFA record in the master." },
+  { id: "F11", kind: "A fee with no record in the master", ws: "Y", pl: ["HUB", "H-90902"], s: "S20455", nm: "Tarrant Wealth Pty Ltd", a: "OF", fee: 4410, since: "31-07-2026", note: "Wholesale client. No OFA record in the master." },
+  { id: "F12", kind: "A fee with no record in the master", ws: "Y", rsuper: true, pl: ["HUB", "H-90915"], s: "S20458", nm: "Ellery Brook Super Fund", a: "KA", fee: 2980, since: "31-08-2026", note: "Wholesale client in a retail super product: treated as retail." },
+  { id: "F14", kind: "A fee with no record in the master", ws: "Y", pl: ["MW", "M-449120"], s: "S20463", nm: "Quayside Partners", a: "PV", fee: 7100, since: "30-09-2026", note: "Wholesale client. No OFA record in the master." },
   { id: "F13", kind: "A No OFA account being charged", check: true, pl: ["NW", "NW-54412"], s: "S19688", nm: "Petra Lindqvist", a: "KA", fee: 2950, since: "30-09-2026", note: "No OFA since 12-03-2026, as a wholesale client. Certificate dated 10-03-2024." },
   { id: "F5", kind: "An unmapped account", pl: ["NW", "NW-50993"], s: null, nm: "No S-Account at Shaw", a: null, fee: 615, since: "30-09-2026", note: "A fee with no S-Account to tie it back to." },
 ];
@@ -115,6 +118,13 @@ var CHK = [
   ["Issue the month", "BD6", "08-10-2026", null], ["Send the pending and expired reports", "Weekly, Monday", "12-10-2026", null],
 ];
 
+var NOFA = [
+  { s: "S19688", nm: "Petra Lindqvist", a: "KA", pa: ["NW", "NW-54412", "Netwealth - Investment"], set: "12-03-2026", last: "30-09-2026" },
+  { s: "S19702", nm: "Harbourview Capital Pty Ltd", a: "KA", pa: ["MW", "M-445210", "Macquarie Investment Consolidator II - Elevate"], set: "18-06-2026", last: "31-05-2026" },
+  { s: "S19720", nm: "Lindqvist Family Trust", a: "TM", pa: ["HUB", "H-90011", "HUB24 Invest"], set: "02-05-2026", last: "—" },
+  { s: "S20460", nm: "Calder Point Holdings Pty Ltd", a: "RA", pa: ["NW", "NW-55870", "Netwealth - Investment"], set: "22-09-2026", last: "31-08-2026" },
+  { s: "S20466", nm: "Mira Okafor", a: "PV", pa: ["SMA", "7702-512", "PRAEMIUM Shaw SMA"], set: "29-09-2026", last: "30-09-2026" },
+];
 var SEP = {
   issued: "09-09-2026 10:05", by: "Owen Pritchard", built: "01-09-2026 06:00", check: "04-09-2026 15:10",
   rm: [
