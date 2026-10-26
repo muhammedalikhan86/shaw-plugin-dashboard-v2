@@ -17,7 +17,7 @@
   const col = (label, o) => Object.assign({ label, cls: "", w: null, tip: null, tipIcon: false, sort: null, sortIcon: null, cur: "default", aria: "none" }, o || {});
   const ncol = (label, w, o) => col(label, Object.assign({ cls: "num", w: w || null }, o || {}));
   const part = (kind, o) => {
-    const p = Object.assign(flags(PARTS, kind), { scroll: null, capped: null, title: null, rows: [], cols: [], items: [], entries: [], text: null, label: null, btns: [], fields: [], minW: "0px", ux: null, right: null, icon: null, color: null, lead: null, dots: [], ticks: [], axisH: "0px", foot: null, legendN: true, per: "10", lbtns: null, mt: "0px", tw: "100%", aria: "Filter by who the row is waiting on" }, o || {});
+    const p = Object.assign(flags(PARTS, kind), { scroll: null, capped: null, title: null, rows: [], cols: [], items: [], entries: [], text: null, label: null, btns: [], fields: [], minW: "0px", ux: null, right: null, icon: null, color: null, lead: null, dots: [], ticks: [], axisH: "0px", foot: null, legendN: true, per: "10", lbtns: null, mt: "0px", fgCols: null, tw: "100%", aria: "Filter by who the row is waiting on" }, o || {});
     if (kind === "Table") p.rows = p.rows.map(r => Object.assign({ cls: "" }, r, { cells: r.cells.map(cell) }));
     if (p.cols) p.cols = p.cols.map(c => typeof c === "string" ? { label: c } : c && c.label != null && c.label !== "" ? c : Object.assign({}, c, { label: "\u200b" })); if (p.capped === true) p.capped = "true"; if (kind === "Bar") p.btns = (p.btns || []); p.kvCols = p.kvColsX ? p.kvColsX : p.cols4 ? "repeat(4,minmax(0,1fr))" : p.cols3 ? "repeat(3,minmax(0,1fr))" : "repeat(auto-fill,minmax(170px,1fr))";
     return p;
@@ -89,7 +89,7 @@
   }
 
   const kv = (k, v, o) => { const x = Object.assign({ k, v: v === null || v === undefined ? "—" : String(v), sub: null, subColor: null, color: null, cls: "v", chip: null, go: null, gc: "auto", sep: null, arL: null, mid: null }, o || {}); x.txt = !x.chip && !x.go; x.arR = !x.arL; return x; };
-  const ff = (label, v, o) => Object.assign({ panel: null, std: true, pair: false, rng: false, boxes: [], calOpen: false, cal: null, v1: null, v2: null, on1: null, on2: null, inp: false, box2: true, open: false, opts: [], label, v, box: true, area: false, icon: "arrow_drop_down", ro: null, err: null, errText: null, hint: null, go: null, gc: "auto", color: null, ph: null, onInput: null }, o || {});
+  const ff = (label, v, o) => Object.assign({ lab: (o && o.lab) || label, panel: null, std: true, pair: false, rng: false, boxes: [], calOpen: false, cal: null, v1: null, v2: null, on1: null, on2: null, inp: false, box2: true, open: false, opts: [], label, v, box: true, area: false, icon: "arrow_drop_down", ro: null, err: null, errText: null, hint: null, go: null, gc: "auto", color: null, ph: null, onInput: null }, o || {});
   const area = (label, v, onInput, o) => Object.assign(ff(label, v, { box: false, area: true, onInput }), o || {});
   const li = (title, line, o) => Object.assign({ icon: null, title, line: line || null, chip: null, tone: "", btns: [] }, o || {});
   const doc = (name, meta, ok, o) => Object.assign({ name, meta, ok: !!ok, na: !ok, state: "Not yet in DART", go: (e) => { if (e && e.preventDefault) e.preventDefault(); } }, o || {});

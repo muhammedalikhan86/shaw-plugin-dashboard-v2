@@ -691,3 +691,10 @@ mat-dialog:is(.dlg,[classname~="dlg"])>:not(mat-dialog-content){flex:none}
 mat-card[data-fix="true"]>.nlw:last-child{display:flex;flex-direction:column;overflow:hidden!important;padding-bottom:20px}
 mat-card[data-fix="true"]>.nlw>mat-list{flex:1 1 auto;min-height:0;max-height:none!important;overflow-y:auto;scrollbar-gutter:stable}
 mat-card[data-fix="true"]>.nlw>.nlbox{flex:none;margin-top:auto}
+
+.page:has(>.g24[data-fill="s3"]){height:100%;min-height:0;box-sizing:border-box}
+.g24[data-fill="s3"]{flex:1;min-height:0;grid-template-rows:minmax(300px,1fr) minmax(300px,1fr) max-content;align-items:stretch}
+.g24[data-fill="s3"]>div:not(:last-child){min-height:0;align-self:stretch;position:relative}
+.g24[data-fill="s3"]>div:not(:last-child)>mat-card{position:absolute;inset:0;height:auto!important;min-height:0;display:flex;flex-direction:column;overflow:auto}
+.g24[data-fill="s3"]>div:not(:last-child)>mat-card>:not(.tsc){flex:none;overflow:visible}
+.g24[data-fill="s3"]>div:not(:last-child)>mat-card>.tsc{flex:1 1 auto;min-height:0;overflow:auto}
