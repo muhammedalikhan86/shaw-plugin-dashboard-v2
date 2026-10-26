@@ -7,7 +7,7 @@
   const fld = (v, o) => Object.assign({ v, icon: "arrow_drop_down", err: null, errText: null, ph: null, w: null, go: null, tip: null }, o || {});
   const cell = (o) => {
     o = typeof o === "object" && o !== null ? o : { v: o };
-    const c = Object.assign({ v: null, sub: null, chip: null, tone: "", chip2: null, tone2: "", cls: "", color: null, flds: null, stack: null, yn: null, link: null, btns: null, check: null, span: null, rec: null, tip: null, icon: null, h: false, w: null, fw: "500", subColor: null, sub2: null }, o);
+    const c = Object.assign({ v: null, sub: null, chip: null, tone: "", chip2: null, tone2: "", cls: "", color: null, flds: null, stack: null, yn: null, link: null, btns: null, check: null, span: null, rec: null, tip: null, icon: null, h: false, w: null, fw: "500", subColor: null, sub2: null, ind: null }, o);
     if (c.menu && c.menu.l === undefined) c.menu = Object.assign({}, c.menu, { l: "auto" });
     c.v = c.v === null || c.v === undefined ? null : String(c.v);
     c.cl = c.h ? "cl h" : "cl"; c.plain = c.v !== null && !c.rec; ["flds","stack","btns"].forEach(key => { if (!c[key]) c[key] = []; }); c.btns = c.btns.map(b => Object.assign({ dis: null, tip: null, hasIcon: !!b.icon, icon: null, iconOnly: false }, b, { notIconOnly: !b.iconOnly })); if (c.btns.length && c.btns.every(b => b.iconOnly)) c.h = true, c.cl = "cl h";
@@ -22,7 +22,7 @@
     if (p.cols) p.cols = p.cols.map(c => typeof c === "string" ? { label: c } : c && c.label != null && c.label !== "" ? c : Object.assign({}, c, { label: "\u200b" })); if (p.capped === true) p.capped = "true"; if (kind === "Bar") p.btns = (p.btns || []); p.kvCols = p.kvColsX ? p.kvColsX : p.cols4 ? "repeat(4,minmax(0,1fr))" : p.cols3 ? "repeat(3,minmax(0,1fr))" : "repeat(auto-fill,minmax(170px,1fr))";
     return p;
   };
-  const block = (kind, span, o) => { const r = Object.assign(flags(BLOCKS, kind), { span: span || 24, title: null, sub: null, asAt: null, actions: [], parts: [], items: [], hasHead: true, text: null, icon: null, tone: "", btns: [], fields: [], dots: [], ticks: [], todayX: null, axisH: "16px", cols: "repeat(auto-fill,minmax(150px,1fr))", chips: [], fix: null, h: "auto", rows: 1, lead: null, legendN: true, foot: null, search: null, days: [], todayCol: "1", todayLabel: null , tcols: null }, o || {}); r.tOld = r.tcols ? null : "true"; return r; };
+  const block = (kind, span, o) => { const r = Object.assign(flags(BLOCKS, kind), { span: span || 24, title: null, sub: null, asAt: null, actions: [], parts: [], items: [], hasHead: true, text: null, icon: null, tone: "", btns: [], fields: [], dots: [], ticks: [], todayX: null, axisH: "16px", cols: "repeat(auto-fill,minmax(150px,1fr))", chips: [], fix: null, h: "auto", rows: 1, lead: null, legendN: true, foot: null, search: null, fchips: null, days: [], todayCol: "1", todayLabel: null , tcols: null }, o || {}); r.tOld = r.tcols ? null : "true"; if (kind === "Days") r.items = (r.items || []).map(it => Object.assign({}, it, { on: it.on === true || it.on === "true" ? "true" : "false" })); return r; };
   const tbl = (cols, rows, emptyT, emptyS, o) => rows.length ? part("Table", Object.assign({ cols, rows }, o || {})) : part("Empty", { title: emptyT, text: emptyS || null, icon: "task_alt" });
 
   // dates
@@ -41,12 +41,14 @@
   function notes(comp, id, base, o) {
     o = o || {};
     const s = comp.state, added = (s.notes || {})[id] || [], draft = (s.drafts || {})[id] || "", at = attOf(comp, "n:" + id);
-    const entries = (o.asc ? added.concat(base).slice().reverse() : added.concat(base)).map(n => Object.assign({}, n, { att: links(n.att), hasAtt: n.att && n.att.length ? "true" : null }));
+    const VO = ["Only me", "Everyone"], vk = "nv:" + id, vis = o.vis ? (((s.nvis || {})[id]) || "Only me") : null, vOpen = o.vis && s.nvisOpen === id;
+    const entries = (o.asc ? added.concat(base).slice().reverse() : added.concat(base)).filter(n => !(o.vis && n.vis === "Only me" && n.who !== (o.me || "You"))).map(n => Object.assign({}, n, { att: links(n.att), hasAtt: n.att && n.att.length ? "true" : null, vis: o.vis ? (n.vis || "Everyone") : null }));
     return part("Notes", { capped: o.capped ? String(o.capped === true ? "true" : o.capped) : null, tail: o.asc ? "1" : null,
       title: o.title || "Notes", entries, readOnly: !!o.readOnly, canWrite: !o.readOnly, draft,
       addDis: draft.trim() ? null : "true", att: at,
+      visSel: o.vis ? { v: vis, open: vOpen, exp: vOpen ? "true" : "false", go: () => comp.setState({ nvisOpen: vOpen ? null : id }), close: () => comp.setState({ nvisOpen: null }), opts: VO.map(v => ({ label: v, on: v === vis ? "true" : null, bg: v === vis ? "var(--mat-sys-secondary-container)" : "transparent", fg: v === vis ? "var(--mat-sys-on-secondary-container)" : "var(--mat-sys-on-surface)", pick: () => comp.setState({ nvis: Object.assign({}, comp.state.nvis, { [id]: v }), nvisOpen: null }) })) } : null,
       onDraft: (e) => comp.setState({ drafts: Object.assign({}, s.drafts, { [id]: e.target.value }) }),
-      add: () => { if (!draft.trim()) return; comp.setState({ notes: Object.assign({}, s.notes, { [id]: [{ date: o.now || "07-10-2026 09:40", who: o.me || "You", text: draft.trim(), att: at.names }].concat(added) }), drafts: Object.assign({}, s.drafts, { [id]: "" }) }); at.clear(); },
+      add: () => { if (!draft.trim()) return; comp.setState({ notes: Object.assign({}, s.notes, { [id]: [{ date: o.now || "07-10-2026 09:40", who: o.me || "You", text: draft.trim(), att: at.names, vis: vis || undefined }].concat(added) }), drafts: Object.assign({}, s.drafts, { [id]: "" }) }); at.clear(); },
       hasEntries: entries.length > 0, noEntries: entries.length === 0,
     });
   }
@@ -64,7 +66,7 @@
         wide: d.wide ? "dlg wide" : "dlg", hasKv: !!(d.kv && d.kv.length), hasFields: !!(d.fields && d.fields.length), fields: (d.fields || []).map(q => { if (!q.choices) return q; const cur = (s.dlgSel || {})[q.label] ?? q.v, isOpen = s.dlgOpen === q.label; return Object.assign({}, q, { v: q.upper && cur !== "All" ? String(cur).toUpperCase() : cur, open: isOpen, bc: isOpen ? "var(--mat-sys-primary)" : null, go: () => comp.setState({ dlgOpen: isOpen ? null : q.label }), opts: q.choices.map(o => ({ label: (q.labels && q.labels[o]) || o, on: o === cur, bg: o === cur ? "var(--mat-sys-secondary-container)" : "transparent", fg: o === cur ? "var(--mat-sys-on-secondary-container)" : "var(--mat-sys-on-surface)", pick: () => comp.setState({ dlgSel: Object.assign({}, s.dlgSel, { [q.label]: o }), dlgOpen: null }) })) }); }), hasChecks: !!(d.checks && d.checks.length), hasReasons: !!(d.reasons && d.reasons.length), hasComment: !!d.comment, att: attOf(comp, "dlg"), hasList: !!(d.list && d.list.length), hasEv: !!d.ev, hasDocs: !!(d.docs && d.docs.length), hasList2: !!(d.list2 && d.list2.length),
         reasons: (d.reasons || []).map((r, i) => ({ label: r, on: pick === i ? "true" : null, go: () => comp.setState({ dlgPick: i }) })),
         commentText: text, onComment: (e) => comp.setState({ dlgText: e.target.value }),
-        commentLabel: d.comment ? d.comment.label + (d.comment.required ? " *" : "") : null, commentHint: null,
+        commentLabel: d.comment ? d.comment.label + (d.comment.required ? " *" : "") : null, commentHint: d.comment && d.comment.hint ? d.comment.hint : null,
         actions: [btn(d.cancel || (d.actions && !d.actions.length && !d.confirm ? "Close" : "Cancel"), close, "text")].concat((d.actions || [btn(d.confirm || "Confirm", null, "filled")]).map(a => { const nt = a.needsText !== undefined ? a.needsText : a.kind === "filled" && needText !== false && !!(d.comment && d.comment.required); const np = a.needsPick !== undefined ? a.needsPick : a.kind === "filled" && !!(d.reasons && d.reasons.length); const blocked = (nt && !text.trim()) || (np && pick == null) || !!a.dis; return Object.assign({ hasIcon: !!a.icon, tip: null }, a, { go: a.go || (() => { const d0 = comp.state.dlg, f = a.onDone || d.onDone; comp._att = ((comp.state.att || {}).dlg || []).slice(); if (f) f(text, pick); comp.setState({ att: Object.assign({}, comp.state.att, { dlg: [] }) }); comp.setState(p => p.dlg === d0 ? { dlg: null, dlgText: "", dlgPick: null, dlgSel: {}, dlgOpen: null } : {}); comp.setState({ snack: a.snack || d.snack || "Recorded, with your name and the time." }); }), dis: blocked ? "true" : null }); })),
       }),
       closeDlg: close,
@@ -130,5 +132,41 @@
     }).map(b => !b || !b.parts ? b : Object.assign({}, b, { parts: b.parts.map(p => p && p.cols ? Object.assign({}, p, { cols: p.cols.map(c => typeof c === "string" ? { label: c } : c && c.label != null && c.label !== "" ? c : Object.assign({}, c, { label: "\u200b" })) }) : p) }));
   }
 
-  window.OFAKIT = { kv, ff, area, li, doc, door, tli, btn, fld, cell, col, ncol, part, block, tbl, D, f, add, diff, money, rnd, notes, dialog, sidebar, controls, tools };
+  // P25 accessible names. Every field takes its name from the label drawn on it (the mat-label: .mofl, mat-label, or the .lb above it);
+  // every mat-icon beside a control's text is aria-hidden so its ligature is not read. Runs on every render, all three dashboards.
+  function a11y(root) {
+    const own = "data-ofa-name", txt = (el) => { let t = ""; if (el) el.childNodes.forEach(function w(n) { if (n.nodeType === 3) t += n.textContent; else if (n.nodeType === 1 && n.tagName !== "MAT-ICON") n.childNodes.forEach(w); }); return t.replace(/\s+/g, " ").trim(); };
+    root.querySelectorAll("mat-form-field").forEach(mf => { const lb = mf.querySelector(":scope > mat-label, :scope > .mofl"); if (lb) lb.setAttribute("data-mat-label", ""); });
+    root.querySelectorAll("input:not([type=file]):not([type=hidden]):not([type=checkbox]):not([type=radio]), textarea, mat-select, [role=combobox]").forEach(el => {
+      const mine = el.hasAttribute(own), al = el.getAttribute("aria-label");
+      if (!mine && ((al && al.trim()) || el.getAttribute("aria-labelledby") || (el.id && root.querySelector('label[for="' + el.id + '"]')))) return;
+      const mf = el.closest("mat-form-field"), host = el.closest(".fgf, .ctl");
+      let lb = mf && mf.querySelector(":scope > mat-label, :scope > .mofl");
+      if (!lb && host) lb = host.querySelector(":scope > .lb, :scope > span > .lb, :scope > .lb-row .lb");
+      let name = txt(lb).replace(/\s*\*$/, "");
+      if (!name && el.getAttribute("placeholder")) name = el.getAttribute("placeholder");
+      if (!name) return;
+      if (lb && /\*$/.test(txt(lb))) el.setAttribute("aria-required", "true");
+      if (al !== name) el.setAttribute("aria-label", name); el.setAttribute(own, "");
+    });
+    let hid = 0;
+    root.querySelectorAll("mat-form-field").forEach(mf => { const h = mf.nextElementSibling, el = mf.querySelector("input, textarea, mat-select, [role=combobox]"); if (!el) return; if (h && h.matches(".hint, mat-hint") && h.textContent.trim()) { if (!h.id) h.id = "ofa-hint-" + (++hid) + "-" + Math.random().toString(36).slice(2, 7); if (el.getAttribute("aria-describedby") !== h.id) el.setAttribute("aria-describedby", h.id); } else if (el.hasAttribute("aria-describedby") && /^ofa-hint-/.test(el.getAttribute("aria-describedby"))) el.removeAttribute("aria-describedby"); });
+    root.querySelectorAll("mat-horizontal-stepper").forEach(sp => { if (sp.getAttribute("role") !== "tablist") sp.setAttribute("role", "tablist"); });
+    root.querySelectorAll("mat-step-header").forEach(h => { const sel = h.getAttribute("data-on") === "true" ? "true" : "false"; if (h.getAttribute("role") !== "tab") h.setAttribute("role", "tab"); if (h.getAttribute("aria-selected") !== sel) h.setAttribute("aria-selected", sel); if (h.hasAttribute("aria-pressed")) h.removeAttribute("aria-pressed"); });
+    root.querySelectorAll("mat-icon:not([aria-hidden])").forEach(ic => {
+      if (ic.hasAttribute("aria-label")) return;
+      const host = ic.closest("button, a, label, [role=button], [role=tab], [role=menuitem], [role=option], mat-option, mat-chip, [matButton], [matIconButton]");
+      if (!host) return;
+      let rest = ""; host.childNodes.forEach(function walk(n) { if (n.nodeType === 3) rest += n.textContent; else if (n.nodeType === 1 && n.tagName !== "MAT-ICON") n.childNodes.forEach(walk); });
+      if (rest.trim() || host.getAttribute("aria-label")) ic.setAttribute("aria-hidden", "true");
+    });
+  }
+  if (typeof document !== "undefined" && typeof MutationObserver !== "undefined") {
+    let q = 0; const run = () => { q = 0; try { a11y(document); } catch (e) {} };
+    const go = () => { if (!q) q = requestAnimationFrame(run); };
+    new MutationObserver(go).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
+    go();
+  }
+
+  window.OFAKIT = { a11y, kv, ff, area, li, doc, door, tli, btn, fld, cell, col, ncol, part, block, tbl, D, f, add, diff, money, rnd, notes, dialog, sidebar, controls, tools };
 })();

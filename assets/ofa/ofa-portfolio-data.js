@@ -14,6 +14,9 @@ var ADV = {
   KA: { code: "KA06", n: "Kenji Arakawa", br: "Parramatta", st: "NSW", sm: "Ingrid Solberg", cat: 1 },
 };
 var PL = { MW: "Macquarie Wrap", SMA: "Shaw Managed Accounts", NW: "Netwealth", HUB: "HUB24", PAS: "PAS", BT: "BT Panorama" };
+var PLI = { AST: "Asteron Life", BTLC: "BT LifeCENTRAL", ENC: "Encompass Life", NEOS: "NEOS Life", TAL: "TAL Life", GEN: "Generation Life", LP: "LifePlan", AIA: "AIA Australia", MLC: "MLC Life Insurance", ZUR: "Zurich Life" };
+Object.keys(PLI).forEach(k => Object.defineProperty(PL, k, { value: PLI[k], enumerable: false, configurable: true }));
+var INS0 = ["AST", "BTLC", "ENC", "NEOS", "TAL", "GEN"], INSSEED = { add: [["LP", "Owen Pritchard", "15-09-2026 10:30"]], rm: {} };
 var PH = { NSW: ["05-10-2026"], QLD: ["05-10-2026"], SA: ["05-10-2026"], VIC: [] };
 var HOL = { NSW: "Labour Day, 05-10-2026, is a New South Wales public holiday and is not counted, so this deadline is a day later than Victoria's.", QLD: "The King's Birthday, 05-10-2026, is a Queensland public holiday and is not counted, so this deadline is a day later than Victoria's.", SA: "Labour Day, 05-10-2026, is a South Australian public holiday and is not counted, so this deadline is a day later than Victoria's." };
 var ANS = { wait: ["WAITING", ""], quar: ["QUARANTINED", "neg"], sub: ["WITH US", "att"], back: ["SENT BACK", ""], acc: ["ACCEPTED", "q"], off: ["OFF THE RUN", "q"] };
@@ -74,7 +77,8 @@ var DATA = [
   R("S20112", "Bettina Solano", "PV", "Individual", [["HUB", "H-90120", "HUB24 Invest"]], "N", "Monthly", 0, "—", "DECLINED", null, { init: { st: "declined", formAt: "08-09-2026", formT: "11:20", at: "22-09-2026", atT: "14:30", by: "Owen Pritchard", fee: 6200, start: "15-09-2026" } }),
   R("S20330", "Evander Rook", "HI", "Individual", [["MW", "M-449402", "Macquarie Investment Consolidator II - Elevate"]], "N", "Monthly", 0, "01-08-2027", "PENDING", null, { init: { st: "sent", formAt: "29-09-2026", formT: "15:40", sentAt: "30-09-2026", sentT: "11:30", sentBy: "Owen Pritchard", weekly: "06-10-2026", fee: 8400, start: "01-10-2026" } }),
   R("S20338", "Maple Crescent Pty Ltd", "KA", "Company", [["NW", "NW-55700", "Netwealth - Investment"]], "N", "Quarterly", 0, "15-10-2027", "PENDING", null, { init: { st: "form", formAt: "05-10-2026", formT: "10:15", fee: 14000, start: "15-10-2026" } }),
-  R("S18951", "Lucinda Hartigan", "OF", "Individual", [["SMA", "7701-640", "PRAEMIUM Shaw SMA"]], "N", "Monthly", 0, "—", "TERMINATED", null, { reEst: true, init: { st: "form", formAt: "06-10-2026", formT: "15:05", fee: 4900, start: "01-11-2026" } }),
+  R("S18951", "Lucinda Hartigan", "OF", "Individual", [["SMA", "7701-640", "PRAEMIUM Shaw SMA"]], "N", "Monthly", 0, "—", "TERMINATED", null, { reEst: true, init: { st: "form", formAt: "06-10-2026", formT: "15:05", fee: 4900, start: "01-11-2026" } }),,
+  R("S20473", "Imogen Taskell", "OF", "Individual", [["TAL", "TL-2271840", "TAL Accelerated Protection"]], "N", "Monthly", 0, "—", "No OFA", null, { paSt: { "TL-2271840": { st: "No OFA", by: "Owen Pritchard", at: "14-07-2026 10:20", why: "No ongoing fee arrangement" } } }),
 ];
 var PAX = { "S20114|H-90388": { rd: "18-03-2027", oldRd: "18-03-2026", is: "Accepted", fee: 4120 }, "S20131|7702-118": { fee: 3100 }, "S20131|M-448310": { rd: "02-02-2027", oldRd: "02-02-2026", is: "Accepted", fee: 4210 }, "S20131|P-302215": { rd: "11-03-2027", oldRd: "11-03-2026", is: "Accepted", fee: 2000 }, "S20278|H-90702": { fee: 19800 }, "S20278|7702-455": { fee: 7510, fq: "Quarterly" }, "S20172|BTP-771204": { rd: "03-10-2027", is: null, fee: 0 }, "S18990|M-443301": { fee: 6100 }, "S18990|NW-53302": { fee: 4100 }, "S18984|M-447120": { fee: 5200 }, "S18984|H-90215": { fee: 3160 } };
 var CHG = { S20167: { "H-90311": { fq: "Monthly" }, sig: { "Harriet Quill": { sal: "Dear Mrs Quill" } } }, S20188: { sig: { "Mirabel Harrowgate": { how: "Annature" } } }, S20301: { "NW-55511": { fq: "Quarterly" } } };

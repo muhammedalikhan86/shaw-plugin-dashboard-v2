@@ -3,9 +3,11 @@
   Refreshes the demo site from the artboards in the main shaw-plugin-dashboard checkout.
 
 .DESCRIPTION
-  Copies four artboard pages, their shared assets and support.js into this folder, then patches
+  Copies five artboard pages, their shared assets and support.js into this folder, then patches
   them for the demo:
     - each page loads demo-nav.js, which makes the Shaw and Partners logo go back to index.html;
+    - the artboards link to each other by file name (the two advisor pages do), so each such link
+      is pointed at that page's demo name from $pages;
     - each page gets its browser-tab title from $titles below (the artboards carry none);
     - stylesheet links into the design project's _ds/<system>/tokens/ folder are pointed at assets/ds/,
       which holds the same files;
@@ -34,7 +36,7 @@ $pages = [ordered]@{
   'portfolio-services.html' = 'ofa\ofa-portfolio-services.dc.html'
   'advisor.html'            = 'ofa\ofa-advisor-dashboard.dc.html'
   'compliance.html'         = 'ofa\ofa-compliance-dashboard.dc.html'
-  'checklist-options.html'  = 'ofa\ofa-checklist-options.dc.html'
+  'advisor-book.html'       = 'ofa\Advisor-Dashboard.dc.html'
 }
 
 # Demo page name -> browser-tab title. Muhammed's own names; edit here, not in the page.
@@ -43,7 +45,7 @@ $titles = @{
   'portfolio-services.html' = 'Shaw Portal - Portfolio Services Dashboard'
   'advisor.html'            = 'Shaw Portal - Advisor Dashboard'
   'compliance.html'         = 'Shaw Portal - Compliance Dashboard'
-  'checklist-options.html'  = 'Shaw Portal - OFA Checklist Options'
+  'advisor-book.html'       = 'Shaw Portal - Advisor Dashboard - Book of Business'
 }
 
 function Replace-Once([string]$text, [string]$find, [string]$with, [string]$what) {
@@ -77,6 +79,8 @@ foreach ($name in $pages.Keys) {
   $p = [regex]::Replace($p, '\s*<script src="_ds/[^/"]+/_ds_bundle\.js"></script>', '')
   $p = [regex]::Replace($p, '_ds/[^/"]+/tokens/(app-fonts/)?', 'assets/ds/')
   if ($p -match '_ds/') { throw "$name : still links the design project's _ds folder, which the demo does not have. Update this script." }
+  # Links between artboards use the artboard file names; the demo serves them under its own names.
+  foreach ($k in $pages.Keys) { $p = $p.Replace((Split-Path $pages[$k] -Leaf), $k) }
   [IO.File]::WriteAllText((Join-Path $Out $name), $p, $utf8)
   Write-Host ("{0,-24} <- {1}" -f $name, $pages[$name])
 }
