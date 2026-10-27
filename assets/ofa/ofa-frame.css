@@ -856,3 +856,17 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 .app-layer table.ot :is(th,td):is(.sinc,[classname~="sinc"]){width:112px!important;max-width:112px!important}
 .app-layer table.ot td[mat-cell]:is(.sinc,[classname~="sinc"]) .cl{max-width:104px;min-width:0}
 .app-layer table.ot td[mat-cell]:is(.sinc,[classname~="sinc"]) .cl>*{display:block!important;max-width:100%;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+
+/* B29: a narrow chart card puts "As at" on its own line under the subtitle */
+.cs{flex-wrap:wrap;row-gap:2px}.cs>span:first-child{flex:1 1 240px;min-width:0;text-wrap:pretty}.cs .asat{margin-left:0}
+/* A fitted column keeps its chips as chips */
+.app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]) .cl>mat-chip{display:inline-flex!important;align-self:flex-start;max-width:100%}
+.app-layer table.ot td.wx:is(.shr,[classname~="shr"]){min-width:0;max-width:0}
+.app-layer table.ot th.wx:is(.shr,[classname~="shr"]){min-width:0;max-width:none}
+/* Quarantine: Extension and Last prompt open the account's quarantine details */
+.app-layer table.ot td:is(.dq,[classname~="dq"]) a.rec{color:inherit;font-weight:400!important;text-decoration:underline dashed;text-decoration-color:var(--mat-sys-on-surface-variant);text-underline-offset:3px;cursor:pointer}
+.kv[data-cols="2"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+/* A chip in a fitted column is never cut: the column is at least as wide as its chip, and only the lines under it give up width */
+.app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]):has(>.cl>mat-chip){max-width:none!important}
+.app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]) .cl>mat-chip{max-width:none!important;overflow:visible!important;white-space:nowrap!important;text-overflow:clip!important;flex:none}
+.app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]):has(>.cl>mat-chip) .cl>:not(mat-chip){width:0;min-width:100%}
