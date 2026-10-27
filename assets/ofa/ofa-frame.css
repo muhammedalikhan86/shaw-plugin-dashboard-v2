@@ -819,3 +819,9 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 .app-layer table.ot.ot.ot.ot > tbody > tr:is(.kpa,[classname~="kpa"],.kc1,[classname~="kc1"]) > td[mat-cell]{background:#FAFAFA!important}
 .app-layer table.ot.ot.ot.ot > tbody > tr:is(.ksg,[classname~="ksg"],.kc2,[classname~="kc2"]) > td[mat-cell]{background:#FDFDFD!important}
 .app-layer table.ot.ot.ot.ot > tbody > tr:is(.kpa,[classname~="kpa"],.kc1,[classname~="kc1"],.ksg,[classname~="ksg"],.kc2,[classname~="kc2"]):hover > td[mat-cell]{background:#E6E6E6!important}
+/* Notes: the composer sits on one aligned line */
+.nlbox.nlbox{align-items:center!important;flex-wrap:nowrap!important}
+.nlbox.nlbox>mat-form-field{margin:0!important;gap:0!important}
+.nlbox.nlbox textarea.ta{min-height:40px!important;height:40px!important;max-height:40px!important;resize:none!important;padding:9px 16px!important;overflow:hidden;white-space:nowrap;box-sizing:border-box}
+.nlbox.nlbox>button{margin-top:0!important}
+.nlbox.nlbox .mof{margin:0!important}

@@ -14,6 +14,7 @@
     - support.js lets a page's setting come from the address, e.g. advisor.html?seat=SM%20%C2%B7%20all%20advisors,
       and exposes window.__demoRefresh, which re-reads the address without reloading, so a page
       keeps the view it is on when demo-nav.js changes a setting.
+  Artboards a page imports ($imports) are copied under their own names, with the same rewrites.
   index.html and demo-nav.js are maintained by hand and are not touched.
 
   Run it, check the pages locally, then commit and push. Vercel deploys on push.
@@ -83,5 +84,18 @@ foreach ($name in $pages.Keys) {
   foreach ($k in $pages.Keys) { $p = $p.Replace((Split-Path $pages[$k] -Leaf), $k) }
   [IO.File]::WriteAllText((Join-Path $Out $name), $p, $utf8)
   Write-Host ("{0,-24} <- {1}" -f $name, $pages[$name])
+}
+
+# Artboards a page pulls in with <dc-import name="X">. support.js fetches ./X.dc.html, so these keep
+# their own file names; they get the same _ds and page-link rewrites, but no demo-nav.js or title.
+$imports = @('ofa\Advisor-Portfolio.dc.html')
+foreach ($rel in $imports) {
+  $leaf = Split-Path $rel -Leaf
+  $p = [IO.File]::ReadAllText((Join-Path $Source $rel), $utf8)
+  $p = [regex]::Replace($p, '_ds/[^/"]+/tokens/(app-fonts/)?', 'assets/ds/')
+  if ($p -match '_ds/') { throw "$leaf : still links the design project's _ds folder, which the demo does not have. Update this script." }
+  foreach ($k in $pages.Keys) { $p = $p.Replace((Split-Path $pages[$k] -Leaf), $k) }
+  [IO.File]::WriteAllText((Join-Path $Out $leaf), $p, $utf8)
+  Write-Host ("{0,-24} <- {1} (imported)" -f $leaf, $rel)
 }
 Write-Host 'Done. Check the pages locally, then commit and push.'
