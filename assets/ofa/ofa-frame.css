@@ -870,3 +870,5 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 .app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]):has(>.cl>mat-chip){max-width:none!important}
 .app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]) .cl>mat-chip{max-width:none!important;overflow:visible!important;white-space:nowrap!important;text-overflow:clip!important;flex:none}
 .app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]):has(>.cl>mat-chip) .cl>:not(mat-chip){width:0;min-width:100%}
+/* B36: a figure never breaks over two lines */
+.app-layer table.ot :is(td,th):is(.num,[classname~="num"]),.app-layer table.ot td:is(.num,[classname~="num"]) :is(.cl>span,.cl>a,.stk>span){white-space:nowrap!important}
