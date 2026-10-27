@@ -1,4 +1,4 @@
-/* The advisor's book: invented sample data for Advisor-Dashboard.dc.html. S-Account → client → platform account → product. */
+/* The advisor's book: invented sample data for the Portfolio view (Advisor-Portfolio.dc.html). S-Account → client → platform account → product. */
 (function () {
   let seed = 20261007; const r = () => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; };
   const pick = (a) => a[Math.floor(r() * a.length)];

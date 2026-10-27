@@ -846,3 +846,13 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 .g24[data-fill="auto"]>div>mat-card[data-half="true"]{flex:1 1 auto;min-height:0;height:auto!important;display:flex;flex-direction:column;overflow:hidden}
 .g24[data-fill="auto"]>div>mat-card[data-half="true"]>*{flex:none}
 .g24[data-fill="auto"]>div>mat-card[data-half="true"]>.tsc{flex:1 1 auto;min-height:0;overflow:auto}
+/* An ASF header reads "ASF (excl. GST)" on its first line and the period on the second */
+.app-layer table.ot th .hd{white-space:pre-line}
+/* Renewal tracker: S-Account, Advisor, Platform accounts, Signatories and the status columns are never cut; where they do not fit, the table scrolls inside its card */
+.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell]:is(.shr,[classname~="shr"],.stw,[classname~="stw"],.c140,[classname~="c140"]){max-width:none!important;width:auto!important}
+.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell]:is(.shr,[classname~="shr"],.stw,[classname~="stw"],.c140,[classname~="c140"]) :is(.cl,.stk,.cl>*,.cl>span,.stk>*,.stk>span,.cl>.sub,.stk>.sub,.stk>button.sed){max-width:none!important;overflow:visible!important;text-overflow:clip!important;white-space:nowrap!important}
+.app-layer table.ot:has(> tbody > tr:is(.rtn,[classname~="rtn"])){width:max-content!important;min-width:100%!important;table-layout:auto!important}
+/* Exceptions report: the Since column holds 112px on every tab; a longer second line is cut with an ellipsis and shown in full on hover */
+.app-layer table.ot :is(th,td):is(.sinc,[classname~="sinc"]){width:112px!important;max-width:112px!important}
+.app-layer table.ot td[mat-cell]:is(.sinc,[classname~="sinc"]) .cl{max-width:104px;min-width:0}
+.app-layer table.ot td[mat-cell]:is(.sinc,[classname~="sinc"]) .cl>*{display:block!important;max-width:100%;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
