@@ -738,8 +738,6 @@ table.ot tr:is(.rtn,[classname~="rtn"]) > td[mat-cell] .sub{white-space:nowrap;o
 mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"]){overflow:visible!important;max-height:none!important}
 mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-content{overflow:visible!important}
 /* No table stripes its rows: every row is white, hover is surface-container-low, one 1px line between rows */
-.app-layer table.ot > tbody > tr > td[mat-cell]{background:var(--mat-sys-surface)!important;border-bottom:1px solid var(--mat-sys-outline-variant)!important}
-.app-layer table.ot > tbody > tr:hover > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important}
 /* Chips: ended well, ended badly */
 .app-layer mat-chip[data-tone="ok"]{background:#007B84!important;border-color:#007B84!important;color:#FFFFFF!important}
 .app-layer mat-chip[data-tone="bad"]{background:var(--mat-sys-error)!important;border-color:var(--mat-sys-error)!important;color:var(--mat-sys-on-error)!important}
@@ -797,3 +795,27 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 .app-layer table.ot td[mat-cell]:is(.stw,[classname~="stw"]) .cl{min-width:0;max-width:100%}
 .app-layer table.ot:has(> thead th:is(.ic48,[classname~="ic48"])) > thead th[mat-header-cell]:is(:first-child,:last-child),.app-layer table.ot:has(> thead th:is(.ic48,[classname~="ic48"])) > tbody > tr > td[mat-cell]:is(:first-child,:last-child){width:48px;min-width:48px;max-width:48px;padding-left:4px!important;padding-right:4px!important;text-align:center}
 .app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]) .stk>*{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap!important}
+/* S63: the OFA Dashboard's tracker fits at 1440px with Keep open on */
+.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell]:is(.stw,[classname~="stw"]){max-width:200px}
+.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell]:is(.c140,[classname~="c140"]){max-width:140px}
+.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell]:is(.c140,[classname~="c140"]) :is(.cl>span,.cl>.sub){display:block!important;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap!important}
+
+/* P27 / S67 / W18: rows are banded in every table */
+.app-layer table.ot.ot.ot > tbody > tr > td[mat-cell]{border-top:0!important;border-bottom:0!important}
+.app-layer table.ot.ot.ot > tbody > tr:is(.bo,[classname~="bo"]) > td[mat-cell],.app-layer table.ot.ot.ot > tbody > tr:is(.exo,[classname~="exo"]) > td[mat-cell]{background:#FFFFFF!important}
+.app-layer table.ot.ot.ot > tbody > tr:is(.be,[classname~="be"]) > td[mat-cell]{background:#F7F7F7!important}
+.app-layer table.ot.ot.ot > tbody > tr:is(.kpa,[classname~="kpa"],.kc1,[classname~="kc1"]) > td[mat-cell]{background:#F2F2F2!important}
+.app-layer table.ot.ot.ot > tbody > tr:is(.ksg,[classname~="ksg"],.kc2,[classname~="kc2"]) > td[mat-cell]{background:#F7F7F7!important}
+.app-layer table.ot.ot.ot > tbody > tr:is(.ghd,[classname~="ghd"]) > td[mat-cell]{background:#E6E6E6!important;font-weight:500!important}
+.app-layer table.ot.ot.ot > tbody > tr:hover > td[mat-cell]{background:#E6E6E6!important}
+.app-layer table.ot.ot.ot > tbody > tr:is(.tot,[classname~="tot"]) > td[mat-cell]{background:#F7F7F7!important;border-top:1px solid var(--mat-sys-outline-variant)!important}
+.app-layer table.ot.ot.ot.ot > tbody > tr:is(.sel,[classname~="sel"]) > td[mat-cell]{background:var(--mat-sys-secondary-container)!important}
+/* P28 / S68 / W19: four looks for a status */
+.app-layer mat-chip[data-tone="q"]{background:#F2F2F2!important;border-color:#F2F2F2!important;color:#404040!important}
+.app-layer mat-chip[data-tone="pos"]{background:#FFFFFF!important;border-color:#337722!important;color:#337722!important}
+.app-layer mat-chip[data-tone="att"]{background:#FFFFFF!important;border-color:#E84810!important;color:#E84810!important}
+.app-layer mat-chip[data-tone="neg"]{background:#A50021!important;border-color:#A50021!important;color:#FFFFFF!important}
+/* Child rows lighter than the banded top-level grey, so the two cannot be confused */
+.app-layer table.ot.ot.ot.ot > tbody > tr:is(.kpa,[classname~="kpa"],.kc1,[classname~="kc1"]) > td[mat-cell]{background:#FAFAFA!important}
+.app-layer table.ot.ot.ot.ot > tbody > tr:is(.ksg,[classname~="ksg"],.kc2,[classname~="kc2"]) > td[mat-cell]{background:#FDFDFD!important}
+.app-layer table.ot.ot.ot.ot > tbody > tr:is(.kpa,[classname~="kpa"],.kc1,[classname~="kc1"],.ksg,[classname~="ksg"],.kc2,[classname~="kc2"]):hover > td[mat-cell]{background:#E6E6E6!important}
