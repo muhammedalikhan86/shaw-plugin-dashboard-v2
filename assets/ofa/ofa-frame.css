@@ -716,7 +716,7 @@ table.ot tr:is(.rtn,[classname~="rtn"]) > td[mat-cell] .sub{font:var(--mat-sys-b
 table.ot tr:is(.rtn,[classname~="rtn"]) > td[mat-cell] button[matIconButton]{margin:-8px 0!important}
 table.ot tr:is(.rtn,[classname~="rtn"]) > td[mat-cell] mat-checkbox{margin-top:-2px}
 table.ot tr:is(.rtn,[classname~="rtn"]):hover > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important}
-table.ot tr:is(.rtn,[classname~="rtn"]):is(.sel,[classname~="sel"]) > td[mat-cell]{background:var(--mat-sys-secondary-container)!important}
+table.ot tr:is(.rtn,[classname~="rtn"]):is(.rsel,[classname~="rsel"]) > td[mat-cell]{background:color-mix(in srgb,var(--mat-sys-primary) 8%,#FFFFFF)!important}
 table.ot tr:is(.rtn,[classname~="rtn"]):is(.open,[classname~="open"]) > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important;border-bottom:0!important}
 table.ot tr:is(.rtp,[classname~="rtp"]) > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important;padding:0!important;border-top:0!important;border-bottom:1px solid var(--mat-sys-outline-variant)!important;vertical-align:top}
 table.ot tr:is(.rtp,[classname~="rtp"]) > td[mat-cell] > .cl{display:block!important}
@@ -747,7 +747,7 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 .app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]) .cl>*{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .app-layer table.ot > tbody > tr:is(.rtp,[classname~="rtp"]) > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important;border-bottom:1px solid var(--mat-sys-outline-variant)!important}
 .app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"]):is(.open,[classname~="open"]) > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important;border-bottom:0!important}
-.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"]):is(.sel,[classname~="sel"]) > td[mat-cell]{background:var(--mat-sys-secondary-container)!important}
+.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"]):is(.rsel,[classname~="rsel"]) > td[mat-cell]{background:color-mix(in srgb,var(--mat-sys-primary) 8%,#FFFFFF)!important}
 
 /* Compliance record: the page fills the window. Header card at its height, Platform accounts takes the middle, History and Documents the bottom half */
 .page:has(>.g24[data-fill="rc"]){height:100%;min-height:0;box-sizing:border-box}
@@ -809,9 +809,9 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 .app-layer table.ot.ot.ot > tbody > tr:is(.ghd,[classname~="ghd"]) > td[mat-cell]{background:#E6E6E6!important;font-weight:500!important}
 .app-layer table.ot.ot.ot > tbody > tr:hover > td[mat-cell]{background:#E6E6E6!important}
 .app-layer table.ot.ot.ot > tbody > tr:is(.tot,[classname~="tot"]) > td[mat-cell]{background:#F7F7F7!important;border-top:1px solid var(--mat-sys-outline-variant)!important}
-.app-layer table.ot.ot.ot.ot > tbody > tr:is(.sel,[classname~="sel"]) > td[mat-cell]{background:var(--mat-sys-secondary-container)!important}
+.app-layer table.ot.ot.ot.ot > tbody > tr:is(.rsel,[classname~="rsel"]) > td[mat-cell]{background:color-mix(in srgb,var(--mat-sys-primary) 8%,#FFFFFF)!important}
 /* P28 / S68 / W19: four looks for a status */
-.app-layer mat-chip[data-tone="q"]{background:#F2F2F2!important;border-color:#F2F2F2!important;color:#404040!important}
+.app-layer mat-chip[data-tone="q"]{background:#F2F2F2!important;border-color:#CCCCCC!important;color:#404040!important}
 .app-layer mat-chip[data-tone="pos"]{background:#FFFFFF!important;border-color:#337722!important;color:#337722!important}
 .app-layer mat-chip[data-tone="att"]{background:#FFFFFF!important;border-color:#E84810!important;color:#E84810!important}
 .app-layer mat-chip[data-tone="neg"]{background:#A50021!important;border-color:#A50021!important;color:#FFFFFF!important}
@@ -825,3 +825,24 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 .nlbox.nlbox textarea.ta{min-height:40px!important;height:40px!important;max-height:40px!important;resize:none!important;padding:9px 16px!important;overflow:hidden;white-space:nowrap;box-sizing:border-box}
 .nlbox.nlbox>button{margin-top:0!important}
 .nlbox.nlbox .mof{margin:0!important}
+
+/* S-Account page, Ongoing fee arrangement tab: History and Documents hold the bottom 40% (60% to 100%); Platform accounts takes the rest, scrolling when longer */
+.page:has(>.g24[data-fill="sa5"]){height:100%;min-height:0;box-sizing:border-box}
+.g24[data-fill="sa5"]{flex:1;min-height:0;align-items:stretch;grid-template-rows:max-content max-content minmax(120px,1fr) minmax(200px,40%)}
+.g24[data-fill="sa5"]>div:nth-child(n+3){position:relative;min-height:0}
+.g24[data-fill="sa5"]>div:nth-child(n+3)>mat-card{position:absolute;inset:0;height:auto!important;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.g24[data-fill="sa5"]>div:nth-child(n+3)>mat-card>*{flex:none}
+.g24[data-fill="sa5"]>div:nth-child(n+3)>mat-card>:last-child{flex:1 1 auto;min-height:0;overflow:auto}
+.app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]) .cl>*,.app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]) .cl>span{display:block!important;max-width:100%;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+/* Sidebar count badges: on the glyph when the sidebar is closed, top right; they animate out as it opens and back as it closes */
+.app-layer [matBadge].sbb::after{top:-6px!important;right:-10px!important;transform-origin:center;transition:opacity 200ms cubic-bezier(.4,0,.2,1),transform 200ms cubic-bezier(.4,0,.2,1);opacity:1;transform:scale(1)}
+.app-layer [matBadge].sbb.sbh::after,.app-layer [matBadge][classname~="sbh"]::after{opacity:0;transform:scale(.4)}
+/* Card header: every control on one centre line */
+.app-layer .bh>.row>*{align-self:center}
+.app-layer .bh>.row mat-form-field{margin:0!important;padding:0!important;display:flex;align-items:center}
+.app-layer .bh>.row mat-form-field>.sel{margin:0!important}
+/* A half-height card: at most half the content area; it scrolls inside, and the cards after it take the rest */
+.g24[data-fill="auto"]>div:has(>mat-card[data-half="true"]){flex:0 1 auto;max-height:50%;min-height:0;display:flex;flex-direction:column}
+.g24[data-fill="auto"]>div>mat-card[data-half="true"]{flex:1 1 auto;min-height:0;height:auto!important;display:flex;flex-direction:column;overflow:hidden}
+.g24[data-fill="auto"]>div>mat-card[data-half="true"]>*{flex:none}
+.g24[data-fill="auto"]>div>mat-card[data-half="true"]>.tsc{flex:1 1 auto;min-height:0;overflow:auto}

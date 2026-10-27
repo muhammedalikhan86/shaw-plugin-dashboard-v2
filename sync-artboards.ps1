@@ -3,7 +3,7 @@
   Refreshes the demo site from the artboards in the main shaw-plugin-dashboard checkout.
 
 .DESCRIPTION
-  Copies five artboard pages, their shared assets and support.js into this folder, then patches
+  Copies four artboard pages, their shared assets and support.js into this folder, then patches
   them for the demo:
     - each page loads demo-nav.js, which makes the Shaw and Partners logo go back to index.html;
     - the artboards link to each other by file name (the two advisor pages do), so each such link
@@ -37,7 +37,6 @@ $pages = [ordered]@{
   'portfolio-services.html' = 'ofa\ofa-portfolio-services.dc.html'
   'advisor.html'            = 'ofa\ofa-advisor-dashboard.dc.html'
   'compliance.html'         = 'ofa\ofa-compliance-dashboard.dc.html'
-  'advisor-book.html'       = 'ofa\Advisor-Dashboard.dc.html'
 }
 
 # Demo page name -> browser-tab title. Muhammed's own names; edit here, not in the page.
@@ -46,7 +45,6 @@ $titles = @{
   'portfolio-services.html' = 'Shaw Portal - Portfolio Services Dashboard'
   'advisor.html'            = 'Shaw Portal - Advisor Dashboard'
   'compliance.html'         = 'Shaw Portal - Compliance Dashboard'
-  'advisor-book.html'       = 'Shaw Portal - Advisor Dashboard - Book of Business'
 }
 
 function Replace-Once([string]$text, [string]$find, [string]$with, [string]$what) {

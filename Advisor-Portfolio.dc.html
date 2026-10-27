@@ -207,7 +207,7 @@ body{min-width:708px}
 <style>
 .adgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
 .tiles{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px}
-.tile{height:124px;padding:14px 14px 12px;display:flex;flex-direction:column;background:var(--mat-sys-surface);border:1px solid var(--mat-sys-outline-variant);border-radius:6px}
+.tile{height:auto;min-height:124px;padding:14px 14px 12px;display:flex;flex-direction:column;background:var(--mat-sys-surface);border:1px solid var(--mat-sys-outline-variant);border-radius:6px}
 .tl{font:500 11px/16px var(--f);letter-spacing:.05em;text-transform:uppercase;height:32px;color:#404040}
 .tr{font:400 11px/16px var(--f);margin-top:6px;color:#404040}
 .tv{font:400 18px/1.05 var(--f);font-variant-numeric:tabular-nums;margin-top:auto;display:flex;align-items:center;gap:4px}
@@ -244,6 +244,10 @@ table.at th.stick,table.at td.stick{min-width:160px;white-space:nowrap}
 .grip:hover{color:var(--mat-sys-on-surface)}
 .grip>i{position:absolute;width:2px;height:2px;border-radius:9999px;background:currentColor}
 table.at td.nm{white-space:nowrap;font-weight:500}
+.tiles{align-items:stretch}
+.tiles .tl{height:auto!important;min-height:32px}
+.tiles .tr{margin-top:2px}
+.tiles .tv{margin-top:auto;padding-top:8px}
 </style>
 </helmet>
 
