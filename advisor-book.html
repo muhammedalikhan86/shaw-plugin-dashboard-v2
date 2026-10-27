@@ -835,7 +835,7 @@ class Component extends DCLogic {
     ].map(([label, range, value]) => { const neg = value.startsWith("−"); return { label, range, value, neg, color: neg ? "var(--mat-sys-error)" : "var(--mat-sys-on-surface)", why: "More money left these accounts than came in during the month." }; });
     return {
       sbWidth: open ? "268px" : "72px", glyphCol: open ? "40px" : "54px", labelOpacity: open ? 1 : 0, labelDelay: open ? "60ms" : "0ms", labelHits: open ? "auto" : "none",
-      hoverIn: () => this.setState({ hover: true }), hoverOut: () => this.setState({ hover: false }), pinned: s.pinned ? "true" : null, togglePin: () => this.setState({ pinned: !s.pinned }),
+      hoverIn: () => { clearTimeout(this._sbT); this._sbT = null; if (!this.state.hover) this.setState({ hover: true }); }, hoverOut: () => { clearTimeout(this._sbT); this._sbT = setTimeout(() => { this._sbT = null; this.setState({ hover: false }); }, (() => { try { const v = parseInt(localStorage.getItem("shaw.sidebarDelay"), 10); return (v >= 1 && v <= 10 ? v : 3) * 1000; } catch (e) { return 3000; } })()); }, pinned: s.pinned ? "true" : null, togglePin: () => this.setState({ pinned: !s.pinned }),
       sideItems: [{ label: "Advisor dashboard", icon: "extension", cls: "d1", mt: "4px", pad: open ? "8px" : "0px" }, { label: "My dashboard", icon: "dashboard", cls: "on", mt: "4px", pad: open ? "20px" : "0px" }],
       openProfile: () => { window.location.href = "Shell-Preferences.dc.html"; },
       query: s.query, hasQuery: s.query.length > 0, onQuery: (e) => this.setState({ query: e.target.value }), clearQuery: () => this.setState({ query: "" }),

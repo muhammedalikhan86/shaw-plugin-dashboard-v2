@@ -185,7 +185,7 @@ mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel>.body{padding:0 24px
 .pr:hover{background:var(--mat-sys-surface-container)}
 .rolebox{max-height:156px;overflow-y:auto;padding-right:8px}
 body{min-width:708px}
-.page{min-width:1400px}
+.page{min-width:1360px}
 
 
 .adgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
@@ -260,7 +260,10 @@ table.ot td[mat-cell]{white-space:normal;overflow:visible;text-overflow:clip;hei
 table.ot th[mat-header-cell]{white-space:normal}
 table.ot tr.grp td[mat-cell]{background:var(--mat-sys-surface-container-low);font:500 12px/18px var(--f);height:36px}
 table.ot tr.kid td[mat-cell]{background:var(--mat-sys-surface)}
-table.ot tr.kid td[mat-cell]:first-child{padding-left:56px}
+table.ot > tbody > tr.kid > td[mat-cell]:first-child{padding-left:56px}
+table.ot tr:is(.vt,[classname~="vt"]) td[mat-cell]{vertical-align:top}
+table.ot tr:is(.pal,[classname~="pal"]) td[mat-cell]:not(:first-child){border-top:1px solid var(--mat-sys-outline-variant)}
+table.ot tr:is(.pal,[classname~="pal"]) + tr:not(:is(.pal,[classname~="pal"])):is(.kid,[classname~="kid"]) td[mat-cell]:not(:first-child){border-top:1px solid var(--mat-sys-outline-variant)}
 table.ot tbody tr.bo td[mat-cell]{background:var(--mat-sys-surface)}
 table.ot tbody tr.be td[mat-cell]{background:var(--mat-sys-surface-container-low)}
 table.ot tbody tr.hot td[mat-cell]{background:#FDF1EC}
@@ -695,6 +698,102 @@ mat-card[data-fix="true"]>.nlw>.nlbox{flex:none;margin-top:auto}
 .page:has(>.g24[data-fill="s3"]){height:100%;min-height:0;box-sizing:border-box}
 .g24[data-fill="s3"]{flex:1;min-height:0;grid-template-rows:minmax(300px,1fr) minmax(300px,1fr) max-content;align-items:stretch}
 .g24[data-fill="s3"]>div:not(:last-child){min-height:0;align-self:stretch;position:relative}
-.g24[data-fill="s3"]>div:not(:last-child)>mat-card{position:absolute;inset:0;height:auto!important;min-height:0;display:flex;flex-direction:column;overflow:auto}
+.g24[data-fill="s3"]>div:not(:last-child)>mat-card{position:absolute;inset:0;height:auto!important;min-height:0;display:flex;flex-direction:column;overflow:hidden}
 .g24[data-fill="s3"]>div:not(:last-child)>mat-card>:not(.tsc){flex:none;overflow:visible}
 .g24[data-fill="s3"]>div:not(:last-child)>mat-card>.tsc{flex:1 1 auto;min-height:0;overflow:auto}
+.g24[data-fill="s3"]>div:not(:last-child)>mat-card>.tsc{max-height:none!important;height:auto!important}
+.g24[data-fill="s3"]>div:not(:last-child)>mat-card>.tsc table{min-width:0}
+.g24[data-fill="s3"]>div:not(:last-child)>mat-card:not(:has(>.tsc)){overflow-y:auto}
+
+/* S51 / W18 · the Renewal tracker, Material expandable rows */
+table.ot:has(tr:is(.rtn,[classname~="rtn"])) > thead th[mat-header-cell]{height:56px;padding:0 16px;vertical-align:middle;border-bottom:1px solid var(--mat-sys-outline-variant)}
+table.ot:has(tr:is(.rtn,[classname~="rtn"])) > thead th[mat-header-cell]:is(:first-child,:nth-child(2),:last-child){width:48px;min-width:48px;padding:0 4px}
+table.ot tr:is(.rtn,[classname~="rtn"]) > td[mat-cell]{background:var(--mat-sys-surface)!important;vertical-align:top!important;padding:12px 16px!important;height:64px;box-sizing:border-box;border-top:0!important;border-bottom:1px solid var(--mat-sys-outline-variant)!important;font:var(--mat-sys-body-medium)}
+table.ot tr:is(.rtn,[classname~="rtn"]) > td[mat-cell]:is(:first-child,:nth-child(2),:last-child){width:48px;min-width:48px;padding:12px 4px!important;text-align:center}
+table.ot tr:is(.rtn,[classname~="rtn"]) > td[mat-cell] .cl{gap:0!important;justify-content:flex-start!important;align-items:flex-start!important;flex-direction:column!important}
+table.ot tr:is(.rtn,[classname~="rtn"]) > td[mat-cell]:is(:first-child,:nth-child(2),:last-child) .cl{align-items:center!important}
+table.ot tr:is(.rtn,[classname~="rtn"]) > td[mat-cell] .sub{font:var(--mat-sys-body-small);color:var(--mat-sys-on-surface-variant)}
+table.ot tr:is(.rtn,[classname~="rtn"]) > td[mat-cell] button[matIconButton]{margin:-8px 0!important}
+table.ot tr:is(.rtn,[classname~="rtn"]) > td[mat-cell] mat-checkbox{margin-top:-2px}
+table.ot tr:is(.rtn,[classname~="rtn"]):hover > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important}
+table.ot tr:is(.rtn,[classname~="rtn"]):is(.sel,[classname~="sel"]) > td[mat-cell]{background:var(--mat-sys-secondary-container)!important}
+table.ot tr:is(.rtn,[classname~="rtn"]):is(.open,[classname~="open"]) > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important;border-bottom:0!important}
+table.ot tr:is(.rtp,[classname~="rtp"]) > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important;padding:0!important;border-top:0!important;border-bottom:1px solid var(--mat-sys-outline-variant)!important;vertical-align:top}
+table.ot tr:is(.rtp,[classname~="rtp"]) > td[mat-cell] > .cl{display:block!important}
+.rtpn{display:flex;flex-direction:column;gap:16px;padding:8px 16px 16px 112px}
+.rtpt{display:flex;flex-direction:column;gap:4px}
+.rtph{font:var(--mat-sys-title-small);color:var(--mat-sys-on-surface)}
+table.rtx{width:100%;border-collapse:collapse;border-spacing:0;table-layout:auto;background:transparent}
+table.rtx th[mat-header-cell]{height:40px;font:var(--mat-sys-label-medium);color:var(--mat-sys-on-surface-variant);text-align:left;padding:0 16px 0 0;border-bottom:1px solid var(--mat-sys-outline-variant);background:transparent!important;position:static!important;vertical-align:middle;white-space:nowrap}
+table.rtx td[mat-cell]{height:48px;box-sizing:border-box;vertical-align:top;padding:12px 16px 12px 0;border-bottom:1px solid var(--mat-sys-outline-variant);background:transparent!important}
+table.rtx tbody tr:last-child td[mat-cell]{border-bottom:0}
+.rtc{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0}
+.rtc .l1{font:var(--mat-sys-body-medium);color:var(--mat-sys-on-surface)}
+.rtc .sub{font:var(--mat-sys-body-small);color:var(--mat-sys-on-surface-variant)}
+table.rtx{background:transparent!important}
+table.rtx th[mat-header-cell],table.rtx td[mat-cell]{padding-left:0!important;padding-right:16px!important}
+table.ot tr:is(.rtn,[classname~="rtn"]) > td[mat-cell] .sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;display:block}
+
+/* A dialog with fields lets its drop-down panels show in full instead of clipping them */
+mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"]){overflow:visible!important;max-height:none!important}
+mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-content{overflow:visible!important}
+/* No table stripes its rows: every row is white, hover is surface-container-low, one 1px line between rows */
+.app-layer table.ot > tbody > tr > td[mat-cell]{background:var(--mat-sys-surface)!important;border-bottom:1px solid var(--mat-sys-outline-variant)!important}
+.app-layer table.ot > tbody > tr:hover > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important}
+/* Chips: ended well, ended badly */
+.app-layer mat-chip[data-tone="ok"]{background:#007B84!important;border-color:#007B84!important;color:#FFFFFF!important}
+.app-layer mat-chip[data-tone="bad"]{background:var(--mat-sys-error)!important;border-color:var(--mat-sys-error)!important;color:var(--mat-sys-on-error)!important}
+.app-layer mat-chip[data-tone="term"]{background:#404040!important;border-color:#404040!important;color:#FFFFFF!important}
+/* S56: the Renewal tracker's S-Account and Platform accounts give up width first */
+.app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]){max-width:0}
+.app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]) .cl>*{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.app-layer table.ot > tbody > tr:is(.rtp,[classname~="rtp"]) > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important;border-bottom:1px solid var(--mat-sys-outline-variant)!important}
+.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"]):is(.open,[classname~="open"]) > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important;border-bottom:0!important}
+.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"]):is(.sel,[classname~="sel"]) > td[mat-cell]{background:var(--mat-sys-secondary-container)!important}
+
+/* Compliance record: the page fills the window. Header card at its height, Platform accounts takes the middle, History and Documents the bottom half */
+.page:has(>.g24[data-fill="rc"]){height:100%;min-height:0;box-sizing:border-box}
+.g24[data-fill="rc"]{flex:1;min-height:0;align-items:stretch;grid-template-rows:max-content minmax(140px,1fr) minmax(300px,50%)}
+.g24[data-fill="rc"]>div{min-height:0}
+.g24[data-fill="rc"]>div:not(:first-child){position:relative}
+.g24[data-fill="rc"]>div:not(:first-child)>mat-card{position:absolute;inset:0;height:auto!important;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.g24[data-fill="rc"]>div:not(:first-child)>mat-card>*{flex:none}
+.g24[data-fill="rc"]>div:not(:first-child)>mat-card>:last-child{flex:1 1 auto;min-height:0;overflow:auto}
+
+/* S58 / W25: the open row's lines sit in the parent table's own columns */
+.app-layer table.ot > tbody > tr:is(.rtl,[classname~="rtl"],.rth,[classname~="rth"]) > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important;vertical-align:top!important;border-bottom:0!important;box-sizing:border-box}
+.app-layer table.ot > tbody > tr:is(.rtl,[classname~="rtl"]) > td[mat-cell]{padding:12px 16px!important;height:48px;border-top:1px solid var(--mat-sys-outline-variant)!important}
+.app-layer table.ot > tbody > tr:is(.rth,[classname~="rth"]) + tr:is(.rtl,[classname~="rtl"]) > td[mat-cell]{border-top:0!important}
+.app-layer table.ot > tbody > tr:is(.rth,[classname~="rth"]) > td[mat-cell]{padding:16px 16px 4px!important;height:auto;font:var(--mat-sys-title-small)!important}
+.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"]) + tr:is(.rth,[classname~="rth"]) > td[mat-cell]{padding-top:8px!important}
+.app-layer table.ot > tbody > tr:is(.rtend,[classname~="rtend"]) > td[mat-cell]{border-bottom:1px solid var(--mat-sys-outline-variant)!important;padding-bottom:16px!important}
+.app-layer table.ot > tbody > tr:is(.rtl,[classname~="rtl"],.rth,[classname~="rth"]) > td[mat-cell]:is(:first-child,:nth-child(2),:last-child){width:48px;padding-left:4px!important;padding-right:4px!important}
+.app-layer table.ot > tbody > tr:is(.rtl,[classname~="rtl"]) > td[mat-cell] .cl{gap:0!important;flex-direction:column!important;align-items:flex-start!important}
+.app-layer table.ot > tbody > tr:is(.rtl,[classname~="rtl"]) > td[mat-cell] .sub{font:var(--mat-sys-body-small);color:var(--mat-sys-on-surface-variant)}
+.app-layer table.ot > tbody > tr:is(.rth,[classname~="rth"]) > td[mat-cell] span{font:var(--mat-sys-title-small)!important;color:var(--mat-sys-on-surface)}
+.app-layer table.ot > tbody > tr:is(.rtl,[classname~="rtl"],.rth,[classname~="rth"]) > td[mat-cell]:first-child{padding-left:4px!important}
+.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"]) + tr:is(.rtl,[classname~="rtl"]) > td[mat-cell]{border-top:0!important;padding-top:4px!important}
+/* Renewal tracker: a signatory's action sits on its who-and-when line */
+.app-layer table.ot > tbody > tr:is(.rtl,[classname~="rtl"]) td .stk:has(>button:not(.sed)){display:grid!important;grid-template-columns:auto auto;justify-content:start;justify-items:start;align-items:center;column-gap:4px}
+.app-layer table.ot > tbody > tr:is(.rtl,[classname~="rtl"]) td .stk:has(>button:not(.sed))>:not(button){grid-column:1}
+.app-layer table.ot > tbody > tr:is(.rtl,[classname~="rtl"]) td .stk:has(>button:not(.sed))>button{grid-column:2;grid-row:1 / span 2;align-self:center;margin:0 0 0 4px!important;min-width:0}
+.app-layer table.ot > tbody > tr:is(.rtl,[classname~="rtl"]) td .stk:not(:has(>button:not(.sed))){display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:2px}
+
+/* S-Account page, Ongoing fee arrangement tab: History and Documents reach the bottom of the page */
+.page:has(>.g24[data-fill="sa6"]){height:100%;min-height:0;box-sizing:border-box}
+.g24[data-fill="sa6"]{flex:1;min-height:0;align-items:stretch;grid-template-rows:max-content max-content max-content max-content minmax(0,1fr)}
+.g24[data-fill="sa6"]>div:nth-last-child(-n+2){position:relative;min-height:0}
+.g24[data-fill="sa6"]>div:nth-last-child(-n+2)>mat-card{position:absolute;inset:0;height:auto!important;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.g24[data-fill="sa6"]>div:nth-last-child(-n+2)>mat-card>*{flex:none}
+.g24[data-fill="sa6"]>div:nth-last-child(-n+2)>mat-card>:last-child{flex:1 1 auto;min-height:0;overflow:auto}
+
+/* W27 / S59: the Renewal tracker fits its card; every second line is cut with an ellipsis */
+.app-layer table.ot td[mat-cell]:is(.stw,[classname~="stw"]){max-width:240px}
+.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell] :is(.cl>.sub,.stk>.sub,.stk>button.sed){display:block!important;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap!important}
+.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell]:is(.shr,[classname~="shr"],.stw,[classname~="stw"]) :is(.cl>span,.cl>a,.stk>span){display:block!important;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap!important}
+.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell]:is(.shr,[classname~="shr"],.stw,[classname~="stw"]) .stk{max-width:100%;min-width:0}
+.app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell]:is(.shr,[classname~="shr"],.stw,[classname~="stw"]) .cl{min-width:0;max-width:100%}
+.app-layer table.ot td[mat-cell]:is(.stw,[classname~="stw"]) :is(.cl>.sub,.cl>span){display:block!important;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap!important}
+.app-layer table.ot td[mat-cell]:is(.stw,[classname~="stw"]) .cl{min-width:0;max-width:100%}
+.app-layer table.ot:has(> thead th:is(.ic48,[classname~="ic48"])) > thead th[mat-header-cell]:is(:first-child,:last-child),.app-layer table.ot:has(> thead th:is(.ic48,[classname~="ic48"])) > tbody > tr > td[mat-cell]:is(:first-child,:last-child){width:48px;min-width:48px;max-width:48px;padding-left:4px!important;padding-right:4px!important;text-align:center}
+.app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]) .stk>*{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap!important}
