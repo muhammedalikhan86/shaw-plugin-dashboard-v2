@@ -39,6 +39,19 @@ h1{font-weight:400;font-size:26px;line-height:34px;margin:0 0 8px}
 <a href="compliance.html"><strong>Compliance Dashboard</strong><span>For Compliance.</span><em>Open</em></a>
 </div>
 <p class="note">These are designs, not the finished product. Wording and layout may still change.</p>
+<p class="note" id="updated" hidden>Last updated: <time id="updated-time"></time></p>
+<script>
+fetch("https://api.github.com/repos/muhammedalikhan86/shaw-plugin-dashboard-v2/commits?per_page=1")
+  .then(function(r){return r.ok?r.json():Promise.reject();})
+  .then(function(c){
+    var d=new Date(c[0].commit.committer.date);
+    var t=document.getElementById("updated-time");
+    t.dateTime=d.toISOString();
+    t.textContent=d.toLocaleString("en-AU",{dateStyle:"medium",timeStyle:"short"});
+    document.getElementById("updated").hidden=false;
+  })
+  .catch(function(){});
+</script>
 </main>
 </body>
 </html>
