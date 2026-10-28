@@ -135,6 +135,9 @@
   const MW2 = (label) => { const s0 = String(label == null ? "" : label).trim(); if (!s0 || s0 === "\u200b") return null; const lines = s0.split("\n"), words = s0.split(/\s+/), longest = Math.max.apply(null, words.map(w => w.length)), ch = lines.length > 1 ? Math.max.apply(null, lines.map(l => l.length)) : Math.max(longest, Math.ceil(s0.length / 2)); return Math.ceil(ch * 6.8 + 36) + "px"; };
   function tools0(comp, blocks, o) {
     o = o || {}; const s = comp.state;
+    if (!comp._hmL && typeof document !== "undefined") { comp._hmL = true; const shut = () => { if (comp.state.hmenu) comp.setState({ hmenu: null }); };
+      document.addEventListener("pointerdown", (e) => { if (!comp.state.hmenu) return; const el = e.target && e.target.closest ? e.target : null; if (el && (el.closest('mat-menu[role="menu"], [classname~="am"], .am') || el.closest('[aria-haspopup="menu"]'))) return; shut(); }, true);
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") shut(); }); }
     const key = (c) => { if (!c) return [2, ""]; const x = c.v != null && c.v !== "" ? c.v : c.chip != null ? c.chip : c.stack && c.stack.length ? (c.stack[0].v || c.stack[0].chip || (c.stack[0].ed && c.stack[0].ed.label) || "") : c.check ? (c.check.on ? "1" : "0") : c.btns && c.btns[0] ? c.btns[0].label : ""; const t = String(x).replace(/\u2011/g, "-").replace(/\u00a0/g, " ").trim(); if (!t || t === "—") return [2, ""]; const d = /^(\d\d)-(\d\d)-(\d{4})(?:\s+(\d\d):(\d\d))?/.exec(t); if (d) return [0, Number(d[3] + d[2] + d[1] + (d[4] || "00") + (d[5] || "00"))]; if (/^[−-]?\$?[\d,]+(\.\d+)?$/.test(t)) return [0, parseFloat(t.replace(/[^0-9.\-−]/g, "").replace("−", "-"))]; return [1, t.toLowerCase()]; };
     return blocks.map(b => {
       if (!b.isCard) return b; const ti = (b.parts || []).findIndex(p => p.isTable); if (ti < 0) return b; const bare = !!(b.noTools || b.noMenu);
