@@ -872,3 +872,6 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 .app-layer table.ot td[mat-cell]:is(.shr,[classname~="shr"]):has(>.cl>mat-chip) .cl>:not(mat-chip){width:0;min-width:100%}
 /* B36: a figure never breaks over two lines */
 .app-layer table.ot :is(td,th):is(.num,[classname~="num"]),.app-layer table.ot td:is(.num,[classname~="num"]) :is(.cl>span,.cl>a,.stk>span){white-space:nowrap!important}
+/* B39: the questionnaire's Notes column holds 240px; a long note is cut with an ellipsis and shown in full on hover */
+.app-layer table.ot :is(th,td):is(.ntc,[classname~="ntc"]){min-width:240px;max-width:240px;width:240px}
+.app-layer table.ot td:is(.ntc,[classname~="ntc"]) .cl>*{display:block!important;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap!important}
