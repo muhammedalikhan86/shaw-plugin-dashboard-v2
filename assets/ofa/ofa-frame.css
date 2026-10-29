@@ -971,3 +971,15 @@ mat-card[data-fix="dense"] .pp .fg{gap:8px 16px!important}
 .app-layer mat-chip:is([data-tone="lv1"],[data-tone="att"],[data-tone="lv2"]){color:#000000!important}
 .app-layer mat-chip{text-transform:uppercase!important}
 .app-layer mat-chip{font-weight:500!important}
+/* Selection pinned left, Actions pinned right (as mat-table's sticky and stickyEnd columns) */
+.app-layer table.ot[data-frz*="l"] :is(th,td):first-child{position:sticky;left:0;z-index:2;box-sizing:border-box;width:48px;min-width:48px;max-width:48px;padding-left:16px!important;padding-right:0!important;background-color:var(--mat-sys-surface);box-shadow:inset -1px 0 0 var(--mat-sys-outline-variant)}
+.app-layer table.ot[data-frz*="r"] :is(th,td):last-child{position:sticky;right:0;z-index:2;box-sizing:border-box;width:56px;min-width:56px;max-width:56px;padding-left:8px!important;padding-right:8px!important;background-color:var(--mat-sys-surface);box-shadow:inset 1px 0 0 var(--mat-sys-outline-variant)}
+.app-layer table.ot[data-frz] thead th:is(:first-child,:last-child){z-index:4}
+.app-layer table.ot[data-frz] tbody tr:nth-child(even)>td:is(:first-child,:last-child){background-color:inherit}
+.app-layer table.ot[data-frz] td:has(mat-menu),.app-layer table.ot[data-frz] td:has([role="menu"]){z-index:60!important}
+.app-layer table.ot[data-frz*="l"] :is(th,td):first-child{width:56px!important;min-width:56px!important;max-width:56px!important;padding-left:8px!important;padding-right:8px!important}
+.app-layer table.ot[data-frz*="l"] td:first-child .cl{justify-content:center!important}
+/* A tick box sits centred in its column */
+.app-layer table.ot td .cl:has(>mat-checkbox){justify-content:center!important;align-items:center}
+.app-layer table.ot td .cl>mat-checkbox{margin-left:auto!important;margin-right:auto!important}
+.app-layer table.ot th:has(mat-checkbox){text-align:center}
