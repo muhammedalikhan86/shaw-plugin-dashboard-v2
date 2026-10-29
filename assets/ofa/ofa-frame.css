@@ -697,13 +697,13 @@ mat-card[data-fix="true"]>.nlw>.nlbox{flex:none;margin-top:auto}
 
 .page:has(>.g24[data-fill="s3"]){height:100%;min-height:0;box-sizing:border-box}
 .g24[data-fill="s3"]{flex:1;min-height:0;grid-template-rows:minmax(300px,1fr) minmax(300px,1fr) max-content;align-items:stretch}
-.g24[data-fill="s3"]>div:not(:last-child){min-height:0;align-self:stretch;position:relative}
-.g24[data-fill="s3"]>div:not(:last-child)>mat-card{position:absolute;inset:0;height:auto!important;min-height:0;display:flex;flex-direction:column;overflow:hidden}
-.g24[data-fill="s3"]>div:not(:last-child)>mat-card>:not(.tsc){flex:none;overflow:visible}
-.g24[data-fill="s3"]>div:not(:last-child)>mat-card>.tsc{flex:1 1 auto;min-height:0;overflow:auto}
-.g24[data-fill="s3"]>div:not(:last-child)>mat-card>.tsc{max-height:none!important;height:auto!important}
-.g24[data-fill="s3"]>div:not(:last-child)>mat-card>.tsc table{min-width:0}
-.g24[data-fill="s3"]>div:not(:last-child)>mat-card:not(:has(>.tsc)){overflow-y:auto}
+.g24[data-fill="s3"]>div:nth-child(-n+4){min-height:0;align-self:stretch;position:relative}
+.g24[data-fill="s3"]>div:nth-child(-n+4)>mat-card{position:absolute;inset:0;height:auto!important;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.g24[data-fill="s3"]>div:nth-child(-n+4)>mat-card>:not(.tsc){flex:none;overflow:visible}
+.g24[data-fill="s3"]>div:nth-child(-n+4)>mat-card>.tsc{flex:1 1 auto;min-height:0;overflow:auto}
+.g24[data-fill="s3"]>div:nth-child(-n+4)>mat-card>.tsc{max-height:none!important;height:auto!important}
+.g24[data-fill="s3"]>div:nth-child(-n+4)>mat-card>.tsc table{min-width:0}
+.g24[data-fill="s3"]>div:nth-child(-n+4)>mat-card:not(:has(>.tsc)){overflow-y:auto}
 
 /* S51 / W18 · the Renewal tracker, Material expandable rows */
 table.ot:has(tr:is(.rtn,[classname~="rtn"])) > thead th[mat-header-cell]{height:56px;padding:0 16px;vertical-align:middle;border-bottom:1px solid var(--mat-sys-outline-variant)}
@@ -875,3 +875,92 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 /* B39: the questionnaire's Notes column holds 240px; a long note is cut with an ellipsis and shown in full on hover */
 .app-layer table.ot :is(th,td):is(.ntc,[classname~="ntc"]){min-width:240px;max-width:240px;width:240px}
 .app-layer table.ot td:is(.ntc,[classname~="ntc"]) .cl>*{display:block!important;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap!important}
+/* P46 / V11 / P30: master status and OFA status chips */
+.app-layer mat-chip[data-tone="msn"]{background:#FFFFFF!important;border-color:#8A6A00!important;color:#8A6A00!important}
+.app-layer mat-chip[data-tone="mst"]{background:#FFFFFF!important;border-color:#A50021!important;color:#A50021!important}
+/* A dialog that can grow (Add an arrangement by hand): fits the window; title and buttons stay, the middle scrolls */
+mat-dialog:is(.dlg,[classname~="dlg"]):is(.fit,[classname~="fit"]){max-height:calc(100vh - 48px)!important}
+mat-dialog:is(.fit,[classname~="fit"])>mat-dialog-content{overscroll-behavior:contain;border-top:1px solid var(--mat-sys-outline-variant);border-bottom:1px solid var(--mat-sys-outline-variant)}
+/* Add an arrangement by hand: wide; S-Account | SOA, then a Details panel (account, a scrolling list of platform accounts, Master status | commencement date), then Notes with attach and Add */
+mat-dialog:is(.hbl,[classname~="hbl"]){display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;column-gap:0;align-content:start;overflow-y:auto!important;width:min(1040px,100%)!important}
+mat-dialog:is(.hbl,[classname~="hbl"])>:is(span,div):not(mat-dialog-content){grid-column:1 / -1}
+mat-dialog:is(.hbl,[classname~="hbl"])>mat-dialog-content{display:contents!important}
+mat-dialog:is(.hbl,[classname~="hbl"])>mat-dialog-content>*{grid-column:1 / -1;min-width:0;box-sizing:border-box;margin:0 24px}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="sa"]{grid-row:3;grid-column:1;margin:16px 8px 16px 24px}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="soa"]{grid-row:3;grid-column:2 / -1;margin:16px 24px 16px 8px}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="det0"]{grid-row:4;border:1px solid var(--mat-sys-outline-variant);border-radius:6px;padding:16px;margin-bottom:16px}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="det1"]{grid-row:4;border:1px solid var(--mat-sys-outline-variant);border-bottom:0;border-radius:6px 6px 0 0;padding:16px 16px 12px}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="det2"]{grid-row:5;grid-column:1;margin:0 0 16px 24px;padding:4px 8px 16px 16px;border:1px solid var(--mat-sys-outline-variant);border-top:0;border-right:0;border-radius:0 0 0 6px;display:block!important}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="det3"]{grid-row:5;grid-column:2 / -1;margin:0 24px 16px 0;padding:4px 16px 16px 8px;border:1px solid var(--mat-sys-outline-variant);border-top:0;border-left:0;border-radius:0 0 6px 0}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="note"]{grid-row:6;grid-column:1 / 3;margin:0 8px 20px 24px;display:flex!important;flex-direction:row!important;flex-wrap:wrap;align-items:center;gap:4px 8px}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="note"]>mat-form-field{flex:1 1 0;min-width:0}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="note"] textarea{box-sizing:border-box!important;min-height:72px!important;height:72px!important;resize:none!important}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="note"]{align-items:flex-start!important}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="note"]>mat-form-field{margin:0!important}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="note"]>div{flex:none}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="note"]>div>.hint{display:none}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="note"]>:is(.hint,sc-if){flex-basis:100%}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="note"]>div:last-child:not(:nth-child(2)){flex-basis:100%}
+mat-dialog:is(.hbl,[classname~="hbl"])>mat-dialog-actions{grid-row:6;grid-column:3;align-self:start;display:flex!important;flex-direction:column-reverse!important;align-items:stretch!important;justify-content:flex-start!important;gap:8px!important;padding:0 24px 20px 0!important}
+mat-dialog:is(.hbl,[classname~="hbl"])>mat-dialog-actions>button{margin:0!important;height:32px}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="note"]>div:not(:last-child),mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="note"]>div:nth-child(2){align-self:center}
+mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="note"]>mat-form-field+div{height:72px;display:flex!important;align-items:center}
+/* Notes line: Notes | attach + Add, with Cancel under the two */
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]){grid-template-columns:minmax(0,1fr) minmax(0,1fr) 40px auto!important}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]) div[data-a="note"]{display:contents!important}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]) div[data-a="note"]>mat-form-field{grid-row:6 / span 2;grid-column:1 / 3;margin:0 8px 0 24px!important;height:72px}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]) div[data-a="note"] mat-form-field textarea.moft{height:72px!important;min-height:72px!important;max-height:72px!important;resize:none!important}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]) div[data-a="note"]>div:nth-of-type(1){grid-row:6;grid-column:3;margin:0!important;height:32px;display:flex!important;align-items:center;justify-content:center;align-self:start}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]) div[data-a="note"]>div:nth-of-type(1)>label{width:32px!important;height:32px!important}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]) div[data-a="note"]>div:nth-of-type(1)>.hint{display:none}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]) div[data-a="note"]>:not(mat-form-field):not(div:nth-of-type(1)){grid-row:8;grid-column:1 / -1;margin:8px 24px 0!important}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"])>mat-dialog-actions{display:contents!important}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"])>mat-dialog-actions>button:last-of-type{grid-row:6;grid-column:4;margin:0 24px 0 4px!important;align-self:start}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"])>mat-dialog-actions>button:first-of-type{grid-row:7;grid-column:3 / 5;margin:8px 24px 0 0!important;align-self:start}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"])::after{content:"";grid-row:9;grid-column:1 / -1;height:20px}
+/* Master status drawn as the outlined date field; both sit on the panel's foot */
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="det2"]{grid-row:5!important;grid-column:1!important;margin:0 0 0 24px!important;padding:12px 8px 16px 16px!important;border:1px solid var(--mat-sys-outline-variant)!important;border-top:0!important;border-right:0!important;border-radius:0 0 0 6px!important;align-self:stretch;display:flex!important;flex-direction:column;justify-content:flex-end}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="det3"]{grid-row:5!important;align-self:stretch;margin-bottom:0!important;padding-top:12px!important;display:flex!important;flex-direction:column;justify-content:flex-end}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]) [data-a="det4"]{grid-row:6;grid-column:1 / -1;margin:0 24px 16px!important;padding:0 16px 16px!important;border:1px solid var(--mat-sys-outline-variant);border-top:0;border-radius:0 0 6px 6px}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]):has([data-a="det4"]) :is([data-a="det2"],[data-a="det3"]){border-bottom:0!important;border-radius:0!important}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]):not(:has([data-a="det4"])) :is([data-a="det2"],[data-a="det3"]){margin-bottom:16px!important}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]) div[data-a="note"]>mat-form-field{grid-row:7 / span 2!important}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]) div[data-a="note"]>div:nth-of-type(1){grid-row:7!important}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"]) div[data-a="note"]>:not(mat-form-field):not(div:nth-of-type(1)){grid-row:9!important}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"])>mat-dialog-actions>button:last-of-type{grid-row:7!important}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"])>mat-dialog-actions>button:first-of-type{grid-row:8!important}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"])::after{grid-row:10!important}
+/* The platform accounts list scrolls; its lines never squeeze */
+mat-dialog [role="list"][aria-label="Platform accounts this arrangement covers"]>*{flex-shrink:0!important}
+/* P55: Add comes first in the source, Cancel after; places unchanged */
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"])>mat-dialog-actions>button:first-of-type{grid-row:7!important;grid-column:4!important;margin:0 24px 0 4px!important;align-self:start}
+.app-layer mat-dialog:is(.hbl,[classname~="hbl"])>mat-dialog-actions>button:last-of-type{grid-row:8!important;grid-column:3 / 5!important;margin:8px 24px 0 0!important;align-self:start}
+/* S10: the follow-up ladder in the severity colours of days to the Expiry Date */
+.app-layer mat-chip[data-tone="lv0"]{background:#FFFFFF!important;border:1px solid #337722!important;color:#337722!important}
+.app-layer mat-chip[data-tone="lv1"]{background:#FFFFFF!important;border:1px solid #8A6A00!important;color:#8A6A00!important}
+.app-layer mat-chip[data-tone="lv2"]{background:#FFFFFF!important;border:1px solid #E84810!important;color:#C13A0D!important}
+.app-layer mat-chip[data-tone="lv3"]{background:#FFFFFF!important;border:1px solid #A50021!important;color:#A50021!important}
+/* Settings: the first two rows fill, every card after them keeps its content height and the page scrolls */
+.page:has(>.g24[data-fill="s3"]){height:auto!important;min-height:100%}
+.g24[data-fill="s3"]{min-height:auto!important;grid-template-rows:minmax(300px,1fr) minmax(240px,max-content)!important;grid-auto-rows:max-content!important}
+/* Settings: a card with no table (Reporting Schedule) shows in full, no scroller; its row grows to fit and the card beside it fills the row */
+.g24[data-fill="s3"]>div:nth-child(-n+4):has(>mat-card:not(:has(>.tsc))){min-height:auto!important}
+.g24[data-fill="s3"]>div:nth-child(-n+4)>mat-card:not(:has(>.tsc)){position:relative!important;inset:auto!important;height:100%!important;overflow:visible!important}
+/* How long a row stays: tighter padding */
+mat-card[data-fix="dense"] .pp{padding:0 20px 8px!important}
+mat-card[data-fix="dense"] .pp .fg{gap:8px 16px!important}
+/* One red chip look everywhere: white base, red text and outline, as on the chip sheet */
+.app-layer mat-chip:is([data-tone="neg"],[data-tone="err"],[data-tone="mst"],[data-tone="lv3"]){background:#FFFFFF!important;border:1px solid #A50021!important;color:#A50021!important}
+/* Dialog fields: the label sits on the field's top-left border, as on the outlined fields (Notes, Master status) */
+.app-layer mat-dialog .fgf:has(>.lb+mat-form-field),.app-layer mat-dialog .fgf:has(>.lb+div>mat-form-field){position:relative;padding-top:0}
+.app-layer mat-dialog .fgf>.lb:is(:has(+mat-form-field),:has(+div>mat-form-field)){position:absolute!important;top:-8px;left:12px;z-index:2;padding:0 4px;background:var(--mat-sys-surface);font:400 12px/16px var(--f)!important;letter-spacing:0!important;text-transform:none!important;color:var(--mat-sys-on-surface-variant)!important;max-width:calc(100% - 24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.app-layer mat-dialog .fg{row-gap:24px!important}
+.app-layer table.ot thead[data-nohead="true"]{display:none}
+/* Brand palette for severity (all three pages): teal, lime, amber, orange, navy. Chips are filled so their words read on every colour */
+.app-layer mat-chip:is([data-tone="pos"],[data-tone="lv0"]){background:#007B84!important;border:1px solid #007B84!important;color:#FFFFFF!important}
+.app-layer mat-chip:is([data-tone="msn"],[data-tone="lv1"]){background:#A9B819!important;border:1px solid #A9B819!important;color:#000000!important}
+.app-layer mat-chip:is([data-tone="att"],[data-tone="lv2"]){background:#EE7601!important;border:1px solid #EE7601!important;color:#000000!important}
+.app-layer mat-chip:is([data-tone="neg"],[data-tone="err"],[data-tone="mst"],[data-tone="lv3"]){background:#E84810!important;border:1px solid #E84810!important;color:#000000!important}
+/* White text on every chip */
+.app-layer mat-chip:is([data-tone="pos"],[data-tone="lv0"],[data-tone="msn"],[data-tone="lv1"],[data-tone="att"],[data-tone="lv2"],[data-tone="neg"],[data-tone="err"],[data-tone="mst"],[data-tone="lv3"]){color:#FFFFFF!important}
+.app-layer mat-chip:is([data-tone="q"],[data-tone=""],:not([data-tone])){background:#404040!important;border:1px solid #404040!important;color:#FFFFFF!important}
