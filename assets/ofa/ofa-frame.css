@@ -697,13 +697,13 @@ mat-card[data-fix="true"]>.nlw>.nlbox{flex:none;margin-top:auto}
 
 .page:has(>.g24[data-fill="s3"]){height:100%;min-height:0;box-sizing:border-box}
 .g24[data-fill="s3"]{flex:1;min-height:0;grid-template-rows:minmax(300px,1fr) minmax(300px,1fr) max-content;align-items:stretch}
-.g24[data-fill="s3"]>div:nth-child(-n+4){min-height:0;align-self:stretch;position:relative}
-.g24[data-fill="s3"]>div:nth-child(-n+4)>mat-card{position:absolute;inset:0;height:auto!important;min-height:0;display:flex;flex-direction:column;overflow:hidden}
-.g24[data-fill="s3"]>div:nth-child(-n+4)>mat-card>:not(.tsc){flex:none;overflow:visible}
-.g24[data-fill="s3"]>div:nth-child(-n+4)>mat-card>.tsc{flex:1 1 auto;min-height:0;overflow:auto}
-.g24[data-fill="s3"]>div:nth-child(-n+4)>mat-card>.tsc{max-height:none!important;height:auto!important}
-.g24[data-fill="s3"]>div:nth-child(-n+4)>mat-card>.tsc table{min-width:0}
-.g24[data-fill="s3"]>div:nth-child(-n+4)>mat-card:not(:has(>.tsc)){overflow-y:auto}
+.g24[data-fill="s3"]>div:nth-child(-n+3){min-height:0;align-self:stretch;position:relative}
+.g24[data-fill="s3"]>div:nth-child(-n+3)>mat-card{position:absolute;inset:0;height:auto!important;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.g24[data-fill="s3"]>div:nth-child(-n+3)>mat-card>:not(.tsc){flex:none;overflow:visible}
+.g24[data-fill="s3"]>div:nth-child(-n+3)>mat-card>.tsc{flex:1 1 auto;min-height:0;overflow:auto}
+.g24[data-fill="s3"]>div:nth-child(-n+3)>mat-card>.tsc{max-height:none!important;height:auto!important}
+.g24[data-fill="s3"]>div:nth-child(-n+3)>mat-card>.tsc table{min-width:0}
+.g24[data-fill="s3"]>div:nth-child(-n+3)>mat-card:not(:has(>.tsc)){overflow-y:auto}
 
 /* S51 / W18 · the Renewal tracker, Material expandable rows */
 table.ot:has(tr:is(.rtn,[classname~="rtn"])) > thead th[mat-header-cell]{height:56px;padding:0 16px;vertical-align:middle;border-bottom:1px solid var(--mat-sys-outline-variant)}
@@ -944,8 +944,8 @@ mat-dialog [role="list"][aria-label="Platform accounts this arrangement covers"]
 .page:has(>.g24[data-fill="s3"]){height:auto!important;min-height:100%}
 .g24[data-fill="s3"]{min-height:auto!important;grid-template-rows:minmax(300px,1fr) minmax(240px,max-content)!important;grid-auto-rows:max-content!important}
 /* Settings: a card with no table (Reporting Schedule) shows in full, no scroller; its row grows to fit and the card beside it fills the row */
-.g24[data-fill="s3"]>div:nth-child(-n+4):has(>mat-card:not(:has(>.tsc))){min-height:auto!important}
-.g24[data-fill="s3"]>div:nth-child(-n+4)>mat-card:not(:has(>.tsc)){position:relative!important;inset:auto!important;height:100%!important;overflow:visible!important}
+.g24[data-fill="s3"]>div:nth-child(-n+3):has(>mat-card:not(:has(>.tsc))){min-height:auto!important}
+.g24[data-fill="s3"]>div:nth-child(-n+3)>mat-card:not(:has(>.tsc)){position:relative!important;inset:auto!important;height:100%!important;overflow:visible!important}
 /* How long a row stays: tighter padding */
 mat-card[data-fix="dense"] .pp{padding:0 20px 8px!important}
 mat-card[data-fix="dense"] .pp .fg{gap:8px 16px!important}
@@ -983,3 +983,22 @@ mat-card[data-fix="dense"] .pp .fg{gap:8px 16px!important}
 .app-layer table.ot td .cl:has(>mat-checkbox){justify-content:center!important;align-items:center}
 .app-layer table.ot td .cl>mat-checkbox{margin-left:auto!important;margin-right:auto!important}
 .app-layer table.ot th:has(mat-checkbox){text-align:center}
+/* OFA Dashboard: every drop-down in a card has its label on the top-left border too */
+.app-layer[data-page="ps"] .fgf:is(:has(>.lb+mat-form-field),:has(>.lb+div>mat-form-field)){position:relative;padding-top:0}
+.app-layer[data-page="ps"] .fgf>.lb:is(:has(+mat-form-field),:has(+div>mat-form-field)){position:absolute!important;top:-8px;left:12px;z-index:2;padding:0 4px;background:var(--mat-sys-surface);font:400 12px/16px var(--f)!important;letter-spacing:0!important;text-transform:none!important;color:var(--mat-sys-on-surface-variant)!important;max-width:calc(100% - 24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.app-layer[data-page="ps"] .pp .fg{row-gap:24px!important;padding-top:8px}
+/* Settings: CAT 2 card holds about two advisors and scrolls inside; Insurance takes the rest of the column */
+.g24[data-fill="s3"]{grid-template-rows:232px minmax(300px,1fr)!important}
+.g24[data-fill="s3"]>div:nth-child(2)>mat-card .pp{flex:1 1 auto;min-height:0;overflow-y:auto}
+/* How long a row stays: half width, fields two by two */
+mat-card[data-fix="dense"] .pp .fg{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+mat-card[data-fix="dense"] .pp .fg>*{grid-column:auto!important}
+/* Settings fills the window: the bottom row of cards sits on the page's foot, both cards the same height */
+.page:has(>.g24[data-fill="s3"]){height:100%!important;min-height:0!important;display:flex;flex-direction:column;overflow-y:auto}
+.g24[data-fill="s3"]{flex:1 0 auto!important;grid-template-rows:232px minmax(300px,1fr) auto!important;align-content:stretch}
+.g24[data-fill="s3"]>div:nth-child(n+4){align-self:stretch}
+.g24[data-fill="s3"]>div:nth-child(n+4)>mat-card{height:100%!important;box-sizing:border-box}
+/* Reporting Configurations: notes at twice their height; the recipients table scrolls in what is left */
+.g24[data-fill="s3"]>div:nth-child(1)>mat-card .pp.nlw{flex:none;height:300px;min-height:300px;max-height:300px;display:flex;flex-direction:column}
+.g24[data-fill="s3"]>div:nth-child(1)>mat-card .pp.nlw>mat-list{flex:1 1 auto;min-height:0;overflow-y:auto}
+.g24[data-fill="s3"]>div:nth-child(1)>mat-card .pp.nlw .nle{min-height:120px}
