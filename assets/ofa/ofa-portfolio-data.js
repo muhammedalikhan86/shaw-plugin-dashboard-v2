@@ -20,7 +20,7 @@ var INS0 = ["AST", "BTLC", "ENC", "NEOS", "TAL", "GEN"], INSSEED = { add: [["LP"
 var PH = { NSW: ["05-10-2026"], QLD: ["05-10-2026"], SA: ["05-10-2026"], VIC: [] };
 var HOL = { NSW: "Labour Day, 05-10-2026, is a New South Wales public holiday and is not counted, so this deadline is a day later than Victoria's.", QLD: "The King's Birthday, 05-10-2026, is a Queensland public holiday and is not counted, so this deadline is a day later than Victoria's.", SA: "Labour Day, 05-10-2026, is a South Australian public holiday and is not counted, so this deadline is a day later than Victoria's." };
 var ANS = { wait: ["WAITING", ""], quar: ["QUARANTINED", "neg"], sub: ["WITH US", "att"], back: ["SENT BACK", ""], acc: ["ACCEPTED", "q"], off: ["OFF THE RUN", "q"] };
-var STEP = { 0: "Before the first follow-up", 1: "With the advisor", 2: "With the State Manager", 3: "With Compliance and the OFA Team" };
+var STEP = { 0: "BEFORE FOLLOW-UP", 1: "ADVISOR", 2: "STATE MANAGER", 3: "COMPLIANCE / OFA TEAM" };
 var FUW = ["One month before", "Three weeks before", "Two weeks before", "One week before", "On the Expiry Date"];
 var CYC = { Oct: "October 2026", Sep: "September 2026", Aug: "August 2026", Jul: "July 2026", Jun: "June 2026", May: "May 2026" };
 var Q1 = ["Portfolio Administration Service (PAS)", "External Platform/Shaw Managed Accounts", "Ongoing monitoring and review of your investments", "Making investment recommendations", "Reasonable time spent discussing investment and market queries/matters", "Provision of Shaw's company, sector and market research"];

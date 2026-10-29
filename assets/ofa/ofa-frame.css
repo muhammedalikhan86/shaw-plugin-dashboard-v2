@@ -966,3 +966,8 @@ mat-card[data-fix="dense"] .pp .fg{gap:8px 16px!important}
 .app-layer mat-chip:is([data-tone="q"],[data-tone=""],:not([data-tone])){background:#404040!important;border:1px solid #404040!important;color:#FFFFFF!important}
 /* No OFA in navy */
 .app-layer mat-chip[data-tone="msn"]{background:#1F225E!important;border:1px solid #1F225E!important;color:#FFFFFF!important}
+/* Chip text, as settled on the chip sheet: bold, 10px either side, .06em tracking, one line; black on lime and amber, white on the rest */
+.app-layer mat-chip{font-weight:700!important;padding-left:10px!important;padding-right:10px!important;letter-spacing:.06em!important;white-space:nowrap!important}
+.app-layer mat-chip:is([data-tone="lv1"],[data-tone="att"],[data-tone="lv2"]){color:#000000!important}
+.app-layer mat-chip{text-transform:uppercase!important}
+.app-layer mat-chip{font-weight:500!important}
