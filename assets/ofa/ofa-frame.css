@@ -1002,3 +1002,24 @@ mat-card[data-fix="dense"] .pp .fg>*{grid-column:auto!important}
 .g24[data-fill="s3"]>div:nth-child(1)>mat-card .pp.nlw{flex:none;height:300px;min-height:300px;max-height:300px;display:flex;flex-direction:column}
 .g24[data-fill="s3"]>div:nth-child(1)>mat-card .pp.nlw>mat-list{flex:1 1 auto;min-height:0;overflow-y:auto}
 .g24[data-fill="s3"]>div:nth-child(1)>mat-card .pp.nlw .nle{min-height:120px}
+/* Filter the list: at most three fields to a row (a date range takes two) */
+.app-layer mat-dialog:is(.f3,[classname~="f3"]){width:min(720px,calc(100vw - 48px))!important;max-width:min(720px,calc(100vw - 48px))!important}
+.app-layer mat-dialog:is(.f3,[classname~="f3"]) .fg{grid-template-columns:repeat(6,minmax(0,1fr))!important;column-gap:16px}
+/* Filter dialogs keep their height cap and scroll inside, even when marked ov (option panels are fixed overlays and still escape) */
+mat-dialog:is(.dlg,[classname~="dlg"]):is(.f3,[classname~="f3"]){max-height:calc(100vh - 48px)!important;display:flex!important;flex-direction:column;overflow:hidden!important}
+mat-dialog:is(.dlg,[classname~="dlg"]):is(.f3,[classname~="f3"])>mat-dialog-content{flex:1 1 auto;min-height:0;overflow-y:auto!important}
+mat-dialog:is(.dlg,[classname~="dlg"]):is(.f3,[classname~="f3"])>mat-dialog-actions{flex:none}
+/* P60 / P40 / P35: every field's label sits on its own outline (top-left), never as a caps caption above the box */
+.app-layer mat-form-field:is(.olf,[classname~="olf"]){position:relative;display:block;margin-top:8px}
+.app-layer mat-form-field:is(.olf,[classname~="olf"])>.mofl{position:absolute;top:-8px;left:12px;z-index:2;padding:0 4px;background:linear-gradient(to bottom,transparent 50%,var(--mat-sys-surface) 50%);font:400 12px/16px var(--f);letter-spacing:0;text-transform:none;color:var(--mat-sys-on-surface-variant);white-space:nowrap;pointer-events:none}
+.app-layer mat-form-field:is(.olf,[classname~="olf"])>.sel{box-sizing:border-box;height:48px;border:1px solid var(--mat-sys-outline)!important;border-radius:4px;background:var(--mat-sys-surface)!important}
+.app-layer mat-form-field:is(.olf,[classname~="olf"])>.sel:hover{border-color:var(--mat-sys-on-surface)!important}
+.app-layer mat-form-field:is(.olf,[classname~="olf"]):focus-within>.sel{border:2px solid var(--mat-sys-primary)!important}
+.app-layer mat-form-field:is(.olf,[classname~="olf"]):focus-within>.mofl{color:var(--mat-sys-primary)}
+.app-layer .ctl:has(>mat-form-field:is(.olf,[classname~="olf"])){gap:0}
+/* The same for dialog and card fields on every page */
+.app-layer .fgf:is(:has(>.lb+mat-form-field),:has(>.lb+div>mat-form-field)){position:relative;padding-top:0}
+.app-layer .fgf>.lb:is(:has(+mat-form-field),:has(+div>mat-form-field)){position:absolute!important;top:-8px;left:12px;z-index:2;padding:0 4px;background:linear-gradient(to bottom,transparent 50%,var(--mat-sys-surface) 50%)!important;font:400 12px/16px var(--f)!important;letter-spacing:0!important;text-transform:none!important;color:var(--mat-sys-on-surface-variant)!important;max-width:calc(100% - 24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.app-layer .fg:has(>.fgf>.lb+mat-form-field){row-gap:24px!important;padding-top:8px}
+.app-layer .ctl:has(>.lb+:is(.sel,mat-form-field)){position:relative;gap:0;padding-top:8px}
+.app-layer .ctl>.lb:has(+:is(.sel,mat-form-field)){position:absolute!important;top:0;left:12px;z-index:2;padding:0 4px;background:linear-gradient(to bottom,transparent 50%,var(--mat-sys-surface) 50%);font:400 12px/16px var(--f)!important;letter-spacing:0!important;text-transform:none!important;color:var(--mat-sys-on-surface-variant)!important;white-space:nowrap}
