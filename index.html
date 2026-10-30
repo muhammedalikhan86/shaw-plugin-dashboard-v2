@@ -50,7 +50,6 @@ h2{font-weight:400;font-size:20px;line-height:28px;margin:40px 0 12px}
 <a href="compliance.html"><strong>Compliance Dashboard</strong><span>For Compliance.</span><em>Open</em></a>
 </div>
 <p class="note">These are designs, not the finished product. Wording and layout may still change.</p>
-<p class="note" id="updated" hidden>Last updated: <time id="updated-time"></time></p>
 <section id="history" hidden>
 <h2>Version history</h2>
 <div class="versions">
@@ -75,10 +74,6 @@ h2{font-weight:400;font-size:20px;line-height:28px;margin:40px 0 12px}
     .then(function(r){return r.ok?r.json():Promise.reject();})
     .then(function(list){
       if(!list.length)return;
-      var t=document.getElementById("updated-time");
-      t.dateTime=new Date(list[0].commit.committer.date).toISOString();
-      t.textContent=when(list[0].commit.committer.date);
-      document.getElementById("updated").hidden=false;
       var body=document.getElementById("versions");
       list.forEach(function(c){
         var tr=el("tr"),a=el("a"),code=el("code",c.sha.slice(0,7)),td=el("td"),ul=el("ul"),tm=el("time",when(c.commit.committer.date));
