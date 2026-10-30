@@ -284,7 +284,6 @@ mat-spinner {
 @keyframes mat-spin { to { transform: rotate(360deg) } }
 
 
-
 /* =====================================================================================
    APPROVED APP LAYER · 2026-10-14 — component sizes at density −2, as built in the app.
    ===================================================================================== */
@@ -346,3 +345,8 @@ mat-snack-bar { width: 344px; min-height: 48px; background: #000000; color: #FFF
 mat-snack-bar button[matButton] { color: var(--mat-sys-primary-fixed-dim) }
 mat-toolbar { height: 56px }
 
+
+/* Disabled toggle (on or off): grey, not faded orange. */
+mat-slide-toggle[disabled] { cursor: default; pointer-events: none }
+mat-slide-toggle[disabled] > .track { background: var(--mat-sys-surface-container-highest) !important; border-color: var(--mat-sys-surface-container-highest) !important }
+mat-slide-toggle[disabled] > .track > .thumb, mat-slide-toggle[disabled] > .track::after { background: var(--mat-sys-surface) !important; color: var(--mat-sys-outline) !important }

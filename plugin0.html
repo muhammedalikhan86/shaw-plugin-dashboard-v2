@@ -14,12 +14,14 @@
 <link rel="stylesheet" href="assets/ds/material-symbols.css">
 <link rel="stylesheet" href="assets/ds/colors.css">
 <link rel="stylesheet" href="assets/ds/angular-material.css">
+<link rel="stylesheet" href="assets/ds/app.css">
+<script src="assets/vendor/echarts.min.js"></script>
 <style>
 :root{--f:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 --mat-sys-display-small:400 28px/36px var(--f);--mat-sys-headline-medium:400 20px/28px var(--f);--mat-sys-headline-small:400 18px/24px var(--f);
---mat-sys-title-large:400 16px/24px var(--f);--mat-sys-title-medium:700 14px/20px var(--f);--mat-sys-title-small:700 12px/16px var(--f);
---mat-sys-body-large:400 14px/20px var(--f);--mat-sys-body-medium:400 13px/20px var(--f);--mat-sys-body-small:400 11px/16px var(--f);
---mat-sys-label-large:700 13px/20px var(--f);--mat-sys-label-medium:700 11px/16px var(--f);--mat-sys-label-small:700 10px/14px var(--f)}
+--mat-sys-title-large:400 16px/24px var(--f);--mat-sys-title-medium:500 14px/20px var(--f);--mat-sys-title-small:500 12px/18px var(--f);
+--mat-sys-body-large:400 14px/20px var(--f);--mat-sys-body-medium:400 13px/18px var(--f);--mat-sys-body-small:400 11px/16px var(--f);
+--mat-sys-label-large:500 13px/18px var(--f);--mat-sys-label-medium:500 11px/16px var(--f);--mat-sys-label-small:500 10px/14px var(--f)}
 html,body{margin:0;height:100%;background:var(--mat-sys-surface-container);font:var(--mat-sys-body-medium);color:var(--mat-sys-on-surface)}
 *{box-sizing:border-box}
 a{color:var(--mat-sys-on-surface);text-decoration:none}a:hover{color:var(--mat-sys-primary-fixed-dim)}
@@ -27,16 +29,16 @@ mat-icon{font-family:"Material Symbols Outlined";font-variation-settings:"FILL" 
 button[matIconButton] mat-icon{font-size:24px;width:24px;height:24px}
 button[matIconButton].ib24{width:24px;height:24px}
 button[matIconButton].ib24 mat-icon{font-size:16px;width:16px;height:16px}
-button[matButton],a[matButton]{height:32px;padding:0 24px;border-radius:9999px;font:700 13px/20px var(--f);letter-spacing:.08em;text-transform:uppercase}
+button[matButton],a[matButton]{height:32px;padding:0 24px;border-radius:9999px;font:700 13px/18px var(--f);letter-spacing:.06em;text-transform:uppercase}
 button[matButton] mat-icon,a[matButton] mat-icon{font-size:18px;width:18px;height:18px}
 button[matButton="tonal"]{text-transform:none;letter-spacing:0;font-weight:500}
 button[matButton="outlined"],a[matButton="outlined"]{color:var(--mat-sys-primary);border-color:var(--mat-sys-outline)}
 button[matButton="text"],button[matButton=""]{padding:0 12px;color:var(--mat-sys-primary)}
 button[matButton][disabled]{color:var(--mat-sys-outline)}
 button[matMiniFab]{border-radius:12px}
-button[matFab]{border-radius:16px;font:700 13px/20px var(--f);letter-spacing:.04em}
+button[matFab]{border-radius:16px;font:500 13px/18px var(--f);letter-spacing:.04em}
 mat-button-toggle-group{border-radius:9999px}
-mat-button-toggle button{height:40px;padding:0 16px;font:700 13px/20px var(--f);letter-spacing:.02em;text-transform:uppercase}
+mat-button-toggle button{height:40px;padding:0 16px;font:500 13px/18px var(--f);letter-spacing:.02em;text-transform:uppercase}
 mat-form-field>.field{height:48px;padding:0 12px;border-radius:6px;font:400 13px/20px var(--f)}
 mat-form-field[appearance="fill"]>.field{border-radius:4px 4px 0 0}
 mat-label{font:400 13px/16px var(--f)}
@@ -61,12 +63,13 @@ mat-expansion-panel-header{height:40px;padding:0 16px}
 mat-expansion-panel>.body{padding:0 16px 16px}
 mat-paginator{height:48px}
 mat-card{border-radius:6px;padding:20px;gap:8px}
+mat-card[appearance="outlined"]{border-color:var(--mat-sys-surface-container-high)}
 mat-card-title{font:700 16px/24px var(--f);color:var(--mat-sys-on-surface)}
 mat-card-subtitle{font:400 11px/16px var(--f);color:var(--mat-sys-on-surface-variant)}
 mat-menu,mat-dialog{border-radius:6px}
 mat-tooltip-component{font:500 11px/16px var(--f)}
-table[mat-table]{border-collapse:separate;border-spacing:0;table-layout:fixed}
-th[mat-header-cell]{font:700 12px/16px var(--f);letter-spacing:0;text-transform:none;color:var(--mat-sys-on-surface-variant);vertical-align:top;height:48px;padding:16px 4px 0;border-bottom:1px solid var(--mat-sys-outline-variant);background:var(--mat-sys-surface);padding-bottom:4px}
+table[mat-table]{border-collapse:separate;border-spacing:0;table-layout:auto}
+th[mat-header-cell]{font:500 12px/18px var(--f);letter-spacing:0;text-transform:none;color:var(--mat-sys-on-surface-variant);vertical-align:top;height:48px;padding:16px 4px 0;border-bottom:1px solid var(--mat-sys-outline-variant);background:var(--mat-sys-surface);padding-bottom:4px}
 td[mat-cell],td[mat-footer-cell]{font:400 12px/16px var(--f);height:44px;padding:0 4px;border:none;vertical-align:middle;background:var(--mat-sys-surface);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 tbody tr:nth-child(even) td[mat-cell]{background:var(--mat-sys-surface-container-low)}
 td[mat-footer-cell]{font-weight:600;border-top:1px solid var(--mat-sys-outline-variant);background:var(--mat-sys-surface-container-low)}
@@ -89,12 +92,12 @@ mat-toolbar mat-icon,mat-toolbar button[matIconButton]{color:var(--mat-sys-on-su
 mat-toolbar mat-form-field[appearance="fill"]>.field{height:40px;background:#262626;border-bottom-color:#333333;color:#fff}
 mat-toolbar mat-form-field[appearance="fill"]:hover>.field{background:#333333}
 .bodyrow{flex:1;display:flex;min-height:0;overflow:hidden;position:relative}
-.sb{background:var(--mat-sys-surface);border:1px solid var(--mat-sys-outline-variant);border-radius:6px;margin:8px;overflow:hidden;display:flex;flex-direction:column;flex:none;transition:width 270ms cubic-bezier(.4,0,.2,1)}
+.sb{background:var(--mat-sys-surface);border:1px solid var(--mat-sys-surface-container-high);border-radius:6px;margin:8px;overflow:hidden;display:flex;flex-direction:column;flex:none;transition:width 270ms cubic-bezier(.4,0,.2,1)}
 .content{flex:1;min-width:0;overflow:auto;background:var(--mat-sys-surface-container)}
 .page{padding:8px 8px 8px 4px;display:flex;flex-direction:column;gap:8px;min-height:100%}
 mat-nav-list a[mat-list-item]{white-space:nowrap;overflow:hidden;padding:0;margin:0 8px}
 mat-nav-list a[mat-list-item].on{background:var(--mat-sys-primary-container);color:var(--mat-sys-on-primary-container);font-weight:700}
-a[mat-list-item].d1{font:var(--mat-sys-title-small);letter-spacing:.06em;text-transform:uppercase}
+a[mat-list-item].d1{font:700 14px/18px var(--f);letter-spacing:.06em;text-transform:uppercase}
 [matBadge]::after{top:var(--badge-top,-2px);right:var(--badge-right,-4px)}
 .eyebrow{font:var(--mat-sys-label-medium);letter-spacing:.14em;text-transform:uppercase;color:var(--mat-sys-on-surface-variant)}
 .h1{font:var(--mat-sys-headline-medium);margin:0}
@@ -105,7 +108,7 @@ a[mat-list-item].d1{font:var(--mat-sys-title-small);letter-spacing:.06em;text-tr
 .spacer{flex:1}
 .overlay{position:absolute;inset:0;background:rgba(0,0,0,.32);z-index:25}
 .cdk-backdrop{position:fixed;inset:0;background:transparent;z-index:40}
-.pop{position:absolute;z-index:41;background:var(--mat-sys-surface);border-radius:6px;box-shadow:var(--mat-sys-level2)}
+.pop{position:absolute;z-index:41;background:var(--mat-sys-surface);border-radius:4px;box-shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)}
 .opt{display:flex;align-items:center;height:48px;padding:0 16px;cursor:pointer;font:var(--mat-sys-body-large)}
 .opt:hover,.opt.on{background:var(--mat-sys-surface-variant)}
 .dc{width:40px;height:40px;border:none;background:none;border-radius:9999px;font:400 12px/16px var(--f);color:var(--mat-sys-on-surface);cursor:pointer;display:flex;align-items:center;justify-content:center}
@@ -118,7 +121,7 @@ a[mat-list-item].d1{font:var(--mat-sys-title-small);letter-spacing:.06em;text-tr
 .vsv{height:440px;overflow-y:auto;position:relative}
 mat-form-field:is(.ff,[classname~="ff"]){gap:6px}
 mat-form-field:is(.ff,[classname~="ff"])>.field{height:48px;padding:0 16px;border:none;border-bottom:1px solid transparent;border-radius:4px 4px 0 0;background:var(--mat-sys-surface-container);box-shadow:none}
-mat-form-field:is(.ff,[classname~="ff"])[invalid]>.field{border-bottom-color:var(--mat-sys-on-surface);box-shadow:none}
+mat-form-field:is(.ff,[classname~="ff"])[invalid]>.field{border-bottom-color:var(--mat-sys-error);box-shadow:none}
 mat-form-field:is(.ff,[classname~="ff"])[disabled]>.field{border-bottom-color:var(--mat-sys-on-surface-variant);color:var(--mat-sys-outline)}
 mat-form-field:is(.ff,[classname~="ff"])[disabled] input{color:var(--mat-sys-outline)}
 mat-form-field:is(.ff,[classname~="ff"]):hover>.field{border-bottom-color:var(--mat-sys-outline)}
@@ -159,40 +162,97 @@ mat-tab-header:is(.tbh,[classname~="tbh"]){display:flex;position:relative;border
 mat-tab-header:is(.tbh,[classname~="tbh"]) .ink{position:absolute;bottom:-1px;height:3px;background:var(--mat-sys-primary);transition:left 500ms cubic-bezier(.35,0,.25,1)}
 @keyframes tabInR1{from{transform:translateX(100%)}to{transform:none}}@keyframes tabInR2{from{transform:translateX(100%)}to{transform:none}}
 @keyframes tabInL1{from{transform:translateX(-100%)}to{transform:none}}@keyframes tabInL2{from{transform:translateX(-100%)}to{transform:none}}
-mat-tab-header:is(.tbh,[classname~="tbh"]) mat-tab{flex:1;justify-content:center;height:44px;font:700 12px/16px var(--f);letter-spacing:.06em;text-transform:uppercase;color:var(--mat-sys-on-surface);cursor:pointer;border-bottom:none;transition:background-color .15s,color .3s}
+mat-tab-header:is(.tbh,[classname~="tbh"]) mat-tab{flex:1;justify-content:center;height:44px;font:500 12px/18px var(--f);letter-spacing:.06em;text-transform:uppercase;color:var(--mat-sys-on-surface);cursor:pointer;border-bottom:none;transition:background-color .15s,color .3s}
 mat-tab-header:is(.tbh,[classname~="tbh"]) mat-tab:hover{background:var(--mat-sys-surface-container)}
 mat-tab-header:is(.tbh,[classname~="tbh"]) mat-tab[active]{color:var(--mat-sys-primary);border-bottom:none}
 mat-menu:is(.am,[classname~="am"]){padding:8px 0;background:var(--mat-sys-surface-container);border-radius:4px;box-shadow:var(--mat-sys-level2)}
 mat-menu:is(.am,[classname~="am"]) button[mat-menu-item]:hover{background:var(--mat-sys-surface-container-high)}
 mat-menu:is(.am,[classname~="am"]) button[mat-menu-item]{height:48px;background:transparent;gap:12px;padding:0 16px;font:500 13px/20px var(--f);color:var(--mat-sys-on-surface)}
 mat-menu:is(.am,[classname~="am"]) button[mat-menu-item] mat-icon{font-size:20px;width:20px;height:20px;color:var(--mat-sys-on-surface-variant)}
-.stp{display:flex;align-items:center;gap:8px;flex:none;height:64px;padding:0 24px;border-radius:6px;cursor:pointer;font:400 12px/16px var(--f);color:var(--mat-sys-on-surface);transition:background-color .15s}
-.stp:hover{background:var(--mat-sys-surface-container-high)}
+.stp{display:flex;align-items:center;gap:8px;flex:none;height:40px;padding:0 28px 0 8px;border-radius:6px;cursor:pointer;font:400 12px/16px var(--f);color:var(--mat-sys-on-surface);transition:background-color .15s}
+.stp:hover,.stp.hov{background:rgba(0,0,0,.08)}
+.stp:hover .sn:not(.done):not(.cur),.stp.hov .sn:not(.done):not(.cur){background:transparent}
 .sn{width:24px;height:24px;border-radius:9999px;display:flex;align-items:center;justify-content:center;font:400 12px/16px var(--f);background:var(--mat-sys-surface-variant);color:var(--mat-sys-on-surface-variant)}
 .sn.done{background:var(--mat-sys-on-surface);color:var(--mat-sys-surface)}
 .sn.done mat-icon{font-size:16px;width:16px;height:16px}
 .sn.cur{background:var(--mat-sys-primary);color:var(--mat-sys-on-primary)}
-.sl{flex:1;height:1px;background:var(--mat-sys-outline);margin:0 -16px}
+.sl{flex:1;height:1px;background:var(--mat-sys-outline);margin:0}
 mat-accordion:is(.da,[classname~="da"]){display:flex;flex-direction:column;gap:0}
-mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel{background:var(--mat-sys-surface);border:none;border-top:1px solid var(--mat-sys-surface-container);border-radius:0;box-shadow:var(--mat-sys-level1);overflow:hidden;transition:margin 225ms cubic-bezier(.4,0,.2,1)}
+mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel{background:var(--mat-sys-surface);border:none;border-top:1px solid var(--mat-sys-surface-container);border-radius:0;box-shadow:0 1px 2px rgba(0,0,0,.08);overflow:hidden;transition:margin 225ms cubic-bezier(.4,0,.2,1)}
 mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel:first-of-type{border-top:none}
 mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel:last-of-type{border-radius:0 0 4px 4px}
 mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel[expanded]{margin:16px 0;border-top:none;border-radius:4px}
 mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel[expanded]:first-of-type{margin-top:0}
 mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel[expanded]:last-of-type{margin-bottom:0}
 mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel[expanded]+mat-expansion-panel{border-top:none;border-radius:4px 4px 0 0}
-mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel-header{height:40px;padding:0 24px;font:700 14px/20px var(--f);color:var(--mat-sys-on-surface);transition:height 225ms cubic-bezier(.4,0,.2,1),background-color .15s}
+mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel-header{height:40px;padding:0 24px;font:500 14px/20px var(--f);color:var(--mat-sys-on-surface);transition:height 225ms cubic-bezier(.4,0,.2,1),background-color .15s}
 mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel-header:hover{background:var(--mat-sys-surface-container-high)}
 mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel[expanded] mat-expansion-panel-header{height:56px}
 mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel[expanded] mat-expansion-panel-header:hover{background:transparent}
 mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel-header mat-icon{font-size:24px;width:24px;height:24px;color:var(--mat-sys-on-surface-variant)}
 mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel>.body{padding:0 24px 16px;font:400 14px/22px var(--f);color:var(--mat-sys-on-surface)}
+.grid3c{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:start}
+.grid3c.st{align-items:stretch}
+.meta{font:400 11px/16px var(--f);color:var(--mat-sys-on-surface-variant)}
+.sw{width:12px;height:12px;flex:none;display:inline-block}
+.lg{display:flex;flex-direction:column;gap:10px;flex:1;min-width:140px}
+.lgr{display:flex;align-items:center;gap:10px}
+.chart{width:100%;height:200px;overflow:hidden}
+.chart.roomy{height:240px}
+td.nm{white-space:nowrap;font-weight:500}
+th.mem,td.mem{background:var(--mat-sys-surface-container-low)!important}
+.hd2{display:inline-flex;align-items:flex-start;gap:2px}
+th.num .hd2{flex-direction:row}
+.hd2 .arrow{display:inline-flex;width:12px;height:12px;margin-top:2px;flex:none;opacity:0;transition:opacity .12s}
+.hd2 .arrow mat-icon{font-size:12px;width:12px;height:12px}
+th.sortable:hover .hd2 .arrow{opacity:.54}
+th[data-sorted] .hd2 .arrow{opacity:1}
+.lopt{display:flex;align-items:center;gap:12px;height:48px;padding:0 12px 0 16px;cursor:pointer;font:400 14px/20px var(--f)}
+.lopt:hover{background:var(--mat-sys-surface-container)}
+.lopt>span{flex:1}
+.lopt mat-checkbox{padding-left:0;min-height:0;pointer-events:none}
+.dl3{display:flex;flex-direction:column;gap:8px;padding:8px 20px 16px}
+.di{display:flex;align-items:center;gap:16px;height:48px;padding:0 16px;border:1px solid var(--mat-sys-outline-variant);border-radius:6px;background:var(--mat-sys-surface);font:400 14px/20px var(--f)}
+.di :is(.hdl,[classname~="hdl"]){cursor:grab;color:var(--mat-sys-on-surface-variant);font-size:24px;width:24px;height:24px;touch-action:none}
+.di.ph{opacity:.45;border-color:var(--mat-sys-primary)}
+.di.pv{box-shadow:var(--mat-sys-level3);cursor:grabbing;position:fixed;z-index:80;pointer-events:none}
+.di.pv :is(.hdl,[classname~="hdl"]){cursor:grabbing}
+table.mt th[mat-header-cell]{position:sticky;top:0;z-index:2}
+table.mt td[mat-cell]{white-space:nowrap}
+.dc.lbl{visibility:visible;width:auto;justify-content:flex-start;padding-left:10px;font:500 13px/16px var(--f);color:var(--mat-sys-on-surface-variant);cursor:default}
+.dc.lbl:hover{background:none}
+.osel{display:flex;align-items:center;gap:12px;height:48px;box-sizing:border-box;padding:0 8px 0 16px;border:1px solid var(--mat-sys-surface-container-highest);border-radius:4px;background:var(--mat-sys-surface);font:400 13px/18px var(--f);color:var(--mat-sys-on-surface);cursor:pointer}
+.osel:hover{border-color:var(--mat-sys-on-surface)}
+.sopt{display:flex;align-items:center;gap:8px;height:48px;padding:0 16px;font:400 13px/18px var(--f);cursor:pointer;color:var(--mat-sys-on-surface)}
+.sopt:hover{background:var(--mat-sys-surface-container-high)}
+.sopt.on{background:var(--mat-sys-secondary-container);color:var(--mat-sys-on-secondary-container)}
+.sopt mat-icon{font-size:20px!important;width:20px!important;height:20px!important;color:inherit}
 body{min-width:708px}
 .page{min-width:1440px}
+mat-chip[data-oc]{font-weight:500!important;padding:0 10px!important;letter-spacing:.06em!important;text-transform:uppercase!important;white-space:nowrap!important}
+mat-chip[data-oc][data-tone="teal"]{background:#007B84!important;border:1px solid #007B84!important;color:#FFFFFF!important}
+mat-chip[data-oc][data-tone="lime"]{background:#A9B819!important;border:1px solid #A9B819!important;color:#000000!important}
+mat-chip[data-oc][data-tone="amber"]{background:#EE7601!important;border:1px solid #EE7601!important;color:#000000!important}
+mat-chip[data-oc][data-tone="orange"]{background:#E84810!important;border:1px solid #E84810!important;color:#FFFFFF!important}
+mat-chip[data-oc][data-tone="navy"]{background:#1F225E!important;border:1px solid #1F225E!important;color:#FFFFFF!important}
+mat-chip[data-oc][data-tone="grey"]{background:#404040!important;border:1px solid #404040!important;color:#FFFFFF!important}
+.ofw{display:flex;flex-direction:column;gap:4px;padding-top:6px}
+.of{position:relative;display:flex;align-items:center;gap:8px;height:48px;padding:0 12px 0 16px;border:1px solid var(--mat-sys-outline);border-radius:4px;background:var(--mat-sys-surface)}
+.of:hover{border-color:var(--mat-sys-on-surface)}
+.of:focus-within{border-color:var(--mat-sys-primary);box-shadow:inset 0 0 0 1px var(--mat-sys-primary)}
+.of>.ofl{position:absolute;top:-8px;left:12px;padding:0 4px;background:var(--mat-sys-surface);font:400 12px/16px var(--f);color:var(--mat-sys-on-surface-variant);white-space:nowrap;pointer-events:none}
+.of:focus-within>.ofl{color:var(--mat-sys-primary)}
+.of input{flex:1;min-width:0;height:auto;border:none;outline:none;background:none;padding:0;font:400 13px/20px var(--f);color:var(--mat-sys-on-surface)}
+.of mat-icon{font-size:20px;width:20px;height:20px;color:var(--mat-sys-on-surface-variant)}
+.of[data-err="true"]{border-color:var(--mat-sys-error);box-shadow:inset 0 0 0 1px var(--mat-sys-error)}
+.of[data-err="true"]>.ofl{color:var(--mat-sys-error)}
+.of[data-dis="true"]{border-color:var(--mat-sys-outline-variant)}
+.of[data-dis="true"] input,.of[data-dis="true"]>.ofl{color:var(--mat-sys-outline)}
+.ofh{font:400 11px/16px var(--f);color:var(--mat-sys-on-surface-variant);padding:0 16px}
 </style>
 </helmet>
 <template id="__bundler_thumbnail" data-bg-color="#000000"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#000000"/><rect x="120" y="180" width="180" height="440" rx="6" fill="#1A1A1A"/><rect x="340" y="180" width="300" height="20" fill="#FFFFFF"/><rect x="340" y="212" width="300" height="6" rx="3" fill="#E84810"/><rect x="340" y="260" width="740" height="360" rx="6" fill="#1A1A1A"/></svg></template>
-<div class="shell">
+<div class="shell app-layer">
   <mat-toolbar style="--mat-sys-on-surface:#FFFFFF;--mat-sys-on-surface-variant:#CCCCCC;--mat-sys-primary-fixed-dim:#FF6A33;--mat-sys-surface:#000000;--mat-sys-surface-variant:#1A1A1A;--mat-sys-outline:#929292">
     <img src="assets/logo-primary-reversed-3x.png" alt="Shaw and Partners" style="width:150px;height:auto;display:block">
     <div class="spacer"></div>
@@ -200,7 +260,7 @@ body{min-width:708px}
       <mat-form-field appearance="fill" style="width:100%">
         <div class="field">
           <mat-icon>search</mat-icon>
-          <input matInput value="{{ query }}" onChange="{{ onQuery }}" placeholder="Search components" style="color:#fff">
+          <input matInput value="{{ query }}" onChange="{{ onQuery }}" placeholder="Search" style="color:#fff">
           <sc-if value="{{ hasQuery }}" hint-placeholder-val="{{ false }}">
             <mat-icon onClick="{{ clearQuery }}" style="cursor:pointer">close</mat-icon>
           </sc-if>
@@ -262,18 +322,14 @@ body{min-width:708px}
     <div class="content">
       <div class="page">
         <sc-if value="{{ accessOn }}" hint-placeholder-val="{{ true }}">
-          <div style="display:flex;flex-direction:column;gap:4px;padding:16px 16px 8px">
-            <span class="eyebrow">Plugin0 · Component gallery</span>
-            <div style="display:inline-flex;flex-direction:column;align-self:flex-start;gap:6px">
-              <h1 class="h1">{{ groupTitle }}</h1>
-              <span style="height:4px;border-radius:9999px;background:#E84810;width:100%"></span>
-            </div>
-            <span class="mut" style="margin-top:6px;font:var(--mat-sys-body-medium);color:var(--mat-sys-on-surface-variant)">{{ groupBlurb }}</span>
+          <div style="display:flex;flex-direction:column;gap:0;padding:16px 4px 8px">
+            <nav aria-label="Breadcrumb" class="row" style="gap:4px;flex-wrap:nowrap;font:500 11px/16px var(--f);letter-spacing:.14em;text-transform:uppercase;color:#404040"><a href="#" style="color:#404040;text-decoration:none" style-hover="color:var(--mat-sys-primary)">Plugin0</a><mat-icon style="font-size:16px;width:16px;height:16px;color:#404040">chevron_right</mat-icon><span aria-current="page" style="color:var(--mat-sys-on-surface)">{{ groupTitle }}</span></nav>
+            <span class="mut" style="margin-top:2px;font:400 13px/18px var(--f);color:#404040">{{ groupBlurb }}</span>
           </div>
         </sc-if>
 
         <sc-if value="{{ showButtons }}" hint-placeholder-val="{{ true }}">
-          <div class="grid2">
+          <div class="grid3c st" style="grid-template-columns:repeat(2,minmax(0,1fr))">
             <mat-card appearance="outlined">
               <mat-card-title>Buttons</mat-card-title>
               <mat-card-subtitle>matButton · 32px</mat-card-subtitle>
@@ -336,21 +392,11 @@ body{min-width:708px}
         <sc-if value="{{ showForms }}" hint-placeholder-val="{{ false }}">
           <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:stretch">
             <mat-card appearance="outlined" style="gap:12px">
-              <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:8px"><mat-card-title>Text fields</mat-card-title><mat-card-subtitle>mat-form-field · matInput</mat-card-subtitle></div>
-              <mat-form-field appearance="fill" class="ff">
-                <div class="field"><input matInput value="{{ nameVal }}" onChange="{{ onName }}"></div>
-              </mat-form-field>
-              <mat-form-field appearance="fill" class="ff">
-                <div class="field"><mat-icon>person</mat-icon><input matInput></div>
-              </mat-form-field>
-              <mat-form-field appearance="fill" class="ff" invalid="true">
-                <div class="field"><input matInput value="-120"></div>
-                <mat-error>Enter a positive amount.</mat-error>
-              </mat-form-field>
-              <mat-form-field appearance="fill" class="ff" disabled="true">
-                <div class="field"><input matInput value="SP-100482" disabled="true"></div>
-                <mat-hint>Set at onboarding.</mat-hint>
-              </mat-form-field>
+              <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:8px"><mat-card-title>Text fields</mat-card-title><mat-card-subtitle>mat-form-field appearance="outline" · matInput · as on the OFA pages</mat-card-subtitle></div>
+              <div class="ofw"><div class="of"><span class="ofl">Account name</span><input matInput aria-label="Account name" value="{{ nameVal }}" onChange="{{ onName }}"></div></div>
+              <div class="ofw"><div class="of"><span class="ofl">Advisor</span><mat-icon aria-hidden="true">person</mat-icon><input matInput aria-label="Advisor"></div></div>
+              <div class="ofw"><div class="of" data-err="true"><span class="ofl">ASF (excl. GST)</span><input matInput aria-label="ASF (excl. GST)" aria-invalid="true" value="-120"></div><span class="ofh" style="color:var(--mat-sys-error)">Enter a positive amount.</span></div>
+              <div class="ofw"><div class="of" data-dis="true"><span class="ofl">S-Account</span><input matInput aria-label="S-Account" value="SP-100482" disabled="true"></div><span class="ofh">Set at onboarding.</span></div>
             </mat-card>
             <mat-card appearance="outlined" style="gap:0">
               <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:12px"><mat-card-title>Selection controls</mat-card-title><mat-card-subtitle>mat-checkbox · mat-radio-group · mat-slide-toggle</mat-card-subtitle></div>
@@ -366,14 +412,12 @@ body{min-width:708px}
               <mat-slide-toggle checked="{{ tog }}" onClick="{{ toggleTog }}"><span class="track"><span class="thumb"><mat-icon>check</mat-icon></span></span>Auto-issue reminders</mat-slide-toggle>
             </mat-card>
             <mat-card appearance="outlined" style="gap:12px">
-              <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:8px"><mat-card-title>Select</mat-card-title><mat-card-subtitle>mat-select</mat-card-subtitle></div>
-              <div style="position:relative;width:212px;max-width:100%">
-                <mat-form-field appearance="fill" class="ff" focused="{{ menuOpenAttr }}">
-                  <div class="field" onClick="{{ toggleMenu }}" style="cursor:pointer;height:52px"><mat-select><mat-select-trigger style="font:400 12px/16px var(--f)">{{ branch }}</mat-select-trigger><mat-icon style="color:{{ selArrowColor }}">{{ selArrow }}</mat-icon></mat-select></div>
-                </mat-form-field>
+              <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:8px"><mat-card-title>Select</mat-card-title><mat-card-subtitle>mat-select · outlined, label on the border, as on the OFA pages</mat-card-subtitle></div>
+              <div style="position:relative;width:212px;max-width:100%;display:flex;flex-direction:column;gap:6px">
+                <div class="ofw"><div class="of" role="combobox" tabindex="0" aria-haspopup="listbox" aria-expanded="{{ menuExpanded }}" aria-label="Branch" onClick="{{ toggleMenu }}" style="cursor:pointer;border-color:{{ selBorder }};box-shadow:{{ selRing }}"><span class="ofl">Branch</span><span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:400 13px/20px var(--f)">{{ branch }}</span><mat-icon aria-hidden="true" style="font-size:24px;width:24px;height:24px">arrow_drop_down</mat-icon></div></div>
                 <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
                   <div class="cdk-backdrop" onClick="{{ toggleMenu }}"></div>
-                  <div class="pop" style="left:0;right:0;top:60px;max-height:420px;overflow:auto;padding:8px 0;border-radius:4px">
+                  <div class="pop" role="listbox" aria-label="Branch" style="left:0;right:0;top:calc(100% + 4px);max-height:288px;overflow:auto;padding:8px 0;border-radius:4px;background:var(--mat-sys-surface-container)">
                     <sc-for list="{{ branches }}" as="b" hint-placeholder-count="3">
                       <div class="{{ b.cls }}" onClick="{{ b.pick }}"><span style="flex:1">{{ b.label }}</span><sc-if value="{{ b.on }}" hint-placeholder-val="{{ false }}"><mat-icon style="font-size:24px;width:24px;height:24px">check</mat-icon></sc-if></div>
                     </sc-for>
@@ -397,29 +441,34 @@ body{min-width:708px}
 
         <sc-if value="{{ showData }}" hint-placeholder-val="{{ false }}">
           <mat-card appearance="outlined" style="padding:0;gap:0;overflow:hidden">
-            <div style="padding:16px 20px 16px;display:flex;flex-direction:column;align-items:flex-start;gap:2px"><mat-card-title>Table</mat-card-title><mat-card-subtitle>table[mat-table] · mat-paginator</mat-card-subtitle></div>
-            <table mat-table class="dt">
-              <thead><tr>
-                <th mat-header-cell>Client</th>
-                <th mat-header-cell style="width:205px">Advisor</th>
-                <th mat-header-cell style="width:220px">Status</th>
-                <th mat-header-cell class="num" style="width:120px">Fee</th>
-              </tr></thead>
-              <tbody>
-                <sc-for list="{{ rows }}" as="r" hint-placeholder-count="4">
-                  <tr>
-                    <td mat-cell>{{ r.client }}</td>
-                    <td mat-cell>{{ r.adviser }}</td>
-                    <td mat-cell><mat-chip appearance="outlined">{{ r.status }}</mat-chip></td>
-                    <td mat-cell class="num">{{ r.fee }}</td>
-                  </tr>
-                </sc-for>
-              </tbody>
-            </table>
+            <div style="padding:16px 20px 16px;display:flex;flex-direction:column;align-items:flex-start;gap:2px"><mat-card-title>Table</mat-card-title><mat-card-subtitle>table[mat-table] · selection frozen on the left, Actions frozen on the right · header frozen on top, total frozen at the bottom · Platform folds out to Product and Platform account number · as on the OFA pages</mat-card-subtitle></div>
+            <div style="max-height:420px;overflow:auto;border-top:1px solid var(--mat-sys-outline-variant)">
+              <table mat-table class="dt" style="min-width:2400px;width:100%;border-collapse:separate;border-spacing:0">
+                <thead><tr>
+                  <th mat-header-cell style="position:sticky;top:0;left:0;z-index:4;width:48px;min-width:48px;padding:0 0 0 16px;background:var(--mat-sys-surface);box-shadow:inset -1px 0 0 var(--mat-sys-outline-variant), inset 0 -1px 0 var(--mat-sys-outline-variant)"><mat-checkbox role="checkbox" tabindex="0" aria-label="Select all" aria-checked="{{ frzAllAc }}" checked="{{ frzAll }}" onClick="{{ frzToggleAll }}"><span class="box"><mat-icon>check</mat-icon></span></mat-checkbox></th>
+                  <sc-for list="{{ frzCols }}" as="c" hint-placeholder-count="16"><th mat-header-cell class="{{ c.cls }}" aria-sort="{{ c.aria }}" style="position:sticky;top:0;z-index:3;background:{{ c.hbg }};white-space:nowrap;box-shadow:inset 0 -1px 0 var(--mat-sys-outline-variant)"><span style="display:inline-flex;align-items:center;gap:2px"><button type="button" mat-sort-header aria-label="{{ c.sortName }}" onClick="{{ c.sort }}" style="all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:2px">{{ c.label }}<mat-icon aria-hidden="true" style="font-size:16px;width:16px;height:16px;opacity:{{ c.arOp }};color:var(--mat-sys-on-surface-variant)">{{ c.arrow }}</mat-icon></button><sc-if value="{{ c.fold }}" hint-placeholder-val="{{ false }}"><button matIconButton class="ib24" aria-expanded="{{ c.fold.ae }}" aria-label="{{ c.fold.name }}" title="{{ c.fold.name }}" onClick="{{ c.fold.go }}" style="margin-left:2px"><mat-icon>{{ c.fold.ic }}</mat-icon></button></sc-if></span></th></sc-for>
+                  <th mat-header-cell aria-label="Actions" style="position:sticky;top:0;right:0;z-index:4;width:56px;min-width:56px;background:var(--mat-sys-surface);box-shadow:inset 1px 0 0 var(--mat-sys-outline-variant), inset 0 -1px 0 var(--mat-sys-outline-variant)"></th>
+                </tr></thead>
+                <tbody>
+                  <sc-for list="{{ frzRows }}" as="r" hint-placeholder-count="14">
+                    <tr>
+                      <td mat-cell style="position:sticky;z-index:2;background:{{ r.bg }};left:0;width:48px;min-width:48px;padding:0 0 0 16px;box-shadow:inset -1px 0 0 var(--mat-sys-outline-variant)"><mat-checkbox role="checkbox" tabindex="0" aria-label="Select" aria-checked="{{ r.ac }}" checked="{{ r.on }}" onClick="{{ r.toggle }}"><span class="box"><mat-icon>check</mat-icon></span></mat-checkbox></td>
+                      <sc-for list="{{ r.cells }}" as="x" hint-placeholder-count="16"><td mat-cell class="{{ x.cls }}" style="background:{{ r.bg }};white-space:nowrap"><sc-if value="{{ x.chip }}" hint-placeholder-val="{{ false }}"><mat-chip data-oc="1" data-tone="{{ x.tone }}">{{ x.chip }}</mat-chip></sc-if><sc-if value="{{ x.txt }}" hint-placeholder-val="{{ true }}">{{ x.v }}</sc-if></td></sc-for>
+                      <td mat-cell style="position:sticky;z-index:2;background:{{ r.bg }};right:0;width:56px;min-width:56px;padding:0 8px;text-align:center;box-shadow:inset 1px 0 0 var(--mat-sys-outline-variant)"><button matIconButton aria-label="Actions" title="Actions"><mat-icon>more_vert</mat-icon></button></td>
+                    </tr>
+                  </sc-for>
+                </tbody>
+              <tfoot><tr>
+                  <td mat-footer-cell style="position:sticky;bottom:0;left:0;z-index:4;width:48px;min-width:48px;background:#F7F7F7;box-shadow:inset -1px 0 0 var(--mat-sys-outline-variant), inset 0 1px 0 var(--mat-sys-outline-variant)"></td>
+                  <sc-for list="{{ frzFoot }}" as="x" hint-placeholder-count="14"><td mat-footer-cell class="{{ x.cls }}" style="position:sticky;bottom:0;z-index:3;background:#F7F7F7;white-space:nowrap;font-weight:500;box-shadow:inset 0 1px 0 var(--mat-sys-outline-variant)">{{ x.v }}</td></sc-for>
+                  <td mat-footer-cell style="position:sticky;bottom:0;right:0;z-index:4;width:56px;min-width:56px;background:#F7F7F7;box-shadow:inset 1px 0 0 var(--mat-sys-outline-variant), inset 0 1px 0 var(--mat-sys-outline-variant)"></td>
+                </tr></tfoot>
+              </table>
+            </div>
             <mat-paginator class="pg">
               <span>Items per page:</span>
-              <span class="pgsel"><span>4</span><mat-icon>arrow_drop_down</mat-icon></span>
-              <span style="margin-left:20px">1 – 4 of 128</span>
+              <span class="pgsel"><span>25</span><mat-icon>arrow_drop_down</mat-icon></span>
+              <span style="margin-left:20px">1 – 14 of 128</span>
               <span style="display:flex;gap:0;margin-left:16px"><button matIconButton aria-label="Previous page" disabled="true" style="color:var(--mat-sys-outline)"><mat-icon>chevron_left</mat-icon></button><button matIconButton aria-label="Next page" style="color:var(--mat-sys-on-surface)"><mat-icon>chevron_right</mat-icon></button></span>
             </mat-paginator>
           </mat-card>
@@ -505,12 +554,12 @@ body{min-width:708px}
             </mat-card>
             <mat-card appearance="outlined" style="gap:0">
               <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px;margin-bottom:8px"><mat-card-title>Stepper</mat-card-title><mat-card-subtitle>mat-horizontal-stepper · mat-step</mat-card-subtitle></div>
-              <div style="display:flex;align-items:center;gap:24px;margin:0 -17px">
+              <div style="display:flex;align-items:center;gap:8px;margin:12px -4px">
                 <span class="stp"><span class="sn done"><mat-icon>check</mat-icon></span>Details</span>
                 <span class="sl"></span>
                 <span class="stp"><span class="sn cur">2</span>Review</span>
                 <span class="sl"></span>
-                <span class="stp"><span class="sn">3</span>Issue</span>
+                <span class="stp hov" title="Hover state, drawn as the app shows it"><span class="sn">3</span>Issue</span>
               </div>
               <div style="padding:16px 4px 16px">Confirm terms before issuing the arrangement.</div>
             </mat-card>
@@ -526,125 +575,68 @@ body{min-width:708px}
         </sc-if>
 
         <sc-if value="{{ showCharts }}" hint-placeholder-val="{{ false }}">
-          <div class="grid2">
+          <div class="grid3c st">
             <mat-card appearance="outlined">
               <mat-card-title>Donut chart</mat-card-title>
               <mat-card-subtitle>Fee revenue by branch</mat-card-subtitle>
-              <div class="row" style="gap:24px">
-                <svg viewBox="0 0 160 160" style="width:160px;height:160px;flex:none">
-                  <sc-for list="{{ donut }}" as="d" hint-placeholder-count="4">
-                    <circle cx="80" cy="80" r="60" fill="none" stroke="{{ d.color }}" stroke-width="30" stroke-dasharray="{{ d.dash }}" stroke-dashoffset="{{ d.offset }}" transform="rotate(-90 80 80)"></circle>
-                  </sc-for>
-                </svg>
-                <div style="display:flex;flex-direction:column;gap:8px;flex:1;min-width:140px">
-                  <sc-for list="{{ donut }}" as="d" hint-placeholder-count="4">
-                    <div class="row" style="gap:8px;flex-wrap:nowrap"><span style="width:12px;height:12px;background:{{ d.color }};flex:none"></span><span style="flex:1">{{ d.label }}</span><span style="font-variant-numeric:tabular-nums;color:var(--mat-sys-on-surface-variant)">{{ d.pctLabel }}</span></div>
-                  </sc-for>
-                </div>
-              </div>
+              <div class="row" style="gap:24px;flex-wrap:nowrap;margin-top:8px"><div id="ch-donut" role="img" aria-label="Fee revenue by branch, as a share of total" style="width:160px;height:160px;flex:none"></div><div class="lg"><sc-for list="{{ donutLegend }}" as="l" hint-placeholder-count="4"><div class="lgr"><span class="sw" style="background:{{ l.color }}"></span><span style="flex:1">{{ l.label }}</span><span class="meta" style="font-variant-numeric:tabular-nums">{{ l.pctLabel }}</span></div></sc-for></div></div>
             </mat-card>
             <mat-card appearance="outlined">
               <mat-card-title>Pie chart</mat-card-title>
               <mat-card-subtitle>Arrangements by status</mat-card-subtitle>
-              <div class="row" style="gap:24px">
-                <svg viewBox="0 0 160 160" style="width:160px;height:160px;flex:none">
-                  <sc-for list="{{ pie }}" as="p" hint-placeholder-count="3"><path d="{{ p.d }}" fill="{{ p.color }}"></path></sc-for>
-                </svg>
-                <div style="display:flex;flex-direction:column;gap:8px;flex:1;min-width:140px">
-                  <sc-for list="{{ pie }}" as="p" hint-placeholder-count="3">
-                    <div class="row" style="gap:8px;flex-wrap:nowrap"><span style="width:12px;height:12px;background:{{ p.color }};flex:none"></span><span style="flex:1">{{ p.label }}</span><span style="font-variant-numeric:tabular-nums;color:var(--mat-sys-on-surface-variant)">{{ p.pctLabel }}</span></div>
-                  </sc-for>
-                </div>
-              </div>
+              <div class="row" style="gap:24px;flex-wrap:nowrap;margin-top:8px"><div id="ch-pie" role="img" aria-label="Arrangements by status, as a share of total" style="width:160px;height:160px;flex:none"></div><div class="lg"><sc-for list="{{ pieLegend }}" as="l" hint-placeholder-count="4"><div class="lgr"><span class="sw" style="background:{{ l.color }}"></span><span style="flex:1">{{ l.label }}</span><span class="meta" style="font-variant-numeric:tabular-nums">{{ l.pctLabel }}</span></div></sc-for></div></div>
             </mat-card>
             <mat-card appearance="outlined">
               <mat-card-title>Bar chart</mat-card-title>
               <mat-card-subtitle>Arrangements issued per month</mat-card-subtitle>
-              <svg viewBox="0 0 420 200" style="width:100%;height:200px">
-                <sc-for list="{{ gridLines }}" as="g" hint-placeholder-count="4">
-                  <line x1="34" y1="{{ g.y }}" x2="416" y2="{{ g.y }}" stroke="#E5E5E5" stroke-width="1"></line>
-                  <text x="26" y="{{ g.ty }}" text-anchor="end" font-size="10" fill="#767676">{{ g.label }}</text>
-                </sc-for>
-                <sc-for list="{{ bars }}" as="b" hint-placeholder-count="6">
-                  <rect x="{{ b.x }}" y="{{ b.y }}" width="{{ b.w }}" height="{{ b.h }}" fill="#E84810"></rect>
-                  <text x="{{ b.cx }}" y="192" text-anchor="middle" font-size="10" fill="#767676">{{ b.label }}</text>
-                </sc-for>
-              </svg>
+              <div id="ch-bar" class="chart" role="img" aria-label="Arrangements issued per month over the last six months"></div>
             </mat-card>
             <mat-card appearance="outlined">
               <mat-card-title>Grouped bar chart</mat-card-title>
               <mat-card-subtitle>Issued against signed</mat-card-subtitle>
-              <svg viewBox="0 0 420 200" style="width:100%;height:200px">
-                <sc-for list="{{ gridLines }}" as="g" hint-placeholder-count="4"><line x1="34" y1="{{ g.y }}" x2="416" y2="{{ g.y }}" stroke="#E5E5E5" stroke-width="1"></line></sc-for>
-                <sc-for list="{{ groupBars }}" as="b" hint-placeholder-count="12"><rect x="{{ b.x }}" y="{{ b.y }}" width="{{ b.w }}" height="{{ b.h }}" fill="{{ b.color }}"></rect></sc-for>
-                <sc-for list="{{ bars }}" as="b" hint-placeholder-count="6"><text x="{{ b.cx }}" y="192" text-anchor="middle" font-size="10" fill="#767676">{{ b.label }}</text></sc-for>
-              </svg>
-              <div class="row" style="gap:16px">
-                <span class="row" style="gap:8px;flex-wrap:nowrap"><span style="width:12px;height:12px;background:#1F225E"></span>Issued</span>
-                <span class="row" style="gap:8px;flex-wrap:nowrap"><span style="width:12px;height:12px;background:#007B84"></span>Signed</span>
-              </div>
+              <div id="ch-grouped" class="chart" role="img" aria-label="Arrangements issued against signed, per month over the last six months"></div>
             </mat-card>
             <mat-card appearance="outlined">
               <mat-card-title>Line chart</mat-card-title>
               <mat-card-subtitle>Funds under advice, rolling 12 months</mat-card-subtitle>
-              <svg viewBox="0 0 420 200" style="width:100%;height:200px">
-                <sc-for list="{{ gridLines }}" as="g" hint-placeholder-count="4"><line x1="34" y1="{{ g.y }}" x2="416" y2="{{ g.y }}" stroke="#E5E5E5" stroke-width="1"></line></sc-for>
-                <polygon points="{{ areaPoints }}" fill="rgba(232,72,16,.10)"></polygon>
-                <polyline points="{{ linePoints }}" fill="none" stroke="#E84810" stroke-width="2"></polyline>
-                <polyline points="{{ linePoints2 }}" fill="none" stroke="#1F225E" stroke-width="2" stroke-dasharray="5 4"></polyline>
-                <sc-for list="{{ lineDots }}" as="p" hint-placeholder-count="12"><circle cx="{{ p.x }}" cy="{{ p.y }}" r="3" fill="#E84810"></circle></sc-for>
-              </svg>
-              <div class="row" style="gap:16px">
-                <span class="row" style="gap:8px;flex-wrap:nowrap"><span style="width:12px;height:2px;background:#E84810"></span>Actual</span>
-                <span class="row" style="gap:8px;flex-wrap:nowrap"><span style="width:12px;height:2px;background:#1F225E"></span>Forecast</span>
-              </div>
+              <div id="ch-line" class="chart" role="img" aria-label="Funds under advice, actual against forecast, rolling twelve months"></div>
             </mat-card>
             <mat-card appearance="outlined">
               <mat-card-title>Stacked bar</mat-card-title>
               <mat-card-subtitle>Pipeline composition</mat-card-subtitle>
-              <div style="display:flex;height:32px;overflow:hidden;width:100%">
-                <sc-for list="{{ stack }}" as="s" hint-placeholder-count="4"><span style="width:{{ s.pctLabel }};background:{{ s.color }}"></span></sc-for>
-              </div>
-              <div style="display:flex;flex-direction:column;gap:8px">
-                <sc-for list="{{ stack }}" as="s" hint-placeholder-count="4">
-                  <div class="row" style="gap:8px;flex-wrap:nowrap"><span style="width:12px;height:12px;background:{{ s.color }};flex:none"></span><span style="flex:1">{{ s.label }}</span><span style="font-variant-numeric:tabular-nums;color:var(--mat-sys-on-surface-variant)">{{ s.pctLabel }}</span></div>
-                </sc-for>
-              </div>
+              <div id="ch-stack" role="img" aria-label="Pipeline composition by stage, as a share of total" style="width:100%;height:32px;overflow-x:clip;overflow-y:visible;margin:8px 0 16px"></div>
+              <div class="lg"><sc-for list="{{ stackLegend }}" as="l" hint-placeholder-count="4"><div class="lgr"><span class="sw" style="background:{{ l.color }}"></span><span style="flex:1">{{ l.label }}</span><span class="meta" style="font-variant-numeric:tabular-nums">{{ l.pctLabel }}</span></div></sc-for></div>
             </mat-card>
             <mat-card appearance="outlined">
               <mat-card-title>Progress rings</mat-card-title>
               <mat-card-subtitle>Completion by team</mat-card-subtitle>
-              <div class="row" style="gap:24px;justify-content:space-around">
-                <sc-for list="{{ rings }}" as="r" hint-placeholder-count="3">
-                  <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
-                    <svg viewBox="0 0 100 100" style="width:96px;height:96px">
-                      <circle cx="50" cy="50" r="42" fill="none" stroke="#EEEEEE" stroke-width="10"></circle>
-                      <circle cx="50" cy="50" r="42" fill="none" stroke="{{ r.color }}" stroke-width="10" stroke-dasharray="{{ r.dash }}" transform="rotate(-90 50 50)"></circle>
-                      <text x="50" y="55" text-anchor="middle" font-size="16" fill="#000000">{{ r.pctLabel }}</text>
-                    </svg>
-                    <span class="mut">{{ r.label }}</span>
-                  </div>
-                </sc-for>
-              </div>
+              <div style="display:flex;flex-wrap:wrap;gap:28px;justify-content:space-around;margin-top:8px"><sc-for list="{{ ringList }}" as="r" hint-placeholder-count="3"><div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div id="{{ r.id }}" role="img" aria-label="{{ r.aria }}" style="width:96px;height:96px"></div><span class="meta">{{ r.label }}</span></div></sc-for></div>
             </mat-card>
             <mat-card appearance="outlined">
               <mat-card-title>Sparklines</mat-card-title>
               <mat-card-subtitle>Twelve-week trend per branch</mat-card-subtitle>
-              <div style="display:flex;flex-direction:column;gap:12px">
-                <sc-for list="{{ sparks }}" as="s" hint-placeholder-count="3">
-                  <div class="row" style="gap:16px;flex-wrap:nowrap">
-                    <span style="width:96px;flex:none">{{ s.label }}</span>
-                    <svg viewBox="0 0 200 40" style="flex:1;height:40px"><polyline points="{{ s.points }}" fill="none" stroke="{{ s.color }}" stroke-width="2"></polyline></svg>
-                    <span style="font-variant-numeric:tabular-nums;color:var(--mat-sys-on-surface-variant);flex:none">{{ s.delta }}</span>
-                  </div>
-                </sc-for>
-              </div>
+              <div style="display:flex;flex-direction:column;gap:14px;margin-top:8px"><sc-for list="{{ sparkList }}" as="sp" hint-placeholder-count="3"><div class="row" style="flex-wrap:nowrap"><span style="width:96px;flex:none">{{ sp.label }}</span><div id="{{ sp.id }}" role="img" aria-label="{{ sp.aria }}" style="flex:1;height:40px;min-width:0;overflow-x:clip;overflow-y:visible"></div><span class="meta" style="font-variant-numeric:tabular-nums">{{ sp.delta }}</span></div></sc-for></div>
+            </mat-card>
+            <mat-card appearance="outlined">
+              <mat-card-title>Chord chart</mat-card-title>
+              <mat-card-subtitle>Referrals passed between branches</mat-card-subtitle>
+              <div id="ch-chord" class="chart roomy" role="img" aria-label="Referrals passed between branches"></div>
+            </mat-card>
+            <mat-card appearance="outlined">
+              <mat-card-title>Coverage matrix</mat-card-title>
+              <mat-card-subtitle>Arrangements per branch, per quarter</mat-card-subtitle>
+              <div id="ch-matrix" class="chart roomy" role="img" aria-label="Arrangements per branch per quarter"></div>
+            </mat-card>
+            <mat-card appearance="outlined">
+              <mat-card-title>Network map</mat-card-title>
+              <mat-card-subtitle>Service desks each branch draws on</mat-card-subtitle>
+              <div id="ch-network" class="chart roomy" role="img" aria-label="Service desks each branch draws on. Scroll or drag to roam."></div>
             </mat-card>
           </div>
         </sc-if>
 
         <sc-if value="{{ showFeedback }}" hint-placeholder-val="{{ false }}">
-          <div class="grid2">
+          <div class="grid3c st">
             <mat-card appearance="outlined">
               <mat-card-title>Dialog</mat-card-title>
               <mat-card-subtitle>mat-dialog</mat-card-subtitle>
@@ -685,152 +677,90 @@ body{min-width:708px}
         </sc-if>
 
         <sc-if value="{{ showOfa }}" hint-placeholder-val="{{ false }}">
-          <mat-card appearance="outlined" style="padding:0;gap:0;overflow:hidden">
-            <div style="padding:16px 24px 8px;display:flex;flex-direction:column;align-items:flex-start;gap:2px">
-              <mat-card-title>Sortable table</mat-card-title>
-              <mat-card-subtitle>mat-table · matSort · mat-sort-header · sticky first column · matFooterRowDef · fold control matIconButton 24px / 16px glyph</mat-card-subtitle>
-            </div>
-            <div style="overflow-x:auto">
-              <table mat-table style="width:100%;min-width:{{ sortMinW }}">
-                <thead><tr>
-                  <sc-for list="{{ sortCols }}" as="c" hint-placeholder-count="10">
-                    <th mat-header-cell class="{{ c.cls }}" data-sorted="{{ c.sorted }}" onClick="{{ c.onSort }}" style="width:{{ c.w }}">
-                      <div class="hd">
-                        <sc-if value="{{ c.foldFirst }}" hint-placeholder-val="{{ false }}"><button matIconButton class="ib24" aria-label="{{ c.foldLabel }}" title="{{ c.foldLabel }}" onClick="{{ c.onFold }}"><mat-icon>{{ c.foldIcon }}</mat-icon></button></sc-if>
-                        <sc-if value="{{ c.num }}" hint-placeholder-val="{{ true }}"><span class="arrow"><mat-icon>{{ c.arrow }}</mat-icon></span></sc-if>
-                        <span>{{ c.label }}</span>
-                        <sc-if value="{{ c.text }}" hint-placeholder-val="{{ false }}"><span class="arrow"><mat-icon>{{ c.arrow }}</mat-icon></span></sc-if>
-                      </div>
-                    </th>
-                  </sc-for>
-                </tr></thead>
-                <tbody>
-                  <sc-for list="{{ sortRows }}" as="r" hint-placeholder-count="8">
-                    <tr><sc-for list="{{ r.cells }}" as="x" hint-placeholder-count="10"><td mat-cell class="{{ x.cls }}">{{ x.v }}</td></sc-for></tr>
-                  </sc-for>
-                </tbody>
-                <tfoot><tr><sc-for list="{{ sortTotal }}" as="x" hint-placeholder-count="10"><td mat-footer-cell class="{{ x.cls }}">{{ x.v }}</td></sc-for></tr></tfoot>
-              </table>
-            </div>
-            <div class="row" style="padding:12px 24px;gap:8px">
-              <mat-icon style="font-size:20px;color:var(--mat-sys-on-surface-variant)">schedule</mat-icon>
-              <span class="mut">{{ sortNote }}</span>
-            </div>
-          </mat-card>
 
-          <div class="grid2">
-            <mat-card appearance="outlined" style="position:relative">
-              <mat-card-title>Floating panel and click-away</mat-card-title>
-              <mat-card-subtitle>CDK Overlay · hasBackdrop · backdropClick()</mat-card-subtitle>
-              <div style="position:relative;align-self:flex-start">
-                <button matButton="outlined" onClick="{{ toggleOv }}"><mat-icon>filter_list</mat-icon>{{ ovLabel }}</button>
-                <sc-if value="{{ ovOpen }}" hint-placeholder-val="{{ false }}">
-                  <div class="cdk-backdrop" onClick="{{ closeOv }}"></div>
-                  <div class="pop" style="left:0;top:40px;width:260px;padding:8px 0">
-                    <div style="padding:8px 16px"><span class="eyebrow">Branch</span></div>
-                    <sc-for list="{{ ovItems }}" as="o" hint-placeholder-count="4">
-                      <div style="padding:0 16px"><mat-checkbox checked="{{ o.checked }}" onClick="{{ o.toggle }}"><span class="box"><mat-icon>check</mat-icon></span>{{ o.label }}</mat-checkbox></div>
-                    </sc-for>
-                    <mat-divider></mat-divider>
-                    <div class="row" style="justify-content:flex-end;gap:8px;padding:0 8px"><button matButton="text" onClick="{{ clearOv }}">Clear</button><button matButton="filled" onClick="{{ closeOv }}">Apply</button></div>
-                  </div>
-                </sc-if>
-              </div>
-              <span class="mut" style="text-wrap:pretty">A transparent backdrop covers the viewport while the panel is open. Clicking anywhere outside the panel closes it. This replaces the hand-rolled scrims in the shell.</span>
-            </mat-card>
-
-            <mat-card appearance="outlined">
-              <mat-card-title>Drag to reorder</mat-card-title>
-              <mat-card-subtitle>CDK cdkDropList · cdkDrag · cdkDragHandle</mat-card-subtitle>
-              <div style="display:flex;flex-direction:column;gap:4px">
+          <div class="grid3c">
+            <mat-card appearance="outlined" style="padding:0;gap:0">
+              <div style="padding:20px 20px 0;display:flex;flex-direction:column;align-items:flex-start;gap:2px"><mat-card-title>Drag to reorder</mat-card-title><mat-card-subtitle>cdkDropList · cdkDrag · cdkDragHandle</mat-card-subtitle></div>
+              <div class="dl3" ref="{{ dlRef }}">
                 <sc-for list="{{ dragItems }}" as="d" hint-placeholder-count="4">
-                  <div class="{{ d.cls }}" draggable="true" onDragStart="{{ d.onStart }}" onDragOver="{{ d.onOver }}" onDragEnd="{{ d.onEnd }}" onDrop="{{ d.onEnd }}">
-                    <mat-icon style="font-size:24px;color:var(--mat-sys-on-surface-variant)">drag_indicator</mat-icon>
-                    <span style="flex:1">{{ d.label }}</span>
-                    <span class="mut" style="font-variant-numeric:tabular-nums">{{ d.pos }}</span>
+                  <div class="{{ d.cls }}">
+                    <mat-icon class="hdl" onPointerDown="{{ d.down }}" onPointerMove="{{ dragMove }}" onPointerUp="{{ dragUp }}" onPointerCancel="{{ dragUp }}">drag_indicator</mat-icon>
+                    <span>{{ d.label }}</span>
                   </div>
                 </sc-for>
               </div>
-              <span class="mut">Drag a row by its handle. The Advisor Dashboard's card order uses the same pair.</span>
+              <sc-if value="{{ dragOn }}" hint-placeholder-val="{{ false }}">
+                <div class="di pv" style="left:{{ pvLeft }};top:{{ pvTop }};width:{{ pvWidth }}"><mat-icon class="hdl">drag_indicator</mat-icon><span>{{ pvLabel }}</span></div>
+              </sc-if>
             </mat-card>
 
             <mat-card appearance="outlined">
-              <mat-card-title>Autocomplete</mat-card-title>
-              <mat-card-subtitle>mat-autocomplete · matInput · mat-option</mat-card-subtitle>
+              <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px;margin-bottom:12px"><mat-card-title>Autocomplete</mat-card-title><mat-card-subtitle>mat-autocomplete · matInput · mat-option · as on the OFA pages</mat-card-subtitle></div>
               <div style="position:relative">
-                <mat-form-field>
-                  <mat-label>Search every advisor</mat-label>
-                  <div class="field"><mat-icon>person_search</mat-icon><input matInput value="{{ acQuery }}" onChange="{{ onAc }}" onFocus="{{ acFocus }}" placeholder="Type a name" autocomplete="off"></div>
-                  <mat-hint>{{ acHint }}</mat-hint>
-                </mat-form-field>
+                <div class="ofw"><div class="of"><span class="ofl">Advisor</span><input matInput role="combobox" aria-label="Advisor" aria-autocomplete="list" aria-expanded="{{ acFocusedAttr }}" value="{{ acQuery }}" onChange="{{ onAc }}" onFocus="{{ acFocus }}" placeholder="Type to search" autocomplete="off"><mat-icon aria-hidden="true">search</mat-icon></div><span class="ofh">{{ acHint }}</span></div>
                 <sc-if value="{{ acOpen }}" hint-placeholder-val="{{ false }}">
                   <div class="cdk-backdrop" onClick="{{ acClose }}"></div>
-                  <div class="pop" style="left:0;right:0;top:72px;max-height:256px;overflow:auto;padding:8px 0">
+                  <div class="pop" role="listbox" style="left:0;right:0;top:58px;max-height:256px;overflow:auto;padding:8px 0">
                     <sc-for list="{{ acOpts }}" as="o" hint-placeholder-count="4">
-                      <div class="opt" onClick="{{ o.pick }}"><span>{{ o.pre }}</span><strong>{{ o.hit }}</strong><span>{{ o.post }}</span><span class="spacer"></span><span class="mut">{{ o.branch }}</span></div>
+                      <div class="opt" role="option" onClick="{{ o.pick }}"><span>{{ o.pre }}</span><strong>{{ o.hit }}</strong><span>{{ o.post }}</span></div>
                     </sc-for>
-                    <sc-if value="{{ acNone }}" hint-placeholder-val="{{ false }}"><div style="padding:12px 16px" class="mut">No advisor matches.</div></sc-if>
                   </div>
                 </sc-if>
               </div>
             </mat-card>
 
             <mat-card appearance="outlined">
-              <mat-card-title>Datepicker</mat-card-title>
-              <mat-card-subtitle>mat-datepicker · mat-datepicker-toggle · not densified</mat-card-subtitle>
-              <div style="position:relative">
-                <mat-form-field>
-                  <mat-label>Reference Date</mat-label>
-                  <div class="field" style="padding-right:4px"><input matInput value="{{ dateVal }}" placeholder="DD/MM/YYYY" readonly="true"><button matIconButton aria-label="Open calendar" onClick="{{ toggleDp }}"><mat-icon>calendar_today</mat-icon></button></div>
-                  <mat-hint>The calendar is a pop-up, so it keeps Material's own size at density −2.</mat-hint>
-                </mat-form-field>
+              <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px;margin-bottom:12px"><mat-card-title>Datepicker</mat-card-title><mat-card-subtitle>mat-datepicker · mat-datepicker-toggle · as on the OFA pages</mat-card-subtitle></div>
+              <div style="position:relative;max-width:280px">
+                <div style="position:relative;display:flex;align-items:center;gap:4px;height:48px;padding:0 8px 0 16px;border:1px solid {{ dpBorder }};box-shadow:{{ dpRing }};border-radius:4px;background:var(--mat-sys-surface)">
+                  <span style="position:absolute;top:-8px;left:12px;padding:0 4px;background:var(--mat-sys-surface);font:400 12px/16px var(--f);color:{{ dpLabelC }};white-space:nowrap">Reference Date</span>
+                  <input matInput value="{{ dateText }}" onChange="{{ onDateText }}" onBlur="{{ onDateBlur }}" aria-label="Reference Date" style="flex:1;min-width:0;border:none;outline:none;background:none;padding:0;font:400 13px/20px var(--f);color:var(--mat-sys-on-surface)">
+                  <button matIconButton class="ib24" aria-label="Open calendar" onClick="{{ toggleDp }}" style="width:32px;height:32px"><mat-icon style="font-size:20px;width:20px;height:20px;color:var(--mat-sys-on-surface-variant)">calendar_today</mat-icon></button>
+                </div>
                 <sc-if value="{{ dpOpen }}" hint-placeholder-val="{{ false }}">
                   <div class="cdk-backdrop" onClick="{{ toggleDp }}"></div>
-                  <div class="pop" style="right:0;top:72px;width:312px;padding:8px 8px 12px">
-                    <div class="row" style="justify-content:space-between;padding:0 4px 4px">
-                      <span style="font:var(--mat-sys-title-small);text-transform:uppercase;letter-spacing:.06em">{{ dpTitle }}</span>
-                      <span class="row" style="gap:0"><button matIconButton aria-label="Previous month" onClick="{{ dpPrev }}"><mat-icon>chevron_left</mat-icon></button><button matIconButton aria-label="Next month" onClick="{{ dpNext }}"><mat-icon>chevron_right</mat-icon></button></span>
+                  <div role="dialog" aria-label="Choose a date" style="position:absolute;left:0;top:56px;z-index:1000;width:296px;padding:12px;background:var(--mat-sys-surface);border-radius:6px;box-shadow:var(--mat-sys-level2)">
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0 4px 8px"><span style="font:500 13px/18px var(--f)">{{ dpTitle }}</span><span style="display:flex;gap:2px"><button matIconButton class="ib24" aria-label="Previous month" onClick="{{ dpPrev }}"><mat-icon>chevron_left</mat-icon></button><button matIconButton class="ib24" aria-label="Next month" onClick="{{ dpNext }}"><mat-icon>chevron_right</mat-icon></button></span></div>
+                    <div style="display:grid;grid-template-columns:repeat(7,1fr);row-gap:2px;font:400 11px/16px var(--f);color:var(--mat-sys-on-surface-variant);text-align:center">
+                      <sc-for list="{{ dpDow }}" as="w" hint-placeholder-count="7"><span style="padding:4px 0">{{ w }}</span></sc-for>
+                      <sc-for list="{{ dpCells }}" as="c" hint-placeholder-count="31"><button onClick="{{ c.pick }}" style="height:36px;border:{{ c.bd }};cursor:pointer;font:400 12px/16px var(--f);border-radius:9999px;background:{{ c.bg }};color:{{ c.fg }};visibility:{{ c.vis }}">{{ c.label }}</button></sc-for>
                     </div>
-                    <div style="display:grid;grid-template-columns:repeat(7,40px);justify-content:center;row-gap:2px">
-                      <sc-for list="{{ dpDow }}" as="w" hint-placeholder-count="7"><span style="height:32px;display:flex;align-items:center;justify-content:center;font:var(--mat-sys-body-small);color:var(--mat-sys-on-surface-variant)">{{ w }}</span></sc-for>
-                      <sc-for list="{{ dpCells }}" as="c" hint-placeholder-count="35"><button class="{{ c.cls }}" onClick="{{ c.pick }}">{{ c.label }}</button></sc-for>
-                    </div>
+                    <div style="font:400 11px/16px var(--f);color:var(--mat-sys-on-surface-variant);padding:8px 4px 0">Type it as DD-MM-YYYY, or pick it here.</div>
                   </div>
                 </sc-if>
               </div>
             </mat-card>
           </div>
-
-          <mat-card appearance="outlined" style="padding:0;gap:0;overflow:hidden">
-            <div style="padding:16px 24px 8px;display:flex;flex-direction:column;align-items:flex-start;gap:2px">
-              <mat-card-title>A 200-row month</mat-card-title>
-              <mat-card-subtitle>cdk-virtual-scroll-viewport · *cdkVirtualFor · itemSize 44 · mat-table row styling</mat-card-subtitle>
+        
+          <mat-card appearance="outlined" class="oc" style="gap:16px">
+            <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px"><mat-card-title>Severity colours</mat-card-title><mat-card-subtitle>The palette every status chip and bar on the OFA pages uses, best to worst</mat-card-subtitle></div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px">
+              <sc-for list="{{ ofaPal }}" as="c" hint-placeholder-count="6"><div style="display:flex;flex-direction:column;gap:6px"><div style="height:56px;border-radius:6px;background:{{ c.hex }};display:flex;align-items:flex-end;padding:8px 10px"><span style="font:500 11px/16px var(--f);letter-spacing:.06em;color:{{ c.tx }}">AA</span></div><span style="font:var(--mat-sys-title-small)">{{ c.name }} · {{ c.hex }}</span><span class="meta" style="text-wrap:pretty">{{ c.use }}</span></div></sc-for>
             </div>
-            <table mat-table>
-              <thead><tr>
-                <th mat-header-cell style="width:80px" class="num">#</th>
-                <th mat-header-cell>Client</th>
-                <th mat-header-cell style="width:120px">Account</th>
-                <th mat-header-cell style="width:120px">Reference Date</th>
-                <th mat-header-cell style="width:96px">Cycle</th>
-                <th mat-header-cell class="num" style="width:96px">Fee p.a. ($)</th>
-                <th mat-header-cell style="width:200px">Waiting on</th>
-              </tr></thead>
-            </table>
-            <div class="vsv" onScroll="{{ onVs }}">
-              <div style="height:8800px;position:relative">
-                <table mat-table style="position:absolute;left:0;right:0;top:0;transform:translateY({{ vsOffset }})">
-                  <colgroup><col style="width:80px"><col><col style="width:120px"><col style="width:120px"><col style="width:96px"><col style="width:96px"><col style="width:200px"></colgroup>
-                  <tbody>
-                    <sc-for list="{{ vsRows }}" as="r" hint-placeholder-count="14">
-                      <tr><td mat-cell class="num" style="background:{{ r.bg }}">{{ r.n }}</td><td mat-cell style="background:{{ r.bg }}">{{ r.client }}</td><td mat-cell style="background:{{ r.bg }}">{{ r.acct }}</td><td mat-cell style="background:{{ r.bg }}">{{ r.ref }}</td><td mat-cell style="background:{{ r.bg }}">{{ r.cycle }}</td><td mat-cell class="num" style="background:{{ r.bg }}">{{ r.fee }}</td><td mat-cell style="background:{{ r.bg }}"><mat-chip appearance="outlined">{{ r.wait }}</mat-chip></td></tr>
-                    </sc-for>
-                  </tbody>
-                </table>
+          </mat-card>
+          <mat-card appearance="outlined" class="oc" style="gap:12px">
+            <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px"><mat-card-title>Status chips</mat-card-title><mat-card-subtitle>mat-chip · filled in its severity colour · medium weight, capitals, one line · black words on lime and amber, white on the rest</mat-card-subtitle></div>
+            <div style="display:flex;flex-wrap:wrap;gap:16px 24px"><sc-for list="{{ ofaChips }}" as="it" hint-placeholder-count="6"><div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px"><mat-chip data-oc="1" data-tone="{{ it.tone }}">{{ it.label }}</mat-chip><span class="meta">{{ it.name }}</span></div></sc-for></div>
+          </mat-card>
+          <mat-card appearance="outlined" class="oc" style="gap:12px">
+            <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px"><mat-card-title>Days to the Expiry Date</mat-card-title><mat-card-subtitle>Segmented bar · soonest on the left · each part filters the table below</mat-card-subtitle></div>
+            <div role="img" aria-label="{{ ofaBarAria }}" style="display:flex;gap:2px;height:24px;border-radius:6px;overflow:hidden"><sc-for list="{{ ofaBar }}" as="b" hint-placeholder-count="5"><div role="button" tabindex="0" aria-pressed="{{ b.pr }}" title="{{ b.tip }}" onClick="{{ b.go }}" onKeyDown="{{ b.key }}" style="cursor:pointer;opacity:{{ b.op }};transition:opacity 160ms ease;flex:{{ b.n }} 1 0;min-width:28px;background:{{ b.hex }};display:flex;align-items:center;padding:0 8px;font:500 11px/16px var(--f);color:{{ b.tx }};font-variant-numeric:tabular-nums">{{ b.n }}</div></sc-for></div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px 20px"><sc-for list="{{ ofaBar }}" as="b" hint-placeholder-count="5"><span role="button" tabindex="0" aria-pressed="{{ b.pr }}" onClick="{{ b.go }}" onKeyDown="{{ b.key }}" style="cursor:pointer;opacity:{{ b.op }};transition:opacity 160ms ease;display:inline-flex;align-items:center;gap:6px"><span aria-hidden="true" style="width:10px;height:10px;border-radius:2px;background:{{ b.hex }}"></span>{{ b.label }} · {{ b.n }}</span></sc-for></div>
+          </mat-card>
+          <mat-card appearance="outlined" style="gap:8px">
+            <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px"><mat-card-title>OFA Checklist</mat-card-title><mat-card-subtitle>Steps on a line, each ticked with who and when · a step's name opens its notes, with attachments and Add note</mat-card-subtitle></div>
+            <div style="display:flex;flex-direction:column;padding:8px 0 0"><sc-for list="{{ ofaCk }}" as="t" hint-placeholder-count="6"><div style="display:grid;grid-template-columns:120px 24px minmax(0,1fr);column-gap:16px"><div style="display:flex;flex-direction:column;align-items:flex-end;padding-top:2px"><span style="font:500 11px/16px var(--f);letter-spacing:.05em;color:{{ t.bdc }};white-space:nowrap">{{ t.bd }}</span><span style="font:400 11px/16px var(--f);color:#929292;white-space:nowrap">{{ t.dm }}</span></div><div style="display:flex;flex-direction:column;align-items:center"><button onClick="{{ t.tick }}" disabled="{{ t.ro }}" aria-label="{{ t.tickAria }}" title="{{ t.tickAria }}" style="width:24px;height:24px;border-radius:999px;border:2px solid {{ t.ring }};background:{{ t.dot }};display:flex;align-items:center;justify-content:center;cursor:{{ t.cur }};padding:0;flex:none"><sc-if value="{{ t.done }}" hint-placeholder-val="{{ false }}"><mat-icon style="font-size:16px;width:16px;height:16px;color:#fff">check</mat-icon></sc-if></button><span style="flex:1;width:2px;background:{{ t.line }};min-height:20px"></span></div><div style="display:flex;flex-direction:column;gap:6px;padding-bottom:16px;min-width:0"><button onClick="{{ t.open }}" aria-expanded="{{ t.isOpen }}" style="all:unset;cursor:pointer;display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span style="font:500 13px/20px var(--f);color:{{ t.fg }}">{{ t.name }}</span><sc-if value="{{ t.nn }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:2px;font:500 11px/16px var(--f);color:#404040;border:1px solid var(--mat-sys-outline-variant);border-radius:999px;padding:0 8px"><mat-icon style="font-size:14px;width:14px;height:14px">sticky_note_2</mat-icon>{{ t.nn }}</span></sc-if><mat-icon style="font-size:18px;width:18px;height:18px;color:#929292">{{ t.chev }}</mat-icon></button><span style="font:400 11px/16px var(--f);color:#404040">{{ t.meta }}</span><sc-if value="{{ t.isOpen }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-direction:column;gap:8px;background:#F7F7F7;border-radius:6px;padding:12px"><div style="display:flex;flex-direction:column;gap:8px;max-height:{{ t.nmax }};overflow-y:auto;scrollbar-gutter:stable"><sc-for list="{{ t.notes }}" as="n" hint-placeholder-count="1"><div style="display:flex;flex-direction:column;gap:2px"><span style="font:400 13px/18px var(--f);text-wrap:pretty">{{ n.text }}</span><span style="font:400 11px/16px var(--f);color:#404040">{{ n.who }} · {{ n.date }}</span><sc-if value="{{ n.hasAtt }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-wrap:wrap;gap:6px;padding-top:2px"><sc-for list="{{ n.att }}" as="f" hint-placeholder-count="1"><a href="#doc" onClick="{{ n.go }}" style="display:inline-flex;align-items:center;gap:4px;font:400 12px/16px var(--f);color:var(--mat-sys-on-surface);text-decoration:underline"><mat-icon style="font-size:14px;width:14px;height:14px">attach_file</mat-icon>{{ f }}</a></sc-for></div></sc-if></div></sc-for></div><sc-if value="{{ t.noNotes }}" hint-placeholder-val="{{ false }}"><span style="font:400 12px/16px var(--f);color:#929292">No notes on this step.</span></sc-if><sc-if value="{{ t.canAdd }}" hint-placeholder-val="{{ false }}"><sc-if value="{{ t.hasPend }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ t.pend }}" as="f" hint-placeholder-count="1"><span style="display:inline-flex;align-items:center;gap:4px;height:24px;padding:0 4px 0 10px;border:1px solid var(--mat-sys-outline-variant);border-radius:999px;font:400 12px/16px var(--f);background:#fff"><mat-icon style="font-size:14px;width:14px;height:14px">description</mat-icon>{{ f.name }}<button onClick="{{ f.rm }}" aria-label="Remove attachment" style="border:0;background:none;cursor:pointer;padding:0;display:flex"><mat-icon style="font-size:16px;width:16px;height:16px">close</mat-icon></button></span></sc-for></div></sc-if><div style="display:flex;gap:8px;align-items:flex-end"><textarea value="{{ t.draft }}" onChange="{{ t.setDraft }}" placeholder="Add a note to this step" aria-label="Add a note to this step" style="flex:1;min-height:40px;resize:vertical;border:1px solid var(--mat-sys-surface-container-highest);border-radius:4px;padding:8px 12px;font:400 13px/18px var(--f);background:#fff"></textarea><label title="Attach documents" style="flex:none;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;cursor:pointer"><mat-icon style="font-size:22px;width:22px;height:22px">attach_file</mat-icon><input type="file" multiple onChange="{{ t.attIn }}" style="display:none"></label><button matButton="text" onClick="{{ t.add }}" disabled="{{ t.addDis }}">Add note</button></div></sc-if></div></sc-if></div></div></sc-for></div>
+          </mat-card>
+          <mat-card appearance="outlined" class="oc" style="gap:16px">
+            <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px"><mat-card-title>Filter the list</mat-card-title><mat-card-subtitle>The table's filter_list icon button, with a count of the filters on · its dialog: outlined fields with the label on the border, Reset and Apply</mat-card-subtitle></div>
+            <div style="display:flex;align-items:center;gap:8px"><span style="position:relative;display:inline-flex"><button matIconButton aria-label="Filter the list · 2 on" title="Filter the list"><mat-icon>filter_list</mat-icon></button><span aria-hidden="true" style="position:absolute;top:2px;right:2px;min-width:16px;height:16px;padding:0 4px;border-radius:8px;background:var(--mat-sys-primary);color:var(--mat-sys-on-primary);font:500 10px/16px var(--f);text-align:center">2</span></span><button matIconButton aria-label="Export" title="Export"><mat-icon>download</mat-icon></button><button matIconButton aria-label="Show or hide columns" title="Show or hide columns"><mat-icon>view_column</mat-icon></button></div>
+            <div role="dialog" aria-labelledby="ofaFltT" style="max-width:720px;border:1px solid var(--mat-sys-outline-variant);border-radius:12px;background:var(--mat-sys-surface);box-shadow:var(--mat-sys-level2);display:flex;flex-direction:column">
+              <div style="display:flex;align-items:center;gap:8px;padding:20px 24px 4px"><span id="ofaFltT" style="flex:1;font:var(--mat-sys-headline-small)">Filter the list</span><button matIconButton aria-label="Close" title="Close"><mat-icon>close</mat-icon></button></div>
+              <span class="meta" style="padding:0 24px 20px">Choose any combination. Nothing changes until you apply.</span>
+              <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px;padding:8px 24px 8px">
+                <sc-for list="{{ ofaFlt }}" as="f" hint-placeholder-count="6"><div style="grid-column:{{ f.gc }}"><div style="position:relative;display:flex;align-items:center;gap:8px;height:48px;padding:0 12px;border:1px solid var(--mat-sys-outline);border-radius:6px;background:var(--mat-sys-surface)"><span style="position:absolute;top:-8px;left:10px;padding:0 4px;background:var(--mat-sys-surface);font:400 12px/16px var(--f);color:var(--mat-sys-on-surface-variant)">{{ f.label }}</span><span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:{{ f.fg }}">{{ f.v }}</span><mat-icon aria-hidden="true" style="font-size:20px;width:20px;height:20px;color:var(--mat-sys-on-surface-variant)">{{ f.icon }}</mat-icon></div></div></sc-for>
               </div>
-            </div>
-            <div class="row" style="padding:12px 24px;gap:8px;border-top:1px solid var(--mat-sys-outline-variant)">
-              <span class="mut" style="font-variant-numeric:tabular-nums">{{ vsNote }}</span>
+              <div style="display:flex;justify-content:flex-end;gap:8px;padding:16px 24px 20px"><button matButton="text">Reset</button><button matButton="filled">Apply</button></div>
             </div>
           </mat-card>
         </sc-if>
@@ -849,7 +779,7 @@ body{min-width:708px}
               </div>
               <mat-card appearance="outlined" style="width:100%;gap:4px;background:var(--mat-sys-surface-variant);border-color:transparent">
                 <span class="eyebrow">Signed in as</span>
-                <span style="font:var(--mat-sys-title-small)">Alex Nguyen · alex.nguyen@shawandpartners.com.au</span>
+                <span style="font:var(--mat-sys-title-small)">Alex Nguyen · firstname.lastname@shawandpartners.com.au</span>
                 <span class="mut">Advice Operations · Windows authentication</span>
                 <span class="mut">Groups: ADV-OPS</span>
               </mat-card>
@@ -862,7 +792,7 @@ body{min-width:708px}
       </div>
 
       <sc-if value="{{ snackOn }}" hint-placeholder-val="{{ false }}">
-        <mat-snack-bar style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:30">Arrangement saved.<button matButton="text" onClick="{{ closeSnack }}">Undo</button></mat-snack-bar>
+        <mat-snack-bar style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:30;display:flex;align-items:center;gap:16px;width:344px;min-height:48px;padding:0 8px 0 16px;background:#000000;color:#FFFFFF;border-radius:4px;box-shadow:var(--mat-sys-level3);font:400 13px/20px var(--f)"><span style="flex:1">Arrangement saved.</span><button matButton="text" onClick="{{ closeSnack }}" style="margin-left:auto;color:var(--mat-sys-primary-fixed-dim);background:transparent">Undo</button></mat-snack-bar>
       </sc-if>
     </div>
 
@@ -910,10 +840,10 @@ const GROUPS = [
   { id: "buttons", label: "Buttons & actions", icon: "smart_button", title: "Buttons and Actions", blurb: "Every matButton appearance, icon buttons, FABs, toggle groups and chips." },
   { id: "forms", label: "Form controls", icon: "edit_note", title: "Form Controls", blurb: "Text fields in each appearance and state, selection controls, select and slider." },
   { id: "data", label: "Data display", icon: "table_rows", title: "Data Display", blurb: "Table, list, accordion and the three card appearances." },
-  { id: "navi", label: "Navigation", icon: "explore", title: "Navigation", blurb: "Tabs, menus, stepper and nav list." },
-  { id: "charts", label: "Charts", icon: "insert_chart", title: "Charts", blurb: "Donut, pie, bar, grouped bar, line, stacked bar, rings and sparklines in the Shaw chart palette." },
+  { id: "navi", label: "Navigation", icon: "explore", title: "Navigation", blurb: "Tabs, menu, stepper and nav list." },
+  { id: "charts", label: "Charts", icon: "insert_chart", title: "Charts", blurb: "Eleven ECharts charts in the Shaw chart palette, with real axes, labels and tooltips." },
   { id: "feedback", label: "Feedback & overlays", icon: "campaign", title: "Feedback and Overlays", blurb: "Dialog, snack bar, tooltip, progress indicators and badges." },
-  { id: "ofa", label: "Extended components", icon: "add_box", title: "Extended Components", blurb: "Six Material and CDK components beyond the basics, used by the OFA screens: sortable tables, the CDK overlay, drag to reorder, autocomplete, the datepicker and virtual scroll." },
+  { id: "ofa", label: "Extended components", icon: "add_box", title: "Extended Components", blurb: "The components past the basics that the OFA screens and the Advisor Dashboard are built from: a sortable table with a filter panel, drag to reorder, autocomplete, the datepicker and virtual scroll." },
 ];
 const BRANCHES = ["Sydney", "Melbourne", "Perth", "Brisbane", "Adelaide"];
 const TABS = [
@@ -930,114 +860,189 @@ const PALETTE = ["#E84810", "#1F225E", "#007B84", "#A9B819", "#FFCC00", "#EE7601
 const fmt = (n) => Math.round(n).toLocaleString("en-AU");
 function rng(seed) { let s = seed; return () => { s = (s * 9301 + 49297) % 233280; return s / 233280; }; }
 
-const ADV = [["K. Patel","Sydney"],["J. Doyle","Melbourne"],["M. Osei","Perth"],["R. Lindqvist","Brisbane"],["A. Moretti","Sydney"],["T. Nakamura","Melbourne"],["S. Abara","Adelaide"],["L. Fitzgerald","Sydney"]];
-const SORT_DATA = (() => { const r = rng(7); return ADV.map(([name, branch]) => {
-  const clients = Math.round(40 + r() * 180), due = Math.round(3 + r() * 27), signed = Math.round(due * (0.3 + r() * 0.7));
-  return { name, branch, clients, due, signed, pct: Math.round((signed / due) * 100), fees: 180000 + r() * 1200000, cps: Math.round(6 + r() * 42),
-    bt: 2e6 + r() * 3e7, nw: r() * 9e6, hub: r() * 6e6, mq: r() * 4e6 }; }); })();
-const COLS = [
-  { k: "name", label: "Advisor", w: "auto", cls: "stick" },
-  { k: "branch", label: "Branch", w: "112px" },
-  { k: "clients", label: "Clients", w: "72px", num: true },
-  { k: "due", label: "Due", w: "56px", num: true },
-  { k: "signed", label: "Signed", w: "72px", num: true },
-  { k: "pct", label: "Signed %", w: "72px", num: true, f: (v) => v + "%" },
-  { k: "fees", label: "Fees p.a. ($)", w: "96px", num: true },
-  { k: "cps", label: "Oct 2026 (cps)", w: "72px", num: true },
-  { k: "bt", label: "BT Panorama ($)", w: "96px", num: true },
+const ADVISORS = [
+  { advisor: "K. Patel", branch: "Sydney", clients: 128, due: 18, signed: 7, fees: 472773, insurance: 21400, lending: 8120, estate: 3050 },
+  { advisor: "M. Osei", branch: "Perth", clients: 141, due: 16, signed: 7, fees: 240087, insurance: 9870, lending: 14300, estate: 0 },
+  { advisor: "T. Nakamura", branch: "Melbourne", clients: 199, due: 16, signed: 7, fees: 903560, insurance: 40210, lending: 2480, estate: 11900 },
+  { advisor: "L. Fitzgerald", branch: "Sydney", clients: 129, due: 15, signed: 13, fees: 720874, insurance: 17650, lending: 0, estate: 6300 },
+  { advisor: "R. Lindqvist", branch: "Brisbane", clients: 74, due: 14, signed: 10, fees: 986245, insurance: 5200, lending: 31700, estate: 2100 },
+  { advisor: "A. Moretti", branch: "Sydney", clients: 138, due: 12, signed: 5, fees: 1107402, insurance: 28900, lending: 12050, estate: 9400 },
+  { advisor: "J. Doyle", branch: "Melbourne", clients: 114, due: 11, signed: 9, fees: 968930, insurance: 12300, lending: 6600, estate: 0 },
+  { advisor: "S. Abara", branch: "Adelaide", clients: 121, due: 5, signed: 2, fees: 674717, insurance: 3900, lending: 1250, estate: 4700 },
 ];
-const OTHER = [{ k: "nw", label: "Netwealth ($)" }, { k: "hub", label: "HUB24 ($)" }, { k: "mq", label: "Macquarie Wrap ($)" }];
-
-const DRAG0 = ["Gross revenue", "Funds under advice", "Ongoing fee arrangements", "Client reviews"];
-const AC_NAMES = [["Aisha Rahman","Sydney"],["Ben Castellano","Melbourne"],["Carla Jensen","Perth"],["Daniel Okafor","Brisbane"],["Elena Petrova","Sydney"],["Felix Wong","Adelaide"],["Grace Mbeki","Melbourne"],["Hamish Doyle","Sydney"],["Isla McKenzie","Perth"],["Jun Park","Brisbane"],["Kiran Patel","Sydney"],["Lucia Ferreira","Melbourne"],["Marcus Lindqvist","Adelaide"],["Nadia Haddad","Sydney"]];
-const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const FBRANCHES = Array.from(new Set(ADVISORS.map(r => r.branch))).sort();
+const MEMBERS = [{ k: "insurance", label: "Insurance ($)" }, { k: "lending", label: "Lending ($)" }, { k: "estate", label: "Estate ($)" }];
+const COLS = [
+  { k: "advisor", label: "Advisor", start: "asc", cls: "stick", cellCls: "stick nm" },
+  { k: "branch", label: "Branch", start: "asc" },
+  { k: "clients", label: "Clients", num: true },
+  { k: "due", label: "Due", num: true },
+  { k: "signed", label: "Signed", num: true },
+  { k: "signedPct", label: "Signed %", num: true },
+  { k: "fees", label: "Fees p.a. ($)", num: true },
+  { k: "other", label: "Other (3) ($)", num: true, fold: true },
+];
+const ADVISOR_NAMES = ADVISORS.map(r => r.advisor).concat(["B. Okafor", "C. Huang", "D. Reyes", "E. Sandoval", "F. Kowalski", "G. Haddad"]).sort((a, b) => a.localeCompare(b));
+const WAITING_ON = ["Advisor", "Client", "Back Office", "OFA Team", "Nobody (signed)"];
+const MONTH = Array.from({ length: 200 }, (_, i) => ({
+  index: String(i + 1), client: "Client " + String(i + 1).padStart(3, "0"), account: "DEMO-" + String(i + 1).padStart(3, "0"),
+  ref: String(((i * 7) % 28) + 1).padStart(2, "0") + "/09/2026", cycle: "Oct 2026", fee: fmt(2000 + ((i * 7919) % 13000)), wait: WAITING_ON[(i * 3) % WAITING_ON.length] }));
+const ROW_H = 44, VIEW_H = 484, BUFFER = 8;
+const CARDS = ["Gross revenue", "Funds under advice", "Ongoing fee arrangements", "Client reviews"];
 const MSHORT = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const VS = (() => { const r = rng(42), waits = ["Advisor", "Client", "OFA Team", "Back Office", "Nobody (signed)"]; const out = [];
-  for (let i = 0; i < 200; i++) { const d = 1 + Math.floor(r() * 30);
-    out.push({ n: String(i + 1), client: "Client " + String(i + 1).padStart(3, "0"), acct: "S" + (100000 + Math.floor(r() * 899999)),
-      ref: String(d).padStart(2, "0") + "/09/2026", cycle: "Oct 2026", fee: fmt(800 + r() * 14000), wait: waits[Math.floor(r() * waits.length)] }); }
-  return out; })();
 
-function slices(data, colors) {
-  const total = data.reduce((t, d) => t + d.v, 0), C = 2 * Math.PI * 60; let acc = 0;
-  return data.map((d, i) => { const frac = d.v / total;
-    const seg = { label: d.label, color: colors[i % colors.length], pctLabel: Math.round(frac * 100) + "%", dash: (frac * C).toFixed(1) + " " + C.toFixed(1), offset: (-acc * C).toFixed(1) };
-    acc += frac; return seg; });
-}
-function pieSlices(data, colors) {
-  const total = data.reduce((t, d) => t + d.v, 0); let a = -Math.PI / 2;
-  return data.map((d, i) => { const frac = d.v / total, sweep = frac * 2 * Math.PI, b = a + sweep;
-    const p = (t) => [80 + 72 * Math.cos(t), 80 + 72 * Math.sin(t)]; const [x1, y1] = p(a), [x2, y2] = p(b);
-    const dd = "M80 80 L" + x1.toFixed(1) + " " + y1.toFixed(1) + " A72 72 0 " + (sweep > Math.PI ? 1 : 0) + " 1 " + x2.toFixed(1) + " " + y2.toFixed(1) + " Z";
-    a = b; return { label: d.label, color: colors[i % colors.length], pctLabel: Math.round(frac * 100) + "%", d: dd }; });
-}
-function chartVals() {
-  const months = ["Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug"];
-  const issued = [38,44,41,52,47,58,61,55,63,68,64,72], signed = [30,36,35,44,41,49,52,48,55,58,57,63];
-  const base = 176, max = 80, y = (v) => base - (v / max) * (base - 20);
-  const gridLines = [0,20,40,60,80].map(v => ({ y: y(v).toFixed(1), ty: (y(v) + 3).toFixed(1), label: String(v) }));
-  const six = months.slice(6), sI = issued.slice(6), sS = signed.slice(6), slot = 382 / six.length;
-  const bars = six.map((m, i) => ({ label: m, x: (34 + i * slot + slot * 0.22).toFixed(1), w: (slot * 0.56).toFixed(1), y: y(sI[i]).toFixed(1), h: (base - y(sI[i])).toFixed(1), cx: (34 + i * slot + slot / 2).toFixed(1) }));
-  const groupBars = []; six.forEach((m, i) => { const bw = slot * 0.26;
-    groupBars.push({ x: (34 + i * slot + slot * 0.18).toFixed(1), w: bw.toFixed(1), y: y(sI[i]).toFixed(1), h: (base - y(sI[i])).toFixed(1), color: "#1F225E" });
-    groupBars.push({ x: (34 + i * slot + slot * 0.18 + bw + 3).toFixed(1), w: bw.toFixed(1), y: y(sS[i]).toFixed(1), h: (base - y(sS[i])).toFixed(1), color: "#007B84" }); });
-  const lx = (i) => 34 + (i * 382) / (months.length - 1);
-  const linePoints = issued.map((v, i) => lx(i).toFixed(1) + "," + y(v).toFixed(1)).join(" ");
-  const linePoints2 = signed.map((v, i) => lx(i).toFixed(1) + "," + y(v).toFixed(1)).join(" ");
-  const sparks = [
-    { label: "Sydney", v: [12,14,13,17,16,19,21,20,24,26,25,29], delta: "+18%", color: "#E84810" },
-    { label: "Melbourne", v: [22,20,21,19,20,18,19,17,18,16,17,15], delta: "−9%", color: "#1F225E" },
-    { label: "Perth", v: [8,9,11,10,12,13,12,14,16,15,18,19], delta: "+24%", color: "#007B84" },
-  ].map(s => { const mx = Math.max.apply(null, s.v), mn = Math.min.apply(null, s.v);
-    return { label: s.label, delta: s.delta, color: s.color, points: s.v.map((v, i) => ((i * 198) / (s.v.length - 1) + 1).toFixed(1) + "," + (36 - ((v - mn) / (mx - mn || 1)) * 32).toFixed(1)).join(" ") }; });
-  const RC = 2 * Math.PI * 42;
-  const rings = [{ label: "Advice Operations", v: 82, color: "#E84810" }, { label: "Client Reporting", v: 64, color: "#007B84" }, { label: "Corporate Advisory", v: 41, color: "#1F225E" }]
-    .map(r => ({ label: r.label, color: r.color, pctLabel: r.v + "%", dash: ((r.v / 100) * RC).toFixed(1) + " " + RC.toFixed(1) }));
-  const sd = [{ label: "Qualified", v: 42 }, { label: "In review", v: 28 }, { label: "Awaiting signature", v: 19 }, { label: "Stalled", v: 11 }], st = sd.reduce((t, d) => t + d.v, 0);
+// Chart theme and options, copied from apps/shell/src/app/core/chart-theme.ts and apps/plugin0 charts-section.ts.
+const CHART_PALETTE = ["#e84810", "#1f225e", "#007b84", "#a9b819", "#ffcc00", "#ee7601"];
+const NEUTRAL = { onSurface: "#000000", onSurfaceVariant: "#404040", outlineVariant: "#e6e6e6", surface: "#ffffff", track: "#e5e5e5", fontFamily: 'Roboto, "Helvetica Neue", sans-serif' };
+function shawTheme() {
+  const n = NEUTRAL, axis = { axisLine: { show: true, lineStyle: { color: n.outlineVariant } }, axisTick: { show: false }, axisLabel: { color: n.onSurfaceVariant, fontSize: 11 }, splitLine: { show: false, lineStyle: { color: n.outlineVariant } } };
   return {
-    donut: slices([{ label: "Sydney", v: 42 }, { label: "Melbourne", v: 31 }, { label: "Perth", v: 17 }, { label: "Brisbane", v: 10 }], PALETTE),
-    pie: pieSlices([{ label: "Active", v: 58 }, { label: "Expiring", v: 22 }, { label: "Awaiting signature", v: 14 }, { label: "Lapsed", v: 6 }], [PALETTE[2], PALETTE[5], PALETTE[4], PALETTE[1]]),
-    gridLines, bars, groupBars, linePoints, linePoints2, areaPoints: "34," + base + " " + linePoints + " 416," + base,
-    lineDots: issued.map((v, i) => ({ x: lx(i).toFixed(1), y: y(v).toFixed(1) })), sparks, rings,
-    stack: sd.map((d, i) => ({ label: d.label, color: PALETTE[(i + 1) % PALETTE.length], pctLabel: Math.round((d.v / st) * 100) + "%" })),
+    color: CHART_PALETTE, backgroundColor: "transparent", textStyle: { fontFamily: n.fontFamily, color: n.onSurface },
+    legend: { textStyle: { color: n.onSurfaceVariant, fontFamily: n.fontFamily, fontSize: 12 }, icon: "circle", itemWidth: 10, itemHeight: 10 },
+    tooltip: { backgroundColor: n.surface, borderColor: n.outlineVariant, borderWidth: 1, textStyle: { color: n.onSurface, fontFamily: n.fontFamily, fontSize: 12 }, axisPointer: { lineStyle: { color: n.outlineVariant } } },
+    categoryAxis: axis,
+    valueAxis: Object.assign({}, axis, { axisLine: { show: false }, splitLine: { show: true, lineStyle: { color: n.outlineVariant } } }),
+    pie: { itemStyle: { borderColor: n.surface, borderWidth: 2, borderRadius: 4 }, label: { color: n.onSurface, fontFamily: n.fontFamily, fontSize: 12 } },
+    bar: { itemStyle: { borderRadius: 4 } },
+    gauge: { progress: { itemStyle: { borderWidth: 0 } }, axisLine: { lineStyle: { color: [[1, n.track]] } }, title: { color: n.onSurfaceVariant, fontFamily: n.fontFamily }, detail: { color: n.onSurface, fontFamily: n.fontFamily } },
   };
 }
-const CHARTS = chartVals();
+const SHARE_TOOLTIP = { trigger: "item", appendTo: "body", formatter: "{b}: {d}%" };
+const GRID = { left: 4, right: 8, top: 16, bottom: 4, containLabel: true };
+function buildCharts(p) {
+  const months = ["Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug"];
+  const issued = [38,44,41,52,47,58,61,55,63,68,64,72], signed = [30,36,35,44,41,49,52,48,55,58,57,63];
+  const six = months.slice(6), sixI = issued.slice(6), sixS = signed.slice(6), vAxis = { type: "value", min: 0, max: 80 };
+  const donut = [{ name: "Sydney", value: 42 }, { name: "Melbourne", value: 31 }, { name: "Perth", value: 17 }, { name: "Brisbane", value: 10 }];
+  const pieIdx = [2, 5, 4, 1];
+  const pie = [{ name: "Active", value: 58 }, { name: "Expiring", value: 22 }, { name: "Awaiting signature", value: 14 }, { name: "Lapsed", value: 6 }].map((d, i) => Object.assign(d, { itemStyle: { color: p[pieIdx[i]] } }));
+  const stack = [{ label: "Qualified", value: 42 }, { label: "In review", value: 28 }, { label: "Awaiting signature", value: 19 }, { label: "Stalled", value: 11 }];
+  const rings = [{ label: "Advice Operations", value: 82, c: 0 }, { label: "Client Reporting", value: 64, c: 2 }, { label: "Corporate Advisory", value: 41, c: 1 }];
+  const sparks = [
+    { label: "Sydney", values: [12,14,13,17,16,19,21,20,24,26,25,29], delta: "+18%", c: 0 },
+    { label: "Melbourne", values: [22,20,21,19,20,18,19,17,18,16,17,15], delta: "−9%", c: 1 },
+    { label: "Perth", values: [8,9,11,10,12,13,12,14,16,15,18,19], delta: "+24%", c: 2 },
+  ];
+  const nodes = ["Sydney", "Melbourne", "Perth", "Brisbane"];
+  const links = [{ source: "Sydney", target: "Melbourne", value: 24 }, { source: "Sydney", target: "Perth", value: 12 }, { source: "Melbourne", target: "Brisbane", value: 15 }, { source: "Melbourne", target: "Perth", value: 9 }, { source: "Perth", target: "Sydney", value: 18 }, { source: "Brisbane", target: "Sydney", value: 11 }];
+  const qs = ["Q1", "Q2", "Q3", "Q4"];
+  const cov = [{ b: "Sydney", v: [52,58,63,72], c: 0 }, { b: "Melbourne", v: [44,49,55,63], c: 1 }, { b: "Perth", v: [26,31,34,41], c: 2 }, { b: "Brisbane", v: [15,18,21,24], c: 3 }];
+  const cells = []; cov.forEach(r => r.v.forEach((v, q) => cells.push({ name: r.b + " — " + qs[q] + ": " + v + " arrangements", value: [qs[q], r.b], symbolSize: 12 + Math.round(v / 5), itemStyle: { color: p[r.c] } })));
+  const deskLinks = [["Sydney","Advice Operations"],["Sydney","Client Reporting"],["Sydney","Corporate Advisory"],["Sydney","Compliance"],["Melbourne","Advice Operations"],["Melbourne","Client Reporting"],["Melbourne","Custody"],["Perth","Advice Operations"],["Perth","Compliance"],["Perth","Research"],["Brisbane","Client Reporting"],["Brisbane","Research"],["Brisbane","Custody"]].map(([a, b]) => ({ source: a, target: b }));
+  const deskNodes = nodes.map(name => ({ name, symbolSize: 22, itemStyle: { color: p[0] } })).concat(["Advice Operations","Client Reporting","Corporate Advisory","Compliance","Custody","Research"].map(name => ({ name, symbolSize: 14, itemStyle: { color: p[2] } })));
+  const share = (v, t) => Math.round((v / t) * 100) + "%";
+  const sum = a => a.reduce((t, d) => t + d.value, 0);
+  const dT = sum(donut), pT = sum(pie), sT = sum(stack);
+  const out = {
+    "ch-donut": { tooltip: SHARE_TOOLTIP, series: [{ type: "pie", radius: ["58%", "88%"], label: { show: false }, labelLine: { show: false }, data: donut }] },
+    "ch-pie": { tooltip: SHARE_TOOLTIP, series: [{ type: "pie", radius: "90%", label: { show: false }, labelLine: { show: false }, data: pie }] },
+    "ch-bar": { tooltip: { trigger: "axis" }, grid: GRID, xAxis: { type: "category", data: six }, yAxis: vAxis, series: [{ name: "Issued", type: "bar", barWidth: "56%", data: sixI }] },
+    "ch-grouped": { tooltip: { trigger: "axis" }, legend: { bottom: 0 }, grid: Object.assign({}, GRID, { bottom: 24 }), xAxis: { type: "category", data: six }, yAxis: vAxis,
+      series: [{ name: "Issued", type: "bar", barGap: "10%", itemStyle: { color: p[1] }, data: sixI }, { name: "Signed", type: "bar", itemStyle: { color: p[2] }, data: sixS }] },
+    "ch-line": { tooltip: { trigger: "axis" }, legend: { bottom: 0 }, grid: Object.assign({}, GRID, { left: 16, right: 20, bottom: 24 }), xAxis: { type: "category", boundaryGap: false, data: months }, yAxis: vAxis,
+      series: [{ name: "Actual", type: "line", symbol: "circle", symbolSize: 6, lineStyle: { width: 2, color: p[0] }, itemStyle: { color: p[0] }, areaStyle: { color: p[0], opacity: 0.1 }, data: issued },
+        { name: "Forecast", type: "line", symbol: "none", lineStyle: { width: 2, type: "dashed", color: p[1] }, itemStyle: { color: p[1] }, data: signed }] },
+    "ch-stack": { tooltip: { trigger: "axis", axisPointer: { type: "shadow" } }, grid: { left: 0, right: 0, top: 0, bottom: 0 }, xAxis: { type: "value", min: 0, max: sT, show: false }, yAxis: { type: "category", data: [""], show: false },
+      series: stack.map((d, i) => ({ name: d.label, type: "bar", stack: "pipeline", barWidth: "100%", itemStyle: { color: p[(i + 1) % p.length] }, data: [d.value] })) },
+    "ch-chord": { tooltip: { trigger: "item" }, series: [{ type: "chord", radius: ["62%", "68%"], startAngle: 90, padAngle: 2, label: { show: true, position: "outside", fontSize: 10 }, lineStyle: { opacity: 0.35 }, emphasis: { focus: "adjacency" },
+      data: nodes.map((name, i) => ({ name, itemStyle: { color: p[i % p.length] } })), links }] },
+    "ch-matrix": { tooltip: { trigger: "item", formatter: "{b}" }, matrix: { left: 8, right: 8, top: 8, bottom: 8, x: { data: qs }, y: { data: cov.map(r => r.b) } }, series: [{ type: "scatter", coordinateSystem: "matrix", data: cells }] },
+    "ch-network": { tooltip: { trigger: "item" }, thumbnail: { show: true, right: 4, bottom: 4, width: "28%", height: "28%" },
+      series: [{ type: "graph", layout: "force", roam: true, draggable: false, force: { repulsion: 110, edgeLength: 52, gravity: 0.08, layoutAnimation: false }, label: { show: true, position: "right", fontSize: 10 }, lineStyle: { opacity: 0.4, width: 1.2, curveness: 0.08 }, emphasis: { focus: "adjacency" }, data: deskNodes, links: deskLinks }] },
+  };
+  rings.forEach((r, i) => { out["ch-ring-" + i] = { series: [{ type: "gauge", startAngle: 90, endAngle: -270, radius: "96%", min: 0, max: 100, pointer: { show: false }, progress: { show: true, width: 10, itemStyle: { color: p[r.c] } },
+    axisLine: { lineStyle: { width: 10 } }, axisTick: { show: false }, splitLine: { show: false }, axisLabel: { show: false }, title: { show: false }, detail: { valueAnimation: false, offsetCenter: [0, 0], fontSize: 18, formatter: "{value}%" }, data: [{ value: r.value }] }] }; });
+  sparks.forEach((sp, i) => { out["ch-spark-" + i] = { tooltip: { trigger: "axis" }, grid: { left: 1, right: 1, top: 3, bottom: 3 }, xAxis: { type: "category", show: false, boundaryGap: false }, yAxis: { type: "value", show: false, min: "dataMin", max: "dataMax" },
+    series: [{ name: sp.label, type: "line", symbol: "none", lineStyle: { width: 2, color: p[sp.c] }, data: sp.values }] }; });
+  return {
+    options: out,
+    donutLegend: donut.map((d, i) => ({ label: d.name, color: p[i % p.length], pctLabel: share(d.value, dT) })),
+    pieLegend: pie.map((d, i) => ({ label: d.name, color: p[pieIdx[i]], pctLabel: share(d.value, pT) })),
+    stackLegend: stack.map((d, i) => ({ label: d.label, color: p[(i + 1) % p.length], pctLabel: share(d.value, sT) })),
+    ringList: rings.map((r, i) => ({ id: "ch-ring-" + i, label: r.label, aria: r.label + " completion: " + r.value + "%" })),
+    sparkList: sparks.map((sp, i) => ({ id: "ch-spark-" + i, label: sp.label, delta: sp.delta, aria: sp.label + " twelve-week trend: " + sp.delta })),
+  };
+}
+const CHARTS = buildCharts(CHART_PALETTE);
 
 class Component extends DCLogic {
   state = {
     nav: "buttons", pinned: false, hover: false, query: "",
     bell: false, user: false, menu: false, dialog: false, snack: false, tip: false,
     seg: 1, chipOne: true, chipTwo: false, cbA: true, cbB: false, radio: 0,
-    tog: true, pct: 60, name: "Harrison Family Trust", branch: "Sydney", tab: 0, panels: [false, false, false],
+    tog: true, pct: 60, name: "Harrison Family Trust", branch: "Sydney", tab: 0, panels: [true, false, false],
     sortK: "due", sortDir: "desc", otherOpen: false,
-    ov: false, ovSel: ["Sydney", "Melbourne"], drag: DRAG0.slice(), dragging: -1,
-    ac: "", acOpen: false, dp: false, date: null, dpY: 2026, dpM: 9, vsTop: 0,
+    filterOpen: false, fSel: FBRANCHES.slice(), cards: CARDS.slice(), drag: null,
+    ac: "", acOpen: false, dp: false, date: null, dateText: "", dpY: 2026, dpM: 9, vsTop: 0,
   };
-  componentWillUnmount() { clearTimeout(this._snack); }
+  componentDidMount() { this.syncCharts(); let n = 0; this._poll = setInterval(() => { this.syncCharts(); if (++n >= 20) clearInterval(this._poll); }, 150); }
+  componentDidUpdate() { this.syncCharts(); }
+  componentWillUnmount() { clearInterval(this._poll); clearTimeout(this._snack); clearTimeout(this._chT); this.disposeCharts(); }
+  disposeCharts() { (this._charts || []).forEach(c => { try { c.dispose(); } catch (e) {} }); this._charts = []; if (this._ro) { this._ro.disconnect(); this._ro = null; } }
+  syncCharts() {
+    const on = this.state.nav === "charts" && this.props.noAccess !== true;
+    if (!on) { if (this._charts && this._charts.length) this.disposeCharts(); return; }
+    const ec = window.echarts;
+    if (!ec) { clearTimeout(this._chT); this._chT = setTimeout(() => this.syncCharts(), 100); return; }
+    if (this._ec === ec && this._charts && this._charts.length && this._charts.every(c => !c.isDisposed() && document.body.contains(c.getDom()))) return;
+    this.disposeCharts();
+    if (ec.__shaw !== true) { ec.registerTheme("shaw", shawTheme()); ec.__shaw = true; }
+    if (this._ec && this._ec !== ec) { Object.values(this._ch || {}).forEach(c => { try { c.dispose(); } catch (e) {} }); this._ch = {}; this._charts = []; }
+    this._ec = ec;
+    const opts = CHARTS.options, made = [];
+    Object.keys(opts).forEach(id => { const el = document.getElementById(id); if (!el) return;
+      try { const c = ec.init(el, "shaw"); c.setOption(opts[id]); made.push(c); } catch (e) { console.warn("chart " + id, e); } });
+    this._charts = made;
+    if (window.ResizeObserver) { this._ro = new ResizeObserver(() => (this._charts || []).forEach(c => { if (!c.isDisposed()) c.resize(); })); made.forEach(c => this._ro.observe(c.getDom())); }
+    if (made.length < Object.keys(opts).length) { clearTimeout(this._chT); this._chT = setTimeout(() => { this.disposeCharts(); this.syncCharts(); }, 150); }
+  }
   slideAt(e) { const r = e.currentTarget.getBoundingClientRect(); this.setState({ pct: Math.round(Math.min(100, Math.max(0, ((e.clientX - r.left) / r.width) * 100))) }); }
 
   sortVals() {
-    const s = this.state;
-    const cols = COLS.concat(s.otherOpen ? OTHER.map((o, i) => ({ k: o.k, label: o.label, w: i === 0 ? "112px" : "96px", num: true, fold: i === 0 }))
-      : [{ k: "other", label: "Other (3) ($)", w: "112px", num: true, fold: true }]);
-    const val = (r, k) => k === "other" ? r.nw + r.hub + r.mq : r[k];
-    const rows = SORT_DATA.slice();
-    if (s.sortDir) rows.sort((a, b) => { const x = val(a, s.sortK), y = val(b, s.sortK); const c = typeof x === "string" ? x.localeCompare(y) : x - y; return s.sortDir === "asc" ? c : -c; });
-    const cell = (c, v) => ({ v: c.f ? c.f(v) : typeof v === "number" ? fmt(v) : v, cls: c.num ? "num" : (c.cls || "") });
-    const cycle = (k) => () => { if (s.sortK !== k) this.setState({ sortK: k, sortDir: "asc" }); else this.setState({ sortDir: s.sortDir === "asc" ? "desc" : s.sortDir === "desc" ? null : "asc" }); };
-    const sum = (k) => SORT_DATA.reduce((t, r) => t + val(r, k), 0);
-    const tDue = sum("due"), tSig = sum("signed");
+    const s = this.state, chosen = s.fSel;
+    const val = (r, k) => k === "signedPct" ? (r.due ? r.signed / r.due : 0) : k === "other" ? r.insurance + r.lending + r.estate : r[k];
+    let rows = ADVISORS.filter(r => chosen.includes(r.branch));
+    if (s.sortDir) { const sign = s.sortDir === "asc" ? 1 : -1; rows = rows.slice().sort((a, b) => { const x = val(a, s.sortK), y = val(b, s.sortK); return (typeof x === "string" ? x.localeCompare(y) : x - y) * sign; }); }
+    const cols = COLS.concat(s.otherOpen ? MEMBERS.map(m => ({ k: m.k, label: m.label, num: true, mem: true })) : []);
+    const tot = {}; ["clients", "due", "signed", "fees", "insurance", "lending", "estate"].forEach(k => { tot[k] = rows.reduce((n, r) => n + r[k], 0); });
+    const pct = (sg, d) => d ? Math.round((sg / d) * 100) + "%" : "–";
+    const show = (r, c) => c.k === "advisor" || c.k === "branch" ? r[c.k] : c.k === "signedPct" ? pct(r.signed, r.due) : fmt(val(r, c.k));
+    const cls = (c) => [c.num ? "num" : "", c.mem ? "mem" : "", c.cellCls || c.cls || ""].join(" ").trim();
     return {
-      sortMinW: s.otherOpen ? "1180px" : "960px",
       sortCols: cols.map(c => { const on = s.sortK === c.k && !!s.sortDir;
-        return { label: c.label, w: c.w, cls: ["sortable", c.num ? "num" : "", c.cls || ""].join(" ").trim(), num: !!c.num, text: !c.num,
-          sorted: on ? "true" : null, arrow: on && s.sortDir === "desc" ? "arrow_downward" : "arrow_upward", onSort: cycle(c.k),
-          foldFirst: !!c.fold, foldIcon: s.otherOpen ? "chevron_left" : "chevron_right", foldLabel: s.otherOpen ? "Fold the other platforms" : "Show the other platforms",
+        return { label: c.label, cls: ["sortable", c.num ? "num" : "", c.mem ? "mem" : "", c.cls || ""].join(" ").trim(), sorted: on ? "true" : null,
+          arrow: on && s.sortDir === "desc" ? "arrow_downward" : "arrow_upward",
+          onSort: () => { if (s.sortK !== c.k) this.setState({ sortK: c.k, sortDir: c.start || "desc" }); else this.setState({ sortDir: s.sortDir === "asc" ? "desc" : "asc" }); },
+          fold: !!c.fold, foldExpanded: s.otherOpen ? "true" : "false", foldIcon: s.otherOpen ? "chevron_left" : "chevron_right",
+          foldLabel: s.otherOpen ? "Fold the three columns back into Other" : "Show the three columns in Other",
           onFold: (e) => { e.stopPropagation(); this.setState({ otherOpen: !s.otherOpen }); } }; }),
-      sortRows: rows.map(r => ({ cells: cols.map(c => cell(c, val(r, c.k))) })),
-      sortTotal: cols.map((c, i) => i === 0 ? { v: "Total", cls: "stick" } : c.k === "branch" ? { v: "", cls: "" } : c.k === "pct" ? { v: Math.round(tSig / tDue * 100) + "%", cls: "num" } : c.k === "cps" ? { v: "", cls: "num" } : { v: fmt(sum(c.k)), cls: "num" }),
-      sortNote: "Data as at 6:00 am, 13 Oct 2026. The warehouse refreshes overnight. Click a heading to sort; the arrow shows on hover and stays on the sorted column.",
+      sortRows: rows.map(r => ({ cells: cols.map(c => ({ v: show(r, c), cls: cls(c) })) })),
+      sortTotal: cols.map(c => c.k === "advisor" ? { v: "Total", cls: "stick nm" } : c.k === "branch" ? { v: "", cls: "" } : c.k === "signedPct" ? { v: pct(tot.signed, tot.due), cls: "num" } : { v: fmt(c.k === "other" ? tot.insurance + tot.lending + tot.estate : tot[c.k]), cls: cls(c) }),
+      filterOpen: s.filterOpen, filterExpanded: s.filterOpen ? "true" : "false",
+      toggleFilter: () => this.setState({ filterOpen: !s.filterOpen }), closeFilter: () => this.setState({ filterOpen: false }),
+      filterLabel: chosen.length === FBRANCHES.length ? "Branch · All" : "Branch · " + chosen.length,
+      filterNote: rows.length + " of 8 advisors",
+      filterItems: FBRANCHES.map(b => { const on = chosen.includes(b); return { label: b, checked: on ? "true" : null, sel: on ? "true" : "false",
+        toggle: () => this.setState({ fSel: on ? chosen.filter(x => x !== b) : FBRANCHES.filter(x => x === b || chosen.includes(x)) }) }; }),
+    };
+  }
+
+  dragVals() {
+    const s = this.state, d = s.drag;
+    let order = s.cards.map((label, i) => ({ label, i }));
+    if (d) { const moving = order.splice(d.from, 1)[0]; order.splice(d.over, 0, moving); }
+    return {
+      dlRef: (el) => { this._dl = el; },
+      dragItems: order.map(({ label, i }) => ({ label, cls: "di" + (d && i === d.from ? " ph" : ""),
+        down: (e) => { if (!this._dl) return; e.preventDefault(); e.currentTarget.setPointerCapture(e.pointerId);
+          const items = Array.from(this._dl.children), r = items[i].getBoundingClientRect();
+          this._rects = items.map(n => { const b = n.getBoundingClientRect(); return { top: b.top, h: b.height }; });
+          this.setState({ drag: { from: i, over: i, offY: e.clientY - r.top, offX: e.clientX - r.left, x: r.left, y: r.top, w: r.width, h: r.height } }); } })),
+      dragMove: (e) => { const dd = this.state.drag; if (!dd) return; const y = e.clientY - dd.offY, mid = y + dd.h / 2;
+        let over = 0; this._rects.forEach((b, j) => { if (j !== dd.from && mid > b.top + b.h / 2) over++; });
+        this.setState({ drag: Object.assign({}, dd, { x: e.clientX - dd.offX, y, over }) }); },
+      dragUp: () => { const dd = this.state.drag; if (!dd) return; const next = s.cards.slice(); const m = next.splice(dd.from, 1)[0]; next.splice(dd.over, 0, m); this.setState({ cards: next, drag: null }); },
+      dragOn: !!d, pvLeft: d ? d.x + "px" : "0px", pvTop: d ? d.y + "px" : "0px", pvWidth: d ? d.w + "px" : "0px", pvLabel: d ? s.cards[d.from] : "",
     };
   }
 
@@ -1045,14 +1050,18 @@ class Component extends DCLogic {
     const s = this.state, y = s.dpY, m = s.dpM;
     const first = (new Date(y, m, 1).getDay() + 6) % 7, days = new Date(y, m + 1, 0).getDate();
     const cells = [];
-    for (let i = 0; i < first; i++) cells.push({ label: "", cls: "dc blank", pick: undefined });
+    for (let i = 0; i < first; i++) cells.push({ label: "", vis: "hidden", bg: "transparent", fg: "inherit", pick: undefined });
     for (let d = 1; d <= days; d++) {
-      const sel = s.date && s.date.y === y && s.date.m === m && s.date.d === d, today = y === 2026 && m === 9 && d === 13;
-      cells.push({ label: String(d), cls: "dc" + (sel ? " sel" : today ? " today" : ""), pick: () => this.setState({ date: { y, m, d }, dp: false }) });
+      const sel = s.date && s.date.y === y && s.date.m === m && s.date.d === d, today = y === 2026 && m === 9 && d === 14;
+      cells.push({ label: String(d), vis: "visible", bg: sel ? "var(--mat-sys-primary)" : "transparent", fg: sel ? "var(--mat-sys-on-primary)" : today ? "var(--mat-sys-primary)" : "var(--mat-sys-on-surface)", bd: today && !sel ? "1px solid var(--mat-sys-primary)" : "none",
+        pick: () => this.setState({ date: { y, m, d }, dateText: String(d).padStart(2, "0") + "-" + String(m + 1).padStart(2, "0") + "-" + y, dp: false }) });
     }
     const go = (k) => () => { let nm = m + k, ny = y; if (nm < 0) { nm = 11; ny--; } if (nm > 11) { nm = 0; ny++; } this.setState({ dpM: nm, dpY: ny }); };
-    return { dpOpen: s.dp, toggleDp: () => this.setState({ dp: !s.dp }), dpTitle: MSHORT[m] + " " + y, dpDow: ["M","T","W","T","F","S","S"], dpCells: cells, dpPrev: go(-1), dpNext: go(1),
-      dateVal: s.date ? String(s.date.d).padStart(2, "0") + "/" + String(s.date.m + 1).padStart(2, "0") + "/" + s.date.y : "" };
+    return { dpOpen: s.dp, dpFocusedAttr: s.dp ? "true" : null, dpBorder: s.dp ? "var(--mat-sys-primary)" : "var(--mat-sys-outline)", dpRing: s.dp ? "inset 0 0 0 1px var(--mat-sys-primary)" : "none", dpLabelC: s.dp ? "var(--mat-sys-primary)" : "var(--mat-sys-on-surface-variant)", toggleDp: () => this.setState({ dp: !s.dp }), dpTitle: MSHORT[m] + " " + y, dpDow: ["Mo","Tu","We","Th","Fr","Sa","Su"], dpCells: cells, dpPrev: go(-1), dpNext: go(1),
+      dateText: s.dateText, onDateText: (e) => this.setState({ dateText: e.target.value }),
+      onDateBlur: () => { const mt = /^\s*(\d{1,2})[\/-](\d{1,2})[\/-](\d{4})\s*$/.exec(this.state.dateText); if (!mt) return;
+        const d = +mt[1], mo = +mt[2] - 1, yy = +mt[3], dt = new Date(yy, mo, d); if (dt.getMonth() !== mo || dt.getDate() !== d) return;
+        this.setState({ date: { y: yy, m: mo, d }, dpY: yy, dpM: mo, dateText: String(d).padStart(2, "0") + "-" + String(mo + 1).padStart(2, "0") + "-" + yy }); } };
   }
 
   renderVals() {
@@ -1067,16 +1076,15 @@ class Component extends DCLogic {
       onClick: h.nav ? () => this.setState({ nav: h.nav, query: "", menu: false }) : undefined }));
 
     const acq = s.ac.trim().toLowerCase();
-    const acList = AC_NAMES.filter(([nm]) => !acq || nm.toLowerCase().includes(acq)).map(([nm, br]) => { const i = acq ? nm.toLowerCase().indexOf(acq) : 0;
-      return { pre: nm.slice(0, i), hit: nm.slice(i, i + acq.length), post: nm.slice(i + acq.length), branch: br, pick: () => this.setState({ ac: nm, acOpen: false }) }; });
+    const acList = ADVISOR_NAMES.filter(nm => !acq || nm.toLowerCase().includes(acq)).map(nm => { const i = acq ? nm.toLowerCase().indexOf(acq) : 0;
+      return { pre: nm.slice(0, i), hit: nm.slice(i, i + acq.length), post: nm.slice(i + acq.length), pick: () => this.setState({ ac: nm, acOpen: false }) }; });
 
-    const start = Math.max(0, Math.floor(s.vsTop / 44) - 2), count = Math.ceil(440 / 44) + 4, end = Math.min(200, start + count);
-    const dragTo = (j) => (e) => { e.preventDefault(); const i = this.state.dragging; if (i < 0 || i === j) return; const d = this.state.drag.slice(); const [it] = d.splice(i, 1); d.splice(j, 0, it); this.setState({ drag: d, dragging: j }); };
+    const start = Math.max(0, Math.floor(s.vsTop / ROW_H) - BUFFER), end = Math.min(MONTH.length, Math.floor(s.vsTop / ROW_H) + Math.ceil(VIEW_H / ROW_H) + BUFFER);
 
     return {
       sbWidth: open ? "268px" : "72px", glyphCol: open ? "40px" : "54px", labelOpacity: open ? 1 : 0, labelDelay: open ? "60ms" : "0ms", labelHits: open ? "auto" : "none",
       sideItems, pinned: s.pinned ? "true" : null,
-      hoverIn: () => this.setState({ hover: true }), hoverOut: () => this.setState({ hover: false }), togglePin: () => this.setState({ pinned: !s.pinned }),
+      hoverIn: () => { clearTimeout(this._sbT); this._sbT = null; if (!this.state.hover) this.setState({ hover: true }); }, hoverOut: () => { clearTimeout(this._sbT); this._sbT = setTimeout(() => { this._sbT = null; this.setState({ hover: false }); }, (() => { try { const v = parseInt(localStorage.getItem("shaw.sidebarDelay"), 10); return (v >= 1 && v <= 10 ? v : 3) * 1000; } catch (e) { return 3000; } })()); }, togglePin: () => this.setState({ pinned: !s.pinned }),
       query: s.query, hasQuery: s.query.length > 0, onQuery: (e) => this.setState({ query: e.target.value }), clearQuery: () => this.setState({ query: "" }),
       searchOn: s.query.trim().length > 0, closeSearch: () => this.setState({ query: "" }),
       hasResults: hits.length > 0, noResults: hits.length === 0, resultCount: hits.length + (hits.length === 1 ? " result" : " results"), results: hits,
@@ -1086,9 +1094,20 @@ class Component extends DCLogic {
       groupTitle: g.title, groupBlurb: g.blurb,
       tabsTop: GROUPS.map(x => ({ label: x.label, active: s.nav === x.id ? "true" : null, pick: set({ nav: x.id, menu: false }) })),
       showButtons: !na && s.nav === "buttons", showForms: !na && s.nav === "forms", showData: !na && s.nav === "data", showNav: !na && s.nav === "navi",
-      showCharts: !na && s.nav === "charts", showFeedback: !na && s.nav === "feedback", showOfa: !na && s.nav === "ofa",
+      showCharts: !na && s.nav === "charts", showFeedback: !na && s.nav === "feedback", showOfa: !na && s.nav === "ofa", ofaPal: [["Teal", "#007B84", "#FFFFFF", "Done well: ACTIVE, signed, accepted, more than 90 days left"], ["Lime", "#A9B819", "#000000", "First step: with the advisor, 61 to 90 days left"], ["Amber", "#EE7601", "#000000", "Needs action: partly signed, due, 31 to 60 days left"], ["Orange", "#E84810", "#FFFFFF", "Urgent: quarantined, declined, expired, TERMINATED, 0 to 30 days left"], ["Navy", "#1F225E", "#FFFFFF", "Settled apart: No OFA, declined in the bar"], ["Dark grey", "#404040", "#FFFFFF", "No severity: chips that only name a state"]].map(x => ({ name: x[0], hex: x[1], tx: x[2], use: x[3] })),
+      ofaChips: [["ACTIVE", "teal", "Teal"], ["ADVISOR", "lime", "Lime"], ["PARTLY SIGNED", "amber", "Amber"], ["QUARANTINED", "orange", "Orange"], ["NO OFA", "navy", "Navy"], ["EVERY MONTH", "grey", "Dark grey"]].map(x => ({ label: x[0], tone: x[1], name: x[2] })),
+      ofaBar: [["0 to 30 days", 6, "#E84810", "#FFFFFF"], ["31 to 60 days", 9, "#EE7601", "#000000"], ["61 to 90 days", 14, "#A9B819", "#000000"], ["90+ days", 38, "#007B84", "#FFFFFF"], ["Declined", 2, "#1F225E", "#FFFFFF"]].map(x => { const on = s.ofaSeg === x[0], act = !s.ofaSeg || on, go = () => this.setState({ ofaSeg: on ? null : x[0] }); return { label: x[0], n: x[1], hex: x[2], tx: x[3], op: act ? "1" : "0.25", pr: on ? "true" : "false", go, key: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } }, tip: x[0] + ": " + x[1] + " renewals. " + (on ? "Click again to show all." : "Click to filter the table.") }; }),
+      ofaCk: (() => { const S0 = [["Build and freeze the Anniversary List", "BD1", "Thu 01-10", ["Corinne Abbott", "01-10-2026 06:40"], [["List frozen at 06:40. 214 rows.", "Corinne Abbott", "01-10-2026 06:41", []]]], ["Cull the Anniversary List", "BD1", "Thu 01-10", ["Owen Pritchard", "01-10-2026 11:45"], [["Seven taken off: four deceased estates, three already TERMINATED.", "Owen Pritchard", "01-10-2026 11:46", ["Cull notes October.xlsx"]]]], ["Release the questionnaire to advisors", "BD1", "Thu 01-10", ["Corinne Abbott", "01-10-2026 12:00"], []], ["Accept the advisors' answers", "BD2–5", "Fri 02-10 – Wed 07-10", null, []], ["Issue the month", "BD6", "Thu 08-10", null, []]], st = s.ckS || {}, op = s.ckOpen, added = s.ckAdd || {}, dr = s.ckDraft || {};
+        return S0.map((x, k) => { const done = st[k] !== undefined ? st[k] : !!x[3], by = st[k] ? ["Alex Nguyen", "30-10-2026 09:15"] : x[3], notes = x[4].concat(added[k] || []).map(n => ({ text: n[0], who: n[1], date: n[2], att: n[3], hasAtt: n[3].length ? true : null, go: (e) => { if (e && e.preventDefault) e.preventDefault(); } })), nxt = S0.findIndex((y, j) => !(st[j] !== undefined ? st[j] : !!y[3])), isNext = k === nxt, isOpen = op === k;
+          return { bd: x[1], dm: x[2], bdc: done ? "#404040" : isNext ? "var(--mat-sys-primary)" : "#929292", name: x[0], fg: done || isNext ? "var(--mat-sys-on-surface)" : "#404040", meta: done && by ? "Ticked · " + by[0] + " · " + by[1] : isNext ? "Next step" : "Not started", done: done ? true : null, ring: done ? "#007B84" : isNext ? "var(--mat-sys-primary)" : "#CCCCCC", dot: done ? "#007B84" : "#FFFFFF", line: k === S0.length - 1 ? "transparent" : done ? "#007B84" : "#E6E6E6", ro: !done && !isNext ? "true" : null, cur: !done && !isNext ? "default" : "pointer", tickAria: done ? "Untick " + x[0] : "Tick " + x[0], tick: () => this.setState({ ckS: Object.assign({}, st, { [k]: !done }) }), nn: notes.length ? String(notes.length) : null, chev: isOpen ? "expand_less" : "expand_more", isOpen: isOpen ? true : null, open: () => this.setState({ ckOpen: isOpen ? null : k }), notes, noNotes: notes.length ? null : true, nmax: "240px", canAdd: true, hasPend: null, pend: [], draft: dr[k] || "", setDraft: (e) => this.setState({ ckDraft: Object.assign({}, this.state.ckDraft, { [k]: e.target.value }) }), attIn: () => {}, addDis: (dr[k] || "").trim() ? null : "true", add: () => { const tx = ((this.state.ckDraft || {})[k] || "").trim(); if (!tx) return; this.setState({ ckAdd: Object.assign({}, this.state.ckAdd, { [k]: ((this.state.ckAdd || {})[k] || []).concat([[tx, "Alex Nguyen", "30-10-2026 09:15", []]]) }), ckDraft: Object.assign({}, this.state.ckDraft, { [k]: "" }) }); } }; }); })(),
+      ...(() => { const D = [["S18450", "Alder & Juno Pask", "Hannah Ilves", "Melbourne", "HUB24", "HUB24 Invest", "H-90450", "12-03-2026", "09-08-2026", ["ACTIVE", "teal"], "$8,240"], ["S18471", "Bramwell Teague", "Hannah Ilves", "Melbourne", "Netwealth", "Netwealth - Investment", "NW-55471", "04-04-2026", "01-09-2026", ["PARTLY SIGNED", "amber"], "$12,610"], ["S18490", "Corrigan Holdings Pty Ltd", "Tobias Marlow", "Geelong", "Macquarie Wrap", "Macquarie Investment Consolidator II", "M-448490", "21-05-2026", "18-10-2026", ["QUARANTINED", "orange"], "$22,180"], ["S18502", "Delia Strand", "Hannah Ilves", "Melbourne", "BT Panorama", "Panorama Investments", "BTP-771502", "02-06-2026", "30-10-2026", ["NOT SIGNED", "amber"], "$4,920"], ["S18515", "Ezra Vane", "Sienna Okoro", "Melbourne", "HUB24", "HUB24 Invest", "H-90515", "15-06-2026", "12-11-2026", ["ACTIVE", "teal"], "$6,075"], ["S18530", "Fern Lomax", "Hannah Ilves", "Melbourne", "Macquarie Wrap", "Macquarie Investment Consolidator II", "M-441530", "28-06-2026", "25-11-2026", ["TERMINATED", "orange"], "$8,470"], ["S18544", "Greer Hale", "Hannah Ilves", "Melbourne", "Netwealth", "Netwealth - Super", "NW-55544", "03-07-2026", "30-11-2026", ["FULLY SIGNED", "teal"], "$14,555"], ["S18577", "Hollis Brandt", "Declan Moss", "Ballarat", "HUB24", "HUB24 Super", "H-90577", "19-07-2026", "16-12-2026", ["NO OFA", "navy"], "—"], ["S18602", "Iona Fairley", "Marcus Delahunt", "Melbourne", "Netwealth", "Netwealth - Investment", "NW-55602", "01-08-2026", "29-12-2026", ["WITH US", "lime"], "$9,320"], ["S18619", "Jasper Kell", "Elias Varney", "Albury", "BT Panorama", "Panorama Super", "BTP-771619", "14-08-2026", "11-01-2027", ["ACTIVE", "teal"], "$5,640"], ["S18640", "Kestrel Partners Pty Ltd", "Tobias Marlow", "Geelong", "Macquarie Wrap", "Macquarie Investment Consolidator II", "M-448640", "27-08-2026", "24-01-2027", ["WAITING", "amber"], "$31,900"], ["S18658", "Linnea Orr", "Sienna Okoro", "Melbourne", "HUB24", "HUB24 Invest", "H-90658", "05-09-2026", "02-02-2027", ["ACTIVE", "teal"], "$7,215"], ["S18671", "Moray & Tess Quill", "Hannah Ilves", "Melbourne", "Netwealth", "Netwealth - Investment", "NW-55671", "18-09-2026", "15-02-2027", ["DECLINED", "orange"], "$11,080"], ["S18690", "Nell Ashby", "Declan Moss", "Ballarat", "HUB24", "HUB24 Super", "H-90690", "30-09-2026", "27-02-2027", ["ACTIVE", "teal"], "$3,960"]], sel = s.frzSel || {}, all = D.every(d => sel[d[0]]), SK = s.frzSk ?? null, SD = s.frzSd || 1, dkey = (v) => /^\d{2}-\d{2}-\d{4}$/.test(v) ? v.split("-").reverse().join("") : /^\$/.test(v) ? Number(v.replace(/[^\d.]/g, "")) : v === "—" ? null : v, SR = SK == null ? D : D.map((d, i) => ({ d, i, v: dkey(SK === 9 ? d[9][0] : d[SK]) })).sort((a, b) => a.v == null && b.v == null ? a.i - b.i : a.v == null ? 1 : b.v == null ? -1 : (typeof a.v === "number" ? a.v - b.v : String(a.v).localeCompare(String(b.v))) * SD || a.i - b.i).map(x => x.d), op = !!s.frzFold, MEM = [5, 6], KEEP = (i) => op || !MEM.includes(i), L = ["S-Account", "Account name", "Advisor", "Branch", "Platform", "Product", "Platform account number", "Reference Date", "Expiry Date", "Status", "ASF\u00a0(excl.\u00a0GST)", "Payment frequency", "Entity type", "Client type", "Last fee charged date", "Termination date"];
+        return { frzCols: L.map((l, i) => ({ l, i })).filter(x => KEEP(x.i)).map(({ l, i }) => ({ label: l, cls: i === 10 ? "num" : "", aria: SK === i ? (SD > 0 ? "ascending" : "descending") : "none", arrow: SK === i && SD < 0 ? "arrow_downward" : "arrow_upward", arOp: SK === i ? "1" : "0", sortName: "Sort by " + l.replace(/\u00a0/g, " "), sort: () => this.setState(SK === i ? { frzSk: i, frzSd: -SD } : { frzSk: i, frzSd: 1 }), hbg: MEM.includes(i) ? "#F7F7F7" : "var(--mat-sys-surface)", fold: i === 4 ? { ae: op ? "true" : "false", ic: op ? "chevron_left" : "chevron_right", name: op ? "Fold Product and Platform account number into Platform" : "Show Product and Platform account number", go: () => this.setState({ frzFold: !op }) } : null })), frzAll: all ? "true" : null, frzAllAc: all ? "true" : D.some(d => sel[d[0]]) ? "mixed" : "false", frzToggleAll: () => this.setState({ frzSel: all ? {} : Object.fromEntries(D.map(d => [d[0], true])) }),
+          frzFoot: L.map((l, i) => ({ l, i })).filter(x => KEEP(x.i)).map(({ i }) => i === 0 ? { v: "Total · " + D.length + " S-Accounts", cls: "" } : i === 10 ? { v: "$" + D.reduce((n, d) => n + (Number(String(d[10]).replace(/[^\d.]/g, "")) || 0), 0).toLocaleString("en-AU"), cls: "num" } : { v: "", cls: "" }),
+          frzRows: SR.map((d, i) => { const oi = D.indexOf(d), on = !!sel[d[0]]; return { bg: on ? "var(--mat-sys-secondary-container)" : i % 2 ? "#F7F7F7" : "#FFFFFF", on: on ? "true" : null, ac: on ? "true" : "false", toggle: () => this.setState({ frzSel: Object.assign({}, this.state.frzSel, { [d[0]]: !on }) }), cells: d.concat([["Monthly", "Quarterly", "Annually"][oi % 3], d[1].includes("Pty Ltd") ? "Company" : d[1].includes("&") ? "Joint" : "Individual", oi % 4 === 2 ? "WHOLESALE" : "RETAIL", "30-09-2026", d[9][0] === "TERMINATED" ? "06-10-2026" : "—"]).map((x, k) => k === 9 ? { chip: x[0], tone: x[1], txt: null, cls: "", k } : { v: x, txt: true, chip: null, cls: k === 10 ? "num" : "", k }).filter(x => KEEP(x.k)) }; }) }; })(),
+      ofaBarAria: "Renewals by days to the Expiry Date: 6 in 0 to 30 days, 9 in 31 to 60, 14 in 61 to 90, 38 over 90, 2 declined",
+      ofaFlt: [["Advisor", "Hannah Ilves", "arrow_drop_down", "auto"], ["Branch", "All", "arrow_drop_down", "auto"], ["Platform", "Netwealth, HUB24", "arrow_drop_down", "auto"], ["Status", "All", "arrow_drop_down", "auto"], ["Expiry Date", "01-10-2026 – 31-12-2026", "calendar_today", "1 / -1"]].map(x => ({ label: x[0], v: x[1], icon: x[2], gc: x[3], fg: x[1] === "All" ? "var(--mat-sys-on-surface-variant)" : "var(--mat-sys-on-surface)" })),
       accessOn: !na, noAccessOn: na,
-      ...CHARTS,
+      donutLegend: CHARTS.donutLegend, pieLegend: CHARTS.pieLegend, stackLegend: CHARTS.stackLegend, ringList: CHARTS.ringList, sparkList: CHARTS.sparkList,
 
       segA: s.seg === 0 ? "true" : null, segB: s.seg === 1 ? "true" : null, segC: s.seg === 2 ? "true" : null,
       setSegA: set({ seg: 0 }), setSegB: set({ seg: 1 }), setSegC: set({ seg: 2 }),
@@ -1100,8 +1119,8 @@ class Component extends DCLogic {
       setRA: set({ radio: 0 }), setRB: set({ radio: 1 }), setRC: set({ radio: 2 }),
       tog: s.tog ? "true" : null, toggleTog: () => this.setState({ tog: !s.tog }),
       branch: s.branch, menuOpen: s.menu, menuOpenAttr: s.menu ? "true" : null, toggleMenu: () => this.setState({ menu: !s.menu }),
-      selArrow: s.menu ? "arrow_drop_up" : "arrow_drop_down", selArrowColor: s.menu ? "var(--mat-sys-primary)" : "var(--mat-sys-on-surface-variant)",
-      branches: BRANCHES.slice(0, 3).map(b => ({ label: b, on: b === s.branch, cls: "opt" + (b === s.branch ? " on" : ""), pick: set({ branch: b, menu: false }) })),
+      menuExpanded: s.menu ? "true" : "false", selBorder: s.menu ? "var(--mat-sys-primary)" : "var(--mat-sys-outline)", selRing: s.menu ? "inset 0 0 0 1px var(--mat-sys-primary)" : "none",
+      branches: BRANCHES.map(b => ({ label: b, on: b === s.branch, cls: "sopt" + (b === s.branch ? " on" : ""), pick: set({ branch: b, menu: false }) })),
       pct: s.pct + "%", pctLabel: s.pct + "%", pctNum: s.pct,
       slideDown: (e) => { this._drag = true; e.currentTarget.setPointerCapture(e.pointerId); e.currentTarget.focus(); this.slideAt(e); },
       slideMove: (e) => { if (this._drag) this.slideAt(e); },
@@ -1111,10 +1130,10 @@ class Component extends DCLogic {
         else if (d) { e.preventDefault(); this.setState({ pct: Math.min(100, Math.max(0, s.pct + d)) }); } },
 
       rows: [
-        { client: "Harrison Family Trust", adviser: "K. Patel", status: "Active", fee: "$4,820" },
-        { client: "Mereweather Holdings", adviser: "J. Doyle", status: "Expiring", fee: "$12,150" },
-        { client: "L & S Brennan", adviser: "K. Patel", status: "Awaiting signature", fee: "$2,300" },
-        { client: "Calder Superannuation", adviser: "M. Osei", status: "Active", fee: "$7,640" },
+        { client: "Harrison Family Trust", advisor: "K. Patel", status: "Active", fee: "$4,820" },
+        { client: "Mereweather Holdings", advisor: "J. Doyle", status: "Expiring", fee: "$12,150" },
+        { client: "L & S Brennan", advisor: "K. Patel", status: "Awaiting signature", fee: "$2,300" },
+        { client: "Calder Superannuation", advisor: "M. Osei", status: "Active", fee: "$7,640" },
       ],
       notes: [
         { title: "Three arrangements expire this week", line: "9 minutes ago" },
@@ -1140,21 +1159,15 @@ class Component extends DCLogic {
       tipOn: s.tip, tipIn: () => this.setState({ tip: true }), tipOut: () => this.setState({ tip: false }),
 
       ...this.sortVals(),
-      ovOpen: s.ov, toggleOv: () => this.setState({ ov: !s.ov }), closeOv: () => this.setState({ ov: false }), clearOv: () => this.setState({ ovSel: [] }),
-      ovLabel: s.ovSel.length ? "Branch · " + s.ovSel.length : "Branch",
-      ovItems: BRANCHES.map(b => { const on = s.ovSel.includes(b); return { label: b, checked: on ? "true" : null,
-        toggle: () => this.setState({ ovSel: on ? s.ovSel.filter(x => x !== b) : s.ovSel.concat([b]) }) }; }),
-      dragItems: s.drag.map((label, i) => ({ label, pos: String(i + 1), cls: "drag" + (s.dragging === i ? " ghost" : ""),
-        onStart: (e) => { e.dataTransfer.effectAllowed = "move"; try { e.dataTransfer.setData("text/plain", label); } catch (x) {} this.setState({ dragging: i }); },
-        onOver: dragTo(i), onEnd: (e) => { e.preventDefault(); this.setState({ dragging: -1 }); } })),
+      ...this.dragVals(),
       acQuery: s.ac, onAc: (e) => this.setState({ ac: e.target.value, acOpen: true }), acFocus: () => this.setState({ acOpen: true }), acClose: () => this.setState({ acOpen: false }),
-      acOpen: s.acOpen, acOpts: acList.slice(0, 8), acNone: acList.length === 0,
-      acHint: acList.length + " of " + AC_NAMES.length + " advisors. Compliance see every advisor, so there is no scope picker.",
+      acOpen: s.acOpen && acList.length > 0, acFocusedAttr: s.acOpen ? "true" : null, acOpts: acList,
+      acHint: acList.length + " of " + ADVISOR_NAMES.length + " advisors",
       ...this.dpVals(),
       onVs: (e) => this.setState({ vsTop: e.currentTarget.scrollTop }),
-      vsOffset: start * 44 + "px",
-      vsRows: VS.slice(start, end).map((r, i) => Object.assign({ bg: (start + i) % 2 ? "var(--mat-sys-surface-container-low)" : "var(--mat-sys-surface)" }, r)),
-      vsNote: "Rows " + (start + 1) + "–" + end + " are in the page, out of 200. Every row is 44px, so the viewport can place any row without measuring it.",
+      vsTopPad: start * ROW_H + "px", vsBotPad: (MONTH.length - end) * ROW_H + "px",
+      vsRows: MONTH.slice(start, end).map((r, n) => Object.assign({ bg: (start + n) % 2 ? "var(--mat-sys-surface-container-low)" : "var(--mat-sys-surface)" }, r)),
+      vsNote: "Rows " + (start + 1) + "–" + end + " are in the page, out of " + MONTH.length + ". Every row is 44px, so the viewport can place any row without measuring it.",
     };
   }
 }
