@@ -24,6 +24,18 @@ h1{font-weight:400;font-size:26px;line-height:34px;margin:0 0 8px}
 .grid span{display:block;color:var(--muted)}
 .grid em{display:block;margin-top:14px;color:var(--accent);font-style:normal;font-weight:500}
 .note{color:var(--muted);font-size:13px;margin-top:24px}
+h2{font-weight:400;font-size:20px;line-height:28px;margin:40px 0 12px}
+.versions{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:auto;max-height:480px}
+.versions table{width:100%;border-collapse:collapse;font-size:14px;line-height:20px}
+.versions th{position:sticky;top:0;background:var(--card);text-align:left;font-weight:500;color:var(--muted);padding:10px 16px;border-bottom:1px solid var(--line)}
+.versions td{padding:10px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.versions tr:last-child td{border-bottom:0}
+.versions td:nth-child(1),.versions td:nth-child(2){white-space:nowrap}
+.versions code{font:500 13px/20px "Roboto Mono",Consolas,monospace}
+.versions a{color:var(--accent);text-decoration:none}
+.versions a:hover{text-decoration:underline}
+.versions ul{margin:0;padding-left:18px}
+@media (max-width:600px){.versions td:nth-child(2){white-space:normal}}
 </style>
 </head>
 <body>
@@ -39,17 +51,52 @@ h1{font-weight:400;font-size:26px;line-height:34px;margin:0 0 8px}
 </div>
 <p class="note">These are designs, not the finished product. Wording and layout may still change.</p>
 <p class="note" id="updated" hidden>Last updated: <time id="updated-time"></time></p>
+<section id="history" hidden>
+<h2>Version history</h2>
+<div class="versions">
+<table>
+<thead><tr><th scope="col">Version</th><th scope="col">Updated</th><th scope="col">Changes</th></tr></thead>
+<tbody id="versions"></tbody>
+</table>
+</div>
+</section>
 <script>
-fetch("https://api.github.com/repos/muhammedalikhan86/shaw-plugin-dashboard-v2/commits?per_page=1")
-  .then(function(r){return r.ok?r.json():Promise.reject();})
-  .then(function(c){
-    var d=new Date(c[0].commit.committer.date);
-    var t=document.getElementById("updated-time");
-    t.dateTime=d.toISOString();
-    t.textContent=d.toLocaleString("en-AU",{dateStyle:"medium",timeStyle:"short"});
-    document.getElementById("updated").hidden=false;
-  })
-  .catch(function(){});
+(function(){
+  var repo="https://github.com/muhammedalikhan86/shaw-plugin-dashboard-v2";
+  function when(s){return new Date(s).toLocaleString("en-AU",{dateStyle:"medium",timeStyle:"short"});}
+  function el(tag,text){var e=document.createElement(tag);if(text!=null)e.textContent=text;return e;}
+  // The change list is the commit's "- " lines; a commit without any shows its subject.
+  function changes(msg){
+    var lines=msg.split("\n");
+    var items=lines.slice(1).filter(function(l){return /^\s*[-*] /.test(l);}).map(function(l){return l.replace(/^\s*[-*] /,"");});
+    return items.length?items:[lines[0]];
+  }
+  fetch("https://api.github.com/repos/muhammedalikhan86/shaw-plugin-dashboard-v2/commits?per_page=100")
+    .then(function(r){return r.ok?r.json():Promise.reject();})
+    .then(function(list){
+      if(!list.length)return;
+      var t=document.getElementById("updated-time");
+      t.dateTime=new Date(list[0].commit.committer.date).toISOString();
+      t.textContent=when(list[0].commit.committer.date);
+      document.getElementById("updated").hidden=false;
+      var body=document.getElementById("versions");
+      list.forEach(function(c){
+        var tr=el("tr"),a=el("a"),code=el("code",c.sha.slice(0,7)),td=el("td"),ul=el("ul"),tm=el("time",when(c.commit.committer.date));
+        a.href=repo+"/commit/"+c.sha;a.appendChild(code);td.appendChild(a);tr.appendChild(td);
+        tm.dateTime=new Date(c.commit.committer.date).toISOString();td=el("td");td.appendChild(tm);tr.appendChild(td);
+        changes(c.commit.message).forEach(function(x){ul.appendChild(el("li",x));});
+        td=el("td");td.appendChild(ul);tr.appendChild(td);
+        body.appendChild(tr);
+      });
+      var box=document.querySelector(".versions");
+      document.getElementById("history").hidden=false;
+      // Show ten rows; the rest scroll.
+      var rows=body.rows,h=box.querySelector("thead").offsetHeight;
+      for(var i=0;i<Math.min(10,rows.length);i++)h+=rows[i].offsetHeight;
+      box.style.maxHeight=(h+2)+"px";
+    })
+    .catch(function(){});
+})();
 </script>
 </main>
 </body>
