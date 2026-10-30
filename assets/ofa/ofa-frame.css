@@ -1026,6 +1026,8 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.f3,[classname~="f3"])>mat-dialog-acti
 /* Pinned header cells sit above the other sticky header cells, so the top-left stays a blank cell as the top-right does */
 .app-layer table.ot[data-frz] thead th:first-child,.app-layer table.ot[data-frz] thead th:last-child{z-index:6!important;background-color:var(--mat-sys-surface)!important}
 .app-layer table.ot[data-frz] tbody td:first-child,.app-layer table.ot[data-frz] tbody td:last-child{z-index:3!important}
-/* C136: the "signatories not in yet" line reads left, under S-Account, and wraps within the card */
-.app-layer table.ot td:is(.nsig,[classname~="nsig"]){text-align:left!important;white-space:normal!important;max-width:560px}
-.app-layer table.ot td:is(.nsig,[classname~="nsig"]) *{white-space:normal!important;text-overflow:clip!important;overflow:visible!important;text-align:left!important;max-width:560px}
+/* C136: the "signatories not in yet" message is laid over the open row (absolute), so it adds no width to the S-Account column; the row is tall enough for it */
+.app-layer table.ot tr:is(.nsr,[classname~="nsr"])>td{height:88px!important;vertical-align:top}
+.app-layer table.ot tr:is(.nsr,[classname~="nsr"]) td:is(.nsig,[classname~="nsig"]){position:relative!important;overflow:visible!important;width:auto!important;min-width:0!important;max-width:none!important}
+.app-layer table.ot tr:is(.nsr,[classname~="nsr"]) td:is(.nsig,[classname~="nsig"])>*{position:absolute!important;left:16px;top:12px;z-index:1;width:min(560px,calc(100vw - 520px))!important;max-width:none!important;overflow:visible!important}
+.app-layer table.ot tr:is(.nsr,[classname~="nsr"]) td:is(.nsig,[classname~="nsig"]) *{white-space:normal!important;text-overflow:clip!important;overflow:visible!important;max-width:none!important;text-align:left!important}
