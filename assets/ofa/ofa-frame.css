@@ -1023,3 +1023,6 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.f3,[classname~="f3"])>mat-dialog-acti
 .app-layer .fg:has(>.fgf>.lb+mat-form-field){row-gap:24px!important;padding-top:8px}
 .app-layer .ctl:has(>.lb+:is(.sel,mat-form-field)){position:relative;gap:0;padding-top:8px}
 .app-layer .ctl>.lb:has(+:is(.sel,mat-form-field)){position:absolute!important;top:0;left:12px;z-index:2;padding:0 4px;background:linear-gradient(to bottom,transparent 50%,var(--mat-sys-surface) 50%);font:400 12px/16px var(--f)!important;letter-spacing:0!important;text-transform:none!important;color:var(--mat-sys-on-surface-variant)!important;white-space:nowrap}
+/* Pinned header cells sit above the other sticky header cells, so the top-left stays a blank cell as the top-right does */
+.app-layer table.ot[data-frz] thead th:first-child,.app-layer table.ot[data-frz] thead th:last-child{z-index:6!important;background-color:var(--mat-sys-surface)!important}
+.app-layer table.ot[data-frz] tbody td:first-child,.app-layer table.ot[data-frz] tbody td:last-child{z-index:3!important}
