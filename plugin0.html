@@ -414,10 +414,10 @@ mat-chip[data-oc][data-tone="grey"]{background:#404040!important;border:1px soli
             <mat-card appearance="outlined" style="gap:12px">
               <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:8px"><mat-card-title>Select</mat-card-title><mat-card-subtitle>mat-select · outlined, label on the border, as on the OFA pages</mat-card-subtitle></div>
               <div style="position:relative;width:212px;max-width:100%;display:flex;flex-direction:column;gap:6px">
-                <div class="ofw"><div class="of" role="combobox" tabindex="0" aria-haspopup="listbox" aria-expanded="{{ menuExpanded }}" aria-label="Branch" onClick="{{ toggleMenu }}" style="cursor:pointer;border-color:{{ selBorder }};box-shadow:{{ selRing }}"><span class="ofl">Branch</span><span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:400 13px/20px var(--f)">{{ branch }}</span><mat-icon aria-hidden="true" style="font-size:24px;width:24px;height:24px">arrow_drop_down</mat-icon></div></div>
+                <div class="ofw"><div class="of" role="combobox" tabindex="0" aria-haspopup="listbox" aria-expanded="{{ menuExpanded }}" aria-label="State" onClick="{{ toggleMenu }}" style="cursor:pointer;border-color:{{ selBorder }};box-shadow:{{ selRing }}"><span class="ofl">State</span><span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:400 13px/20px var(--f)">{{ branch }}</span><mat-icon aria-hidden="true" style="font-size:24px;width:24px;height:24px">arrow_drop_down</mat-icon></div></div>
                 <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
                   <div class="cdk-backdrop" onClick="{{ toggleMenu }}"></div>
-                  <div class="pop" role="listbox" aria-label="Branch" style="left:0;right:0;top:calc(100% + 4px);max-height:288px;overflow:auto;padding:8px 0;border-radius:4px;background:var(--mat-sys-surface-container)">
+                  <div class="pop" role="listbox" aria-label="State" style="left:0;right:0;top:calc(100% + 4px);max-height:288px;overflow:auto;padding:8px 0;border-radius:4px;background:var(--mat-sys-surface-container)">
                     <sc-for list="{{ branches }}" as="b" hint-placeholder-count="3">
                       <div class="{{ b.cls }}" onClick="{{ b.pick }}"><span style="flex:1">{{ b.label }}</span><sc-if value="{{ b.on }}" hint-placeholder-val="{{ false }}"><mat-icon style="font-size:24px;width:24px;height:24px">check</mat-icon></sc-if></div>
                     </sc-for>
@@ -440,9 +440,28 @@ mat-chip[data-oc][data-tone="grey"]{background:#404040!important;border:1px soli
         </sc-if>
 
         <sc-if value="{{ showData }}" hint-placeholder-val="{{ false }}">
-          <mat-card appearance="outlined" style="padding:0;gap:0;overflow:hidden">
-            <div style="padding:16px 20px 16px;display:flex;flex-direction:column;align-items:flex-start;gap:2px"><mat-card-title>Table</mat-card-title><mat-card-subtitle>table[mat-table] · selection frozen on the left, Actions frozen on the right · header frozen on top, total frozen at the bottom · Platform folds out to Product and Platform account number · as on the OFA pages</mat-card-subtitle></div>
-            <div style="max-height:420px;overflow:auto;border-top:1px solid var(--mat-sys-outline-variant)">
+          <sc-if value="{{ frzBackOn }}" hint-placeholder-val="{{ false }}"><div aria-hidden="true" style="position:fixed;left:{{ frzBL }};top:{{ frzBT }};width:{{ frzBW }};height:{{ frzBH }};z-index:29;background:var(--mat-sys-surface-container)"></div></sc-if>
+          <mat-card appearance="outlined" data-full="{{ frzFull }}" style="padding:0;gap:0;overflow:hidden;display:flex;flex-direction:column;position:{{ frzPos }};left:{{ frzL }};top:{{ frzT }};width:{{ frzW }};height:{{ frzH }};z-index:{{ frzZ }};box-shadow:{{ frzShadow }}">
+            <div style="padding:16px 20px 16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+              <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px;flex:1 1 360px;min-width:0"><mat-card-title>Table</mat-card-title><mat-card-subtitle>table[mat-table] · selection frozen on the left, Actions frozen on the right · header frozen on top, total frozen at the bottom · Platform folds out to Product and Platform account number · as on the OFA pages</mat-card-subtitle></div>
+              <div class="row" style="gap:4px;flex-wrap:nowrap;align-items:center;flex:none">
+                <div class="of" style="width:320px;max-width:100%;gap:12px"><mat-icon aria-hidden="true" style="font-size:24px;width:24px;height:24px;color:var(--mat-sys-on-surface-variant)">search</mat-icon><input matInput type="search" aria-label="Search this table" placeholder="Search this table…" value="{{ frzQ }}" onChange="{{ frzOnQ }}"></div>
+                <button matIconButton aria-label="{{ frzFilterName }}" title="{{ frzFilterName }}" aria-haspopup="dialog" onClick="{{ frzOpenF }}" style="margin-left:8px"><mat-icon>{{ frzFilterIc }}</mat-icon></button>
+                <button matIconButton aria-label="Export to Excel" title="Export to Excel" onClick="{{ frzExport }}"><mat-icon>download</mat-icon></button>
+                <div style="position:relative">
+                  <button matIconButton aria-label="Show or hide columns" title="Show or hide columns" aria-haspopup="menu" aria-expanded="{{ frzColsAe }}" onClick="{{ frzToggleCols }}"><mat-icon>view_column</mat-icon></button>
+                  <sc-if value="{{ frzColsOpen }}" hint-placeholder-val="{{ false }}">
+                    <div class="cdk-backdrop" onClick="{{ frzToggleCols }}"></div>
+                    <mat-menu class="am" role="menu" aria-label="Show or hide columns" style="position:absolute;right:0;top:calc(100% + 2px);z-index:41;min-width:280px;max-height:420px;overflow:auto">
+                      <sc-for list="{{ frzColOpts }}" as="o" hint-placeholder-count="16"><button mat-menu-item role="menuitemcheckbox" aria-checked="{{ o.ac }}" disabled="{{ o.dis }}" onClick="{{ o.go }}" style="opacity:1"><mat-checkbox aria-hidden="true" checked="{{ o.on }}" style="opacity:{{ o.op }}"><span class="box"><mat-icon>check</mat-icon></span></mat-checkbox><span style="opacity:{{ o.op }}">{{ o.label }}</span></button></sc-for>
+                    </mat-menu>
+                  </sc-if>
+                </div>
+                <button matIconButton aria-label="{{ frzFullName }}" title="{{ frzFullName }}" onClick="{{ frzToggleFull }}"><mat-icon>{{ frzFullIc }}</mat-icon></button>
+                <span style="margin-left:12px;font:400 11px/16px var(--f);color:var(--mat-sys-on-surface-variant);white-space:nowrap">{{ frzCount }}</span>
+              </div>
+            </div>
+            <div style="max-height:{{ frzBoxMax }};flex:{{ frzBoxFlex }};min-height:0;overflow:auto;border-top:1px solid var(--mat-sys-outline-variant)">
               <table mat-table class="dt" style="min-width:2400px;width:100%;border-collapse:separate;border-spacing:0">
                 <thead><tr>
                   <th mat-header-cell style="position:sticky;top:0;left:0;z-index:4;width:48px;min-width:48px;padding:0 0 0 16px;background:var(--mat-sys-surface);box-shadow:inset -1px 0 0 var(--mat-sys-outline-variant), inset 0 -1px 0 var(--mat-sys-outline-variant)"><mat-checkbox role="checkbox" tabindex="0" aria-label="Select all" aria-checked="{{ frzAllAc }}" checked="{{ frzAll }}" onClick="{{ frzToggleAll }}"><span class="box"><mat-icon>check</mat-icon></span></mat-checkbox></th>
@@ -457,6 +476,7 @@ mat-chip[data-oc][data-tone="grey"]{background:#404040!important;border:1px soli
                       <td mat-cell style="position:sticky;z-index:2;background:{{ r.bg }};right:0;width:56px;min-width:56px;padding:0 8px;text-align:center;box-shadow:inset 1px 0 0 var(--mat-sys-outline-variant)"><button matIconButton aria-label="Actions" title="Actions"><mat-icon>more_vert</mat-icon></button></td>
                     </tr>
                   </sc-for>
+                  <sc-if value="{{ frzEmpty }}" hint-placeholder-val="{{ false }}"><tr><td mat-cell colspan="40" style="padding:32px 24px;text-align:left;color:var(--mat-sys-on-surface-variant);white-space:normal">No row matches the search and filters.</td></tr></sc-if>
                 </tbody>
               <tfoot><tr>
                   <td mat-footer-cell style="position:sticky;bottom:0;left:0;z-index:4;width:48px;min-width:48px;background:#F7F7F7;box-shadow:inset -1px 0 0 var(--mat-sys-outline-variant), inset 0 1px 0 var(--mat-sys-outline-variant)"></td>
@@ -578,8 +598,8 @@ mat-chip[data-oc][data-tone="grey"]{background:#404040!important;border:1px soli
           <div class="grid3c st">
             <mat-card appearance="outlined">
               <mat-card-title>Donut chart</mat-card-title>
-              <mat-card-subtitle>Fee revenue by branch</mat-card-subtitle>
-              <div class="row" style="gap:24px;flex-wrap:nowrap;margin-top:8px"><div id="ch-donut" role="img" aria-label="Fee revenue by branch, as a share of total" style="width:160px;height:160px;flex:none"></div><div class="lg"><sc-for list="{{ donutLegend }}" as="l" hint-placeholder-count="4"><div class="lgr"><span class="sw" style="background:{{ l.color }}"></span><span style="flex:1">{{ l.label }}</span><span class="meta" style="font-variant-numeric:tabular-nums">{{ l.pctLabel }}</span></div></sc-for></div></div>
+              <mat-card-subtitle>Fee revenue by state</mat-card-subtitle>
+              <div class="row" style="gap:24px;flex-wrap:nowrap;margin-top:8px"><div id="ch-donut" role="img" aria-label="Fee revenue by state, as a share of total" style="width:160px;height:160px;flex:none"></div><div class="lg"><sc-for list="{{ donutLegend }}" as="l" hint-placeholder-count="4"><div class="lgr"><span class="sw" style="background:{{ l.color }}"></span><span style="flex:1">{{ l.label }}</span><span class="meta" style="font-variant-numeric:tabular-nums">{{ l.pctLabel }}</span></div></sc-for></div></div>
             </mat-card>
             <mat-card appearance="outlined">
               <mat-card-title>Pie chart</mat-card-title>
@@ -614,23 +634,23 @@ mat-chip[data-oc][data-tone="grey"]{background:#404040!important;border:1px soli
             </mat-card>
             <mat-card appearance="outlined">
               <mat-card-title>Sparklines</mat-card-title>
-              <mat-card-subtitle>Twelve-week trend per branch</mat-card-subtitle>
+              <mat-card-subtitle>Twelve-week trend per state</mat-card-subtitle>
               <div style="display:flex;flex-direction:column;gap:14px;margin-top:8px"><sc-for list="{{ sparkList }}" as="sp" hint-placeholder-count="3"><div class="row" style="flex-wrap:nowrap"><span style="width:96px;flex:none">{{ sp.label }}</span><div id="{{ sp.id }}" role="img" aria-label="{{ sp.aria }}" style="flex:1;height:40px;min-width:0;overflow-x:clip;overflow-y:visible"></div><span class="meta" style="font-variant-numeric:tabular-nums">{{ sp.delta }}</span></div></sc-for></div>
             </mat-card>
             <mat-card appearance="outlined">
               <mat-card-title>Chord chart</mat-card-title>
-              <mat-card-subtitle>Referrals passed between branches</mat-card-subtitle>
-              <div id="ch-chord" class="chart roomy" role="img" aria-label="Referrals passed between branches"></div>
+              <mat-card-subtitle>Referrals passed between states</mat-card-subtitle>
+              <div id="ch-chord" class="chart roomy" role="img" aria-label="Referrals passed between states"></div>
             </mat-card>
             <mat-card appearance="outlined">
               <mat-card-title>Coverage matrix</mat-card-title>
-              <mat-card-subtitle>Arrangements per branch, per quarter</mat-card-subtitle>
-              <div id="ch-matrix" class="chart roomy" role="img" aria-label="Arrangements per branch per quarter"></div>
+              <mat-card-subtitle>Arrangements per state, per quarter</mat-card-subtitle>
+              <div id="ch-matrix" class="chart roomy" role="img" aria-label="Arrangements per state per quarter"></div>
             </mat-card>
             <mat-card appearance="outlined">
               <mat-card-title>Network map</mat-card-title>
-              <mat-card-subtitle>Service desks each branch draws on</mat-card-subtitle>
-              <div id="ch-network" class="chart roomy" role="img" aria-label="Service desks each branch draws on. Scroll or drag to roam."></div>
+              <mat-card-subtitle>Service desks each state draws on</mat-card-subtitle>
+              <div id="ch-network" class="chart roomy" role="img" aria-label="Service desks each state draws on. Scroll or drag to roam."></div>
             </mat-card>
           </div>
         </sc-if>
@@ -796,6 +816,44 @@ mat-chip[data-oc][data-tone="grey"]{background:#404040!important;border:1px soli
       </sc-if>
     </div>
 
+    <sc-if value="{{ frzDlg }}" hint-placeholder-val="{{ false }}">
+      <div class="overlay" onClick="{{ frzCloseF }}" style="position:fixed;z-index:50"></div>
+      <div style="position:fixed;inset:0;z-index:51;display:flex;align-items:center;justify-content:center;pointer-events:none">
+        <mat-dialog role="dialog" aria-modal="true" aria-labelledby="frzDlgT" style="pointer-events:auto;width:min(808px,calc(100vw - 48px));max-width:none;max-height:calc(100vh - 48px);display:flex;flex-direction:column;background:var(--mat-sys-surface);box-shadow:var(--mat-sys-level3)">
+          <h2 mat-dialog-title id="frzDlgT">Filter · Table</h2>
+          <mat-dialog-content style="overflow-x:hidden;overflow-y:auto;flex:1 1 auto;min-height:0">
+            <p style="margin:0 0 16px;font:400 13px/18px var(--f);color:var(--mat-sys-on-surface-variant)">Every field narrows the table. A column lists every value it holds; a date or an amount takes a range, and “—” where a row has none.</p>
+            <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px 16px">
+              <sc-for list="{{ frzFields }}" as="q" hint-placeholder-count="16">
+                <div style="grid-column:{{ q.gc }};min-width:0">
+                  <sc-if value="{{ q.isList }}" hint-placeholder-val="{{ true }}">
+                    <div class="ofw"><div class="of" role="combobox" tabindex="0" aria-haspopup="listbox" aria-expanded="{{ q.ae }}" aria-label="{{ q.lab }}" onClick="{{ q.go }}" style="cursor:pointer"><span class="ofl">{{ q.lab }}</span><span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:400 13px/20px var(--f)">{{ q.v }}</span><mat-icon aria-hidden="true" style="font-size:24px;width:24px;height:24px">arrow_drop_down</mat-icon></div></div>
+                    <sc-if value="{{ q.open }}" hint-placeholder-val="{{ false }}">
+                      <div class="cdk-backdrop" onClick="{{ frzCloseOpen }}" style="z-index:60"></div>
+                      <div class="pop mat-mdc-select-panel" role="listbox" aria-label="{{ q.lab }}" style="position:fixed;left:{{ frzPopL }};top:{{ frzPopT }};width:{{ frzPopW }};max-height:{{ frzPopMH }};overflow:auto;padding:8px 0;z-index:61;border-radius:4px;background:var(--mat-sys-surface-container)">
+                        <sc-for list="{{ q.opts }}" as="o" hint-placeholder-count="4"><div class="{{ o.cls }}" role="option" aria-selected="{{ o.on }}" onClick="{{ o.pick }}"><span style="flex:1">{{ o.label }}</span><sc-if value="{{ o.on }}" hint-placeholder-val="{{ false }}"><mat-icon style="font-size:24px;width:24px;height:24px">check</mat-icon></sc-if></div></sc-for>
+                      </div>
+                    </sc-if>
+                  </sc-if>
+                  <sc-if value="{{ q.isRange }}" hint-placeholder-val="{{ false }}">
+                    <div style="display:flex;align-items:flex-start;justify-content:{{ q.jc }};gap:12px">
+                      <div class="ofw" style="flex:{{ q.fx }};min-width:0"><div class="of" role="group" aria-label="{{ q.lab }}"><span class="ofl">{{ q.lab }}</span><sc-if value="{{ q.isDate }}" hint-placeholder-val="{{ true }}"><mat-date-range-input style="display:flex;align-items:center;gap:6px;flex:1;min-width:0"><input matStartDate aria-label="{{ q.lab }} from" placeholder="{{ q.ph1 }}" value="{{ q.f }}" onChange="{{ q.onF }}" style="flex:1;min-width:0;width:0;border:none;outline:none;background:none;font:inherit;color:inherit"><span aria-hidden="true" style="color:var(--mat-sys-on-surface-variant)">–</span><input matEndDate aria-label="{{ q.lab }} to" placeholder="{{ q.ph2 }}" value="{{ q.t }}" onChange="{{ q.onT }}" style="flex:1;min-width:0;width:0;border:none;outline:none;background:none;font:inherit;color:inherit"></mat-date-range-input><mat-icon aria-hidden="true" style="font-size:20px;width:20px;height:20px;color:var(--mat-sys-on-surface-variant)">date_range</mat-icon></sc-if><sc-if value="{{ q.isAmt }}" hint-placeholder-val="{{ false }}"><input matInput aria-label="{{ q.lab }} from" placeholder="{{ q.ph1 }}" value="{{ q.f }}" onChange="{{ q.onF }}" style="flex:1;min-width:0;width:0"><span aria-hidden="true" style="color:var(--mat-sys-on-surface-variant)">–</span><input matInput aria-label="{{ q.lab }} to" placeholder="{{ q.ph2 }}" value="{{ q.t }}" onChange="{{ q.onT }}" style="flex:1;min-width:0;width:0"></sc-if></div></div>
+                      <sc-if value="{{ q.hasBlank }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ q.blankGo }}" role="checkbox" aria-checked="{{ q.blankAc }}" style="all:unset;cursor:pointer;flex:none;width:120px;display:inline-flex;align-items:center;height:48px;margin-top:6px;white-space:nowrap;font:400 13px/20px var(--f)"><mat-checkbox aria-hidden="true" checked="{{ q.blankOn }}"><span class="box"><mat-icon>check</mat-icon></span></mat-checkbox><span style="margin-left:8px">{{ q.blankLab }}</span></button></sc-if>
+                    </div>
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </mat-dialog-content>
+          <mat-dialog-actions>
+            <button matButton="text" onClick="{{ frzCloseF }}">Cancel</button>
+            <button matButton="text" onClick="{{ frzResetF }}">Reset</button>
+            <button matButton="filled" onClick="{{ frzApplyF }}">Apply</button>
+          </mat-dialog-actions>
+        </mat-dialog>
+      </div>
+    </sc-if>
+
     <sc-if value="{{ dialogOn }}" hint-placeholder-val="{{ false }}">
       <div class="overlay" onClick="{{ closeDialog }}" style="display:flex;align-items:center;justify-content:center">
         <mat-dialog>
@@ -845,7 +903,7 @@ const GROUPS = [
   { id: "feedback", label: "Feedback & overlays", icon: "campaign", title: "Feedback and Overlays", blurb: "Dialog, snack bar, tooltip, progress indicators and badges." },
   { id: "ofa", label: "Extended components", icon: "add_box", title: "Extended Components", blurb: "The components past the basics that the OFA screens and the Advisor Dashboard are built from: a sortable table with a filter panel, drag to reorder, autocomplete, the datepicker and virtual scroll." },
 ];
-const BRANCHES = ["Sydney", "Melbourne", "Perth", "Brisbane", "Adelaide"];
+const BRANCHES = ["ACT", "NSW", "QLD", "SA", "VIC", "WA"];
 const TABS = [
   { label: "Summary", body: "Tab panels swap content in place. The active tab carries the orange rule." },
   { label: "Activity", body: "Nine events in the last seven days." },
@@ -861,20 +919,20 @@ const fmt = (n) => Math.round(n).toLocaleString("en-AU");
 function rng(seed) { let s = seed; return () => { s = (s * 9301 + 49297) % 233280; return s / 233280; }; }
 
 const ADVISORS = [
-  { advisor: "K. Patel", branch: "Sydney", clients: 128, due: 18, signed: 7, fees: 472773, insurance: 21400, lending: 8120, estate: 3050 },
-  { advisor: "M. Osei", branch: "Perth", clients: 141, due: 16, signed: 7, fees: 240087, insurance: 9870, lending: 14300, estate: 0 },
-  { advisor: "T. Nakamura", branch: "Melbourne", clients: 199, due: 16, signed: 7, fees: 903560, insurance: 40210, lending: 2480, estate: 11900 },
-  { advisor: "L. Fitzgerald", branch: "Sydney", clients: 129, due: 15, signed: 13, fees: 720874, insurance: 17650, lending: 0, estate: 6300 },
-  { advisor: "R. Lindqvist", branch: "Brisbane", clients: 74, due: 14, signed: 10, fees: 986245, insurance: 5200, lending: 31700, estate: 2100 },
-  { advisor: "A. Moretti", branch: "Sydney", clients: 138, due: 12, signed: 5, fees: 1107402, insurance: 28900, lending: 12050, estate: 9400 },
-  { advisor: "J. Doyle", branch: "Melbourne", clients: 114, due: 11, signed: 9, fees: 968930, insurance: 12300, lending: 6600, estate: 0 },
-  { advisor: "S. Abara", branch: "Adelaide", clients: 121, due: 5, signed: 2, fees: 674717, insurance: 3900, lending: 1250, estate: 4700 },
+  { advisor: "K. Patel", branch: "NSW", clients: 128, due: 18, signed: 7, fees: 472773, insurance: 21400, lending: 8120, estate: 3050 },
+  { advisor: "M. Osei", branch: "WA", clients: 141, due: 16, signed: 7, fees: 240087, insurance: 9870, lending: 14300, estate: 0 },
+  { advisor: "T. Nakamura", branch: "VIC", clients: 199, due: 16, signed: 7, fees: 903560, insurance: 40210, lending: 2480, estate: 11900 },
+  { advisor: "L. Fitzgerald", branch: "NSW", clients: 129, due: 15, signed: 13, fees: 720874, insurance: 17650, lending: 0, estate: 6300 },
+  { advisor: "R. Lindqvist", branch: "QLD", clients: 74, due: 14, signed: 10, fees: 986245, insurance: 5200, lending: 31700, estate: 2100 },
+  { advisor: "A. Moretti", branch: "NSW", clients: 138, due: 12, signed: 5, fees: 1107402, insurance: 28900, lending: 12050, estate: 9400 },
+  { advisor: "J. Doyle", branch: "VIC", clients: 114, due: 11, signed: 9, fees: 968930, insurance: 12300, lending: 6600, estate: 0 },
+  { advisor: "S. Abara", branch: "SA", clients: 121, due: 5, signed: 2, fees: 674717, insurance: 3900, lending: 1250, estate: 4700 },
 ];
 const FBRANCHES = Array.from(new Set(ADVISORS.map(r => r.branch))).sort();
 const MEMBERS = [{ k: "insurance", label: "Insurance ($)" }, { k: "lending", label: "Lending ($)" }, { k: "estate", label: "Estate ($)" }];
 const COLS = [
   { k: "advisor", label: "Advisor", start: "asc", cls: "stick", cellCls: "stick nm" },
-  { k: "branch", label: "Branch", start: "asc" },
+  { k: "branch", label: "State", start: "asc" },
   { k: "clients", label: "Clients", num: true },
   { k: "due", label: "Due", num: true },
   { k: "signed", label: "Signed", num: true },
@@ -913,22 +971,22 @@ function buildCharts(p) {
   const months = ["Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug"];
   const issued = [38,44,41,52,47,58,61,55,63,68,64,72], signed = [30,36,35,44,41,49,52,48,55,58,57,63];
   const six = months.slice(6), sixI = issued.slice(6), sixS = signed.slice(6), vAxis = { type: "value", min: 0, max: 80 };
-  const donut = [{ name: "Sydney", value: 42 }, { name: "Melbourne", value: 31 }, { name: "Perth", value: 17 }, { name: "Brisbane", value: 10 }];
+  const donut = [{ name: "NSW", value: 42 }, { name: "VIC", value: 31 }, { name: "WA", value: 17 }, { name: "QLD", value: 10 }];
   const pieIdx = [2, 5, 4, 1];
   const pie = [{ name: "Active", value: 58 }, { name: "Expiring", value: 22 }, { name: "Awaiting signature", value: 14 }, { name: "Lapsed", value: 6 }].map((d, i) => Object.assign(d, { itemStyle: { color: p[pieIdx[i]] } }));
   const stack = [{ label: "Qualified", value: 42 }, { label: "In review", value: 28 }, { label: "Awaiting signature", value: 19 }, { label: "Stalled", value: 11 }];
   const rings = [{ label: "Advice Operations", value: 82, c: 0 }, { label: "Client Reporting", value: 64, c: 2 }, { label: "Corporate Advisory", value: 41, c: 1 }];
   const sparks = [
-    { label: "Sydney", values: [12,14,13,17,16,19,21,20,24,26,25,29], delta: "+18%", c: 0 },
-    { label: "Melbourne", values: [22,20,21,19,20,18,19,17,18,16,17,15], delta: "−9%", c: 1 },
-    { label: "Perth", values: [8,9,11,10,12,13,12,14,16,15,18,19], delta: "+24%", c: 2 },
+    { label: "NSW", values: [12,14,13,17,16,19,21,20,24,26,25,29], delta: "+18%", c: 0 },
+    { label: "VIC", values: [22,20,21,19,20,18,19,17,18,16,17,15], delta: "−9%", c: 1 },
+    { label: "WA", values: [8,9,11,10,12,13,12,14,16,15,18,19], delta: "+24%", c: 2 },
   ];
-  const nodes = ["Sydney", "Melbourne", "Perth", "Brisbane"];
-  const links = [{ source: "Sydney", target: "Melbourne", value: 24 }, { source: "Sydney", target: "Perth", value: 12 }, { source: "Melbourne", target: "Brisbane", value: 15 }, { source: "Melbourne", target: "Perth", value: 9 }, { source: "Perth", target: "Sydney", value: 18 }, { source: "Brisbane", target: "Sydney", value: 11 }];
+  const nodes = ["NSW", "VIC", "WA", "QLD"];
+  const links = [{ source: "NSW", target: "VIC", value: 24 }, { source: "NSW", target: "WA", value: 12 }, { source: "VIC", target: "QLD", value: 15 }, { source: "VIC", target: "WA", value: 9 }, { source: "WA", target: "NSW", value: 18 }, { source: "QLD", target: "NSW", value: 11 }];
   const qs = ["Q1", "Q2", "Q3", "Q4"];
-  const cov = [{ b: "Sydney", v: [52,58,63,72], c: 0 }, { b: "Melbourne", v: [44,49,55,63], c: 1 }, { b: "Perth", v: [26,31,34,41], c: 2 }, { b: "Brisbane", v: [15,18,21,24], c: 3 }];
+  const cov = [{ b: "NSW", v: [52,58,63,72], c: 0 }, { b: "VIC", v: [44,49,55,63], c: 1 }, { b: "WA", v: [26,31,34,41], c: 2 }, { b: "QLD", v: [15,18,21,24], c: 3 }];
   const cells = []; cov.forEach(r => r.v.forEach((v, q) => cells.push({ name: r.b + " — " + qs[q] + ": " + v + " arrangements", value: [qs[q], r.b], symbolSize: 12 + Math.round(v / 5), itemStyle: { color: p[r.c] } })));
-  const deskLinks = [["Sydney","Advice Operations"],["Sydney","Client Reporting"],["Sydney","Corporate Advisory"],["Sydney","Compliance"],["Melbourne","Advice Operations"],["Melbourne","Client Reporting"],["Melbourne","Custody"],["Perth","Advice Operations"],["Perth","Compliance"],["Perth","Research"],["Brisbane","Client Reporting"],["Brisbane","Research"],["Brisbane","Custody"]].map(([a, b]) => ({ source: a, target: b }));
+  const deskLinks = [["NSW","Advice Operations"],["NSW","Client Reporting"],["NSW","Corporate Advisory"],["NSW","Compliance"],["VIC","Advice Operations"],["VIC","Client Reporting"],["VIC","Custody"],["WA","Advice Operations"],["WA","Compliance"],["WA","Research"],["QLD","Client Reporting"],["QLD","Research"],["QLD","Custody"]].map(([a, b]) => ({ source: a, target: b }));
   const deskNodes = nodes.map(name => ({ name, symbolSize: 22, itemStyle: { color: p[0] } })).concat(["Advice Operations","Client Reporting","Corporate Advisory","Compliance","Custody","Research"].map(name => ({ name, symbolSize: 14, itemStyle: { color: p[2] } })));
   const share = (v, t) => Math.round((v / t) * 100) + "%";
   const sum = a => a.reduce((t, d) => t + d.value, 0);
@@ -965,19 +1023,34 @@ function buildCharts(p) {
 }
 const CHARTS = buildCharts(CHART_PALETTE);
 
+  function xlsxOut(name, aoa) { const enc = new TextEncoder(), X = (t) => String(t).replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[ch]).replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, ""), cl = (i) => { let n = i + 1, r = ""; while (n) { const m = (n - 1) % 26; r = String.fromCharCode(65 + m) + r; n = Math.floor((n - 1) / 26); } return r; };
+    const sheet = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetData>' + aoa.map((r, ri) => '<row r="' + (ri + 1) + '">' + r.map((v, ci) => { const ref = cl(ci) + (ri + 1), t = String(v == null ? "" : v), n = /^-?\$?[\d,]+(\.\d+)?$/.test(t) && ri > 0 ? t.replace(/[$,]/g, "") : null; return n !== null && n !== "" && !/^0\d/.test(n) ? '<c r="' + ref + '"><v>' + n + '</v></c>' : '<c r="' + ref + '" t="inlineStr"' + (ri === 0 ? ' s="1"' : '') + '><is><t xml:space="preserve">' + X(t) + '</t></is></c>'; }).join("") + '</row>').join("") + '</sheetData></worksheet>';
+    const files = [["[Content_Types].xml", '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>'],
+      ["_rels/.rels", '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>'],
+      ["xl/workbook.xml", '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="' + X(String(name).replace(/[\\\/?*\[\]:]/g, " ").slice(0, 31) || "Sheet1") + '" sheetId="1" r:id="rId1"/></sheets></workbook>'],
+      ["xl/_rels/workbook.xml.rels", '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>'],
+      ["xl/styles.xml", '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><fonts count="2"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font></fonts><fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills><borders count="1"><border/></borders><cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs count="2"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="0" fontId="1" fillId="0" borderId="0" xfId="0" applyFont="1"/></cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>'],
+      ["xl/worksheets/sheet1.xml", sheet]];
+    const crcT = xlsxOut.t || (xlsxOut.t = Array.from({ length: 256 }, (_, n) => { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; return c >>> 0; })), crc = (b) => { let c = 0xFFFFFFFF; for (let i = 0; i < b.length; i++) c = crcT[(c ^ b[i]) & 0xFF] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; };
+    const out = [], cen = []; let off = 0; const u16 = (v) => [v & 255, (v >>> 8) & 255], u32 = (v) => [v & 255, (v >>> 8) & 255, (v >>> 16) & 255, (v >>> 24) & 255];
+    files.forEach(([fn, txt]) => { const nb = enc.encode(fn), db = enc.encode(txt), c = crc(db), hd = [].concat(u32(0x04034b50), u16(20), u16(0x0800), u16(0), u16(0), u16(0x21), u32(c), u32(db.length), u32(db.length), u16(nb.length), u16(0)); out.push(new Uint8Array(hd), nb, db); cen.push(new Uint8Array([].concat(u32(0x02014b50), u16(20), u16(20), u16(0x0800), u16(0), u16(0), u16(0x21), u32(c), u32(db.length), u32(db.length), u16(nb.length), u16(0), u16(0), u16(0), u16(0), u32(0), u32(off))), nb); off += hd.length + nb.length + db.length; });
+    const cs = cen.reduce((t, b) => t + b.length, 0), end = new Uint8Array([].concat(u32(0x06054b50), u16(0), u16(0), u16(files.length), u16(files.length), u32(cs), u32(off), u16(0)));
+    try { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob(out.concat(cen, [end]), { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" })); a.download = String(name || "Table").replace(/[\\\/:*?"<>|]+/g, " ").trim() + ".xlsx"; document.body.appendChild(a); a.click(); a.remove(); } catch (e) {} }
+
 class Component extends DCLogic {
   state = {
     nav: "buttons", pinned: false, hover: false, query: "",
     bell: false, user: false, menu: false, dialog: false, snack: false, tip: false,
     seg: 1, chipOne: true, chipTwo: false, cbA: true, cbB: false, radio: 0,
-    tog: true, pct: 60, name: "Harrison Family Trust", branch: "Sydney", tab: 0, panels: [true, false, false],
+    tog: true, pct: 60, name: "Harrison Family Trust", branch: "NSW", tab: 0, panels: [true, false, false],
     sortK: "due", sortDir: "desc", otherOpen: false,
     filterOpen: false, fSel: FBRANCHES.slice(), cards: CARDS.slice(), drag: null,
     ac: "", acOpen: false, dp: false, date: null, dateText: "", dpY: 2026, dpM: 9, vsTop: 0,
   };
-  componentDidMount() { this.syncCharts(); let n = 0; this._poll = setInterval(() => { this.syncCharts(); if (++n >= 20) clearInterval(this._poll); }, 150); }
-  componentDidUpdate() { this.syncCharts(); }
-  componentWillUnmount() { clearInterval(this._poll); clearTimeout(this._snack); clearTimeout(this._chT); this.disposeCharts(); }
+  componentDidMount() { this._frzRs = () => { if (this.state.frzFull) this.forceUpdate(); }; this._frzKey = (e) => { if (e.key === "Escape" && this.state.frzFull && !this.state.frzDlg) this.setState({ frzFull: false }); }; window.addEventListener("resize", this._frzRs); // full view follows the content area as the sidebar opens and closes
+    this._frzRo = typeof ResizeObserver !== "undefined" ? new ResizeObserver(this._frzRs) : null; this._frzOb = () => { const c = document.querySelector(".content"); if (this._frzRo && c && c !== this._frzEl) { if (this._frzEl) this._frzRo.unobserve(this._frzEl); this._frzRo.observe(c); this._frzEl = c; } }; setTimeout(this._frzOb, 0); document.addEventListener("keydown", this._frzKey); this.syncCharts(); let n = 0; this._poll = setInterval(() => { this.syncCharts(); if (++n >= 20) clearInterval(this._poll); }, 150); }
+  componentDidUpdate() { this.syncCharts(); if (this._frzOb) this._frzOb(); }
+  componentWillUnmount() { window.removeEventListener("resize", this._frzRs); if (this._frzRo) this._frzRo.disconnect(); document.removeEventListener("keydown", this._frzKey); clearInterval(this._poll); clearTimeout(this._snack); clearTimeout(this._chT); this.disposeCharts(); }
   disposeCharts() { (this._charts || []).forEach(c => { try { c.dispose(); } catch (e) {} }); this._charts = []; if (this._ro) { this._ro.disconnect(); this._ro = null; } }
   syncCharts() {
     const on = this.state.nav === "charts" && this.props.noAccess !== true;
@@ -1020,7 +1093,7 @@ class Component extends DCLogic {
       sortTotal: cols.map(c => c.k === "advisor" ? { v: "Total", cls: "stick nm" } : c.k === "branch" ? { v: "", cls: "" } : c.k === "signedPct" ? { v: pct(tot.signed, tot.due), cls: "num" } : { v: fmt(c.k === "other" ? tot.insurance + tot.lending + tot.estate : tot[c.k]), cls: cls(c) }),
       filterOpen: s.filterOpen, filterExpanded: s.filterOpen ? "true" : "false",
       toggleFilter: () => this.setState({ filterOpen: !s.filterOpen }), closeFilter: () => this.setState({ filterOpen: false }),
-      filterLabel: chosen.length === FBRANCHES.length ? "Branch · All" : "Branch · " + chosen.length,
+      filterLabel: chosen.length === FBRANCHES.length ? "State · All" : "State · " + chosen.length,
       filterNote: rows.length + " of 8 advisors",
       filterItems: FBRANCHES.map(b => { const on = chosen.includes(b); return { label: b, checked: on ? "true" : null, sel: on ? "true" : "false",
         toggle: () => this.setState({ fSel: on ? chosen.filter(x => x !== b) : FBRANCHES.filter(x => x === b || chosen.includes(x)) }) }; }),
@@ -1100,12 +1173,44 @@ class Component extends DCLogic {
       ofaCk: (() => { const S0 = [["Build and freeze the Anniversary List", "BD1", "Thu 01-10", ["Corinne Abbott", "01-10-2026 06:40"], [["List frozen at 06:40. 214 rows.", "Corinne Abbott", "01-10-2026 06:41", []]]], ["Cull the Anniversary List", "BD1", "Thu 01-10", ["Owen Pritchard", "01-10-2026 11:45"], [["Seven taken off: four deceased estates, three already TERMINATED.", "Owen Pritchard", "01-10-2026 11:46", ["Cull notes October.xlsx"]]]], ["Release the questionnaire to advisors", "BD1", "Thu 01-10", ["Corinne Abbott", "01-10-2026 12:00"], []], ["Accept the advisors' answers", "BD2–5", "Fri 02-10 – Wed 07-10", null, []], ["Issue the month", "BD6", "Thu 08-10", null, []]], st = s.ckS || {}, op = s.ckOpen, added = s.ckAdd || {}, dr = s.ckDraft || {};
         return S0.map((x, k) => { const done = st[k] !== undefined ? st[k] : !!x[3], by = st[k] ? ["Alex Nguyen", "30-10-2026 09:15"] : x[3], notes = x[4].concat(added[k] || []).map(n => ({ text: n[0], who: n[1], date: n[2], att: n[3], hasAtt: n[3].length ? true : null, go: (e) => { if (e && e.preventDefault) e.preventDefault(); } })), nxt = S0.findIndex((y, j) => !(st[j] !== undefined ? st[j] : !!y[3])), isNext = k === nxt, isOpen = op === k;
           return { bd: x[1], dm: x[2], bdc: done ? "#404040" : isNext ? "var(--mat-sys-primary)" : "#929292", name: x[0], fg: done || isNext ? "var(--mat-sys-on-surface)" : "#404040", meta: done && by ? "Ticked · " + by[0] + " · " + by[1] : isNext ? "Next step" : "Not started", done: done ? true : null, ring: done ? "#007B84" : isNext ? "var(--mat-sys-primary)" : "#CCCCCC", dot: done ? "#007B84" : "#FFFFFF", line: k === S0.length - 1 ? "transparent" : done ? "#007B84" : "#E6E6E6", ro: !done && !isNext ? "true" : null, cur: !done && !isNext ? "default" : "pointer", tickAria: done ? "Untick " + x[0] : "Tick " + x[0], tick: () => this.setState({ ckS: Object.assign({}, st, { [k]: !done }) }), nn: notes.length ? String(notes.length) : null, chev: isOpen ? "expand_less" : "expand_more", isOpen: isOpen ? true : null, open: () => this.setState({ ckOpen: isOpen ? null : k }), notes, noNotes: notes.length ? null : true, nmax: "240px", canAdd: true, hasPend: null, pend: [], draft: dr[k] || "", setDraft: (e) => this.setState({ ckDraft: Object.assign({}, this.state.ckDraft, { [k]: e.target.value }) }), attIn: () => {}, addDis: (dr[k] || "").trim() ? null : "true", add: () => { const tx = ((this.state.ckDraft || {})[k] || "").trim(); if (!tx) return; this.setState({ ckAdd: Object.assign({}, this.state.ckAdd, { [k]: ((this.state.ckAdd || {})[k] || []).concat([[tx, "Alex Nguyen", "30-10-2026 09:15", []]]) }), ckDraft: Object.assign({}, this.state.ckDraft, { [k]: "" }) }); } }; }); })(),
-      ...(() => { const D = [["S18450", "Alder & Juno Pask", "Hannah Ilves", "Melbourne", "HUB24", "HUB24 Invest", "H-90450", "12-03-2026", "09-08-2026", ["ACTIVE", "teal"], "$8,240"], ["S18471", "Bramwell Teague", "Hannah Ilves", "Melbourne", "Netwealth", "Netwealth - Investment", "NW-55471", "04-04-2026", "01-09-2026", ["PARTLY SIGNED", "amber"], "$12,610"], ["S18490", "Corrigan Holdings Pty Ltd", "Tobias Marlow", "Geelong", "Macquarie Wrap", "Macquarie Investment Consolidator II", "M-448490", "21-05-2026", "18-10-2026", ["QUARANTINED", "orange"], "$22,180"], ["S18502", "Delia Strand", "Hannah Ilves", "Melbourne", "BT Panorama", "Panorama Investments", "BTP-771502", "02-06-2026", "30-10-2026", ["NOT SIGNED", "amber"], "$4,920"], ["S18515", "Ezra Vane", "Sienna Okoro", "Melbourne", "HUB24", "HUB24 Invest", "H-90515", "15-06-2026", "12-11-2026", ["ACTIVE", "teal"], "$6,075"], ["S18530", "Fern Lomax", "Hannah Ilves", "Melbourne", "Macquarie Wrap", "Macquarie Investment Consolidator II", "M-441530", "28-06-2026", "25-11-2026", ["TERMINATED", "orange"], "$8,470"], ["S18544", "Greer Hale", "Hannah Ilves", "Melbourne", "Netwealth", "Netwealth - Super", "NW-55544", "03-07-2026", "30-11-2026", ["FULLY SIGNED", "teal"], "$14,555"], ["S18577", "Hollis Brandt", "Declan Moss", "Ballarat", "HUB24", "HUB24 Super", "H-90577", "19-07-2026", "16-12-2026", ["NO OFA", "navy"], "—"], ["S18602", "Iona Fairley", "Marcus Delahunt", "Melbourne", "Netwealth", "Netwealth - Investment", "NW-55602", "01-08-2026", "29-12-2026", ["WITH US", "lime"], "$9,320"], ["S18619", "Jasper Kell", "Elias Varney", "Albury", "BT Panorama", "Panorama Super", "BTP-771619", "14-08-2026", "11-01-2027", ["ACTIVE", "teal"], "$5,640"], ["S18640", "Kestrel Partners Pty Ltd", "Tobias Marlow", "Geelong", "Macquarie Wrap", "Macquarie Investment Consolidator II", "M-448640", "27-08-2026", "24-01-2027", ["WAITING", "amber"], "$31,900"], ["S18658", "Linnea Orr", "Sienna Okoro", "Melbourne", "HUB24", "HUB24 Invest", "H-90658", "05-09-2026", "02-02-2027", ["ACTIVE", "teal"], "$7,215"], ["S18671", "Moray & Tess Quill", "Hannah Ilves", "Melbourne", "Netwealth", "Netwealth - Investment", "NW-55671", "18-09-2026", "15-02-2027", ["DECLINED", "orange"], "$11,080"], ["S18690", "Nell Ashby", "Declan Moss", "Ballarat", "HUB24", "HUB24 Super", "H-90690", "30-09-2026", "27-02-2027", ["ACTIVE", "teal"], "$3,960"]], sel = s.frzSel || {}, all = D.every(d => sel[d[0]]), SK = s.frzSk ?? null, SD = s.frzSd || 1, dkey = (v) => /^\d{2}-\d{2}-\d{4}$/.test(v) ? v.split("-").reverse().join("") : /^\$/.test(v) ? Number(v.replace(/[^\d.]/g, "")) : v === "—" ? null : v, SR = SK == null ? D : D.map((d, i) => ({ d, i, v: dkey(SK === 9 ? d[9][0] : d[SK]) })).sort((a, b) => a.v == null && b.v == null ? a.i - b.i : a.v == null ? 1 : b.v == null ? -1 : (typeof a.v === "number" ? a.v - b.v : String(a.v).localeCompare(String(b.v))) * SD || a.i - b.i).map(x => x.d), op = !!s.frzFold, MEM = [5, 6], KEEP = (i) => op || !MEM.includes(i), L = ["S-Account", "Account name", "Advisor", "Branch", "Platform", "Product", "Platform account number", "Reference Date", "Expiry Date", "Status", "ASF\u00a0(excl.\u00a0GST)", "Payment frequency", "Entity type", "Client type", "Last fee charged date", "Termination date"];
-        return { frzCols: L.map((l, i) => ({ l, i })).filter(x => KEEP(x.i)).map(({ l, i }) => ({ label: l, cls: i === 10 ? "num" : "", aria: SK === i ? (SD > 0 ? "ascending" : "descending") : "none", arrow: SK === i && SD < 0 ? "arrow_downward" : "arrow_upward", arOp: SK === i ? "1" : "0", sortName: "Sort by " + l.replace(/\u00a0/g, " "), sort: () => this.setState(SK === i ? { frzSk: i, frzSd: -SD } : { frzSk: i, frzSd: 1 }), hbg: MEM.includes(i) ? "#F7F7F7" : "var(--mat-sys-surface)", fold: i === 4 ? { ae: op ? "true" : "false", ic: op ? "chevron_left" : "chevron_right", name: op ? "Fold Product and Platform account number into Platform" : "Show Product and Platform account number", go: () => this.setState({ frzFold: !op }) } : null })), frzAll: all ? "true" : null, frzAllAc: all ? "true" : D.some(d => sel[d[0]]) ? "mixed" : "false", frzToggleAll: () => this.setState({ frzSel: all ? {} : Object.fromEntries(D.map(d => [d[0], true])) }),
-          frzFoot: L.map((l, i) => ({ l, i })).filter(x => KEEP(x.i)).map(({ i }) => i === 0 ? { v: "Total · " + D.length + " S-Accounts", cls: "" } : i === 10 ? { v: "$" + D.reduce((n, d) => n + (Number(String(d[10]).replace(/[^\d.]/g, "")) || 0), 0).toLocaleString("en-AU"), cls: "num" } : { v: "", cls: "" }),
-          frzRows: SR.map((d, i) => { const oi = D.indexOf(d), on = !!sel[d[0]]; return { bg: on ? "color-mix(in srgb, var(--mat-sys-primary) 8%, #FFFFFF)" : i % 2 ? "#F7F7F7" : "#FFFFFF", on: on ? "true" : null, ac: on ? "true" : "false", toggle: () => this.setState({ frzSel: Object.assign({}, this.state.frzSel, { [d[0]]: !on }) }), cells: d.concat([["Monthly", "Quarterly", "Annually"][oi % 3], d[1].includes("Pty Ltd") ? "Company" : d[1].includes("&") ? "Joint" : "Individual", oi % 4 === 2 ? "WHOLESALE" : "RETAIL", "30-09-2026", d[9][0] === "TERMINATED" ? "06-10-2026" : "—"]).map((x, k) => k === 9 ? { chip: x[0], tone: x[1], txt: null, cls: "", k } : { v: x, txt: true, chip: null, cls: k === 10 ? "num" : "", k }).filter(x => KEEP(x.k)) }; }) }; })(),
+      ...(() => { const D = [["S18450", "Alder & Juno Pask", "Hannah Ilves", "VIC", "HUB24", "HUB24 Invest", "H-90450", "12-03-2026", "09-08-2026", ["ACTIVE", "teal"], "$8,240"], ["S18471", "Bramwell Teague", "Hannah Ilves", "VIC", "Netwealth", "Netwealth - Investment", "NW-55471", "04-04-2026", "01-09-2026", ["PARTLY SIGNED", "amber"], "$12,610"], ["S18490", "Corrigan Holdings Pty Ltd", "Tobias Marlow", "VIC", "Macquarie Wrap", "Macquarie Investment Consolidator II", "M-448490", "21-05-2026", "18-10-2026", ["QUARANTINED", "orange"], "$22,180"], ["S18502", "Delia Strand", "Hannah Ilves", "VIC", "BT Panorama", "Panorama Investments", "BTP-771502", "02-06-2026", "30-10-2026", ["NOT SIGNED", "amber"], "$4,920"], ["S18515", "Ezra Vane", "Sienna Okoro", "VIC", "HUB24", "HUB24 Invest", "H-90515", "15-06-2026", "12-11-2026", ["ACTIVE", "teal"], "$6,075"], ["S18530", "Fern Lomax", "Hannah Ilves", "VIC", "Macquarie Wrap", "Macquarie Investment Consolidator II", "M-441530", "28-06-2026", "25-11-2026", ["TERMINATED", "orange"], "$8,470"], ["S18544", "Greer Hale", "Hannah Ilves", "VIC", "Netwealth", "Netwealth - Super", "NW-55544", "03-07-2026", "30-11-2026", ["FULLY SIGNED", "teal"], "$14,555"], ["S18577", "Hollis Brandt", "Declan Moss", "VIC", "HUB24", "HUB24 Super", "H-90577", "19-07-2026", "16-12-2026", ["NO OFA", "navy"], "—"], ["S18602", "Iona Fairley", "Marcus Delahunt", "VIC", "Netwealth", "Netwealth - Investment", "NW-55602", "01-08-2026", "29-12-2026", ["WITH US", "lime"], "$9,320"], ["S18619", "Jasper Kell", "Elias Varney", "NSW", "BT Panorama", "Panorama Super", "BTP-771619", "14-08-2026", "11-01-2027", ["ACTIVE", "teal"], "$5,640"], ["S18640", "Kestrel Partners Pty Ltd", "Tobias Marlow", "VIC", "Macquarie Wrap", "Macquarie Investment Consolidator II", "M-448640", "27-08-2026", "24-01-2027", ["WAITING", "amber"], "$31,900"], ["S18658", "Linnea Orr", "Sienna Okoro", "VIC", "HUB24", "HUB24 Invest", "H-90658", "05-09-2026", "02-02-2027", ["ACTIVE", "teal"], "$7,215"], ["S18671", "Moray & Tess Quill", "Hannah Ilves", "VIC", "Netwealth", "Netwealth - Investment", "NW-55671", "18-09-2026", "15-02-2027", ["DECLINED", "orange"], "$11,080"], ["S18690", "Nell Ashby", "Declan Moss", "VIC", "HUB24", "HUB24 Super", "H-90690", "30-09-2026", "27-02-2027", ["ACTIVE", "teal"], "$3,960"]], L = ["S-Account", "Account name", "Advisor", "State", "Platform", "Product", "Platform account number", "Reference Date", "Expiry Date", "Status", "ASF (excl. GST)", "Payment frequency", "Entity type", "Client type", "Last fee charged date", "Termination date"];
+        // every row as its sixteen values, the extra fields filled the same way as before
+        const FULL = D.map((d, oi) => d.slice(0, 9).concat([d[9][0], d[10], ["Monthly", "Quarterly", "Annually"][oi % 3], d[1].includes("Pty Ltd") ? "Company" : d[1].includes("&") ? "Joint" : "Individual", oi % 4 === 2 ? "WHOLESALE" : "RETAIL", "30-09-2026", d[9][0] === "TERMINATED" ? "06-10-2026" : "—"]));
+        const KIND = (i) => [7, 8, 14, 15].includes(i) ? "date" : i === 10 ? "amount" : "list", isD = (v) => /^\d{2}-\d{2}-\d{4}$/.test(v || ""), dk = (v) => v.split("-").reverse().join(""), num = (v) => { const n = Number(String(v || "").replace(/[^\d.\-]/g, "")); return String(v || "").replace(/[^\d]/g, "") === "" ? null : n; };
+        // Search: every field of the row, shown or hidden. Filter the list: each column's own values; a date or an amount as a from–to range, and "—" where a row has none.
+        const q = (s.frzQ || "").trim().toLowerCase(), F = s.frzF || {}, fN = Object.keys(F).length;
+        const okF = (r) => Object.keys(F).every(k => { const i = +k, v = r[i], f = F[k]; if (KIND(i) === "list") return v === f; const blank = !(KIND(i) === "date" ? isD(v) : num(v) !== null), hasR = !!(f.f || f.t); if (blank) return !!f.blank; if (!hasR) return false; if (KIND(i) === "date") return (!isD(f.f) || dk(v) >= dk(f.f)) && (!isD(f.t) || dk(v) <= dk(f.t)); const n = num(v); return (num(f.f) === null || n >= num(f.f)) && (num(f.t) === null || n <= num(f.t)); });
+        const DF = D.filter((d, oi) => (!q || FULL[oi].join(" ").toLowerCase().includes(q)) && okF(FULL[oi]));
+        const sel = s.frzSel || {}, all = DF.length > 0 && DF.every(d => sel[d[0]]), SK = s.frzSk ?? null, SD = s.frzSd || 1, dkey = (v) => /^\d{2}-\d{2}-\d{4}$/.test(v) ? v.split("-").reverse().join("") : /^\$/.test(v) ? Number(v.replace(/[^\d.]/g, "")) : v === "—" ? null : v, SR = SK == null ? DF : DF.map((d, i) => ({ d, i, v: dkey(SK === 9 ? d[9][0] : FULL[D.indexOf(d)][SK]) })).sort((a, b) => a.v == null && b.v == null ? a.i - b.i : a.v == null ? 1 : b.v == null ? -1 : (typeof a.v === "number" ? a.v - b.v : String(a.v).localeCompare(String(b.v))) * SD || a.i - b.i).map(x => x.d), op = !!s.frzFold, MEM = [5, 6], HID = s.frzHid || {}, KEEP = (i) => (op || !MEM.includes(i)) && (i === 0 || !HID[i]);
+        // Show or hide columns: S-Account always shows; Product and Platform account number show when Platform is folded out
+        const colOpts = L.map((l, i) => { const on = i === 0 || !HID[i]; return { label: l.replace(/ /g, " ") + (MEM.includes(i) && !op ? " · folded into Platform" : ""), on: on ? "true" : null, ac: on ? "true" : "false", op: i === 0 ? ".38" : "1", dis: i === 0 ? "true" : null, go: i === 0 ? null : () => this.setState({ frzHid: Object.assign({}, this.state.frzHid, { [i]: on }) }) }; });
+        // Filter the list: a draft while the dialog is open; Apply sets it, Reset clears it
+        const FD = s.frzFD || {}, setFD = (k, v) => { const n = Object.assign({}, this.state.frzFD); if (v == null) delete n[k]; else n[k] = v; this.setState({ frzFD: n, frzOpen: null }); };
+        // S-Account and Account name have no filter: each row holds its own, and Search finds them
+        const fFields = L.map((l, i) => { if (i < 2) return null; const lab = l.replace(/ /g, " "), vals = FULL.map(r => r[i]), kind = KIND(i); if (kind === "list") { const opts = i === 3 ? ["ACT", "NSW", "QLD", "SA", "VIC", "WA"] : [...new Set(vals)].sort((a, b) => a === "—" ? 1 : b === "—" ? -1 : String(a).localeCompare(String(b))), cur = FD[i] || "All", open = s.frzOpen === i;
+            return { lab, ci: i, isList: true, isRange: false, v: cur, ae: open ? "true" : "false", open, gc: "span 2", go: (e) => { const r = (e.currentTarget.closest(".of") || e.currentTarget).getBoundingClientRect(); this.setState({ frzOpen: open ? null : i, frzPop: { l: r.left + "px", t: (r.bottom + 4) + "px", w: r.width + "px", mh: Math.max(160, window.innerHeight - r.bottom - 24) + "px" } }); }, opts: ["All"].concat(opts).map(o => ({ label: o, on: o === cur ? "true" : null, cls: "sopt" + (o === cur ? " on" : ""), pick: () => setFD(i, o === "All" ? null : o) })) }; }
+          const blankOk = vals.some(v => kind === "date" ? !isD(v) : num(v) === null), cur = FD[i] || {}, put = (o) => { const n = Object.assign({}, cur, o); setFD(i, n.f || n.t || n.blank ? n : null); };
+          return { lab, isList: false, isRange: true, gc: blankOk ? "1 / -1" : "span 2", jc: blankOk ? "center" : "flex-start", fx: "1 1 auto", isDate: kind === "date" ? "true" : null, isAmt: kind === "amount" ? "true" : null, ph1: kind === "date" ? "Start date" : "From $", ph2: kind === "date" ? "End date" : "To $", f: cur.f || "", t: cur.t || "", onF: (e) => put({ f: e.target.value }), onT: (e) => put({ t: e.target.value }), hasBlank: blankOk ? "true" : null, blankOn: cur.blank ? "true" : null, blankAc: cur.blank ? "true" : "false", blankGo: () => put({ blank: !cur.blank }), blankLab: "— (no " + (kind === "date" ? "date" : "amount") + ")", ci: i }; }).filter(Boolean);
+        { const st = fFields.findIndex(q => q.ci === 9), pa = fFields.findIndex(q => q.ci === 6); if (st > pa && pa >= 0) fFields.splice(pa + 1, 0, fFields.splice(st, 1)[0]); }
+        { const three = fFields.filter(q => q.ci >= 11 && q.ci <= 13), at = fFields.findIndex(q => q.ci === 9); if (at >= 0) { const rest = fFields.filter(q => !three.includes(q)); rest.splice(rest.indexOf(fFields[at]) + 1, 0, ...three); fFields.splice(0, fFields.length, ...rest); } }
+        { const as = fFields.findIndex(q => q.ci === 10); if (as >= 0) { const q = fFields.splice(as, 1)[0]; fFields.splice(fFields.length - 1, 0, q); } }
+        const full = !!s.frzFull, cr = full && typeof document !== "undefined" && document.querySelector(".content") ? document.querySelector(".content").getBoundingClientRect() : null;
+        const visI = L.map((_, i) => i).filter(KEEP);
+        return { frzCols: visI.map(i => ({ l: L[i], i })).map(({ l, i }) => ({ label: l, cls: i === 10 ? "num" : "", aria: SK === i ? (SD > 0 ? "ascending" : "descending") : "none", arrow: SK === i && SD < 0 ? "arrow_downward" : "arrow_upward", arOp: SK === i ? "1" : "0", sortName: "Sort by " + l.replace(/ /g, " "), sort: () => this.setState(SK === i ? { frzSk: i, frzSd: -SD } : { frzSk: i, frzSd: 1 }), hbg: MEM.includes(i) ? "#F7F7F7" : "var(--mat-sys-surface)", fold: i === 4 ? { ae: op ? "true" : "false", ic: op ? "chevron_left" : "chevron_right", name: op ? "Fold Product and Platform account number into Platform" : "Show Product and Platform account number", go: () => this.setState({ frzFold: !op }) } : null })), frzAll: all ? "true" : null, frzAllAc: all ? "true" : DF.some(d => sel[d[0]]) ? "mixed" : "false", frzToggleAll: () => this.setState({ frzSel: all ? {} : Object.fromEntries(DF.map(d => [d[0], true])) }),
+          frzFoot: visI.map(i => i === 0 ? { v: "Total · " + DF.length + (DF.length === 1 ? " S-Account" : " S-Accounts"), cls: "" } : i === 10 ? { v: "$" + DF.reduce((n, d) => n + (Number(String(d[10]).replace(/[^\d.]/g, "")) || 0), 0).toLocaleString("en-AU"), cls: "num" } : { v: "", cls: "" }),
+          frzRows: SR.map((d, i) => { const oi = D.indexOf(d), on = !!sel[d[0]]; return { bg: on ? "color-mix(in srgb, var(--mat-sys-primary) 8%, #FFFFFF)" : i % 2 ? "#F7F7F7" : "#FFFFFF", on: on ? "true" : null, ac: on ? "true" : "false", toggle: () => this.setState({ frzSel: Object.assign({}, this.state.frzSel, { [d[0]]: !on }) }), cells: FULL[oi].map((x, k) => k === 9 ? { chip: x, tone: d[9][1], txt: null, cls: "", k } : { v: x, txt: true, chip: null, cls: k === 10 ? "num" : "", k }).filter(x => KEEP(x.k)) }; }),
+          frzEmpty: DF.length ? null : "true", frzCount: DF.length + " of " + D.length + " rows",
+          frzQ: s.frzQ || "", frzOnQ: (e) => this.setState({ frzQ: e.target.value }),
+          frzFilterIc: fN ? "filter_alt" : "filter_list", frzFilterName: fN ? "Filter the list · " + fN + " on" : "Filter the list",
+          frzOpenF: () => this.setState({ frzDlg: true, frzFD: Object.assign({}, F), frzOpen: null }), frzDlg: !!s.frzDlg, frzFields: fFields, frzPopL: (s.frzPop || {}).l || "0px", frzPopT: (s.frzPop || {}).t || "0px", frzPopW: (s.frzPop || {}).w || "200px", frzPopMH: (s.frzPop || {}).mh || "280px", frzAnyOpen: s.frzOpen != null ? "true" : null, frzCloseOpen: () => this.setState({ frzOpen: null }),
+          frzCloseF: () => this.setState({ frzDlg: false, frzOpen: null }), frzResetF: () => this.setState({ frzF: {}, frzFD: {}, frzDlg: false, frzOpen: null }), frzApplyF: () => this.setState({ frzF: Object.assign({}, this.state.frzFD), frzDlg: false, frzOpen: null }),
+          frzColsOpen: !!s.frzColsOpen, frzColsAe: s.frzColsOpen ? "true" : "false", frzShadow: "none", frzToggleCols: () => this.setState({ frzColsOpen: !s.frzColsOpen }), frzColOpts: colOpts,
+          frzExport: () => { const cols = visI, rows = [cols.map(i => L[i].replace(/ /g, " "))].concat(SR.map(d => cols.map(i => FULL[D.indexOf(d)][i]))); xlsxOut("Table", rows); },
+          // Open in full view: the card takes the content area (not the sidebar or the top bar)
+          frzFull: full ? "true" : null, frzFullIc: full ? "close_fullscreen" : "open_in_full", frzFullName: full ? "Close the full view" : "Open in full view", frzToggleFull: () => this.setState({ frzFull: !full, frzColsOpen: false }),
+          frzPos: cr ? "fixed" : "relative", frzL: cr ? cr.left + "px" : "auto", frzT: cr ? (cr.top + 8) + "px" : "auto", frzW: cr ? (cr.width - 8) + "px" : "auto", frzH: cr ? (cr.height - 16) + "px" : "auto", frzBackOn: !!cr, frzBL: cr ? cr.left + "px" : "0", frzBT: cr ? cr.top + "px" : "0", frzBW: cr ? cr.width + "px" : "0", frzBH: cr ? cr.height + "px" : "0", frzZ: cr ? "30" : "auto", frzBoxMax: cr ? "none" : "420px", frzBoxFlex: cr ? "1 1 auto" : "0 1 auto" }; })(),
       ofaBarAria: "Renewals by days to the Expiry Date: 6 in 0 to 30 days, 9 in 31 to 60, 14 in 61 to 90, 38 over 90, 2 declined",
-      ofaFlt: [["Advisor", "Hannah Ilves", "arrow_drop_down", "auto"], ["Branch", "All", "arrow_drop_down", "auto"], ["Platform", "Netwealth, HUB24", "arrow_drop_down", "auto"], ["Status", "All", "arrow_drop_down", "auto"], ["Expiry Date", "01-10-2026 – 31-12-2026", "calendar_today", "1 / -1"]].map(x => ({ label: x[0], v: x[1], icon: x[2], gc: x[3], fg: x[1] === "All" ? "var(--mat-sys-on-surface-variant)" : "var(--mat-sys-on-surface)" })),
+      ofaFlt: [["Advisor", "Hannah Ilves", "arrow_drop_down", "auto"], ["State", "All", "arrow_drop_down", "auto"], ["Platform", "Netwealth, HUB24", "arrow_drop_down", "auto"], ["Status", "All", "arrow_drop_down", "auto"], ["Expiry Date", "01-10-2026 – 31-12-2026", "calendar_today", "1 / -1"]].map(x => ({ label: x[0], v: x[1], icon: x[2], gc: x[3], fg: x[1] === "All" ? "var(--mat-sys-on-surface-variant)" : "var(--mat-sys-on-surface)" })),
       accessOn: !na, noAccessOn: na,
       donutLegend: CHARTS.donutLegend, pieLegend: CHARTS.pieLegend, stackLegend: CHARTS.stackLegend, ringList: CHARTS.ringList, sparkList: CHARTS.sparkList,
 

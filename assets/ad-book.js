@@ -116,4 +116,7 @@
     // B47: many clients share a name, so each client has an identifier; one client on several S-Accounts keeps one
     let cn = 50000; Object.values(AB.BOOKS).forEach(bk => bk.forEach(x => { x.cid = "C" + (++cn); x.pas.forEach(pa => pa.prods.forEach(q => { q.hb = HB(x, pa, q); })); }));
     [["Ravi Naidoo", "Margaret Okonkwo"], ["Hannah Ilves", "Greer Hale"]].forEach(([a, nm]) => { const xs = (AB.BOOKS[a] || []).filter(x => x.client === nm); xs.forEach(x => { x.cid = xs[0].cid; }); }); }
+  // M22: the accounts each adviser closed, per month (Oct 25 – Sep 26), each with the Funds Under Advice it held at its last month-end before it closed. Accounts Closed counts them; Funds Under Advice Closed adds them up.
+  { const AB = window.ADBOOK; let z = 4242, cs = 26000; const rr = () => { z = (z * 9301 + 49297) % 233280; return z / 233280; }; AB.CLOSED = {};
+    AB.NAT.forEach(a => { AB.CLOSED[a] = Array.from({ length: 12 }, () => { const n = Math.max(0, Math.round(1.6 + (rr() - 0.5) * 3.8)); return Array.from({ length: n }, () => ({ s: "S" + (cs += 1 + Math.floor(rr() * 9)), fua: Math.round(Math.exp(11 + rr() * 3.2) / 100) * 100 })); }); }); }
 })();
