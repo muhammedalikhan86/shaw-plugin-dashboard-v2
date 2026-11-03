@@ -113,9 +113,9 @@ mat-form-field:is(.ff,[classname~="ff"])[focused]>.field{border-bottom:2px solid
 mat-form-field:is(.ff,[classname~="ff"]) mat-error,mat-form-field:is(.ff,[classname~="ff"]) mat-hint{padding:0 16px;font:400 11px/16px var(--f)}
 mat-form-field:is(.ff,[classname~="ff"]) mat-hint{color:var(--mat-sys-on-surface)}
 mat-checkbox,mat-radio-button,mat-slide-toggle{font:400 13px/20px var(--f);gap:12px;min-height:34px;padding-left:6px}
-mat-checkbox:not([checked])>.box mat-icon{visibility:hidden}
-mat-checkbox>.box{border-radius:2px;border-color:var(--mat-sys-on-surface)}
-mat-checkbox>.box mat-icon{font-size:16px;width:16px;height:16px;font-variation-settings:"wght" 600}
+mat-checkbox:not([checked])>:is(.box,[classname~="box"]) mat-icon{visibility:hidden}
+mat-checkbox>:is(.box,[classname~="box"]){border-radius:2px;border-color:var(--mat-sys-on-surface)}
+mat-checkbox>:is(.box,[classname~="box"]) mat-icon{font-size:16px;width:16px;height:16px;font-variation-settings:"wght" 600}
 mat-radio-button>.dot{border-color:var(--mat-sys-on-surface)}
 mat-radio-button[checked]>.dot{border-color:var(--mat-sys-primary)}
 mat-slide-toggle{padding-left:0;gap:4px}
@@ -153,8 +153,8 @@ mat-menu:is(.am,[classname~="am"]){padding:8px 0;background:var(--mat-sys-surfac
 mat-menu:is(.am,[classname~="am"]) button[mat-menu-item]:hover{background:var(--mat-sys-surface-container-high)}
 mat-menu:is(.am,[classname~="am"]) button[mat-menu-item]{height:48px;background:transparent;gap:12px;padding:0 16px;font:500 13px/20px var(--f);color:var(--mat-sys-on-surface)}
 mat-menu:is(.am,[classname~="am"]) button[mat-menu-item] mat-icon{font-size:20px;width:20px;height:20px;color:var(--mat-sys-on-surface-variant)}
-.stp{display:flex;align-items:center;gap:8px;flex:none;height:64px;padding:0 24px;border-radius:6px;cursor:pointer;font:400 12px/16px var(--f);color:var(--mat-sys-on-surface);transition:background-color .15s}
-.stp:hover{background:var(--mat-sys-surface-container-high)}
+:is(.stp,[classname~="stp"]){display:flex;align-items:center;gap:8px;flex:none;height:64px;padding:0 24px;border-radius:6px;cursor:pointer;font:400 12px/16px var(--f);color:var(--mat-sys-on-surface);transition:background-color .15s}
+:is(.stp,[classname~="stp"]):hover{background:var(--mat-sys-surface-container-high)}
 .sn{width:24px;height:24px;border-radius:9999px;display:flex;align-items:center;justify-content:center;font:400 12px/16px var(--f);background:var(--mat-sys-surface-variant);color:var(--mat-sys-on-surface-variant)}
 .sn.done{background:var(--mat-sys-on-surface);color:var(--mat-sys-surface)}
 .sn.done mat-icon{font-size:16px;width:16px;height:16px}
@@ -191,15 +191,15 @@ body{min-width:708px}
 .adgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
 .tiles{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px}
 .tile{height:112px;padding:14px 14px 12px;display:flex;flex-direction:column;background:var(--mat-sys-surface);border:1px solid var(--mat-sys-outline-variant);border-radius:6px}
-.tl{font:500 11px/16px var(--f);letter-spacing:.05em;text-transform:uppercase;height:32px;color:#404040}
+:is(.tl,[classname~="tl"]){font:500 11px/16px var(--f);letter-spacing:.05em;text-transform:uppercase;height:32px;color:#404040}
 .tr{font:400 11px/16px var(--f);margin-top:6px;color:#404040}
 .tv{font:400 18px/1.05 var(--f);font-variant-numeric:tabular-nums;margin-top:auto;display:flex;align-items:center;gap:4px}
 .ctl{display:flex;flex-direction:column;gap:6px}
 .ctl>.lb{font:500 10px/14px var(--f);letter-spacing:.08em;text-transform:uppercase;color:#404040}
-.sel{display:flex;align-items:center;gap:12px;height:48px;padding:0 12px 0 16px;min-width:200px;border:1px solid var(--mat-sys-surface-container-highest);border-radius:4px;background:var(--mat-sys-surface);font:400 13px/18px var(--f);color:var(--mat-sys-on-surface);cursor:pointer;box-sizing:border-box}
+:is(.sel,[classname~="sel"]){display:flex;align-items:center;gap:12px;height:48px;padding:0 12px 0 16px;min-width:200px;border:1px solid var(--mat-sys-surface-container-highest);border-radius:4px;background:var(--mat-sys-surface);font:400 13px/18px var(--f);color:var(--mat-sys-on-surface);cursor:pointer;box-sizing:border-box}
 mat-slide-toggle[disabled]>.track{background:var(--mat-sys-surface-container-highest)!important;border-color:var(--mat-sys-surface-container-highest)!important}
 mat-slide-toggle[disabled]>.track>.thumb{background:var(--mat-sys-surface)!important;color:var(--mat-sys-outline)!important}
-.sel:hover{border-color:var(--mat-sys-on-surface)}
+:is(.sel,[classname~="sel"]):hover{border-color:var(--mat-sys-on-surface)}
 .cc{display:flex;flex-direction:column;background:var(--mat-sys-surface);border:1px solid var(--mat-sys-outline-variant);border-radius:6px;min-width:0}
 .ch{padding:16px 16px 0;display:flex;flex-direction:column;gap:2px}
 .ct{font:500 14px/20px var(--f)}
@@ -242,7 +242,7 @@ mat-card:is(.box,[classname~="box"]){padding:0;gap:0;overflow:visible;background
 .bh{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:16px 20px 12px}
 .bt{font:var(--mat-sys-title-medium)}
 .bs{font:var(--mat-sys-body-small);color:var(--mat-sys-on-surface-variant);margin-top:2px;text-wrap:pretty}
-.pp{padding:4px 20px 16px}
+:is(.pp,[classname~="pp"]){padding:4px 20px 16px}
 mat-tab-header:is(.tabs,[classname~="tabs"]){display:flex;border-bottom:1px solid var(--mat-sys-outline-variant);background:var(--mat-sys-surface);border-radius:6px 6px 0 0;padding:0 8px}
 mat-tab-header:is(.tabs,[classname~="tabs"]) mat-tab{height:44px;padding:0 20px;gap:8px;font:500 12px/18px var(--f);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;color:var(--mat-sys-on-surface);border-bottom:3px solid transparent}
 mat-tab-header:is(.tabs,[classname~="tabs"]) mat-tab:hover{background:var(--mat-sys-surface-container)}
@@ -250,9 +250,9 @@ mat-tab-header:is(.tabs,[classname~="tabs"]) mat-tab[active]{color:var(--mat-sys
 .cnt{min-width:20px;height:18px;padding:0 6px;border-radius:9999px;background:var(--mat-sys-surface-container-high);font:500 10px/18px var(--f);letter-spacing:0;text-align:center;color:var(--mat-sys-on-surface)}
 .cnt[data-tone="neg"]{background:var(--mat-sys-error);color:var(--mat-sys-on-error)}
 mat-horizontal-stepper:is(.sp,[classname~="sp"]){display:flex;align-items:center;gap:0;background:var(--mat-sys-surface);border:1px solid var(--mat-sys-outline-variant);border-radius:6px;padding:12px 12px}
-mat-horizontal-stepper:is(.sp,[classname~="sp"]) .stp{height:40px;padding:0 28px 0 8px}
-mat-horizontal-stepper:is(.sp,[classname~="sp"]) .stp:hover{background:rgba(0,0,0,.08)}
-mat-horizontal-stepper:is(.sp,[classname~="sp"]) .stp[data-on="true"] .stl{font-weight:500}
+mat-horizontal-stepper:is(.sp,[classname~="sp"]) :is(.stp,[classname~="stp"]){height:40px;padding:0 28px 0 8px}
+mat-horizontal-stepper:is(.sp,[classname~="sp"]) :is(.stp,[classname~="stp"]):hover{background:rgba(0,0,0,.08)}
+mat-horizontal-stepper:is(.sp,[classname~="sp"]) :is(.stp,[classname~="stp"])[data-on="true"] .stl{font-weight:500}
 .stl{font:400 12px/16px var(--f)}.sts{font:400 11px/16px var(--f);color:var(--mat-sys-on-surface-variant)}
 mat-horizontal-stepper:is(.sp,[classname~="sp"]) .sl{margin:0 8px;min-width:24px}
 table.ot{table-layout:auto}
@@ -314,9 +314,9 @@ mat-list:is(.tl,[classname~="tl"]) mat-list-item{display:grid;grid-template-colu
 .evg .v{font:var(--mat-sys-title-medium);font-variant-numeric:tabular-nums;word-break:break-all}
 .fg{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px 16px}
 .fgf{display:flex;flex-direction:column;gap:6px;min-width:0}
-.fgf .sel{min-width:0;width:100%}
-.fgf .sel[data-ro="true"]{background:var(--mat-sys-surface-container-low);cursor:default;color:var(--mat-sys-on-surface-variant)}
-.fgf .sel[data-err="true"]{border-color:var(--mat-sys-error);box-shadow:inset 0 0 0 1px var(--mat-sys-error)}
+.fgf :is(.sel,[classname~="sel"]){min-width:0;width:100%}
+.fgf :is(.sel,[classname~="sel"])[data-ro="true"]{background:var(--mat-sys-surface-container-low);cursor:default;color:var(--mat-sys-on-surface-variant)}
+.fgf :is(.sel,[classname~="sel"])[data-err="true"]{border-color:var(--mat-sys-error);box-shadow:inset 0 0 0 1px var(--mat-sys-error)}
 .fgf .hint{font:400 11px/16px var(--f);color:var(--mat-sys-on-surface-variant)}
 .fgf .err{font:400 11px/16px var(--f);color:var(--mat-sys-error)}
 textarea.ta{width:100%;min-height:72px;resize:vertical;padding:10px 16px;border:1px solid var(--mat-sys-surface-container-highest);border-radius:4px;font:400 13px/20px var(--f);background:var(--mat-sys-surface);color:var(--mat-sys-on-surface)}
@@ -344,7 +344,7 @@ mat-snack-bar:is(.sn2,[classname~="sn2"]) button{all:unset;cursor:pointer;color:
 [matBadge].bn::after{background:var(--mat-sys-inverse-surface);color:var(--mat-sys-inverse-on-surface)}
 .gearm{position:absolute;left:8px;bottom:100%;margin-bottom:4px;min-width:200px;z-index:60}
 .mstrip{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 20px;background:var(--mat-sys-surface-container-low);border-top:1px solid var(--mat-sys-outline-variant);border-bottom:1px solid var(--mat-sys-outline-variant)}
-.pgr{display:flex;align-items:center;justify-content:flex-end;gap:8px;height:48px;padding:0 16px;font:400 11px/16px var(--f)}
+:is(.pgr,[classname~="pgr"]){display:flex;align-items:center;justify-content:flex-end;gap:8px;height:48px;padding:0 16px;font:400 11px/16px var(--f)}
 mat-list:is(.ll,[classname~="ll"]) mat-list-item{min-height:56px;padding:8px 0;display:flex;align-items:center;gap:12px;border-bottom:none}
 .lli{display:flex;flex-direction:column;min-width:0;flex:1}
 .llt{font:var(--mat-sys-body-large)}.lls{font:var(--mat-sys-body-small);color:var(--mat-sys-on-surface-variant)}
@@ -374,8 +374,8 @@ mat-list:is(.ll,[classname~="ll"]) mat-list-item{min-height:56px;padding:8px 0;d
 .dcap{font:400 11px/16px var(--f);color:#404040;margin-top:4px;text-wrap:pretty}
 
 mat-horizontal-stepper:is(.sp,[classname~="sp"]){padding:20px 16px 28px;align-items:flex-start}
-mat-horizontal-stepper:is(.sp,[classname~="sp"]) .stp{height:auto;min-height:40px;padding:6px 28px 6px 8px;align-items:flex-start;flex:none;max-width:320px}
-mat-horizontal-stepper:is(.sp,[classname~="sp"]) .stp .sn{margin-top:18px;flex:none}
+mat-horizontal-stepper:is(.sp,[classname~="sp"]) :is(.stp,[classname~="stp"]){height:auto;min-height:40px;padding:6px 28px 6px 8px;align-items:flex-start;flex:none;max-width:320px}
+mat-horizontal-stepper:is(.sp,[classname~="sp"]) :is(.stp,[classname~="stp"]) .sn{margin-top:18px;flex:none}
 .std{font:500 10px/14px var(--f);letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;white-space:nowrap}
 .sts{text-wrap:pretty}
 .sl.tline{position:relative;flex:1;height:2px;margin:36px -20px 0;border-radius:9999px;min-width:60px}
@@ -390,7 +390,7 @@ mat-horizontal-stepper:is(.sp,[classname~="sp"]) .stp .sn{margin-top:18px;flex:n
 
 .trh2{border-radius:1px}
 
-mat-card:is(.door,[classname~="door"]) .tl{height:auto}
+mat-card:is(.door,[classname~="door"]) :is(.tl,[classname~="tl"]){height:auto}
 mat-card:is(.door,[classname~="door"]) .tr{margin-top:2px}
 mat-card:is(.door,[classname~="door"]) .tv{margin-top:8px}
 
@@ -527,17 +527,17 @@ mat-form-field:is(.mof,[classname~="mof"]){display:block;padding-top:6px}
 mat-form-field:is(.mof,[classname~="mof"])>.field{position:relative;height:auto!important;padding:14px 16px 10px!important;border:1px solid var(--mat-sys-outline)!important;border-radius:4px!important;background:var(--mat-sys-surface)!important;box-shadow:none!important}
 mat-form-field:is(.mof,[classname~="mof"])>.field:hover{border-color:var(--mat-sys-on-surface)!important}
 mat-form-field:is(.mof,[classname~="mof"])>.field:focus-within{border:2px solid var(--mat-sys-primary)!important;padding:13px 15px 9px!important}
-mat-form-field:is(.mof,[classname~="mof"]) .mofl{position:absolute;top:-8px;left:12px;padding:0 4px;background:var(--mat-sys-surface);font:400 12px/16px var(--f);color:var(--mat-sys-on-surface-variant)}
-mat-form-field:is(.mof,[classname~="mof"])>.field:focus-within .mofl{color:var(--mat-sys-primary)}
+mat-form-field:is(.mof,[classname~="mof"]) :is(.mofl,[classname~="mofl"]){position:absolute;top:-8px;left:12px;padding:0 4px;background:var(--mat-sys-surface);font:400 12px/16px var(--f);color:var(--mat-sys-on-surface-variant)}
+mat-form-field:is(.mof,[classname~="mof"])>.field:focus-within :is(.mofl,[classname~="mofl"]){color:var(--mat-sys-primary)}
 mat-form-field:is(.mof,[classname~="mof"]) textarea[matInput]{display:block;width:100%;min-height:72px;border:none;outline:none;resize:vertical;background:transparent;font:400 13px/20px var(--f);color:var(--mat-sys-on-surface);padding:0}
 
 .app-layer mat-form-field:is(.mof,[classname~="mof"]){position:relative!important;display:block!important;padding:0!important;margin-top:6px;height:auto!important}
-.app-layer mat-form-field:is(.mof,[classname~="mof"]) .mofl{position:absolute!important;top:-8px;left:12px;z-index:1;padding:0 4px;background:var(--mat-sys-surface);font:400 12px/16px var(--f);color:var(--mat-sys-on-surface-variant);pointer-events:none}
+.app-layer mat-form-field:is(.mof,[classname~="mof"]) :is(.mofl,[classname~="mofl"]){position:absolute!important;top:-8px;left:12px;z-index:1;padding:0 4px;background:var(--mat-sys-surface);font:400 12px/16px var(--f);color:var(--mat-sys-on-surface-variant);pointer-events:none}
 .app-layer mat-form-field:is(.mof,[classname~="mof"]) textarea:is(.moft,[classname~="moft"]){display:block!important;box-sizing:border-box;width:100%!important;height:auto!important;min-height:96px!important;padding:14px 16px!important;border:1px solid var(--mat-sys-surface-container-highest)!important;border-radius:4px!important;background:var(--mat-sys-surface)!important;outline:none!important;resize:vertical!important;font:400 13px/20px var(--f)!important;color:var(--mat-sys-on-surface)!important;box-shadow:none!important}
 .app-layer mat-form-field:is(.mof,[classname~="mof"]) textarea:is(.moft,[classname~="moft"]):hover{border-color:var(--mat-sys-on-surface)!important}
 .app-layer mat-form-field:is(.mof,[classname~="mof"]) textarea:is(.moft,[classname~="moft"]):focus{border-color:var(--mat-sys-primary)!important;box-shadow:inset 0 0 0 1px var(--mat-sys-primary)!important}
-.app-layer mat-form-field:is(.mof,[classname~="mof"]):focus-within .mofl{color:var(--mat-sys-primary)}
-.app-layer mat-form-field:is(.mof,[classname~="mof"]) .mofl{white-space:nowrap}
+.app-layer mat-form-field:is(.mof,[classname~="mof"]):focus-within :is(.mofl,[classname~="mofl"]){color:var(--mat-sys-primary)}
+.app-layer mat-form-field:is(.mof,[classname~="mof"]) :is(.mofl,[classname~="mofl"]){white-space:nowrap}
 .app-layer mat-form-field:is(.mof,[classname~="mof"]) :is(.mofi,[classname~="mofi"]){display:flex!important;align-items:center;gap:4px;box-sizing:border-box;width:100%;height:48px;padding:0 8px 0 16px;border:1px solid var(--mat-sys-surface-container-highest);border-radius:4px;background:var(--mat-sys-surface)}
 .app-layer mat-form-field:is(.mof,[classname~="mof"]) :is(.mofi,[classname~="mofi"]):hover{border-color:var(--mat-sys-on-surface)}
 .app-layer mat-form-field:is(.mof,[classname~="mof"]) :is(.mofi,[classname~="mofi"]):focus-within{border-color:var(--mat-sys-primary);box-shadow:inset 0 0 0 1px var(--mat-sys-primary)}
@@ -564,7 +564,7 @@ mat-dialog .fg{align-items:start}
 mat-dialog .fg .fgf>.lb{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 mat-dialog .fg{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px}
 mat-dialog:is(.wide,[classname~="wide"]) .fg{grid-template-columns:repeat(4,minmax(0,1fr))!important}
-mat-horizontal-stepper .stp,mat-horizontal-stepper .stp *,.stp,.stp *{cursor:pointer!important;user-select:none}
+mat-horizontal-stepper :is(.stp,[classname~="stp"]),mat-horizontal-stepper :is(.stp,[classname~="stp"]) *,:is(.stp,[classname~="stp"]),:is(.stp,[classname~="stp"]) *{cursor:pointer!important;user-select:none}
 td.nw,td.nw *,td[classname~="nw"],td[classname~="nw"] *{white-space:nowrap!important}
 td .cl.h:has(>button[matIconButton]){flex-wrap:nowrap;gap:0}
 td:has(button[matIconButton]) .cl{flex-direction:row;flex-wrap:nowrap;align-items:center;gap:0}
@@ -599,10 +599,10 @@ mat-list[data-cap="6"]:is(.tl,[classname~="tl"]){overflow-y:auto;scrollbar-gutte
 .kv>div[data-sep="r"]{border-right:1px solid var(--mat-sys-outline-variant)}
 .kv .nw{white-space:nowrap}
 .kv>div[data-sep] .lb{white-space:nowrap}
-mat-form-field .sel span{white-space:nowrap}
+mat-form-field :is(.sel,[classname~="sel"]) span{white-space:nowrap}
 .g24:not([data-fill="1"])>div:has(>mat-card[data-fix="true"][style*="100%"]){align-self:stretch;position:relative;min-height:240px}
 .g24:not([data-fill="1"])>div>mat-card[data-fix="true"][style*="100%"]{position:absolute;inset:0;height:auto!important}
-mat-card[data-fix="true"] .pp:has(>mat-list:is(.ll,[classname~="ll"])){flex:1 1 auto;min-height:0;overflow-y:auto}
+mat-card[data-fix="true"] :is(.pp,[classname~="pp"]):has(>mat-list:is(.ll,[classname~="ll"])){flex:1 1 auto;min-height:0;overflow-y:auto}
 .kv>div[data-mid="1"]{align-items:center;text-align:center}
 .kv>div[data-sep="1"]{min-width:max-content}
 mat-card[data-fix="true"] .tsc{flex:1 1 auto;min-height:0;overflow:auto}
@@ -657,20 +657,20 @@ mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] :is(.lgd,.trv2,.trdo
 mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"]{flex-direction:row!important;align-items:center;gap:16px;padding:8px 16px!important}
 mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trb{padding-top:0}
 mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trh{display:contents}
-mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trh>.tl{flex:none!important;order:0;white-space:nowrap}
-mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trh>:not(.tl){order:2}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trh>:is(.tl,[classname~="tl"]){flex:none!important;order:0;white-space:nowrap}
+mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trh>:not(:is(.tl,[classname~="tl"])){order:2}
 mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trw{order:1;flex:1 1 0!important;min-width:0;margin:0!important;padding:0 20px!important;box-sizing:border-box}
 mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trmain{height:24px;display:flex;flex-direction:column;justify-content:center}
 mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trs{padding:0 4px!important}
 mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trbar{margin-top:0}
 mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trb{margin:0!important;padding:0!important}
 mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trh>*{align-self:center}
-.trk[data-collapsed="true"]:not(mat-card) :is(.lgd,.trv2,.trdots,.trax,.trfoot,.trlead){display:none!important}
-.trk[data-collapsed="true"]:not(mat-card) .trw{margin:0!important}
-.trk[data-collapsed="true"]:not(mat-card) .trb{margin:0!important;padding:0!important}
-.trk[data-collapsed="true"]:not(mat-card) .trs{padding:0 4px!important}
+:is(.trk,[classname~="trk"])[data-collapsed="true"]:not(mat-card) :is(.lgd,.trv2,.trdots,.trax,.trfoot,.trlead){display:none!important}
+:is(.trk,[classname~="trk"])[data-collapsed="true"]:not(mat-card) .trw{margin:0!important}
+:is(.trk,[classname~="trk"])[data-collapsed="true"]:not(mat-card) .trb{margin:0!important;padding:0!important}
+:is(.trk,[classname~="trk"])[data-collapsed="true"]:not(mat-card) .trs{padding:0 4px!important}
 mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"] .trmain>:not(.trb){display:none!important}
-.trk[data-collapsed="true"]:not(mat-card) .trmain>:not(.trb){display:none!important}
+:is(.trk,[classname~="trk"])[data-collapsed="true"]:not(mat-card) .trmain>:not(.trb){display:none!important}
 .g24:not([data-fill="auto"])>div:has(>mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"]){align-self:start!important}
 .app-layer mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"]{flex:none!important;height:auto!important}
 .app-layer mat-card:is(.trk,[classname~="trk"])[data-collapsed="true"]{height:auto!important;min-height:0!important}
@@ -824,7 +824,7 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 .nlbox.nlbox>mat-form-field{margin:0!important;gap:0!important}
 .nlbox.nlbox textarea.ta{min-height:40px!important;height:40px!important;max-height:40px!important;resize:none!important;padding:9px 16px!important;overflow:hidden;white-space:nowrap;box-sizing:border-box}
 .nlbox.nlbox>button{margin-top:0!important}
-.nlbox.nlbox .mof{margin:0!important}
+.nlbox.nlbox :is(.mof,[classname~="mof"]){margin:0!important}
 
 /* S-Account page, Ongoing fee arrangement tab: History and Documents hold the bottom 40% (60% to 100%); Platform accounts takes the rest, scrolling when longer */
 .page:has(>.g24[data-fill="sa5"]){height:100%;min-height:0;box-sizing:border-box}
@@ -840,7 +840,7 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 /* Card header: every control on one centre line */
 .app-layer .bh>.row>*{align-self:center}
 .app-layer .bh>.row mat-form-field{margin:0!important;padding:0!important;display:flex;align-items:center}
-.app-layer .bh>.row mat-form-field>.sel{margin:0!important}
+.app-layer .bh>.row mat-form-field>:is(.sel,[classname~="sel"]){margin:0!important}
 /* A half-height card: at most half the content area; it scrolls inside, and the cards after it take the rest */
 .g24[data-fill="auto"]>div:has(>mat-card[data-half="true"]){flex:0 1 auto;max-height:50%;min-height:0;display:flex;flex-direction:column}
 .g24[data-fill="auto"]>div>mat-card[data-half="true"]{flex:1 1 auto;min-height:0;height:auto!important;display:flex;flex-direction:column;overflow:hidden}
@@ -947,8 +947,8 @@ mat-dialog [role="list"][aria-label="Platform accounts this arrangement covers"]
 .g24[data-fill="s3"]>div:nth-child(-n+3):has(>mat-card:not(:has(>.tsc))){min-height:auto!important}
 .g24[data-fill="s3"]>div:nth-child(-n+3)>mat-card:not(:has(>.tsc)){position:relative!important;inset:auto!important;height:100%!important;overflow:visible!important}
 /* How long a row stays: tighter padding */
-mat-card[data-fix="dense"] .pp{padding:0 20px 8px!important}
-mat-card[data-fix="dense"] .pp .fg{gap:8px 16px!important}
+mat-card[data-fix="dense"] :is(.pp,[classname~="pp"]){padding:0 20px 8px!important}
+mat-card[data-fix="dense"] :is(.pp,[classname~="pp"]) .fg{gap:8px 16px!important}
 /* One red chip look everywhere: white base, red text and outline, as on the chip sheet */
 .app-layer mat-chip:is([data-tone="neg"],[data-tone="err"],[data-tone="mst"],[data-tone="lv3"]){background:#FFFFFF!important;border:1px solid #A50021!important;color:#A50021!important}
 /* Dialog fields: the label sits on the field's top-left border, as on the outlined fields (Notes, Master status) */
@@ -986,22 +986,22 @@ mat-card[data-fix="dense"] .pp .fg{gap:8px 16px!important}
 /* OFA Dashboard: every drop-down in a card has its label on the top-left border too */
 .app-layer[data-page="ps"] .fgf:is(:has(>.lb+mat-form-field),:has(>.lb+div>mat-form-field)){position:relative;padding-top:0}
 .app-layer[data-page="ps"] .fgf>.lb:is(:has(+mat-form-field),:has(+div>mat-form-field)){position:absolute!important;top:-8px;left:12px;z-index:2;padding:0 4px;background:var(--mat-sys-surface);font:400 12px/16px var(--f)!important;letter-spacing:0!important;text-transform:none!important;color:var(--mat-sys-on-surface-variant)!important;max-width:calc(100% - 24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.app-layer[data-page="ps"] .pp .fg{row-gap:24px!important;padding-top:8px}
+.app-layer[data-page="ps"] :is(.pp,[classname~="pp"]) .fg{row-gap:24px!important;padding-top:8px}
 /* Settings: CAT 2 card holds about two advisers and scrolls inside; Insurance takes the rest of the column */
 .g24[data-fill="s3"]{grid-template-rows:232px minmax(300px,1fr)!important}
-.g24[data-fill="s3"]>div:nth-child(2)>mat-card .pp{flex:1 1 auto;min-height:0;overflow-y:auto}
+.g24[data-fill="s3"]>div:nth-child(2)>mat-card :is(.pp,[classname~="pp"]){flex:1 1 auto;min-height:0;overflow-y:auto}
 /* How long a row stays: half width, fields two by two */
-mat-card[data-fix="dense"] .pp .fg{grid-template-columns:repeat(2,minmax(0,1fr))!important}
-mat-card[data-fix="dense"] .pp .fg>*{grid-column:auto!important}
+mat-card[data-fix="dense"] :is(.pp,[classname~="pp"]) .fg{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+mat-card[data-fix="dense"] :is(.pp,[classname~="pp"]) .fg>*{grid-column:auto!important}
 /* Settings fills the window: the bottom row of cards sits on the page's foot, both cards the same height */
 .page:has(>.g24[data-fill="s3"]){height:100%!important;min-height:0!important;display:flex;flex-direction:column;overflow-y:auto}
 .g24[data-fill="s3"]{flex:1 0 auto!important;grid-template-rows:232px minmax(300px,1fr) auto!important;align-content:stretch}
 .g24[data-fill="s3"]>div:nth-child(n+4){align-self:stretch}
 .g24[data-fill="s3"]>div:nth-child(n+4)>mat-card{height:100%!important;box-sizing:border-box}
 /* Reporting Configurations: notes at twice their height; the recipients table scrolls in what is left */
-.g24[data-fill="s3"]>div:nth-child(1)>mat-card .pp.nlw{flex:none;height:300px;min-height:300px;max-height:300px;display:flex;flex-direction:column}
-.g24[data-fill="s3"]>div:nth-child(1)>mat-card .pp.nlw>mat-list{flex:1 1 auto;min-height:0;overflow-y:auto}
-.g24[data-fill="s3"]>div:nth-child(1)>mat-card .pp.nlw .nle{min-height:120px}
+.g24[data-fill="s3"]>div:nth-child(1)>mat-card :is(.pp,[classname~="pp"]).nlw{flex:none;height:300px;min-height:300px;max-height:300px;display:flex;flex-direction:column}
+.g24[data-fill="s3"]>div:nth-child(1)>mat-card :is(.pp,[classname~="pp"]).nlw>mat-list{flex:1 1 auto;min-height:0;overflow-y:auto}
+.g24[data-fill="s3"]>div:nth-child(1)>mat-card :is(.pp,[classname~="pp"]).nlw .nle{min-height:120px}
 /* Filter the list: at most three fields to a row (a date range takes two) */
 .app-layer mat-dialog:is(.f3,[classname~="f3"]){width:min(720px,calc(100vw - 48px))!important;max-width:min(720px,calc(100vw - 48px))!important}
 .app-layer mat-dialog:is(.f3,[classname~="f3"]) .fg{grid-template-columns:repeat(6,minmax(0,1fr))!important;column-gap:16px}
@@ -1011,18 +1011,18 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.f3,[classname~="f3"])>mat-dialog-cont
 mat-dialog:is(.dlg,[classname~="dlg"]):is(.f3,[classname~="f3"])>mat-dialog-actions{flex:none}
 /* P60 / P40 / P35: every field's label sits on its own outline (top-left), never as a caps caption above the box */
 .app-layer mat-form-field:is(.olf,[classname~="olf"]){position:relative;display:block;margin-top:8px}
-.app-layer mat-form-field:is(.olf,[classname~="olf"])>.mofl{position:absolute;top:-8px;left:12px;z-index:2;padding:0 4px;background:linear-gradient(to bottom,transparent 50%,var(--mat-sys-surface) 50%);font:400 12px/16px var(--f);letter-spacing:0;text-transform:none;color:var(--mat-sys-on-surface-variant);white-space:nowrap;pointer-events:none}
-.app-layer mat-form-field:is(.olf,[classname~="olf"])>.sel{box-sizing:border-box;height:48px;border:1px solid var(--mat-sys-outline)!important;border-radius:4px;background:var(--mat-sys-surface)!important}
-.app-layer mat-form-field:is(.olf,[classname~="olf"])>.sel:hover{border-color:var(--mat-sys-on-surface)!important}
-.app-layer mat-form-field:is(.olf,[classname~="olf"]):focus-within>.sel{border:2px solid var(--mat-sys-primary)!important}
-.app-layer mat-form-field:is(.olf,[classname~="olf"]):focus-within>.mofl{color:var(--mat-sys-primary)}
+.app-layer mat-form-field:is(.olf,[classname~="olf"])>:is(.mofl,[classname~="mofl"]){position:absolute;top:-8px;left:12px;z-index:2;padding:0 4px;background:linear-gradient(to bottom,transparent 50%,var(--mat-sys-surface) 50%);font:400 12px/16px var(--f);letter-spacing:0;text-transform:none;color:var(--mat-sys-on-surface-variant);white-space:nowrap;pointer-events:none}
+.app-layer mat-form-field:is(.olf,[classname~="olf"])>:is(.sel,[classname~="sel"]){box-sizing:border-box;flex:none!important;width:100%;height:48px;border:1px solid var(--mat-sys-outline)!important;border-radius:4px;background:var(--mat-sys-surface)!important}
+.app-layer mat-form-field:is(.olf,[classname~="olf"])>:is(.sel,[classname~="sel"]):hover{border-color:var(--mat-sys-on-surface)!important}
+.app-layer mat-form-field:is(.olf,[classname~="olf"]):focus-within>:is(.sel,[classname~="sel"]){border:2px solid var(--mat-sys-primary)!important}
+.app-layer mat-form-field:is(.olf,[classname~="olf"]):focus-within>:is(.mofl,[classname~="mofl"]){color:var(--mat-sys-primary)}
 .app-layer .ctl:has(>mat-form-field:is(.olf,[classname~="olf"])){gap:0}
 /* The same for dialog and card fields on every page */
 .app-layer .fgf:is(:has(>.lb+mat-form-field),:has(>.lb+div>mat-form-field)){position:relative;padding-top:0}
 .app-layer .fgf>.lb:is(:has(+mat-form-field),:has(+div>mat-form-field)){position:absolute!important;top:-8px;left:12px;z-index:2;padding:0 4px;background:linear-gradient(to bottom,transparent 50%,var(--mat-sys-surface) 50%)!important;font:400 12px/16px var(--f)!important;letter-spacing:0!important;text-transform:none!important;color:var(--mat-sys-on-surface-variant)!important;max-width:calc(100% - 24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .app-layer .fg:has(>.fgf>.lb+mat-form-field){row-gap:24px!important;padding-top:8px}
-.app-layer .ctl:has(>.lb+:is(.sel,mat-form-field)){position:relative;gap:0;padding-top:8px}
-.app-layer .ctl>.lb:has(+:is(.sel,mat-form-field)){position:absolute!important;top:0;left:12px;z-index:2;padding:0 4px;background:linear-gradient(to bottom,transparent 50%,var(--mat-sys-surface) 50%);font:400 12px/16px var(--f)!important;letter-spacing:0!important;text-transform:none!important;color:var(--mat-sys-on-surface-variant)!important;white-space:nowrap}
+.app-layer .ctl:has(>.lb+:is(:is(.sel,[classname~="sel"]),mat-form-field)){position:relative;gap:0;padding-top:8px}
+.app-layer .ctl>.lb:has(+:is(:is(.sel,[classname~="sel"]),mat-form-field)){position:absolute!important;top:0;left:12px;z-index:2;padding:0 4px;background:linear-gradient(to bottom,transparent 50%,var(--mat-sys-surface) 50%);font:400 12px/16px var(--f)!important;letter-spacing:0!important;text-transform:none!important;color:var(--mat-sys-on-surface-variant)!important;white-space:nowrap}
 /* Pinned header cells sit above the other sticky header cells, so the top-left stays a blank cell as the top-right does */
 .app-layer table.ot[data-frz] thead th:first-child,.app-layer table.ot[data-frz] thead th:last-child{z-index:6!important;background-color:var(--mat-sys-surface)!important}
 .app-layer table.ot[data-frz] tbody td:first-child,.app-layer table.ot[data-frz] tbody td:last-child{z-index:3!important}
@@ -1031,3 +1031,11 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.f3,[classname~="f3"])>mat-dialog-acti
 .app-layer table.ot tr:is(.nsr,[classname~="nsr"]) td:is(.nsig,[classname~="nsig"]){position:relative!important;overflow:visible!important;width:auto!important;min-width:0!important;max-width:none!important}
 .app-layer table.ot tr:is(.nsr,[classname~="nsr"]) td:is(.nsig,[classname~="nsig"])>*{position:absolute!important;left:16px;top:12px;z-index:1;width:min(560px,calc(100vw - 520px))!important;max-width:none!important;overflow:visible!important}
 .app-layer table.ot tr:is(.nsr,[classname~="nsr"]) td:is(.nsig,[classname~="nsig"]) *{white-space:normal!important;text-overflow:clip!important;overflow:visible!important;max-width:none!important;text-align:left!important}
+/* B44: sidebar items show a focus ring only for keyboard focus, in Material's strong focus indicator (3px, theme secondary); a click leaves none */
+.sb :is(a,[mat-list-item],[role="link"],button):focus:not(:focus-visible){outline:none!important;box-shadow:none!important}
+.sb :is(a,[mat-list-item],[role="link"],button):focus-visible{outline:3px solid var(--mat-sys-secondary)!important;outline-offset:-3px;box-shadow:none!important}
+/* M23: a card's title stays whole on one line; the picker, search and tools give way first, wrapping inside their row and then to a second header line */
+.app-layer .bh{flex-wrap:wrap;row-gap:8px}
+.app-layer .bh>.bt{flex:1 1 auto!important;min-width:auto!important}
+.app-layer .bh>.bt>span:first-child{white-space:nowrap}
+.app-layer .bh>.row{flex:0 1 auto!important;min-width:0;flex-wrap:wrap!important;justify-content:flex-end;row-gap:8px;margin-left:auto}

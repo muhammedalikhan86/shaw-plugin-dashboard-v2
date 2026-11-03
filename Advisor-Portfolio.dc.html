@@ -130,9 +130,9 @@ mat-form-field:is(.ff,[classname~="ff"])[focused]>.field{border-bottom:2px solid
 mat-form-field:is(.ff,[classname~="ff"]) mat-error,mat-form-field:is(.ff,[classname~="ff"]) mat-hint{padding:0 16px;font:400 11px/16px var(--f)}
 mat-form-field:is(.ff,[classname~="ff"]) mat-hint{color:var(--mat-sys-on-surface)}
 mat-checkbox,mat-radio-button,mat-slide-toggle{font:400 13px/20px var(--f);gap:12px;min-height:34px;padding-left:6px}
-mat-checkbox:not([checked])>.box mat-icon{visibility:hidden}
-mat-checkbox>.box{border-radius:2px;border-color:var(--mat-sys-on-surface)}
-mat-checkbox>.box mat-icon{font-size:16px;width:16px;height:16px;font-variation-settings:"wght" 600}
+mat-checkbox:not([checked])>:is(.box,[classname~="box"]) mat-icon{visibility:hidden}
+mat-checkbox>:is(.box,[classname~="box"]){border-radius:2px;border-color:var(--mat-sys-on-surface)}
+mat-checkbox>:is(.box,[classname~="box"]) mat-icon{font-size:16px;width:16px;height:16px;font-variation-settings:"wght" 600}
 mat-radio-button>.dot{border-color:var(--mat-sys-on-surface)}
 mat-radio-button[checked]>.dot{border-color:var(--mat-sys-primary)}
 mat-slide-toggle{padding-left:0;gap:4px}
@@ -170,8 +170,8 @@ mat-menu:is(.am,[classname~="am"]){padding:8px 0;background:var(--mat-sys-surfac
 mat-menu:is(.am,[classname~="am"]) button[mat-menu-item]:hover{background:var(--mat-sys-surface-container-high)}
 mat-menu:is(.am,[classname~="am"]) button[mat-menu-item]{height:48px;background:transparent;gap:12px;padding:0 16px;font:500 13px/20px var(--f);color:var(--mat-sys-on-surface)}
 mat-menu:is(.am,[classname~="am"]) button[mat-menu-item] mat-icon{font-size:20px;width:20px;height:20px;color:var(--mat-sys-on-surface-variant)}
-.stp{display:flex;align-items:center;gap:8px;flex:none;height:64px;padding:0 24px;border-radius:6px;cursor:pointer;font:400 12px/16px var(--f);color:var(--mat-sys-on-surface);transition:background-color .15s}
-.stp:hover{background:var(--mat-sys-surface-container-high)}
+:is(.stp,[classname~="stp"]){display:flex;align-items:center;gap:8px;flex:none;height:64px;padding:0 24px;border-radius:6px;cursor:pointer;font:400 12px/16px var(--f);color:var(--mat-sys-on-surface);transition:background-color .15s}
+:is(.stp,[classname~="stp"]):hover{background:var(--mat-sys-surface-container-high)}
 .sn{width:24px;height:24px;border-radius:9999px;display:flex;align-items:center;justify-content:center;font:400 12px/16px var(--f);background:var(--mat-sys-surface-variant);color:var(--mat-sys-on-surface-variant)}
 .sn.done{background:var(--mat-sys-on-surface);color:var(--mat-sys-surface)}
 .sn.done mat-icon{font-size:16px;width:16px;height:16px}
@@ -208,15 +208,15 @@ body{min-width:708px}
 .adgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
 .tiles{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px}
 .tile{height:auto;min-height:124px;padding:14px 14px 12px;display:flex;flex-direction:column;background:var(--mat-sys-surface);border:1px solid var(--mat-sys-outline-variant);border-radius:6px}
-.tl{font:500 11px/16px var(--f);letter-spacing:.05em;text-transform:uppercase;height:32px;color:#404040}
+:is(.tl,[classname~="tl"]){font:500 11px/16px var(--f);letter-spacing:.05em;text-transform:uppercase;height:32px;color:#404040}
 .tr{font:400 11px/16px var(--f);margin-top:6px;color:#404040}
 .tv{font:400 18px/1.05 var(--f);font-variant-numeric:tabular-nums;margin-top:auto;display:flex;align-items:center;gap:4px}
 .ctl{display:flex;flex-direction:column;gap:6px}
 .ctl>.lb{font:500 10px/14px var(--f);letter-spacing:.08em;text-transform:uppercase;color:#404040}
-.sel{display:flex;align-items:center;gap:12px;height:48px;padding:0 12px 0 16px;min-width:200px;border:1px solid var(--mat-sys-surface-container-highest);border-radius:4px;background:var(--mat-sys-surface);font:400 13px/18px var(--f);color:var(--mat-sys-on-surface);cursor:pointer;box-sizing:border-box}
+:is(.sel,[classname~="sel"]){display:flex;align-items:center;gap:12px;height:48px;padding:0 12px 0 16px;min-width:200px;border:1px solid var(--mat-sys-surface-container-highest);border-radius:4px;background:var(--mat-sys-surface);font:400 13px/18px var(--f);color:var(--mat-sys-on-surface);cursor:pointer;box-sizing:border-box}
 mat-slide-toggle[disabled]>.track{background:var(--mat-sys-surface-container-highest)!important;border-color:var(--mat-sys-surface-container-highest)!important}
 mat-slide-toggle[disabled]>.track>.thumb{background:var(--mat-sys-surface)!important;color:var(--mat-sys-outline)!important}
-.sel:hover{border-color:var(--mat-sys-on-surface)}
+:is(.sel,[classname~="sel"]):hover{border-color:var(--mat-sys-on-surface)}
 .cc{display:flex;flex-direction:column;background:var(--mat-sys-surface);border:1px solid var(--mat-sys-outline-variant);border-radius:6px;min-width:0}
 .ch{padding:16px 16px 0;display:flex;flex-direction:column;gap:2px}
 .ct{font:500 14px/20px var(--f)}
@@ -246,7 +246,7 @@ table.at th.stick,table.at td.stick{min-width:160px;white-space:nowrap}
 .grip>i{position:absolute;width:2px;height:2px;border-radius:9999px;background:currentColor}
 table.at td.nm{white-space:nowrap;font-weight:500}
 .tiles{align-items:stretch}
-.tiles .tl{height:auto!important;min-height:32px}
+.tiles :is(.tl,[classname~="tl"]){height:auto!important;min-height:32px}
 .tiles .tr{margin-top:2px}
 .tiles .tv{margin-top:auto;padding-top:8px}
 </style>
@@ -314,9 +314,9 @@ table.at td.nm{white-space:nowrap;font-weight:500}
                 <div class="ctl" style="position:relative;flex:none;width:240px"><mat-form-field appearance="outline" class="olf" style="display:flex"><mat-label class="mofl">Month</mat-label><mat-select class="sel" role="combobox" aria-label="Month" aria-expanded="{{ bk.mExp }}" aria-haspopup="listbox" tabindex="0" onClick="{{ bk.mGo }}" style="cursor:pointer"><span style="flex:1">{{ bk.mLabel }}</span><mat-icon aria-hidden="true" style="font-size:24px;width:24px;height:24px;color:var(--mat-sys-on-surface-variant)">arrow_drop_down</mat-icon></mat-select></mat-form-field>
                   <sc-if value="{{ bk.mOpen }}" hint-placeholder-val="{{ false }}">
                     <div onClick="{{ bk.mClose }}" style="position:fixed;inset:0;z-index:40"></div>
-                    <div role="listbox" aria-label="Month" style="position:absolute;left:0;top:calc(100% + 4px);width:100%;max-height:336px;overflow:auto;padding:8px 0;z-index:41;background:var(--mat-sys-surface-container);border-radius:4px;box-shadow:var(--mat-sys-level2)">
+                    <div role="listbox" aria-label="Month" style="position:absolute;left:0;top:calc(100% + 4px);width:100%;min-width:190px;max-height:288px;overflow:auto;padding:8px 0;z-index:41;background:var(--mat-sys-surface-container);border-radius:4px;box-shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)">
                       <sc-for list="{{ bk.mOpts }}" as="o" hint-placeholder-count="6">
-                        <div role="option" aria-selected="{{ o.sel }}" onClick="{{ o.pick }}" style="display:flex;align-items:center;gap:8px;height:48px;padding:0 16px;font:400 13px/18px var(--f);cursor:pointer;background:{{ o.bg }};color:{{ o.fg }}" style-hover="background:var(--mat-sys-surface-container-high)"><span style="flex:1;display:flex;flex-direction:column"><span>{{ o.label }}</span><sc-if value="{{ o.sub }}" hint-placeholder-val="{{ false }}"><span style="font:400 11px/16px var(--f);color:var(--mat-sys-on-surface-variant)">{{ o.sub }}</span></sc-if></span><sc-if value="{{ o.on }}" hint-placeholder-val="{{ false }}"><mat-icon aria-hidden="true" style="font-size:20px;width:20px;height:20px">check</mat-icon></sc-if></div>
+                        <div role="option" aria-selected="{{ o.sel }}" onClick="{{ o.pick }}" style="display:flex;align-items:center;gap:8px;height:48px;padding:0 16px;font:400 13px/18px var(--f);cursor:pointer;background:{{ o.bg }};color:{{ o.fg }}" style-hover="background:var(--mat-sys-surface-container-high)"><span style="flex:1;display:flex;flex-direction:column"><span>{{ o.label }}</span><sc-if value="{{ o.sub }}" hint-placeholder-val="{{ false }}"><span style="font:400 11px/16px var(--f);color:var(--mat-sys-on-surface-variant)">{{ o.sub }}</span></sc-if></span><sc-if value="{{ o.on }}" hint-placeholder-val="{{ false }}"><mat-icon style="font-size:20px;width:20px;height:20px;color:{{ o.fg }}">check</mat-icon></sc-if></div>
                       </sc-for>
                     </div>
                   </sc-if>
@@ -368,7 +368,7 @@ table.at td.nm{white-space:nowrap;font-weight:500}
                 </div>
               </sc-if>
               <sc-if value="{{ b.isTabs }}" hint-placeholder-val="{{ false }}">
-                <mat-tab-group><mat-tab-header class="tabs"><sc-for list="{{ b.items }}" as="t" hint-placeholder-count="3"><mat-tab active="{{ t.on }}" onClick="{{ t.go }}">{{ t.label }}<sc-if value="{{ t.count }}" hint-placeholder-val="{{ false }}"><span class="cnt" data-tone="{{ t.tone }}">{{ t.count }}</span></sc-if></mat-tab></sc-for></mat-tab-header></mat-tab-group>
+                <mat-tab-group><mat-tab-header class="tabs" role="tablist"><sc-for list="{{ b.items }}" as="t" hint-placeholder-count="3"><mat-tab role="tab" aria-selected="{{ t.sel }}" tabindex="{{ t.ti }}" onKeyDown="{{ t.key }}" active="{{ t.on }}" onClick="{{ t.go }}">{{ t.label }}<sc-if value="{{ t.count }}" hint-placeholder-val="{{ false }}"><span class="cnt" data-tone="{{ t.tone }}">{{ t.count }}</span></sc-if></mat-tab></sc-for></mat-tab-header></mat-tab-group>
               </sc-if>
               <sc-if value="{{ b.isDays }}" hint-placeholder-val="{{ false }}"><mat-card appearance="outlined" role="group" aria-label="The cycle by business day" style="padding:30px 20px 14px"><div role="tablist" aria-label="Steps" style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:4px;position:relative"><sc-for list="{{ b.days }}" as="d" hint-placeholder-count="6"><div style="grid-column:{{ d.gc }};grid-row:1;display:flex;flex-direction:column;padding:0 4px;border-left:1px solid var(--mat-sys-outline-variant)"><span style="font:500 10px/14px var(--f);letter-spacing:.08em;color:{{ d.c }}">{{ d.bd }}</span><span style="font:400 11px/16px var(--f);color:var(--mat-sys-on-surface-variant);white-space:nowrap">{{ d.date }}</span></div></sc-for><sc-for list="{{ b.items }}" as="st" hint-placeholder-count="3"><button role="tab" onClick="{{ st.go }}" aria-label="{{ st.label }}" aria-selected="{{ st.on }}" style="grid-column:{{ st.gc }};grid-row:1 / span 3;margin:-6px -2px -8px;border:0;padding:0;border-radius:6px;background:{{ st.hbg }};cursor:pointer;z-index:2;opacity:1" style-hover="background:rgba(0,0,0,.04)"></button><span style="grid-column:{{ st.gc }};grid-row:2;margin-top:10px;height:8px;border-radius:2px;background:{{ st.bg }};box-shadow:{{ st.ring }};pointer-events:none;opacity:{{ st.op }}"></span><div style="grid-column:{{ st.gc }};grid-row:3;padding:10px 4px 0;display:flex;flex-direction:column;gap:2px;min-width:0;pointer-events:none;opacity:{{ st.op }}"><div style="display:flex;align-items:center;gap:6px"><sc-if value="{{ st.done }}" hint-placeholder-val="{{ false }}"><mat-icon style="font-size:18px;width:18px;height:18px;color:var(--mat-sys-on-surface)">check_circle</mat-icon></sc-if><sc-if value="{{ st.num }}" hint-placeholder-val="{{ true }}"><span style="box-sizing:border-box;width:18px;height:18px;border-radius:9999px;display:inline-flex;align-items:center;justify-content:center;font:500 11px/1 var(--f);background:{{ st.nbg }};color:{{ st.nfg }}">{{ st.n }}</span></sc-if><span style="font:500 13px/18px var(--f);color:var(--mat-sys-on-surface);text-decoration:{{ st.ul }};text-underline-offset:4px">{{ st.label }}</span></div><span style="font:400 11px/16px var(--f);color:var(--mat-sys-on-surface-variant);text-wrap:pretty">{{ st.sub }}</span></div></sc-for><div style="grid-column:{{ b.todayCol }};grid-row:1 / span 2;position:relative;pointer-events:none"><span style="position:absolute;left:{{ b.todayX }};top:-6px;bottom:-4px;width:2px;background:var(--mat-sys-primary)"></span><span style="position:absolute;left:{{ b.todayX }};top:-22px;transform:translateX(-50%);font:500 10px/14px var(--f);letter-spacing:.08em;text-transform:uppercase;color:var(--mat-sys-primary);white-space:nowrap">{{ b.todayLabel }}</span></div></div></mat-card></sc-if><sc-if value="{{ b.isStepper }}" hint-placeholder-val="{{ false }}">
                 <mat-horizontal-stepper class="sp">
@@ -399,7 +399,7 @@ table.at td.nm{white-space:nowrap;font-weight:500}
                 </mat-card>
               </sc-if>
               <sc-if value="{{ b.isCard }}" hint-placeholder-val="{{ true }}">
-                <mat-card appearance="outlined" class="box" data-fix="{{ b.fix }}" style="height:{{ b.h }}">
+                <mat-card appearance="outlined" class="box" data-fix="{{ b.fix }}" data-exp="{{ b.expId }}" style="height:{{ b.h }}">
                   <sc-if value="{{ b.hasHead }}" hint-placeholder-val="{{ true }}">
                     <div class="bh">
                       <span class="bt" style="flex:1;min-width:0;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap"><span>{{ b.title }}</span><sc-if value="{{ b.titleNote }}" hint-placeholder-val="{{ false }}"><span style="font:400 12px/16px var(--f);color:var(--mat-sys-on-surface-variant)">{{ b.titleNote }}</span></sc-if></span>
@@ -659,7 +659,7 @@ class Component extends DCLogic {
   componentDidMount() { if (this.props.bookAll) setTimeout(() => this.openBook("all", 23), 0); try { const L = JSON.parse(localStorage.getItem("advisor-dashboard-layout") || "null"); if (L && L.order) { const ids = CARDS.map(c => c.id), ord = L.order.filter(x => ids.includes(x) && !(x === "clo" && !L.order.includes("clv"))); ids.forEach((x, k) => { if (ord.includes(x)) return; const prev = k ? ord.indexOf(ids[k - 1]) : -1; ord.splice(prev + 1, 0, x); }); this.setState({ sz: L.sz || {}, order: ord, hidden: (L.hidden || []).filter(x => ids.includes(x)) }); } } catch (e) {}
     { const h = new URLSearchParams((window.location.hash || "").slice(1)), bb = h.get("book"); if (bb) { const [m0, t0] = bb.split(":"); this.setState({ view: "book", bk: { m: m0 || "fua", tab: t0 || "sa", mon: 23, mon0: 23, f: m0 === "sma" ? { model: "Any model" } : {}, f0: m0 === "sma" ? { model: "Any model" } : {} } }); } }
     if (!window.OFAKIT || !window.ADBOOK) { this._kp = setInterval(() => { if (window.OFAKIT && window.ADBOOK) { clearInterval(this._kp); this.forceUpdate(); if (this.props.openedFromSearch) this.fromSearch(); } }, 60); } else if (this.props.openedFromSearch) this.fromSearch(); this.sync(); let n = 0; this._poll = setInterval(() => { this.sync(); if (++n >= 20) clearInterval(this._poll); }, 150); }
-  componentDidUpdate(pp, ps) { if (this.props.bookAll && pp.bookAll !== this.props.bookAll) this.openBook("all", 23); if (this.props.dashKey && pp.dashKey !== this.props.dashKey && this.state.view !== "dash") this.setState({ view: "dash" }); { const v = this.state.view === "book" && (this.state.bk || {}).m === "all" ? "bookAll" : this.state.view; if (this.props.onView && this._lastV !== v) { this._lastV = v; this.props.onView(v); } } if (pp.seat !== this.props.seat && this.props.seat) { try { localStorage.setItem("ofa.demoSeat", this.props.seat); } catch (e) {} this.setState({ seatNm: this.props.seat }); } this.sync(); if (pp.openedFromSearch !== this.props.openedFromSearch) { if (this.props.openedFromSearch) this.fromSearch(); else this.setState({ view: "dash", hot: null, query: "" }); }
+  componentDidUpdate(pp, ps) { if (!this._bkRs) { this._bkRs = () => this._bkFit(); window.addEventListener("resize", this._bkRs); } clearTimeout(this._bkT); this._bkT = setTimeout(() => this._bkFit(), 0); if (this.props.bookAll && pp.bookAll !== this.props.bookAll) this.openBook("all", 23); if (this.props.dashKey && pp.dashKey !== this.props.dashKey && this.state.view !== "dash") this.setState({ view: "dash" }); { const v = this.state.view === "book" && (this.state.bk || {}).m === "all" ? "bookAll" : this.state.view; if (this.props.onView && this._lastV !== v) { this._lastV = v; this.props.onView(v); } } if (pp.seat !== this.props.seat && this.props.seat) { try { localStorage.setItem("ofa.demoSeat", this.props.seat); } catch (e) {} this.setState({ seatNm: this.props.seat }); } this.sync(); if (pp.openedFromSearch !== this.props.openedFromSearch) { if (this.props.openedFromSearch) this.fromSearch(); else this.setState({ view: "dash", hot: null, query: "" }); }
     if (this.state.snack && this.state.snack !== this._snk) { this._snk = this.state.snack; clearTimeout(this._snT); this._snT = setTimeout(() => { this._snk = null; this.setState({ snack: null }); }, 3000); } else if (!this.state.snack) this._snk = null; }
   sizeOf(c) { const z = (this.state.sz || {})[c.id]; if (z) return z; return c.table ? { w: 24, h: 6 } : { w: (c.span || 1) * 6, h: 6 }; }
   saveLayout() { try { localStorage.setItem("advisor-dashboard-layout", JSON.stringify({ sz: this.state.sz || {}, order: this.state.order, hidden: this.state.hidden })); } catch (e) {} }
@@ -777,7 +777,7 @@ class Component extends DCLogic {
       blocks.push(block("Tabs", 24, { items: [["sa", "By S-Account"], ["cl", "By client"]].map(t => ({ label: t[1], on: t[0] === tab ? "true" : null, go: () => this.setState({ bk: Object.assign({}, bk, { tab: t[0] }) }), count: null })) }));
       const title = "Book of business", sub = (tab === "sa" ? "S-Account → client → platform account → product; an SMA platform account also lists its models." : "Client → S-Account → platform account → product. Clients are grouped by their client identifier, so two clients who share a name stay apart.") + " Funds Under Advice is the sum of the holdings. Net New Money is for the month chosen above. Read only.";
       if (old) blocks.push(block("Card", 24, { noTools: true, title, sub, parts: [part("Empty", { icon: "event_busy", title: M[mon].long + " cannot open: Net New Money is kept by S-Account for the last twelve months only.", text: null })], actions: [btn("Reset", resetB, "icon", "restart_alt", { tip: "Reset to how the book opened" })] }));
-      else blocks.push(block("Card", 24, { expId: id, paged: true, per: 20, title, sub, fchips: fchips.length ? fchips : null, foot2src: Object.assign({ _first: "Total · " + unitN + (af ? " · " + af : "") + (F.plat ? " · " + F.plat + " only" : "") }, footF), search: { v: raw, ph: "Search this table…", w: "260px", onInput: (e) => this.setState({ cq: Object.assign({}, this.state.cq, { [id]: e.target.value }), gp: Object.assign({}, this.state.gp, { [id]: 0 }) }) }, actions: [btn(fAll ? "Filter the list · " + fAll + " on" : "Filter the list", () => this.setState({ dlg: fDlg, dlgSel: {}, dlgOpen: null }), "icon", fAll ? "filter_alt" : "filter_list")].concat(dirty ? [btn("Reset", resetB, "icon", "restart_alt", { tip: "Reset to how the book opened" })] : []), parts: [rows.length ? part("Table", { cols, rows, minW: "0px" }) : part("Empty", { icon: "search_off", title: q ? "No row matches “" + raw.trim() + "”" : "No row matches these filters", text: null, clear: () => this.setState({ cq: Object.assign({}, this.state.cq, { [id]: "" }), cf: Object.assign({}, this.state.cf, { [id]: {} }) }) })] }));
+      else blocks.push(block("Card", 24, { expId: id, fix: "true", h: s.bkH || "auto", paged: true, per: 20, title, sub, fchips: fchips.length ? fchips : null, foot2src: Object.assign({ _first: "Total · " + unitN + (af ? " · " + af : "") + (F.plat ? " · " + F.plat + " only" : "") }, footF), search: { v: raw, ph: "Search this table…", w: "260px", onInput: (e) => this.setState({ cq: Object.assign({}, this.state.cq, { [id]: e.target.value }), gp: Object.assign({}, this.state.gp, { [id]: 0 }) }) }, actions: [btn(fAll ? "Filter the list · " + fAll + " on" : "Filter the list", () => this.setState({ dlg: fDlg, dlgSel: {}, dlgOpen: null }), "icon", fAll ? "filter_alt" : "filter_list")].concat(dirty ? [btn("Reset", resetB, "icon", "restart_alt", { tip: "Reset to how the book opened" })] : []), parts: [rows.length ? part("Table", { cols, rows, minW: "0px", scroll: "true" }) : part("Empty", { icon: "search_off", title: q ? "No row matches “" + raw.trim() + "”" : "No row matches these filters", text: null, clear: () => this.setState({ cq: Object.assign({}, this.state.cq, { [id]: "" }), cf: Object.assign({}, this.state.cf, { [id]: {} }) }) })] }));
     } else if (s.view !== "book") {
       const allNames = seatNames(seat), pk = this._pick(seat), names = pk ? allNames.filter(n => n.replace(/ \(you\)$/, "") === pk) : allNames;
       s.order.filter(id0 => !s.hidden.includes(id0)).map(id0 => CARDS.find(c => c.id === id0)).filter(c => c && (mgr || !c.table) && (mgr || !c.mgr) && (!c.nat || (seat === "nat" && !s.natAdv))).forEach(c => { const z = this.sizeOf(c);
@@ -814,7 +814,13 @@ class Component extends DCLogic {
       snackOn: !!s.snack, snack: s.snack, closeSnack: () => this.setState({ snack: null }) });
   }
 
-  componentWillUnmount() { clearInterval(this._poll); clearTimeout(this._t); Object.values(this._ch || {}).forEach(c => c.dispose()); if (this._ro) this._ro.disconnect(); }
+  // the book's card reaches the bottom of the page: it takes what is left of the scrolling area under it, so the page itself never scrolls
+  _bkFit() { if (this.state.view !== "book") return; const c = document.querySelector('mat-card[data-exp^="book:"]'); if (!c) return;
+    let sc = c.parentElement; while (sc && sc !== document.body && !/(auto|scroll)/.test(getComputedStyle(sc).overflowY)) sc = sc.parentElement;
+    const win = !sc || sc === document.body, top0 = win ? 0 : sc.getBoundingClientRect().top, scH = win ? window.innerHeight : sc.clientHeight, scT = win ? window.scrollY : sc.scrollTop, all = win ? document.documentElement.scrollHeight : sc.scrollHeight;
+    const cTop = c.getBoundingClientRect().top - top0 + scT, below = Math.max(8, all - (cTop + c.offsetHeight)), h = Math.max(320, Math.floor(scH - cTop - below)) + "px";
+    if (h !== this.state.bkH) this.setState({ bkH: h }); }
+  componentWillUnmount() { window.removeEventListener("resize", this._bkRs); clearInterval(this._poll); clearTimeout(this._t); Object.values(this._ch || {}).forEach(c => c.dispose()); if (this._ro) this._ro.disconnect(); }
   sync() {
     const ec = window.echarts; if (!ec) { clearTimeout(this._t); this._t = setTimeout(() => this.sync(), 100); return; }
     if (ec.__shaw !== true) { ec.registerTheme("shaw", shawTheme()); ec.__shaw = true; }
