@@ -1,4 +1,4 @@
-/* The advisor's book: invented sample data for the Portfolio view (Advisor-Portfolio.dc.html). S-Account → client → platform account → product. */
+/* The adviser's book: invented sample data for the Portfolio view (Advisor-Portfolio.dc.html). S-Account → client → platform account → product. */
 (function () {
   let seed = 20261007; const r = () => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; };
   const pick = (a) => a[Math.floor(r() * a.length)];
@@ -83,7 +83,7 @@
   const NOTES = { S18544: [{ date: "05-10-2026 14:20", who: "Hannah Ilves", vis: "Only me", text: "Greer is thinking about moving part of the SMA to cash before Christmas. Call her in early November." }, { date: "28-09-2026 10:05", who: "Hannah Ilves", vis: "Everyone", text: "Renewal signed on 11-09-2026. The client asked for the annual review in February.", att: ["review-request-28-09-2026.msg"] }] };
   NOTES[rv[30].s] = [{ date: "02-10-2026 09:30", who: "Ravi Naidoo", vis: "Everyone", text: "Execution only. The client trades herself through CHESS; no advice fee is charged." }];
   rv[42].pas[0].models = [{ code: "SP0002", w: 55 }, { code: "SP0004", w: 30 }, { code: "CASH", w: 15 }];
-  // Scale: the 16 advisors together hold $2.61B; monthly Net New Money for the 16 matches the tiles
+  // Scale: the 16 advisers together hold $2.61B; monthly Net New Money for the 16 matches the tiles
   const all16 = ADV16.flatMap(a => BOOKS[a]), prods16 = all16.flatMap(s => s.pas.flatMap(p => p.prods));
   const fuaT = prods16.reduce((t, p) => t + p.fua, 0), fk = 2.61e9 / fuaT;
   BOOKS["Isabel Ferreira"].forEach(s => s.pas.forEach(p => p.prods.forEach(q => { q.fua = Math.round(q.fua * fk); q.nnm = q.nnm.map(v => Math.round(v * fk)); })));
@@ -99,4 +99,21 @@
   }
   window.ADBOOK = { NOTES, M24, BOOKS, ADV16, BRANCH, TOWHO: { advisor: ["Ravi Naidoo"], one: ["Ravi Naidoo"], sel: ADV16.slice(0, 3), all: ADV16, own2: ["Isabel Ferreira", "Ravi Naidoo", "Karen Patel"] }, SEARCH: { s: BOOKS["Ravi Naidoo"][17].s, q: MO } };
   { const AB = window.ADBOOK, HI3 = ["S18544", "S18502", "S18450"], rvb = AB.BOOKS["Ravi Naidoo"], moved = rvb.filter(x => HI3.includes(x.s)); AB.BOOKS["Ravi Naidoo"] = rvb.filter(x => !HI3.includes(x.s)); const hb = book("Hannah Ilves", 24); hb.forEach(enrich); hb.forEach(x => x.pas.forEach(p => p.prods.forEach(q => { q.fua = Math.round(q.fua * fk); q.nnm = q.nnm.map(v => Math.round(v * fk)); }))); moved.forEach(x => { x.adv = "Hannah Ilves"; x.br = "Melbourne"; }); [4, 12].forEach(ix => { hb[ix].client = "Greer Hale"; hb[ix].ent = "Individual"; }); { const BR6 = { "Tobias Marlow": "Geelong", "Sienna Okoro": "Melbourne", "Declan Moss": "Ballarat", "Marcus Delahunt": "Melbourne", "Elias Varney": "Albury" }; Object.assign(AB.BRANCH, BR6); Object.keys(BR6).forEach((a, i) => { const bk = book(a, [30, 22, 18, 14, 20][i]); bk.forEach(enrich); bk.forEach(x => { x.br = BR6[a]; x.pas.forEach(p => p.prods.forEach(q => { q.fua = Math.round(q.fua * fk); q.nnm = q.nnm.map(v => Math.round(v * fk)); })); }); AB.BOOKS[a] = bk; }); const SIX = ["Declan Moss", "Elias Varney", "Hannah Ilves", "Marcus Delahunt", "Sienna Okoro", "Tobias Marlow"]; AB.ADV6 = SIX; AB.TOWHO_OFA = { advisor: ["Hannah Ilves"], one: ["Tobias Marlow"], sel: ["Hannah Ilves", "Tobias Marlow"], own2: ["Marcus Delahunt", "Hannah Ilves", "Tobias Marlow"], all: SIX }; } AB.BOOKS["Hannah Ilves"] = moved.concat(hb); AB.TOWHO.advisor = ["Hannah Ilves"]; }
+  // P42: the book is kept by branch; every place shown is that branch's state. The Parramatta advisers are out of OFA and leave the sample.
+  { const AB = window.ADBOOK, ST = { Melbourne: "VIC", Geelong: "VIC", Ballarat: "VIC", Sydney: "NSW", Albury: "NSW", Brisbane: "QLD", Adelaide: "SA", Perth: "WA", Canberra: "ACT" };
+    ["Diego Reyes", "Michael Osei"].forEach(a => { delete AB.BOOKS[a]; delete AB.BRANCH[a]; const i = AB.ADV16.indexOf(a); if (i >= 0) AB.ADV16.splice(i, 1); });
+    AB.STATE = {}; Object.keys(AB.BRANCH).forEach(a => { AB.STATE[a] = ST[AB.BRANCH[a]] || "—"; });
+    Object.values(AB.BOOKS).forEach(bk => bk.forEach(x => { x.st = ST[x.br] || "—"; }));
+    // B48: the National seat sees every adviser in the country, grouped by state
+    AB.NAT = Object.keys(AB.BOOKS).filter(a => AB.STATE[a]).sort((p, q) => AB.STATE[p].localeCompare(AB.STATE[q]) || p.localeCompare(q)); AB.TOWHO_OFA.nat = AB.NAT;
+    // each state's State Manager, as on the OFA pages; WA has none there, so the sample adds one
+    AB.SM = { VIC: "Marcus Delahunt", NSW: "Ingrid Solberg", QLD: "Fiona Castellane", SA: "Dmitri Varga", WA: "Wes Ardagh" }; }
+  // B46: every product sits in one holding bucket; the twenty buckets add up to Funds Under Advice
+  { const AB = window.ADBOOK, hs = (t) => { let h = 7; for (let i = 0; i < t.length; i++) h = (h * 31 + t.charCodeAt(i)) % 100003; return h / 100003; };
+    AB.HOLD = ["CHESS registered", "SMA", "CMA", "International", "Term Deposit", "HUB24", "Macquarie Wrap", "Netwealth", "Leveraged Equities", "Fixed Income", "Managed Funds", "Unlisted Assets", "BT Panorama", "CFS FirstWrap", "Praemium", "Mason Stevens", "North", "Expand", "Insurance", "Other"];
+    AB.HOLD_DEF = AB.HOLD.slice(0, 8);
+    const HB = (x, pa, q) => pa.plat === "Shaw Managed Accounts" ? "SMA" : q.nm === "International shares" ? "International" : pa.plat === "Cash Management Account" ? (hs(x.s + q.nm) < 0.3 ? "Term Deposit" : "CMA") : q.nm === "Wrap Cash Account" ? "CMA" : pa.plat === "CHESS Registered" ? (q.nm === "Listed fixed income" ? "Fixed Income" : "CHESS registered") : pa.plat === "Leveraged Equities" ? "Leveraged Equities" : pa.plat === "TAL Life" ? "Insurance" : pa.plat === "Netwealth" && hs(x.s + pa.no) < 0.25 ? "Managed Funds" : AB.HOLD.includes(pa.plat) ? pa.plat : "Other";
+    // B47: many clients share a name, so each client has an identifier; one client on several S-Accounts keeps one
+    let cn = 50000; Object.values(AB.BOOKS).forEach(bk => bk.forEach(x => { x.cid = "C" + (++cn); x.pas.forEach(pa => pa.prods.forEach(q => { q.hb = HB(x, pa, q); })); }));
+    [["Ravi Naidoo", "Margaret Okonkwo"], ["Hannah Ilves", "Greer Hale"]].forEach(([a, nm]) => { const xs = (AB.BOOKS[a] || []).filter(x => x.client === nm); xs.forEach(x => { x.cid = xs[0].cid; }); }); }
 })();

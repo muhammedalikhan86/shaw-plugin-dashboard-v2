@@ -221,7 +221,7 @@ table.at th.stick,table.at td.stick{min-width:160px;white-space:nowrap}
 .cs .asat{white-space:nowrap;flex:none}
 table.at td.nm{white-space:nowrap;font-weight:500}
 
-/* ---- OFA pages: additions on top of the Advisor Dashboard frame ---- */
+/* ---- OFA pages: additions on top of the Adviser Dashboard frame ---- */
 .strip{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding:6px 16px;background:var(--mat-sys-surface);border-bottom:1px dashed var(--mat-sys-outline);flex:none;position:relative;z-index:80}
 .strip mat-button-toggle button{height:28px;padding:0 12px;font:500 11px/16px var(--f);letter-spacing:.04em;background:none;border:none;cursor:pointer;color:var(--mat-sys-on-surface)}
 .lb{font:500 10px/14px var(--f);letter-spacing:.08em;text-transform:uppercase;color:#404040}
@@ -586,7 +586,7 @@ mat-list[data-cap="4"]:is(.nl,[classname~="nl"]){max-height:272px;overflow-y:aut
 .g24[data-full="1"]>div>mat-card{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden}
 .g24[data-full="1"]>div>mat-card .tsc{flex:1;min-height:0;overflow:auto}
 mat-paginator span{white-space:nowrap}
-.app-layer button[aria-label="Take an advisor off this month's run"] mat-icon{font-size:18px!important;width:18px!important;height:18px!important;line-height:18px!important}
+.app-layer button[aria-label="Take an adviser off this month's run"] mat-icon{font-size:18px!important;width:18px!important;height:18px!important;line-height:18px!important}
 mat-card[data-fix="true"]>*:last-child{min-height:0;overflow-y:auto;scrollbar-gutter:stable}
 .app-layer button[aria-label="Add a note"] mat-icon{font-size:22px!important;width:22px!important;height:22px!important;line-height:22px!important}
 .page:has(>.g24[data-fill="1"]){min-height:100%;box-sizing:border-box}
@@ -848,7 +848,7 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 .g24[data-fill="auto"]>div>mat-card[data-half="true"]>.tsc{flex:1 1 auto;min-height:0;overflow:auto}
 /* An ASF header reads "ASF (excl. GST)" on its first line and the period on the second */
 .app-layer table.ot th .hd{white-space:pre-line}
-/* Renewal tracker: S-Account, Advisor, Platform accounts, Signatories and the status columns are never cut; where they do not fit, the table scrolls inside its card */
+/* Renewal tracker: S-Account, Adviser, Platform accounts, Signatories and the status columns are never cut; where they do not fit, the table scrolls inside its card */
 .app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell]:is(.shr,[classname~="shr"],.stw,[classname~="stw"],.c140,[classname~="c140"]){max-width:none!important;width:auto!important}
 .app-layer table.ot > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell]:is(.shr,[classname~="shr"],.stw,[classname~="stw"],.c140,[classname~="c140"]) :is(.cl,.stk,.cl>*,.cl>span,.stk>*,.stk>span,.cl>.sub,.stk>.sub,.stk>button.sed){max-width:none!important;overflow:visible!important;text-overflow:clip!important;white-space:nowrap!important}
 .app-layer table.ot:has(> tbody > tr:is(.rtn,[classname~="rtn"])){width:max-content!important;min-width:100%!important;table-layout:auto!important}
@@ -987,7 +987,7 @@ mat-card[data-fix="dense"] .pp .fg{gap:8px 16px!important}
 .app-layer[data-page="ps"] .fgf:is(:has(>.lb+mat-form-field),:has(>.lb+div>mat-form-field)){position:relative;padding-top:0}
 .app-layer[data-page="ps"] .fgf>.lb:is(:has(+mat-form-field),:has(+div>mat-form-field)){position:absolute!important;top:-8px;left:12px;z-index:2;padding:0 4px;background:var(--mat-sys-surface);font:400 12px/16px var(--f)!important;letter-spacing:0!important;text-transform:none!important;color:var(--mat-sys-on-surface-variant)!important;max-width:calc(100% - 24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .app-layer[data-page="ps"] .pp .fg{row-gap:24px!important;padding-top:8px}
-/* Settings: CAT 2 card holds about two advisors and scrolls inside; Insurance takes the rest of the column */
+/* Settings: CAT 2 card holds about two advisers and scrolls inside; Insurance takes the rest of the column */
 .g24[data-fill="s3"]{grid-template-rows:232px minmax(300px,1fr)!important}
 .g24[data-fill="s3"]>div:nth-child(2)>mat-card .pp{flex:1 1 auto;min-height:0;overflow-y:auto}
 /* How long a row stays: half width, fields two by two */
