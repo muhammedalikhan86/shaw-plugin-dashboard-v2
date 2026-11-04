@@ -108,14 +108,14 @@
     AB.NAT = Object.keys(AB.BOOKS).filter(a => AB.STATE[a]).sort((p, q) => AB.STATE[p].localeCompare(AB.STATE[q]) || p.localeCompare(q)); AB.TOWHO_OFA.nat = AB.NAT;
     // each state's State Manager, as on the OFA pages; WA has none there, so the sample adds one
     AB.SM = { VIC: "Marcus Delahunt", NSW: "Ingrid Solberg", QLD: "Fiona Castellane", SA: "Dmitri Varga", WA: "Wes Ardagh" }; }
-  // B46: every product sits in one holding bucket; the twenty buckets add up to Funds Under Advice
+  // B46: every product sits in one holding bucket; the twenty buckets add up to Funds Under Advice (B54: the only product outside them is the $0 insurance account)
   { const AB = window.ADBOOK, hs = (t) => { let h = 7; for (let i = 0; i < t.length; i++) h = (h * 31 + t.charCodeAt(i)) % 100003; return h / 100003; };
-    AB.HOLD = ["CHESS registered", "SMA", "CMA", "International", "Term Deposit", "HUB24", "Macquarie Wrap", "Netwealth", "Leveraged Equities", "Fixed Income", "Managed Funds", "Unlisted Assets", "BT Panorama", "CFS FirstWrap", "Praemium", "Mason Stevens", "North", "Expand", "Insurance", "Other"];
+    // B54: the twenty holdings the warehouse keeps, in its order; the first eight show by default
+    AB.HOLD = ["CHESS registered", "SMA", "CMA", "International", "Term Deposit", "HUB24", "Macquarie Wrap", "Netwealth", "Leveraged Equities", "BT Panorama", "CFS FirstWrap", "Powerwrap", "AET", "Asgard", "NAB Equity Lending", "Bell Potter", "Spectrum", "Treasury Direct Bond", "International Equity Holdings", "EFG"];
     AB.HOLD_DEF = AB.HOLD.slice(0, 8);
-    const HB = (x, pa, q) => pa.plat === "Shaw Managed Accounts" ? "SMA" : q.nm === "International shares" ? "International" : pa.plat === "Cash Management Account" ? (hs(x.s + q.nm) < 0.3 ? "Term Deposit" : "CMA") : q.nm === "Wrap Cash Account" ? "CMA" : pa.plat === "CHESS Registered" ? (q.nm === "Listed fixed income" ? "Fixed Income" : "CHESS registered") : pa.plat === "Leveraged Equities" ? "Leveraged Equities" : pa.plat === "TAL Life" ? "Insurance" : pa.plat === "Netwealth" && hs(x.s + pa.no) < 0.25 ? "Managed Funds" : AB.HOLD.includes(pa.plat) ? pa.plat : "Other";
-    // B47: many clients share a name, so each client has an identifier; one client on several S-Accounts keeps one
-    let cn = 50000; Object.values(AB.BOOKS).forEach(bk => bk.forEach(x => { x.cid = "C" + (++cn); x.pas.forEach(pa => pa.prods.forEach(q => { q.hb = HB(x, pa, q); })); }));
-    [["Ravi Naidoo", "Margaret Okonkwo"], ["Hannah Ilves", "Greer Hale"]].forEach(([a, nm]) => { const xs = (AB.BOOKS[a] || []).filter(x => x.client === nm); xs.forEach(x => { x.cid = xs[0].cid; }); }); }
+    const HB = (x, pa, q) => pa.plat === "Shaw Managed Accounts" ? "SMA" : q.nm === "International shares" ? "International" : pa.plat === "Cash Management Account" ? (hs(x.s + q.nm) < 0.3 ? "Term Deposit" : "CMA") : q.nm === "Wrap Cash Account" ? "CMA" : pa.plat === "CHESS Registered" ? (q.nm === "Listed fixed income" ? "Treasury Direct Bond" : "CHESS registered") : pa.plat === "Leveraged Equities" ? "Leveraged Equities" : AB.HOLD.includes(pa.plat) ? pa.plat : null; // the $0 TAL Life insurance account sits in no holding (Insurance and Other are gone)
+    // B49: the book is by S-Account only, so the client identifiers (B47) are no longer kept
+    Object.values(AB.BOOKS).forEach(bk => bk.forEach(x => { x.pas.forEach(pa => pa.prods.forEach(q => { q.hb = HB(x, pa, q); })); })); }
   // M22: the accounts each adviser closed, per month (Oct 25 – Sep 26), each with the Funds Under Advice it held at its last month-end before it closed. Accounts Closed counts them; Funds Under Advice Closed adds them up.
   { const AB = window.ADBOOK; let z = 4242, cs = 26000; const rr = () => { z = (z * 9301 + 49297) % 233280; return z / 233280; }; AB.CLOSED = {};
     AB.NAT.forEach(a => { AB.CLOSED[a] = Array.from({ length: 12 }, () => { const n = Math.max(0, Math.round(1.6 + (rr() - 0.5) * 3.8)); return Array.from({ length: n }, () => ({ s: "S" + (cs += 1 + Math.floor(rr() * 9)), fua: Math.round(Math.exp(11 + rr() * 3.2) / 100) * 100 })); }); }); }
