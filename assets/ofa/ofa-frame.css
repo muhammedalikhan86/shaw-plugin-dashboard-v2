@@ -1039,3 +1039,6 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.f3,[classname~="f3"])>mat-dialog-acti
 .app-layer .bh>.bt{flex:1 1 auto!important;min-width:auto!important}
 .app-layer .bh>.bt>span:first-child{white-space:nowrap}
 .app-layer .bh>.row{flex:0 1 auto!important;min-width:0;flex-wrap:wrap!important;justify-content:flex-end;row-gap:8px;margin-left:auto}
+/* P65 / P45: Platform, Product, Platform account number, Adviser, Adviser code, S-Account, Reference Date and Expiry Date headings stay on one line */
+.app-layer table.ot th:is(.h1l,[classname~="h1l"]) .hd{white-space:nowrap!important}
+.app-layer th:is(.h1l,[classname~="h1l"]) .hd>mat-icon{flex:none}
