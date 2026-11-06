@@ -1042,3 +1042,5 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.f3,[classname~="f3"])>mat-dialog-acti
 /* P65 / P45: Platform, Product, Platform account number, Adviser, Adviser code, S-Account, Reference Date and Expiry Date headings stay on one line */
 .app-layer table.ot th:is(.h1l,[classname~="h1l"]) .hd{white-space:nowrap!important}
 .app-layer th:is(.h1l,[classname~="h1l"]) .hd>mat-icon{flex:none}
+/* P66 / P47 / P41: Open in full view covers the whole browser window, over the top bar and the side navigation; square corners. Dialogs (200) and the snack bar (210) stay above it; its own menus and tips open inside it. */
+.g24[data-full="1"]>div>mat-card{position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;width:100vw!important;height:100vh!important;max-width:none!important;max-height:none!important;margin:0!important;z-index:150!important;border-radius:0!important}
