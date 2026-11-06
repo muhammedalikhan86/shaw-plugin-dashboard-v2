@@ -81,7 +81,7 @@ var DATA = [
   R("S20112", "Bettina Solano", "PV", "Individual", [["HUB", "H-90120", "HUB24 Invest"]], "N", "Monthly", 0, "—", "DECLINED", null, { init: { st: "declined", formAt: "08-09-2026", formT: "11:20", at: "22-09-2026", atT: "14:30", by: "Owen Pritchard", fee: 6200, how: "Electronic" } }),
   R("S20330", "Evander Brackenridge", "HI", "Individual", [["MW", "M-449402", "Macquarie Investment Consolidator II - Elevate"]], "N", "Monthly", 0, "01-10-2027", "PENDING", null, { init: { st: "sent", formAt: "29-09-2026", formT: "15:40", sentAt: "30-09-2026", sentT: "11:30", sentBy: "Owen Pritchard", weekly: "07-10-2026", fee: 8400, how: "Electronic" } }),
   R("S20338", "Maple Crescent Pty Ltd", "RA", "Company", [["NW", "NW-55700", "Netwealth - Investment"]], "N", "Quarterly", 0, "15-10-2027", "PENDING", null, { init: { st: "form", formAt: "05-10-2026", formT: "10:15", fee: 14000, how: "Electronic" } }),
-  R("S18951", "Lucinda Hartigan", "OF", "Individual", [["SMA", "7701-640", "PRAEMIUM Shaw SMA"]], "N", "Monthly", 0, "—", "TERMINATED", null, { reEst: true, init: { st: "form", formAt: "06-10-2026", formT: "15:05", fee: 4900, how: "Paper" } }),,
+  R("S18951", "Lucinda Hartigan", "OF", "Individual", [["SMA", "7701-640", "PRAEMIUM Shaw SMA"]], "N", "Monthly", 0, "—", "TERMINATED", null, { reEst: true, init: { st: "form", formAt: "06-10-2026", formT: "15:05", fee: 4900, how: "Paper" } }),
   R("S20473", "Imogen Taskell", "OF", "Individual", [["TAL", "TL-2271840", "TAL Accelerated Protection"]], "N", "Monthly", 0, "—", "NO OFA", null, { paSt: { "TL-2271840": { st: "NO OFA", by: "Owen Pritchard", at: "14-07-2026 10:20", why: "No ongoing fee arrangement" } } }),
 ];
 var PAX = { "S20114|H-90388": { rd: "18-03-2027", is: "Accepted", fee: 4120 }, "S20131|7702-118": { fee: 3100 }, "S20131|M-448310": { rd: "02-02-2027", oldRd: "02-02-2026", is: "Accepted", fee: 4210 }, "S20131|P-302215": { rd: "11-03-2027", oldRd: "11-03-2026", is: "Accepted", fee: 2000 }, "S20278|H-90702": { fee: 19800 }, "S20278|7702-455": { fee: 7510, fq: "Quarterly" }, "S20172|BTP-771204": { rd: "03-10-2027", is: null, fee: 0 }, "S18990|M-443301": { fee: 6100 }, "S18990|NW-53302": { fee: 4100 }, "S18984|M-447120": { fee: 5200 }, "S18984|H-90215": { fee: 3160 } };
@@ -150,6 +150,15 @@ var SEP = {
     { id: "SF2", kind: "An arrangement with no Reference Date", pl: ["SMA", "7702-050"], s: "S19780", nm: "Noor Abadi", a: "HI", fee: 790, since: "31-08-2026", dec: "Reference Date added", notes: [{ date: "05-09-2026 09:15", who: ME, text: "Reference Date taken from the SOA and added." }] },
   ],
 };
+
+// C141: three advisers for the Quarantine list's State Manager cases, kept out of the adviser lists (not enumerable), each with one quarantined account
+[["KN", { code: "KN06", n: "Kieran Noble", br: "Perth", st: "WA", sm: null, cat: 1 }],
+ ["LB", { code: "LB07", n: "Lydia Brennan", br: "Hobart", st: "TAS", sm: "Ruth Calder", smNoEmail: true, cat: 1 }],
+ ["JQ", { code: "JQ08", n: "Jasper Quill", br: null, brX: true, st: "—", sm: null, cat: 1 }]].forEach(([k, v]) => Object.defineProperty(ADV, k, { value: v, enumerable: false, configurable: true }));
+DATA.push(
+  R("S20341", "Wren & Talia Okafor", "KN", "Joint", [["NW", "NW-55341", "Netwealth - Investment"]], "N", "Monthly", 6420, "12-09-2026", "ACTIVE", null, { cyc: "Oct", ans: "quar", fc: null, tr: [["Wren Okafor", "Electronic"], ["Talia Okafor", "Electronic"]] }),
+  R("S20347", "Marigold Thorne", "LB", "Individual", [["HUB", "H-90347", "HUB24 Invest"]], "N", "Quarterly", 9180, "16-09-2026", "ACTIVE", null, { cyc: "Oct", ans: "quar", fc: null, tr: [["Marigold Thorne", "Electronic"]] }),
+  R("S20353", "Calder Pryor Super Fund", "JQ", "SMSF", [["MW", "M-449353", "Macquarie Super Consolidator II - Elevate"]], "N", "Monthly", 5310, "19-09-2026", "ACTIVE", null, { cyc: "Oct", ans: "quar", fc: null, tr: [["Calder Pryor", "Electronic"]] }));
 
 window.OFAPS_READY = true;
 }
