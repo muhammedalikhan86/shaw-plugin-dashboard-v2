@@ -1048,3 +1048,24 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.f3,[classname~="f3"])>mat-dialog-acti
 .app-layer th:is(.h1l,[classname~="h1l"]) .hd>mat-icon{flex:none}
 /* P66 / P47 / P41: Open in full view covers the whole browser window, over the top bar and the side navigation; square corners. Dialogs (200) and the snack bar (210) stay above it; its own menus and tips open inside it. */
 .g24[data-full="1"]>div>mat-card{position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;width:100vw!important;height:100vh!important;max-width:none!important;max-height:none!important;margin:0!important;z-index:150!important;border-radius:0!important}
+/* P43 (Compliance, Wording): the shell's content floor (SHELL-F-037): the content is never narrower than 1440px; below that the pane scrolls sideways */
+.page[data-floor="true"]{min-width:calc(1440px + 12px);box-sizing:border-box}
+/* P48 (Compliance, Wording): a dialog with cap keeps Material's height cap; its content scrolls, and its calendar, an overlay, is never clipped */
+mat-dialog:is(.cap,[classname~="cap"]){max-height:calc(100vh - 48px);display:flex;flex-direction:column;overflow:hidden}
+mat-dialog:is(.cap,[classname~="cap"])>mat-dialog-content{flex:1 1 auto;min-height:0;max-height:65vh;overflow:auto}
+/* P40 (Compliance): a column the fit pass narrows cuts its cells with an ellipsis; the full text shows on hover */
+.app-layer table.ot td[mat-cell][data-cut]{max-width:0}
+.app-layer table.ot td[mat-cell][data-cut] :is(.cl,.stk){min-width:0;max-width:100%}
+.app-layer table.ot td[mat-cell][data-cut] :is(.cl>*,.cl>span,.cl>a,.stk>*,.stk>span){display:block!important;max-width:100%;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+.app-layer table.ot td[mat-cell][data-cut] .cl>mat-chip{display:inline-flex!important;max-width:100%}
+/* P62: Initial OFAs status chips: one fill per status, white text (contrast 5.4:1 or better). New tones scoped to Initial OFAs; the shared palette (SHELL-F-058) is unchanged */
+.app-layer mat-chip[data-tone="io-prog"]{background:#5B4975!important;border:1px solid #5B4975!important;color:#FFFFFF!important}
+.app-layer mat-chip[data-tone="io-task"]{background:#0071A4!important;border:1px solid #0071A4!important;color:#FFFFFF!important}
+.app-layer mat-chip[data-tone="io-team"]{background:#1F225E!important;border:1px solid #1F225E!important;color:#FFFFFF!important}
+.app-layer mat-chip[data-tone="io-pend"]{background:#006060!important;border:1px solid #006060!important;color:#FFFFFF!important}
+.app-layer mat-chip[data-tone="io-sign"]{background:#337722!important;border:1px solid #337722!important;color:#FFFFFF!important}
+.app-layer mat-chip[data-tone="io-decl"]{background:#A50021!important;border:1px solid #A50021!important;color:#FFFFFF!important}
+/* P51 (Compliance): a loaded CAT 1 or CAT 2 box: an 11px label over the questions, left-aligned, on the slot's background and line height */
+.slot.slq{display:block;text-align:left;border-style:solid;border-color:var(--mat-sys-outline-variant)}
+.slot.slq .slq-l{font:500 11px/16px var(--f);letter-spacing:.02em;color:var(--mat-sys-on-surface-variant);margin-bottom:4px}
+.slot.slq .slq-q{font:400 13px/20px var(--f);color:var(--mat-sys-on-surface)}
