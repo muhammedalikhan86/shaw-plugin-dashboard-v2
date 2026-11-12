@@ -64,6 +64,8 @@ td.num>div{align-items:flex-end!important;justify-content:flex-end!important;tex
 th[mat-header-cell].sortable{cursor:pointer}
 .hd{display:flex;align-items:flex-start;gap:2px}
 th.num .hd{justify-content:flex-end}
+/* C149: a figure column's sort button fills its header cell, so its heading and sort arrow sit on the right, over the figures */
+th.num button.hd,th[class~="num"] button.hd{width:100%;justify-content:flex-end;text-align:right}
 .hd .arrow{display:inline-flex;width:12px;height:12px;margin-top:2px;flex:none;opacity:0;color:var(--mat-sys-on-surface);transition:opacity .12s}
 .hd .arrow mat-icon{font-size:12px;width:12px;height:12px}
 th.sortable:hover .arrow{opacity:.54}
@@ -133,7 +135,7 @@ mat-slider:focus-visible>.handle{box-shadow:0 0 0 6px rgba(232,72,16,.2)}
 table.dt th[mat-header-cell]{height:56px;padding-top:0;vertical-align:middle;border-bottom:none;color:var(--mat-sys-on-surface)}
 table.dt td[mat-cell]{color:var(--mat-sys-on-surface)}
 table.dt mat-chip{color:var(--mat-sys-on-surface-variant)}
-mat-paginator:is(.pg,[classname~="pg"]){display:flex;align-items:center;justify-content:flex-end;gap:8px;height:56px;padding:0 16px;border-top:none;font:400 11px/16px var(--f);color:var(--mat-sys-on-surface)}
+mat-paginator:is(.pg,[classname~="pg"]){display:flex;align-items:center;justify-content:flex-end;gap:8px;height:48px;padding:0 16px;border-top:none;font:400 11px/16px var(--f);color:var(--mat-sys-on-surface)}
 .pgsel{display:flex;align-items:center;justify-content:space-between;width:84px;height:40px;padding:0 8px 0 16px;border:1px solid var(--mat-sys-outline);border-radius:4px;font:400 11px/16px var(--f)}
 .pgsel mat-icon{font-size:24px;width:24px;height:24px;color:var(--mat-sys-on-surface-variant)}
 mat-list:is(.dl,[classname~="dl"]){padding:16px 0 12px}
@@ -240,7 +242,7 @@ mat-card:is(.door,[classname~="door"]):hover{border-color:var(--mat-sys-on-surfa
 mat-card:is(.door,[classname~="door"])[data-on="true"]{border-color:var(--mat-sys-on-surface);box-shadow:inset 0 0 0 1px var(--mat-sys-on-surface)}
 mat-card:is(.box,[classname~="box"]){padding:0;gap:0;overflow:visible;background:var(--mat-sys-surface)}
 .bh{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:16px 20px 12px}
-.bt{font:var(--mat-sys-title-medium)}
+.bt{font:700 16px/24px var(--app-font,var(--f))} /* P54: a card title is drawn as the design system's specimen draws mat-card-title (16px, 700), on every OFA board; was title-medium (14px, 500) */
 .bs{font:var(--mat-sys-body-small);color:var(--mat-sys-on-surface-variant);margin-top:2px;text-wrap:pretty}
 :is(.pp,[classname~="pp"]){padding:4px 20px 16px}
 mat-tab-header:is(.tabs,[classname~="tabs"]){display:flex;border-bottom:1px solid var(--mat-sys-outline-variant);background:var(--mat-sys-surface);border-radius:6px 6px 0 0;padding:0 8px}
@@ -1069,3 +1071,63 @@ mat-dialog:is(.cap,[classname~="cap"])>mat-dialog-content{flex:1 1 auto;min-heig
 .slot.slq{display:block;text-align:left;border-style:solid;border-color:var(--mat-sys-outline-variant)}
 .slot.slq .slq-l{font:500 11px/16px var(--f);letter-spacing:.02em;color:var(--mat-sys-on-surface-variant);margin-bottom:4px}
 .slot.slq .slq-q{font:400 13px/20px var(--f);color:var(--mat-sys-on-surface)}
+
+/* A table that freezes its first three columns (data-frz has "3": the tick column, then two more); the third carries the divider */
+.app-layer table.ot[data-frz*="3"] :is(th,td):nth-child(2){position:sticky;left:56px;z-index:2;box-sizing:border-box;width:88px;min-width:88px;max-width:88px;background-color:var(--mat-sys-surface)}
+.app-layer table.ot[data-frz*="3"] :is(th,td):nth-child(3){position:sticky;left:144px;z-index:2;background-color:var(--mat-sys-surface);box-shadow:inset -1px 0 0 var(--mat-sys-outline-variant)}
+.app-layer table.ot[data-frz*="3"] :is(th,td):first-child{box-shadow:none}
+.app-layer table.ot[data-frz*="3"] tbody tr:nth-child(even)>td:is(:nth-child(2),:nth-child(3)){background-color:inherit}
+.app-layer table.ot[data-frz*="3"] thead th:is(:nth-child(2),:nth-child(3)){z-index:6!important;background-color:var(--mat-sys-surface)!important}
+.app-layer table.ot[data-frz*="3"] tbody td:is(:nth-child(2),:nth-child(3)){z-index:3!important}
+/* The Book of business freezes its first three columns (S-Account, Account name, Adviser); the page sets --fz2 and --fz3 from the columns' widths */
+table.ot[data-frz="bk"] :is(th,td):is(:nth-child(1),:nth-child(2),:nth-child(3)){position:sticky;z-index:3;background-color:var(--mat-sys-surface)}
+table.ot[data-frz="bk"] :is(th,td):nth-child(1){left:0}
+table.ot[data-frz="bk"] :is(th,td):nth-child(2){left:var(--fz2,0px)}
+table.ot[data-frz="bk"] :is(th,td):nth-child(3){left:var(--fz3,0px);box-shadow:inset -1px 0 0 var(--mat-sys-outline-variant)}
+table.ot[data-frz="bk"] thead th:is(:nth-child(1),:nth-child(2),:nth-child(3)){z-index:6!important}
+table.ot[data-frz="bk"] tbody tr:nth-child(even)>td:is(:nth-child(1),:nth-child(2),:nth-child(3)){background-color:inherit}
+table.ot[data-frz="bk"] tfoot td:is(:nth-child(1),:nth-child(2),:nth-child(3)){z-index:6!important;background-color:var(--mat-sys-surface-container-low)!important}
+/* B70: an applied filter is a highlighted chip (the design system's selected chip), not a status chip; the "Filters on" row stays out of the frame-wide status-chip rule */
+.app-layer mat-chip-set[aria-label="Filters on"] mat-chip[highlighted]{background:var(--app-chip-selected-bg)!important;border:1px solid var(--app-chip-selected-bg)!important;color:var(--app-chip-selected-fg)!important;font-weight:400!important;text-transform:none!important;letter-spacing:0!important;border-radius:var(--mat-chip-container-shape-radius,var(--app-radius))!important}
+.app-layer mat-chip-set[aria-label="Filters on"] mat-chip[highlighted] [matChipRemove],.app-layer mat-chip-set[aria-label="Filters on"] mat-chip[highlighted] mat-icon{color:var(--app-chip-selected-fg)!important}
+/* C154: the OFA Team's chip sheet. Chip text is always white; lime and amber chips take look D (bold white, 12px) by the OFA Team's decision, the contrast check set aside for these two */
+.app-layer mat-chip:is([data-tone="lv1"],[data-tone="att"],[data-tone="lv2"]){color:#FFFFFF!important;font-weight:700!important;font-size:12px!important;letter-spacing:.04em!important}
+.app-layer mat-chip:is([data-tone="lv1"],[data-tone="att"],[data-tone="lv2"]) mat-icon{color:#FFFFFF!important}
+/* H9 / R29: the History options (Demo settings › History option) */
+.hist{display:flex;flex-direction:column;gap:16px;min-width:0;padding:0 var(--app-card-padding) 16px;overflow:auto}
+.hist-h{margin:0 0 4px;font:var(--app-title-small)}
+.hist-line{display:flex!important;align-items:center;gap:8px;width:100%;min-height:48px;padding:0 8px;border:0;background:none;cursor:pointer;font:var(--app-body-medium);color:var(--app-text);text-transform:none;letter-spacing:0;border-radius:var(--app-radius)}
+.hist-line:hover{background:var(--app-surface-high)}
+.hist-det{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 16px;padding:8px 16px 12px;background:var(--app-band);border-radius:var(--app-radius)}
+.hist-det>div{display:flex;flex-direction:column}.hist-det .lb{font:var(--app-body-small);color:var(--app-text-secondary)}.hist-det .v{font:var(--app-body-medium)}
+.hist-tl [role="tab"][data-on="true"]{color:var(--mat-sys-primary);box-shadow:inset 0 calc(-1 * var(--app-tab-ink-height)) 0 var(--app-tab-ink)}
+@media (min-width:1440px){.hist[data-side="true"]{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:start}}
+/* the side panel a period line opens in option A */
+mat-dialog:is(.side,[classname~="side"]){position:fixed!important;top:0!important;right:0!important;bottom:0!important;left:auto!important;width:400px!important;max-width:100vw!important;height:100vh!important;max-height:100vh!important;border-radius:0!important;margin:0!important;transform:none!important}
+
+/* C150: the OFA Dashboard's table cards take the shell's table card (Shell-Plugin0): head row title, info icon, search, tools; the shell's search box; a progress bar across the card's top while rows load */
+.app-layer mat-card[data-tc="shell"]{position:relative}
+.app-layer mat-card[data-tc="shell"]>.tcbar{position:absolute;left:0;right:0;top:0;z-index:3}
+.app-layer mat-card[data-tc="shell"] .tcs{position:relative;display:flex;align-items:center;gap:12px;width:320px;max-width:100%;height:48px;padding:0 12px 0 16px;margin-right:8px;box-sizing:border-box;border:1px solid var(--mat-sys-outline);border-radius:4px;background:var(--mat-sys-surface)}
+.app-layer mat-card[data-tc="shell"] .tcs:hover{border-color:var(--mat-sys-on-surface)}
+.app-layer mat-card[data-tc="shell"] .tcs:focus-within{border-color:var(--mat-sys-primary);box-shadow:inset 0 0 0 1px var(--mat-sys-primary)}
+.app-layer mat-card[data-tc="shell"] .tcs input{flex:1;min-width:0;height:auto;border:none;outline:none;background:none;padding:0;font:400 13px/20px var(--f);color:var(--mat-sys-on-surface)}
+.app-layer mat-card[data-tc="shell"] .tcs mat-icon{font-size:24px;width:24px;height:24px;color:var(--mat-sys-on-surface-variant)}
+.app-layer mat-card[data-tc="shell"]:has(table) .bh{padding:16px 20px}
+.app-layer mat-card[data-tc="shell"]:has(table) .bh button[matIconButton] mat-icon{font-size:24px!important;width:24px!important;height:24px!important;line-height:24px!important}
+
+/* C151: the Quarantine list's Extension note wraps inside its column (about 140px); the row grows to fit */
+.app-layer table th.xwrap,.app-layer table td.xwrap{width:140px!important;min-width:140px!important;max-width:140px!important}
+.app-layer table td.xwrap,.app-layer table td.xwrap *{white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere}
+
+/* C152 (ofa-portfolio-services) and A11 (ofa-compliance-dashboard): a History list reads in sentence case with normal spacing; .tl's uppercase label look stays on the stat tiles */
+mat-list:is(.hsc,[classname~="hsc"]),mat-list:is(.hsc,[classname~="hsc"]) *{letter-spacing:normal!important;text-transform:none!important}
+
+/* P71: every paginator is 48px (density -2, UI contract 3.2) with an 11px page-size value; this outranks the specimen's 56px */
+.app-layer mat-paginator,:is(.app-layer,[data-layer="app"]) mat-paginator:is(.pg,.pgr,[classname~="pg"],[classname~="pgr"]){height:48px}
+
+/* P72: a dialog insets its content 24px, as Angular Material does. The title, content and actions carry the 24px (above), so the dialog's own 24px from the specimen is dropped */
+.app-layer mat-dialog{padding:0}
+
+/* P53 (Compliance): Closed months' Cull list and Quarantine list keep every cell on one line; the fit (P40) then cuts the widest columns with an ellipsis, shown in full on hover */
+.app-layer table.ot[data-one] td[mat-cell],.app-layer table.ot[data-one] td[mat-cell] *{white-space:nowrap!important}
