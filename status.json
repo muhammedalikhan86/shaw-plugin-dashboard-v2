@@ -1,0 +1,299 @@
+{
+ "asOf": "2026-11-13",
+ "workingDays": {
+  "rule": "Mon-Fri",
+  "holidays": [],
+  "note": "No public holidays applied; none are recorded in the docs for the forecast window."
+ },
+ "phases": [
+  {
+   "name": "Build",
+   "status": "In progress",
+   "start": "2026-10-28",
+   "end": "2026-12-02",
+   "isForecast": true,
+   "note": "start = first day of the story-points record (hub chart, from 2026-10-28), not a documented kickoff; the shell, Landing Page and the pre-OFA Advisor Dashboard were built and released earlier as functional mocks (2026-10-12). Build includes OFA-F-028 Go-live and OFA-F-029 coverage gate (PS Phase 5), and OFA-F-030 in eSignatureWebAPI (outside this repo)."
+  },
+  {
+   "name": "Deployment",
+   "status": "Not started: only the functional mocks are deployed",
+   "start": null,
+   "end": null,
+   "isForecast": false,
+   "note": "The releases in docs/releases.md (2026-10-12, updates 1-2 2026-10-12, update 3 2026-10-14, update 4 2026-10-27, Advisor Dashboard 0.14.0) were labelled Alpha but are functional mocks: the artboards with surface-level behaviour to show look and feel, no backend. The product itself has not been deployed. OFA go-live is OFA-F-028 (Planned). No deployment date in any doc."
+  },
+  {
+   "name": "Acceptance Testing",
+   "status": null,
+   "start": null,
+   "end": null,
+   "isForecast": false,
+   "note": "No acceptance-testing phase, UAT plan or date is recorded in docs/deployment, the PMBooks, PRDs or handoffs. Manual verification has been waived by Muhammed since 2026-11-11 (hub note)."
+  }
+ ],
+ "components": [
+  {
+   "name": "Shell & Landing Page",
+   "counted": [
+    "shell",
+    "landing-page"
+   ],
+   "pointsDone": 141.0,
+   "pointsRemaining": 102.0,
+   "pointsTotal": 243.0,
+   "itemsRemaining": 51,
+   "itemsRemainingUnsized": []
+  },
+  {
+   "name": "Portfolio Services",
+   "counted": [
+    "portfolio-services"
+   ],
+   "pointsDone": 244.0,
+   "pointsRemaining": 235.0,
+   "pointsTotal": 479.0,
+   "itemsRemaining": 80,
+   "itemsRemainingUnsized": [
+    "OFA-B-066",
+    "OFA-B-067",
+    "OFA-F-118"
+   ]
+  },
+  {
+   "name": "Advisor",
+   "counted": [
+    "advisor-dashboard"
+   ],
+   "pointsDone": 212.0,
+   "pointsRemaining": 108.0,
+   "pointsTotal": 320.0,
+   "itemsRemaining": 39,
+   "itemsRemainingUnsized": [
+    "ADVISOR-DASHBOARD-F-103"
+   ]
+  },
+  {
+   "name": "Compliance",
+   "counted": [
+    "compliance-dashboard"
+   ],
+   "pointsDone": 73.0,
+   "pointsRemaining": 30.0,
+   "pointsTotal": 103.0,
+   "itemsRemaining": 8,
+   "itemsRemainingUnsized": []
+  }
+ ],
+ "velocity": {
+  "pointsPerWorkingDay": 55.7,
+  "window": "last 10 working days (2026-11-02 to 2026-11-13)",
+  "pointsPerWorkingDayWholePeriod": 48.62,
+  "wholePeriodWorkingDays": 13,
+  "series": [
+   {
+    "date": "2026-10-28",
+    "pointsDone": 35.0,
+    "pointsDoneThatDay": 35.0
+   },
+   {
+    "date": "2026-10-29",
+    "pointsDone": 47.0,
+    "pointsDoneThatDay": 12.0
+   },
+   {
+    "date": "2026-10-30",
+    "pointsDone": 75.0,
+    "pointsDoneThatDay": 28.0
+   },
+   {
+    "date": "2026-10-31",
+    "pointsDone": 75.0,
+    "pointsDoneThatDay": 0
+   },
+   {
+    "date": "2026-11-01",
+    "pointsDone": 75.0,
+    "pointsDoneThatDay": 0
+   },
+   {
+    "date": "2026-11-02",
+    "pointsDone": 75.0,
+    "pointsDoneThatDay": 0
+   },
+   {
+    "date": "2026-11-03",
+    "pointsDone": 106.0,
+    "pointsDoneThatDay": 31.0
+   },
+   {
+    "date": "2026-11-04",
+    "pointsDone": 146.0,
+    "pointsDoneThatDay": 40.0
+   },
+   {
+    "date": "2026-11-05",
+    "pointsDone": 146.0,
+    "pointsDoneThatDay": 0
+   },
+   {
+    "date": "2026-11-06",
+    "pointsDone": 230.0,
+    "pointsDoneThatDay": 84.0
+   },
+   {
+    "date": "2026-11-07",
+    "pointsDone": 241.0,
+    "pointsDoneThatDay": 11.0
+   },
+   {
+    "date": "2026-11-08",
+    "pointsDone": 241.0,
+    "pointsDoneThatDay": 0
+   },
+   {
+    "date": "2026-11-09",
+    "pointsDone": 272.0,
+    "pointsDoneThatDay": 31.0
+   },
+   {
+    "date": "2026-11-10",
+    "pointsDone": 296.0,
+    "pointsDoneThatDay": 24.0
+   },
+   {
+    "date": "2026-11-11",
+    "pointsDone": 378.0,
+    "pointsDoneThatDay": 82.0
+   },
+   {
+    "date": "2026-11-12",
+    "pointsDone": 540.0,
+    "pointsDoneThatDay": 162.0
+   },
+   {
+    "date": "2026-11-13",
+    "pointsDone": 632.0,
+    "pointsDoneThatDay": 92.0
+   }
+  ],
+  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
+ },
+ "forecast": {
+  "method": "optimistic = last-10-working-day rate; likely = mean of the two rates; pessimistic = whole-period rate (since 2026-10-28). Working days Mon-Fri; weekend points count in the totals but weekends are never counted as days.",
+  "perComponent": {
+   "Shell & Landing Page": {
+    "optimistic": "2026-11-25",
+    "likely": "2026-11-26",
+    "pessimistic": "2026-11-27",
+    "rateLast10": 13.1,
+    "rateWhole": 10.46
+   },
+   "Portfolio Services": {
+    "optimistic": "2026-12-01",
+    "likely": "2026-12-02",
+    "pessimistic": "2026-12-02",
+    "rateLast10": 19.9,
+    "rateWhole": 18.77
+   },
+   "Advisor": {
+    "optimistic": "2026-11-24",
+    "likely": "2026-11-25",
+    "pessimistic": "2026-11-25",
+    "rateLast10": 16.2,
+    "rateWhole": 13.77
+   },
+   "Compliance": {
+    "optimistic": "2026-11-20",
+    "likely": "2026-11-20",
+    "pessimistic": "2026-11-23",
+    "rateLast10": 6.5,
+    "rateWhole": 5.62
+   }
+  },
+  "overall": {
+   "optimistic": "2026-12-01",
+   "likely": "2026-12-02",
+   "pessimistic": "2026-12-02",
+   "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-27 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
+   "rateLast10": 55.7,
+   "rateWhole": 48.62,
+   "pointsRemaining": 475.0,
+   "itemsRemaining": 178
+  }
+ },
+ "milestones": [
+  {
+   "name": "Functional mocks deployed",
+   "date": "2026-10-12",
+   "kind": "actual"
+  },
+  {
+   "name": "Functional mocks, update 3 deployed",
+   "date": "2026-10-14",
+   "kind": "actual"
+  },
+  {
+   "name": "Functional mocks, update 4 deployed (Advisor Dashboard 0.14.0)",
+   "date": "2026-10-27",
+   "kind": "actual"
+  },
+  {
+   "name": "Story-points record starts",
+   "date": "2026-10-28",
+   "kind": "actual"
+  },
+  {
+   "name": "Branch split: one checkout per OFA component",
+   "date": "2026-10-30",
+   "kind": "actual"
+  },
+  {
+   "name": "Shell & Landing Page build complete (likely)",
+   "date": "2026-11-26",
+   "kind": "forecast"
+  },
+  {
+   "name": "Portfolio Services build complete (likely)",
+   "date": "2026-12-02",
+   "kind": "forecast"
+  },
+  {
+   "name": "Advisor build complete (likely)",
+   "date": "2026-11-25",
+   "kind": "forecast"
+  },
+  {
+   "name": "Compliance build complete (likely)",
+   "date": "2026-11-20",
+   "kind": "forecast"
+  },
+  {
+   "name": "Build complete (likely)",
+   "date": "2026-12-02",
+   "kind": "forecast"
+  }
+ ],
+ "sources": [
+  {
+   "number": "points per component",
+   "file": "docs/<component>/project-management.md (+ archive/*/project-management.md); advisor, PS, compliance from their branch checkouts, shell/landing-page from the hub checkout"
+  },
+  {
+   "number": "counting rule",
+   "file": "docs/sessions/knowledge/hub-operations.md (Story-points chart)"
+  },
+  {
+   "number": "deployments",
+   "file": "docs/releases.md"
+  },
+  {
+   "number": "go-live phase and items",
+   "file": "docs/portfolio-services/project-management.md (Phases & Milestones; OFA-F-028, F-029, F-030)"
+  },
+  {
+   "number": "branch split date",
+   "file": "hub memory four-checkouts-one-hub (2026-10-30)"
+  }
+ ],
+ "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure."
+}

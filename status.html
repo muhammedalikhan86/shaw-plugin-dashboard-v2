@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shaw Portal - Project Status</title>
+<link rel="stylesheet" href="assets/ds/roboto.css">
+<style>
+/* Numbers come from status.json, which the Hub session refreshes. This page only draws them. */
+:root{--bg:#F4F4F4;--card:#FFFFFF;--ink:#1A1A1A;--muted:#5C5C5C;--faint:#898781;--line:#E0E0E0;--grid:#E1E0D9;--accent:#E8501E;
+  --done:#2a78d6;--done-soft:#b7d3f6;--track:#ECEBE7;--weekend:#F1F0EC;--forecast:#2a78d6;
+  --ok:#0ca30c;--warn:#fab219;--idle:#898781}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--grid:#2c2c2a;--accent:#FF6A33;
+  --done:#3987e5;--done-soft:#184f95;--track:#2A2A28;--weekend:#191918;--forecast:#3987e5}}
+:root[data-theme="dark"]{--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--grid:#2c2c2a;--accent:#FF6A33;
+  --done:#3987e5;--done-soft:#184f95;--track:#2A2A28;--weekend:#191918;--forecast:#3987e5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/22px Roboto,"Helvetica Neue",Arial,sans-serif}
+header{background:#000;padding:16px}
+header img{width:150px;height:auto;display:block}
+main{max-width:1080px;margin:0 auto;padding:32px 16px 48px}
+h1{font-weight:400;font-size:26px;line-height:34px;margin:0 0 8px}
+h2{font-weight:400;font-size:20px;line-height:28px;margin:36px 0 4px}
+.sub{color:var(--muted);margin:0 0 14px;font-size:14px;line-height:20px}
+.lede{color:var(--muted);margin:0 0 24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 24px}
+.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.row4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:820px){.row3,.row4{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.row3,.row4{grid-template-columns:1fr}}
+.phase h3{margin:0 0 8px;font-size:17px;font-weight:500}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;padding:2px 10px;border-radius:999px;border:1px solid var(--line);margin-bottom:12px}
+.chip i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;font-size:14px;line-height:20px;margin:0}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0;font-variant-numeric:tabular-nums}
+details{margin-top:14px;border-top:1px solid var(--line);padding-top:10px;font-size:13px;line-height:18px;color:var(--muted)}
+summary{cursor:pointer;color:var(--accent);font-weight:500;list-style:none;display:inline-flex;align-items:center;gap:6px;border-radius:4px;padding:2px 4px;margin-left:-4px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"";width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s}
+details[open] summary::before{transform:rotate(45deg)}
+summary:focus{outline:none}
+summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+details ul{margin:8px 0 0;padding-left:18px}
+details li{margin:0 0 6px}
+details li:last-child{margin-bottom:0}
+.stat .label{color:var(--muted);font-size:13px}
+.stat .value{font-size:30px;line-height:38px;margin:4px 0 2px}
+.stat .note{color:var(--muted);font-size:13px;line-height:18px}
+.caveat{border-left:3px solid var(--accent);padding:10px 14px;background:var(--card);border-radius:0 8px 8px 0;font-size:14px;line-height:20px;margin:16px 0 0}
+table{width:100%;border-collapse:collapse;font-size:14px;line-height:20px}
+th{text-align:left;font-weight:500;color:var(--muted);padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:middle;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right}
+.tablewrap{overflow-x:auto;padding:4px 8px}
+.bar{display:flex;gap:2px;height:10px;min-width:120px}
+.bar span{display:block;height:100%}
+.bar .d{background:var(--done);border-radius:4px 0 0 4px}
+.bar .r{background:var(--track);border-radius:0 4px 4px 0}
+.chartwrap{overflow-x:auto}
+svg{display:block}
+svg text{font-family:Roboto,"Helvetica Neue",Arial,sans-serif}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--muted);margin:0 0 10px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:14px;height:10px;border-radius:2px;display:inline-block}
+#tip{position:fixed;pointer-events:none;background:var(--card);color:var(--ink);border:1px solid var(--line);box-shadow:0 2px 8px rgba(0,0,0,.18);border-radius:8px;padding:8px 10px;font-size:13px;line-height:18px;max-width:280px;z-index:10;display:none}
+#tip b{font-weight:500}
+.err{color:var(--accent)}
+.muted{color:var(--muted)}
+code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
+</style>
+</head>
+<body>
+<header><a href="index.html"><img src="assets/logo-primary-reversed-3x.png" alt="Shaw and Partners - back to the start page"></a></header>
+<main>
+<h1>Project Status</h1>
+<p class="lede" id="lede">Loading…</p>
+
+<h2>Phases</h2>
+<p class="sub">Build, Deployment and Acceptance Testing. A date with "forecast" is a projection, not a commitment.</p>
+<div class="row3" id="phases"></div>
+
+<h2>Build work</h2>
+<p class="sub">Story points from the PMBooks, done and remaining. OFA build work only: the component library (Plugin0) is not OFA work and is left out of every figure.</p>
+<div class="row4" id="stats"></div>
+<div class="card tablewrap" style="margin-top:16px"><table id="comps"></table></div>
+<p class="caveat" id="caveat"></p>
+
+<h2>Pace</h2>
+<p class="sub">Points completed each day. Weekend bars are overnight runs: their points count, but weekends never count as days in the forecast.</p>
+<div class="card">
+<div class="legend"><span><i class="sw" style="background:var(--done)"></i>Weekday</span><span><i class="sw" style="background:var(--done-soft)"></i>Weekend (overnight runs)</span><span><i class="sw" style="background:var(--weekend);border:1px solid var(--line)"></i>Weekend</span></div>
+<div class="chartwrap"><svg id="pace" role="img" aria-label="Points completed per day"></svg></div>
+<p class="sub" id="paceNote" style="margin:10px 0 0"></p>
+</div>
+
+<h2>Timeline</h2>
+<p class="sub">Actual dates are solid; forecast dates are striped, with the optimistic to pessimistic range as a whisker.</p>
+<div class="card">
+<div class="legend"><span><i class="sw" style="background:var(--done)"></i>Actual</span><span><i class="sw" style="background:repeating-linear-gradient(135deg,var(--forecast) 0 3px,transparent 3px 6px);border:1px solid var(--forecast)"></i>Forecast (likely)</span><span><svg width="18" height="10"><line x1="1" y1="5" x2="17" y2="5" stroke="currentColor" stroke-width="2"/><line x1="1" y1="1" x2="1" y2="9" stroke="currentColor" stroke-width="2"/><line x1="17" y1="1" x2="17" y2="9" stroke="currentColor" stroke-width="2"/></svg>Forecast range</span><span><svg width="12" height="12"><path d="M6 1 L11 6 L6 11 L1 6Z" fill="var(--ink)"/></svg>Event</span><span><i class="sw" style="background:var(--accent);width:2px"></i>Today</span><span><i class="sw" style="background:var(--weekend);border:1px solid var(--line)"></i>Weekend</span></div>
+<div class="chartwrap"><svg id="timeline" role="img" aria-label="Project timeline"></svg></div>
+</div>
+<div class="card tablewrap" style="margin-top:16px"><table id="dates"></table></div>
+
+<h2>Where the numbers come from</h2>
+<div class="card tablewrap"><table id="sources"></table></div>
+<div id="tip" role="tooltip"></div>
+</main>
+<script>
+(function(){
+  var DAY=864e5;
+  function d(s){var p=s.split("-");return Date.UTC(+p[0],+p[1]-1,+p[2]);}
+  function fmt(t,withDay){return new Date(t).toLocaleDateString("en-AU",{timeZone:"UTC",day:"numeric",month:"short",year:"numeric",weekday:withDay?"short":undefined});}
+  function f(s){return s?fmt(d(s)):"—";}
+  function short(t){return new Date(t).toLocaleDateString("en-AU",{timeZone:"UTC",day:"numeric",month:"short"});}
+  function weekend(t){var w=new Date(t).getUTCDay();return w===0||w===6;}
+  function workingDaysBetween(a,b){var n=0;for(var t=a+DAY;t<=b;t+=DAY)if(!weekend(t))n++;return n;}
+  // A phase note is one long string: show each clause as a list item, with readable dates.
+  function noteItems(note){
+    return isoToShort(note).replace(/^start = /,"Start date is the ")
+      .split(/;\s+|\.\s+(?=[A-Z])/).map(function(x){x=x.trim().replace(/\.$/,"");return x?"<li>"+esc(x.charAt(0).toUpperCase()+x.slice(1))+".</li>":"";}).join("");
+  }
+  function isMock(m){return m.kind==="actual"&&/functional mock/i.test(m.name);}
+  function isoToShort(str){return String(str).replace(/\b(\d{4}-\d{2}-\d{2})\b/g,function(m){return short(d(m));});}
+  function n(x){return Math.round(x).toLocaleString("en-AU");}
+  function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function $(id){return document.getElementById(id);}
+  var SVG="http://www.w3.org/2000/svg";
+  function s(tag,attrs,parent){var e=document.createElementNS(SVG,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+
+  // Tooltip: any element with data-tip shows it on hover or focus.
+  var tip=$("tip");
+  function showTip(e){var t=e.target.closest&&e.target.closest("[data-tip]");if(!t){tip.style.display="none";return;}
+    tip.innerHTML=t.getAttribute("data-tip");tip.style.display="block";
+    var x=(e.clientX!=null?e.clientX:t.getBoundingClientRect().left)+14,y=(e.clientY!=null?e.clientY:t.getBoundingClientRect().top)+14;
+    var w=tip.offsetWidth,h=tip.offsetHeight;if(x+w>innerWidth-8)x=innerWidth-w-8;if(y+h>innerHeight-8)y=y-h-28;
+    tip.style.left=x+"px";tip.style.top=y+"px";}
+  document.addEventListener("mousemove",showTip);
+  document.addEventListener("focusin",showTip);
+  document.addEventListener("mouseleave",function(){tip.style.display="none";});
+
+  fetch("status.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():Promise.reject(r.status);}).then(render).catch(function(e){
+    $("lede").innerHTML='<span class="err">Could not load status.json ('+esc(e)+').</span>';
+  });
+
+  function render(S){
+    var asOf=d(S.asOf),comps=S.components,fc=S.forecast,ov=fc.overall;
+    var done=0,rem=0,items=0,unsized=[];
+    comps.forEach(function(c){done+=c.pointsDone;rem+=c.pointsRemaining;items+=c.itemsRemaining;unsized=unsized.concat(c.itemsRemainingUnsized||[]);});
+    var total=done+rem;
+    var hol=(S.workingDays.holidays||[]);
+    $("lede").textContent="As of "+fmt(asOf,true)+". Working days are "+S.workingDays.rule+(hol.length?", less "+hol.length+" public holidays":", no public holidays applied")+". The numbers are refreshed from the PMBooks by the Hub session.";
+
+    // ---- Phases
+    var build=S.phases[0],dep=S.phases[1],acc=S.phases[2];
+    var mockDates=S.milestones.filter(isMock).map(function(m){return m.date;}).sort();
+    function phase(p,chip,color,rows){
+      return '<div class="card phase"><h3>'+esc(p.name)+'</h3><span class="chip"><i style="background:'+color+'"></i>'+esc(chip)+'</span><dl class="kv">'+
+        rows.map(function(r){return "<dt>"+r[0]+"</dt><dd>"+r[1]+"</dd>";}).join("")+'</dl>'+
+        (p.note?'<details><summary>Details</summary><ul>'+noteItems(p.note)+'</ul></details>':'')+'</div>';
+    }
+    $("phases").innerHTML=
+      phase(build,build.status||"In progress","var(--done)",[
+        ["Started",f(build.start)],
+        ["Done",n(done/total*100)+"% of points"],
+        ["Finish",f(ov.likely)+" <span class=muted>(forecast)</span>"],
+        ["Range",f(ov.optimistic)+" – "+f(ov.pessimistic)]]) +
+      phase(dep,"Not started","var(--idle)",[
+        ["Product","Not deployed"],
+        ["Go-live date",dep.end?f(dep.end):"Not scheduled"],
+        ["Functional mocks",mockDates.length?f(mockDates[0])+" – "+f(mockDates[mockDates.length-1]):"—"]]).replace("</dl>",'</dl><p class="muted" style="font-size:13px;line-height:18px;margin:10px 0 0">Functional mocks are these click-through artboards: look and feel only, no backend. They are not the product.</p>') +
+      phase(acc,acc.status||"Not planned yet","var(--idle)",[
+        ["Start",acc.start?f(acc.start):"Not planned yet"],
+        ["End",acc.end?f(acc.end):"Not planned yet"]]);
+
+    // ---- Stats
+    var v=S.velocity;
+    function stat(label,value,note){return '<div class="card stat"><div class="label">'+label+'</div><div class="value">'+value+'</div><div class="note">'+note+'</div></div>';}
+    $("stats").innerHTML=
+      stat("Points done",n(done),"of "+n(total)+" ("+n(done/total*100)+"%)")+
+      stat("Points remaining",n(rem),items+" items left, "+unsized.length+" not sized yet")+
+      stat("Rate",v.pointsPerWorkingDay.toFixed(1),"points per working day, "+esc(isoToShort(v.window))+". Whole period: "+v.pointsPerWorkingDayWholePeriod.toFixed(1))+
+      stat("Build complete (likely)",fmt(d(ov.likely)),"range "+short(d(ov.optimistic))+" – "+short(d(ov.pessimistic))+", "+workingDaysBetween(asOf,d(ov.likely))+" working days away");
+
+    // ---- Components table
+    var h='<thead><tr><th>Component</th><th class="num">Done</th><th class="num">Remaining</th><th class="num">Total</th><th>Progress</th><th class="num">Items left</th><th class="num">Rate / day</th><th>Build complete (forecast)</th></tr></thead><tbody>';
+    comps.forEach(function(c){
+      var p=fc.perComponent[c.name]||{},pct=c.pointsDone/c.pointsTotal*100;
+      h+="<tr><td>"+esc(c.name)+(c.note?'<br><span class="muted" style="font-size:12px;display:block;max-width:320px">'+esc(isoToShort(c.note))+"</span>":"")+((c.itemsRemainingUnsized||[]).length?'<br><span class="muted" style="font-size:12px">Unsized: '+c.itemsRemainingUnsized.map(esc).join(", ")+"</span>":"")+"</td>"+
+        '<td class="num">'+n(c.pointsDone)+'</td><td class="num">'+n(c.pointsRemaining)+'</td><td class="num">'+n(c.pointsTotal)+"</td>"+
+        '<td><div class="bar" data-tip="<b>'+esc(c.name)+'</b><br>'+n(pct)+'% done"><span class="d" style="width:'+pct+'%"></span><span class="r" style="width:'+(100-pct)+'%"></span></div><span class="muted" style="font-size:12px">'+n(pct)+'%</span></td>'+
+        '<td class="num">'+c.itemsRemaining+"</td>"+
+        '<td class="num">'+(p.rateLast10!=null?p.rateLast10.toFixed(1):"—")+"</td>"+
+        (!c.pointsRemaining||!p.likely?'<td><b style="font-weight:500">Complete</b><br><span class="muted" style="font-size:12px">no work left</span></td></tr>':
+        "<td><b style=\"font-weight:500\">"+f(p.likely)+'</b><br><span class="muted" style="font-size:12px">'+short(d(p.optimistic))+" – "+short(d(p.pessimistic))+"</span></td></tr>");
+    });
+    h+='<tr><td><b style="font-weight:500">All</b></td><td class="num"><b style="font-weight:500">'+n(done)+'</b></td><td class="num"><b style="font-weight:500">'+n(rem)+'</b></td><td class="num"><b style="font-weight:500">'+n(total)+'</b></td><td><div class="bar"><span class="d" style="width:'+(done/total*100)+'%"></span><span class="r" style="width:'+(rem/total*100)+'%"></span></div><span class="muted" style="font-size:12px">'+n(done/total*100)+'%</span></td><td class="num">'+items+'</td><td class="num">'+ov.rateLast10.toFixed(1)+'</td><td><b style="font-weight:500">'+f(ov.likely)+'</b><br><span class="muted" style="font-size:12px">'+short(d(ov.optimistic))+" – "+short(d(ov.pessimistic))+"</span></td></tr></tbody>";
+    $("comps").innerHTML=h;
+    $("caveat").innerHTML="<b style=\"font-weight:500\">This is a trend projection, not a plan.</b> It assumes the pace of the last 10 working days (optimistic) or of the whole period (pessimistic) continues; likely is the average of the two. "+
+      "It ignores the "+unsized.length+" unsized items and the new items raised each day, so the dates move as work is added. Mon–Fri only: weekend points count toward the totals, but weekends never count as days. "+
+      "Overall build completion is the latest component (critical path: "+esc(ov.basis.split(";")[0].replace(/^critical path: the latest component date \(|\)$/g,""))+").";
+
+    drawPace(S);
+    drawTimeline(S,asOf,ov);
+
+    // ---- Dates table
+    var rows=S.milestones.slice();
+    rows.push({name:"Build complete (optimistic)",date:ov.optimistic,kind:"forecast"},{name:"Build complete (pessimistic)",date:ov.pessimistic,kind:"forecast"});
+    rows.sort(function(a,b){return d(a.date)-d(b.date);});
+    var t='<thead><tr><th>Date</th><th>Event</th><th>Kind</th></tr></thead><tbody>';
+    rows.forEach(function(m){t+="<tr><td style=\"white-space:nowrap\">"+fmt(d(m.date),true)+"</td><td>"+esc(m.name)+"</td><td>"+(m.kind==="actual"?"Actual":"Forecast")+"</td></tr>";});
+    t+='<tr><td>Not scheduled</td><td>Product deployment (go-live)</td><td class="muted">No date in any doc</td></tr>';
+    t+='<tr><td>Not planned yet</td><td>Acceptance testing</td><td class="muted">No date in any doc</td></tr></tbody>';
+    $("dates").innerHTML=t;
+
+    // ---- Sources
+    var so='<thead><tr><th>Number</th><th>Source</th></tr></thead><tbody>';
+    S.sources.forEach(function(x){so+="<tr><td>"+esc(x.number)+"</td><td><code>"+esc(x.file)+"</code></td></tr>";});
+    so+='<tr><td>forecast method</td><td>'+esc(fc.method)+'</td></tr></tbody>';
+    $("sources").innerHTML=so;
+  }
+
+  function drawPace(S){
+    var ser=S.velocity.series,svg=$("pace");
+    var W=Math.max(640,$("pace").parentNode.clientWidth||640),H=240,L=40,R=8,T=16,B=40;
+    svg.setAttribute("viewBox","0 0 "+W+" "+H);svg.setAttribute("width",W);svg.setAttribute("height",H);
+    var max=0;ser.forEach(function(p){max=Math.max(max,p.pointsDoneThatDay);});
+    var step=max>100?50:25,top=Math.ceil(max/step)*step;
+    var cw=(W-L-R)/ser.length,y=function(v){return T+(H-T-B)*(1-v/top);};
+    for(var g=0;g<=top;g+=step){
+      s("line",{x1:L,x2:W-R,y1:y(g),y2:y(g),stroke:g?"var(--grid)":"var(--faint)","stroke-width":1},svg);
+      var tx=s("text",{x:L-6,y:y(g)+4,"text-anchor":"end","font-size":11,fill:"var(--faint)"},svg);tx.textContent=g;
+    }
+    ser.forEach(function(p,i){
+      var t=d(p.date),we=weekend(t),x=L+i*cw;
+      if(we)s("rect",{x:x,y:T,width:cw,height:H-T-B,fill:"var(--weekend)"},svg);
+      var v=p.pointsDoneThatDay,bw=Math.max(4,cw-6),bx=x+(cw-bw)/2;
+      if(v>0){var h=Math.max(2,y(0)-y(v)),r=Math.min(4,bw/2,h);
+        s("path",{d:"M"+bx+","+y(0)+"V"+(y(0)-h+r)+"q0,-"+r+" "+r+",-"+r+"H"+(bx+bw-r)+"q"+r+",0 "+r+","+r+"V"+y(0)+"Z",fill:we?"var(--done-soft)":"var(--done)"},svg);}
+      var hit=s("rect",{x:x,y:T,width:cw,height:H-T-B,fill:"transparent",tabindex:0,
+        "data-tip":"<b>"+fmt(t,true)+"</b>"+(we?" (weekend)":"")+"<br>"+n(v)+" points that day<br>"+n(p.pointsDone)+" points in the record so far"},svg);
+      if(i===ser.length-1||new Date(t).getUTCDay()===1||i===0){
+        var lb=s("text",{x:x+cw/2,y:H-B+16,"text-anchor":"middle","font-size":11,fill:"var(--faint)"},svg);lb.textContent=short(t);}
+    });
+    var last=ser[ser.length-1].pointsDone,done=S.components.reduce(function(a,c){return a+c.pointsDone;},0);
+    var note=S.seriesNote||S.velocity.seriesNote;
+    $("paceNote").textContent=note?isoToShort(note)+" The daily record adds up to "+n(last)+" points; the headline uses the PMBook total of "+n(done)+".":
+      "The daily record starts "+fmt(d(ser[0].date))+" and adds up to "+n(last)+" points; the PMBook total done is "+n(done)+".";
+  }
+
+  function drawTimeline(S,asOf,ov){
+    var svg=$("timeline"),fc=S.forecast.perComponent;
+    var dates=S.milestones.map(function(m){return d(m.date);}).concat([d(ov.pessimistic),asOf]);
+    var start=Math.min.apply(null,dates)-3*DAY,end=Math.max.apply(null,dates)+8*DAY;
+    // Start on a Monday so week ticks line up.
+    while(new Date(start).getUTCDay()!==1)start-=DAY;
+    var rows=[{k:"mock",label:"Functional mocks"},{k:"build",label:"Build (all)"}]
+      .concat(S.components.map(function(c){return{k:"comp",label:c.name,c:c};}))
+      .concat([{k:"dep",label:"Deployment"},{k:"acc",label:"Acceptance testing"},{k:"ms",label:"Other events"}]);
+    var W=Math.max(820,svg.parentNode.clientWidth||820),L=150,R=16,T=28,RH=34,H=T+rows.length*RH+8;
+    svg.setAttribute("viewBox","0 0 "+W+" "+H);svg.setAttribute("width",W);svg.setAttribute("height",H);
+    var x=function(t){return L+(W-L-R)*(t-start)/(end-start);},dw=x(start+DAY)-x(start);
+    var defs=s("defs",{},svg),pat=s("pattern",{id:"stripe",width:6,height:6,patternUnits:"userSpaceOnUse",patternTransform:"rotate(45)"},defs);
+    s("rect",{width:3,height:6,fill:"var(--forecast)"},pat);
+    // Weekends, week ticks
+    for(var t=start;t<end;t+=DAY){
+      if(weekend(t))s("rect",{x:x(t),y:T,width:dw,height:H-T-8,fill:"var(--weekend)"},svg);
+      if(new Date(t).getUTCDay()===1){
+        s("line",{x1:x(t),x2:x(t),y1:T-4,y2:H-8,stroke:"var(--grid)"},svg);
+        var lb=s("text",{x:x(t)+3,y:T-10,"font-size":11,fill:"var(--faint)"},svg);lb.textContent=short(t);
+      }
+    }
+    function cy(i){return T+i*RH+RH/2;}
+    rows.forEach(function(r,i){
+      s("line",{x1:0,x2:W,y1:T+(i+1)*RH,y2:T+(i+1)*RH,stroke:"var(--line)"},svg);
+      var tx=s("text",{x:4,y:cy(i)+4,"font-size":13,fill:"var(--ink)"},svg);tx.textContent=r.label;
+    });
+    function diamond(t,yy,tipTxt,fill){s("path",{d:"M"+x(t+DAY/2)+" "+(yy-7)+" l7 7 l-7 7 l-7 -7Z",fill:fill||"var(--ink)",tabindex:0,"data-tip":tipTxt},svg);}
+    function bar(a,b,yy,tipTxt,forecast){
+      var X=x(a),Wd=Math.max(3,x(b)-x(a));
+      s("rect",{x:X,y:yy-7,width:Wd,height:14,rx:4,fill:forecast?"url(#stripe)":"var(--done)",stroke:forecast?"var(--forecast)":"none","stroke-width":1,tabindex:0,"data-tip":tipTxt},svg);
+    }
+    function whisker(a,b,yy,tipTxt){
+      var X1=x(a+DAY/2),X2=x(b+DAY/2);
+      if(X2-X1<2){X1-=3;X2+=3;}
+      var g=s("g",{stroke:"var(--ink)","stroke-width":2,tabindex:0,"data-tip":tipTxt},svg);
+      s("line",{x1:X1,x2:X2,y1:yy,y2:yy},g);s("line",{x1:X1,x2:X1,y1:yy-6,y2:yy+6},g);s("line",{x1:X2,x2:X2,y1:yy-6,y2:yy+6},g);
+      s("rect",{x:X1-4,y:yy-8,width:X2-X1+8,height:16,fill:"transparent",stroke:"none"},g);
+    }
+    function label(t,yy,txt,muted){var e=s("text",{x:x(t)+(muted?x(start+2*DAY)-x(start):0)+8,y:yy+4,"font-size":12,fill:muted?"var(--muted)":"var(--ink)"},svg);e.textContent=txt;return e;}
+    var bStart=d(S.phases[0].start),todayEnd=asOf+DAY;
+    rows.forEach(function(r,i){
+      var yy=cy(i);
+      if(r.k==="mock"){
+        S.milestones.filter(isMock).forEach(function(m){diamond(d(m.date),yy,"<b>"+esc(m.name)+"</b><br>"+fmt(d(m.date),true)+" (actual)<br>Look and feel only, no backend.");});
+      }else if(r.k==="dep"){
+        label(asOf,yy,"Product deployment: not scheduled",true);
+      }else if(r.k==="build"){
+        bar(bStart,todayEnd,yy,"<b>Build</b><br>"+fmt(bStart)+" to today (actual)<br>Start is when the story-points record begins.");
+        bar(todayEnd,d(ov.likely)+DAY,yy,"<b>Build complete (likely)</b><br>"+fmt(d(ov.likely),true)+" (forecast)",true);
+        whisker(d(ov.optimistic),d(ov.pessimistic),yy+12,"<b>Build forecast range</b><br>"+f(ov.optimistic)+" – "+f(ov.pessimistic));
+        label(d(ov.pessimistic)+DAY,yy,short(d(ov.likely)));
+      }else if(r.k==="comp"){
+        var p=fc[r.c.name];
+        if(!r.c.pointsRemaining||!p||!p.likely){
+          bar(bStart,todayEnd,yy,"<b>"+esc(r.c.name)+"</b><br>Complete: "+n(r.c.pointsDone)+" points done, none left");
+          label(asOf,yy,"Complete, no work left",true);
+          return;
+        }
+        bar(bStart,todayEnd,yy,"<b>"+esc(r.c.name)+"</b><br>"+n(r.c.pointsDone)+" of "+n(r.c.pointsTotal)+" points done");
+        bar(todayEnd,d(p.likely)+DAY,yy,"<b>"+esc(r.c.name)+" build complete (likely)</b><br>"+fmt(d(p.likely),true)+"<br>"+n(r.c.pointsRemaining)+" points left at "+p.rateLast10.toFixed(1)+" – "+p.rateWhole.toFixed(1)+" a working day",true);
+        whisker(d(p.optimistic),d(p.pessimistic),yy+12,"<b>"+esc(r.c.name)+" range</b><br>"+f(p.optimistic)+" – "+f(p.pessimistic));
+        label(Math.max(d(p.pessimistic),d(p.likely))+DAY,yy,short(d(p.likely)));
+      }else if(r.k==="acc"){
+        label(asOf,yy,"Not planned yet: no plan or date in any doc",true);
+      }else if(r.k==="ms"){
+        S.milestones.filter(function(m){return m.kind==="actual"&&!isMock(m);}).forEach(function(m){diamond(d(m.date),yy,"<b>"+esc(m.name)+"</b><br>"+fmt(d(m.date),true)+" (actual)");});
+      }
+    });
+    var tx=x(asOf+DAY);
+    s("line",{x1:tx,x2:tx,y1:T-4,y2:H-8,stroke:"var(--accent)","stroke-width":2},svg);
+    var tl=s("text",{x:tx+4,y:H-12,"font-size":11,fill:"var(--accent)"},svg);tl.textContent="Today";
+  }
+})();
+</script>
+</body>
+</html>
