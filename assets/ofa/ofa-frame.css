@@ -812,6 +812,8 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 .app-layer table.ot.ot.ot > tbody > tr:hover > td[mat-cell]{background:#E6E6E6!important}
 .app-layer table.ot.ot.ot > tbody > tr:is(.tot,[classname~="tot"]) > td[mat-cell]{background:#F7F7F7!important;border-top:1px solid var(--mat-sys-outline-variant)!important}
 .app-layer table.ot.ot.ot.ot > tbody > tr:is(.rsel,[classname~="rsel"]) > td[mat-cell]{background:color-mix(in srgb,var(--mat-sys-primary) 8%,#FFFFFF)!important}
+/* P57: the hot row keeps its tint above the banding, on every board */
+.app-layer table.ot.ot.ot.ot > tbody > tr:is(.hot,[classname~="hot"]) > td[mat-cell]{background:#FDF1EC!important}
 /* P28 / S68 / W19: four looks for a status */
 .app-layer mat-chip[data-tone="q"]{background:#F2F2F2!important;border-color:#CCCCCC!important;color:#404040!important}
 .app-layer mat-chip[data-tone="pos"]{background:#FFFFFF!important;border-color:#337722!important;color:#337722!important}
@@ -1142,3 +1144,16 @@ mat-list:is(.hsc,[classname~="hsc"]),mat-list:is(.hsc,[classname~="hsc"]) *{lett
 
 /* R29 / H9 option C: a period reads on one line */
 .hist table[mat-table] td[mat-cell]:first-child{white-space:nowrap}
+
+/* B89 (Adviser board, Initial OFAs and Arrangements): an opened row and its child lines take the shared look, as on the OFA Team board, in place of the banding block's white open row and #FAFAFA/#FDFDFD children: the open row on surface-container-low with no bottom border; child lines on surface, never striped, the first cell indented 56px; a hairline over the first child */
+.app-layer[data-board="adv"] mat-card[data-b89="true"] table.ot.ot.ot.ot.ot > tbody > tr:is(.exo,[classname~="exo"]) > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important;border-bottom:0!important}
+.app-layer[data-board="adv"] mat-card[data-b89="true"] table.ot.ot.ot.ot.ot > tbody > tr:is(.kid,[classname~="kid"]) > td[mat-cell]{background:var(--mat-sys-surface)!important}
+.app-layer[data-board="adv"] mat-card[data-b89="true"] table.ot.ot.ot.ot.ot > tbody > tr:is(.kid,[classname~="kid"]) > td[mat-cell]:first-child{padding-left:56px!important}
+.app-layer[data-board="adv"] mat-card[data-b89="true"] table.ot.ot.ot.ot.ot > tbody > tr:is(.exo,[classname~="exo"]) + tr:is(.kid,[classname~="kid"]) > td[mat-cell]{border-top:1px solid var(--mat-sys-outline-variant)!important}
+
+/* T91: a heading whose word is kept for screen readers and the column list, while the narrow heading shows only its control (as the CDK's cdk-visually-hidden) */
+.app-layer table.ot th:is(.vhl,[classname~="vhl"]) :is(.hd,button.hd){position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;padding:0!important;margin:-1px!important;border:0!important}
+.app-layer table.ot th:is(.vhl,[classname~="vhl"]){min-width:0!important}
+
+/* P55 (Compliance, Wording): the versions table's Open document link may take two lines, so the table fits its card at 1440px */
+.app-layer table.ot td[mat-cell]:is(.lnkw,[classname~="lnkw"]),.app-layer table.ot td[mat-cell]:is(.lnkw,[classname~="lnkw"]) *{white-space:normal!important}
