@@ -38,10 +38,10 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 176.0,
-   "pointsRemaining": 82.0,
-   "pointsTotal": 258.0,
-   "itemsRemaining": 36,
+   "pointsDone": 201.0,
+   "pointsRemaining": 69.0,
+   "pointsTotal": 270.0,
+   "itemsRemaining": 28,
    "itemsRemainingUnsized": []
   },
   {
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 63.5,
+  "pointsPerWorkingDay": 66.0,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 54.61,
+  "pointsPerWorkingDayWholePeriod": 56.53,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 710.0,
-    "pointsDoneThatDay": 1.0
+    "pointsDone": 735.0,
+    "pointsDoneThatDay": 26.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -192,11 +192,11 @@
   "method": "optimistic = last-10-working-day rate; likely = mean of the two rates; pessimistic = whole-period rate (since 2026-10-28). Working days Mon-Fri; weekend points count in the totals but weekends are never counted as days.",
   "perComponent": {
    "Shell & Landing Page": {
-    "optimistic": "2026-11-20",
-    "likely": "2026-11-23",
-    "pessimistic": "2026-11-24",
-    "rateLast10": 16.6,
-    "rateWhole": 13.16
+    "optimistic": "2026-11-19",
+    "likely": "2026-11-20",
+    "pessimistic": "2026-11-20",
+    "rateLast10": 19.1,
+    "rateWhole": 15.08
    },
    "Portfolio Services": {
     "optimistic": "2026-11-30",
@@ -225,10 +225,10 @@
    "likely": "2026-11-30",
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 63.5,
-   "rateWhole": 54.61,
-   "pointsRemaining": 449.0,
-   "itemsRemaining": 165
+   "rateLast10": 66.0,
+   "rateWhole": 56.53,
+   "pointsRemaining": 436.0,
+   "itemsRemaining": 157
   }
  },
  "milestones": [
@@ -259,7 +259,7 @@
   },
   {
    "name": "Shell & Landing Page build complete (likely)",
-   "date": "2026-11-23",
+   "date": "2026-11-20",
    "kind": "forecast"
   },
   {
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T00:47:30+11:00",
+ "updatedAt": "2026-11-15T00:53:30+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -432,6 +432,11 @@
    "at": "2026-11-15T00:47:30+11:00",
    "change": "Compliance COMPLIANCE-DASHBOARD-B-049 (wording test) fixed",
    "pointsDone": 1.0
+  },
+  {
+   "at": "2026-11-15T00:53:30+11:00",
+   "change": "Shell pass 2 merged: 17 items Done (25 points); 9 follow-up items raised (12 points)",
+   "pointsDone": 25.0
   }
  ]
 }
