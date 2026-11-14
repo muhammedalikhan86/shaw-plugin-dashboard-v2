@@ -77,17 +77,17 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 92.0,
-   "pointsRemaining": 25.0,
+   "pointsDone": 93.0,
+   "pointsRemaining": 24.0,
    "pointsTotal": 117.0,
-   "itemsRemaining": 9,
+   "itemsRemaining": 8,
    "itemsRemainingUnsized": []
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 68.5,
+  "pointsPerWorkingDay": 68.6,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 58.46,
+  "pointsPerWorkingDayWholePeriod": 58.54,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 760.0,
-    "pointsDoneThatDay": 51.0
+    "pointsDone": 761.0,
+    "pointsDoneThatDay": 52.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -216,8 +216,8 @@
     "optimistic": "2026-11-18",
     "likely": "2026-11-19",
     "pessimistic": "2026-11-19",
-    "rateLast10": 8.4,
-    "rateWhole": 7.1
+    "rateLast10": 8.5,
+    "rateWhole": 7.18
    }
   },
   "overall": {
@@ -225,10 +225,10 @@
    "likely": "2026-11-30",
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 68.5,
-   "rateWhole": 58.46,
-   "pointsRemaining": 427.0,
-   "itemsRemaining": 156
+   "rateLast10": 68.6,
+   "rateWhole": 58.54,
+   "pointsRemaining": 426.0,
+   "itemsRemaining": 155
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T04:37:29+11:00",
+ "updatedAt": "2026-11-15T04:58:33+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -542,6 +542,11 @@
    "at": "2026-11-15T04:37:29+11:00",
    "change": "Shell raised SHELL-B-076 (1 point): the calendar icon in date fields matches the board",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T04:58:33+11:00",
+   "change": "Compliance COMPLIANCE-DASHBOARD-B-052 Done (1 point): the Wording Load dialog matches the board",
+   "pointsDone": 1.0
   }
  ]
 }
