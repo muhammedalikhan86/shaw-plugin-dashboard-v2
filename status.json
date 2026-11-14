@@ -64,10 +64,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 219.0,
-   "pointsRemaining": 109.0,
+   "pointsDone": 221.0,
+   "pointsRemaining": 107.0,
    "pointsTotal": 328.0,
-   "itemsRemaining": 38,
+   "itemsRemaining": 37,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 66.0,
+  "pointsPerWorkingDay": 66.2,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 56.53,
+  "pointsPerWorkingDayWholePeriod": 56.68,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 735.0,
-    "pointsDoneThatDay": 26.0
+    "pointsDone": 737.0,
+    "pointsDoneThatDay": 28.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -209,8 +209,8 @@
     "optimistic": "2026-11-24",
     "likely": "2026-11-24",
     "pessimistic": "2026-11-25",
-    "rateLast10": 16.9,
-    "rateWhole": 14.31
+    "rateLast10": 17.1,
+    "rateWhole": 14.46
    },
    "Compliance": {
     "optimistic": "2026-11-19",
@@ -225,10 +225,10 @@
    "likely": "2026-12-01",
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 66.0,
-   "rateWhole": 56.53,
-   "pointsRemaining": 439.0,
-   "itemsRemaining": 159
+   "rateLast10": 66.2,
+   "rateWhole": 56.68,
+   "pointsRemaining": 437.0,
+   "itemsRemaining": 158
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T01:03:33+11:00",
+ "updatedAt": "2026-11-15T01:08:09+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -447,6 +447,11 @@
    "at": "2026-11-15T01:03:33+11:00",
    "change": "Shell raised SHELL-F-128 (1 point): shared Keep open test step",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T01:08:09+11:00",
+   "change": "Advisor ADVISOR-DASHBOARD-F-104 Done (2 points): questionnaire prefills Q1 and Q2, names who submitted",
+   "pointsDone": 2.0
   }
  ]
 }
