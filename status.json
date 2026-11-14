@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 277.0,
-   "pointsRemaining": 230.0,
-   "pointsTotal": 507.0,
-   "itemsRemaining": 85,
+   "pointsRemaining": 231.0,
+   "pointsTotal": 508.0,
+   "itemsRemaining": 86,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 69.2,
    "rateWhole": 59.01,
-   "pointsRemaining": 432.0,
-   "itemsRemaining": 156
+   "pointsRemaining": 433.0,
+   "itemsRemaining": 157
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T06:29:03+11:00",
+ "updatedAt": "2026-11-15T06:34:24+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -606,6 +606,11 @@
   {
    "at": "2026-11-15T06:29:03+11:00",
    "change": "Advisor raised ADVISOR-DASHBOARD-B-056 (5 points): Initial OFAs Save, signers on the Signed tip, Signed and Declined rows open their signatories",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T06:34:24+11:00",
+   "change": "Portfolio Services raised OFA-B-081 (1 point): the Word load takes an email subject",
    "pointsDone": 0.0
   }
  ]
