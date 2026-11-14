@@ -39,8 +39,8 @@
     "landing-page"
    ],
    "pointsDone": 204.0,
-   "pointsRemaining": 67.0,
-   "pointsTotal": 271.0,
+   "pointsRemaining": 66.0,
+   "pointsTotal": 270.0,
    "itemsRemaining": 27,
    "itemsRemainingUnsized": []
   },
@@ -227,7 +227,7 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 66.5,
    "rateWhole": 56.91,
-   "pointsRemaining": 439.0,
+   "pointsRemaining": 438.0,
    "itemsRemaining": 160
   }
  },
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T01:28:57+11:00",
+ "updatedAt": "2026-11-15T01:29:17+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -471,6 +471,11 @@
   {
    "at": "2026-11-15T01:28:57+11:00",
    "change": "Compliance raised COMPLIANCE-DASHBOARD-B-051 (1 point): the empty or failed card keeps the board's height",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T01:29:17+11:00",
+   "change": "Shell SHELL-B-072 resized 2 to 1 point: the empty-card part closed on the Compliance side",
    "pointsDone": 0.0
   }
  ]
