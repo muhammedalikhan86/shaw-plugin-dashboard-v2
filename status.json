@@ -78,9 +78,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 86.0,
-   "pointsRemaining": 25.0,
-   "pointsTotal": 111.0,
-   "itemsRemaining": 7,
+   "pointsRemaining": 27.0,
+   "pointsTotal": 113.0,
+   "itemsRemaining": 9,
    "itemsRemainingUnsized": []
   }
  ],
@@ -215,7 +215,7 @@
    "Compliance": {
     "optimistic": "2026-11-19",
     "likely": "2026-11-19",
-    "pessimistic": "2026-11-19",
+    "pessimistic": "2026-11-20",
     "rateLast10": 7.8,
     "rateWhole": 6.63
    }
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 66.5,
    "rateWhole": 56.91,
-   "pointsRemaining": 436.0,
-   "itemsRemaining": 157
+   "pointsRemaining": 438.0,
+   "itemsRemaining": 159
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T01:16:33+11:00",
+ "updatedAt": "2026-11-15T01:28:31+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -462,6 +462,11 @@
    "at": "2026-11-15T01:16:33+11:00",
    "change": "Shell SHELL-F-127 Done (1 point, shared multi-line tooltip) and SHELL-B-071 closed, fixed by B-060 (2 points)",
    "pointsDone": 3.0
+  },
+  {
+   "at": "2026-11-15T01:28:31+11:00",
+   "change": "Compliance raised COMPLIANCE-DASHBOARD-B-050 (1 point, shell pass 2 follow-ups) and F-019 (1 point, a new email wording slot)",
+   "pointsDone": 0.0
   }
  ]
 }
