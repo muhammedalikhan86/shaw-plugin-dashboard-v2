@@ -10,7 +10,7 @@
    "name": "Build",
    "status": "In progress",
    "start": "2026-10-28",
-   "end": "2026-11-30",
+   "end": "2026-12-01",
    "isForecast": true,
    "note": "start = first day of the story-points record (hub chart, from 2026-10-28), not a documented kickoff; the shell, Landing Page and the pre-OFA Advisor Dashboard were built and released earlier as functional mocks (2026-10-12). Build includes OFA-F-028 Go-live and OFA-F-029 coverage gate (PS Phase 5), and OFA-F-030 in eSignatureWebAPI (outside this repo)."
   },
@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 267.0,
-   "pointsRemaining": 233.0,
-   "pointsTotal": 500.0,
-   "itemsRemaining": 84,
+   "pointsRemaining": 235.0,
+   "pointsTotal": 502.0,
+   "itemsRemaining": 85,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -200,7 +200,7 @@
    },
    "Portfolio Services": {
     "optimistic": "2026-11-30",
-    "likely": "2026-11-30",
+    "likely": "2026-12-01",
     "pessimistic": "2026-12-01",
     "rateLast10": 22.2,
     "rateWhole": 20.52
@@ -222,13 +222,13 @@
   },
   "overall": {
    "optimistic": "2026-11-30",
-   "likely": "2026-11-30",
+   "likely": "2026-12-01",
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 66.0,
    "rateWhole": 56.53,
-   "pointsRemaining": 436.0,
-   "itemsRemaining": 157
+   "pointsRemaining": 438.0,
+   "itemsRemaining": 158
   }
  },
  "milestones": [
@@ -264,7 +264,7 @@
   },
   {
    "name": "Portfolio Services build complete (likely)",
-   "date": "2026-11-30",
+   "date": "2026-12-01",
    "kind": "forecast"
   },
   {
@@ -279,7 +279,7 @@
   },
   {
    "name": "Build complete (likely)",
-   "date": "2026-11-30",
+   "date": "2026-12-01",
    "kind": "forecast"
   }
  ],
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T00:53:30+11:00",
+ "updatedAt": "2026-11-15T00:54:20+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -437,6 +437,11 @@
    "at": "2026-11-15T00:53:30+11:00",
    "change": "Shell pass 2 merged: 17 items Done (25 points); 9 follow-up items raised (12 points)",
    "pointsDone": 25.0
+  },
+  {
+   "at": "2026-11-15T00:54:20+11:00",
+   "change": "Portfolio Services raised OFA-B-077 (2 points): shell pass 2 follow-ups",
+   "pointsDone": 0.0
   }
  ]
 }
