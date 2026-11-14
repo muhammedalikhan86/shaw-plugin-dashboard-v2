@@ -78,9 +78,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 95.0,
-   "pointsRemaining": 29.0,
-   "pointsTotal": 124.0,
-   "itemsRemaining": 10,
+   "pointsRemaining": 32.0,
+   "pointsTotal": 127.0,
+   "itemsRemaining": 11,
    "itemsRemainingUnsized": []
   }
  ],
@@ -215,7 +215,7 @@
    "Compliance": {
     "optimistic": "2026-11-19",
     "likely": "2026-11-19",
-    "pessimistic": "2026-11-19",
+    "pessimistic": "2026-11-20",
     "rateLast10": 8.7,
     "rateWhole": 7.34
    }
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 70.6,
    "rateWhole": 60.08,
-   "pointsRemaining": 436.0,
-   "itemsRemaining": 158
+   "pointsRemaining": 439.0,
+   "itemsRemaining": 159
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T09:30:43+11:00",
+ "updatedAt": "2026-11-15T10:00:09+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -686,6 +686,11 @@
   {
    "at": "2026-11-15T09:30:43+11:00",
    "change": "Portfolio Services resized OFA-B-078 (2 to 3 points): the monthly cycle's picker also moves into the page header",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T10:00:09+11:00",
+   "change": "Compliance raised B-055 (3 points): the small design gaps on Closed months",
    "pointsDone": 0.0
   }
  ]
