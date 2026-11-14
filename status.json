@@ -64,10 +64,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 221.0,
-   "pointsRemaining": 112.0,
+   "pointsDone": 223.0,
+   "pointsRemaining": 110.0,
    "pointsTotal": 333.0,
-   "itemsRemaining": 39,
+   "itemsRemaining": 38,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 69.0,
+  "pointsPerWorkingDay": 69.2,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 58.86,
+  "pointsPerWorkingDayWholePeriod": 59.01,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 765.0,
-    "pointsDoneThatDay": 56.0
+    "pointsDone": 767.0,
+    "pointsDoneThatDay": 58.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -207,10 +207,10 @@
    },
    "Advisor": {
     "optimistic": "2026-11-24",
-    "likely": "2026-11-25",
+    "likely": "2026-11-24",
     "pessimistic": "2026-11-25",
-    "rateLast10": 17.1,
-    "rateWhole": 14.46
+    "rateLast10": 17.3,
+    "rateWhole": 14.61
    },
    "Compliance": {
     "optimistic": "2026-11-18",
@@ -225,10 +225,10 @@
    "likely": "2026-11-30",
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 69.0,
-   "rateWhole": 58.86,
-   "pointsRemaining": 429.0,
-   "itemsRemaining": 156
+   "rateLast10": 69.2,
+   "rateWhole": 59.01,
+   "pointsRemaining": 427.0,
+   "itemsRemaining": 155
   }
  },
  "milestones": [
@@ -269,7 +269,7 @@
   },
   {
    "name": "Advisor build complete (likely)",
-   "date": "2026-11-25",
+   "date": "2026-11-24",
    "kind": "forecast"
   },
   {
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T06:22:49+11:00",
+ "updatedAt": "2026-11-15T06:27:17+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -597,6 +597,11 @@
    "at": "2026-11-15T06:22:49+11:00",
    "change": "Compliance COMPLIANCE-DASHBOARD-B-054 Done (1 point): the file picker hint, already built, now pinned by a test",
    "pointsDone": 1.0
+  },
+  {
+   "at": "2026-11-15T06:27:17+11:00",
+   "change": "Advisor ADVISOR-DASHBOARD-B-054 Done (2 points): adopts the shell's shared styles",
+   "pointsDone": 2.0
   }
  ]
 }
