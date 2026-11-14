@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 277.0,
-   "pointsRemaining": 231.0,
-   "pointsTotal": 508.0,
-   "itemsRemaining": 86,
+   "pointsRemaining": 233.0,
+   "pointsTotal": 510.0,
+   "itemsRemaining": 87,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -199,7 +199,7 @@
     "rateWhole": 15.77
    },
    "Portfolio Services": {
-    "optimistic": "2026-11-27",
+    "optimistic": "2026-11-30",
     "likely": "2026-11-30",
     "pessimistic": "2026-11-30",
     "rateLast10": 23.2,
@@ -221,14 +221,14 @@
    }
   },
   "overall": {
-   "optimistic": "2026-11-27",
+   "optimistic": "2026-11-30",
    "likely": "2026-11-30",
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 69.2,
    "rateWhole": 59.01,
-   "pointsRemaining": 440.0,
-   "itemsRemaining": 160
+   "pointsRemaining": 442.0,
+   "itemsRemaining": 161
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T07:11:13+11:00",
+ "updatedAt": "2026-11-15T07:12:32+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -621,6 +621,11 @@
   {
    "at": "2026-11-15T07:11:13+11:00",
    "change": "Compliance split F-003 (5 to 3 points) and raised F-021 (3), F-022 (2) and F-023 (3) for the parts waiting on Portfolio Services",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T07:12:32+11:00",
+   "change": "Portfolio Services raised OFA-F-124 (2 points): cull details and checklist due dates shared with Compliance",
    "pointsDone": 0.0
   }
  ]
