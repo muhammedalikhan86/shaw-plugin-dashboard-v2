@@ -49,10 +49,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 280.0,
-   "pointsRemaining": 230.0,
+   "pointsDone": 282.0,
+   "pointsRemaining": 228.0,
    "pointsTotal": 510.0,
-   "itemsRemaining": 85,
+   "itemsRemaining": 84,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 69.8,
+  "pointsPerWorkingDay": 70.0,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 59.47,
+  "pointsPerWorkingDayWholePeriod": 59.62,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 773.0,
-    "pointsDoneThatDay": 64.0
+    "pointsDone": 775.0,
+    "pointsDoneThatDay": 66.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -202,8 +202,8 @@
     "optimistic": "2026-11-27",
     "likely": "2026-11-30",
     "pessimistic": "2026-11-30",
-    "rateLast10": 23.5,
-    "rateWhole": 21.53
+    "rateLast10": 23.7,
+    "rateWhole": 21.68
    },
    "Advisor": {
     "optimistic": "2026-11-24",
@@ -225,10 +225,10 @@
    "likely": "2026-11-30",
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 69.8,
-   "rateWhole": 59.47,
-   "pointsRemaining": 439.0,
-   "itemsRemaining": 159
+   "rateLast10": 70.0,
+   "rateWhole": 59.62,
+   "pointsRemaining": 437.0,
+   "itemsRemaining": 158
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T07:59:04+11:00",
+ "updatedAt": "2026-11-15T08:23:54+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -652,6 +652,11 @@
    "at": "2026-11-15T07:59:04+11:00",
    "change": "Advisor raised B-057 (1 point): Initial OFAs' first column width matches the design",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T08:23:54+11:00",
+   "change": "Portfolio Services finished OFA-F-124 (cull details and checklist due dates shared with Compliance, 2 points)",
+   "pointsDone": 2.0
   }
  ]
 }
