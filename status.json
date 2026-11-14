@@ -77,17 +77,17 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 90.0,
-   "pointsRemaining": 26.0,
+   "pointsDone": 91.0,
+   "pointsRemaining": 25.0,
    "pointsTotal": 116.0,
-   "itemsRemaining": 10,
+   "itemsRemaining": 9,
    "itemsRemainingUnsized": []
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 68.3,
+  "pointsPerWorkingDay": 68.4,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 58.3,
+  "pointsPerWorkingDayWholePeriod": 58.38,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 758.0,
-    "pointsDoneThatDay": 49.0
+    "pointsDone": 759.0,
+    "pointsDoneThatDay": 50.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -216,8 +216,8 @@
     "optimistic": "2026-11-19",
     "likely": "2026-11-19",
     "pessimistic": "2026-11-19",
-    "rateLast10": 8.2,
-    "rateWhole": 6.94
+    "rateLast10": 8.3,
+    "rateWhole": 7.02
    }
   },
   "overall": {
@@ -225,10 +225,10 @@
    "likely": "2026-11-30",
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 68.3,
-   "rateWhole": 58.3,
-   "pointsRemaining": 427.0,
-   "itemsRemaining": 156
+   "rateLast10": 68.4,
+   "rateWhole": 58.38,
+   "pointsRemaining": 426.0,
+   "itemsRemaining": 155
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T04:04:56+11:00",
+ "updatedAt": "2026-11-15T04:05:18+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -522,6 +522,11 @@
    "at": "2026-11-15T04:04:56+11:00",
    "change": "Portfolio Services OFA-F-008 Done (8 points): the Exceptions report",
    "pointsDone": 8.0
+  },
+  {
+   "at": "2026-11-15T04:05:18+11:00",
+   "change": "Compliance COMPLIANCE-DASHBOARD-B-051 Done (1 point): the failed card keeps the board's height",
+   "pointsDone": 1.0
   }
  ]
 }
