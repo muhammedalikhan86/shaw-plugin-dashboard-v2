@@ -78,9 +78,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 89.0,
-   "pointsRemaining": 25.0,
-   "pointsTotal": 114.0,
-   "itemsRemaining": 9,
+   "pointsRemaining": 26.0,
+   "pointsTotal": 115.0,
+   "itemsRemaining": 10,
    "itemsRemainingUnsized": []
   }
  ],
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 66.8,
    "rateWhole": 57.14,
-   "pointsRemaining": 435.0,
-   "itemsRemaining": 159
+   "pointsRemaining": 436.0,
+   "itemsRemaining": 160
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T02:17:55+11:00",
+ "updatedAt": "2026-11-15T03:00:22+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -482,6 +482,11 @@
    "at": "2026-11-15T02:17:55+11:00",
    "change": "Compliance COMPLIANCE-DASHBOARD-B-047 Done (3 points): adopts the shell's table fixes, toolkit on empty and failed cards",
    "pointsDone": 3.0
+  },
+  {
+   "at": "2026-11-15T03:00:22+11:00",
+   "change": "Compliance raised COMPLIANCE-DASHBOARD-B-052 (1 point): the Wording Load list matches the board's height",
+   "pointsDone": 0.0
   }
  ]
 }
