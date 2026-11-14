@@ -77,17 +77,17 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 86.0,
-   "pointsRemaining": 28.0,
+   "pointsDone": 89.0,
+   "pointsRemaining": 25.0,
    "pointsTotal": 114.0,
-   "itemsRemaining": 10,
+   "itemsRemaining": 9,
    "itemsRemainingUnsized": []
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 66.5,
+  "pointsPerWorkingDay": 66.8,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 56.91,
+  "pointsPerWorkingDayWholePeriod": 57.14,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 740.0,
-    "pointsDoneThatDay": 31.0
+    "pointsDone": 743.0,
+    "pointsDoneThatDay": 34.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -215,9 +215,9 @@
    "Compliance": {
     "optimistic": "2026-11-19",
     "likely": "2026-11-19",
-    "pessimistic": "2026-11-20",
-    "rateLast10": 7.8,
-    "rateWhole": 6.63
+    "pessimistic": "2026-11-19",
+    "rateLast10": 8.1,
+    "rateWhole": 6.86
    }
   },
   "overall": {
@@ -225,10 +225,10 @@
    "likely": "2026-12-01",
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 66.5,
-   "rateWhole": 56.91,
-   "pointsRemaining": 438.0,
-   "itemsRemaining": 160
+   "rateLast10": 66.8,
+   "rateWhole": 57.14,
+   "pointsRemaining": 435.0,
+   "itemsRemaining": 159
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T01:29:17+11:00",
+ "updatedAt": "2026-11-15T02:17:55+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -477,6 +477,11 @@
    "at": "2026-11-15T01:29:17+11:00",
    "change": "Shell SHELL-B-072 resized 2 to 1 point: the empty-card part closed on the Compliance side",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T02:17:55+11:00",
+   "change": "Compliance COMPLIANCE-DASHBOARD-B-047 Done (3 points): adopts the shell's table fixes, toolkit on empty and failed cards",
+   "pointsDone": 3.0
   }
  ]
 }
