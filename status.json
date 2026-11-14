@@ -38,10 +38,10 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 142.0,
-   "pointsRemaining": 101.0,
-   "pointsTotal": 243.0,
-   "itemsRemaining": 50,
+   "pointsDone": 176.0,
+   "pointsRemaining": 82.0,
+   "pointsTotal": 258.0,
+   "itemsRemaining": 36,
    "itemsRemainingUnsized": []
   },
   {
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 58.6,
+  "pointsPerWorkingDay": 62.0,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 50.84,
+  "pointsPerWorkingDayWholePeriod": 53.46,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -177,8 +177,8 @@
    },
    {
     "date": "2026-11-14",
-    "pointsDone": 661.0,
-    "pointsDoneThatDay": 29.0
+    "pointsDone": 695.0,
+    "pointsDoneThatDay": 63.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -187,11 +187,11 @@
   "method": "optimistic = last-10-working-day rate; likely = mean of the two rates; pessimistic = whole-period rate (since 2026-10-28). Working days Mon-Fri; weekend points count in the totals but weekends are never counted as days.",
   "perComponent": {
    "Shell & Landing Page": {
-    "optimistic": "2026-11-25",
-    "likely": "2026-11-26",
-    "pessimistic": "2026-11-27",
-    "rateLast10": 13.2,
-    "rateWhole": 10.54
+    "optimistic": "2026-11-20",
+    "likely": "2026-11-23",
+    "pessimistic": "2026-11-24",
+    "rateLast10": 16.6,
+    "rateWhole": 13.16
    },
    "Portfolio Services": {
     "optimistic": "2026-12-01",
@@ -220,10 +220,10 @@
    "likely": "2026-12-01",
    "pessimistic": "2026-12-02",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 58.6,
-   "rateWhole": 50.84,
-   "pointsRemaining": 465.0,
-   "itemsRemaining": 173
+   "rateLast10": 62.0,
+   "rateWhole": 53.46,
+   "pointsRemaining": 446.0,
+   "itemsRemaining": 159
   }
  },
  "milestones": [
@@ -254,7 +254,7 @@
   },
   {
    "name": "Shell & Landing Page build complete (likely)",
-   "date": "2026-11-26",
+   "date": "2026-11-23",
    "kind": "forecast"
   },
   {
@@ -301,7 +301,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-14T20:02:26+11:00",
+ "updatedAt": "2026-11-14T20:17:16+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -347,6 +347,11 @@
    "at": "2026-11-14T20:02:26+11:00",
    "change": "Portfolio Services OFA-B-071 resized from 2 to 3 points (picks up 10 small design fixes)",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-14T20:17:16+11:00",
+   "change": "Shell pass 1 done: 21 items (10 features, 11 fixes); 7 follow-up items raised (15 points)",
+   "pointsDone": 34.0
   }
  ]
 }
