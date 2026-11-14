@@ -39,8 +39,8 @@
     "landing-page"
    ],
    "pointsDone": 210.0,
-   "pointsRemaining": 67.0,
-   "pointsTotal": 277.0,
+   "pointsRemaining": 69.0,
+   "pointsTotal": 279.0,
    "itemsRemaining": 26,
    "itemsRemainingUnsized": []
   },
@@ -227,7 +227,7 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 71.0,
    "rateWhole": 60.39,
-   "pointsRemaining": 436.0,
+   "pointsRemaining": 438.0,
    "itemsRemaining": 158
   }
  },
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T10:23:46+11:00",
+ "updatedAt": "2026-11-15T10:35:00+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -697,6 +697,11 @@
    "at": "2026-11-15T10:23:46+11:00",
    "change": "Portfolio Services finished OFA-B-069 (OFA Checklist matches the design, 3 points) and OFA-B-082 (1 point), and raised OFA-B-083 (1 point) for the checklist's last small gaps",
    "pointsDone": 4.0
+  },
+  {
+   "at": "2026-11-15T10:35:00+11:00",
+   "change": "Shell resized SHELL-F-115 (3 to 5 points): it now also covers the required-field marker, the dropdown text and a smaller dropdown arrow for the plugins",
+   "pointsDone": 0.0
   }
  ]
 }
