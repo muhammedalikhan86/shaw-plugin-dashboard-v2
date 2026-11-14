@@ -78,9 +78,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 94.0,
-   "pointsRemaining": 23.0,
-   "pointsTotal": 117.0,
-   "itemsRemaining": 7,
+   "pointsRemaining": 24.0,
+   "pointsTotal": 118.0,
+   "itemsRemaining": 8,
    "itemsRemainingUnsized": []
   }
  ],
@@ -214,7 +214,7 @@
    },
    "Compliance": {
     "optimistic": "2026-11-18",
-    "likely": "2026-11-18",
+    "likely": "2026-11-19",
     "pessimistic": "2026-11-19",
     "rateLast10": 8.6,
     "rateWhole": 7.26
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 68.9,
    "rateWhole": 58.78,
-   "pointsRemaining": 429.0,
-   "itemsRemaining": 156
+   "pointsRemaining": 430.0,
+   "itemsRemaining": 157
   }
  },
  "milestones": [
@@ -274,7 +274,7 @@
   },
   {
    "name": "Compliance build complete (likely)",
-   "date": "2026-11-18",
+   "date": "2026-11-19",
    "kind": "forecast"
   },
   {
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T06:12:24+11:00",
+ "updatedAt": "2026-11-15T06:16:38+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -586,6 +586,11 @@
   {
    "at": "2026-11-15T06:12:24+11:00",
    "change": "Shell raised SHELL-B-078 (1 point): test helper waits for the screen before searching",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T06:16:38+11:00",
+   "change": "Compliance split F-018 (3 to 2 points) and raised F-020 (2 points): the email subject field waits on design row W23",
    "pointsDone": 0.0
   }
  ]
