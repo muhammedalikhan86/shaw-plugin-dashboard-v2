@@ -49,10 +49,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 249.0,
-   "pointsRemaining": 235.0,
+   "pointsDone": 254.0,
+   "pointsRemaining": 230.0,
    "pointsTotal": 484.0,
-   "itemsRemaining": 80,
+   "itemsRemaining": 79,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 56.8,
+  "pointsPerWorkingDay": 57.3,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 49.46,
+  "pointsPerWorkingDayWholePeriod": 49.84,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -177,8 +177,8 @@
    },
    {
     "date": "2026-11-14",
-    "pointsDone": 643.0,
-    "pointsDoneThatDay": 11.0
+    "pointsDone": 648.0,
+    "pointsDoneThatDay": 16.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -196,9 +196,9 @@
    "Portfolio Services": {
     "optimistic": "2026-12-01",
     "likely": "2026-12-01",
-    "pessimistic": "2026-12-02",
-    "rateLast10": 20.4,
-    "rateWhole": 19.15
+    "pessimistic": "2026-12-01",
+    "rateLast10": 20.9,
+    "rateWhole": 19.53
    },
    "Advisor": {
     "optimistic": "2026-11-24",
@@ -218,12 +218,12 @@
   "overall": {
    "optimistic": "2026-12-01",
    "likely": "2026-12-01",
-   "pessimistic": "2026-12-02",
+   "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 56.8,
-   "rateWhole": 49.46,
-   "pointsRemaining": 473.0,
-   "itemsRemaining": 176
+   "rateLast10": 57.3,
+   "rateWhole": 49.84,
+   "pointsRemaining": 468.0,
+   "itemsRemaining": 175
   }
  },
  "milestones": [
