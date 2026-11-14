@@ -64,9 +64,9 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 216.0,
-   "pointsRemaining": 106.0,
-   "pointsTotal": 322.0,
+   "pointsDone": 218.0,
+   "pointsRemaining": 105.0,
+   "pointsTotal": 323.0,
    "itemsRemaining": 37,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 57.6,
+  "pointsPerWorkingDay": 57.8,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 50.07,
+  "pointsPerWorkingDayWholePeriod": 50.22,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -177,8 +177,8 @@
    },
    {
     "date": "2026-11-14",
-    "pointsDone": 651.0,
-    "pointsDoneThatDay": 19.0
+    "pointsDone": 653.0,
+    "pointsDoneThatDay": 21.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -204,8 +204,8 @@
     "optimistic": "2026-11-24",
     "likely": "2026-11-24",
     "pessimistic": "2026-11-25",
-    "rateLast10": 16.6,
-    "rateWhole": 14.08
+    "rateLast10": 16.8,
+    "rateWhole": 14.23
    },
    "Compliance": {
     "optimistic": "2026-11-20",
@@ -220,9 +220,9 @@
    "likely": "2026-12-01",
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 57.6,
-   "rateWhole": 50.07,
-   "pointsRemaining": 466.0,
+   "rateLast10": 57.8,
+   "rateWhole": 50.22,
+   "pointsRemaining": 465.0,
    "itemsRemaining": 173
   }
  },
