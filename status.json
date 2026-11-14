@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 289.0,
-   "pointsRemaining": 225.0,
-   "pointsTotal": 514.0,
-   "itemsRemaining": 83,
+   "pointsRemaining": 226.0,
+   "pointsTotal": 515.0,
+   "itemsRemaining": 84,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 71.0,
    "rateWhole": 60.39,
-   "pointsRemaining": 438.0,
-   "itemsRemaining": 158
+   "pointsRemaining": 439.0,
+   "itemsRemaining": 159
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T10:35:00+11:00",
+ "updatedAt": "2026-11-15T10:47:14+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -701,6 +701,11 @@
   {
    "at": "2026-11-15T10:35:00+11:00",
    "change": "Shell resized SHELL-F-115 (3 to 5 points): it now also covers the required-field marker, the dropdown text and a smaller dropdown arrow for the plugins",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T10:47:14+11:00",
+   "change": "Portfolio Services raised OFA-B-084 (1 point): last small gaps on the checklist's note row",
    "pointsDone": 0.0
   }
  ]
