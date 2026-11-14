@@ -77,17 +77,17 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 85.0,
-   "pointsRemaining": 26.0,
+   "pointsDone": 86.0,
+   "pointsRemaining": 25.0,
    "pointsTotal": 111.0,
-   "itemsRemaining": 8,
+   "itemsRemaining": 7,
    "itemsRemainingUnsized": []
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 63.4,
+  "pointsPerWorkingDay": 63.5,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 54.53,
+  "pointsPerWorkingDayWholePeriod": 54.61,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 709.0,
-    "pointsDoneThatDay": 0.0
+    "pointsDone": 710.0,
+    "pointsDoneThatDay": 1.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -216,8 +216,8 @@
     "optimistic": "2026-11-19",
     "likely": "2026-11-19",
     "pessimistic": "2026-11-19",
-    "rateLast10": 7.7,
-    "rateWhole": 6.55
+    "rateLast10": 7.8,
+    "rateWhole": 6.63
    }
   },
   "overall": {
@@ -225,10 +225,10 @@
    "likely": "2026-11-30",
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 63.4,
-   "rateWhole": 54.53,
-   "pointsRemaining": 450.0,
-   "itemsRemaining": 166
+   "rateLast10": 63.5,
+   "rateWhole": 54.61,
+   "pointsRemaining": 449.0,
+   "itemsRemaining": 165
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T00:33:42+11:00",
+ "updatedAt": "2026-11-15T00:47:30+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -427,6 +427,11 @@
    "at": "2026-11-15T00:33:42+11:00",
    "change": "Compliance COMPLIANCE-DASHBOARD-B-049 raised (1 point): a test still expects eight wordings",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T00:47:30+11:00",
+   "change": "Compliance COMPLIANCE-DASHBOARD-B-049 (wording test) fixed",
+   "pointsDone": 1.0
   }
  ]
 }
