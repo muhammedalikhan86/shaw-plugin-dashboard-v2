@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-13",
+ "asOf": "2026-11-14",
  "workingDays": {
   "rule": "Mon-Fri",
   "holidays": [],
@@ -10,7 +10,7 @@
    "name": "Build",
    "status": "In progress",
    "start": "2026-10-28",
-   "end": "2026-12-02",
+   "end": "2026-12-01",
    "isForecast": true,
    "note": "start = first day of the story-points record (hub chart, from 2026-10-28), not a documented kickoff; the shell, Landing Page and the pre-OFA Advisor Dashboard were built and released earlier as functional mocks (2026-10-12). Build includes OFA-F-028 Go-live and OFA-F-029 coverage gate (PS Phase 5), and OFA-F-030 in eSignatureWebAPI (outside this repo)."
   },
@@ -49,9 +49,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 244.0,
+   "pointsDone": 249.0,
    "pointsRemaining": 235.0,
-   "pointsTotal": 479.0,
+   "pointsTotal": 484.0,
    "itemsRemaining": 80,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -64,10 +64,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 212.0,
-   "pointsRemaining": 108.0,
-   "pointsTotal": 320.0,
-   "itemsRemaining": 39,
+   "pointsDone": 215.0,
+   "pointsRemaining": 107.0,
+   "pointsTotal": 322.0,
+   "itemsRemaining": 38,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -77,17 +77,17 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 73.0,
-   "pointsRemaining": 30.0,
-   "pointsTotal": 103.0,
-   "itemsRemaining": 8,
+   "pointsDone": 76.0,
+   "pointsRemaining": 29.0,
+   "pointsTotal": 105.0,
+   "itemsRemaining": 7,
    "itemsRemainingUnsized": []
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 55.7,
-  "window": "last 10 working days (2026-11-02 to 2026-11-13)",
-  "pointsPerWorkingDayWholePeriod": 48.62,
+  "pointsPerWorkingDay": 56.8,
+  "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
+  "pointsPerWorkingDayWholePeriod": 49.46,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -174,6 +174,11 @@
     "date": "2026-11-13",
     "pointsDone": 632.0,
     "pointsDoneThatDay": 92.0
+   },
+   {
+    "date": "2026-11-14",
+    "pointsDone": 643.0,
+    "pointsDoneThatDay": 11.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -190,35 +195,35 @@
    },
    "Portfolio Services": {
     "optimistic": "2026-12-01",
-    "likely": "2026-12-02",
+    "likely": "2026-12-01",
     "pessimistic": "2026-12-02",
-    "rateLast10": 19.9,
-    "rateWhole": 18.77
+    "rateLast10": 20.4,
+    "rateWhole": 19.15
    },
    "Advisor": {
     "optimistic": "2026-11-24",
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
-    "rateLast10": 16.2,
-    "rateWhole": 13.77
+    "rateLast10": 16.5,
+    "rateWhole": 14.0
    },
    "Compliance": {
     "optimistic": "2026-11-20",
     "likely": "2026-11-20",
-    "pessimistic": "2026-11-23",
-    "rateLast10": 6.5,
-    "rateWhole": 5.62
+    "pessimistic": "2026-11-20",
+    "rateLast10": 6.8,
+    "rateWhole": 5.85
    }
   },
   "overall": {
    "optimistic": "2026-12-01",
-   "likely": "2026-12-02",
+   "likely": "2026-12-01",
    "pessimistic": "2026-12-02",
-   "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-27 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 55.7,
-   "rateWhole": 48.62,
-   "pointsRemaining": 475.0,
-   "itemsRemaining": 178
+   "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
+   "rateLast10": 56.8,
+   "rateWhole": 49.46,
+   "pointsRemaining": 473.0,
+   "itemsRemaining": 176
   }
  },
  "milestones": [
@@ -254,7 +259,7 @@
   },
   {
    "name": "Portfolio Services build complete (likely)",
-   "date": "2026-12-02",
+   "date": "2026-12-01",
    "kind": "forecast"
   },
   {
@@ -269,7 +274,7 @@
   },
   {
    "name": "Build complete (likely)",
-   "date": "2026-12-02",
+   "date": "2026-12-01",
    "kind": "forecast"
   }
  ],
