@@ -78,9 +78,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 85.0,
-   "pointsRemaining": 24.0,
-   "pointsTotal": 109.0,
-   "itemsRemaining": 6,
+   "pointsRemaining": 25.0,
+   "pointsTotal": 110.0,
+   "itemsRemaining": 7,
    "itemsRemainingUnsized": []
   }
  ],
@@ -222,8 +222,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 63.1,
    "rateWhole": 54.3,
-   "pointsRemaining": 448.0,
-   "itemsRemaining": 162
+   "pointsRemaining": 449.0,
+   "itemsRemaining": 163
   }
  },
  "milestones": [
@@ -301,7 +301,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-14T22:27:28+11:00",
+ "updatedAt": "2026-11-14T22:57:52+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -396,6 +396,11 @@
   {
    "at": "2026-11-14T22:27:28+11:00",
    "change": "Portfolio Services: empty-state fix raised (1 point)",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-14T22:57:52+11:00",
+   "change": "Compliance COMPLIANCE-DASHBOARD-B-048 raised (1 point)",
    "pointsDone": 0.0
   }
  ]
