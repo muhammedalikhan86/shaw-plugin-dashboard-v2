@@ -64,10 +64,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 215.0,
-   "pointsRemaining": 107.0,
+   "pointsDone": 216.0,
+   "pointsRemaining": 106.0,
    "pointsTotal": 322.0,
-   "itemsRemaining": 38,
+   "itemsRemaining": 37,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 57.3,
+  "pointsPerWorkingDay": 57.4,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 49.84,
+  "pointsPerWorkingDayWholePeriod": 49.92,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -177,8 +177,8 @@
    },
    {
     "date": "2026-11-14",
-    "pointsDone": 648.0,
-    "pointsDoneThatDay": 16.0
+    "pointsDone": 649.0,
+    "pointsDoneThatDay": 17.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -202,10 +202,10 @@
    },
    "Advisor": {
     "optimistic": "2026-11-24",
-    "likely": "2026-11-25",
+    "likely": "2026-11-24",
     "pessimistic": "2026-11-25",
-    "rateLast10": 16.5,
-    "rateWhole": 14.0
+    "rateLast10": 16.6,
+    "rateWhole": 14.08
    },
    "Compliance": {
     "optimistic": "2026-11-20",
@@ -220,10 +220,10 @@
    "likely": "2026-12-01",
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 57.3,
-   "rateWhole": 49.84,
-   "pointsRemaining": 468.0,
-   "itemsRemaining": 175
+   "rateLast10": 57.4,
+   "rateWhole": 49.92,
+   "pointsRemaining": 467.0,
+   "itemsRemaining": 174
   }
  },
  "milestones": [
@@ -264,7 +264,7 @@
   },
   {
    "name": "Advisor build complete (likely)",
-   "date": "2026-11-25",
+   "date": "2026-11-24",
    "kind": "forecast"
   },
   {
