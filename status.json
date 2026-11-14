@@ -78,9 +78,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 85.0,
-   "pointsRemaining": 21.0,
-   "pointsTotal": 106.0,
-   "itemsRemaining": 5,
+   "pointsRemaining": 24.0,
+   "pointsTotal": 109.0,
+   "itemsRemaining": 6,
    "itemsRemainingUnsized": []
   }
  ],
@@ -208,8 +208,8 @@
     "rateWhole": 14.23
    },
    "Compliance": {
-    "optimistic": "2026-11-18",
-    "likely": "2026-11-18",
+    "optimistic": "2026-11-19",
+    "likely": "2026-11-19",
     "pessimistic": "2026-11-19",
     "rateLast10": 7.7,
     "rateWhole": 6.55
@@ -222,8 +222,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 62.0,
    "rateWhole": 53.46,
-   "pointsRemaining": 446.0,
-   "itemsRemaining": 159
+   "pointsRemaining": 449.0,
+   "itemsRemaining": 160
   }
  },
  "milestones": [
@@ -269,7 +269,7 @@
   },
   {
    "name": "Compliance build complete (likely)",
-   "date": "2026-11-18",
+   "date": "2026-11-19",
    "kind": "forecast"
   },
   {
@@ -301,7 +301,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-14T20:17:16+11:00",
+ "updatedAt": "2026-11-14T20:17:52+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -352,6 +352,11 @@
    "at": "2026-11-14T20:17:16+11:00",
    "change": "Shell pass 1 done: 21 items (10 features, 11 fixes); 7 follow-up items raised (15 points)",
    "pointsDone": 34.0
+  },
+  {
+   "at": "2026-11-14T20:17:52+11:00",
+   "change": "Compliance COMPLIANCE-DASHBOARD-B-047 raised (3 points): adopt the shell's pass 1",
+   "pointsDone": 0.0
   }
  ]
 }
