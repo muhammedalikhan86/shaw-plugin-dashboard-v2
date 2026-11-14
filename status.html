@@ -103,6 +103,10 @@ code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
 </div>
 <div class="card tablewrap" style="margin-top:16px"><table id="dates"></table></div>
 
+<h2>Update log</h2>
+<p class="sub">Every change to these figures, newest first, with the time it was recorded (Sydney time).</p>
+<div class="card tablewrap"><table id="updates"></table></div>
+
 <h2>Where the numbers come from</h2>
 <div class="card tablewrap"><table id="sources"></table></div>
 <div id="tip" role="tooltip"></div>
@@ -113,6 +117,7 @@ code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
   function d(s){var p=s.split("-");return Date.UTC(+p[0],+p[1]-1,+p[2]);}
   function fmt(t,withDay){return new Date(t).toLocaleDateString("en-AU",{timeZone:"UTC",day:"numeric",month:"short",year:"numeric",weekday:withDay?"short":undefined});}
   function f(s){return s?fmt(d(s)):"—";}
+  function stamp(iso){return new Date(iso).toLocaleString("en-AU",{timeZone:"Australia/Sydney",day:"numeric",month:"short",year:"numeric",hour:"numeric",minute:"2-digit",timeZoneName:"short"});}
   function short(t){return new Date(t).toLocaleDateString("en-AU",{timeZone:"UTC",day:"numeric",month:"short"});}
   function weekend(t){var w=new Date(t).getUTCDay();return w===0||w===6;}
   function workingDaysBetween(a,b){var n=0;for(var t=a+DAY;t<=b;t+=DAY)if(!weekend(t))n++;return n;}
@@ -150,7 +155,7 @@ code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
     comps.forEach(function(c){done+=c.pointsDone;rem+=c.pointsRemaining;items+=c.itemsRemaining;unsized=unsized.concat(c.itemsRemainingUnsized||[]);});
     var total=done+rem;
     var hol=(S.workingDays.holidays||[]);
-    $("lede").textContent="As of "+fmt(asOf,true)+". Working days are "+S.workingDays.rule+(hol.length?", less "+hol.length+" public holidays":", no public holidays applied")+". The numbers are refreshed from the PMBooks by the Hub session.";
+    $("lede").textContent="As of "+(S.updatedAt?stamp(S.updatedAt):fmt(asOf,true))+". Working days are "+S.workingDays.rule+(hol.length?", less "+hol.length+" public holidays":", no public holidays applied")+". The numbers are refreshed from the PMBooks by the Hub session.";
 
     // ---- Phases
     var build=S.phases[0],dep=S.phases[1],acc=S.phases[2];
@@ -213,6 +218,13 @@ code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
     t+='<tr><td>Not scheduled</td><td>Product deployment (go-live)</td><td class="muted">No date in any doc</td></tr>';
     t+='<tr><td>Not planned yet</td><td>Acceptance testing</td><td class="muted">No date in any doc</td></tr></tbody>';
     $("dates").innerHTML=t;
+
+    // ---- Update log
+    var lg=(S.log||[]).slice().sort(function(a,b){return a.at<b.at?1:-1;});
+    var u='<thead><tr><th>Recorded</th><th>Change</th><th style="text-align:right">Points done</th></tr></thead><tbody>';
+    lg.forEach(function(e){u+='<tr><td style="white-space:nowrap">'+esc(stamp(e.at))+'</td><td>'+esc(e.change)+'</td><td style="text-align:right">'+(e.pointsDone?"+"+n(e.pointsDone):"—")+'</td></tr>';});
+    if(!lg.length)u+='<tr><td colspan="3" class="muted">No updates recorded yet.</td></tr>';
+    $("updates").innerHTML=u+'</tbody>';
 
     // ---- Sources
     var so='<thead><tr><th>Number</th><th>Source</th></tr></thead><tbody>';
