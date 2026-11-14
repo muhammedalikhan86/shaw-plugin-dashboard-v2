@@ -65,9 +65,9 @@
     "advisor-dashboard"
    ],
    "pointsDone": 226.0,
-   "pointsRemaining": 113.0,
-   "pointsTotal": 339.0,
-   "itemsRemaining": 38,
+   "pointsRemaining": 115.0,
+   "pointsTotal": 341.0,
+   "itemsRemaining": 39,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -207,7 +207,7 @@
    },
    "Advisor": {
     "optimistic": "2026-11-24",
-    "likely": "2026-11-24",
+    "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 17.6,
     "rateWhole": 14.84
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 70.0,
    "rateWhole": 59.62,
-   "pointsRemaining": 437.0,
-   "itemsRemaining": 158
+   "pointsRemaining": 439.0,
+   "itemsRemaining": 159
   }
  },
  "milestones": [
@@ -269,7 +269,7 @@
   },
   {
    "name": "Advisor build complete (likely)",
-   "date": "2026-11-24",
+   "date": "2026-11-25",
    "kind": "forecast"
   },
   {
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T08:23:54+11:00",
+ "updatedAt": "2026-11-15T08:31:15+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -657,6 +657,11 @@
    "at": "2026-11-15T08:23:54+11:00",
    "change": "Portfolio Services finished OFA-F-124 (cull details and checklist due dates shared with Compliance, 2 points)",
    "pointsDone": 2.0
+  },
+  {
+   "at": "2026-11-15T08:31:15+11:00",
+   "change": "Advisor raised B-058 (2 points): the questionnaire's other dialogs match the design",
+   "pointsDone": 0.0
   }
  ]
 }
