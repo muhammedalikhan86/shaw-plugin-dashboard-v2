@@ -10,7 +10,7 @@
    "name": "Build",
    "status": "In progress",
    "start": "2026-10-28",
-   "end": "2026-12-02",
+   "end": "2026-12-01",
    "isForecast": true,
    "note": "start = first day of the story-points record (hub chart, from 2026-10-28), not a documented kickoff; the shell, Landing Page and the pre-OFA Advisor Dashboard were built and released earlier as functional mocks (2026-10-12). Build includes OFA-F-028 Go-live and OFA-F-029 coverage gate (PS Phase 5), and OFA-F-030 in eSignatureWebAPI (outside this repo)."
   },
@@ -49,10 +49,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 254.0,
-   "pointsRemaining": 243.0,
+   "pointsDone": 259.0,
+   "pointsRemaining": 238.0,
    "pointsTotal": 497.0,
-   "itemsRemaining": 82,
+   "itemsRemaining": 81,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -64,10 +64,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 218.0,
-   "pointsRemaining": 105.0,
+   "pointsDone": 219.0,
+   "pointsRemaining": 104.0,
    "pointsTotal": 323.0,
-   "itemsRemaining": 37,
+   "itemsRemaining": 36,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 62.0,
+  "pointsPerWorkingDay": 62.6,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 53.46,
+  "pointsPerWorkingDayWholePeriod": 53.92,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -177,8 +177,8 @@
    },
    {
     "date": "2026-11-14",
-    "pointsDone": 695.0,
-    "pointsDoneThatDay": 63.0
+    "pointsDone": 701.0,
+    "pointsDoneThatDay": 69.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -195,17 +195,17 @@
    },
    "Portfolio Services": {
     "optimistic": "2026-12-01",
-    "likely": "2026-12-02",
-    "pessimistic": "2026-12-02",
-    "rateLast10": 20.9,
-    "rateWhole": 19.53
+    "likely": "2026-12-01",
+    "pessimistic": "2026-12-01",
+    "rateLast10": 21.4,
+    "rateWhole": 19.91
    },
    "Advisor": {
     "optimistic": "2026-11-24",
     "likely": "2026-11-24",
     "pessimistic": "2026-11-25",
-    "rateLast10": 16.8,
-    "rateWhole": 14.23
+    "rateLast10": 16.9,
+    "rateWhole": 14.31
    },
    "Compliance": {
     "optimistic": "2026-11-19",
@@ -217,13 +217,13 @@
   },
   "overall": {
    "optimistic": "2026-12-01",
-   "likely": "2026-12-02",
-   "pessimistic": "2026-12-02",
+   "likely": "2026-12-01",
+   "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 62.0,
-   "rateWhole": 53.46,
-   "pointsRemaining": 454.0,
-   "itemsRemaining": 161
+   "rateLast10": 62.6,
+   "rateWhole": 53.92,
+   "pointsRemaining": 448.0,
+   "itemsRemaining": 159
   }
  },
  "milestones": [
@@ -259,7 +259,7 @@
   },
   {
    "name": "Portfolio Services build complete (likely)",
-   "date": "2026-12-02",
+   "date": "2026-12-01",
    "kind": "forecast"
   },
   {
@@ -274,7 +274,7 @@
   },
   {
    "name": "Build complete (likely)",
-   "date": "2026-12-02",
+   "date": "2026-12-01",
    "kind": "forecast"
   }
  ],
@@ -301,7 +301,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-14T20:18:08+11:00",
+ "updatedAt": "2026-11-14T20:24:18+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -362,6 +362,16 @@
    "at": "2026-11-14T20:18:08+11:00",
    "change": "Portfolio Services OFA-F-123 raised (5 points): adopt the shell's pass 1",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-14T20:24:17+11:00",
+   "change": "Portfolio Services OFA-F-121 (the signatory record) done",
+   "pointsDone": 5.0
+  },
+  {
+   "at": "2026-11-14T20:24:18+11:00",
+   "change": "Adviser Dashboard ADVISOR-DASHBOARD-B-052 (the Adviser picker matches the design) done",
+   "pointsDone": 1.0
   }
  ]
 }
