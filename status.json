@@ -39,8 +39,8 @@
     "landing-page"
    ],
    "pointsDone": 210.0,
-   "pointsRemaining": 64.0,
-   "pointsTotal": 274.0,
+   "pointsRemaining": 63.0,
+   "pointsTotal": 273.0,
    "itemsRemaining": 24,
    "itemsRemainingUnsized": []
   },
@@ -65,8 +65,8 @@
     "advisor-dashboard"
    ],
    "pointsDone": 221.0,
-   "pointsRemaining": 111.0,
-   "pointsTotal": 332.0,
+   "pointsRemaining": 112.0,
+   "pointsTotal": 333.0,
    "itemsRemaining": 39,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
@@ -194,7 +194,7 @@
    "Shell & Landing Page": {
     "optimistic": "2026-11-19",
     "likely": "2026-11-19",
-    "pessimistic": "2026-11-20",
+    "pessimistic": "2026-11-19",
     "rateLast10": 20.0,
     "rateWhole": 15.77
    },
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T05:58:28+11:00",
+ "updatedAt": "2026-11-15T05:58:42+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -571,6 +571,11 @@
   {
    "at": "2026-11-15T05:58:28+11:00",
    "change": "Shell raised SHELL-B-077 (2 points): label size, heading colour, paginator wording",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T05:58:42+11:00",
+   "change": "Resizes: ADVISOR-DASHBOARD-B-055 2 to 3 points (adopts the shared paginator); SHELL-B-077 2 to 1 point (paginator wording ruled as the boards draw it)",
    "pointsDone": 0.0
   }
  ]
