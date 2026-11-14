@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 254.0,
-   "pointsRemaining": 230.0,
-   "pointsTotal": 484.0,
-   "itemsRemaining": 79,
+   "pointsRemaining": 235.0,
+   "pointsTotal": 489.0,
+   "itemsRemaining": 80,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -196,7 +196,7 @@
    "Portfolio Services": {
     "optimistic": "2026-12-01",
     "likely": "2026-12-01",
-    "pessimistic": "2026-12-01",
+    "pessimistic": "2026-12-02",
     "rateLast10": 20.9,
     "rateWhole": 19.53
    },
@@ -218,12 +218,12 @@
   "overall": {
    "optimistic": "2026-12-01",
    "likely": "2026-12-01",
-   "pessimistic": "2026-12-01",
+   "pessimistic": "2026-12-02",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 58.6,
    "rateWhole": 50.84,
-   "pointsRemaining": 457.0,
-   "itemsRemaining": 171
+   "pointsRemaining": 462.0,
+   "itemsRemaining": 172
   }
  },
  "milestones": [
