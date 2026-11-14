@@ -65,9 +65,9 @@
     "advisor-dashboard"
    ],
    "pointsDone": 221.0,
-   "pointsRemaining": 107.0,
-   "pointsTotal": 328.0,
-   "itemsRemaining": 37,
+   "pointsRemaining": 109.0,
+   "pointsTotal": 330.0,
+   "itemsRemaining": 38,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 66.2,
    "rateWhole": 56.68,
-   "pointsRemaining": 437.0,
-   "itemsRemaining": 158
+   "pointsRemaining": 439.0,
+   "itemsRemaining": 159
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T01:08:09+11:00",
+ "updatedAt": "2026-11-15T01:12:34+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -452,6 +452,11 @@
    "at": "2026-11-15T01:08:09+11:00",
    "change": "Advisor ADVISOR-DASHBOARD-F-104 Done (2 points): questionnaire prefills Q1 and Q2, names who submitted",
    "pointsDone": 2.0
+  },
+  {
+   "at": "2026-11-15T01:12:34+11:00",
+   "change": "Advisor raised ADVISOR-DASHBOARD-B-054 (2 points): adopt the shell's shared styles",
+   "pointsDone": 0.0
   }
  ]
 }
