@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-14",
+ "asOf": "2026-11-15",
  "workingDays": {
   "rule": "Mon-Fri",
   "holidays": [],
@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 267.0,
-   "pointsRemaining": 231.0,
-   "pointsTotal": 498.0,
-   "itemsRemaining": 82,
+   "pointsRemaining": 233.0,
+   "pointsTotal": 500.0,
+   "itemsRemaining": 84,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -179,6 +179,11 @@
     "date": "2026-11-14",
     "pointsDone": 709.0,
     "pointsDoneThatDay": 77.0
+   },
+   {
+    "date": "2026-11-15",
+    "pointsDone": 709.0,
+    "pointsDoneThatDay": 0.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -222,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 63.4,
    "rateWhole": 54.53,
-   "pointsRemaining": 447.0,
-   "itemsRemaining": 163
+   "pointsRemaining": 449.0,
+   "itemsRemaining": 165
   }
  },
  "milestones": [
@@ -301,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-14T23:59:01+11:00",
+ "updatedAt": "2026-11-15T00:33:11+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -411,6 +416,11 @@
   {
    "at": "2026-11-14T23:59:01+11:00",
    "change": "Portfolio Services OFA-B-074 raised (1 point): test data for Compliance's Quarantine checks",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T00:33:11+11:00",
+   "change": "Portfolio Services OFA-B-075 and B-076 raised (2 points): two layout gaps",
    "pointsDone": 0.0
   }
  ]
