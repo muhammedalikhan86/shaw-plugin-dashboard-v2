@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 201.0,
-   "pointsRemaining": 69.0,
-   "pointsTotal": 270.0,
-   "itemsRemaining": 28,
+   "pointsRemaining": 70.0,
+   "pointsTotal": 271.0,
+   "itemsRemaining": 29,
    "itemsRemainingUnsized": []
   },
   {
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 66.0,
    "rateWhole": 56.53,
-   "pointsRemaining": 438.0,
-   "itemsRemaining": 158
+   "pointsRemaining": 439.0,
+   "itemsRemaining": 159
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T00:54:20+11:00",
+ "updatedAt": "2026-11-15T01:03:33+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -441,6 +441,11 @@
   {
    "at": "2026-11-15T00:54:20+11:00",
    "change": "Portfolio Services raised OFA-B-077 (2 points): shell pass 2 follow-ups",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T01:03:33+11:00",
+   "change": "Shell raised SHELL-F-128 (1 point): shared Keep open test step",
    "pointsDone": 0.0
   }
  ]
