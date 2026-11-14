@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 210.0,
-   "pointsRemaining": 60.0,
-   "pointsTotal": 270.0,
-   "itemsRemaining": 21,
+   "pointsRemaining": 61.0,
+   "pointsTotal": 271.0,
+   "itemsRemaining": 22,
    "itemsRemainingUnsized": []
   },
   {
@@ -192,7 +192,7 @@
   "method": "optimistic = last-10-working-day rate; likely = mean of the two rates; pessimistic = whole-period rate (since 2026-10-28). Working days Mon-Fri; weekend points count in the totals but weekends are never counted as days.",
   "perComponent": {
    "Shell & Landing Page": {
-    "optimistic": "2026-11-18",
+    "optimistic": "2026-11-19",
     "likely": "2026-11-19",
     "pessimistic": "2026-11-19",
     "rateLast10": 20.0,
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 67.4,
    "rateWhole": 57.6,
-   "pointsRemaining": 435.0,
-   "itemsRemaining": 157
+   "pointsRemaining": 436.0,
+   "itemsRemaining": 158
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T03:11:13+11:00",
+ "updatedAt": "2026-11-15T03:11:56+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -506,6 +506,11 @@
   {
    "at": "2026-11-15T03:11:13+11:00",
    "change": "Compliance raised COMPLIANCE-DASHBOARD-B-053 (1 point): four date-bound or sample-data tests made to hold",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T03:11:56+11:00",
+   "change": "Shell raised SHELL-B-075 (1 point): dialog content keeps the board's space above its buttons",
    "pointsDone": 0.0
   }
  ]
