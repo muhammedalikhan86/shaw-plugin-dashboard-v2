@@ -77,17 +77,17 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 91.0,
-   "pointsRemaining": 25.0,
+   "pointsDone": 92.0,
+   "pointsRemaining": 24.0,
    "pointsTotal": 116.0,
-   "itemsRemaining": 9,
+   "itemsRemaining": 8,
    "itemsRemainingUnsized": []
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 68.4,
+  "pointsPerWorkingDay": 68.5,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 58.38,
+  "pointsPerWorkingDayWholePeriod": 58.46,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 759.0,
-    "pointsDoneThatDay": 50.0
+    "pointsDone": 760.0,
+    "pointsDoneThatDay": 51.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -213,11 +213,11 @@
     "rateWhole": 14.46
    },
    "Compliance": {
-    "optimistic": "2026-11-19",
+    "optimistic": "2026-11-18",
     "likely": "2026-11-19",
     "pessimistic": "2026-11-19",
-    "rateLast10": 8.3,
-    "rateWhole": 7.02
+    "rateLast10": 8.4,
+    "rateWhole": 7.1
    }
   },
   "overall": {
@@ -225,10 +225,10 @@
    "likely": "2026-11-30",
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 68.4,
-   "rateWhole": 58.38,
-   "pointsRemaining": 426.0,
-   "itemsRemaining": 155
+   "rateLast10": 68.5,
+   "rateWhole": 58.46,
+   "pointsRemaining": 425.0,
+   "itemsRemaining": 154
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T04:05:18+11:00",
+ "updatedAt": "2026-11-15T04:19:33+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -526,6 +526,11 @@
   {
    "at": "2026-11-15T04:05:18+11:00",
    "change": "Compliance COMPLIANCE-DASHBOARD-B-051 Done (1 point): the failed card keeps the board's height",
+   "pointsDone": 1.0
+  },
+  {
+   "at": "2026-11-15T04:19:33+11:00",
+   "change": "Compliance COMPLIANCE-DASHBOARD-F-019 Done (1 point): a wording slot for the No OFA adviser email",
    "pointsDone": 1.0
   }
  ]
