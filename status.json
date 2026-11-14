@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 267.0,
-   "pointsRemaining": 237.0,
-   "pointsTotal": 504.0,
-   "itemsRemaining": 86,
+   "pointsRemaining": 239.0,
+   "pointsTotal": 506.0,
+   "itemsRemaining": 87,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 67.4,
    "rateWhole": 57.6,
-   "pointsRemaining": 432.0,
-   "itemsRemaining": 155
+   "pointsRemaining": 434.0,
+   "itemsRemaining": 156
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T03:10:16+11:00",
+ "updatedAt": "2026-11-15T03:11:00+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -496,6 +496,11 @@
   {
    "at": "2026-11-15T03:10:16+11:00",
    "change": "Portfolio Services raised OFA-B-078 (2 points): the Exceptions report's remaining look-and-feel gaps",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T03:11:00+11:00",
+   "change": "Portfolio Services raised OFA-B-079 (2 points): the Exceptions report exports to Excel",
    "pointsDone": 0.0
   }
  ]
