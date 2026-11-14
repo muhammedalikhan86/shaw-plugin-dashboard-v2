@@ -65,9 +65,9 @@
     "advisor-dashboard"
    ],
    "pointsDone": 226.0,
-   "pointsRemaining": 112.0,
-   "pointsTotal": 338.0,
-   "itemsRemaining": 37,
+   "pointsRemaining": 113.0,
+   "pointsTotal": 339.0,
+   "itemsRemaining": 38,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 69.8,
    "rateWhole": 59.47,
-   "pointsRemaining": 438.0,
-   "itemsRemaining": 158
+   "pointsRemaining": 439.0,
+   "itemsRemaining": 159
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T07:52:03+11:00",
+ "updatedAt": "2026-11-15T07:59:04+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -647,6 +647,11 @@
    "at": "2026-11-15T07:52:03+11:00",
    "change": "Portfolio Services finished OFA-B-081 (email subject on the Word wording load, 1 point)",
    "pointsDone": 1.0
+  },
+  {
+   "at": "2026-11-15T07:59:04+11:00",
+   "change": "Advisor raised B-057 (1 point): Initial OFAs' first column width matches the design",
+   "pointsDone": 0.0
   }
  ]
 }
