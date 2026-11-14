@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 210.0,
-   "pointsRemaining": 63.0,
-   "pointsTotal": 273.0,
-   "itemsRemaining": 24,
+   "pointsRemaining": 64.0,
+   "pointsTotal": 274.0,
+   "itemsRemaining": 25,
    "itemsRemainingUnsized": []
   },
   {
@@ -194,7 +194,7 @@
    "Shell & Landing Page": {
     "optimistic": "2026-11-19",
     "likely": "2026-11-19",
-    "pessimistic": "2026-11-19",
+    "pessimistic": "2026-11-20",
     "rateLast10": 20.0,
     "rateWhole": 15.77
    },
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 68.9,
    "rateWhole": 58.78,
-   "pointsRemaining": 428.0,
-   "itemsRemaining": 155
+   "pointsRemaining": 429.0,
+   "itemsRemaining": 156
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T06:11:23+11:00",
+ "updatedAt": "2026-11-15T06:12:24+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -582,6 +582,11 @@
    "at": "2026-11-15T06:11:23+11:00",
    "change": "Portfolio Services OFA-B-080 Done (1 point): Exceptions report add works on the real app",
    "pointsDone": 1.0
+  },
+  {
+   "at": "2026-11-15T06:12:24+11:00",
+   "change": "Shell raised SHELL-B-078 (1 point): test helper waits for the screen before searching",
+   "pointsDone": 0.0
   }
  ]
 }
