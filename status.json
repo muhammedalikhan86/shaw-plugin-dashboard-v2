@@ -78,9 +78,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 85.0,
-   "pointsRemaining": 25.0,
-   "pointsTotal": 110.0,
-   "itemsRemaining": 7,
+   "pointsRemaining": 26.0,
+   "pointsTotal": 111.0,
+   "itemsRemaining": 8,
    "itemsRemainingUnsized": []
   }
  ],
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 63.4,
    "rateWhole": 54.53,
-   "pointsRemaining": 449.0,
-   "itemsRemaining": 165
+   "pointsRemaining": 450.0,
+   "itemsRemaining": 166
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T00:33:11+11:00",
+ "updatedAt": "2026-11-15T00:33:42+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -421,6 +421,11 @@
   {
    "at": "2026-11-15T00:33:11+11:00",
    "change": "Portfolio Services OFA-B-075 and B-076 raised (2 points): two layout gaps",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T00:33:42+11:00",
+   "change": "Compliance COMPLIANCE-DASHBOARD-B-049 raised (1 point): a test still expects eight wordings",
    "pointsDone": 0.0
   }
  ]
