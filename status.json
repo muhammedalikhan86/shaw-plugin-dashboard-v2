@@ -50,8 +50,8 @@
     "portfolio-services"
    ],
    "pointsDone": 282.0,
-   "pointsRemaining": 228.0,
-   "pointsTotal": 510.0,
+   "pointsRemaining": 229.0,
+   "pointsTotal": 511.0,
    "itemsRemaining": 84,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -227,7 +227,7 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 70.0,
    "rateWhole": 59.62,
-   "pointsRemaining": 439.0,
+   "pointsRemaining": 440.0,
    "itemsRemaining": 159
   }
  },
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T08:31:15+11:00",
+ "updatedAt": "2026-11-15T08:53:45+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -661,6 +661,11 @@
   {
    "at": "2026-11-15T08:31:15+11:00",
    "change": "Advisor raised B-058 (2 points): the questionnaire's other dialogs match the design",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T08:53:45+11:00",
+   "change": "Portfolio Services resized OFA-F-021 (5 to 6 points): Closed months also records and shares who each notice was sent to",
    "pointsDone": 0.0
   }
  ]
