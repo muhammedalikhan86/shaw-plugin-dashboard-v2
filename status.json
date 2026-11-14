@@ -77,17 +77,17 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 77.0,
-   "pointsRemaining": 29.0,
+   "pointsDone": 85.0,
+   "pointsRemaining": 21.0,
    "pointsTotal": 106.0,
-   "itemsRemaining": 7,
+   "itemsRemaining": 5,
    "itemsRemainingUnsized": []
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 57.8,
+  "pointsPerWorkingDay": 58.6,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 50.22,
+  "pointsPerWorkingDayWholePeriod": 50.84,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -177,8 +177,8 @@
    },
    {
     "date": "2026-11-14",
-    "pointsDone": 653.0,
-    "pointsDoneThatDay": 21.0
+    "pointsDone": 661.0,
+    "pointsDoneThatDay": 29.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -208,11 +208,11 @@
     "rateWhole": 14.23
    },
    "Compliance": {
-    "optimistic": "2026-11-20",
-    "likely": "2026-11-20",
-    "pessimistic": "2026-11-20",
-    "rateLast10": 6.9,
-    "rateWhole": 5.93
+    "optimistic": "2026-11-18",
+    "likely": "2026-11-18",
+    "pessimistic": "2026-11-19",
+    "rateLast10": 7.7,
+    "rateWhole": 6.55
    }
   },
   "overall": {
@@ -220,10 +220,10 @@
    "likely": "2026-12-01",
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 57.8,
-   "rateWhole": 50.22,
-   "pointsRemaining": 465.0,
-   "itemsRemaining": 173
+   "rateLast10": 58.6,
+   "rateWhole": 50.84,
+   "pointsRemaining": 457.0,
+   "itemsRemaining": 171
   }
  },
  "milestones": [
@@ -269,7 +269,7 @@
   },
   {
    "name": "Compliance build complete (likely)",
-   "date": "2026-11-20",
+   "date": "2026-11-18",
    "kind": "forecast"
   },
   {
