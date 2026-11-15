@@ -78,9 +78,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 102.0,
-   "pointsRemaining": 28.0,
-   "pointsTotal": 130.0,
-   "itemsRemaining": 12,
+   "pointsRemaining": 31.0,
+   "pointsTotal": 133.0,
+   "itemsRemaining": 14,
    "itemsRemainingUnsized": []
   }
  ],
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 74.4,
    "rateWhole": 63.02,
-   "pointsRemaining": 434.0,
-   "itemsRemaining": 159
+   "pointsRemaining": 437.0,
+   "itemsRemaining": 161
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T17:11:35+11:00",
+ "updatedAt": "2026-11-15T17:37:14+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -867,6 +867,16 @@
    "at": "2026-11-15T17:11:35+11:00",
    "change": "Portfolio Services finished OFA-B-092 (the month picker keeps keyboard focus) and OFA-B-093 (a refused test-data reset says why), 1 point each",
    "pointsDone": 2.0
+  },
+  {
+   "at": "2026-11-15T17:37:14+11:00",
+   "change": "Compliance raised COMPLIANCE-DASHBOARD-B-059 (the notes dialog and filter minor gaps from F-003, 1 point)",
+   "pointsRaised": 1
+  },
+  {
+   "at": "2026-11-15T17:37:14+11:00",
+   "change": "Compliance raised COMPLIANCE-DASHBOARD-B-060 (Arrangements: Account name too wide with the sidebar open, 2 points)",
+   "pointsRaised": 2
   }
  ]
 }
