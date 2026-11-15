@@ -38,8 +38,8 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 215.0,
-   "pointsRemaining": 68.0,
+   "pointsDone": 216.0,
+   "pointsRemaining": 67.0,
    "pointsTotal": 283.0,
    "itemsRemaining": 24,
    "itemsRemainingUnsized": []
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 73.0,
+  "pointsPerWorkingDay": 73.1,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 61.93,
+  "pointsPerWorkingDayWholePeriod": 62.01,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 805.0,
-    "pointsDoneThatDay": 96.0
+    "pointsDone": 806.0,
+    "pointsDoneThatDay": 97.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -195,8 +195,8 @@
     "optimistic": "2026-11-19",
     "likely": "2026-11-19",
     "pessimistic": "2026-11-20",
-    "rateLast10": 20.5,
-    "rateWhole": 16.16
+    "rateLast10": 20.6,
+    "rateWhole": 16.24
    },
    "Portfolio Services": {
     "optimistic": "2026-11-27",
@@ -225,9 +225,9 @@
    "likely": "2026-11-27",
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 73.0,
-   "rateWhole": 61.93,
-   "pointsRemaining": 433.0,
+   "rateLast10": 73.1,
+   "rateWhole": 62.01,
+   "pointsRemaining": 432.0,
    "itemsRemaining": 157
   }
  },
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T13:19:57+11:00",
+ "updatedAt": "2026-11-15T13:20:26+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -781,6 +781,11 @@
   {
    "at": "2026-11-15T13:19:57+11:00",
    "change": "Shell finished SHELL-B-073 (local test builds no longer overwrite release builds, 1 point)",
+   "pointsDone": 1.0
+  },
+  {
+   "at": "2026-11-15T13:20:26+11:00",
+   "change": "Correction: SHELL-B-073 is 2 points, not 1",
    "pointsDone": 1.0
   }
  ]
