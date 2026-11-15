@@ -64,10 +64,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 238.0,
-   "pointsRemaining": 106.0,
+   "pointsDone": 239.0,
+   "pointsRemaining": 105.0,
    "pointsTotal": 344.0,
-   "itemsRemaining": 37,
+   "itemsRemaining": 36,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 74.7,
+  "pointsPerWorkingDay": 74.8,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 63.25,
+  "pointsPerWorkingDayWholePeriod": 63.33,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 822.0,
-    "pointsDoneThatDay": 113.0
+    "pointsDone": 823.0,
+    "pointsDoneThatDay": 114.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -209,8 +209,8 @@
     "optimistic": "2026-11-23",
     "likely": "2026-11-24",
     "pessimistic": "2026-11-24",
-    "rateLast10": 18.8,
-    "rateWhole": 15.76
+    "rateLast10": 18.9,
+    "rateWhole": 15.84
    },
    "Compliance": {
     "optimistic": "2026-11-18",
@@ -225,10 +225,10 @@
    "likely": "2026-11-27",
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 74.7,
-   "rateWhole": 63.25,
-   "pointsRemaining": 434.0,
-   "itemsRemaining": 160
+   "rateLast10": 74.8,
+   "rateWhole": 63.33,
+   "pointsRemaining": 433.0,
+   "itemsRemaining": 159
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T18:11:45+11:00",
+ "updatedAt": "2026-11-15T18:16:40+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -882,6 +882,11 @@
    "at": "2026-11-15T18:11:45+11:00",
    "change": "Compliance finished COMPLIANCE-DASHBOARD-F-003 (the Cull list, with the published columns, 3 points)",
    "pointsDone": 3.0
+  },
+  {
+   "at": "2026-11-15T18:16:40+11:00",
+   "change": "Advisor finished ADVISOR-DASHBOARD-B-060 (the OFA Notification Form dialog as the board, 1 point)",
+   "pointsDone": 1.0
   }
  ]
 }
