@@ -346,17 +346,17 @@
   {
    "at": "2026-11-14T19:51:43+11:00",
    "change": "Portfolio Services OFA-F-122 raised (5 points)",
-   "pointsDone": 0
+   "pointsRaised": 5.0
   },
   {
    "at": "2026-11-14T19:54:28+11:00",
    "change": "Portfolio Services OFA-B-071 raised (2 points)",
-   "pointsDone": 0
+   "pointsRaised": 2.0
   },
   {
    "at": "2026-11-14T20:02:26+11:00",
    "change": "Portfolio Services OFA-B-071 resized from 2 to 3 points (picks up 10 small design fixes)",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-14T20:17:16+11:00",
@@ -366,12 +366,12 @@
   {
    "at": "2026-11-14T20:17:52+11:00",
    "change": "Compliance COMPLIANCE-DASHBOARD-B-047 raised (3 points): adopt the shell's pass 1",
-   "pointsDone": 0.0
+   "pointsRaised": 3.0
   },
   {
    "at": "2026-11-14T20:18:08+11:00",
    "change": "Portfolio Services OFA-F-123 raised (5 points): adopt the shell's pass 1",
-   "pointsDone": 0.0
+   "pointsRaised": 5.0
   },
   {
    "at": "2026-11-14T20:24:17+11:00",
@@ -386,17 +386,17 @@
   {
    "at": "2026-11-14T20:24:58+11:00",
    "change": "Adviser Dashboard: two items raised to adopt the shell's pass 1 (5 points)",
-   "pointsDone": 0.0
+   "pointsRaised": 5.0
   },
   {
    "at": "2026-11-14T21:00:44+11:00",
    "change": "Portfolio Services OFA-B-072 raised (1 point)",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-14T21:13:51+11:00",
    "change": "Portfolio Services OFA-F-123 resized from 5 to 3 points (smaller than raised)",
-   "pointsDone": 0.0
+   "pointsRaised": -2.0
   },
   {
    "at": "2026-11-14T21:56:05+11:00",
@@ -406,12 +406,12 @@
   {
    "at": "2026-11-14T22:27:28+11:00",
    "change": "Portfolio Services: empty-state fix raised (1 point)",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-14T22:57:52+11:00",
    "change": "Compliance COMPLIANCE-DASHBOARD-B-048 raised (1 point)",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-14T23:34:05+11:00",
@@ -421,17 +421,17 @@
   {
    "at": "2026-11-14T23:59:01+11:00",
    "change": "Portfolio Services OFA-B-074 raised (1 point): test data for Compliance's Quarantine checks",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T00:33:11+11:00",
    "change": "Portfolio Services OFA-B-075 and B-076 raised (2 points): two layout gaps",
-   "pointsDone": 0.0
+   "pointsRaised": 2.0
   },
   {
    "at": "2026-11-15T00:33:42+11:00",
    "change": "Compliance COMPLIANCE-DASHBOARD-B-049 raised (1 point): a test still expects eight wordings",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T00:47:30+11:00",
@@ -446,12 +446,12 @@
   {
    "at": "2026-11-15T00:54:20+11:00",
    "change": "Portfolio Services raised OFA-B-077 (2 points): shell pass 2 follow-ups",
-   "pointsDone": 0.0
+   "pointsRaised": 2.0
   },
   {
    "at": "2026-11-15T01:03:33+11:00",
    "change": "Shell raised SHELL-F-128 (1 point): shared Keep open test step",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T01:08:09+11:00",
@@ -461,7 +461,7 @@
   {
    "at": "2026-11-15T01:12:34+11:00",
    "change": "Advisor raised ADVISOR-DASHBOARD-B-054 (2 points): adopt the shell's shared styles",
-   "pointsDone": 0.0
+   "pointsRaised": 2.0
   },
   {
    "at": "2026-11-15T01:16:33+11:00",
@@ -471,17 +471,17 @@
   {
    "at": "2026-11-15T01:28:31+11:00",
    "change": "Compliance raised COMPLIANCE-DASHBOARD-B-050 (1 point, shell pass 2 follow-ups) and F-019 (1 point, a new email wording slot)",
-   "pointsDone": 0.0
+   "pointsRaised": 2.0
   },
   {
    "at": "2026-11-15T01:28:57+11:00",
    "change": "Compliance raised COMPLIANCE-DASHBOARD-B-051 (1 point): the empty or failed card keeps the board's height",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T01:29:17+11:00",
    "change": "Shell SHELL-B-072 resized 2 to 1 point: the empty-card part closed on the Compliance side",
-   "pointsDone": 0.0
+   "pointsRaised": -1.0
   },
   {
    "at": "2026-11-15T02:17:55+11:00",
@@ -491,7 +491,7 @@
   {
    "at": "2026-11-15T03:00:22+11:00",
    "change": "Compliance raised COMPLIANCE-DASHBOARD-B-052 (1 point): the Wording Load list matches the board's height",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T03:05:34+11:00",
@@ -501,22 +501,22 @@
   {
    "at": "2026-11-15T03:10:16+11:00",
    "change": "Portfolio Services raised OFA-B-078 (2 points): the Exceptions report's remaining look-and-feel gaps",
-   "pointsDone": 0.0
+   "pointsRaised": 2.0
   },
   {
    "at": "2026-11-15T03:11:00+11:00",
    "change": "Portfolio Services raised OFA-B-079 (2 points): the Exceptions report exports to Excel",
-   "pointsDone": 0.0
+   "pointsRaised": 2.0
   },
   {
    "at": "2026-11-15T03:11:13+11:00",
    "change": "Compliance raised COMPLIANCE-DASHBOARD-B-053 (1 point): four date-bound or sample-data tests made to hold",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T03:11:56+11:00",
    "change": "Shell raised SHELL-B-075 (1 point): dialog content keeps the board's space above its buttons",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T03:29:18+11:00",
@@ -541,12 +541,12 @@
   {
    "at": "2026-11-15T04:37:04+11:00",
    "change": "Compliance raised COMPLIANCE-DASHBOARD-B-054 (1 point): the file picker shows the board's hint",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T04:37:29+11:00",
    "change": "Shell raised SHELL-B-076 (1 point): the calendar icon in date fields matches the board",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T04:58:33+11:00",
@@ -556,7 +556,7 @@
   {
    "at": "2026-11-15T05:08:23+11:00",
    "change": "Portfolio Services raised OFA-B-080 (1 point): two Exceptions report tests fail on the real app",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T05:16:40+11:00",
@@ -566,7 +566,7 @@
   {
    "at": "2026-11-15T05:57:40+11:00",
    "change": "Advisor raised ADVISOR-DASHBOARD-B-055 (2 points): small board gaps found in B-054's check",
-   "pointsDone": 0.0
+   "pointsRaised": 2.0
   },
   {
    "at": "2026-11-15T05:58:11+11:00",
@@ -576,12 +576,12 @@
   {
    "at": "2026-11-15T05:58:28+11:00",
    "change": "Shell raised SHELL-B-077 (2 points): label size, heading colour, paginator wording",
-   "pointsDone": 0.0
+   "pointsRaised": 2.0
   },
   {
    "at": "2026-11-15T05:58:42+11:00",
    "change": "Resizes: ADVISOR-DASHBOARD-B-055 2 to 3 points (adopts the shared paginator); SHELL-B-077 2 to 1 point (paginator wording ruled as the boards draw it)",
-   "pointsDone": 0.0
+   "pointsRaised": 0.0
   },
   {
    "at": "2026-11-15T06:11:23+11:00",
@@ -591,12 +591,12 @@
   {
    "at": "2026-11-15T06:12:24+11:00",
    "change": "Shell raised SHELL-B-078 (1 point): test helper waits for the screen before searching",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T06:16:38+11:00",
    "change": "Compliance split F-018 (3 to 2 points) and raised F-020 (2 points): the email subject field waits on design row W23",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T06:22:49+11:00",
@@ -611,27 +611,27 @@
   {
    "at": "2026-11-15T06:29:03+11:00",
    "change": "Advisor raised ADVISOR-DASHBOARD-B-056 (5 points): Initial OFAs Save, signers on the Signed tip, Signed and Declined rows open their signatories",
-   "pointsDone": 0.0
+   "pointsRaised": 5.0
   },
   {
    "at": "2026-11-15T06:34:24+11:00",
    "change": "Portfolio Services raised OFA-B-081 (1 point): the Word load takes an email subject",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T07:01:48+11:00",
    "change": "SHELL-B-078 resized 1 to 2 points: the board checker also skips screen-reader-only text",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T07:11:13+11:00",
    "change": "Compliance split F-003 (5 to 3 points) and raised F-021 (3), F-022 (2) and F-023 (3) for the parts waiting on Portfolio Services",
-   "pointsDone": 0.0
+   "pointsRaised": 6.0
   },
   {
    "at": "2026-11-15T07:12:32+11:00",
    "change": "Portfolio Services raised OFA-F-124 (2 points): cull details and checklist due dates shared with Compliance",
-   "pointsDone": 0.0
+   "pointsRaised": 2.0
   },
   {
    "at": "2026-11-15T07:37:04+11:00",
@@ -641,7 +641,7 @@
   {
    "at": "2026-11-15T07:38:09+11:00",
    "change": "Shell raised SHELL-B-079 (2 points): shared test helper times out when many tests run at once",
-   "pointsDone": 0.0
+   "pointsRaised": 2.0
   },
   {
    "at": "2026-11-15T07:44:54+11:00",
@@ -656,7 +656,7 @@
   {
    "at": "2026-11-15T07:59:04+11:00",
    "change": "Advisor raised B-057 (1 point): Initial OFAs' first column width matches the design",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T08:23:54+11:00",
@@ -666,12 +666,12 @@
   {
    "at": "2026-11-15T08:31:15+11:00",
    "change": "Advisor raised B-058 (2 points): the questionnaire's other dialogs match the design",
-   "pointsDone": 0.0
+   "pointsRaised": 2.0
   },
   {
    "at": "2026-11-15T08:53:45+11:00",
    "change": "Portfolio Services resized OFA-F-021 (5 to 6 points): Closed months also records and shares who each notice was sent to",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T09:10:07+11:00",
@@ -681,7 +681,7 @@
   {
    "at": "2026-11-15T09:11:19+11:00",
    "change": "Portfolio Services raised OFA-B-082 (1 point): test data gains a closed September 2026 OFA Checklist",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T09:22:16+11:00",
@@ -691,12 +691,12 @@
   {
    "at": "2026-11-15T09:30:43+11:00",
    "change": "Portfolio Services resized OFA-B-078 (2 to 3 points): the monthly cycle's picker also moves into the page header",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T10:00:09+11:00",
    "change": "Compliance raised B-055 (3 points): the small design gaps on Closed months",
-   "pointsDone": 0.0
+   "pointsRaised": 3.0
   },
   {
    "at": "2026-11-15T10:23:46+11:00",
@@ -706,17 +706,17 @@
   {
    "at": "2026-11-15T10:35:00+11:00",
    "change": "Shell resized SHELL-F-115 (3 to 5 points): it now also covers the required-field marker, the dropdown text and a smaller dropdown arrow for the plugins",
-   "pointsDone": 0.0
+   "pointsRaised": 2.0
   },
   {
    "at": "2026-11-15T10:47:14+11:00",
    "change": "Portfolio Services raised OFA-B-084 (1 point): last small gaps on the checklist's note row",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T10:48:01+11:00",
    "change": "Shell raised SHELL-F-129 (1 point): a shared flat list style for the OFA Checklist's notes",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T11:00:16+11:00",
@@ -726,7 +726,7 @@
   {
    "at": "2026-11-15T11:17:45+11:00",
    "change": "Advisor raised B-059 (1 point): the S-Account search icon's size and spacing",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T11:43:02+11:00",
@@ -741,7 +741,7 @@
   {
    "at": "2026-11-15T11:56:08+11:00",
    "change": "Portfolio Services raised OFA-B-085 (1 point): make Compliance's checklist months list fast",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T12:00:59+11:00",
@@ -751,12 +751,12 @@
   {
    "at": "2026-11-15T12:03:03+11:00",
    "change": "Portfolio Services raised OFA-B-086 (1 point): test data gains a declined Initial OFA with named signers",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T12:38:54+11:00",
    "change": "Portfolio Services raised OFA-B-087 (5 points): the Exceptions report's layout in the real app (wrapping, headings, info icons, card fill, fixed Actions column)",
-   "pointsDone": 0.0
+   "pointsRaised": 5.0
   },
   {
    "at": "2026-11-15T13:04:46+11:00",
@@ -771,12 +771,12 @@
   {
    "at": "2026-11-15T13:11:35+11:00",
    "change": "Portfolio Services raised OFA-B-088 (hidden monthly-cycle steps stay in the page, 1 point) and OFA-B-089 (Take off the run dialog's missing line, 1 point)",
-   "pointsDone": 0.0
+   "pointsRaised": 2.0
   },
   {
    "at": "2026-11-15T13:13:11+11:00",
    "change": "Shell raised SHELL-B-080 (2 points): one test's clean-up wipes the test data while other tests run; SHELL-B-066 grew 2 to 3",
-   "pointsDone": 0.0
+   "pointsRaised": 3.0
   },
   {
    "at": "2026-11-15T13:18:38+11:00",
@@ -811,12 +811,12 @@
   {
    "at": "2026-11-15T15:42:03+11:00",
    "change": "Compliance raised COMPLIANCE-DASHBOARD-B-056 (1 point): a flaky start-up test",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T15:42:57+11:00",
    "change": "Portfolio Services raised OFA-B-090 (1 point): the OFA Checklist takes the design's error and empty-state wording",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T15:48:38+11:00",
@@ -826,7 +826,7 @@
   {
    "at": "2026-11-15T16:13:09+11:00",
    "change": "Portfolio Services raised OFA-B-091 (1 point): the OFA Checklist keeps its page header in the error and empty states",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T16:20:22+11:00",
@@ -841,17 +841,17 @@
   {
    "at": "2026-11-15T16:43:29+11:00",
    "change": "Portfolio Services raised OFA-B-092 (1 point): the checklist's month picker keeps keyboard focus while a month loads",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T16:44:33+11:00",
    "change": "Compliance raised COMPLIANCE-DASHBOARD-B-057 (1 point): a test clean-up that runs twice no longer fails",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T16:47:15+11:00",
    "change": "Portfolio Services raised OFA-B-093 (1 point): a refused test-data reset says why; and OFA-B-094 (5 points): a test-data reset puts back only what the test changed",
-   "pointsDone": 0.0
+   "pointsRaised": 6.0
   },
   {
    "at": "2026-11-15T16:49:50+11:00",
@@ -861,7 +861,7 @@
   {
    "at": "2026-11-15T16:52:35+11:00",
    "change": "Compliance raised COMPLIANCE-DASHBOARD-B-058 (1 point): pop-up messages say Close, as the design does",
-   "pointsDone": 0.0
+   "pointsRaised": 1.0
   },
   {
    "at": "2026-11-15T17:05:55+11:00",
@@ -1091,7 +1091,7 @@
   {
    "at": "2026-11-16T10:34:25+11:00",
    "change": "Shell raised SHELL-F-136 (5), F-137 (2), F-138 (2), B-087 (1) from the 16-11 manual test; split F-133 (8) into F-134 (3) and F-135 (5)",
-   "pointsDone": 0.0
+   "pointsRaised": 10.0
   }
  ]
 }

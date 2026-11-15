@@ -221,9 +221,10 @@ code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
 
     // ---- Update log
     var lg=(S.log||[]).slice().sort(function(a,b){return a.at<b.at?1:-1;});
-    var u='<thead><tr><th>Recorded</th><th>Change</th><th style="text-align:right">Points done</th></tr></thead><tbody>';
-    lg.forEach(function(e){u+='<tr><td style="white-space:nowrap">'+esc(stamp(e.at))+'</td><td>'+esc(e.change)+'</td><td style="text-align:right">'+(e.pointsDone?"+"+n(e.pointsDone):"—")+'</td></tr>';});
-    if(!lg.length)u+='<tr><td colspan="3" class="muted">No updates recorded yet.</td></tr>';
+    var u='<thead><tr><th>Recorded</th><th>Change</th><th style="text-align:right">Points done</th><th style="text-align:right">Added to scope</th></tr></thead><tbody>';
+    var sgn=function(v){return v>0?"+"+n(v):v<0?"−"+n(-v):"—";};
+    lg.forEach(function(e){u+='<tr><td style="white-space:nowrap">'+esc(stamp(e.at))+'</td><td>'+esc(e.change)+'</td><td style="text-align:right">'+(e.pointsDone?"+"+n(e.pointsDone):"—")+'</td><td style="text-align:right">'+sgn(e.pointsRaised||0)+'</td></tr>';});
+    if(!lg.length)u+='<tr><td colspan="4" class="muted">No updates recorded yet.</td></tr>';
     $("updates").innerHTML=u+'</tbody>';
 
     // ---- Sources
