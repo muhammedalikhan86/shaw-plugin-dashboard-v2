@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 297.0,
-   "pointsRemaining": 230.0,
-   "pointsTotal": 527.0,
-   "itemsRemaining": 86,
+   "pointsRemaining": 236.0,
+   "pointsTotal": 533.0,
+   "itemsRemaining": 88,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 74.0,
    "rateWhole": 62.71,
-   "pointsRemaining": 431.0,
-   "itemsRemaining": 159
+   "pointsRemaining": 437.0,
+   "itemsRemaining": 161
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T16:44:33+11:00",
+ "updatedAt": "2026-11-15T16:47:15+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -841,6 +841,11 @@
   {
    "at": "2026-11-15T16:44:33+11:00",
    "change": "Compliance raised COMPLIANCE-DASHBOARD-B-057 (1 point): a test clean-up that runs twice no longer fails",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T16:47:15+11:00",
+   "change": "Portfolio Services raised OFA-B-093 (1 point): a refused test-data reset says why; and OFA-B-094 (5 points): a test-data reset puts back only what the test changed",
    "pointsDone": 0.0
   }
  ]
