@@ -49,10 +49,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 300.0,
-   "pointsRemaining": 241.0,
+   "pointsDone": 305.0,
+   "pointsRemaining": 236.0,
    "pointsTotal": 541.0,
-   "itemsRemaining": 89,
+   "itemsRemaining": 88,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 75.4,
+  "pointsPerWorkingDay": 75.9,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 63.8,
+  "pointsPerWorkingDayWholePeriod": 64.18,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 829.0,
-    "pointsDoneThatDay": 120.0
+    "pointsDone": 834.0,
+    "pointsDoneThatDay": 125.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -202,8 +202,8 @@
     "optimistic": "2026-11-27",
     "likely": "2026-11-27",
     "pessimistic": "2026-11-30",
-    "rateLast10": 25.5,
-    "rateWhole": 23.08
+    "rateLast10": 26.0,
+    "rateWhole": 23.46
    },
    "Advisor": {
     "optimistic": "2026-11-23",
@@ -225,10 +225,10 @@
    "likely": "2026-11-27",
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 75.4,
-   "rateWhole": 63.8,
-   "pointsRemaining": 451.0,
-   "itemsRemaining": 163
+   "rateLast10": 75.9,
+   "rateWhole": 64.18,
+   "pointsRemaining": 446.0,
+   "itemsRemaining": 162
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T19:39:34+11:00",
+ "updatedAt": "2026-11-15T19:54:35+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -957,6 +957,11 @@
    "at": "2026-11-15T19:39:34+11:00",
    "change": "Shell raised SHELL-B-084 (every component's tests put the shared register back after writing to it, 3 points)",
    "pointsRaised": 3
+  },
+  {
+   "at": "2026-11-15T19:54:35+11:00",
+   "change": "Portfolio Services finished OFA-B-094 (a writing test scenario puts back only its own rows, 5 points)",
+   "pointsDone": 5.0
   }
  ]
 }
