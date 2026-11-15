@@ -1174,6 +1174,6 @@ mat-list:is(.hsc,[classname~="hsc"]),mat-list:is(.hsc,[classname~="hsc"]) *{lett
 .app-layer table.ot[data-cut] > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell][data-cut] :is(.cl>span,.cl>a,.cl>.sub,.stk>span,.stk>.sub,.stk>a,.stk>button.sed){display:block!important;max-width:100%!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
 .app-layer table.ot[data-cut] > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell][data-cut] .cl>mat-chip{max-width:100%!important;overflow:hidden!important;text-overflow:ellipsis!important}
 /* P76: in a fitted table every cell's text stays on one line, cut with an ellipsis and shown in full on hover */
-.app-layer table.ot[data-cut] td[mat-cell][data-one] :is(.cl,.stk){min-width:0;max-width:100%}
-.app-layer table.ot[data-cut] td[mat-cell][data-one] :is(.cl>span,.cl>a,.cl>.sub,.stk>span,.stk>.sub,.stk>a){max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap!important}
-.app-layer table.ot[data-cut] td[mat-cell][data-one]:not([data-cut]) :is(.cl>span,.cl>.sub,.stk>span,.stk>.sub){display:block}
+.app-layer table.ot[data-fit1] td[mat-cell][data-one] :is(.cl,.stk){min-width:0;max-width:100%}
+.app-layer table.ot[data-fit1] td[mat-cell][data-one] :is(.cl>span,.cl>a,.cl>.sub,.stk>span,.stk>.sub,.stk>a){max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap!important}
+.app-layer table.ot[data-fit1] td[mat-cell][data-one]:not([data-cut]) :is(.cl>span,.cl>.sub,.stk>span,.stk>.sub){display:block}
