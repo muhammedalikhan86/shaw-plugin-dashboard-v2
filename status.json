@@ -39,8 +39,8 @@
     "landing-page"
    ],
    "pointsDone": 223.0,
-   "pointsRemaining": 86.0,
-   "pointsTotal": 309.0,
+   "pointsRemaining": 89.0,
+   "pointsTotal": 312.0,
    "itemsRemaining": 29,
    "itemsRemainingUnsized": []
   },
@@ -227,7 +227,7 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 78.0,
    "rateWhole": 65.79,
-   "pointsRemaining": 446.0,
+   "pointsRemaining": 449.0,
    "itemsRemaining": 160
   }
  },
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T22:55:16+11:00",
+ "updatedAt": "2026-11-15T22:56:12+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1047,6 +1047,11 @@
    "at": "2026-11-15T22:55:16+11:00",
    "change": "Shell & Landing Page raised SHELL-F-133 (table columns may wrap to two lines and keep a content floor, 5 points)",
    "pointsRaised": 5.0
+  },
+  {
+   "at": "2026-11-15T22:56:12+11:00",
+   "change": "Shell & Landing Page re-sized SHELL-F-133 from 5 to 8 points (it takes OFA-B-099's three hover fixes)",
+   "pointsRaised": 3.0
   }
  ]
 }
