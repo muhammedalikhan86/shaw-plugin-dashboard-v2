@@ -65,9 +65,9 @@
     "advisor-dashboard"
    ],
    "pointsDone": 229.0,
-   "pointsRemaining": 112.0,
-   "pointsTotal": 341.0,
-   "itemsRemaining": 38,
+   "pointsRemaining": 113.0,
+   "pointsTotal": 342.0,
+   "itemsRemaining": 39,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 71.5,
    "rateWhole": 60.77,
-   "pointsRemaining": 435.0,
-   "itemsRemaining": 159
+   "pointsRemaining": 436.0,
+   "itemsRemaining": 160
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T11:00:16+11:00",
+ "updatedAt": "2026-11-15T11:17:45+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -717,6 +717,11 @@
    "at": "2026-11-15T11:00:16+11:00",
    "change": "Compliance finished F-007 (the OFA Checklist and Closed months, read only, 5 points)",
    "pointsDone": 5.0
+  },
+  {
+   "at": "2026-11-15T11:17:45+11:00",
+   "change": "Advisor raised B-059 (1 point): the S-Account search icon's size and spacing",
+   "pointsDone": 0.0
   }
  ]
 }
