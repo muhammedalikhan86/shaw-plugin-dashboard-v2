@@ -49,10 +49,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 295.0,
-   "pointsRemaining": 231.0,
+   "pointsDone": 296.0,
+   "pointsRemaining": 230.0,
    "pointsTotal": 526.0,
-   "itemsRemaining": 87,
+   "itemsRemaining": 86,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 73.8,
+  "pointsPerWorkingDay": 73.9,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 62.55,
+  "pointsPerWorkingDayWholePeriod": 62.63,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 813.0,
-    "pointsDoneThatDay": 104.0
+    "pointsDone": 814.0,
+    "pointsDoneThatDay": 105.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -202,8 +202,8 @@
     "optimistic": "2026-11-27",
     "likely": "2026-11-27",
     "pessimistic": "2026-11-30",
-    "rateLast10": 25.0,
-    "rateWhole": 22.69
+    "rateLast10": 25.1,
+    "rateWhole": 22.77
    },
    "Advisor": {
     "optimistic": "2026-11-23",
@@ -225,10 +225,10 @@
    "likely": "2026-11-27",
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 73.8,
-   "rateWhole": 62.55,
-   "pointsRemaining": 431.0,
-   "itemsRemaining": 159
+   "rateLast10": 73.9,
+   "rateWhole": 62.63,
+   "pointsRemaining": 430.0,
+   "itemsRemaining": 158
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T16:13:09+11:00",
+ "updatedAt": "2026-11-15T16:20:22+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -822,6 +822,11 @@
    "at": "2026-11-15T16:13:09+11:00",
    "change": "Portfolio Services raised OFA-B-091 (1 point): the OFA Checklist keeps its page header in the error and empty states",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T16:20:22+11:00",
+   "change": "Portfolio Services finished OFA-B-090 (the OFA Checklist's error and empty cards in the design's words, 1 point)",
+   "pointsDone": 1.0
   }
  ]
 }
