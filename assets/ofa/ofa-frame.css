@@ -1167,9 +1167,13 @@ mat-list:is(.hsc,[classname~="hsc"]),mat-list:is(.hsc,[classname~="hsc"]) *{lett
 .hist .sel[data-err="true"]{border-color:var(--mat-sys-error)!important}
 /* P65 / P73: a Renewal tracker table under the fit pass is laid out at the card's width once the pass has narrowed it */
 .app-layer table.ot[data-cut]:has(> tbody > tr:is(.rtn,[classname~="rtn"])){width:100%!important;min-width:0!important;table-layout:fixed!important}
-/* P73: where the headings cannot all fit, a narrowed heading cuts with an ellipsis and shows in full on hover */
-.app-layer table.ot[data-cut] th[data-cuth] .hd{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* P73 / P75: where the headings cannot all fit at two lines, a narrowed heading cuts with an ellipsis and shows in full on hover */
+.app-layer table.ot[data-cut] th[data-cuth] .hd{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:normal;overflow-wrap:anywhere} /* P75: a cut heading keeps its two lines, the second ending in an ellipsis */
 .app-layer table.ot[data-cut] > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell][data-cut]{max-width:0!important;overflow:hidden!important}
 .app-layer table.ot[data-cut] > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell][data-cut] :is(.cl,.stk){min-width:0!important;max-width:100%!important}
 .app-layer table.ot[data-cut] > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell][data-cut] :is(.cl>span,.cl>a,.cl>.sub,.stk>span,.stk>.sub,.stk>a,.stk>button.sed){display:block!important;max-width:100%!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
 .app-layer table.ot[data-cut] > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell][data-cut] .cl>mat-chip{max-width:100%!important;overflow:hidden!important;text-overflow:ellipsis!important}
+/* P76: in a fitted table every cell's text stays on one line, cut with an ellipsis and shown in full on hover */
+.app-layer table.ot[data-cut] td[mat-cell][data-one] :is(.cl,.stk){min-width:0;max-width:100%}
+.app-layer table.ot[data-cut] td[mat-cell][data-one] :is(.cl>span,.cl>a,.cl>.sub,.stk>span,.stk>.sub,.stk>a){max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap!important}
+.app-layer table.ot[data-cut] td[mat-cell][data-one]:not([data-cut]) :is(.cl>span,.cl>.sub,.stk>span,.stk>.sub){display:block}
