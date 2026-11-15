@@ -78,9 +78,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 107.0,
-   "pointsRemaining": 26.0,
-   "pointsTotal": 133.0,
-   "itemsRemaining": 11,
+   "pointsRemaining": 28.0,
+   "pointsTotal": 135.0,
+   "itemsRemaining": 12,
    "itemsRemainingUnsized": []
   }
  ],
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 75.0,
    "rateWhole": 63.49,
-   "pointsRemaining": 435.0,
-   "itemsRemaining": 160
+   "pointsRemaining": 437.0,
+   "itemsRemaining": 161
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T18:42:45+11:00",
+ "updatedAt": "2026-11-15T18:57:52+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -912,6 +912,11 @@
    "at": "2026-11-15T18:42:45+11:00",
    "change": "Shell raised SHELL-B-081 (the layout check counts only an info icon that is drawn, 1 point)",
    "pointsRaised": 1
+  },
+  {
+   "at": "2026-11-15T18:57:52+11:00",
+   "change": "Compliance raised COMPLIANCE-DASHBOARD-B-061 (filter field start and date-range buttons as the board, 2 points)",
+   "pointsRaised": 2
   }
  ]
 }
