@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 223.0,
-   "pointsRemaining": 75.0,
-   "pointsTotal": 298.0,
-   "itemsRemaining": 25,
+   "pointsRemaining": 78.0,
+   "pointsTotal": 301.0,
+   "itemsRemaining": 26,
    "itemsRemainingUnsized": []
   },
   {
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 76.4,
    "rateWhole": 64.57,
-   "pointsRemaining": 447.0,
-   "itemsRemaining": 160
+   "pointsRemaining": 450.0,
+   "itemsRemaining": 161
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T20:30:54+11:00",
+ "updatedAt": "2026-11-15T20:52:40+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -992,6 +992,11 @@
    "at": "2026-11-15T20:30:54+11:00",
    "change": "Portfolio Services raised OFA-B-098 (the Exceptions report's Adviser and Product cells cut on one line, in the full view too, 1 point)",
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-15T20:52:40+11:00",
+   "change": "Shell & Landing Page raised SHELL-B-085 (filter dialogs get their own spacing, 3 points)",
+   "pointsRaised": 3.0
   }
  ]
 }
