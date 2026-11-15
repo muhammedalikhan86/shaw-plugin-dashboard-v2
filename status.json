@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 305.0,
-   "pointsRemaining": 236.0,
-   "pointsTotal": 541.0,
-   "itemsRemaining": 88,
+   "pointsRemaining": 237.0,
+   "pointsTotal": 542.0,
+   "itemsRemaining": 89,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 76.4,
    "rateWhole": 64.57,
-   "pointsRemaining": 446.0,
-   "itemsRemaining": 159
+   "pointsRemaining": 447.0,
+   "itemsRemaining": 160
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T20:28:15+11:00",
+ "updatedAt": "2026-11-15T20:30:54+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -987,6 +987,11 @@
    "at": "2026-11-15T20:28:15+11:00",
    "change": "Shell finished SHELL-B-083 (the layout and parity checks draw real scrollbars, 2 points)",
    "pointsDone": 2.0
+  },
+  {
+   "at": "2026-11-15T20:30:54+11:00",
+   "change": "Portfolio Services raised OFA-B-098 (the Exceptions report's Adviser and Product cells cut on one line, in the full view too, 1 point)",
+   "pointsRaised": 1.0
   }
  ]
 }
