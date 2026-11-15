@@ -78,9 +78,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 102.0,
-   "pointsRemaining": 25.0,
-   "pointsTotal": 127.0,
-   "itemsRemaining": 9,
+   "pointsRemaining": 26.0,
+   "pointsTotal": 128.0,
+   "itemsRemaining": 10,
    "itemsRemainingUnsized": []
   }
  ],
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 73.6,
    "rateWhole": 62.4,
-   "pointsRemaining": 428.0,
-   "itemsRemaining": 155
+   "pointsRemaining": 429.0,
+   "itemsRemaining": 156
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T15:40:52+11:00",
+ "updatedAt": "2026-11-15T15:42:03+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -802,6 +802,11 @@
    "at": "2026-11-15T15:40:52+11:00",
    "change": "Portfolio Services finished OFA-B-085 (Compliance's checklist months list made fast, 1 point)",
    "pointsDone": 1.0
+  },
+  {
+   "at": "2026-11-15T15:42:03+11:00",
+   "change": "Compliance raised COMPLIANCE-DASHBOARD-B-056 (1 point): a flaky start-up test",
+   "pointsDone": 0.0
   }
  ]
 }
