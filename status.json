@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 223.0,
-   "pointsRemaining": 78.0,
-   "pointsTotal": 301.0,
-   "itemsRemaining": 26,
+   "pointsRemaining": 79.0,
+   "pointsTotal": 302.0,
+   "itemsRemaining": 27,
    "itemsRemainingUnsized": []
   },
   {
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 76.6,
    "rateWhole": 64.72,
-   "pointsRemaining": 448.0,
-   "itemsRemaining": 160
+   "pointsRemaining": 449.0,
+   "itemsRemaining": 161
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T21:26:18+11:00",
+ "updatedAt": "2026-11-15T21:32:48+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1002,6 +1002,11 @@
    "at": "2026-11-15T21:26:18+11:00",
    "change": "Compliance finished COMPLIANCE-DASHBOARD-B-055 (Closed months and OFA Checklist minor board gaps, 2 points)",
    "pointsDone": 2.0
+  },
+  {
+   "at": "2026-11-15T21:32:48+11:00",
+   "change": "Shell & Landing Page raised SHELL-B-086 (the date range's separator takes the board's colour, 1 point)",
+   "pointsRaised": 1.0
   }
  ]
 }
