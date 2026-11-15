@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 300.0,
-   "pointsRemaining": 233.0,
-   "pointsTotal": 533.0,
-   "itemsRemaining": 86,
+   "pointsRemaining": 234.0,
+   "pointsTotal": 534.0,
+   "itemsRemaining": 87,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 74.9,
    "rateWhole": 63.41,
-   "pointsRemaining": 432.0,
-   "itemsRemaining": 158
+   "pointsRemaining": 433.0,
+   "itemsRemaining": 159
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T18:22:28+11:00",
+ "updatedAt": "2026-11-15T18:29:36+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -892,6 +892,11 @@
    "at": "2026-11-15T18:22:28+11:00",
    "change": "Compliance finished COMPLIANCE-DASHBOARD-B-057 (the wording clean-up counts a 404 as already removed, 1 point)",
    "pointsDone": 1.0
+  },
+  {
+   "at": "2026-11-15T18:29:36+11:00",
+   "change": "Portfolio Services raised OFA-B-095 (the OFA Notification Form request's note field reads as the board, 1 point)",
+   "pointsRaised": 1
   }
  ]
 }
