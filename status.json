@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 226.0,
-   "pointsRemaining": 96.0,
-   "pointsTotal": 322.0,
-   "itemsRemaining": 33,
+   "pointsRemaining": 98.0,
+   "pointsTotal": 324.0,
+   "itemsRemaining": 34,
    "itemsRemainingUnsized": []
   },
   {
@@ -198,7 +198,7 @@
   "perComponent": {
    "Shell & Landing Page": {
     "optimistic": "2026-11-23",
-    "likely": "2026-11-23",
+    "likely": "2026-11-24",
     "pessimistic": "2026-11-24",
     "rateLast10": 21.6,
     "rateWhole": 17.01
@@ -232,8 +232,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 78.8,
    "rateWhole": 66.4,
-   "pointsRemaining": 465.0,
-   "itemsRemaining": 171
+   "pointsRemaining": 467.0,
+   "itemsRemaining": 172
   }
  },
  "milestones": [
@@ -264,7 +264,7 @@
   },
   {
    "name": "Shell & Landing Page build complete (likely)",
-   "date": "2026-11-23",
+   "date": "2026-11-24",
    "kind": "forecast"
   },
   {
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T10:42:23+11:00",
+ "updatedAt": "2026-11-16T10:54:27+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1098,6 +1098,11 @@
    "change": "Advisor finished ADVISOR-DASHBOARD-B-063 (an empty OFA table draws only its message, 2 points); raised B-064, B-065 (board gaps, 1 each) and B-066 to B-070 from the 16-11 manual test (6 points)",
    "pointsDone": 2.0,
    "pointsRaised": 8.0
+  },
+  {
+   "at": "2026-11-16T10:54:27+11:00",
+   "change": "Shell raised SHELL-F-139 (2 points): the OFA boards' tab strip as a shared style, found by Portfolio Services' OFA-B-096",
+   "pointsRaised": 2.0
   }
  ]
 }
