@@ -1157,3 +1157,19 @@ mat-list:is(.hsc,[classname~="hsc"]),mat-list:is(.hsc,[classname~="hsc"]) *{lett
 
 /* P55 (Compliance, Wording): the versions table's Open document link may take two lines, so the table fits its card at 1440px */
 .app-layer table.ot td[mat-cell]:is(.lnkw,[classname~="lnkw"]),.app-layer table.ot td[mat-cell]:is(.lnkw,[classname~="lnkw"]) *{white-space:normal!important}
+/* H10 / R32: History's period and search, above its two tabs; the tab counts; "No history matches" */
+.hist-bar{display:flex;flex-wrap:wrap;align-items:flex-start;gap:8px 16px;padding-top:8px}
+.hist-rng{position:relative;flex:1 1 260px;min-width:240px;max-width:340px}
+.hist-bar>.hist-q{flex:1 1 240px;min-width:200px}
+.hist-cal{position:fixed;z-index:1000;width:296px;padding:12px;background:var(--mat-sys-surface);border-radius:var(--app-radius);box-shadow:var(--mat-sys-level2)}
+.hist-n{display:inline-flex;align-items:center;min-width:20px;height:20px;padding:0 6px;justify-content:center;border-radius:9999px;background:var(--mat-sys-surface-container-high);color:var(--mat-sys-on-surface-variant);font:var(--mat-sys-label-small);letter-spacing:0}
+.hist-none{padding:24px 8px;font:var(--mat-sys-body-medium);color:var(--mat-sys-on-surface-variant);text-align:center}
+.hist .sel[data-err="true"]{border-color:var(--mat-sys-error)!important}
+/* P65 / P73: a Renewal tracker table under the fit pass is laid out at the card's width once the pass has narrowed it */
+.app-layer table.ot[data-cut]:has(> tbody > tr:is(.rtn,[classname~="rtn"])){width:100%!important;min-width:0!important;table-layout:fixed!important}
+/* P73: where the headings cannot all fit, a narrowed heading cuts with an ellipsis and shows in full on hover */
+.app-layer table.ot[data-cut] th[data-cuth] .hd{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.app-layer table.ot[data-cut] > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell][data-cut]{max-width:0!important;overflow:hidden!important}
+.app-layer table.ot[data-cut] > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell][data-cut] :is(.cl,.stk){min-width:0!important;max-width:100%!important}
+.app-layer table.ot[data-cut] > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell][data-cut] :is(.cl>span,.cl>a,.cl>.sub,.stk>span,.stk>.sub,.stk>a,.stk>button.sed){display:block!important;max-width:100%!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+.app-layer table.ot[data-cut] > tbody > tr:is(.rtn,[classname~="rtn"],.rtl,[classname~="rtl"]) > td[mat-cell][data-cut] .cl>mat-chip{max-width:100%!important;overflow:hidden!important;text-overflow:ellipsis!important}
