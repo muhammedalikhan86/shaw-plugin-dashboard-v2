@@ -77,17 +77,17 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 107.0,
-   "pointsRemaining": 28.0,
+   "pointsDone": 108.0,
+   "pointsRemaining": 27.0,
    "pointsTotal": 135.0,
-   "itemsRemaining": 12,
+   "itemsRemaining": 11,
    "itemsRemainingUnsized": []
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 75.0,
+  "pointsPerWorkingDay": 75.1,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 63.49,
+  "pointsPerWorkingDayWholePeriod": 63.57,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 825.0,
-    "pointsDoneThatDay": 116.0
+    "pointsDone": 826.0,
+    "pointsDoneThatDay": 117.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -216,8 +216,8 @@
     "optimistic": "2026-11-18",
     "likely": "2026-11-18",
     "pessimistic": "2026-11-19",
-    "rateLast10": 9.9,
-    "rateWhole": 8.26
+    "rateLast10": 10.0,
+    "rateWhole": 8.34
    }
   },
   "overall": {
@@ -225,10 +225,10 @@
    "likely": "2026-11-27",
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 75.0,
-   "rateWhole": 63.49,
-   "pointsRemaining": 437.0,
-   "itemsRemaining": 161
+   "rateLast10": 75.1,
+   "rateWhole": 63.57,
+   "pointsRemaining": 436.0,
+   "itemsRemaining": 160
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T18:57:52+11:00",
+ "updatedAt": "2026-11-15T18:58:59+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -917,6 +917,11 @@
    "at": "2026-11-15T18:57:52+11:00",
    "change": "Compliance raised COMPLIANCE-DASHBOARD-B-061 (filter field start and date-range buttons as the board, 2 points)",
    "pointsRaised": 2
+  },
+  {
+   "at": "2026-11-15T18:58:59+11:00",
+   "change": "Compliance finished COMPLIANCE-DASHBOARD-B-059 (the Cull list's minor board gaps, 1 point)",
+   "pointsDone": 1.0
   }
  ]
 }
