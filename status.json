@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 220.0,
-   "pointsRemaining": 70.0,
-   "pointsTotal": 290.0,
-   "itemsRemaining": 25,
+   "pointsRemaining": 73.0,
+   "pointsTotal": 293.0,
+   "itemsRemaining": 26,
    "itemsRemainingUnsized": []
   },
   {
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 75.4,
    "rateWhole": 63.8,
-   "pointsRemaining": 448.0,
-   "itemsRemaining": 162
+   "pointsRemaining": 451.0,
+   "itemsRemaining": 163
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T19:36:49+11:00",
+ "updatedAt": "2026-11-15T19:39:34+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -952,6 +952,11 @@
    "at": "2026-11-15T19:36:49+11:00",
    "change": "Shell raised SHELL-B-083 (the layout and parity checks draw scrollbars as a desktop browser does, 2 points)",
    "pointsRaised": 2
+  },
+  {
+   "at": "2026-11-15T19:39:34+11:00",
+   "change": "Shell raised SHELL-B-084 (every component's tests put the shared register back after writing to it, 3 points)",
+   "pointsRaised": 3
   }
  ]
 }
