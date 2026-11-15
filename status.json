@@ -77,17 +77,17 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 109.0,
-   "pointsRemaining": 26.0,
+   "pointsDone": 111.0,
+   "pointsRemaining": 24.0,
    "pointsTotal": 135.0,
-   "itemsRemaining": 10,
+   "itemsRemaining": 9,
    "itemsRemainingUnsized": []
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 76.4,
+  "pointsPerWorkingDay": 76.6,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 64.57,
+  "pointsPerWorkingDayWholePeriod": 64.72,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -182,8 +182,8 @@
    },
    {
     "date": "2026-11-15",
-    "pointsDone": 839.0,
-    "pointsDoneThatDay": 130.0
+    "pointsDone": 841.0,
+    "pointsDoneThatDay": 132.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -216,8 +216,8 @@
     "optimistic": "2026-11-18",
     "likely": "2026-11-18",
     "pessimistic": "2026-11-19",
-    "rateLast10": 10.1,
-    "rateWhole": 8.42
+    "rateLast10": 10.3,
+    "rateWhole": 8.57
    }
   },
   "overall": {
@@ -225,10 +225,10 @@
    "likely": "2026-11-27",
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 76.4,
-   "rateWhole": 64.57,
-   "pointsRemaining": 450.0,
-   "itemsRemaining": 161
+   "rateLast10": 76.6,
+   "rateWhole": 64.72,
+   "pointsRemaining": 448.0,
+   "itemsRemaining": 160
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T20:52:40+11:00",
+ "updatedAt": "2026-11-15T21:26:18+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -997,6 +997,11 @@
    "at": "2026-11-15T20:52:40+11:00",
    "change": "Shell & Landing Page raised SHELL-B-085 (filter dialogs get their own spacing, 3 points)",
    "pointsRaised": 3.0
+  },
+  {
+   "at": "2026-11-15T21:26:18+11:00",
+   "change": "Compliance finished COMPLIANCE-DASHBOARD-B-055 (Closed months and OFA Checklist minor board gaps, 2 points)",
+   "pointsDone": 2.0
   }
  ]
 }
