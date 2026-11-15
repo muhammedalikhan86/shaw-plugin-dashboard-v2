@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 295.0,
-   "pointsRemaining": 230.0,
-   "pointsTotal": 525.0,
-   "itemsRemaining": 86,
+   "pointsRemaining": 231.0,
+   "pointsTotal": 526.0,
+   "itemsRemaining": 87,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 73.8,
    "rateWhole": 62.55,
-   "pointsRemaining": 430.0,
-   "itemsRemaining": 158
+   "pointsRemaining": 431.0,
+   "itemsRemaining": 159
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T15:48:38+11:00",
+ "updatedAt": "2026-11-15T16:13:09+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -817,6 +817,11 @@
    "at": "2026-11-15T15:48:38+11:00",
    "change": "Advisor finished B-058 (the OFA questionnaire dialogs match the design, 2 points); raised B-060 and B-061 (1 point each)",
    "pointsDone": 2.0
+  },
+  {
+   "at": "2026-11-15T16:13:09+11:00",
+   "change": "Portfolio Services raised OFA-B-091 (1 point): the OFA Checklist keeps its page header in the error and empty states",
+   "pointsDone": 0.0
   }
  ]
 }
