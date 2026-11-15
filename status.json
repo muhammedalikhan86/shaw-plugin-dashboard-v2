@@ -795,7 +795,7 @@
   },
   {
    "at": "2026-11-15T15:20:48+11:00",
-   "change": "Portfolio Services finished OFA-B-070 (the shell's test scenarios read the seeded rows, 3 points)",
+   "change": "Shell raised and finished SHELL-F-130 (the business tests can stage the OFA Checklist's failed and empty states, 1 point)",
    "pointsDone": 1.0
   }
  ]
