@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 214.0,
-   "pointsRemaining": 66.0,
-   "pointsTotal": 280.0,
-   "itemsRemaining": 24,
+   "pointsRemaining": 69.0,
+   "pointsTotal": 283.0,
+   "itemsRemaining": 25,
    "itemsRemainingUnsized": []
   },
   {
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 72.8,
    "rateWhole": 61.77,
-   "pointsRemaining": 432.0,
-   "itemsRemaining": 158
+   "pointsRemaining": 435.0,
+   "itemsRemaining": 159
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T13:11:35+11:00",
+ "updatedAt": "2026-11-15T13:13:11+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -766,6 +766,11 @@
   {
    "at": "2026-11-15T13:11:35+11:00",
    "change": "Portfolio Services raised OFA-B-088 (hidden monthly-cycle steps stay in the page, 1 point) and OFA-B-089 (Take off the run dialog's missing line, 1 point)",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-15T13:13:11+11:00",
+   "change": "Shell raised SHELL-B-080 (2 points): one test's clean-up wipes the test data while other tests run; SHELL-B-066 grew 2 to 3",
    "pointsDone": 0.0
   }
  ]
