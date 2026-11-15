@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 310.0,
-   "pointsRemaining": 234.0,
-   "pointsTotal": 544.0,
-   "itemsRemaining": 88,
+   "pointsRemaining": 239.0,
+   "pointsTotal": 549.0,
+   "itemsRemaining": 90,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -227,8 +227,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 78.2,
    "rateWhole": 65.94,
-   "pointsRemaining": 448.0,
-   "itemsRemaining": 160
+   "pointsRemaining": 453.0,
+   "itemsRemaining": 162
   }
  },
  "milestones": [
@@ -306,7 +306,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-15T23:08:56+11:00",
+ "updatedAt": "2026-11-15T23:11:14+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1062,6 +1062,16 @@
    "at": "2026-11-15T23:08:56+11:00",
    "change": "Compliance raised COMPLIANCE-DASHBOARD-B-062 (the Cull list's Reason column wraps at the board's width; waits on SHELL-F-133, 1 point)",
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-15T23:11:14+11:00",
+   "change": "Portfolio Services raised OFA-B-101 (a review writes Reviewed, name and date to the account's History and the finding's notes, 3 points)",
+   "pointsRaised": 3.0
+  },
+  {
+   "at": "2026-11-15T23:11:14+11:00",
+   "change": "Portfolio Services raised OFA-B-100 (the Exceptions note dialog's board gaps, 2 points)",
+   "pointsRaised": 2.0
   }
  ]
 }
