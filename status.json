@@ -65,9 +65,9 @@
     "advisor-dashboard"
    ],
    "pointsDone": 265.0,
-   "pointsRemaining": 110.0,
-   "pointsTotal": 375.0,
-   "itemsRemaining": 42,
+   "pointsRemaining": 111.0,
+   "pointsTotal": 376.0,
+   "itemsRemaining": 43,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -232,8 +232,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 70.08,
-   "pointsRemaining": 483.0,
-   "itemsRemaining": 187
+   "pointsRemaining": 484.0,
+   "itemsRemaining": 188
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T20:58:56+11:00",
+ "updatedAt": "2026-11-16T21:01:12+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1251,6 +1251,11 @@
    "at": "2026-11-16T20:58:56+11:00",
    "change": "Shell done: SHELL-F-135 (table content floor; key columns never cut)",
    "pointsDone": 5.0
+  },
+  {
+   "at": "2026-11-16T21:01:12+11:00",
+   "change": "Advisor raised B-086 (Declined row S-Account colour)",
+   "pointsRaised": 1.0
   }
  ]
 }
