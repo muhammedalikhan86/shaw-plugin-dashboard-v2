@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 302.0,
-   "pointsRemaining": 55.0,
-   "pointsTotal": 357.0,
-   "itemsRemaining": 16,
+   "pointsRemaining": 56.0,
+   "pointsTotal": 358.0,
+   "itemsRemaining": 17,
    "itemsRemainingUnsized": []
   },
   {
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 81.08,
-   "pointsRemaining": 446.0,
-   "itemsRemaining": 170
+   "pointsRemaining": 447.0,
+   "itemsRemaining": 171
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T09:54:17+11:00",
+ "updatedAt": "2026-11-17T10:03:13+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1621,6 +1621,11 @@
    "at": "2026-11-17T09:54:17+11:00",
    "change": "Compliance raised COMPLIANCE-DASHBOARD-F-030 (3, read back issued notices) and B-075 (1, drop copies the shell now provides)",
    "pointsRaised": 4.0
+  },
+  {
+   "at": "2026-11-17T10:03:13+11:00",
+   "change": "Shell raised SHELL-B-117 (search box click lost to the overlay backdrop)",
+   "pointsRaised": 1.0
   }
  ]
 }
