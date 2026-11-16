@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 322.0,
-   "pointsRemaining": 258.0,
-   "pointsTotal": 580.0,
-   "itemsRemaining": 101,
+   "pointsRemaining": 260.0,
+   "pointsTotal": 582.0,
+   "itemsRemaining": 102,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -232,8 +232,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 69.7,
-   "pointsRemaining": 481.0,
-   "itemsRemaining": 182
+   "pointsRemaining": 483.0,
+   "itemsRemaining": 183
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T17:52:09+11:00",
+ "updatedAt": "2026-11-16T18:11:39+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1225,6 +1225,11 @@
   {
    "at": "2026-11-16T17:52:09+11:00",
    "change": "Advisor split F-112 (S-Account page): F-112 API reads 3 to 2, new F-113 page (3)",
+   "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-16T18:11:39+11:00",
+   "change": "Portfolio Services raised OFA-B-114 (Exceptions report headings cut)",
    "pointsRaised": 2.0
   }
  ]
