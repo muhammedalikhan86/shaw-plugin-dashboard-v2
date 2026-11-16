@@ -8,12 +8,12 @@
 <style>
 /* Numbers come from status.json, which the Hub session refreshes. This page only draws them. */
 :root{--bg:#F4F4F4;--card:#FFFFFF;--ink:#1A1A1A;--muted:#5C5C5C;--faint:#898781;--line:#E0E0E0;--grid:#E1E0D9;--accent:#E8501E;
-  --done:#2a78d6;--done-soft:#b7d3f6;--track:#ECEBE7;--weekend:#F1F0EC;--forecast:#2a78d6;
+  --done:#2a78d6;--done-soft:#b7d3f6;--track:#ECEBE7;--weekend:#F1F0EC;--forecast:#2a78d6;--added:#d0342c;--added-soft:#f3b9b5;
   --ok:#0ca30c;--warn:#fab219;--idle:#898781}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--grid:#2c2c2a;--accent:#FF6A33;
-  --done:#3987e5;--done-soft:#184f95;--track:#2A2A28;--weekend:#191918;--forecast:#3987e5}}
+  --done:#3987e5;--done-soft:#184f95;--track:#2A2A28;--weekend:#191918;--forecast:#3987e5;--added:#f0605a;--added-soft:#7a2a27}}
 :root[data-theme="dark"]{--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--grid:#2c2c2a;--accent:#FF6A33;
-  --done:#3987e5;--done-soft:#184f95;--track:#2A2A28;--weekend:#191918;--forecast:#3987e5}
+  --done:#3987e5;--done-soft:#184f95;--track:#2A2A28;--weekend:#191918;--forecast:#3987e5;--added:#f0605a;--added-soft:#7a2a27}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/22px Roboto,"Helvetica Neue",Arial,sans-serif}
 header{background:#000;padding:16px}
@@ -88,10 +88,10 @@ code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
 <p class="caveat" id="caveat"></p>
 
 <h2>Pace</h2>
-<p class="sub">Points completed each day. Weekend bars are overnight runs: their points count, but weekends never count as days in the forecast.</p>
+<p class="sub">Points completed (blue) and points added to scope (red) each day. Weekend bars are overnight runs: their points count, but weekends never count as days in the forecast.</p>
 <div class="card">
-<div class="legend"><span><i class="sw" style="background:var(--done)"></i>Weekday</span><span><i class="sw" style="background:var(--done-soft)"></i>Weekend (overnight runs)</span><span><i class="sw" style="background:var(--weekend);border:1px solid var(--line)"></i>Weekend</span></div>
-<div class="chartwrap"><svg id="pace" role="img" aria-label="Points completed per day"></svg></div>
+<div class="legend"><span><i class="sw" style="background:var(--done)"></i>Points done</span><span><i class="sw" style="background:var(--added)"></i>Points added</span><span><i class="sw" style="background:var(--done-soft)"></i>Weekend (overnight runs)</span><span><i class="sw" style="background:var(--weekend);border:1px solid var(--line)"></i>Weekend</span></div>
+<div class="chartwrap"><svg id="pace" role="img" aria-label="Points completed and points added per day"></svg></div>
 <p class="sub" id="paceNote" style="margin:10px 0 0"></p>
 </div>
 
@@ -238,7 +238,8 @@ code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
     var ser=S.velocity.series,svg=$("pace");
     var W=Math.max(640,$("pace").parentNode.clientWidth||640),H=240,L=40,R=8,T=16,B=40;
     svg.setAttribute("viewBox","0 0 "+W+" "+H);svg.setAttribute("width",W);svg.setAttribute("height",H);
-    var max=0;ser.forEach(function(p){max=Math.max(max,p.pointsDoneThatDay);});
+    var add={},addFrom=null;(S.log||[]).forEach(function(e){if(e.pointsRaised==null)return;var k=String(e.at).slice(0,10);add[k]=(add[k]||0)+e.pointsRaised;if(!addFrom||k<addFrom)addFrom=k;});
+    var max=0;ser.forEach(function(p){max=Math.max(max,p.pointsDoneThatDay,add[p.date]||0);});
     var step=max>100?50:25,top=Math.ceil(max/step)*step;
     var cw=(W-L-R)/ser.length,y=function(v){return T+(H-T-B)*(1-v/top);};
     for(var g=0;g<=top;g+=step){
@@ -248,11 +249,13 @@ code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
     ser.forEach(function(p,i){
       var t=d(p.date),we=weekend(t),x=L+i*cw;
       if(we)s("rect",{x:x,y:T,width:cw,height:H-T-B,fill:"var(--weekend)"},svg);
-      var v=p.pointsDoneThatDay,bw=Math.max(4,cw-6),bx=x+(cw-bw)/2;
-      if(v>0){var h=Math.max(2,y(0)-y(v)),r=Math.min(4,bw/2,h);
-        s("path",{d:"M"+bx+","+y(0)+"V"+(y(0)-h+r)+"q0,-"+r+" "+r+",-"+r+"H"+(bx+bw-r)+"q"+r+",0 "+r+","+r+"V"+y(0)+"Z",fill:we?"var(--done-soft)":"var(--done)"},svg);}
+      var v=p.pointsDoneThatDay,a=add[p.date],hasA=addFrom&&p.date>=addFrom,bw=Math.max(2,(cw-6)/2),bx=x+(cw-2*bw)/2;
+      var bar=function(val,bx0,fill){if(!(val>0))return;var h=Math.max(2,y(0)-y(val)),r=Math.min(4,bw/2,h);
+        s("path",{d:"M"+bx0+","+y(0)+"V"+(y(0)-h+r)+"q0,-"+r+" "+r+",-"+r+"H"+(bx0+bw-r)+"q"+r+",0 "+r+","+r+"V"+y(0)+"Z",fill:fill},svg);};
+      bar(v,bx,we?"var(--done-soft)":"var(--done)");
+      bar(a,bx+bw,we?"var(--added-soft)":"var(--added)");
       var hit=s("rect",{x:x,y:T,width:cw,height:H-T-B,fill:"transparent",tabindex:0,
-        "data-tip":"<b>"+fmt(t,true)+"</b>"+(we?" (weekend)":"")+"<br>"+n(v)+" points that day<br>"+n(p.pointsDone)+" points in the record so far"},svg);
+        "data-tip":"<b>"+fmt(t,true)+"</b>"+(we?" (weekend)":"")+"<br><span style=\"color:var(--done)\">"+n(v)+" points done</span>"+(hasA?"<br><span style=\"color:var(--added)\">"+((a||0)<0?"−"+n(-a):"+"+n(a||0))+" points added</span>":"")+"<br>"+n(p.pointsDone)+" points in the record so far"},svg);
       if(i===ser.length-1||new Date(t).getUTCDay()===1||i===0){
         var lb=s("text",{x:x+cw/2,y:H-B+16,"text-anchor":"middle","font-size":11,fill:"var(--faint)"},svg);lb.textContent=short(t);}
     });
@@ -260,6 +263,7 @@ code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
     var note=S.seriesNote||S.velocity.seriesNote;
     $("paceNote").textContent=note?isoToShort(note)+" The daily record adds up to "+n(last)+" points; the headline uses the PMBook total of "+n(done)+".":
       "The daily record starts "+fmt(d(ser[0].date))+" and adds up to "+n(last)+" points; the PMBook total done is "+n(done)+".";
+    if(addFrom)$("paceNote").textContent+=" Points added are recorded from "+fmt(d(addFrom))+" (net of withdrawals; a day with more withdrawn than added shows no red bar).";
   }
 
   function drawTimeline(S,asOf,ov){
