@@ -753,12 +753,12 @@ mat-dialog:is(.dlg,[classname~="dlg"]):is(.ov,[classname~="ov"])>mat-dialog-cont
 
 /* Compliance record: the page fills the window. Header card at its height, Platform accounts takes the middle, History and Documents the bottom half */
 .page:has(>.g24[data-fill="rc"]){height:100%;min-height:0;box-sizing:border-box}
-.g24[data-fill="rc"]{flex:1;min-height:0;align-items:stretch;grid-template-rows:max-content minmax(140px,1fr) minmax(300px,50%)}
+.g24[data-fill="rc"]{flex:1;min-height:0;align-items:stretch;grid-template-rows:max-content max-content minmax(300px,1fr)} /* Platform accounts at its own height (three rows at most), History and Documents fill the rest */
 .g24[data-fill="rc"]>div{min-height:0}
-.g24[data-fill="rc"]>div:not(:first-child){position:relative}
-.g24[data-fill="rc"]>div:not(:first-child)>mat-card{position:absolute;inset:0;height:auto!important;min-height:0;display:flex;flex-direction:column;overflow:hidden}
-.g24[data-fill="rc"]>div:not(:first-child)>mat-card>*{flex:none}
-.g24[data-fill="rc"]>div:not(:first-child)>mat-card>:last-child{flex:1 1 auto;min-height:0;overflow:auto}
+.g24[data-fill="rc"]>div:nth-child(n+3){position:relative}
+.g24[data-fill="rc"]>div:nth-child(n+3)>mat-card{position:absolute;inset:0;height:auto!important;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.g24[data-fill="rc"]>div:nth-child(n+3)>mat-card>*{flex:none}
+.g24[data-fill="rc"]>div:nth-child(n+3)>mat-card>:last-child{flex:1 1 auto;min-height:0;overflow:auto}
 
 /* S58 / W25: the open row's lines sit in the parent table's own columns */
 .app-layer table.ot > tbody > tr:is(.rtl,[classname~="rtl"],.rth,[classname~="rth"]) > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important;vertical-align:top!important;border-bottom:0!important;box-sizing:border-box}
@@ -1181,7 +1181,46 @@ mat-list:is(.hsc,[classname~="hsc"]),mat-list:is(.hsc,[classname~="hsc"]) *{lett
 .app-layer table.ot[data-p66] td[mat-cell]:not([data-free]){max-width:none!important}
 .app-layer table.ot[data-p66] td[mat-cell]:not([data-free]) :is(.cl,.stk,.cl>*,.cl>span,.cl>a,.cl>.sub,.stk>*,.stk>span,.stk>.sub,.stk>a){max-width:none!important;overflow:visible!important;text-overflow:clip!important}
 /* P66: while the fit pass measures what a cell's content needs, the cell's content takes its own width */
-.app-layer table.ot[data-p66m] td[mat-cell]:not([data-free]) > :is(.cl,.stk){width:max-content!important;max-width:none!important;min-width:0!important}
-.app-layer table.ot[data-p66m] td[mat-cell]:not([data-free]) > :is(.cl,.stk) > *{width:auto!important}
+.app-layer table.ot[data-p66m] td[mat-cell] > :is(.cl,.stk){width:max-content!important;max-width:none!important;min-width:0!important}
+.app-layer table.ot[data-p66m] td[mat-cell] > :is(.cl,.stk) > *{width:auto!important}
 /* P66: a heading wraps to at most two lines (the fit pass gives it room for two); only the h1l headings stay on one */
 .app-layer table.ot[data-p66] th[mat-header-cell]:is(.nw,[classname~="nw"]):not(.h1l):not([classname~="h1l"]),.app-layer table.ot[data-p66] th[mat-header-cell]:is(.nw,[classname~="nw"]):not(.h1l):not([classname~="h1l"]) .hd{white-space:normal}
+/* R33 (OFA Dashboard): an arrangement record's Platform accounts table shows two rows at most and scrolls inside its card; ofa-kit.js sets the height from the heading and the first two rows */
+.tsc[data-scroll^="rows"]{overflow-y:auto}
+.tsc[data-scroll^="rows"] th[mat-header-cell]{position:sticky;top:0;z-index:2}
+/* Exceptions report: in a fitted table the Since column is no longer held at 112px; it takes the width its date and note need on one line, so the note is not cut (the fit pass sets its width) */
+.app-layer table.ot[data-p66] :is(th,td):is(.sinc,[classname~="sinc"]){max-width:none!important}
+.app-layer table.ot[data-p66] td[mat-cell]:is(.sinc,[classname~="sinc"]) .cl{max-width:none!important}
+.app-layer table.ot[data-p66] td[mat-cell]:is(.sinc,[classname~="sinc"]) .cl>*{max-width:none!important;overflow:visible!important;text-overflow:clip!important}
+/* Compliance › Quarantine: the Extension column is a free-text column about 40 characters wide (fx40, 36ch: about 40 characters of ordinary text); a longer extension is cut with an ellipsis and shown in full on hover */
+.app-layer table.ot :is(th,td):is(.fx40,[classname~="fx40"]){width:36ch!important;min-width:36ch!important;max-width:36ch!important;box-sizing:content-box}
+.app-layer table.ot td[mat-cell]:is(.fx40,[classname~="fx40"]) :is(.cl,.stk){min-width:0!important;max-width:100%!important}
+/* Adviser board, an S-Account with no tab bar (sa4): details and Platform accounts at their own height, History and Documents side by side filling the rest */
+.page:has(>.g24[data-fill="sa4"]){height:100%;min-height:0;box-sizing:border-box}
+.g24[data-fill="sa4"]{flex:1;min-height:0;align-items:stretch;grid-template-rows:max-content max-content minmax(320px,1fr)}
+.g24[data-fill="sa4"]>div:nth-child(n+3){position:relative;min-height:0}
+.g24[data-fill="sa4"]>div:nth-child(n+3)>mat-card{position:absolute;inset:0;height:auto!important;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.g24[data-fill="sa4"]>div:nth-child(n+3)>mat-card>*{flex:none}
+.g24[data-fill="sa4"]>div:nth-child(n+3)>mat-card>:last-child{flex:1 1 auto;min-height:0;overflow:auto}
+/* History card: the period, the search and the two tabs stay put inside the card; only the list under the tabs scrolls */
+.hist{overflow:hidden!important;min-height:0}
+.hist>.hist-bar,.hist>mat-tab-group{flex:none}
+.hist>:is(.hist-per,.hist-notes){flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden}
+.hist>:is(.hist-per,.hist-notes) :is(mat-list,mat-nav-list){height:auto!important;max-height:none!important;overflow:visible!important;flex:none!important} /* the list takes its full height inside the scrolling area (a stat-tile rule had held it at 32px) */
+/* History card: the History part fills the card under its title, so the list under the tabs takes all the height that is left (it did not on the OFA Dashboard's record) */
+mat-card:has(>.hist){display:flex;flex-direction:column}
+mat-card>.hist{flex:1 1 auto;min-height:0}
+/* Free-text columns (Notes, Comments, Reason, Extension; marked data-free by the fit pass) are about 40 characters wide on every board; longer text is cut with an ellipsis and shown in full on hover */
+.app-layer table.ot[data-p66] :is(th,td)[data-free]{width:36ch!important;min-width:36ch!important;max-width:36ch!important;box-sizing:content-box}
+.app-layer table.ot[data-p66] td[mat-cell][data-free] :is(.cl,.stk){min-width:0!important;max-width:100%!important}
+.app-layer table.ot[data-p66] td[mat-cell][data-free] :is(.cl>*,.cl>span,.cl>a,.stk>*,.stk>span){display:block!important;max-width:100%!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+.app-layer table.ot[data-p66] td[mat-cell][data-free] *{white-space:nowrap!important}
+/* History card: Period and Search History each take half the card's width, on one line; on the Adviser board the Show all events switch keeps its own width on that same line, never on a second line */
+.hist-bar{flex-wrap:nowrap!important}
+.hist-bar>.hist-rng{flex:1 1 0;min-width:0;max-width:none}
+.hist-bar>:is(.hist-q,[classname~="hist-q"]){flex:1 1 0;min-width:0;max-width:none}
+.hist-bar>mat-slide-toggle{flex:none;white-space:nowrap}
+/* Quarantine list: Adviser's deadline and Last prompt keep their main text and name/time each on one line; the note under them is cut at about 40 characters, in full on hover */
+.app-layer table td.n3l,.app-layer table td.n3l *{white-space:nowrap!important}
+.app-layer table.ot[data-p66] td[mat-cell].n3l .cl>span.sub2,.app-layer table td.n3l .sub2{display:block!important;max-width:36ch!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.app-layer table.ot td[mat-cell]:is(.fx40,[classname~="fx40"]) :is(.cl>*,.cl>span,.cl>a,.stk>*,.stk>span){display:block!important;max-width:100%!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
