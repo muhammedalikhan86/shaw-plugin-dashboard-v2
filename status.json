@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 278.0,
-   "pointsRemaining": 65.0,
-   "pointsTotal": 343.0,
-   "itemsRemaining": 20,
+   "pointsRemaining": 68.0,
+   "pointsTotal": 346.0,
+   "itemsRemaining": 22,
    "itemsRemainingUnsized": []
   },
   {
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 77.0,
-   "pointsRemaining": 464.0,
-   "itemsRemaining": 175
+   "pointsRemaining": 467.0,
+   "itemsRemaining": 177
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T06:32:48+11:00",
+ "updatedAt": "2026-11-17T06:34:01+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1490,6 +1490,11 @@
    "at": "2026-11-17T06:32:48+11:00",
    "change": "Shell Group D done: 8 items, 12 points",
    "pointsDone": 12.0
+  },
+  {
+   "at": "2026-11-17T06:34:01+11:00",
+   "change": "Shell raised SHELL-B-102 and B-103",
+   "pointsRaised": 3.0
   }
  ]
 }
