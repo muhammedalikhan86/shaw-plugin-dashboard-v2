@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 328.0,
-   "pointsRemaining": 272.0,
-   "pointsTotal": 600.0,
-   "itemsRemaining": 111,
+   "pointsRemaining": 273.0,
+   "pointsTotal": 601.0,
+   "itemsRemaining": 112,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -209,7 +209,7 @@
     "rateWhole": 20.08
    },
    "Portfolio Services": {
-    "optimistic": "2026-11-26",
+    "optimistic": "2026-11-27",
     "likely": "2026-11-30",
     "pessimistic": "2026-12-02",
     "rateLast10": 38.95,
@@ -231,14 +231,14 @@
    }
   },
   "overall": {
-   "optimistic": "2026-11-26",
+   "optimistic": "2026-11-27",
    "likely": "2026-11-30",
    "pessimistic": "2026-12-02",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 76.08,
-   "pointsRemaining": 475.0,
-   "itemsRemaining": 182
+   "pointsRemaining": 476.0,
+   "itemsRemaining": 183
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T05:01:52+11:00",
+ "updatedAt": "2026-11-17T05:09:16+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1479,6 +1479,11 @@
   {
    "at": "2026-11-17T05:01:52+11:00",
    "change": "Shell raised: SHELL-B-101 (Show or hide columns panel lifts Material's 280px cap)",
+   "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-17T05:09:16+11:00",
+   "change": "Portfolio Services raised: B-127 (Quarantine list cuts names)",
    "pointsRaised": 1.0
   }
  ]
