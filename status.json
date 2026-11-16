@@ -65,8 +65,8 @@
     "advisor-dashboard"
    ],
    "pointsDone": 265.0,
-   "pointsRemaining": 122.0,
-   "pointsTotal": 387.0,
+   "pointsRemaining": 123.0,
+   "pointsTotal": 388.0,
    "itemsRemaining": 50,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
@@ -237,7 +237,7 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 71.99,
-   "pointsRemaining": 502.0,
+   "pointsRemaining": 503.0,
    "itemsRemaining": 199
   }
  },
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T01:29:46+11:00",
+ "updatedAt": "2026-11-17T02:00:40+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1346,6 +1346,11 @@
   {
    "at": "2026-11-17T01:29:46+11:00",
    "change": "Portfolio Services raised: B-116 (Exceptions report tab strip 3px short)",
+   "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-17T02:00:40+11:00",
+   "change": "Advisor resized: B-092 2 to 3 (adds the S-Account forecast ASF column)",
    "pointsRaised": 1.0
   }
  ]
