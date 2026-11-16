@@ -185,7 +185,7 @@ code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
     $("stats").innerHTML=
       stat("Points done",n(done),"of "+n(total)+" ("+n(done/total*100)+"%)")+
       stat("Points remaining",n(rem),items+" items left, "+unsized.length+" not sized yet")+
-      stat("Rate",v.pointsPerWorkingDay.toFixed(1),"points per working day, "+esc(isoToShort(v.window))+". Whole period: "+v.pointsPerWorkingDayWholePeriod.toFixed(1))+
+      stat("Rate",v.pointsPerWorkingDay.toFixed(1),"points a day, "+esc(isoToShort(v.window))+". Whole period: "+v.pointsPerWorkingDayWholePeriod.toFixed(1)+" a working day")+
       stat("Build complete (likely)",fmt(d(ov.likely)),"range "+short(d(ov.optimistic))+" – "+short(d(ov.pessimistic))+", "+workingDaysBetween(asOf,d(ov.likely))+" working days away");
 
     // ---- Components table
@@ -202,8 +202,8 @@ code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
     });
     h+='<tr><td><b style="font-weight:500">All</b></td><td class="num"><b style="font-weight:500">'+n(done)+'</b></td><td class="num"><b style="font-weight:500">'+n(rem)+'</b></td><td class="num"><b style="font-weight:500">'+n(total)+'</b></td><td><div class="bar"><span class="d" style="width:'+(done/total*100)+'%"></span><span class="r" style="width:'+(rem/total*100)+'%"></span></div><span class="muted" style="font-size:12px">'+n(done/total*100)+'%</span></td><td class="num">'+items+'</td><td class="num">'+ov.rateLast10.toFixed(1)+'</td><td><b style="font-weight:500">'+f(ov.likely)+'</b><br><span class="muted" style="font-size:12px">'+short(d(ov.optimistic))+" – "+short(d(ov.pessimistic))+"</span></td></tr></tbody>";
     $("comps").innerHTML=h;
-    $("caveat").innerHTML="<b style=\"font-weight:500\">This is a trend projection, not a plan.</b> It assumes the pace of the last 10 working days (optimistic) or of the whole period (pessimistic) continues; likely is the average of the two. "+
-      "It ignores the "+unsized.length+" unsized items and the new items raised each day, so the dates move as work is added. Mon–Fri only: weekend points count toward the totals, but weekends never count as days. "+
+    $("caveat").innerHTML="<b style=\"font-weight:500\">This is a trend projection, not a plan.</b> It assumes the pace of 11–15 Nov (optimistic; points per calendar day, weekends included) or of the whole period (pessimistic; points per working day) continues; likely is the average of the two. "+
+      "It ignores the "+unsized.length+" unsized items and the new items raised each day, so the dates move as work is added. The forecast counts Mon–Fri working days only; weekend points count toward the totals. "+
       "Overall build completion is the latest component (critical path: "+esc(ov.basis.split(";")[0].replace(/^critical path: the latest component date \(|\)$/g,""))+").";
 
     drawPace(S);
@@ -322,7 +322,7 @@ code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
           return;
         }
         bar(bStart,todayEnd,yy,"<b>"+esc(r.c.name)+"</b><br>"+n(r.c.pointsDone)+" of "+n(r.c.pointsTotal)+" points done");
-        bar(todayEnd,d(p.likely)+DAY,yy,"<b>"+esc(r.c.name)+" build complete (likely)</b><br>"+fmt(d(p.likely),true)+"<br>"+n(r.c.pointsRemaining)+" points left at "+p.rateLast10.toFixed(1)+" – "+p.rateWhole.toFixed(1)+" a working day",true);
+        bar(todayEnd,d(p.likely)+DAY,yy,"<b>"+esc(r.c.name)+" build complete (likely)</b><br>"+fmt(d(p.likely),true)+"<br>"+n(r.c.pointsRemaining)+" points left at "+p.rateLast10.toFixed(1)+" a day – "+p.rateWhole.toFixed(1)+" a working day",true);
         whisker(d(p.optimistic),d(p.pessimistic),yy+12,"<b>"+esc(r.c.name)+" range</b><br>"+f(p.optimistic)+" – "+f(p.pessimistic));
         label(Math.max(d(p.pessimistic),d(p.likely))+DAY,yy,short(d(p.likely)));
       }else if(r.k==="acc"){
