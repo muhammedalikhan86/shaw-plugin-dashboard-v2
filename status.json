@@ -65,9 +65,9 @@
     "advisor-dashboard"
    ],
    "pointsDone": 265.0,
-   "pointsRemaining": 125.0,
-   "pointsTotal": 390.0,
-   "itemsRemaining": 52,
+   "pointsRemaining": 128.0,
+   "pointsTotal": 393.0,
+   "itemsRemaining": 53,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -216,8 +216,8 @@
     "rateWhole": 24.76
    },
    "Advisor": {
-    "optimistic": "2026-11-26",
-    "likely": "2026-11-26",
+    "optimistic": "2026-11-27",
+    "likely": "2026-11-27",
     "pessimistic": "2026-11-27",
     "rateLast10": 18.12,
     "rateWhole": 17.84
@@ -231,14 +231,14 @@
    }
   },
   "overall": {
-   "optimistic": "2026-11-26",
+   "optimistic": "2026-11-27",
    "likely": "2026-11-30",
    "pessimistic": "2026-12-02",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 72.92,
-   "pointsRemaining": 497.0,
-   "itemsRemaining": 196
+   "pointsRemaining": 500.0,
+   "itemsRemaining": 197
   }
  },
  "milestones": [
@@ -279,7 +279,7 @@
   },
   {
    "name": "Advisor build complete (likely)",
-   "date": "2026-11-26",
+   "date": "2026-11-27",
    "kind": "forecast"
   },
   {
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T02:35:37+11:00",
+ "updatedAt": "2026-11-17T02:51:24+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1383,6 +1383,11 @@
   {
    "at": "2026-11-17T02:35:37+11:00",
    "change": "Portfolio Services raised: B-118 (Issuance dialog and preview sizes to the board) and B-119 (Adviser review cuts names)",
+   "pointsRaised": 3.0
+  },
+  {
+   "at": "2026-11-17T02:51:24+11:00",
+   "change": "Advisor raised: F-115 (S-Account page shows the Initial OFA status)",
    "pointsRaised": 3.0
   }
  ]
