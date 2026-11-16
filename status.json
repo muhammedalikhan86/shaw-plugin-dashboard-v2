@@ -64,10 +64,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 257.0,
-   "pointsRemaining": 106.0,
-   "pointsTotal": 363.0,
-   "itemsRemaining": 39,
+   "pointsDone": 265.0,
+   "pointsRemaining": 100.0,
+   "pointsTotal": 365.0,
+   "itemsRemaining": 33,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -87,7 +87,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 69.08,
+  "pointsPerWorkingDayWholePeriod": 69.7,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -187,8 +187,8 @@
    },
    {
     "date": "2026-11-16",
-    "pointsDone": 898.0,
-    "pointsDoneThatDay": 37.0
+    "pointsDone": 906.0,
+    "pointsDoneThatDay": 45.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -213,9 +213,9 @@
    "Advisor": {
     "optimistic": "2026-11-24",
     "likely": "2026-11-24",
-    "pessimistic": "2026-11-25",
+    "pessimistic": "2026-11-24",
     "rateLast10": 18.12,
-    "rateWhole": 17.22
+    "rateWhole": 17.84
    },
    "Compliance": {
     "optimistic": "2026-11-17",
@@ -231,9 +231,9 @@
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 69.08,
-   "pointsRemaining": 481.0,
-   "itemsRemaining": 183
+   "rateWhole": 69.7,
+   "pointsRemaining": 475.0,
+   "itemsRemaining": 177
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T17:16:53+11:00",
+ "updatedAt": "2026-11-16T17:37:11+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1205,6 +1205,12 @@
    "at": "2026-11-16T17:16:53+11:00",
    "change": "Shell raised SHELL-B-089 (board URL follows the port offset) and SHELL-B-090 (table card 4px high)",
    "pointsRaised": 3.0
+  },
+  {
+   "at": "2026-11-16T17:37:11+11:00",
+   "change": "Advisor: 8 bugs done (B-074, B-042, B-047, B-065, B-043, B-044, B-046, B-064); raised B-075, B-076",
+   "pointsDone": 8.0,
+   "pointsRaised": 2.0
   }
  ]
 }
