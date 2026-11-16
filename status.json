@@ -65,9 +65,9 @@
     "advisor-dashboard"
    ],
    "pointsDone": 265.0,
-   "pointsRemaining": 117.0,
-   "pointsTotal": 382.0,
-   "itemsRemaining": 47,
+   "pointsRemaining": 119.0,
+   "pointsTotal": 384.0,
+   "itemsRemaining": 48,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -232,8 +232,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 71.84,
-   "pointsRemaining": 498.0,
-   "itemsRemaining": 196
+   "pointsRemaining": 500.0,
+   "itemsRemaining": 197
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T23:08:15+11:00",
+ "updatedAt": "2026-11-16T23:23:16+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1306,6 +1306,11 @@
   {
    "at": "2026-11-16T23:08:15+11:00",
    "change": "Shell raised SHELL-B-094 (menu icons 20px; column-menu icons)",
+   "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-16T23:23:16+11:00",
+   "change": "Advisor raised B-091 (questionnaire column menu follows the board)",
    "pointsRaised": 2.0
   }
  ]
