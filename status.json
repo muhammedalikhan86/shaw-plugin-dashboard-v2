@@ -77,17 +77,17 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 120.0,
-   "pointsRemaining": 20.0,
-   "pointsTotal": 140.0,
+   "pointsDone": 123.0,
+   "pointsRemaining": 19.0,
+   "pointsTotal": 142.0,
    "itemsRemaining": 8,
    "itemsRemainingUnsized": []
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 80.9,
+  "pointsPerWorkingDay": 81.2,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 68.01,
+  "pointsPerWorkingDayWholePeriod": 68.24,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -187,8 +187,8 @@
    },
    {
     "date": "2026-11-16",
-    "pointsDone": 884.0,
-    "pointsDoneThatDay": 23.0
+    "pointsDone": 887.0,
+    "pointsDoneThatDay": 26.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -221,8 +221,8 @@
     "optimistic": "2026-11-18",
     "likely": "2026-11-18",
     "pessimistic": "2026-11-19",
-    "rateLast10": 11.2,
-    "rateWhole": 9.26
+    "rateLast10": 11.5,
+    "rateWhole": 9.49
    }
   },
   "overall": {
@@ -230,9 +230,9 @@
    "likely": "2026-11-30",
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 80.9,
-   "rateWhole": 68.01,
-   "pointsRemaining": 474.0,
+   "rateLast10": 81.2,
+   "rateWhole": 68.24,
+   "pointsRemaining": 473.0,
    "itemsRemaining": 180
   }
  },
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T13:30:31+11:00",
+ "updatedAt": "2026-11-16T13:48:40+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1158,6 +1158,12 @@
    "at": "2026-11-16T13:30:31+11:00",
    "change": "Shell & Landing Page: SHELL-F-134 done (a column heading may take two lines before it is cut)",
    "pointsDone": 3.0
+  },
+  {
+   "at": "2026-11-16T13:48:40+11:00",
+   "change": "Compliance: COMPLIANCE-DASHBOARD-B-064 and B-063 done as one group; B-065 and B-066 raised",
+   "pointsDone": 3.0,
+   "pointsRaised": 2.0
   }
  ]
 }
