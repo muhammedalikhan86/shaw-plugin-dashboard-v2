@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 328.0,
-   "pointsRemaining": 268.0,
-   "pointsTotal": 596.0,
-   "itemsRemaining": 109,
+   "pointsRemaining": 272.0,
+   "pointsTotal": 600.0,
+   "itemsRemaining": 111,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 76.08,
-   "pointsRemaining": 470.0,
-   "itemsRemaining": 179
+   "pointsRemaining": 474.0,
+   "itemsRemaining": 181
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T04:48:14+11:00",
+ "updatedAt": "2026-11-17T04:49:18+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1470,6 +1470,11 @@
    "at": "2026-11-17T04:48:14+11:00",
    "change": "Advisor done: group of 18 (F-112 S-Account API, F-113 S-Account page, B-090, B-091 and 14 one-point fixes; 23 points)",
    "pointsDone": 23.0
+  },
+  {
+   "at": "2026-11-17T04:49:18+11:00",
+   "change": "Portfolio Services raised: B-125 (Checklist board gaps), B-126 (Overview board gaps)",
+   "pointsRaised": 4.0
   }
  ]
 }
