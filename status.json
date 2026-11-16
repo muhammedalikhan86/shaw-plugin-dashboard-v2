@@ -64,10 +64,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 254.0,
-   "pointsRemaining": 108.0,
-   "pointsTotal": 362.0,
-   "itemsRemaining": 40,
+   "pointsDone": 257.0,
+   "pointsRemaining": 106.0,
+   "pointsTotal": 363.0,
+   "itemsRemaining": 38,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 81.2,
+  "pointsPerWorkingDay": 81.5,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 68.24,
+  "pointsPerWorkingDayWholePeriod": 68.47,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -187,8 +187,8 @@
    },
    {
     "date": "2026-11-16",
-    "pointsDone": 887.0,
-    "pointsDoneThatDay": 26.0
+    "pointsDone": 890.0,
+    "pointsDoneThatDay": 29.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -214,8 +214,8 @@
     "optimistic": "2026-11-24",
     "likely": "2026-11-24",
     "pessimistic": "2026-11-25",
-    "rateLast10": 20.4,
-    "rateWhole": 16.99
+    "rateLast10": 20.7,
+    "rateWhole": 17.22
    },
    "Compliance": {
     "optimistic": "2026-11-18",
@@ -230,10 +230,10 @@
    "likely": "2026-11-30",
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 81.2,
-   "rateWhole": 68.24,
-   "pointsRemaining": 473.0,
-   "itemsRemaining": 180
+   "rateLast10": 81.5,
+   "rateWhole": 68.47,
+   "pointsRemaining": 471.0,
+   "itemsRemaining": 178
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T13:48:40+11:00",
+ "updatedAt": "2026-11-16T14:08:40+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1164,6 +1164,12 @@
    "change": "Compliance: COMPLIANCE-DASHBOARD-B-064 and B-063 done as one group; B-065 and B-066 raised",
    "pointsDone": 3.0,
    "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-16T14:08:40+11:00",
+   "change": "Advisor: ADVISOR-DASHBOARD-B-071, B-072, B-073 done as one group; B-074 raised",
+   "pointsDone": 3.0,
+   "pointsRaised": 1.0
   }
  ]
 }
