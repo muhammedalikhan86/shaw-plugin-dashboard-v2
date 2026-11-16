@@ -38,10 +38,10 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 244.0,
-   "pointsRemaining": 95.0,
-   "pointsTotal": 339.0,
-   "itemsRemaining": 37,
+   "pointsDone": 255.0,
+   "pointsRemaining": 83.0,
+   "pointsTotal": 338.0,
+   "itemsRemaining": 29,
    "itemsRemainingUnsized": []
   },
   {
@@ -87,7 +87,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 72.07,
+  "pointsPerWorkingDayWholePeriod": 72.92,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -192,8 +192,8 @@
    },
    {
     "date": "2026-11-17",
-    "pointsDone": 937.0,
-    "pointsDoneThatDay": 1.0
+    "pointsDone": 948.0,
+    "pointsDoneThatDay": 12.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -204,9 +204,9 @@
    "Shell & Landing Page": {
     "optimistic": "2026-11-20",
     "likely": "2026-11-23",
-    "pessimistic": "2026-11-25",
+    "pessimistic": "2026-11-24",
     "rateLast10": 35.55,
-    "rateWhole": 18.38
+    "rateWhole": 19.23
    },
    "Portfolio Services": {
     "optimistic": "2026-11-26",
@@ -236,9 +236,9 @@
    "pessimistic": "2026-12-02",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 72.07,
-   "pointsRemaining": 503.0,
-   "itemsRemaining": 199
+   "rateWhole": 72.92,
+   "pointsRemaining": 491.0,
+   "itemsRemaining": 191
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T02:01:54+11:00",
+ "updatedAt": "2026-11-17T02:03:52+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1358,6 +1358,12 @@
    "change": "Compliance raised and done: B-072 (4px under every section header, as the board)",
    "pointsDone": 1.0,
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-17T02:03:52+11:00",
+   "change": "Shell done: run C-a (SHELL-B-093, B-088, B-094, F-138, F-137, B-092, B-087; 11 points). Closed with no shell defect: SHELL-B-090, B-074 (3 points withdrawn). Raised SHELL-B-096 (sidebar re-select, 2)",
+   "pointsDone": 11.0,
+   "pointsRaised": -1.0
   }
  ]
 }
