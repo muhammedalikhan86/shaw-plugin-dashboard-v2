@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 327.0,
-   "pointsRemaining": 263.0,
-   "pointsTotal": 590.0,
-   "itemsRemaining": 106,
+   "pointsRemaining": 264.0,
+   "pointsTotal": 591.0,
+   "itemsRemaining": 107,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 74.15,
-   "pointsRemaining": 487.0,
-   "itemsRemaining": 193
+   "pointsRemaining": 488.0,
+   "itemsRemaining": 194
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T04:07:23+11:00",
+ "updatedAt": "2026-11-17T04:11:40+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1428,6 +1428,11 @@
   {
    "at": "2026-11-17T04:07:23+11:00",
    "change": "Portfolio Services raised: B-120 (who moved a record to quarantine reads the whole carry-over chain)",
+   "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-17T04:11:40+11:00",
+   "change": "Portfolio Services raised: B-121 (sample S-Account carries the board's four platform accounts)",
    "pointsRaised": 1.0
   }
  ]
