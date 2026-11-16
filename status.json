@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 244.0,
-   "pointsRemaining": 93.0,
-   "pointsTotal": 337.0,
-   "itemsRemaining": 36,
+   "pointsRemaining": 95.0,
+   "pointsTotal": 339.0,
+   "itemsRemaining": 37,
    "itemsRemainingUnsized": []
   },
   {
@@ -232,8 +232,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 71.84,
-   "pointsRemaining": 496.0,
-   "itemsRemaining": 195
+   "pointsRemaining": 498.0,
+   "itemsRemaining": 196
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T22:55:28+11:00",
+ "updatedAt": "2026-11-16T23:08:15+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1302,6 +1302,11 @@
    "at": "2026-11-16T22:55:28+11:00",
    "change": "Compliance done: B-067, F-025, F-026, F-027, B-068, B-070, B-062",
    "pointsDone": 16.0
+  },
+  {
+   "at": "2026-11-16T23:08:15+11:00",
+   "change": "Shell raised SHELL-B-094 (menu icons 20px; column-menu icons)",
+   "pointsRaised": 2.0
   }
  ]
 }
