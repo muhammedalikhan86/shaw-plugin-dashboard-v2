@@ -65,9 +65,9 @@
     "advisor-dashboard"
    ],
    "pointsDone": 265.0,
-   "pointsRemaining": 124.0,
-   "pointsTotal": 389.0,
-   "itemsRemaining": 51,
+   "pointsRemaining": 125.0,
+   "pointsTotal": 390.0,
+   "itemsRemaining": 52,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -218,7 +218,7 @@
    "Advisor": {
     "optimistic": "2026-11-26",
     "likely": "2026-11-26",
-    "pessimistic": "2026-11-26",
+    "pessimistic": "2026-11-27",
     "rateLast10": 18.12,
     "rateWhole": 17.84
    },
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 72.92,
-   "pointsRemaining": 493.0,
-   "itemsRemaining": 193
+   "pointsRemaining": 494.0,
+   "itemsRemaining": 194
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T02:23:25+11:00",
+ "updatedAt": "2026-11-17T02:32:30+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1373,6 +1373,11 @@
   {
    "at": "2026-11-17T02:23:25+11:00",
    "change": "Portfolio Services raised: B-117 (sidebar re-click returns to the section's list)",
+   "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-17T02:32:30+11:00",
+   "change": "Advisor raised: B-095 (staged empty and failed scenarios onto the shell's new steps)",
    "pointsRaised": 1.0
   }
  ]
