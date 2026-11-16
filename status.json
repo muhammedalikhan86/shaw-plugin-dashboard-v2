@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 357.0,
-   "pointsRemaining": 253.0,
-   "pointsTotal": 610.0,
-   "itemsRemaining": 105,
+   "pointsRemaining": 257.0,
+   "pointsTotal": 614.0,
+   "itemsRemaining": 106,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 80.31,
-   "pointsRemaining": 447.0,
-   "itemsRemaining": 173
+   "pointsRemaining": 451.0,
+   "itemsRemaining": 174
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T09:44:34+11:00",
+ "updatedAt": "2026-11-17T09:49:34+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1605,6 +1605,11 @@
    "at": "2026-11-17T09:44:34+11:00",
    "change": "Portfolio Services G2 committed (OFA-F-126, F-127 and thirteen fixes)",
    "pointsDone": 29.0
+  },
+  {
+   "at": "2026-11-17T09:49:34+11:00",
+   "change": "Portfolio Services: OFA-F-021 resized 6 to 7; OFA-F-129 raised (3, compliance read-back views)",
+   "pointsRaised": 4.0
   }
  ]
 }
