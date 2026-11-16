@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 266.0,
-   "pointsRemaining": 74.0,
-   "pointsTotal": 340.0,
-   "itemsRemaining": 25,
+   "pointsRemaining": 75.0,
+   "pointsTotal": 341.0,
+   "itemsRemaining": 26,
    "itemsRemainingUnsized": []
   },
   {
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 74.15,
-   "pointsRemaining": 485.0,
-   "itemsRemaining": 191
+   "pointsRemaining": 486.0,
+   "itemsRemaining": 192
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T03:48:43+11:00",
+ "updatedAt": "2026-11-17T03:49:27+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1409,6 +1409,11 @@
    "at": "2026-11-17T03:48:43+11:00",
    "change": "Portfolio Services withdrew: B-116 (tab strip height moved to the shell)",
    "pointsRaised": -1.0
+  },
+  {
+   "at": "2026-11-17T03:49:27+11:00",
+   "change": "Shell raised: SHELL-B-098 (shared tab strip 45px against the board's 44px); D folds in SHELL-B-077, B-086",
+   "pointsRaised": 1.0
   }
  ]
 }
