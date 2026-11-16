@@ -65,9 +65,9 @@
     "advisor-dashboard"
    ],
    "pointsDone": 265.0,
-   "pointsRemaining": 104.0,
-   "pointsTotal": 369.0,
-   "itemsRemaining": 37,
+   "pointsRemaining": 106.0,
+   "pointsTotal": 371.0,
+   "itemsRemaining": 38,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -232,8 +232,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 69.7,
-   "pointsRemaining": 479.0,
-   "itemsRemaining": 181
+   "pointsRemaining": 481.0,
+   "itemsRemaining": 182
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T17:41:06+11:00",
+ "updatedAt": "2026-11-16T17:52:09+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1221,6 +1221,11 @@
    "at": "2026-11-16T17:41:06+11:00",
    "change": "Advisor withdrew B-081 (a design annotation, not product content)",
    "pointsRaised": -1.0
+  },
+  {
+   "at": "2026-11-16T17:52:09+11:00",
+   "change": "Advisor split F-112 (S-Account page): F-112 API reads 3 to 2, new F-113 page (3)",
+   "pointsRaised": 2.0
   }
  ]
 }
