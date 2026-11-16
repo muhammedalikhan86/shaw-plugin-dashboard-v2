@@ -49,9 +49,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 313.0,
-   "pointsRemaining": 251.0,
-   "pointsTotal": 564.0,
+   "pointsDone": 316.0,
+   "pointsRemaining": 249.0,
+   "pointsTotal": 565.0,
    "itemsRemaining": 97,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -85,9 +85,9 @@
   }
  ],
  "velocity": {
-  "pointsPerWorkingDay": 79.9,
+  "pointsPerWorkingDay": 80.2,
   "window": "last 10 working days (2026-11-02 to 2026-11-13), plus the weekend points of 2026-11-14",
-  "pointsPerWorkingDayWholePeriod": 67.24,
+  "pointsPerWorkingDayWholePeriod": 67.47,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -187,8 +187,8 @@
    },
    {
     "date": "2026-11-16",
-    "pointsDone": 874.0,
-    "pointsDoneThatDay": 13.0
+    "pointsDone": 877.0,
+    "pointsDoneThatDay": 16.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -207,8 +207,8 @@
     "optimistic": "2026-11-30",
     "likely": "2026-11-30",
     "pessimistic": "2026-12-01",
-    "rateLast10": 26.8,
-    "rateWhole": 24.07
+    "rateLast10": 27.1,
+    "rateWhole": 24.3
    },
    "Advisor": {
     "optimistic": "2026-11-24",
@@ -230,9 +230,9 @@
    "likely": "2026-11-30",
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
-   "rateLast10": 79.9,
-   "rateWhole": 67.24,
-   "pointsRemaining": 477.0,
+   "rateLast10": 80.2,
+   "rateWhole": 67.47,
+   "pointsRemaining": 475.0,
    "itemsRemaining": 181
   }
  },
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T12:24:45+11:00",
+ "updatedAt": "2026-11-16T12:44:27+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1136,6 +1136,12 @@
    "at": "2026-11-16T12:24:45+11:00",
    "change": "Compliance: COMPLIANCE-DASHBOARD-F-024 done (S-Account can never be hidden; tests added)",
    "pointsDone": 1.0
+  },
+  {
+   "at": "2026-11-16T12:44:27+11:00",
+   "change": "Portfolio Services: OFA-F-125 done; OFA-B-110 raised (heading wrap found by business tests)",
+   "pointsDone": 3.0,
+   "pointsRaised": 1.0
   }
  ]
 }
