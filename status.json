@@ -78,9 +78,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 145.0,
-   "pointsRemaining": 21.0,
-   "pointsTotal": 166.0,
-   "itemsRemaining": 8,
+   "pointsRemaining": 23.0,
+   "pointsTotal": 168.0,
+   "itemsRemaining": 9,
    "itemsRemainingUnsized": []
   }
  ],
@@ -225,7 +225,7 @@
    "Compliance": {
     "optimistic": "2026-11-19",
     "likely": "2026-11-19",
-    "pessimistic": "2026-11-19",
+    "pessimistic": "2026-11-20",
     "rateLast10": 20.38,
     "rateWhole": 11.18
    }
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 78.08,
-   "pointsRemaining": 474.0,
-   "itemsRemaining": 187
+   "pointsRemaining": 476.0,
+   "itemsRemaining": 188
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T09:31:54+11:00",
+ "updatedAt": "2026-11-17T09:32:29+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1595,6 +1595,11 @@
    "at": "2026-11-17T09:31:54+11:00",
    "change": "Shell raised SHELL-B-116 (nav never recovers from 'Plugins are unavailable')",
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-17T09:32:29+11:00",
+   "change": "Compliance raised COMPLIANCE-DASHBOARD-B-074 (cut SQL memory grant on Quarantine reads)",
+   "pointsRaised": 2.0
   }
  ]
 }
