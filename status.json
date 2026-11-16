@@ -38,10 +38,10 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 239.0,
-   "pointsRemaining": 98.0,
+   "pointsDone": 244.0,
+   "pointsRemaining": 93.0,
    "pointsTotal": 337.0,
-   "itemsRemaining": 38,
+   "itemsRemaining": 36,
    "itemsRemainingUnsized": []
   },
   {
@@ -87,7 +87,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 70.23,
+  "pointsPerWorkingDayWholePeriod": 70.61,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -187,8 +187,8 @@
    },
    {
     "date": "2026-11-16",
-    "pointsDone": 913.0,
-    "pointsDoneThatDay": 52.0
+    "pointsDone": 918.0,
+    "pointsDoneThatDay": 57.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -201,7 +201,7 @@
     "likely": "2026-11-20",
     "pessimistic": "2026-11-24",
     "rateLast10": 35.55,
-    "rateWhole": 18.0
+    "rateWhole": 18.38
    },
    "Portfolio Services": {
     "optimistic": "2026-11-25",
@@ -231,9 +231,9 @@
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 70.23,
-   "pointsRemaining": 490.0,
-   "itemsRemaining": 192
+   "rateWhole": 70.61,
+   "pointsRemaining": 485.0,
+   "itemsRemaining": 190
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T22:31:42+11:00",
+ "updatedAt": "2026-11-16T22:44:24+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1277,6 +1277,11 @@
    "at": "2026-11-16T22:31:42+11:00",
    "change": "Advisor raised B-087 (card titles), B-088, B-089, B-090 (parity gaps); B-085 withdrawn",
    "pointsRaised": 4.0
+  },
+  {
+   "at": "2026-11-16T22:44:24+11:00",
+   "change": "Shell done: SHELL-F-140 (6-second snackbars) and SHELL-F-141 (one loading bar)",
+   "pointsDone": 5.0
   }
  ]
 }
