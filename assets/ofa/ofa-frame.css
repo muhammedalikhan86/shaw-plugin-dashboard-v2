@@ -1177,3 +1177,11 @@ mat-list:is(.hsc,[classname~="hsc"]),mat-list:is(.hsc,[classname~="hsc"]) *{lett
 .app-layer table.ot[data-fit1] td[mat-cell][data-one] :is(.cl,.stk){min-width:0;max-width:100%}
 .app-layer table.ot[data-fit1] td[mat-cell][data-one] :is(.cl>span,.cl>a,.cl>.sub,.stk>span,.stk>.sub,.stk>a){max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap!important}
 .app-layer table.ot[data-fit1] td[mat-cell][data-one]:not([data-cut]) :is(.cl>span,.cl>.sub,.stk>span,.stk>.sub){display:block}
+/* P66 (narrows P65), Adviser board: in a fitted table only free-text columns (notes, comments; td[data-free]) may be cut. Every other column keeps its content on one line, uncut: the fit pass in ofa-kit.js never narrows it below that, and the table scrolls sideways instead */
+.app-layer table.ot[data-p66] td[mat-cell]:not([data-free]){max-width:none!important}
+.app-layer table.ot[data-p66] td[mat-cell]:not([data-free]) :is(.cl,.stk,.cl>*,.cl>span,.cl>a,.cl>.sub,.stk>*,.stk>span,.stk>.sub,.stk>a){max-width:none!important;overflow:visible!important;text-overflow:clip!important}
+/* P66: while the fit pass measures what a cell's content needs, the cell's content takes its own width */
+.app-layer table.ot[data-p66m] td[mat-cell]:not([data-free]) > :is(.cl,.stk){width:max-content!important;max-width:none!important;min-width:0!important}
+.app-layer table.ot[data-p66m] td[mat-cell]:not([data-free]) > :is(.cl,.stk) > *{width:auto!important}
+/* P66: a heading wraps to at most two lines (the fit pass gives it room for two); only the h1l headings stay on one */
+.app-layer table.ot[data-p66] th[mat-header-cell]:is(.nw,[classname~="nw"]):not(.h1l):not([classname~="h1l"]),.app-layer table.ot[data-p66] th[mat-header-cell]:is(.nw,[classname~="nw"]):not(.h1l):not([classname~="h1l"]) .hd{white-space:normal}
