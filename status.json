@@ -78,9 +78,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 145.0,
-   "pointsRemaining": 27.0,
-   "pointsTotal": 172.0,
-   "itemsRemaining": 11,
+   "pointsRemaining": 28.0,
+   "pointsTotal": 173.0,
+   "itemsRemaining": 12,
    "itemsRemainingUnsized": []
   }
  ],
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 81.08,
-   "pointsRemaining": 450.0,
-   "itemsRemaining": 172
+   "pointsRemaining": 451.0,
+   "itemsRemaining": 173
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T10:13:36+11:00",
+ "updatedAt": "2026-11-17T10:14:32+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1631,6 +1631,11 @@
    "at": "2026-11-17T10:13:36+11:00",
    "change": "Shell: SHELL-F-131 resized 5 to 7 (sideways-scroll ruling); SHELL-B-118 raised (focus after clear)",
    "pointsRaised": 3.0
+  },
+  {
+   "at": "2026-11-17T10:14:32+11:00",
+   "change": "Compliance raised COMPLIANCE-DASHBOARD-B-076 (refit the sideways-scroll step to the ruling)",
+   "pointsRaised": 1.0
   }
  ]
 }
