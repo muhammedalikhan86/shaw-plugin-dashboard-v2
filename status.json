@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 328.0,
-   "pointsRemaining": 274.0,
-   "pointsTotal": 602.0,
-   "itemsRemaining": 113,
+   "pointsRemaining": 275.0,
+   "pointsTotal": 603.0,
+   "itemsRemaining": 114,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 77.0,
-   "pointsRemaining": 468.0,
-   "itemsRemaining": 178
+   "pointsRemaining": 469.0,
+   "itemsRemaining": 179
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T06:36:43+11:00",
+ "updatedAt": "2026-11-17T06:41:21+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1499,6 +1499,11 @@
   {
    "at": "2026-11-17T06:36:43+11:00",
    "change": "Portfolio Services raised OFA-B-128",
+   "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-17T06:41:21+11:00",
+   "change": "Portfolio Services raised OFA-B-129",
    "pointsRaised": 1.0
   }
  ]
