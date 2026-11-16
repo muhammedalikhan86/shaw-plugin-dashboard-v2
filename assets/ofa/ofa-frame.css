@@ -1149,7 +1149,7 @@ mat-list:is(.hsc,[classname~="hsc"]),mat-list:is(.hsc,[classname~="hsc"]) *{lett
 .app-layer[data-board="adv"] mat-card[data-b89="true"] table.ot.ot.ot.ot.ot > tbody > tr:is(.exo,[classname~="exo"]) > td[mat-cell]{background:var(--mat-sys-surface-container-low)!important;border-bottom:0!important}
 .app-layer[data-board="adv"] mat-card[data-b89="true"] table.ot.ot.ot.ot.ot > tbody > tr:is(.kid,[classname~="kid"]) > td[mat-cell]{background:var(--mat-sys-surface)!important}
 .app-layer[data-board="adv"] mat-card[data-b89="true"] table.ot.ot.ot.ot.ot > tbody > tr:is(.kid,[classname~="kid"]) > td[mat-cell]:first-child{padding-left:56px!important}
-.app-layer[data-board="adv"] mat-card[data-b89="true"] table.ot.ot.ot.ot.ot > tbody > tr:is(.exo,[classname~="exo"]) + tr:is(.kid,[classname~="kid"]) > td[mat-cell]{border-top:1px solid var(--mat-sys-outline-variant)!important}
+.app-layer[data-board="adv"] mat-card[data-b89="true"] table.ot.ot.ot.ot.ot > tbody > tr:is(.exo,[classname~="exo"]) + tr:is(.kid,[classname~="kid"]) > td[mat-cell]:not(:first-child){border-top:1px solid var(--mat-sys-outline-variant)!important} /* D4 (SHELL-F-122): the first child line's hairline starts at the second cell */
 
 /* T91: a heading whose word is kept for screen readers and the column list, while the narrow heading shows only its control (as the CDK's cdk-visually-hidden) */
 .app-layer table.ot th:is(.vhl,[classname~="vhl"]) :is(.hd,button.hd){position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;padding:0!important;margin:-1px!important;border:0!important}
@@ -1193,11 +1193,11 @@ mat-list:is(.hsc,[classname~="hsc"]),mat-list:is(.hsc,[classname~="hsc"]) *{lett
 .app-layer table.ot[data-p66] td[mat-cell]:is(.sinc,[classname~="sinc"]) .cl{max-width:none!important}
 .app-layer table.ot[data-p66] td[mat-cell]:is(.sinc,[classname~="sinc"]) .cl>*{max-width:none!important;overflow:visible!important;text-overflow:clip!important}
 /* Compliance › Quarantine: the Extension column is a free-text column about 40 characters wide (fx40, 36ch: about 40 characters of ordinary text); a longer extension is cut with an ellipsis and shown in full on hover */
-.app-layer table.ot :is(th,td):is(.fx40,[classname~="fx40"]){width:36ch!important;min-width:36ch!important;max-width:36ch!important;box-sizing:content-box}
+.app-layer table.ot :is(th,td):is(.fx40,[classname~="fx40"]){min-width:240px!important;box-sizing:border-box} /* A19: no longer a fixed 36ch */
 .app-layer table.ot td[mat-cell]:is(.fx40,[classname~="fx40"]) :is(.cl,.stk){min-width:0!important;max-width:100%!important}
 /* Adviser board, an S-Account with no tab bar (sa4): details and Platform accounts at their own height, History and Documents side by side filling the rest */
 .page:has(>.g24[data-fill="sa4"]){height:100%;min-height:0;box-sizing:border-box}
-.g24[data-fill="sa4"]{flex:1;min-height:0;align-items:stretch;grid-template-rows:max-content max-content minmax(320px,1fr)}
+.g24[data-fill="sa4"]{flex:1;min-height:0;align-items:stretch;grid-template-rows:max-content max-content minmax(360px,1fr)} /* P72: the shell's table-card floor, 360px (was 320px) */
 .g24[data-fill="sa4"]>div:nth-child(n+3){position:relative;min-height:0}
 .g24[data-fill="sa4"]>div:nth-child(n+3)>mat-card{position:absolute;inset:0;height:auto!important;min-height:0;display:flex;flex-direction:column;overflow:hidden}
 .g24[data-fill="sa4"]>div:nth-child(n+3)>mat-card>*{flex:none}
@@ -1211,7 +1211,7 @@ mat-list:is(.hsc,[classname~="hsc"]),mat-list:is(.hsc,[classname~="hsc"]) *{lett
 mat-card:has(>.hist){display:flex;flex-direction:column}
 mat-card>.hist{flex:1 1 auto;min-height:0}
 /* Free-text columns (Notes, Comments, Reason, Extension; marked data-free by the fit pass) are about 40 characters wide on every board; longer text is cut with an ellipsis and shown in full on hover */
-.app-layer table.ot[data-p66] :is(th,td)[data-free]{width:36ch!important;min-width:36ch!important;max-width:36ch!important;box-sizing:content-box}
+.app-layer table.ot[data-p66] :is(th,td)[data-free]{min-width:240px!important;max-width:none!important;box-sizing:border-box} /* A19: as wide as the table allows, never under 240px (replaces the fixed 36ch) */
 .app-layer table.ot[data-p66] td[mat-cell][data-free] :is(.cl,.stk){min-width:0!important;max-width:100%!important}
 .app-layer table.ot[data-p66] td[mat-cell][data-free] :is(.cl>*,.cl>span,.cl>a,.stk>*,.stk>span){display:block!important;max-width:100%!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
 .app-layer table.ot[data-p66] td[mat-cell][data-free] *{white-space:nowrap!important}
@@ -1224,3 +1224,7 @@ mat-card>.hist{flex:1 1 auto;min-height:0}
 .app-layer table td.n3l,.app-layer table td.n3l *{white-space:nowrap!important}
 .app-layer table.ot[data-p66] td[mat-cell].n3l .cl>span.sub2,.app-layer table td.n3l .sub2{display:block!important;max-width:36ch!important;overflow:hidden!important;text-overflow:ellipsis!important}
 .app-layer table.ot td[mat-cell]:is(.fx40,[classname~="fx40"]) :is(.cl>*,.cl>span,.cl>a,.stk>*,.stk>span){display:block!important;max-width:100%!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+/* A17: a Reason column wraps to two lines at most and is never cut; the fit pass gives it the width that takes */
+.app-layer table.ot[data-fit1] td[mat-cell][data-w2],.app-layer table.ot[data-fit1] td[mat-cell][data-w2] *{white-space:normal!important;overflow-wrap:normal!important;word-break:normal!important;text-overflow:clip!important;overflow:visible!important;max-width:none!important}
+/* P81: The monthly cycle's two tab groups sit on the shared tab strip with each tab at its own width, not stretched */
+mat-tab-group[data-nostretch="1"] mat-tab-header:is(.tabs,[classname~="tabs"]) mat-tab{flex:0 0 auto}
