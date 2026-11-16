@@ -77,9 +77,9 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 144.0,
+   "pointsDone": 145.0,
    "pointsRemaining": 21.0,
-   "pointsTotal": 165.0,
+   "pointsTotal": 166.0,
    "itemsRemaining": 8,
    "itemsRemainingUnsized": []
   }
@@ -87,7 +87,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 74.23,
+  "pointsPerWorkingDayWholePeriod": 74.31,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -192,8 +192,8 @@
    },
    {
     "date": "2026-11-17",
-    "pointsDone": 965.0,
-    "pointsDoneThatDay": 29.0
+    "pointsDone": 966.0,
+    "pointsDoneThatDay": 30.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -227,7 +227,7 @@
     "likely": "2026-11-19",
     "pessimistic": "2026-11-19",
     "rateLast10": 20.38,
-    "rateWhole": 11.1
+    "rateWhole": 11.18
    }
   },
   "overall": {
@@ -236,7 +236,7 @@
    "pessimistic": "2026-12-02",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 74.23,
+   "rateWhole": 74.31,
    "pointsRemaining": 487.0,
    "itemsRemaining": 193
   }
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T04:16:22+11:00",
+ "updatedAt": "2026-11-17T04:20:58+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1439,6 +1439,12 @@
    "at": "2026-11-17T04:16:22+11:00",
    "change": "Portfolio Services done: OFA-F-049 (record column choice), delivered by OFA-B-111",
    "pointsDone": 1.0
+  },
+  {
+   "at": "2026-11-17T04:20:58+11:00",
+   "change": "Compliance raised and done: B-073 (sidebar re-click closes the open record)",
+   "pointsDone": 1.0,
+   "pointsRaised": 1.0
   }
  ]
 }
