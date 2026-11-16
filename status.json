@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 266.0,
-   "pointsRemaining": 75.0,
-   "pointsTotal": 341.0,
-   "itemsRemaining": 26,
+   "pointsRemaining": 76.0,
+   "pointsTotal": 342.0,
+   "itemsRemaining": 27,
    "itemsRemainingUnsized": []
   },
   {
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 74.31,
-   "pointsRemaining": 489.0,
-   "itemsRemaining": 195
+   "pointsRemaining": 490.0,
+   "itemsRemaining": 196
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T04:25:43+11:00",
+ "updatedAt": "2026-11-17T04:26:11+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1450,6 +1450,11 @@
    "at": "2026-11-17T04:25:43+11:00",
    "change": "Portfolio Services raised: B-122 (Exceptions report header rows), B-123 (Initial OFAs Source underline)",
    "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-17T04:26:11+11:00",
+   "change": "Shell raised: SHELL-B-100 (stretched tab-strip tabs equal width, as the board)",
+   "pointsRaised": 1.0
   }
  ]
 }
