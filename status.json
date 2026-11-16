@@ -38,10 +38,10 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 232.0,
-   "pointsRemaining": 101.0,
+   "pointsDone": 237.0,
+   "pointsRemaining": 96.0,
    "pointsTotal": 333.0,
-   "itemsRemaining": 38,
+   "itemsRemaining": 37,
    "itemsRemainingUnsized": []
   },
   {
@@ -87,7 +87,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 69.7,
+  "pointsPerWorkingDayWholePeriod": 70.08,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -187,8 +187,8 @@
    },
    {
     "date": "2026-11-16",
-    "pointsDone": 906.0,
-    "pointsDoneThatDay": 45.0
+    "pointsDone": 911.0,
+    "pointsDoneThatDay": 50.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -201,7 +201,7 @@
     "likely": "2026-11-20",
     "pessimistic": "2026-11-24",
     "rateLast10": 35.55,
-    "rateWhole": 17.47
+    "rateWhole": 17.85
    },
    "Portfolio Services": {
     "optimistic": "2026-11-25",
@@ -231,9 +231,9 @@
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 69.7,
-   "pointsRemaining": 488.0,
-   "itemsRemaining": 188
+   "rateWhole": 70.08,
+   "pointsRemaining": 483.0,
+   "itemsRemaining": 187
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T20:52:24+11:00",
+ "updatedAt": "2026-11-16T20:58:56+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1246,6 +1246,11 @@
    "at": "2026-11-16T20:52:24+11:00",
    "change": "Advisor raised B-085 (Next Reference Date cell to the board)",
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-16T20:58:56+11:00",
+   "change": "Shell done: SHELL-F-135 (table content floor; key columns never cut)",
+   "pointsDone": 5.0
   }
  ]
 }
