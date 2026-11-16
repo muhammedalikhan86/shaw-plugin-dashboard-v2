@@ -78,9 +78,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 145.0,
-   "pointsRemaining": 23.0,
-   "pointsTotal": 168.0,
-   "itemsRemaining": 9,
+   "pointsRemaining": 27.0,
+   "pointsTotal": 172.0,
+   "itemsRemaining": 11,
    "itemsRemainingUnsized": []
   }
  ],
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 81.08,
-   "pointsRemaining": 442.0,
-   "itemsRemaining": 168
+   "pointsRemaining": 446.0,
+   "itemsRemaining": 170
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T09:52:47+11:00",
+ "updatedAt": "2026-11-17T09:54:17+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1616,6 +1616,11 @@
    "change": "Shell Group F done (SHELL-F-115, B-109 to B-113); D6 board merge added to F-142",
    "pointsDone": 10.0,
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-17T09:54:17+11:00",
+   "change": "Compliance raised COMPLIANCE-DASHBOARD-F-030 (3, read back issued notices) and B-075 (1, drop copies the shell now provides)",
+   "pointsRaised": 4.0
   }
  ]
 }
