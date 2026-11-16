@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 322.0,
-   "pointsRemaining": 265.0,
-   "pointsTotal": 587.0,
-   "itemsRemaining": 105,
+   "pointsRemaining": 268.0,
+   "pointsTotal": 590.0,
+   "itemsRemaining": 107,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 72.92,
-   "pointsRemaining": 494.0,
-   "itemsRemaining": 194
+   "pointsRemaining": 497.0,
+   "itemsRemaining": 196
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T02:32:30+11:00",
+ "updatedAt": "2026-11-17T02:35:37+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1379,6 +1379,11 @@
    "at": "2026-11-17T02:32:30+11:00",
    "change": "Advisor raised: B-095 (staged empty and failed scenarios onto the shell's new steps)",
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-17T02:35:37+11:00",
+   "change": "Portfolio Services raised: B-118 (Issuance dialog and preview sizes to the board) and B-119 (Adviser review cuts names)",
+   "pointsRaised": 3.0
   }
  ]
 }
