@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 232.0,
-   "pointsRemaining": 97.0,
-   "pointsTotal": 329.0,
-   "itemsRemaining": 35,
+   "pointsRemaining": 100.0,
+   "pointsTotal": 332.0,
+   "itemsRemaining": 37,
    "itemsRemainingUnsized": []
   },
   {
@@ -232,8 +232,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 69.08,
-   "pointsRemaining": 478.0,
-   "itemsRemaining": 181
+   "pointsRemaining": 481.0,
+   "itemsRemaining": 183
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T16:49:43+11:00",
+ "updatedAt": "2026-11-16T17:16:53+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1200,6 +1200,11 @@
    "at": "2026-11-16T16:49:43+11:00",
    "change": "Portfolio Services: from the designer sync, OFA-F-127 (Add a note), OFA-F-128 (compliance Documents view), OFA-B-112 and OFA-B-113 raised; OFA-F-126 widened to also serve Compliance (3 to 4)",
    "pointsRaised": 10.0
+  },
+  {
+   "at": "2026-11-16T17:16:53+11:00",
+   "change": "Shell raised SHELL-B-089 (board URL follows the port offset) and SHELL-B-090 (table card 4px high)",
+   "pointsRaised": 3.0
   }
  ]
 }
