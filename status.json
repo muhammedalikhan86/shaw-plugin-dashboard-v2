@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 316.0,
-   "pointsRemaining": 249.0,
-   "pointsTotal": 565.0,
-   "itemsRemaining": 97,
+   "pointsRemaining": 254.0,
+   "pointsTotal": 570.0,
+   "itemsRemaining": 99,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -232,8 +232,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 81.5,
    "rateWhole": 68.47,
-   "pointsRemaining": 471.0,
-   "itemsRemaining": 178
+   "pointsRemaining": 476.0,
+   "itemsRemaining": 180
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T14:08:40+11:00",
+ "updatedAt": "2026-11-16T15:33:15+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1170,6 +1170,11 @@
    "change": "Advisor: ADVISOR-DASHBOARD-B-071, B-072, B-073 done as one group; B-074 raised",
    "pointsDone": 3.0,
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-16T15:33:15+11:00",
+   "change": "Portfolio Services: OFA-F-126 raised (History tab needs a read of the arrangement's OFA periods) and OFA-B-111 raised (Platform accounts card columns per the board)",
+   "pointsRaised": 5.0
   }
  ]
 }
