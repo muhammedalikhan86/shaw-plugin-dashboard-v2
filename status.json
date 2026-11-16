@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 302.0,
-   "pointsRemaining": 56.0,
-   "pointsTotal": 358.0,
-   "itemsRemaining": 17,
+   "pointsRemaining": 59.0,
+   "pointsTotal": 361.0,
+   "itemsRemaining": 18,
    "itemsRemainingUnsized": []
   },
   {
@@ -203,7 +203,7 @@
   "perComponent": {
    "Shell & Landing Page": {
     "optimistic": "2026-11-19",
-    "likely": "2026-11-19",
+    "likely": "2026-11-20",
     "pessimistic": "2026-11-20",
     "rateLast10": 35.55,
     "rateWhole": 22.85
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 81.08,
-   "pointsRemaining": 447.0,
-   "itemsRemaining": 171
+   "pointsRemaining": 450.0,
+   "itemsRemaining": 172
   }
  },
  "milestones": [
@@ -269,7 +269,7 @@
   },
   {
    "name": "Shell & Landing Page build complete (likely)",
-   "date": "2026-11-19",
+   "date": "2026-11-20",
    "kind": "forecast"
   },
   {
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T10:03:13+11:00",
+ "updatedAt": "2026-11-17T10:13:36+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1626,6 +1626,11 @@
    "at": "2026-11-17T10:03:13+11:00",
    "change": "Shell raised SHELL-B-117 (search box click lost to the overlay backdrop)",
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-17T10:13:36+11:00",
+   "change": "Shell: SHELL-F-131 resized 5 to 7 (sideways-scroll ruling); SHELL-B-118 raised (focus after clear)",
+   "pointsRaised": 3.0
   }
  ]
 }
