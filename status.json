@@ -78,8 +78,8 @@
     "compliance-dashboard"
    ],
    "pointsDone": 117.0,
-   "pointsRemaining": 24.0,
-   "pointsTotal": 141.0,
+   "pointsRemaining": 23.0,
+   "pointsTotal": 140.0,
    "itemsRemaining": 10,
    "itemsRemainingUnsized": []
   }
@@ -232,7 +232,7 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-26 / 2026-11-26 / 2026-11-27. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 79.6,
    "rateWhole": 67.01,
-   "pointsRemaining": 481.0,
+   "pointsRemaining": 480.0,
    "itemsRemaining": 183
   }
  },
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T12:05:12+11:00",
+ "updatedAt": "2026-11-16T12:06:05+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1121,6 +1121,11 @@
    "change": "Compliance finished COMPLIANCE-DASHBOARD-F-023 (the Compliance review screen, with Mark as reviewed, 3 points); raised B-063 (two small design gaps on the Compliance review screen, 2), B-064 (table cell spacing matches the design, 2) and F-024 (S-Account always shown, 1)",
    "pointsDone": 3.0,
    "pointsRaised": 5.0
+  },
+  {
+   "at": "2026-11-16T12:06:05+11:00",
+   "change": "Correction: Compliance's COMPLIANCE-DASHBOARD-B-063 is 1 point, not 2 (miscounted in the previous entry)",
+   "pointsRaised": -1.0
   }
  ]
 }
