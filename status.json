@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 322.0,
-   "pointsRemaining": 260.0,
-   "pointsTotal": 582.0,
-   "itemsRemaining": 102,
+   "pointsRemaining": 263.0,
+   "pointsTotal": 585.0,
+   "itemsRemaining": 103,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -232,8 +232,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 70.61,
-   "pointsRemaining": 485.0,
-   "itemsRemaining": 190
+   "pointsRemaining": 488.0,
+   "itemsRemaining": 191
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T22:44:24+11:00",
+ "updatedAt": "2026-11-16T22:45:03+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1282,6 +1282,11 @@
    "at": "2026-11-16T22:44:24+11:00",
    "change": "Shell done: SHELL-F-140 (6-second snackbars) and SHELL-F-141 (one loading bar)",
    "pointsDone": 5.0
+  },
+  {
+   "at": "2026-11-16T22:45:03+11:00",
+   "change": "Portfolio Services raised OFA-B-115 (snackbars and loading bars to the shell standard)",
+   "pointsRaised": 3.0
   }
  ]
 }
