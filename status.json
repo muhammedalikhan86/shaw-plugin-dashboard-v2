@@ -77,17 +77,17 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 123.0,
-   "pointsRemaining": 19.0,
+   "pointsDone": 125.0,
+   "pointsRemaining": 17.0,
    "pointsTotal": 142.0,
-   "itemsRemaining": 8,
+   "itemsRemaining": 6,
    "itemsRemainingUnsized": []
   }
  ],
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 68.47,
+  "pointsPerWorkingDayWholePeriod": 68.62,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -187,8 +187,8 @@
    },
    {
     "date": "2026-11-16",
-    "pointsDone": 890.0,
-    "pointsDoneThatDay": 29.0
+    "pointsDone": 892.0,
+    "pointsDoneThatDay": 31.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -220,9 +220,9 @@
    "Compliance": {
     "optimistic": "2026-11-17",
     "likely": "2026-11-18",
-    "pessimistic": "2026-11-19",
+    "pessimistic": "2026-11-18",
     "rateLast10": 20.38,
-    "rateWhole": 9.49
+    "rateWhole": 9.64
    }
   },
   "overall": {
@@ -231,9 +231,9 @@
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 68.47,
-   "pointsRemaining": 476.0,
-   "itemsRemaining": 181
+   "rateWhole": 68.62,
+   "pointsRemaining": 474.0,
+   "itemsRemaining": 179
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T16:07:37+11:00",
+ "updatedAt": "2026-11-16T16:24:19+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1185,6 +1185,11 @@
    "at": "2026-11-16T16:07:37+11:00",
    "change": "Advisor: ADVISOR-DASHBOARD-F-059 split; F-112 (3) raised for the parts that need no arrangement, F-059 cut from 5 to 2",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-16T16:24:19+11:00",
+   "change": "Compliance: COMPLIANCE-DASHBOARD-B-065 and B-066 done as one group",
+   "pointsDone": 2.0
   }
  ]
 }
