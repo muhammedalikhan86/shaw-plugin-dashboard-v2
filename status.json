@@ -65,9 +65,9 @@
     "advisor-dashboard"
    ],
    "pointsDone": 265.0,
-   "pointsRemaining": 123.0,
-   "pointsTotal": 388.0,
-   "itemsRemaining": 50,
+   "pointsRemaining": 124.0,
+   "pointsTotal": 389.0,
+   "itemsRemaining": 51,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 72.92,
-   "pointsRemaining": 491.0,
-   "itemsRemaining": 191
+   "pointsRemaining": 492.0,
+   "itemsRemaining": 192
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T02:03:52+11:00",
+ "updatedAt": "2026-11-17T02:23:13+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1364,6 +1364,11 @@
    "change": "Shell done: run C-a (SHELL-B-093, B-088, B-094, F-138, F-137, B-092, B-087; 11 points). Closed with no shell defect: SHELL-B-090, B-074 (3 points withdrawn). Raised SHELL-B-096 (sidebar re-select, 2)",
    "pointsDone": 11.0,
    "pointsRaised": -1.0
+  },
+  {
+   "at": "2026-11-17T02:23:13+11:00",
+   "change": "Advisor raised: B-094 (sidebar re-click closes the S-Account page)",
+   "pointsRaised": 1.0
   }
  ]
 }
