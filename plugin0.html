@@ -156,6 +156,7 @@ table.dt th[mat-header-cell] .rsz:focus-visible{box-shadow:inset 0 0 0 2px var(-
 table.dt th[mat-header-cell] .rsz[data-drag="true"]::after{left:5px;width:2px;top:0;height:100%;background:var(--mat-sys-primary)} /* while dragging: a 2px primary line down the whole heading cell */
 
 table.dt td[mat-cell]{color:var(--mat-sys-on-surface)}
+table.dt :is(th[mat-header-cell],td[mat-cell],td[mat-footer-cell]).num{padding-right:24px} /* D7: a numeric column pads 24px on the right, as every OFA board (ofa-frame.css), figures and sort arrow right-aligned */
 table.dt mat-chip{color:var(--mat-sys-on-surface-variant)}
 mat-paginator:is(.pg,[classname~="pg"]){display:flex;align-items:center;justify-content:flex-end;gap:8px;height:56px;padding:0 16px;border-top:none;font:400 11px/16px var(--f);color:var(--mat-sys-on-surface)}
 .pgsel{display:flex;align-items:center;justify-content:space-between;width:84px;height:40px;padding:0 8px 0 16px;border:1px solid var(--mat-sys-outline);border-radius:4px;font:400 11px/16px var(--f)}

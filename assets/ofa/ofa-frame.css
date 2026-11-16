@@ -1228,3 +1228,5 @@ mat-card>.hist{flex:1 1 auto;min-height:0}
 .app-layer table.ot[data-fit1] td[mat-cell][data-w2],.app-layer table.ot[data-fit1] td[mat-cell][data-w2] *{white-space:normal!important;overflow-wrap:normal!important;word-break:normal!important;text-overflow:clip!important;overflow:visible!important;max-width:none!important}
 /* P81: The monthly cycle's two tab groups sit on the shared tab strip with each tab at its own width, not stretched */
 mat-tab-group[data-nostretch="1"] mat-tab-header:is(.tabs,[classname~="tabs"]) mat-tab{flex:0 0 auto}
+/* P85: OFA Checklist loading: the card's title and steps dim to 0.4; its Month select stays at full opacity and enabled */
+.g24[data-ldim="1"] :is(mat-card,mat-card :has([data-msel])) > :not(:has([data-msel])):not([data-msel]){opacity:.4}
