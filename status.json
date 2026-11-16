@@ -77,17 +77,17 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 125.0,
-   "pointsRemaining": 17.0,
-   "pointsTotal": 142.0,
-   "itemsRemaining": 6,
+   "pointsDone": 141.0,
+   "pointsRemaining": 23.0,
+   "pointsTotal": 164.0,
+   "itemsRemaining": 9,
    "itemsRemainingUnsized": []
   }
  ],
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 70.61,
+  "pointsPerWorkingDayWholePeriod": 71.84,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -187,8 +187,8 @@
    },
    {
     "date": "2026-11-16",
-    "pointsDone": 918.0,
-    "pointsDoneThatDay": 57.0
+    "pointsDone": 934.0,
+    "pointsDoneThatDay": 73.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -218,11 +218,11 @@
     "rateWhole": 17.84
    },
    "Compliance": {
-    "optimistic": "2026-11-17",
+    "optimistic": "2026-11-18",
     "likely": "2026-11-18",
-    "pessimistic": "2026-11-18",
+    "pessimistic": "2026-11-19",
     "rateLast10": 20.38,
-    "rateWhole": 9.64
+    "rateWhole": 10.87
    }
   },
   "overall": {
@@ -231,9 +231,9 @@
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 70.61,
-   "pointsRemaining": 490.0,
-   "itemsRemaining": 192
+   "rateWhole": 71.84,
+   "pointsRemaining": 496.0,
+   "itemsRemaining": 195
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T22:45:29+11:00",
+ "updatedAt": "2026-11-16T22:55:28+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1292,6 +1292,16 @@
    "at": "2026-11-16T22:45:29+11:00",
    "change": "Advisor raised F-114 (snackbars and loading bars to the shell standard)",
    "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-16T22:55:28+11:00",
+   "change": "Compliance raised COMPLIANCE-DASHBOARD-B-067, F-025, F-026, F-027, F-028, F-029, B-068, B-069, B-070 and B-071",
+   "pointsRaised": 22.0
+  },
+  {
+   "at": "2026-11-16T22:55:28+11:00",
+   "change": "Compliance done: B-067, F-025, F-026, F-027, B-068, B-070, B-062",
+   "pointsDone": 16.0
   }
  ]
 }
