@@ -67,7 +67,7 @@
    "pointsDone": 257.0,
    "pointsRemaining": 106.0,
    "pointsTotal": 363.0,
-   "itemsRemaining": 38,
+   "itemsRemaining": 39,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ]
@@ -233,7 +233,7 @@
    "rateLast10": 113.0,
    "rateWhole": 68.47,
    "pointsRemaining": 476.0,
-   "itemsRemaining": 180
+   "itemsRemaining": 181
   }
  },
  "milestones": [
@@ -311,7 +311,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-16T15:47:36+11:00",
+ "updatedAt": "2026-11-16T16:07:37+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1179,6 +1179,11 @@
   {
    "at": "2026-11-16T15:47:36+11:00",
    "change": "Rate now taken from 2026-11-11 to 2026-11-15 (the pace with the new skills)",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-16T16:07:37+11:00",
+   "change": "Advisor: ADVISOR-DASHBOARD-F-059 split; F-112 (3) raised for the parts that need no arrangement, F-059 cut from 5 to 2",
    "pointsDone": 0.0
   }
  ]
