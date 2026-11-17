@@ -47,6 +47,8 @@ details li:last-child{margin-bottom:0}
 .stat .label{color:var(--muted);font-size:13px}
 .stat .value{font-size:30px;line-height:38px;margin:4px 0 2px}
 .stat .note{color:var(--muted);font-size:13px;line-height:18px}
+.stat .rate{margin-top:12px}
+.stat .rate .rv{color:var(--ink,inherit);font-size:22px;line-height:28px;margin:2px 0}
 .caveat{border-left:3px solid var(--accent);padding:10px 14px;background:var(--card);border-radius:0 8px 8px 0;font-size:14px;line-height:20px;margin:16px 0 0}
 table{width:100%;border-collapse:collapse;font-size:14px;line-height:20px}
 th{text-align:left;font-weight:500;color:var(--muted);padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
@@ -70,7 +72,7 @@ svg text{font-family:Roboto,"Helvetica Neue",Arial,sans-serif}
 .muted{color:var(--muted)}
 code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
 /* Build work: the four figures stacked in one card, the component table to its right. */
-.buildgrid{display:grid;grid-template-columns:240px minmax(0,1fr);gap:16px;align-items:start}
+.buildgrid{display:grid;grid-template-columns:240px minmax(0,1fr);gap:16px;align-items:stretch}
 .buildgrid th,.buildgrid td{padding:10px 8px}
 .buildgrid .stack .stat+.stat{border-top:1px solid var(--line);margin-top:14px;padding-top:14px}
 @media (max-width:820px){.buildgrid{grid-template-columns:minmax(0,1fr)}}
@@ -197,9 +199,9 @@ details.acc[open]>summary{border-bottom:1px solid var(--line);border-radius:12px
     var v=S.velocity;
     function stat(label,value,note){return '<div class="stat"><div class="label">'+label+'</div><div class="value">'+value+'</div><div class="note">'+note+'</div></div>';}
     $("stats").innerHTML=
-      stat("Points done",n(done),"of "+n(total)+" ("+n(done/total*100)+"%)")+
-      stat("Points remaining",n(rem),items+" items left, "+unsized.length+" not sized yet")+
-      stat("Rate",v.pointsPerWorkingDay.toFixed(1),"points a day, "+esc(isoToShort(v.window))+". Whole period: "+v.pointsPerWorkingDayWholePeriod.toFixed(1)+" a working day")+
+      stat("Points done",n(done/total*100)+"%",n(done)+" of "+n(total))+
+      stat("Points status",n(done)+"/"+n(total),items+" items left, "+unsized.length+" not sized yet"+
+        '<div class="rate"><div class="label">Rate of churn</div><div class="rv">'+v.pointsPerWorkingDay.toFixed(1)+'</div><div>points a day, based on '+esc(isoToShort(String(v.window).split(" (")[0]))+'</div></div>')+
       stat("Build complete (likely)",fmt(d(ov.likely)),"range "+short(d(ov.optimistic))+" – "+short(d(ov.pessimistic))+", "+workingDaysBetween(asOf,d(ov.likely))+" working days away");
 
     // ---- Components table
