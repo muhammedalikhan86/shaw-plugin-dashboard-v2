@@ -77,17 +77,17 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 149.0,
-   "pointsRemaining": 27.0,
+   "pointsDone": 152.0,
+   "pointsRemaining": 24.0,
    "pointsTotal": 176.0,
-   "itemsRemaining": 11,
+   "itemsRemaining": 9,
    "itemsRemainingUnsized": []
   }
  ],
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 82.24,
+  "pointsPerWorkingDayWholePeriod": 82.47,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -192,8 +192,8 @@
    },
    {
     "date": "2026-11-17",
-    "pointsDone": 1069.0,
-    "pointsDoneThatDay": 133.0
+    "pointsDone": 1072.0,
+    "pointsDoneThatDay": 136.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -227,7 +227,7 @@
     "likely": "2026-11-19",
     "pessimistic": "2026-11-20",
     "rateLast10": 20.38,
-    "rateWhole": 11.49
+    "rateWhole": 11.72
    }
   },
   "overall": {
@@ -236,9 +236,9 @@
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 82.24,
-   "pointsRemaining": 459.0,
-   "itemsRemaining": 177
+   "rateWhole": 82.47,
+   "pointsRemaining": 456.0,
+   "itemsRemaining": 175
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T12:47:33+11:00",
+ "updatedAt": "2026-11-17T13:20:27+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1696,6 +1696,11 @@
    "at": "2026-11-17T12:47:33+11:00",
    "change": "Portfolio Services raised OFA-B-137 (issuer on the banner) and OFA-B-138 (table tools on closed-month lists)",
    "pointsRaised": 4.0
+  },
+  {
+   "at": "2026-11-17T13:20:27+11:00",
+   "change": "Compliance closed B-077 and B-078",
+   "pointsDone": 3.0
   }
  ]
 }
