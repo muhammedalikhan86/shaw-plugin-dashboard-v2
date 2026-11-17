@@ -198,7 +198,7 @@
    {
     "date": "2026-11-18",
     "pointsDone": 1216.0,
-    "pointsDoneThatDay": 134.0
+    "pointsDoneThatDay": 24.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -321,7 +321,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-18T07:17:06+11:00",
+ "updatedAt": "2026-11-18T07:17:23+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1767,6 +1767,11 @@
   {
    "at": "2026-11-18T07:17:06+11:00",
    "change": "Advisor F-119 group done (11 items); recount after advisor's PMBook table fix (recount from the PMBooks)",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-18T07:17:23+11:00",
+   "change": "Velocity corrected: today's done is 24 points; the rest of advisor's jump is rows the counter could not read before (recount from the PMBooks)",
    "pointsDone": 0.0
   }
  ]
