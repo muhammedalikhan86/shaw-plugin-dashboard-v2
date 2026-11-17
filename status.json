@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 302.0,
-   "pointsRemaining": 61.0,
-   "pointsTotal": 363.0,
-   "itemsRemaining": 19,
+   "pointsRemaining": 64.0,
+   "pointsTotal": 366.0,
+   "itemsRemaining": 20,
    "itemsRemainingUnsized": []
   },
   {
@@ -237,8 +237,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 82.24,
-   "pointsRemaining": 446.0,
-   "itemsRemaining": 171
+   "pointsRemaining": 449.0,
+   "itemsRemaining": 172
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T12:33:38+11:00",
+ "updatedAt": "2026-11-17T12:34:21+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1676,6 +1676,11 @@
    "at": "2026-11-17T12:33:38+11:00",
    "change": "Advisor F-117 raised (F-050 part 7 split out)",
    "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-17T12:34:21+11:00",
+   "change": "Shell raised SHELL-F-143 (notification link, for ADVISOR-DASHBOARD-F-117)",
+   "pointsRaised": 3.0
   }
  ]
 }
