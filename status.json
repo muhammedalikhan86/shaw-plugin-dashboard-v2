@@ -38,10 +38,10 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 564.0,
-   "pointsRemaining": 52.0,
-   "pointsTotal": 616.0,
-   "itemsRemaining": 21,
+   "pointsDone": 569.0,
+   "pointsRemaining": 49.0,
+   "pointsTotal": 618.0,
+   "itemsRemaining": 20,
    "itemsRemainingUnsized": []
   },
   {
@@ -87,7 +87,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 93.93,
+  "pointsPerWorkingDayWholePeriod": 94.31,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -197,8 +197,8 @@
    },
    {
     "date": "2026-11-18",
-    "pointsDone": 1221.0,
-    "pointsDoneThatDay": 29.0
+    "pointsDone": 1226.0,
+    "pointsDoneThatDay": 34.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -211,7 +211,7 @@
     "likely": "2026-11-20",
     "pessimistic": "2026-11-23",
     "rateLast10": 35.55,
-    "rateWhole": 23.16
+    "rateWhole": 23.54
    },
    "Portfolio Services": {
     "optimistic": "2026-11-30",
@@ -241,9 +241,9 @@
    "pessimistic": "2026-12-03",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 93.93,
-   "pointsRemaining": 455.0,
-   "itemsRemaining": 172
+   "rateWhole": 94.31,
+   "pointsRemaining": 452.0,
+   "itemsRemaining": 171
   }
  },
  "milestones": [
@@ -321,7 +321,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-18T07:35:46+11:00",
+ "updatedAt": "2026-11-18T07:53:14+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1777,6 +1777,12 @@
   {
    "at": "2026-11-18T07:35:46+11:00",
    "change": "Compliance F-032 done; F-037 raised",
+   "pointsDone": 5.0,
+   "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-18T07:53:14+11:00",
+   "change": "Shell & Landing Page Group C done (F-150, F-153, F-154); F-157, F-158 raised",
    "pointsDone": 5.0,
    "pointsRaised": 2.0
   }
