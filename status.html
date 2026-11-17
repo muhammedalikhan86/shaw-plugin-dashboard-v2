@@ -83,6 +83,12 @@ details.acc[open]>summary{border-bottom:1px solid var(--line);border-radius:12px
 /* Update log: about 15 rows tall (set exactly by the script), the rest scroll inside. */
 .logwrap{max-height:640px;overflow-y:auto}
 .logwrap thead th{position:sticky;top:0;background:var(--card);z-index:1}
+/* Found during build: engineering-only work, one line apart from the product figures. */
+.found{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;margin-top:16px;padding:14px 24px}
+.found .label{font-weight:500}
+.found .fig{font-variant-numeric:tabular-nums}
+.found .bar{flex:0 0 160px}
+.found p{flex:1 1 100%;margin:0;color:var(--muted);font-size:13px;line-height:18px}
 </style>
 </head>
 <body>
@@ -101,6 +107,7 @@ details.acc[open]>summary{border-bottom:1px solid var(--line);border-radius:12px
 <div class="card stack" id="stats"></div>
 <div class="card tablewrap"><table id="comps"></table></div>
 </div>
+<div class="card found" id="found" hidden></div>
 <p class="caveat" id="caveat"></p>
 
 <h2>Pace</h2>
@@ -204,11 +211,27 @@ details.acc[open]>summary{border-bottom:1px solid var(--line);border-radius:12px
         '<div class="rate"><div class="label">Rate of churn</div><div class="rv">'+v.pointsPerWorkingDay.toFixed(1)+'</div><div>points a day, based on '+esc(isoToShort(String(v.window).split(" (")[0]))+'</div></div>')+
       stat("Build complete (likely)",fmt(d(ov.likely)),"range "+short(d(ov.optimistic))+" – "+short(d(ov.pessimistic))+", "+workingDaysBetween(asOf,d(ov.likely))+" working days away");
 
+    // ---- Found during build (engineering-only work; absent or empty, nothing is drawn)
+    function foundLine(fb){
+      if(!fb||!fb.pointsTotal)return "";
+      return '<br><span class="muted" style="font-size:12px">Found during build: '+n(fb.pointsDone)+" of "+n(fb.pointsTotal)+" points done, "+(fb.itemsRemaining||0)+((fb.itemsRemaining||0)===1?" item":" items")+" left</span>";
+    }
+    var fb=S.foundDuringBuild;
+    if(fb&&fb.pointsTotal){
+      var fp=fb.pointsDone/fb.pointsTotal*100;
+      $("found").innerHTML='<span class="label">Found during build</span>'+
+        '<span class="fig">'+n(fb.pointsDone)+" of "+n(fb.pointsTotal)+" points done</span>"+
+        '<div class="bar" data-tip="<b>Found during build</b><br>'+n(fp)+'% done"><span class="d" style="width:'+fp+'%"></span><span class="r" style="width:'+(100-fp)+'%"></span></div>'+
+        '<span class="fig">'+(fb.itemsRemaining||0)+((fb.itemsRemaining||0)===1?" item":" items")+" left, "+(fb.itemsDone||0)+" done</span>"+
+        "<p>Engineering work found while building: faster tests, test kits and developer tools. A business user sees no change from it, so it is kept out of the figures above and out of the forecast.</p>";
+      $("found").hidden=false;
+    }
+
     // ---- Components table
     var h='<thead><tr><th>Component</th><th class="num">Done</th><th class="num">Remaining</th><th class="num">Total</th><th>Progress</th><th class="num">Items left</th><th class="num">Rate / day</th><th>Build complete (forecast)</th></tr></thead><tbody>';
     comps.forEach(function(c){
       var p=fc.perComponent[c.name]||{},pct=c.pointsDone/c.pointsTotal*100;
-      h+="<tr><td>"+esc(c.name)+(c.note?'<br><span class="muted" style="font-size:12px;display:block;max-width:320px">'+esc(isoToShort(c.note))+"</span>":"")+((c.itemsRemainingUnsized||[]).length?'<br><span class="muted" style="font-size:12px">Unsized: '+c.itemsRemainingUnsized.map(esc).join(", ")+"</span>":"")+"</td>"+
+      h+="<tr><td>"+esc(c.name)+(c.note?'<br><span class="muted" style="font-size:12px;display:block;max-width:320px">'+esc(isoToShort(c.note))+"</span>":"")+foundLine(c.foundDuringBuild)+((c.itemsRemainingUnsized||[]).length?'<br><span class="muted" style="font-size:12px">Unsized: '+c.itemsRemainingUnsized.map(esc).join(", ")+"</span>":"")+"</td>"+
         '<td class="num">'+n(c.pointsDone)+'</td><td class="num">'+n(c.pointsRemaining)+'</td><td class="num">'+n(c.pointsTotal)+"</td>"+
         '<td><div class="bar" data-tip="<b>'+esc(c.name)+'</b><br>'+n(pct)+'% done"><span class="d" style="width:'+pct+'%"></span><span class="r" style="width:'+(100-pct)+'%"></span></div><span class="muted" style="font-size:12px">'+n(pct)+'%</span></td>'+
         '<td class="num">'+c.itemsRemaining+"</td>"+
