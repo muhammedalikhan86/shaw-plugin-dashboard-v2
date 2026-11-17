@@ -77,17 +77,17 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 145.0,
-   "pointsRemaining": 28.0,
+   "pointsDone": 148.0,
+   "pointsRemaining": 25.0,
    "pointsTotal": 173.0,
-   "itemsRemaining": 12,
+   "itemsRemaining": 10,
    "itemsRemainingUnsized": []
   }
  ],
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 81.93,
+  "pointsPerWorkingDayWholePeriod": 82.16,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -192,8 +192,8 @@
    },
    {
     "date": "2026-11-17",
-    "pointsDone": 1065.0,
-    "pointsDoneThatDay": 129.0
+    "pointsDone": 1068.0,
+    "pointsDoneThatDay": 132.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -227,7 +227,7 @@
     "likely": "2026-11-19",
     "pessimistic": "2026-11-20",
     "rateLast10": 20.38,
-    "rateWhole": 11.18
+    "rateWhole": 11.41
    }
   },
   "overall": {
@@ -236,9 +236,9 @@
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 81.93,
-   "pointsRemaining": 442.0,
-   "itemsRemaining": 169
+   "rateWhole": 82.16,
+   "pointsRemaining": 439.0,
+   "itemsRemaining": 167
   }
  },
  "milestones": [
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T11:40:55+11:00",
+ "updatedAt": "2026-11-17T11:51:33+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1646,6 +1646,11 @@
    "at": "2026-11-17T11:40:55+11:00",
    "change": "Advisor raised ADVISOR-DASHBOARD-B-097 (missing status chip) and B-098 (tip steals column-menu click)",
    "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-17T11:51:33+11:00",
+   "change": "Compliance B-074 (Quarantine SQL grant) and B-075 done",
+   "pointsDone": 3.0
   }
  ]
 }
