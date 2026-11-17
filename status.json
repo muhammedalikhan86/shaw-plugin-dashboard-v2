@@ -38,10 +38,10 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 569.0,
-   "pointsRemaining": 49.0,
+   "pointsDone": 571.0,
+   "pointsRemaining": 47.0,
    "pointsTotal": 618.0,
-   "itemsRemaining": 20,
+   "itemsRemaining": 18,
    "itemsRemainingUnsized": []
   },
   {
@@ -87,7 +87,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 94.54,
+  "pointsPerWorkingDayWholePeriod": 94.69,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -197,8 +197,8 @@
    },
    {
     "date": "2026-11-18",
-    "pointsDone": 1229.0,
-    "pointsDoneThatDay": 37.0
+    "pointsDone": 1231.0,
+    "pointsDoneThatDay": 39.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -209,9 +209,9 @@
    "Shell & Landing Page": {
     "optimistic": "2026-11-20",
     "likely": "2026-11-20",
-    "pessimistic": "2026-11-23",
+    "pessimistic": "2026-11-20",
     "rateLast10": 35.55,
-    "rateWhole": 23.54
+    "rateWhole": 23.69
    },
    "Portfolio Services": {
     "optimistic": "2026-11-30",
@@ -241,9 +241,9 @@
    "pessimistic": "2026-12-03",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 94.54,
-   "pointsRemaining": 449.0,
-   "itemsRemaining": 170
+   "rateWhole": 94.69,
+   "pointsRemaining": 447.0,
+   "itemsRemaining": 168
   }
  },
  "milestones": [
@@ -321,7 +321,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-18T08:01:01+11:00",
+ "updatedAt": "2026-11-18T08:45:23+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1790,6 +1790,11 @@
    "at": "2026-11-18T08:01:01+11:00",
    "change": "Compliance F-035 done",
    "pointsDone": 3.0
+  },
+  {
+   "at": "2026-11-18T08:45:23+11:00",
+   "change": "Shell: SHELL-F-157 and SHELL-F-158 done (test speed-ups); shell parked for the machine restart",
+   "pointsDone": 2.0
   }
  ]
 }
