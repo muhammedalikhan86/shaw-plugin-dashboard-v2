@@ -10,7 +10,7 @@
    "name": "Build",
    "status": "In progress",
    "start": "2026-10-28",
-   "end": "2026-11-27",
+   "end": "2026-11-30",
    "isForecast": true,
    "note": "start = first day of the story-points record (hub chart, from 2026-10-28), not a documented kickoff; the shell, Landing Page and the pre-OFA Advisor Dashboard were built and released earlier as functional mocks (2026-10-12). Build includes OFA-F-028 Go-live and OFA-F-029 coverage gate (PS Phase 5), and OFA-F-030 in eSignatureWebAPI (outside this repo)."
   },
@@ -50,9 +50,9 @@
     "portfolio-services"
    ],
    "pointsDone": 357.0,
-   "pointsRemaining": 263.0,
-   "pointsTotal": 620.0,
-   "itemsRemaining": 109,
+   "pointsRemaining": 267.0,
+   "pointsTotal": 624.0,
+   "itemsRemaining": 111,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -210,7 +210,7 @@
    },
    "Portfolio Services": {
     "optimistic": "2026-11-26",
-    "likely": "2026-11-27",
+    "likely": "2026-11-30",
     "pessimistic": "2026-12-01",
     "rateLast10": 38.95,
     "rateWhole": 27.45
@@ -232,13 +232,13 @@
   },
   "overall": {
    "optimistic": "2026-11-26",
-   "likely": "2026-11-27",
+   "likely": "2026-11-30",
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 82.24,
-   "pointsRemaining": 455.0,
-   "itemsRemaining": 175
+   "pointsRemaining": 459.0,
+   "itemsRemaining": 177
   }
  },
  "milestones": [
@@ -274,7 +274,7 @@
   },
   {
    "name": "Portfolio Services build complete (likely)",
-   "date": "2026-11-27",
+   "date": "2026-11-30",
    "kind": "forecast"
   },
   {
@@ -289,7 +289,7 @@
   },
   {
    "name": "Build complete (likely)",
-   "date": "2026-11-27",
+   "date": "2026-11-30",
    "kind": "forecast"
   }
  ],
@@ -316,7 +316,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-17T12:47:10+11:00",
+ "updatedAt": "2026-11-17T12:47:33+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1691,6 +1691,11 @@
    "at": "2026-11-17T12:47:10+11:00",
    "change": "Portfolio Services raised OFA-B-136 (closed-September test data)",
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-17T12:47:33+11:00",
+   "change": "Portfolio Services raised OFA-B-137 (issuer on the banner) and OFA-B-138 (table tools on closed-month lists)",
+   "pointsRaised": 4.0
   }
  ]
 }
