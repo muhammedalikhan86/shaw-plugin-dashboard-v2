@@ -321,7 +321,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-18T07:16:50+11:00",
+ "updatedAt": "2026-11-18T07:17:06+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1763,6 +1763,11 @@
    "change": "Advisor F-119 group done (11 items)",
    "pointsDone": 127.0,
    "pointsRaised": 128.0
+  },
+  {
+   "at": "2026-11-18T07:17:06+11:00",
+   "change": "Advisor F-119 group done (11 items); recount after advisor's PMBook table fix (recount from the PMBooks)",
+   "pointsDone": 0.0
   }
  ]
 }
