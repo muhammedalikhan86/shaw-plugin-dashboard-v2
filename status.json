@@ -38,10 +38,10 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 560.0,
-   "pointsRemaining": 56.0,
+   "pointsDone": 563.0,
+   "pointsRemaining": 53.0,
    "pointsTotal": 616.0,
-   "itemsRemaining": 23,
+   "itemsRemaining": 22,
    "itemsRemainingUnsized": []
   },
   {
@@ -87,7 +87,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 83.24,
+  "pointsPerWorkingDayWholePeriod": 83.47,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -197,8 +197,8 @@
    },
    {
     "date": "2026-11-18",
-    "pointsDone": 1082.0,
-    "pointsDoneThatDay": 0.0
+    "pointsDone": 1085.0,
+    "pointsDoneThatDay": 3.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -211,7 +211,7 @@
     "likely": "2026-11-20",
     "pessimistic": "2026-11-23",
     "rateLast10": 35.55,
-    "rateWhole": 22.85
+    "rateWhole": 23.08
    },
    "Portfolio Services": {
     "optimistic": "2026-11-30",
@@ -241,9 +241,9 @@
    "pessimistic": "2026-12-02",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 83.24,
-   "pointsRemaining": 456.0,
-   "itemsRemaining": 173
+   "rateWhole": 83.47,
+   "pointsRemaining": 453.0,
+   "itemsRemaining": 172
   }
  },
  "milestones": [
@@ -321,7 +321,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-18T06:34:50+11:00",
+ "updatedAt": "2026-11-18T06:46:18+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1737,6 +1737,11 @@
    "at": "2026-11-18T06:34:50+11:00",
    "change": "Recounted from the planning docs; shell F-152, compliance F-036 and portfolio-services fixes since 17-11 included (recount from the PMBooks)",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-18T06:46:18+11:00",
+   "change": "Shell & Landing Page SHELL-F-147 done",
+   "pointsDone": 3.0
   }
  ]
 }
