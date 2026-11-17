@@ -77,9 +77,9 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 180.0,
-   "pointsRemaining": 32.0,
-   "pointsTotal": 212.0,
+   "pointsDone": 185.0,
+   "pointsRemaining": 29.0,
+   "pointsTotal": 214.0,
    "itemsRemaining": 11,
    "itemsRemainingUnsized": []
   }
@@ -87,7 +87,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 93.55,
+  "pointsPerWorkingDayWholePeriod": 93.93,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -197,8 +197,8 @@
    },
    {
     "date": "2026-11-18",
-    "pointsDone": 1216.0,
-    "pointsDoneThatDay": 24.0
+    "pointsDone": 1221.0,
+    "pointsDoneThatDay": 29.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -232,7 +232,7 @@
     "likely": "2026-11-20",
     "pessimistic": "2026-11-23",
     "rateLast10": 20.38,
-    "rateWhole": 11.95
+    "rateWhole": 12.33
    }
   },
   "overall": {
@@ -241,8 +241,8 @@
    "pessimistic": "2026-12-03",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 93.55,
-   "pointsRemaining": 458.0,
+   "rateWhole": 93.93,
+   "pointsRemaining": 455.0,
    "itemsRemaining": 172
   }
  },
@@ -321,7 +321,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-18T07:17:23+11:00",
+ "updatedAt": "2026-11-18T07:35:46+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1773,6 +1773,12 @@
    "at": "2026-11-18T07:17:23+11:00",
    "change": "Velocity corrected: today's done is 24 points; the rest of advisor's jump is rows the counter could not read before (recount from the PMBooks)",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-18T07:35:46+11:00",
+   "change": "Compliance F-032 done; F-037 raised",
+   "pointsDone": 5.0,
+   "pointsRaised": 2.0
   }
  ]
 }
