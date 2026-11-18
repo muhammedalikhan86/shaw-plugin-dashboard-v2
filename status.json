@@ -349,7 +349,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-18T17:04:28+11:00",
+ "updatedAt": "2026-11-18T17:05:16+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1860,6 +1860,11 @@
    "change": "Advisor F-131, B-108, B-109 merged (3 points)",
    "pointsDone": 2.0,
    "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-18T17:05:16+11:00",
+   "change": "Shell proofs for F-144 and B-130 merged; shell parked",
+   "pointsDone": 0.0
   }
  ],
  "foundDuringBuild": {
