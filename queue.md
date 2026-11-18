@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 11:30
+Updated: 19-11-2026 12:15
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -70,18 +70,17 @@ Collision rules (hub ruling 18-11):
 5. App turns: one at a time, scheduled by the hub.
 6. PS2 skips the graph rebuild; PS does it. New IDs come from the hub.
 
-## Compliance (pointer: group 5: F-038 and F-045, in Integration; parks after this merge, by Muhammed)
+## Compliance (pointer: parked 4df1fafc by Muhammed; no new group until he says)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 5 | X | (owed) | Browser pass and Board Parity for groups 2 and 3: touched screens; F-044, F-020, B-081 and group 3 scenarios | - | End parity sweep |
 | 6 | X | (owed) | Clear the three @not-built-COMPLIANCE-DASHBOARD-F-040 tags (arrangements.feature:260) once they pass | - | End parity sweep |
-| >> | 5 | COMPLIANCE-DASHBOARD-F-038 | Account details: an OFA period's PDF opens from OFA History | 2 | OFA-F-145 on main; the DART link stays empty until the owners answer |
-| 9 | 5 | COMPLIANCE-DASHBOARD-F-045 | Wording fields in document order, and where each version came from (Complii or —) | 2 | OFA-F-080 and F-081 on main (42c43e19); go |
 | 9 | X | COMPLIANCE-DASHBOARD-F-037 | .NET test speed-up, part 2 | 2 | OFA-F-144 (PS) |
 | 10 | X | (owed) | Board Parity F-028/F-033/F-035/F-036; M-448120 on the board; B-048 re-measure | - | End parity sweep (user, 18-11) |
 | 11 | X | (no ID) | Parity sweep, parity-backlog rows 1-8 | - | Looks only, at the end |
 
+Done 19-11 (group 5, merged 06cea28e): F-038, F-045. Owed to the end sweep: Board Parity groups 3-5, business scenarios (F-010, S20114, F-028 OFA PDF with the new wordsIn), component-wide business run for the wordsIn change, F-040 tag clear, runbook counts, closed-months tag recount, architecture §10 Quarantine status.
 Done 19-11 (group 4, merged a813a521): F-010, F-029.
 Done 19-11 (group 3, merged 7c6979ec): B-069, F-042, F-039, F-043.
 Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079. Merged 4cf941b5: F-020, F-041, F-044, B-081, B-080 (browser pass owed).
