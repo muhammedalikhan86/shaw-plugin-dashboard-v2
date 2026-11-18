@@ -38,10 +38,10 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 476.0,
-   "pointsRemaining": 7.0,
+   "pointsDone": 478.0,
+   "pointsRemaining": 5.0,
    "pointsTotal": 483.0,
-   "itemsRemaining": 4,
+   "itemsRemaining": 3,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 140.0,
@@ -98,24 +98,24 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 174.0,
-   "pointsRemaining": 25.0,
-   "pointsTotal": 199.0,
-   "itemsRemaining": 10,
+   "pointsDone": 180.0,
+   "pointsRemaining": 21.0,
+   "pointsTotal": 201.0,
+   "itemsRemaining": 7,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
-    "pointsDone": 26.0,
-    "pointsRemaining": 7.0,
+    "pointsDone": 31.0,
+    "pointsRemaining": 2.0,
     "pointsTotal": 33.0,
-    "itemsDone": 15,
-    "itemsRemaining": 2
+    "itemsDone": 16,
+    "itemsRemaining": 1
    }
   }
  ],
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 105.61,
+  "pointsPerWorkingDayWholePeriod": 106.23,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -230,8 +230,8 @@
    },
    {
     "date": "2026-11-19",
-    "pointsDone": 1373.0,
-    "pointsDoneThatDay": 83.0
+    "pointsDone": 1381.0,
+    "pointsDoneThatDay": 91.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -244,7 +244,7 @@
     "likely": "2026-11-20",
     "pessimistic": "2026-11-20",
     "rateLast10": 35.55,
-    "rateWhole": 25.38
+    "rateWhole": 25.53
    },
    "Portfolio Services": {
     "optimistic": "2026-12-01",
@@ -265,7 +265,7 @@
     "likely": "2026-11-23",
     "pessimistic": "2026-11-23",
     "rateLast10": 20.38,
-    "rateWhole": 13.17
+    "rateWhole": 13.63
    }
   },
   "overall": {
@@ -274,9 +274,9 @@
    "pessimistic": "2026-12-02",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 105.61,
-   "pointsRemaining": 375.0,
-   "itemsRemaining": 149
+   "rateWhole": 106.23,
+   "pointsRemaining": 369.0,
+   "itemsRemaining": 145
   }
  },
  "milestones": [
@@ -354,7 +354,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-19T03:16:39+11:00",
+ "updatedAt": "2026-11-19T03:17:35+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1931,13 +1931,19 @@
    "change": "19-11: advisor group 4 merged (F-071, F-093, F-100, F-133, F-056, F-075, F-080 p1)",
    "pointsDone": 21.0,
    "pointsRaised": 12.0
+  },
+  {
+   "at": "2026-11-19T03:17:35+11:00",
+   "change": "19-11: compliance group 3 merged (B-069, F-042, F-039, F-043, 11 pts); joint window closed",
+   "pointsDone": 8.0,
+   "pointsRaised": 2.0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 210.0,
-  "pointsRemaining": 30.0,
+  "pointsDone": 215.0,
+  "pointsRemaining": 25.0,
   "pointsTotal": 240.0,
-  "itemsDone": 105,
-  "itemsRemaining": 11
+  "itemsDone": 106,
+  "itemsRemaining": 10
  }
 }

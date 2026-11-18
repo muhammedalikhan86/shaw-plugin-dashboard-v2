@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 05:50
+Updated: 19-11-2026 06:10
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -67,22 +67,19 @@ Collision rules (hub ruling 18-11):
 5. App turns: one at a time, scheduled by the hub.
 6. PS2 skips the graph rebuild; PS does it. New IDs come from the hub.
 
-## Compliance (pointer: group 3: PS2's group 3 is on main; merge main and build F-042, F-043, F-039 with B-069 now; merges after advisor)
+## Compliance (pointer: group 4: F-010, F-029)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
-| >> | 3 | COMPLIANCE-DASHBOARD-B-069 | Fees as at / Signing as at in the shared header (every page but Closed months and Wording) | 3 | OFA-F-153 on main; build now, commit with group 3 |
-| 2 | 3 | COMPLIANCE-DASHBOARD-F-042 | Catch up with PS2's group 3: quarantine fixture and S20187 scenario (F-146); the retired adviser-quarantine email slot, no seeded quarantine emails, the State Manager read from Quarantine or Weekly emails, no Compliance Cc, board emails gone for TD-44/46/53 (F-147); the upload check reads IsRequired, adviser emails have 5 fields (F-148) | 5 | Joint window with PS2's group 3 and advisor F-124 |
-| 3 | 3 | COMPLIANCE-DASHBOARD-F-043 | Show the OFA Team's own quarantine move (OfaTeamMoved) and its note | 1 | Joint window |
-| 4 | 3 | COMPLIANCE-DASHBOARD-F-039 | Three Adviser emails on Wording; Quarantine reads them | 2 | OFA-F-147 (PS2 group 3); rows W26, Q12 |
-| 5 | 3 | (owed) | Browser pass for the merged group: touched screens; F-044, F-020, B-081 scenarios | - | Next quiet window |
-| 6 | 3 | (owed) | Clear the three @not-built-COMPLIANCE-DASHBOARD-F-040 tags once they pass in the stack window (PMBook line already done) | - | Stack window |
-| 7 | 4 | COMPLIANCE-DASHBOARD-F-010 | Compliance adds notes | 3 | OFA-F-042 (PS group 2) |
-| 8 | 4 | COMPLIANCE-DASHBOARD-F-029 | Account details: the Documents card's contents | 2 | OFA-F-128 (PS group 2) |
+| 5 | X | (owed) | Browser pass and Board Parity for groups 2 and 3: touched screens; F-044, F-020, B-081 and group 3 scenarios | - | End parity sweep |
+| 6 | X | (owed) | Clear the three @not-built-COMPLIANCE-DASHBOARD-F-040 tags (arrangements.feature:260) once they pass | - | End parity sweep |
+| >> | 4 | COMPLIANCE-DASHBOARD-F-010 | Compliance adds notes | 3 | OFA-F-042 on main; widen the notes read to ComplianceAndOfaTeam |
+| 8 | 4 | COMPLIANCE-DASHBOARD-F-029 | Account details: the Documents card's contents | 2 | OFA-F-128 and OFA-F-145 on main |
 | 9 | X | COMPLIANCE-DASHBOARD-F-037 | .NET test speed-up, part 2 | 2 | OFA-F-144 (PS) |
 | 10 | X | (owed) | Board Parity F-028/F-033/F-035/F-036; M-448120 on the board; B-048 re-measure | - | End parity sweep (user, 18-11) |
 | 11 | X | (no ID) | Parity sweep, parity-backlog rows 1-8 | - | Looks only, at the end |
 
+Done 19-11 (group 3, merged 7c6979ec): B-069, F-042, F-039, F-043.
 Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079. Merged 4cf941b5: F-020, F-041, F-044, B-081, B-080 (browser pass owed).
 
 ## Advisor (pointer: group 5: F-138, F-134, F-136, then F-137 once SHELL-F-161 lands)
