@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 02:35
+Updated: 19-11-2026 02:45
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -42,6 +42,7 @@ Done 19-11: B-133 (1877cdd8, proof in PS's next window). Done 18-11: B-131, B-13
 | 11 | 2 | OFA-B-172 | Move to cull list: Master status gets its "Choose a master status" placeholder (board C125) | 1 | Fails build-and-cull B14 |
 | 13 | X | OFA-B-173 | Move to cull list: Reason preselected "Account closed" and the "Add attachments (optional)" row, as the board draws | 2 | Held, after group 2 |
 | 14 | X | OFA-B-174 | Seed: about 30 more trail row types get fixed times | 3 | Held, after group 2 |
+| 15 | X | (new) | Acceptance evidence per signatory (joint accounts show every signer, not just the latest) | 2 | Held, for when COMPLIANCE-DASHBOARD-F-004 needs every signer |
 | 12 | X | OFA-B-171 | Seed a separate month at List built and one at Ready to issue (October untouched) for I2, I4, B1 | 3 | Held, after group 2 |
 | 9 | 3 | OFA-F-146 | Only the OFA Team quarantines (adviser's own move removed) | 3 | - |
 | 10 | 3 | OFA-F-150 | OFA Team moves a single account into quarantine | 3 | F-146; design row C163 |
