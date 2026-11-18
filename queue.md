@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 05:20
+Updated: 19-11-2026 05:50
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -14,14 +14,14 @@ Updated: 19-11-2026 05:20
 4. Functionality first (user, 18-11): no full design checks; only the screens a change touches; look gaps wait for the end parity sweep.
 5. Unsupervised: nobody answers prompts. The hub rules on workers' defaults; anything only the user may decide waits on its default (marked "awaiting user" in the rulings). One app stack at a time (memory).
 
-## Shell (pointer: parked 22c4a425)
+## Shell (pointer: SHELL-F-161, urgent: advisor F-137 waits on it)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 3 | X | (owed runs) | F-084/F-145 look runs (sweep); B-128 waits for a plugin to opt in | - | F-144 parts 1+2 and B-130 proved 18-11 |
 | 2 | X | SHELL-B-022 | Table card stays full height when a search finds nothing (theme half) | 3 | Look gap: end parity sweep (functionality first) |
 | 1 | X | (owed) | Next stack window: ofa-test-data-drop.ps1 -Leftovers; SHELL-B-132 runbook check | - | From the 18-11 full-run incident |
-| 5 | 2 | SHELL-F-161 | Table toolkit Reset: optional host hook, so a plugin restores its own state (advisor's month) | 2 | Next shell group |
+| >> | 2 | SHELL-F-161 | Table toolkit Reset: optional host hook, so a plugin restores its own state (advisor's month) | 2 | Urgent: ADVISOR-DASHBOARD-F-137 waits on it |
 | 4 | X | SHELL-F-089 | Take off the temporary "Expired report" sidebar item | 1 | Blocked on OFA-F-056 (PS) |
 
 Done 19-11: B-133 (1877cdd8, proof in PS's next window). Done 18-11: B-131, B-132 (799cc46e), F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160.
@@ -85,16 +85,21 @@ Collision rules (hub ruling 18-11):
 
 Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079. Merged 4cf941b5: F-020, F-041, F-044, B-081, B-080 (browser pass owed).
 
-## Advisor (pointer: group 4 building: F-080 part 1 next; F-124 and group 3 merged 4d30b61a)
+## Advisor (pointer: group 5: F-138, F-134, F-136, then F-137 once SHELL-F-161 lands)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 2 | 1 | (item 5) | Test-clock scenarios; design check only on screens its merges touch | - | App turn after SHELL-F-144 part 2 |
-| 8 | 4 | ADVISOR-DASHBOARD-F-071, F-080, F-093, F-100, F-075 (+ F-056 remainder) | The book and portfolio: every bucket a column, book levels, State Manager opens a book, personal-code accounts in tiles, every filter in every seat | ~21 | Group 4 (F-080 part 1 only: server reads and export; part 2, the levels screen, waits for board row B90) |
 | 9 | X | F-047, F-057, F-059, F-060, F-048, F-049, F-117, F-118 | Blocked on Portfolio Services items (OFA-F-024, F-130, F-134..F-136, F-044, F-027, F-131, F-132) | - | Waiting |
 | 10 | X | ADVISOR-DASHBOARD-B-104 | S-Account page's scroll test needs a fourth platform account | - | Unblocked: S20114 has four since OFA-B-150; P74 rerun moves to the end-of-build parity sweep |
-| 11 | 5 | ADVISOR-DASHBOARD-F-138 | Tracking tab table gets the table tools, with its own export endpoint | 3 | Next group after group 4; depends on F-074 |
+| >> | 5 | ADVISOR-DASHBOARD-F-138 | Tracking tab table gets the table tools, with its own export endpoint | 3 | First |
+| 12 | 5 | ADVISOR-DASHBOARD-F-134 | Accounts Opened tiles count personal-code accounts | 2 | - |
+| 13 | 5 | ADVISOR-DASHBOARD-F-136 | Funds Under Advice by-adviser Total row counts personal-code accounts | 2 | After F-134 |
+| 14 | 5 | ADVISOR-DASHBOARD-F-137 | The book's Reset brings back the opening month | 1 | Last; needs SHELL-F-161 on main |
+| 15 | X | ADVISOR-DASHBOARD-F-080 part 2 | The book's levels screen | - | Waits for board row B90 |
+| 16 | X | ADVISOR-DASHBOARD-F-135 | Gross Revenue tiles count personal-code accounts | 2 | Held on PM-100 / ADV-050 |
 
+Done 19-11 (group 4, merged 2a74c4ea): F-100 part 1, F-133, F-071, F-093 part 2, F-056, F-075, F-080 part 1. Owed to the end sweep: business and browser runs for groups 3 and 4, F-124 @review-T94, B-104 P74, F-133 live timing.
 Done 19-11 (merged 4d30b61a): F-124, F-074, F-076 (shared value on the hub default, ADV-056 open), F-077, F-116. Business scenarios and parity owed to the end sweep.
 
 Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F-128, F-129, F-130, F-123, F-082 (the shell run's 15 reds were raised and built in these).
