@@ -84,7 +84,7 @@ Collision rules (hub ruling 18-11):
 | 3 | 3 | COMPLIANCE-DASHBOARD-F-043 | Show the OFA Team's own quarantine move (OfaTeamMoved) and its note | 1 | Joint window |
 | 4 | 3 | COMPLIANCE-DASHBOARD-F-039 | Three Adviser emails on Wording; Quarantine reads them | 2 | OFA-F-147 (PS2 group 3); rows W26, Q12 |
 | 5 | 3 | (owed) | Browser pass for the merged group: touched screens; F-044, F-020, B-081 scenarios | - | Next quiet window |
-| 6 | 3 | (owed) | PMBook F-040 row: one-line update (NW-53110 keeps its tag: master status uses the database's own day, risk A8) | - | Docs only |
+| 6 | 3 | (owed) | Clear the three @not-built-COMPLIANCE-DASHBOARD-F-040 tags once they pass in the stack window (PMBook line already done) | - | Stack window |
 | 7 | 4 | COMPLIANCE-DASHBOARD-F-010 | Compliance adds notes | 3 | OFA-F-042 (PS group 2) |
 | 8 | 4 | COMPLIANCE-DASHBOARD-F-029 | Account details: the Documents card's contents | 2 | OFA-F-128 (PS group 2) |
 | 9 | X | COMPLIANCE-DASHBOARD-F-037 | .NET test speed-up, part 2 | 2 | OFA-F-144 (PS) |
