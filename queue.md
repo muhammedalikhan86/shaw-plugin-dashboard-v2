@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 09:30
+Updated: 19-11-2026 11:00
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -68,7 +68,7 @@ Collision rules (hub ruling 18-11):
 5. App turns: one at a time, scheduled by the hub.
 6. PS2 skips the graph rebuild; PS does it. New IDs come from the hub.
 
-## Compliance (pointer: group 5: F-038 and F-045; one merge)
+## Compliance (pointer: group 5: F-038 and F-045, in Integration; parks after this merge, by Muhammed)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
@@ -84,7 +84,7 @@ Done 19-11 (group 4, merged a813a521): F-010, F-029.
 Done 19-11 (group 3, merged 7c6979ec): B-069, F-042, F-039, F-043.
 Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079. Merged 4cf941b5: F-020, F-041, F-044, B-081, B-080 (browser pass owed).
 
-## Advisor (pointer: parked 90fa8481; nothing buildable until OFA-F-024 is on main, then F-047, F-059, F-060 as group 7)
+## Advisor (pointer: parked 90fa8481 by Muhammed; group 7 waits for his go, even once OFA-F-024 is on main)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
