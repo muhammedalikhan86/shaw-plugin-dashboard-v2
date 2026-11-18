@@ -88,6 +88,7 @@ Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
+| 0 | 7 | (OFA-B-154 follow-up) | Twin the six "All 6 advisers" scenarios in state-manager.feature: board as drawn, built app "All 7 advisers" | 1 | After PS group 3 merges |
 | 1 | 7 | ADVISOR-DASHBOARD-F-047, F-059, F-060 | S-Account page arrangement and History tab; notes with who sees them | 7+ | Wait on OFA-F-024 (PS2 next group, first) |
 | 2 | X | F-048, F-049, F-057, F-117, F-118 | Blocked on Portfolio Services items (OFA-F-024, F-027, F-044, F-131, F-132) | - | Waiting |
 | 7 | X | ADVISOR-DASHBOARD-F-080 part 2 | The book's levels screen | - | Waits for board row B90 |
