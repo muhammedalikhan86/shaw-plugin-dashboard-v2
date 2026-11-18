@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 03:00
+Updated: 19-11-2026 03:20
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -44,14 +44,7 @@ Done 19-11: B-133 (1877cdd8, proof in PS's next window). Done 18-11: B-131, B-13
 | 14 | X | OFA-B-174 | Seed: about 30 more trail row types get fixed times | 3 | Held, after group 2 |
 | 15 | X | OFA-F-155 | Acceptance evidence per signatory (joint accounts show every signer, not just the latest) | 2 | Held, for when COMPLIANCE-DASHBOARD-F-004 needs every signer |
 | 12 | X | OFA-B-171 | Seed a separate month at List built and one at Ready to issue (October untouched) for I2, I4, B1 | 3 | Held, after group 2 |
-| 9 | 3 | OFA-F-146 | Only the OFA Team quarantines (adviser's own move removed) | 3 | - |
-| 10 | 3 | OFA-F-150 | OFA Team moves a single account into quarantine | 3 | F-146; design row C163 |
-| 11 | 3 | OFA-F-147 | Quarantine email dropped; weekly follow-up from the quarantine date | 3 | OFA-F-016, F-146 |
-| 12 | 3 | OFA-F-148 | Email wording store takes Luke's merge fields | 3 | OFA-F-016, F-147 |
-| 13 | 3 | OFA-F-149 | End-of-day email also for accounts quarantined at the deadline | 2 | F-147 |
 | 14 | X | OFA-F-144 | Test data: a register-only data set over a shared warehouse | 3 | - |
-| 15 | X | OFA-S-001 | Spike: how a document is filed in DART and opened | 3 | - |
-| 16 | X | OFA-F-145 | The Compliance tool can open an OFA document | 2 | OFA-S-001 |
 | 17 | X | OFA-F-044 | The closure confirmation | 3 | OFA-F-010 (in progress) |
 | 18 | X | OFA-B-154 | Test user for a state manager who sees every adviser | 2 | - |
 
@@ -59,14 +52,17 @@ Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).
 
-## Portfolio Services 2 (pointer: group 3 passed review; merge main, Integration, Finalizers, commit; C163 board pass moved to the end sweep)
+## Portfolio Services 2 (pointer: group 4, OFA-S-001 then OFA-F-145)
 
 Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfolio-services-2`, branch `portfolio-services-2`, port offset 40, artboard port 8799.
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 1 | - | (setup) | In hub.json and opened 18-11 on Lachlan's account | - | Done |
-| >> | 3 | OFA-F-146 → F-147 → F-148 → F-149 → F-150 | PS group 3, Luke's quarantine changes, serial | 14 | Merges in one window with ADVISOR-DASHBOARD-F-124 and a compliance fix (F-146: advisor surface version 2). Owns seed lines RegisterSeed.cs:926 and :1416-1429 |
+| >> | 4 | OFA-S-001 | Spike: how a document is filed in DART and opened | 3 | First |
+| 2 | 4 | OFA-F-145 | The Compliance tool can open an OFA document | 2 | OFA-S-001 |
+
+Done 19-11 (group 3, merged 0ab2aae7): OFA-F-146, F-147, F-148, F-149, F-150; OFA-F-016 Done. Seed 2026-11-19.5: every checkout runs make test-data before its next make up. Board Parity C163 owed to the end sweep. Release settings went to docs/deployment/release-runbook.md (4de24c89).
 
 Collision rules (hub ruling 18-11):
 1. Migration numbers: PS uses 0086-0099, PS2 uses 0100-0119.
@@ -76,7 +72,7 @@ Collision rules (hub ruling 18-11):
 5. App turns: one at a time, scheduled by the hub.
 6. PS2 skips the graph rebuild; PS does it. New IDs come from the hub.
 
-## Compliance (pointer: merge main, then group 3: B-069 now; F-042, F-043, F-039 once PS2's group 3 is on main)
+## Compliance (pointer: group 3: PS2's group 3 is on main; merge main and build F-042, F-043, F-039 with B-069 now; merges after advisor)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|

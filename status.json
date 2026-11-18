@@ -10,7 +10,7 @@
    "name": "Build",
    "status": "In progress",
    "start": "2026-10-28",
-   "end": "2026-12-03",
+   "end": "2026-12-02",
    "isForecast": true,
    "note": "start = first day of the story-points record (hub chart, from 2026-10-28), not a documented kickoff; the shell, Landing Page and the pre-OFA Advisor Dashboard were built and released earlier as functional mocks (2026-10-12). Build includes OFA-F-028 Go-live and OFA-F-029 coverage gate (PS Phase 5), and OFA-F-030 in eSignatureWebAPI (outside this repo)."
   },
@@ -56,10 +56,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 427.0,
-   "pointsRemaining": 327.0,
+   "pointsDone": 449.0,
+   "pointsRemaining": 305.0,
    "pointsTotal": 754.0,
-   "itemsRemaining": 132,
+   "itemsRemaining": 126,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 99.3,
+  "pointsPerWorkingDayWholePeriod": 100.99,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -230,8 +230,8 @@
    },
    {
     "date": "2026-11-19",
-    "pointsDone": 1291.0,
-    "pointsDoneThatDay": 1.0
+    "pointsDone": 1313.0,
+    "pointsDoneThatDay": 23.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -247,11 +247,11 @@
     "rateWhole": 25.38
    },
    "Portfolio Services": {
-    "optimistic": "2026-12-02",
-    "likely": "2026-12-03",
-    "pessimistic": "2026-12-04",
+    "optimistic": "2026-12-01",
+    "likely": "2026-12-02",
+    "pessimistic": "2026-12-03",
     "rateLast10": 38.95,
-    "rateWhole": 30.3
+    "rateWhole": 31.99
    },
    "Advisor": {
     "optimistic": "2026-11-24",
@@ -269,14 +269,14 @@
    }
   },
   "overall": {
-   "optimistic": "2026-12-02",
-   "likely": "2026-12-03",
-   "pessimistic": "2026-12-04",
+   "optimistic": "2026-12-01",
+   "likely": "2026-12-02",
+   "pessimistic": "2026-12-03",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 99.3,
-   "pointsRemaining": 435.0,
-   "itemsRemaining": 167
+   "rateWhole": 100.99,
+   "pointsRemaining": 413.0,
+   "itemsRemaining": 161
   }
  },
  "milestones": [
@@ -312,7 +312,7 @@
   },
   {
    "name": "Portfolio Services build complete (likely)",
-   "date": "2026-12-03",
+   "date": "2026-12-02",
    "kind": "forecast"
   },
   {
@@ -327,7 +327,7 @@
   },
   {
    "name": "Build complete (likely)",
-   "date": "2026-12-03",
+   "date": "2026-12-02",
    "kind": "forecast"
   }
  ],
@@ -354,7 +354,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-19T01:51:14+11:00",
+ "updatedAt": "2026-11-19T02:21:18+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1904,6 +1904,11 @@
    "at": "2026-11-19T01:51:14+11:00",
    "change": "SHELL-F-161 raised (2 pts)",
    "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-19T02:21:18+11:00",
+   "change": "19-11: PS2 group 3 merged (OFA-F-146 to F-150, 14 pts; F-016 Done)",
+   "pointsDone": 22.0
   }
  ],
  "foundDuringBuild": {
