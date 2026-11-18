@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 473.0,
-   "pointsRemaining": 5.0,
-   "pointsTotal": 478.0,
-   "itemsRemaining": 3,
+   "pointsRemaining": 6.0,
+   "pointsTotal": 479.0,
+   "itemsRemaining": 4,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 140.0,
@@ -270,8 +270,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 98.3,
-   "pointsRemaining": 425.0,
-   "itemsRemaining": 161
+   "pointsRemaining": 426.0,
+   "itemsRemaining": 162
   }
  },
  "milestones": [
@@ -349,7 +349,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-18T17:05:16+11:00",
+ "updatedAt": "2026-11-18T17:20:37+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1865,6 +1865,11 @@
    "at": "2026-11-18T17:05:16+11:00",
    "change": "Shell proofs for F-144 and B-130 merged; shell parked",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-18T17:20:37+11:00",
+   "change": "SHELL-B-131 raised (1 pt)",
+   "pointsRaised": 1.0
   }
  ],
  "foundDuringBuild": {

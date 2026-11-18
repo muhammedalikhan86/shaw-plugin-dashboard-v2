@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 18-11-2026 17:19
+Updated: 18-11-2026 17:20
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -14,13 +14,13 @@ Updated: 18-11-2026 17:19
 4. Functionality first (user, 18-11): no full design checks; only the screens a change touches; look gaps wait for the end parity sweep.
 5. Unsupervised: nobody answers prompts. The hub rules on workers' defaults; anything only the user may decide waits on its default (marked "awaiting user" in the rulings). One app stack at a time (memory).
 
-## Shell (pointer: parked 5cc52d11, nothing functional queued)
+## Shell (pointer: parked 0eec8fa9, nothing functional queued)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 3 | X | (owed runs) | F-084/F-145 look runs (sweep); B-128 waits for a plugin to opt in | - | F-144 parts 1+2 and B-130 proved 18-11 |
 | 2 | X | SHELL-B-022 | Table card stays full height when a search finds nothing (theme half) | 3 | Look gap: end parity sweep (functionality first) |
-| 5 | X | (to raise) | `.doc-link` has no focus ring (compliance's Wording Open links now use it, as the board draws) | - | From compliance F-041; shell raises the ID, builds after its next go |
+| 5 | X | SHELL-B-131 | `.doc-link` has no focus ring (compliance's Wording Open links now use it, as the board draws) | 1 | From compliance F-041; builds after shell's next go |
 | 4 | X | SHELL-F-089 | Take off the temporary "Expired report" sidebar item | 1 | Blocked on OFA-F-056 (PS) |
 
 Done 18-11: F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160.
