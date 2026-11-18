@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 13:50
+Updated: 19-11-2026 14:30
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -38,7 +38,7 @@ Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostCh
 | 5 | X | OFA-F-010 | Job host and mail outbox sender | 5 | Blocked: Shaw.WebJob 2.1.0 not on the sic2tfs1 feed (Muhammed publishes) |
 | 6 | X | OFA-F-033 | The month's fees from GridPay | 5 | Blocked: no warehouse fee table, no gMSA read on GridPay (warehouse team) |
 | 6 | X | OFA-F-155 | Acceptance evidence per signatory | 2 | Held, for when COMPLIANCE-DASHBOARD-F-004 needs every signer |
-| 14 | X | OFA-F-144 | Test data: a register-only data set over a shared warehouse | 3 | - |
+| 14 | X | OFA-F-144 | Test data: a register-only data set over a shared warehouse | 3 | After go-live (Muhammed 19-11) |
 | 17 | X | OFA-F-044 | The closure confirmation | 3 | OFA-F-010 (in progress) |
 
 Done 19-11 (group 3, merged 9549205a): OFA-F-152, B-171, B-173, B-174, B-154, 0120 fix. Seed 2026-11-19.7. Browser proof waits until after go-live.
@@ -108,6 +108,8 @@ Done 19-11 (merged 4d30b61a): F-124, F-074, F-076 (shared value on the hub defau
 Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F-128, F-129, F-130, F-123, F-082 (the shell run's 15 reds were raised and built in these).
 
 ## Hub
+
+- Release 1 (Muhammed 19-11): Shell, Portfolio Services, Compliance. Advisor OFA features in release 2. After go-live: OFA-F-032, F-062, F-059, F-144, every LOOK and TEST bug. In release 1: OFA-F-138 DART filing (blocked on the owners). FUNC bug picks: open with Muhammed.
 
 - Waiting on Muhammed: publish Shaw.WebJob 2.1.0 to the sic2tfs1 feed (blocks OFA-F-010, the mail sender); the GridPay fee source for OFA-F-033 (warehouse team).
 - Waiting on Luke (Muhammed is sending one email for all of them): templates for the 8 emails without real wording. Placeholders meanwhile (OFA-F-157); OFA-F-158 swaps them in.
