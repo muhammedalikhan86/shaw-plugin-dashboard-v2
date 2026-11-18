@@ -103,7 +103,7 @@ Done 18-11: B-107, F-125, F-126, F-127, F-128, F-129, F-130, F-123, F-082 (the s
 
 ## Hub
 
-Stack windows queued (after SHELL-F-144 part 2, one at a time): shell (prove F-144 part 2), compliance (offset 30 + artboard 8795: F-020, B-080 impacted screens only), advisor (test-clock scenarios + impacted screens), ps (board parity, 6 compliance scenarios, B-155).
+Stack windows (one at a time): 1. shell, running now (prove F-144 part 2, owed app checks). 2. ps (B-149, B-165 touched screens; O19 + compliance's 6 B-153 scenarios). 3. compliance (F-020, B-080 touched screens). 4. advisor (test-clock scenarios, touched screens). 5. ps2 (group 3, after its merge with advisor F-124 is near). Each checkout's first window starts make down, make test-data, make up.
 
 0. Design sync 18-11 (f9cf27ce): O17, O18, O19, Q13 Done. The full board run is dropped (user, 18-11: functionality first; only impacted screens are checked). Waiting on Muhammed: O17/O18 heading rule (one line, or two lines allowed) and O19's wording (business to confirm).
 
