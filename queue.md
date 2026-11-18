@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 18-11-2026 18:28
+Updated: 18-11-2026 18:30
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -77,7 +77,7 @@ Collision rules (hub ruling 18-11):
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
-| >> | 3 | COMPLIANCE-DASHBOARD-B-069 | Quarantine: Fees as at / Signing as at in the header | 1 | OFA-F-153 on main; build now, commit with group 3 |
+| >> | 3 | COMPLIANCE-DASHBOARD-B-069 | Fees as at / Signing as at in the shared header (every page but Closed months and Wording) | 3 | OFA-F-153 on main; build now, commit with group 3 |
 | 2 | 3 | COMPLIANCE-DASHBOARD-F-042 | Catch up with PS2's group 3: quarantine fixture and S20187 scenario (F-146); the retired adviser-quarantine email slot, no seeded quarantine emails, the State Manager read from Quarantine or Weekly emails, no Compliance Cc, board emails gone for TD-44/46/53 (F-147); the upload check reads IsRequired, adviser emails have 5 fields (F-148) | 5 | Joint window with PS2's group 3 and advisor F-124 |
 | 3 | 3 | COMPLIANCE-DASHBOARD-F-043 | Show the OFA Team's own quarantine move (OfaTeamMoved) and its note | 1 | Joint window |
 | 4 | 3 | COMPLIANCE-DASHBOARD-F-039 | Three Adviser emails on Wording; Quarantine reads them | 2 | OFA-F-147 (PS2 group 3); rows W26, Q12 |
