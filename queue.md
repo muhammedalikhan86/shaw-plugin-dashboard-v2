@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 12:15
+Updated: 19-11-2026 13:00
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -12,6 +12,8 @@ Updated: 19-11-2026 12:15
 2. SHELL-F-144 part 2 is merged (8bce346d). Each checkout runs `make down` then `make test-data` once, in its own app turn. App turns go one at a time, scheduled by the hub: shell now.
 3. PS2 opened 18-11 for group 3, code only.
 4. Functionality first (user, 18-11): no full design checks; only the screens a change touches; look gaps wait for the end parity sweep.
+6. Shortest path to deployment (Muhammed, 19-11): only functional work is scheduled from here. Look gaps (a misaligned button that works) wait. Placeholder email wording is fine to deploy (OFA-F-157; Luke's templates follow as OFA-F-158). Tests per group: affected unit and .NET tests once at Integration only; no Board Parity, no business-test or browser runs, no graph rebuild until the end.
+7. Hub stack (4200) is up for Muhammed's testing (19-11). No worker stack meanwhile.
 5. Unsupervised: nobody answers prompts. The hub rules on workers' defaults; anything only the user may decide waits on its default (marked "awaiting user" in the rulings). One app stack at a time (memory).
 
 ## Shell (pointer: parked 9f78ffae)
@@ -25,15 +27,15 @@ Updated: 19-11-2026 12:15
 
 Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostChanged] and (resetPressed)), B-133 (1877cdd8, proof in PS's next window). Done 18-11: B-131, B-132 (799cc46e), F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160.
 
-## Portfolio Services (pointer: group 3, seed and month fixes: B-171, B-174, F-152, B-173, B-154)
+## Portfolio Services (pointer: group 3, last item B-154; B-171, B-174, F-152, B-173 and the 0120 fix are committed)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|---|---|---|---|---|
-| >> | 3 | OFA-B-171 | Seed a separate month at List built and one at Ready to issue (October untouched) for I2, I4, B1 | 3 | Seed |
+| 1 | 3 | OFA-B-171 | Seed a separate month at List built and one at Ready to issue (October untouched) for I2, I4, B1 | 3 | Seed |
 | 2 | 3 | OFA-B-174 | Seed: about 30 more trail row types get fixed times | 3 | Seed, with B-171 |
 | 3 | 3 | OFA-F-152 | Add an account to this month (approved triage row) | 3 | Sized by the hub 19-11; switches on B-170's B8-B11, B13 |
 | 4 | 3 | OFA-B-173 | Move to cull list: Reason preselected "Account closed" and the "Add attachments (optional)" row, as the board draws | 2 | Cull list |
-| 5 | 3 | OFA-B-154 | Test user: a State Manager seat that reaches every adviser | 2 | Seed |
+| >> | 3 | OFA-B-154 | Test user: a State Manager seat that reaches every adviser | 2 | Seed |
 | 6 | X | OFA-F-155 | Acceptance evidence per signatory | 2 | Held, for when COMPLIANCE-DASHBOARD-F-004 needs every signer |
 | 14 | X | OFA-F-144 | Test data: a register-only data set over a shared warehouse | 3 | - |
 | 17 | X | OFA-F-044 | The closure confirmation | 3 | OFA-F-010 (in progress) |
