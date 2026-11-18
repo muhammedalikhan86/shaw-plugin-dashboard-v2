@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 04:10
+Updated: 19-11-2026 04:40
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -26,28 +26,20 @@ Updated: 19-11-2026 04:10
 
 Done 19-11: B-133 (1877cdd8, proof in PS's next window). Done 18-11: B-131, B-132 (799cc46e), F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160.
 
-## Portfolio Services (pointer: group 2 building, wave 1: B-170, B-168, B-166, B-155)
+## Portfolio Services (pointer: group 3, seed and month fixes: B-171, B-174, F-152, B-173, B-154)
 
 | # | Grp | ID | Item | Size | Status / depends on |
-|---|-----|----|------|------|---------------------|
-| >> | 2 | OFA-B-170 | issue-the-month and build-and-cull tests read the shell seed (seed a Ready-to-issue month and stage states, or assert the seed's counts) | 3 | First: unblocks those scenarios |
-| 3 | 2 | OFA-F-154 | Fees and Signing rows in advisor.usp_DataFreshness_Read, plus seed values | 2 | Early: shows ADVISOR-DASHBOARD-F-116's line |
-| 4 | 2 | OFA-B-169 | Seed: the remaining load-time stamps (ArrangementAdded, RenewalNoticeQueued trail rows, September PublishedUtc) get fixed times | 2 | - |
-| 5 | 2 | OFA-B-166 | Test fixtures use the checkout's own LocalDB (LocalDbTestDatabase.cs:24) | 1 | From SHELL-F-144 part 2 |
-| 6 | 2 | OFA-F-042 | Compliance notes | 3 | - |
-| 7 | 2 | OFA-F-128 | A view of an account's documents for the Compliance tool | 2 | - |
-| 8 | 2 | OFA-F-136 | The client's acceptance evidence for the Compliance tool | 2 | - |
-| 9 | 2 | OFA-F-046 | Who a pending renewal is with | 3 | - |
-| 10 | 2 | OFA-B-155 | Bug from an earlier merge | - | Look check in group 2's window |
-| 11 | 2 | OFA-B-172 | Move to cull list: Master status gets its "Choose a master status" placeholder (board C125) | 1 | Fails build-and-cull B14 |
-| 13 | X | OFA-B-173 | Move to cull list: Reason preselected "Account closed" and the "Add attachments (optional)" row, as the board draws | 2 | Held, after group 2 |
-| 14 | X | OFA-B-174 | Seed: about 30 more trail row types get fixed times | 3 | Held, after group 2 |
-| 15 | X | OFA-F-155 | Acceptance evidence per signatory (joint accounts show every signer, not just the latest) | 2 | Held, for when COMPLIANCE-DASHBOARD-F-004 needs every signer |
-| 12 | X | OFA-B-171 | Seed a separate month at List built and one at Ready to issue (October untouched) for I2, I4, B1 | 3 | Held, after group 2 |
+|---|---|---|---|---|---|
+| >> | 3 | OFA-B-171 | Seed a separate month at List built and one at Ready to issue (October untouched) for I2, I4, B1 | 3 | Seed |
+| 2 | 3 | OFA-B-174 | Seed: about 30 more trail row types get fixed times | 3 | Seed, with B-171 |
+| 3 | 3 | OFA-F-152 | Add an account to this month (approved triage row) | 3 | Sized by the hub 19-11; switches on B-170's B8-B11, B13 |
+| 4 | 3 | OFA-B-173 | Move to cull list: Reason preselected "Account closed" and the "Add attachments (optional)" row, as the board draws | 2 | Cull list |
+| 5 | 3 | OFA-B-154 | Test user: a State Manager seat that reaches every adviser | 2 | Seed |
+| 6 | X | OFA-F-155 | Acceptance evidence per signatory | 2 | Held, for when COMPLIANCE-DASHBOARD-F-004 needs every signer |
 | 14 | X | OFA-F-144 | Test data: a register-only data set over a shared warehouse | 3 | - |
 | 17 | X | OFA-F-044 | The closure confirmation | 3 | OFA-F-010 (in progress) |
-| 18 | X | OFA-B-154 | Test user for a state manager who sees every adviser | 2 | - |
 
+Done 19-11 (group 2, merged e88c4201): OFA-F-154, F-042, F-128, F-136, F-046; B-155, B-166, B-169, B-170, B-172 (B2/B14/B15 proof owed to the end sweep). Seed 2026-11-19.6.
 Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156. OFA-B-168 closed as a duplicate of OFA-B-150 (0 points). Group 1b merged ad2ebbd2: OFA-F-153, OFA-B-165, OFA-B-149, OFA-B-153, OFA-B-167, autoFocus follow-up, test fixes (seed 2026-11-19.4: run make test-data before the next make up).
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).

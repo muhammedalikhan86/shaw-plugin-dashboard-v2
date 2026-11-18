@@ -56,10 +56,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 449.0,
-   "pointsRemaining": 305.0,
-   "pointsTotal": 754.0,
-   "itemsRemaining": 126,
+   "pointsDone": 470.0,
+   "pointsRemaining": 294.0,
+   "pointsTotal": 764.0,
+   "itemsRemaining": 120,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 101.99,
+  "pointsPerWorkingDayWholePeriod": 103.61,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -230,8 +230,8 @@
    },
    {
     "date": "2026-11-19",
-    "pointsDone": 1326.0,
-    "pointsDoneThatDay": 36.0
+    "pointsDone": 1347.0,
+    "pointsDoneThatDay": 57.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -249,9 +249,9 @@
    "Portfolio Services": {
     "optimistic": "2026-12-01",
     "likely": "2026-12-02",
-    "pessimistic": "2026-12-03",
+    "pessimistic": "2026-12-02",
     "rateLast10": 38.95,
-    "rateWhole": 31.99
+    "rateWhole": 33.61
    },
    "Advisor": {
     "optimistic": "2026-11-24",
@@ -271,12 +271,12 @@
   "overall": {
    "optimistic": "2026-12-01",
    "likely": "2026-12-02",
-   "pessimistic": "2026-12-03",
+   "pessimistic": "2026-12-02",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 101.99,
-   "pointsRemaining": 400.0,
-   "itemsRemaining": 156
+   "rateWhole": 103.61,
+   "pointsRemaining": 389.0,
+   "itemsRemaining": 150
   }
  },
  "milestones": [
@@ -354,7 +354,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-19T02:23:29+11:00",
+ "updatedAt": "2026-11-19T02:49:51+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1914,6 +1914,12 @@
    "at": "2026-11-19T02:23:29+11:00",
    "change": "19-11: advisor F-124 and group 3 merged (F-074, F-076, F-077, F-116)",
    "pointsDone": 13.0
+  },
+  {
+   "at": "2026-11-19T02:49:51+11:00",
+   "change": "19-11: PS group 2 merged (21 pts: F-154, F-042, F-128, F-136, F-046 + 5 bugs)",
+   "pointsDone": 21.0,
+   "pointsRaised": 10.0
   }
  ],
  "foundDuringBuild": {
