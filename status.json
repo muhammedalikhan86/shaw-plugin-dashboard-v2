@@ -38,17 +38,17 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 571.0,
-   "pointsRemaining": 47.0,
-   "pointsTotal": 618.0,
-   "itemsRemaining": 18,
+   "pointsDone": 454.0,
+   "pointsRemaining": 22.0,
+   "pointsTotal": 476.0,
+   "itemsRemaining": 9,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
-    "pointsDone": 0.0,
-    "pointsRemaining": 0.0,
-    "pointsTotal": 0.0,
-    "itemsDone": 0,
-    "itemsRemaining": 0
+    "pointsDone": 125.0,
+    "pointsRemaining": 17.0,
+    "pointsTotal": 142.0,
+    "itemsDone": 62,
+    "itemsRemaining": 6
    }
   },
   {
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 94.69,
+  "pointsPerWorkingDayWholePeriod": 85.69,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -225,8 +225,8 @@
    },
    {
     "date": "2026-11-18",
-    "pointsDone": 1231.0,
-    "pointsDoneThatDay": 39.0
+    "pointsDone": 1114.0,
+    "pointsDoneThatDay": -78.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -235,11 +235,11 @@
   "method": "optimistic = the 2026-11-11 to 2026-11-15 rate (points per calendar day, the pace with the new skills); likely = mean of the two rates; pessimistic = whole-period rate (since 2026-10-28). The forecast counts Mon-Fri working days only; weekend points count in the totals.",
   "perComponent": {
    "Shell & Landing Page": {
-    "optimistic": "2026-11-20",
-    "likely": "2026-11-20",
+    "optimistic": "2026-11-19",
+    "likely": "2026-11-19",
     "pessimistic": "2026-11-20",
     "rateLast10": 35.55,
-    "rateWhole": 23.69
+    "rateWhole": 14.69
    },
    "Portfolio Services": {
     "optimistic": "2026-12-01",
@@ -249,9 +249,9 @@
     "rateWhole": 28.22
    },
    "Advisor": {
-    "optimistic": "2026-11-25",
+    "optimistic": "2026-11-23",
     "likely": "2026-11-24",
-    "pessimistic": "2026-11-23",
+    "pessimistic": "2026-11-25",
     "rateLast10": 18.12,
     "rateWhole": 30.23
    },
@@ -269,9 +269,9 @@
    "pessimistic": "2026-12-04",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 94.69,
-   "pointsRemaining": 462.0,
-   "itemsRemaining": 173
+   "rateWhole": 85.69,
+   "pointsRemaining": 437.0,
+   "itemsRemaining": 164
   }
  },
  "milestones": [
@@ -302,7 +302,7 @@
   },
   {
    "name": "Shell & Landing Page build complete (likely)",
-   "date": "2026-11-20",
+   "date": "2026-11-19",
    "kind": "forecast"
   },
   {
@@ -349,7 +349,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-18T09:51:56+11:00",
+ "updatedAt": "2026-11-18T11:11:17+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1833,13 +1833,19 @@
    "at": "2026-11-18T09:51:56+11:00",
    "change": "Recount: 27 Portfolio Services items had been left out of the count (recount from the PMBooks)",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-18T11:11:17+11:00",
+   "change": "Shell: notification links into a plugin (SHELL-F-143), plugin access fix (SHELL-B-123) and faster worker tests (SHELL-F-148) done",
+   "pointsDone": -117.0,
+   "pointsRaised": -142.0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 49.0,
-  "pointsRemaining": 30.0,
-  "pointsTotal": 79.0,
-  "itemsDone": 25,
-  "itemsRemaining": 11
+  "pointsDone": 174.0,
+  "pointsRemaining": 47.0,
+  "pointsTotal": 221.0,
+  "itemsDone": 87,
+  "itemsRemaining": 17
  }
 }
