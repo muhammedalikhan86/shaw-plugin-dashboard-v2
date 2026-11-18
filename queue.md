@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 01:25
+Updated: 19-11-2026 01:43
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -14,12 +14,13 @@ Updated: 19-11-2026 01:25
 4. Functionality first (user, 18-11): no full design checks; only the screens a change touches; look gaps wait for the end parity sweep.
 5. Unsupervised: nobody answers prompts. The hub rules on workers' defaults; anything only the user may decide waits on its default (marked "awaiting user" in the rulings). One app stack at a time (memory).
 
-## Shell (pointer: parked 799cc46e)
+## Shell (pointer: find.ts inert fix, urgent)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 3 | X | (owed runs) | F-084/F-145 look runs (sweep); B-128 waits for a plugin to opt in | - | F-144 parts 1+2 and B-130 proved 18-11 |
 | 2 | X | SHELL-B-022 | Table card stays full height when a search finds nothing (theme half) | 3 | Look gap: end parity sweep (functionality first) |
+| >> | 1 | (to raise) | business-tests/support/find.ts skips `inert` step tables (NOT_INERT in firstOnScreen, rowsFor, tableSearch) | - | Urgent: PS's build-and-cull B2, B14, B15 red |
 | 1 | X | (owed) | Next stack window: ofa-test-data-drop.ps1 -Leftovers; SHELL-B-132 runbook check | - | From the 18-11 full-run incident |
 | 4 | X | SHELL-F-089 | Take off the temporary "Expired report" sidebar item | 1 | Blocked on OFA-F-056 (PS) |
 
@@ -39,6 +40,8 @@ Done 18-11: B-131, B-132 (799cc46e), F-144 part 2 (8bce346d), F-144 part 1, F-14
 | 9 | 2 | OFA-F-046 | Who a pending renewal is with | 3 | - |
 | 10 | 2 | OFA-B-155 | Bug from an earlier merge | - | Look check in group 2's window |
 | 11 | 2 | OFA-B-172 | Move to cull list: Master status gets its "Choose a master status" placeholder (board C125) | 1 | Fails build-and-cull B14 |
+| 13 | X | (to raise) | Move to cull list: Reason preselected "Account closed" and the "Add attachments (optional)" row, as the board draws | - | Held, after group 2 |
+| 14 | X | (to raise) | Seed: about 30 more trail row types get fixed times | 3 | Held, after group 2 |
 | 12 | X | OFA-B-171 | Seed a separate month at List built and one at Ready to issue (October untouched) for I2, I4, B1 | 3 | Held, after group 2 |
 | 9 | 3 | OFA-F-146 | Only the OFA Team quarantines (adviser's own move removed) | 3 | - |
 | 10 | 3 | OFA-F-150 | OFA Team moves a single account into quarantine | 3 | F-146; design row C163 |
@@ -111,7 +114,7 @@ Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F
 Awaiting the user: ADV-056 (advisor F-076). A closed account shares its platform with another account in the same S-Account; the warehouse keeps one value for both. Built: the shared value is counted once, with a note (a closure is valued at the month-end before it, so the 'split this month' case never happens).
 Decided 18-11: OFA-F-016 is marked Done once OFA-F-148 merges (user).
 
-Stack windows (one at a time, quiet: no other worker's tests or builds): done 18-11: shell, ps (group 1b). Compliance's two tries killed for low memory (a stray full .NET run); its browser pass is owed. Now: ps (group 2 wave 1: B-170 scenarios, B-155 and B-172 look checks), opened 18-11. Next: ps2 (gates the joint merge; F-146 to F-149 passed review, F-150 building), then advisor, compliance (owed pass). Each checkout's first window starts make down, make test-data, make up.
+Stack windows (one at a time, quiet: no other worker's tests or builds): done 18-11: shell, ps (group 1b). Compliance's two tries killed for low memory (a stray full .NET run); its browser pass is owed. ps group 2 wave 1 done 19-11 (B-155, B-172 PASS; B-170 8 passed, 3 red on a shared find.ts step, shell fixing). Next: ps2 (gates the joint merge; F-146 to F-149 passed review, F-150 building), then advisor, compliance (owed pass). Each checkout's first window starts make down, make test-data, make up.
 
 0. Design sync 18-11 (f9cf27ce): O17, O18, O19, Q13 Done. The full board run is dropped (user, 18-11: functionality first; only impacted screens are checked). Waiting on Muhammed: O17/O18 heading rule (one line, or two lines allowed) and O19's wording (business to confirm).
 
