@@ -36,7 +36,7 @@ Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostCh
 | 3 | 4 | OFA-F-023 | Paper copies | 2 | Must |
 | 4 | 4 | OFA-F-026 | Weekly reports | 3 | Must |
 | 4a | 5 | OFA-B-033, B-079, B-048 | Record History "Add a note"; exceptions report Excel export; Fee status column on the expired record | 7 | Release 1 FUNC bugs, after group 4 |
-| 5 | X | OFA-F-010 | Job host and mail outbox sender | 5 | Blocked: Shaw.WebJob 2.1.0 not on the sic2tfs1 feed (Muhammed publishes) |
+| 4b | 5 | OFA-F-010 | Job host and mail outbox sender | 5 | Unblocked: Shaw.WebJob 2.1.0 on the feed 19-11; first in group 5 |
 | 6 | X | OFA-F-033 | The month's fees from GridPay | 5 | Blocked: no warehouse fee table, no gMSA read on GridPay (warehouse team) |
 | 6 | X | OFA-F-155 | Acceptance evidence per signatory | 2 | Held, for when COMPLIANCE-DASHBOARD-F-004 needs every signer |
 | 14 | X | OFA-F-144 | Test data: a register-only data set over a shared warehouse | 3 | After go-live (Muhammed 19-11) |
@@ -113,7 +113,8 @@ Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F
 
 - Release 1 (Muhammed 19-11): Shell, Portfolio Services, Compliance. Advisor OFA features in release 2. After go-live: OFA-F-032, F-062, F-059, F-144, every LOOK and TEST bug. In release 1: OFA-F-138 DART filing (blocked on the owners). FUNC bugs in release 1: OFA-B-068, B-033, B-066, B-079, B-048; the rest after go-live.
 
-- Waiting on Muhammed: publish Shaw.WebJob 2.1.0 to the sic2tfs1 feed (blocks OFA-F-010, the mail sender); the GridPay fee source for OFA-F-033 (warehouse team).
+- Before go-live, Muhammed supplies two addresses: the Compliance mailbox (weekly reports) and the Back Office address (Cycle:BackOfficeEmail:Address).
+- Shaw.WebJob 2.1.0 and Shaw.Word 2.1.0 published by Muhammed 19-11. Waiting on Muhammed: the four GridPay fee-sync answers for OFA-F-033.
 - Waiting on Luke (Muhammed is sending one email for all of them): templates for the 8 emails without real wording. Placeholders meanwhile (OFA-F-157); OFA-F-158 swaps them in.
 
 Awaiting the user: ADV-056 (advisor F-076). A closed account shares its platform with another account in the same S-Account; the warehouse keeps one value for both. Built: the shared value is counted once, with a note (a closure is valued at the month-end before it, so the 'split this month' case never happens).
