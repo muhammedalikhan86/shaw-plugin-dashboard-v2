@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 08:30
+Updated: 19-11-2026 09:10
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -82,20 +82,17 @@ Done 19-11 (group 4, merged a813a521): F-010, F-029.
 Done 19-11 (group 3, merged 7c6979ec): B-069, F-042, F-039, F-043.
 Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079. Merged 4cf941b5: F-020, F-041, F-044, B-081, B-080 (browser pass owed).
 
-## Advisor (pointer: group 6: B-051, F-091, B-104, F-103; F-059/F-060 if their dependencies are on main)
+## Advisor (pointer: parked 90fa8481; nothing buildable until OFA-F-024 is on main, then F-047, F-059, F-060 as group 7)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
-| >> | 6 | ADVISOR-DASHBOARD-B-051 | BookAssembler fix (raised by B-050) | 2 | First |
-| 2 | 6 | ADVISOR-DASHBOARD-F-091 | The book's business test proves one progress bar while it loads | 1 | SHELL-F-106 on main; browser run at the end sweep |
-| 3 | 6 | ADVISOR-DASHBOARD-B-104 | S-Account page's scroll test needs a fourth platform account | 2 | Test change now; P74 run at the end sweep |
-| 4 | 6 | ADVISOR-DASHBOARD-F-103 | Test State Manager picker and book read the directory copy's gridPay in development | 3 | - |
-| 5 | 6? | ADVISOR-DASHBOARD-F-059, F-060 | S-Account page arrangement and History tab; notes with who sees them | 7 | Only if every dependency is on main (advisor checks) |
-| 6 | X | F-047, F-048, F-049, F-057, F-117, F-118 | Blocked on Portfolio Services items (OFA-F-024, F-027, F-044, F-131, F-132) | - | Waiting |
+| 1 | 7 | ADVISOR-DASHBOARD-F-047, F-059, F-060 | S-Account page arrangement and History tab; notes with who sees them | 7+ | Wait on OFA-F-024 (PS2 next group, first) |
+| 2 | X | F-048, F-049, F-057, F-117, F-118 | Blocked on Portfolio Services items (OFA-F-024, F-027, F-044, F-131, F-132) | - | Waiting |
 | 7 | X | ADVISOR-DASHBOARD-F-080 part 2 | The book's levels screen | - | Waits for board row B90 |
 | 8 | X | ADVISOR-DASHBOARD-F-135 | Gross Revenue tiles count personal-code accounts | 2 | Held on PM-100 / ADV-050 |
 | 9 | X | (row B91) | Label for the personal-code row in the FUA by-adviser table | - | Waits for the designer |
 
+Done 19-11 (group 6, merged 02b5e9b8): F-103, B-051, F-091, B-104. Owed to the end sweep: business and browser runs for groups 3 to 6, F-103 "All 6 advisers", F-093 @review-B8, F-046 parity re-run.
 Done 19-11 (group 5, merged 79b0181d): F-138, F-134, F-136, F-137.
 Done 19-11 (group 4, merged 2a74c4ea): F-100 part 1, F-133, F-071, F-093 part 2, F-056, F-075, F-080 part 1. Owed to the end sweep: business and browser runs for groups 3 and 4, F-124 @review-T94, B-104 P74, F-133 live timing.
 Done 19-11 (merged 4d30b61a): F-124, F-074, F-076 (shared value on the hub default, ADV-056 open), F-077, F-116. Business scenarios and parity owed to the end sweep.
