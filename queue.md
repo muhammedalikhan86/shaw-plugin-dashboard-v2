@@ -111,7 +111,7 @@ Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F
 Awaiting the user: ADV-056 (advisor F-076). A closed account shares its platform with another account in the same S-Account; the warehouse keeps one value for both. Built: the shared value is counted once, with a note (a closure is valued at the month-end before it, so the 'split this month' case never happens).
 Decided 18-11: OFA-F-016 is marked Done once OFA-F-148 merges (user).
 
-Stack windows (one at a time, quiet: no other worker's tests or builds): done 18-11: shell, ps (group 1b). Compliance's two tries killed for low memory (a stray full .NET run); its browser pass is owed. Now: ps (group 2 wave 1: B-170 scenarios, B-155 and B-172 look checks), opened 18-11. Next, whoever is ready: advisor, compliance (owed pass), ps2. Each checkout's first window starts make down, make test-data, make up.
+Stack windows (one at a time, quiet: no other worker's tests or builds): done 18-11: shell, ps (group 1b). Compliance's two tries killed for low memory (a stray full .NET run); its browser pass is owed. Now: ps (group 2 wave 1: B-170 scenarios, B-155 and B-172 look checks), opened 18-11. Next: ps2 (gates the joint merge; F-146 to F-149 passed review, F-150 building), then advisor, compliance (owed pass). Each checkout's first window starts make down, make test-data, make up.
 
 0. Design sync 18-11 (f9cf27ce): O17, O18, O19, Q13 Done. The full board run is dropped (user, 18-11: functionality first; only impacted screens are checked). Waiting on Muhammed: O17/O18 heading rule (one line, or two lines allowed) and O19's wording (business to confirm).
 
