@@ -20,7 +20,7 @@ Updated: 19-11-2026 01:43
 |---|-----|----|------|------|---------------------|
 | 3 | X | (owed runs) | F-084/F-145 look runs (sweep); B-128 waits for a plugin to opt in | - | F-144 parts 1+2 and B-130 proved 18-11 |
 | 2 | X | SHELL-B-022 | Table card stays full height when a search finds nothing (theme half) | 3 | Look gap: end parity sweep (functionality first) |
-| >> | 1 | (to raise) | business-tests/support/find.ts skips `inert` step tables (NOT_INERT in firstOnScreen, rowsFor, tableSearch) | - | Urgent: PS's build-and-cull B2, B14, B15 red |
+| >> | 1 | SHELL-B-133 | business-tests/support/find.ts skips `inert` step tables (NOT_INERT in firstOnScreen, rowsFor, tableSearch) | 1 | Urgent: PS's build-and-cull B2, B14, B15 red |
 | 1 | X | (owed) | Next stack window: ofa-test-data-drop.ps1 -Leftovers; SHELL-B-132 runbook check | - | From the 18-11 full-run incident |
 | 4 | X | SHELL-F-089 | Take off the temporary "Expired report" sidebar item | 1 | Blocked on OFA-F-056 (PS) |
 
@@ -40,8 +40,8 @@ Done 18-11: B-131, B-132 (799cc46e), F-144 part 2 (8bce346d), F-144 part 1, F-14
 | 9 | 2 | OFA-F-046 | Who a pending renewal is with | 3 | - |
 | 10 | 2 | OFA-B-155 | Bug from an earlier merge | - | Look check in group 2's window |
 | 11 | 2 | OFA-B-172 | Move to cull list: Master status gets its "Choose a master status" placeholder (board C125) | 1 | Fails build-and-cull B14 |
-| 13 | X | (to raise) | Move to cull list: Reason preselected "Account closed" and the "Add attachments (optional)" row, as the board draws | - | Held, after group 2 |
-| 14 | X | (to raise) | Seed: about 30 more trail row types get fixed times | 3 | Held, after group 2 |
+| 13 | X | OFA-B-173 | Move to cull list: Reason preselected "Account closed" and the "Add attachments (optional)" row, as the board draws | 2 | Held, after group 2 |
+| 14 | X | OFA-B-174 | Seed: about 30 more trail row types get fixed times | 3 | Held, after group 2 |
 | 12 | X | OFA-B-171 | Seed a separate month at List built and one at Ready to issue (October untouched) for I2, I4, B1 | 3 | Held, after group 2 |
 | 9 | 3 | OFA-F-146 | Only the OFA Team quarantines (adviser's own move removed) | 3 | - |
 | 10 | 3 | OFA-F-150 | OFA Team moves a single account into quarantine | 3 | F-146; design row C163 |
