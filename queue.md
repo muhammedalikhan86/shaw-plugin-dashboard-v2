@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 18-11-2026 18:14
+Updated: 18-11-2026 18:23
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -94,7 +94,7 @@ Collision rules (hub ruling 18-11):
 Stack window 18-11: final run 160 passed, 1 failed (NW-53110), 77 skipped; 21 scenarios lost their waiting tags.
 Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079.
 
-## Advisor (pointer: F-124 b47859a1 + group 3 finishing, both merge in the joint window; then group 4)
+## Advisor (pointer: F-124 b47859a1 + group 3 30114128 committed, both merge in the joint window; group 4 building, uncommitted)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
