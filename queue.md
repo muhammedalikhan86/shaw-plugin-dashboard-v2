@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 18-11-2026 17:50
+Updated: 18-11-2026 17:57
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -87,7 +87,7 @@ Collision rules (hub ruling 18-11):
 | >> | 2 | COMPLIANCE-DASHBOARD-F-020 | Load dialog's Email subject; subject on the Wording page | 2 | W23 Done; ready |
 | >> | 2 | COMPLIANCE-DASHBOARD-F-041 | Drop repeated `autoFocus: 'dialog'` (compliance-review-section.ts:270, cull-list-section.ts:261, quarantine-section.ts:292); check load-wording-dialog.ts:132 focus spec; `.doc-link` for arrangements.scss:371-400 and Wording | 1 | From SHELL-F-116 |
 | >> | 2 | COMPLIANCE-DASHBOARD-B-080 | Q13 Done: keep each date on one line in the Quarantine details dialog (`quarantine.scss`, nowrap) | 1 | From the 18-11 design sync |
-| 5b | 3 | COMPLIANCE-DASHBOARD-F-042 | Catch up with PS2's group 3: quarantine fixture and S20187 scenario (F-146); the retired adviser-quarantine email slot, no seeded quarantine emails, the State Manager read from Quarantine or Weekly emails, no Compliance Cc, board emails gone for TD-44/46/53 (F-147) | 3 | Merges in one window with PS2's group 3 and advisor F-124 |
+| 5b | 3 | COMPLIANCE-DASHBOARD-F-042 | Catch up with PS2's group 3: quarantine fixture and S20187 scenario (F-146); the retired adviser-quarantine email slot, no seeded quarantine emails, the State Manager read from Quarantine or Weekly emails, no Compliance Cc, board emails gone for TD-44/46/53 (F-147); the upload check reads IsRequired, adviser emails have 5 fields (F-148) | 3 (compliance re-sizes) | Merges in one window with PS2's group 3 and advisor F-124 |
 | >> | 2 | COMPLIANCE-DASHBOARD-B-081 | Arrangement history shows the cycle month, not the platform account number | 2 | Functional; found by F-044 |
 | >> | 2 | COMPLIANCE-DASHBOARD-F-044 | Five business tests follow the corrected OFA-B-153 test data | 1 | Runs in its next app turn |
 | 5c | 3 | COMPLIANCE-DASHBOARD-F-043 | Show the OFA Team's own quarantine move (OfaTeamMoved) and its note | 1 | Same merge window as PS2's group 3 |
