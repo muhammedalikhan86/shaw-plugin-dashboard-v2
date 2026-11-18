@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 14:30
+Updated: 19-11-2026 14:45
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -35,6 +35,7 @@ Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostCh
 | 2 | 4 | OFA-F-011 | Import (the master spreadsheet into the register) | 8 | Must; go-live data |
 | 3 | 4 | OFA-F-023 | Paper copies | 2 | Must |
 | 4 | 4 | OFA-F-026 | Weekly reports | 3 | Must |
+| 4a | 5 | OFA-B-033, B-079, B-048 | Record History "Add a note"; exceptions report Excel export; Fee status column on the expired record | 7 | Release 1 FUNC bugs, after group 4 |
 | 5 | X | OFA-F-010 | Job host and mail outbox sender | 5 | Blocked: Shaw.WebJob 2.1.0 not on the sic2tfs1 feed (Muhammed publishes) |
 | 6 | X | OFA-F-033 | The month's fees from GridPay | 5 | Blocked: no warehouse fee table, no gMSA read on GridPay (warehouse team) |
 | 6 | X | OFA-F-155 | Acceptance evidence per signatory | 2 | Held, for when COMPLIANCE-DASHBOARD-F-004 needs every signer |
@@ -59,6 +60,7 @@ Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfo
 | 3 | 6 | OFA-F-130 | Advisor surface: a follow-up to the clients who have not signed a renewal | 3 | After F-024; unblocks ADVISOR-DASHBOARD-F-047 |
 | 3a | 6 | OFA-F-157 | Every email without words gets made-up placeholder wording, marked, with Luke-style merge tags (No OFA fee, Back Office deceased estate; F-024/F-130 new ones too) | 2 | Muhammed 19-11 |
 | 4 | 6 | OFA-B-177 | History shows EmailSwitchedOff under its fallback title | 1 | From F-118 |
+| 5a | 7 | OFA-B-066, B-068 | Stop follow-up emails saves its note and attachments; renewal notice fee prints one dollar sign | 3 | Release 1 FUNC bugs, after group 6 |
 | 6 | X | OFA-F-158 | Replace every placeholder email with Luke's templates (merge tags as before) | 1 | Blocked on Luke's reply |
 | 5 | 6 | OFA-B-178 | Expired-report dialog still names the State Manager when StateManagerTold is off | 1 | From F-118 |
 
@@ -109,7 +111,7 @@ Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F
 
 ## Hub
 
-- Release 1 (Muhammed 19-11): Shell, Portfolio Services, Compliance. Advisor OFA features in release 2. After go-live: OFA-F-032, F-062, F-059, F-144, every LOOK and TEST bug. In release 1: OFA-F-138 DART filing (blocked on the owners). FUNC bug picks: open with Muhammed.
+- Release 1 (Muhammed 19-11): Shell, Portfolio Services, Compliance. Advisor OFA features in release 2. After go-live: OFA-F-032, F-062, F-059, F-144, every LOOK and TEST bug. In release 1: OFA-F-138 DART filing (blocked on the owners). FUNC bugs in release 1: OFA-B-068, B-033, B-066, B-079, B-048; the rest after go-live.
 
 - Waiting on Muhammed: publish Shaw.WebJob 2.1.0 to the sic2tfs1 feed (blocks OFA-F-010, the mail sender); the GridPay fee source for OFA-F-033 (warehouse team).
 - Waiting on Luke (Muhammed is sending one email for all of them): templates for the 8 emails without real wording. Placeholders meanwhile (OFA-F-157); OFA-F-158 swaps them in.
