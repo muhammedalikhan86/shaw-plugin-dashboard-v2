@@ -56,10 +56,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 475.0,
-   "pointsRemaining": 289.0,
-   "pointsTotal": 764.0,
-   "itemsRemaining": 118,
+   "pointsDone": 485.0,
+   "pointsRemaining": 280.0,
+   "pointsTotal": 765.0,
+   "itemsRemaining": 115,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 107.46,
+  "pointsPerWorkingDayWholePeriod": 108.23,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -230,8 +230,8 @@
    },
    {
     "date": "2026-11-19",
-    "pointsDone": 1397.0,
-    "pointsDoneThatDay": 107.0
+    "pointsDone": 1407.0,
+    "pointsDoneThatDay": 117.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -251,7 +251,7 @@
     "likely": "2026-12-01",
     "pessimistic": "2026-12-02",
     "rateLast10": 38.95,
-    "rateWhole": 33.99
+    "rateWhole": 34.76
    },
    "Advisor": {
     "optimistic": "2026-11-23",
@@ -274,9 +274,9 @@
    "pessimistic": "2026-12-02",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 107.46,
-   "pointsRemaining": 353.0,
-   "itemsRemaining": 137
+   "rateWhole": 108.23,
+   "pointsRemaining": 344.0,
+   "itemsRemaining": 134
   }
  },
  "milestones": [
@@ -354,7 +354,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-19T07:18:34+11:00",
+ "updatedAt": "2026-11-19T07:19:32+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1962,6 +1962,12 @@
    "at": "2026-11-19T07:18:34+11:00",
    "change": "19-11: advisor group 6 merged (F-103, B-051, F-091, B-104)",
    "pointsDone": 3.0
+  },
+  {
+   "at": "2026-11-19T07:19:32+11:00",
+   "change": "19-11: PS2 group 5 merged (OFA-B-176, F-080, F-081, F-118)",
+   "pointsDone": 10.0,
+   "pointsRaised": 1.0
   }
  ],
  "foundDuringBuild": {

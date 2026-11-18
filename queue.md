@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 09:10
+Updated: 19-11-2026 09:30
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -43,18 +43,20 @@ Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).
 
-## Portfolio Services 2 (pointer: group 5: B-176 and F-080 committed; F-081 review, then F-118)
+## Portfolio Services 2 (pointer: group 6: OFA-F-024 first, then F-110, F-130, B-177, B-178)
 
 Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfolio-services-2`, branch `portfolio-services-2`, port offset 40, artboard port 8799.
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 1 | - | (setup) | In hub.json and opened 18-11 on Lachlan's account | - | Done |
-| >> | 5 | OFA-B-176 | Flaky test: ComplianceSurfaceFindingReviewTests note order ties on CreatedUtc | 1 | First |
-| 2 | 5 | OFA-F-080 | The wording store keeps a merge-field order | 2 | - |
-| 3 | 5 | OFA-F-081 | The wording store can mark a version as brought in at go-live | 2 | - |
-| 4 | 5 | OFA-F-118 | Every email the register sends has an on/off switch | 5 | Seed lines go to PS through the hub |
+| >> | 6 | OFA-F-024 | Follow-ups for unsigned renewals and Initial OFAs | 5 | First; unblocks advisor group 7 |
+| 2 | 6 | OFA-F-110 | Advisor surface reads an Initial OFA's weekly follow-up emails | 2 | After F-024 |
+| 3 | 6 | OFA-F-130 | Advisor surface: a follow-up to the clients who have not signed a renewal | 3 | After F-024; unblocks ADVISOR-DASHBOARD-F-047 |
+| 4 | 6 | OFA-B-177 | History shows EmailSwitchedOff under its fallback title | 1 | From F-118 |
+| 5 | 6 | OFA-B-178 | Expired-report dialog still names the State Manager when StateManagerTold is off | 1 | From F-118 |
 
+Done 19-11 (group 5, merged 42c43e19): OFA-B-176, F-080 (0105), F-081 (0106), F-118 (0107). Terminate/cull email labels go to the business (Hub section).
 Done 19-11 (group 4, merged 12f68d74): OFA-S-001, OFA-F-145. Owner questions from S-001 are in the Hub section.
 Done 19-11 (group 3, merged 0ab2aae7): OFA-F-146, F-147, F-148, F-149, F-150; OFA-F-016 Done. Seed 2026-11-19.5: every checkout runs make test-data before its next make up. Board Parity C163 owed to the end sweep. Release settings went to docs/deployment/release-runbook.md (4de24c89).
 
@@ -66,14 +68,14 @@ Collision rules (hub ruling 18-11):
 5. App turns: one at a time, scheduled by the hub.
 6. PS2 skips the graph rebuild; PS does it. New IDs come from the hub.
 
-## Compliance (pointer: group 5: F-038 now; F-045 joins when PS2 group 5 is on main; one merge)
+## Compliance (pointer: group 5: F-038 and F-045; one merge)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 5 | X | (owed) | Browser pass and Board Parity for groups 2 and 3: touched screens; F-044, F-020, B-081 and group 3 scenarios | - | End parity sweep |
 | 6 | X | (owed) | Clear the three @not-built-COMPLIANCE-DASHBOARD-F-040 tags (arrangements.feature:260) once they pass | - | End parity sweep |
 | >> | 5 | COMPLIANCE-DASHBOARD-F-038 | Account details: an OFA period's PDF opens from OFA History | 2 | OFA-F-145 on main; the DART link stays empty until the owners answer |
-| 9 | 5 | COMPLIANCE-DASHBOARD-F-045 | Wording fields in document order, and where each version came from (Complii or —) | 2 | Waits on OFA-F-080 and F-081 (PS2 group 5) |
+| 9 | 5 | COMPLIANCE-DASHBOARD-F-045 | Wording fields in document order, and where each version came from (Complii or —) | 2 | OFA-F-080 and F-081 on main (42c43e19); go |
 | 9 | X | COMPLIANCE-DASHBOARD-F-037 | .NET test speed-up, part 2 | 2 | OFA-F-144 (PS) |
 | 10 | X | (owed) | Board Parity F-028/F-033/F-035/F-036; M-448120 on the board; B-048 re-measure | - | End parity sweep (user, 18-11) |
 | 11 | X | (no ID) | Parity sweep, parity-backlog rows 1-8 | - | Looks only, at the end |
@@ -100,6 +102,8 @@ Done 19-11 (merged 4d30b61a): F-124, F-074, F-076 (shared value on the hub defau
 Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F-128, F-129, F-130, F-123, F-082 (the shell run's 15 reds were raised and built in these).
 
 ## Hub
+
+- Waiting on the business (via Muhammed): wording for the terminate/cull email's two fact labels, "Master status set TERMINATED" and "Culled TERMINATED" (OFA-F-118). Never invented.
 
 Awaiting the user: ADV-056 (advisor F-076). A closed account shares its platform with another account in the same S-Account; the warehouse keeps one value for both. Built: the shared value is counted once, with a note (a closure is valued at the month-end before it, so the 'split this month' case never happens).
 Awaiting owners (from OFA-S-001, 19-11; PS items blocked until answered): DART admin: a DART document type for the signed renewal (OFA-F-138). Estate architect: the tool's own Agility credential, direct or an authenticated relay route (OFA-F-138). Business/infra: the URL that opens one DART document, and whether advisers and Compliance have DART logins (OFA-F-055, F-060 Open document, F-109). Two conditional items wait on these answers before they get IDs: an authenticated OFA route in DataConnectors.Agility; a tool endpoint that streams a document through Agility.
