@@ -28,7 +28,8 @@ Done 18-11: F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
-| 2a | 1b | (triage) | Two reds the shell saw: back-office-requests "closes it by hand"; issue-the-month (3) | - | In ps's window |
+| 2a | 1b | (triage) | Two reds the shell saw: back-office-requests (missing not-built tag); issue-the-month (3, being triaged) | - | In ps's window |
+| 2b | 1b | OFA-B-167 | One seeded record gets a fixed time, not the load time (S19630) | 1 | Found in ps's window |
 | 3 | 1b | OFA-B-155 | Bug from today's merge | - | Look check waits for a turn with the running app |
 | >> | 1b | OFA-B-153 (reopened) | Seed OFA-B-153 data for 6 compliance scenarios: closed-months M2, compliance-review B5, cull-list S20012, S20244, single note, S20120 | 1 | From compliance's window |
 | >> | 1b | OFA-B-165, OFA-B-149 (reopened) | O17, O18 Done on the board: Expired report and Platform accounts tables' columns to content width, no fixed widths. O19 Done: draw the signing outage strip and banner from `sources.signingUnavailable` (reopen OFA-B-149 or a new item; then swap the O19 scenario's tag) | 2 | From the 18-11 design sync (f9cf27ce) |
@@ -82,6 +83,7 @@ Collision rules (hub ruling 18-11):
 | >> | 2 | COMPLIANCE-DASHBOARD-F-041 | Drop repeated `autoFocus: 'dialog'` (compliance-review-section.ts:270, cull-list-section.ts:261, quarantine-section.ts:292); check load-wording-dialog.ts:132 focus spec; `.doc-link` for arrangements.scss:371-400 and Wording | 1 | From SHELL-F-116 |
 | >> | 2 | COMPLIANCE-DASHBOARD-B-080 | Q13 Done: keep each date on one line in the Quarantine details dialog (`quarantine.scss`, nowrap) | 1 | From the 18-11 design sync |
 | 5b | 3 | COMPLIANCE-DASHBOARD-F-042 | Fix its quarantine test fixture and S20187 scenario for OFA-F-146 | 1 | Merges in one window with PS2's group 3 and advisor F-124 |
+| >> | 2 | COMPLIANCE-DASHBOARD-F-044 | Five business tests follow the corrected OFA-B-153 test data | 1 | Runs in its next app turn |
 | 5c | 3 | COMPLIANCE-DASHBOARD-F-043 | Show the OFA Team's own quarantine move (OfaTeamMoved) and its note | 1 | Same merge window as PS2's group 3 |
 | 6 | 3 | COMPLIANCE-DASHBOARD-F-010 | Compliance adds notes | 3 | OFA-F-042 (PS group 2) |
 | 7 | 3 | COMPLIANCE-DASHBOARD-F-029 | Account details: the Documents card's contents | 2 | OFA-F-128 (PS group 2) |
