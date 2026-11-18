@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 02:20
+Updated: 19-11-2026 02:35
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -103,7 +103,7 @@ Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079
 | 5 | 3 | ADVISOR-DASHBOARD-F-076 | Accounts closed per Adviser per month, count and value | 5 | Group 3; shared-platform value on the hub's default until ADV-056 is answered |
 | 6 | 3 | ADVISOR-DASHBOARD-F-077 | An account's documents are OFA documents only | 1 | Group 3; likely already delivered by F-113: verify, pin a test, close |
 | 7 | 3 | ADVISOR-DASHBOARD-F-116 | "Fees as at · Signing as at" line on every OFA view | 1 | Group 3 |
-| 8 | 4 | ADVISOR-DASHBOARD-F-071, F-080, F-093, F-100, F-075 (+ F-056 remainder) | The book and portfolio: every bucket a column, book levels, State Manager opens a book, personal-code accounts in tiles, every filter in every seat | ~21 | Group 4 |
+| 8 | 4 | ADVISOR-DASHBOARD-F-071, F-080, F-093, F-100, F-075 (+ F-056 remainder) | The book and portfolio: every bucket a column, book levels, State Manager opens a book, personal-code accounts in tiles, every filter in every seat | ~21 | Group 4 (F-080 part 1 only: server reads and export; part 2, the levels screen, waits for board row B90) |
 | 9 | X | F-047, F-057, F-059, F-060, F-048, F-049, F-117, F-118 | Blocked on Portfolio Services items (OFA-F-024, F-130, F-134..F-136, F-044, F-027, F-131, F-132) | - | Waiting |
 | 10 | X | ADVISOR-DASHBOARD-B-104 | S-Account page's scroll test needs a fourth platform account | - | Unblocked: S20114 has four since OFA-B-150; rerun P74 after make test-data in advisor's window |
 
