@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 04:40
+Updated: 19-11-2026 05:20
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -44,16 +44,19 @@ Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).
 
-## Portfolio Services 2 (pointer: group 4, OFA-S-001 then OFA-F-145)
+## Portfolio Services 2 (pointer: group 5, wording store and email switches)
 
 Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfolio-services-2`, branch `portfolio-services-2`, port offset 40, artboard port 8799.
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 1 | - | (setup) | In hub.json and opened 18-11 on Lachlan's account | - | Done |
-| >> | 4 | OFA-S-001 | Spike: how a document is filed in DART and opened | 3 | First |
-| 2 | 4 | OFA-F-145 | The Compliance tool can open an OFA document | 2 | OFA-S-001 |
+| >> | 5 | OFA-B-176 | Flaky test: ComplianceSurfaceFindingReviewTests note order ties on CreatedUtc | 1 | First |
+| 2 | 5 | OFA-F-080 | The wording store keeps a merge-field order | 2 | - |
+| 3 | 5 | OFA-F-081 | The wording store can mark a version as brought in at go-live | 2 | - |
+| 4 | 5 | OFA-F-118 | Every email the register sends has an on/off switch | 5 | Seed lines go to PS through the hub |
 
+Done 19-11 (group 4, merged 12f68d74): OFA-S-001, OFA-F-145. Owner questions from S-001 are in the Hub section.
 Done 19-11 (group 3, merged 0ab2aae7): OFA-F-146, F-147, F-148, F-149, F-150; OFA-F-016 Done. Seed 2026-11-19.5: every checkout runs make test-data before its next make up. Board Parity C163 owed to the end sweep. Release settings went to docs/deployment/release-runbook.md (4de24c89).
 
 Collision rules (hub ruling 18-11):
