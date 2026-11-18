@@ -101,6 +101,13 @@ Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079
 |---|-----|----|------|------|---------------------|
 | 2 | 1 | (item 5) | Test-clock scenarios; design check only on screens its merges touch | - | App turn after SHELL-F-144 part 2 |
 | >> | 2 | ADVISOR-DASHBOARD-F-124 | Remove the adviser's own Move to Quarantined (T94 Done) | 3 | Merges with PS2's OFA-F-146 in one window; urgent single item |
+| 4 | 3 | ADVISOR-DASHBOARD-F-074 | State Manager's Tracking tab | 3 | Group 3, OFA area, State Manager side |
+| 5 | 3 | ADVISOR-DASHBOARD-F-076 | Accounts closed per Adviser per month, count and value | 5 | Group 3 |
+| 6 | 3 | ADVISOR-DASHBOARD-F-077 | An account's documents are OFA documents only | 1 | Group 3 |
+| 7 | 3 | ADVISOR-DASHBOARD-F-116 | "Fees as at · Signing as at" line on every OFA view | 1 | Group 3 |
+| 8 | 4 | ADVISOR-DASHBOARD-F-071, F-080, F-093, F-100, F-075 (+ F-056 remainder) | The book and portfolio: every bucket a column, book levels, State Manager opens a book, personal-code accounts in tiles, every filter in every seat | ~21 | Group 4 |
+| 9 | X | F-047, F-057, F-059, F-060, F-048, F-049, F-117, F-118 | Blocked on Portfolio Services items (OFA-F-024, F-130, F-134..F-136, F-044, F-027, F-131, F-132) | - | Waiting |
+| 10 | X | ADVISOR-DASHBOARD-B-104 | S-Account page's scroll test needs a fourth platform account | - | Waiting on a PS seed item |
 
 Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F-128, F-129, F-130, F-123, F-082 (the shell run's 15 reds were raised and built in these).
 
