@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 06:10
+Updated: 19-11-2026 06:20
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -14,17 +14,16 @@ Updated: 19-11-2026 06:10
 4. Functionality first (user, 18-11): no full design checks; only the screens a change touches; look gaps wait for the end parity sweep.
 5. Unsupervised: nobody answers prompts. The hub rules on workers' defaults; anything only the user may decide waits on its default (marked "awaiting user" in the rulings). One app stack at a time (memory).
 
-## Shell (pointer: SHELL-F-161, urgent: advisor F-137 waits on it)
+## Shell (pointer: parked 9f78ffae)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 3 | X | (owed runs) | F-084/F-145 look runs (sweep); B-128 waits for a plugin to opt in | - | F-144 parts 1+2 and B-130 proved 18-11 |
 | 2 | X | SHELL-B-022 | Table card stays full height when a search finds nothing (theme half) | 3 | Look gap: end parity sweep (functionality first) |
 | 1 | X | (owed) | Next stack window: ofa-test-data-drop.ps1 -Leftovers; SHELL-B-132 runbook check | - | From the 18-11 full-run incident |
-| >> | 2 | SHELL-F-161 | Table toolkit Reset: optional host hook, so a plugin restores its own state (advisor's month) | 2 | Urgent: ADVISOR-DASHBOARD-F-137 waits on it |
 | 4 | X | SHELL-F-089 | Take off the temporary "Expired report" sidebar item | 1 | Blocked on OFA-F-056 (PS) |
 
-Done 19-11: B-133 (1877cdd8, proof in PS's next window). Done 18-11: B-131, B-132 (799cc46e), F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160.
+Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostChanged] and (resetPressed)), B-133 (1877cdd8, proof in PS's next window). Done 18-11: B-131, B-132 (799cc46e), F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160.
 
 ## Portfolio Services (pointer: group 3, seed and month fixes: B-171, B-174, F-152, B-173, B-154)
 
@@ -92,7 +91,7 @@ Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079
 | >> | 5 | ADVISOR-DASHBOARD-F-138 | Tracking tab table gets the table tools, with its own export endpoint | 3 | First |
 | 12 | 5 | ADVISOR-DASHBOARD-F-134 | Accounts Opened tiles count personal-code accounts | 2 | - |
 | 13 | 5 | ADVISOR-DASHBOARD-F-136 | Funds Under Advice by-adviser Total row counts personal-code accounts | 2 | After F-134 |
-| 14 | 5 | ADVISOR-DASHBOARD-F-137 | The book's Reset brings back the opening month | 1 | Last; needs SHELL-F-161 on main |
+| 14 | 5 | ADVISOR-DASHBOARD-F-137 | The book's Reset brings back the opening month | 1 | Last; binds the toolkit bar's [hostChanged] and (resetPressed) |
 | 15 | X | ADVISOR-DASHBOARD-F-080 part 2 | The book's levels screen | - | Waits for board row B90 |
 | 16 | X | ADVISOR-DASHBOARD-F-135 | Gross Revenue tiles count personal-code accounts | 2 | Held on PM-100 / ADV-050 |
 
