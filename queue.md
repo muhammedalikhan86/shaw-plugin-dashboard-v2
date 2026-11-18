@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 18-11-2026 22:00
+Updated: 18-11-2026 17:19
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -20,6 +20,7 @@ Updated: 18-11-2026 22:00
 |---|-----|----|------|------|---------------------|
 | 3 | X | (owed runs) | F-084/F-145 look runs (sweep); B-128 waits for a plugin to opt in | - | F-144 parts 1+2 and B-130 proved 18-11 |
 | 2 | X | SHELL-B-022 | Table card stays full height when a search finds nothing (theme half) | 3 | Look gap: end parity sweep (functionality first) |
+| 5 | X | (to raise) | `.doc-link` has no focus ring (compliance's Wording Open links now use it, as the board draws) | - | From compliance F-041; shell raises the ID, builds after its next go |
 | 4 | X | SHELL-F-089 | Take off the temporary "Expired report" sidebar item | 1 | Blocked on OFA-F-056 (PS) |
 
 Done 18-11: F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160.
@@ -37,6 +38,7 @@ Done 18-11: F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F
 | 6 | 1b | (follow-up) | Merge main (shell architecture v147, move pointers); drop the now-repeated `autoFocus: 'dialog'` at arrangement-record.ts:727, :759, exceptions-report.ts:620 | 1 | From SHELL-F-116 |
 | 5 | 2 | OFA-F-042 | Compliance notes | 3 | - |
 | 5b | 2 | OFA-B-168 | Seed: a fourth platform account on S20114, for advisor B-104 | 1 | - |
+| 5c | 2 | OFA-B-169 | Seed: the remaining load-time stamps (ArrangementAdded, RenewalNoticeQueued trail rows, September PublishedUtc) get fixed times | 2 | Raised 18-11 from B-167 |
 | 5a | 2 | OFA-B-166 | Test fixtures use the checkout's own LocalDB (LocalDbTestDatabase.cs:24) | 1 | From SHELL-F-144 part 2 |
 | 6 | 2 | OFA-F-128 | A view of an account's documents for the Compliance tool | 2 | - |
 | 7 | 2 | OFA-F-136 | The client's acceptance evidence for the Compliance tool | 2 | - |
@@ -103,8 +105,8 @@ Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079
 | 2 | 1 | (item 5) | Test-clock scenarios; design check only on screens its merges touch | - | App turn after SHELL-F-144 part 2 |
 | >> | 2 | ADVISOR-DASHBOARD-F-124 | Remove the adviser's own Move to Quarantined (T94 Done) | 3 | Merges with PS2's OFA-F-146 in one window; urgent single item |
 | 4 | 3 | ADVISOR-DASHBOARD-F-074 | State Manager's Tracking tab | 3 | Group 3, OFA area, State Manager side |
-| 5 | 3 | ADVISOR-DASHBOARD-F-076 | Accounts closed per Adviser per month, count and value | 5 | Group 3 |
-| 6 | 3 | ADVISOR-DASHBOARD-F-077 | An account's documents are OFA documents only | 1 | Group 3 |
+| 5 | 3 | ADVISOR-DASHBOARD-F-076 | Accounts closed per Adviser per month, count and value | 5 | Group 3; shared-platform value on the hub's default until ADV-056 is answered |
+| 6 | 3 | ADVISOR-DASHBOARD-F-077 | An account's documents are OFA documents only | 1 | Group 3; likely already delivered by F-113: verify, pin a test, close |
 | 7 | 3 | ADVISOR-DASHBOARD-F-116 | "Fees as at · Signing as at" line on every OFA view | 1 | Group 3 |
 | 8 | 4 | ADVISOR-DASHBOARD-F-071, F-080, F-093, F-100, F-075 (+ F-056 remainder) | The book and portfolio: every bucket a column, book levels, State Manager opens a book, personal-code accounts in tiles, every filter in every seat | ~21 | Group 4 |
 | 9 | X | F-047, F-057, F-059, F-060, F-048, F-049, F-117, F-118 | Blocked on Portfolio Services items (OFA-F-024, F-130, F-134..F-136, F-044, F-027, F-131, F-132) | - | Waiting |
@@ -114,7 +116,7 @@ Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F
 
 ## Hub
 
-Awaiting the user: nothing.
+Awaiting the user: ADV-056 (advisor F-076). A closed account shares its platform with another account in the same S-Account; the warehouse keeps one value for both. Hub default: split by the current month's holding if it closed this month, else count the shared value once with a note.
 Decided 18-11: OFA-F-016 is marked Done once OFA-F-148 merges (user).
 
 Stack windows (one at a time): 1. shell, done 18-11 (F-144 parts 1+2 and B-130 PASS). 2. ps, running now (B-149, B-165 touched screens; O19 + compliance's 6 B-153 scenarios). 3. compliance (F-020, B-080 touched screens). 4. advisor (test-clock scenarios, touched screens). 5. ps2 (group 3, after its merge with advisor F-124 is near). Each checkout's first window starts make down, make test-data, make up.
