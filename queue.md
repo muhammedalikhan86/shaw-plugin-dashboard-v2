@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 03:40
+Updated: 19-11-2026 04:10
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -107,6 +107,7 @@ Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F
 ## Hub
 
 Awaiting the user: ADV-056 (advisor F-076). A closed account shares its platform with another account in the same S-Account; the warehouse keeps one value for both. Built: the shared value is counted once, with a note (a closure is valued at the month-end before it, so the 'split this month' case never happens).
+Awaiting owners (from OFA-S-001, 19-11; PS items blocked until answered): DART admin: a DART document type for the signed renewal (OFA-F-138). Estate architect: the tool's own Agility credential, direct or an authenticated relay route (OFA-F-138). Business/infra: the URL that opens one DART document, and whether advisers and Compliance have DART logins (OFA-F-055, F-060 Open document, F-109). Two conditional items wait on these answers before they get IDs: an authenticated OFA route in DataConnectors.Agility; a tool endpoint that streams a document through Agility.
 Decided 18-11: OFA-F-016 is marked Done once OFA-F-148 merges (user).
 
 Stack windows (one at a time, quiet: no other worker's tests or builds): done 18-11: shell, ps (group 1b). Compliance's two tries killed for low memory (a stray full .NET run); its browser pass is owed. ps group 2 wave 1 done 19-11 (B-155, B-172 PASS; B-170 8 passed, 3 red on a shared find.ts step, shell fixing). ps2 19-11 killed by the low-memory guard too. Stack windows stopped: every owed board or browser pass (PS2 C163, compliance, F-040 tags, advisor B-104 P74, ps B-170 proof) moves to the end-of-build UI parity sweep. Merges go on Integration PASS. Each checkout's first window starts make down, make test-data, make up.
