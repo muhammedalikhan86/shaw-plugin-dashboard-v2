@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 02:45
+Updated: 19-11-2026 03:00
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -106,7 +106,8 @@ Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079
 | 7 | 3 | ADVISOR-DASHBOARD-F-116 | "Fees as at · Signing as at" line on every OFA view | 1 | Group 3 |
 | 8 | 4 | ADVISOR-DASHBOARD-F-071, F-080, F-093, F-100, F-075 (+ F-056 remainder) | The book and portfolio: every bucket a column, book levels, State Manager opens a book, personal-code accounts in tiles, every filter in every seat | ~21 | Group 4 (F-080 part 1 only: server reads and export; part 2, the levels screen, waits for board row B90) |
 | 9 | X | F-047, F-057, F-059, F-060, F-048, F-049, F-117, F-118 | Blocked on Portfolio Services items (OFA-F-024, F-130, F-134..F-136, F-044, F-027, F-131, F-132) | - | Waiting |
-| 10 | X | ADVISOR-DASHBOARD-B-104 | S-Account page's scroll test needs a fourth platform account | - | Unblocked: S20114 has four since OFA-B-150; rerun P74 after make test-data in advisor's window |
+| 10 | X | ADVISOR-DASHBOARD-B-104 | S-Account page's scroll test needs a fourth platform account | - | Unblocked: S20114 has four since OFA-B-150; P74 rerun moves to the end-of-build parity sweep |
+| 11 | 5 | ADVISOR-DASHBOARD-F-138 | Tracking tab table gets the table tools, with its own export endpoint | 3 | Next group after group 4; depends on F-074 |
 
 Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F-128, F-129, F-130, F-123, F-082 (the shell run's 15 reds were raised and built in these).
 
