@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 18-11-2026 17:57
+Updated: 18-11-2026 18:05
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -25,26 +25,20 @@ Updated: 18-11-2026 17:57
 
 Done 18-11: F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160.
 
-## Portfolio Services (pointer: group 1b, Reviewers then merge main and Integration)
+## Portfolio Services (pointer: group 2 go, OFA-B-170 first)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
-| 2a | 1b | (triage) | Two reds the shell saw: both test-side (missing tag; tests never opened the Issuance step), fixed in this group | - | Re-run in ps's window |
-| 2b | 1b | OFA-B-167 | One seeded record gets a fixed time, not the load time (S19630) | 1 | Found in ps's window |
-| 3 | 1b | OFA-B-155 | Bug from today's merge | - | Look check waits for a turn with the running app |
-| >> | 1b | OFA-B-153 (reopened) | Seed OFA-B-153 data for 6 compliance scenarios: closed-months M2, compliance-review B5, cull-list S20012, S20244, single note, S20120 | 1 | From compliance's window |
-| >> | 1b | OFA-B-165, OFA-B-149 (reopened) | O17, O18 Done on the board: Expired report and Platform accounts tables' columns to content width, no fixed widths. O19 Done: draw the signing outage strip and banner from `sources.signingUnavailable` (reopen OFA-B-149 or a new item; then swap the O19 scenario's tag) | 2 | From the 18-11 design sync (f9cf27ce) |
-| >> | 1b | OFA-F-153 | compliance.SourceTimes view: fees/signing as at and failed, for COMPLIANCE-DASHBOARD-B-069 | 1 | Raised 18-11 for compliance |
-| 6 | 1b | (follow-up) | Merge main (shell architecture v147, move pointers); drop the now-repeated `autoFocus: 'dialog'` at arrangement-record.ts:727, :759, exceptions-report.ts:620 | 1 | From SHELL-F-116 |
-| 4 | 2 | OFA-B-170 | issue-the-month and build-and-cull tests read the shell seed (seed a Ready-to-issue month and stage states, or assert the seed's counts) | 3 | Raised 18-11 from the ps window; ahead of group 2's features |
-| 4b | 2 | OFA-F-154 | Fees and Signing rows in advisor.usp_DataFreshness_Read, plus seed values | 2 | Blocks ADVISOR-DASHBOARD-F-116's line |
-| 5 | 2 | OFA-F-042 | Compliance notes | 3 | - |
-| 5b | 2 | OFA-B-168 | Seed: a fourth platform account on S20114, for advisor B-104 | 1 | - |
-| 5c | 2 | OFA-B-169 | Seed: the remaining load-time stamps (ArrangementAdded, RenewalNoticeQueued trail rows, September PublishedUtc) get fixed times | 2 | Raised 18-11 from B-167 |
-| 5a | 2 | OFA-B-166 | Test fixtures use the checkout's own LocalDB (LocalDbTestDatabase.cs:24) | 1 | From SHELL-F-144 part 2 |
-| 6 | 2 | OFA-F-128 | A view of an account's documents for the Compliance tool | 2 | - |
-| 7 | 2 | OFA-F-136 | The client's acceptance evidence for the Compliance tool | 2 | - |
-| 8 | 2 | OFA-F-046 | Who a pending renewal is with | 3 | - |
+| >> | 2 | OFA-B-170 | issue-the-month and build-and-cull tests read the shell seed (seed a Ready-to-issue month and stage states, or assert the seed's counts) | 3 | First: unblocks those scenarios |
+| 2 | 2 | OFA-B-168 | Seed: a fourth platform account on S20114 | 1 | Early: advisor B-104 waits on it |
+| 3 | 2 | OFA-F-154 | Fees and Signing rows in advisor.usp_DataFreshness_Read, plus seed values | 2 | Early: shows ADVISOR-DASHBOARD-F-116's line |
+| 4 | 2 | OFA-B-169 | Seed: the remaining load-time stamps (ArrangementAdded, RenewalNoticeQueued trail rows, September PublishedUtc) get fixed times | 2 | - |
+| 5 | 2 | OFA-B-166 | Test fixtures use the checkout's own LocalDB (LocalDbTestDatabase.cs:24) | 1 | From SHELL-F-144 part 2 |
+| 6 | 2 | OFA-F-042 | Compliance notes | 3 | - |
+| 7 | 2 | OFA-F-128 | A view of an account's documents for the Compliance tool | 2 | - |
+| 8 | 2 | OFA-F-136 | The client's acceptance evidence for the Compliance tool | 2 | - |
+| 9 | 2 | OFA-F-046 | Who a pending renewal is with | 3 | - |
+| 10 | 2 | OFA-B-155 | Bug from an earlier merge | - | Look check in group 2's window |
 | 9 | 3 | OFA-F-146 | Only the OFA Team quarantines (adviser's own move removed) | 3 | - |
 | 10 | 3 | OFA-F-150 | OFA Team moves a single account into quarantine | 3 | F-146; design row C163 |
 | 11 | 3 | OFA-F-147 | Quarantine email dropped; weekly follow-up from the quarantine date | 3 | OFA-F-016, F-146 |
@@ -56,7 +50,7 @@ Done 18-11: F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F
 | 17 | X | OFA-F-044 | The closure confirmation | 3 | OFA-F-010 (in progress) |
 | 18 | X | OFA-B-154 | Test user for a state manager who sees every adviser | 2 | - |
 
-Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156 (seed 2026-11-19.2: run make test-data before the next make up).
+Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156. Group 1b merged ad2ebbd2: OFA-F-153, OFA-B-165, OFA-B-149, OFA-B-153, OFA-B-167, autoFocus follow-up, test fixes (seed 2026-11-19.4: run make test-data before the next make up).
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).
 
@@ -83,7 +77,7 @@ Collision rules (hub ruling 18-11):
 |---|-----|----|------|------|---------------------|
 | 1 | 1 | (owed) | PMBook F-040 row: one-line update (NW-53110 keeps its tag: master status uses the database's own day, risk A8) | - | Docs only |
 | 2 | X | (owed) | Board Parity F-028/F-033/F-035/F-036; M-448120 on the board; B-048 re-measure | - | Moved to the end parity sweep (user, 18-11) |
-| 3 | 2 | COMPLIANCE-DASHBOARD-B-069 | Quarantine: Fees as at / Signing as at in the header | 1 | Blocked on OFA-F-153 (PS 1b) |
+| 3 | 2 | COMPLIANCE-DASHBOARD-B-069 | Quarantine: Fees as at / Signing as at in the header | 1 | Unblocked: OFA-F-153 on main (ad2ebbd2) |
 | >> | 2 | COMPLIANCE-DASHBOARD-F-020 | Load dialog's Email subject; subject on the Wording page | 2 | W23 Done; ready |
 | >> | 2 | COMPLIANCE-DASHBOARD-F-041 | Drop repeated `autoFocus: 'dialog'` (compliance-review-section.ts:270, cull-list-section.ts:261, quarantine-section.ts:292); check load-wording-dialog.ts:132 focus spec; `.doc-link` for arrangements.scss:371-400 and Wording | 1 | From SHELL-F-116 |
 | >> | 2 | COMPLIANCE-DASHBOARD-B-080 | Q13 Done: keep each date on one line in the Quarantine details dialog (`quarantine.scss`, nowrap) | 1 | From the 18-11 design sync |
@@ -121,7 +115,7 @@ Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F
 Awaiting the user: ADV-056 (advisor F-076). A closed account shares its platform with another account in the same S-Account; the warehouse keeps one value for both. Built: the shared value is counted once, with a note (a closure is valued at the month-end before it, so the 'split this month' case never happens).
 Decided 18-11: OFA-F-016 is marked Done once OFA-F-148 merges (user).
 
-Stack windows (one at a time): 1. shell, done 18-11 (F-144 parts 1+2 and B-130 PASS). 2. ps, done 18-11 (B-149, B-165 PASS; reds to OFA-B-170). 3. compliance, running now (touched screens; F-044, F-020, B-081 scenarios). 4. advisor (test-clock scenarios, touched screens). 5. ps2 (group 3, after its merge with advisor F-124 is near). Each checkout's first window starts make down, make test-data, make up.
+Stack windows (one at a time): 1. shell, done 18-11 (F-144 parts 1+2 and B-130 PASS). 2. ps, done 18-11 (B-149, B-165 PASS; reds to OFA-B-170). 3. compliance, running now (2nd try after a low-memory stop) (touched screens; F-044, F-020, B-081 scenarios). 4. advisor (test-clock scenarios, touched screens). 5. ps2 (group 3, after its merge with advisor F-124 is near). Each checkout's first window starts make down, make test-data, make up.
 
 0. Design sync 18-11 (f9cf27ce): O17, O18, O19, Q13 Done. The full board run is dropped (user, 18-11: functionality first; only impacted screens are checked). Waiting on Muhammed: O17/O18 heading rule (one line, or two lines allowed) and O19's wording (business to confirm).
 
