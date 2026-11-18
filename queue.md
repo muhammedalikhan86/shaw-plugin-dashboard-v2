@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 18-11-2026 18:26
+Updated: 18-11-2026 18:28
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -73,28 +73,23 @@ Collision rules (hub ruling 18-11):
 5. App turns: one at a time, scheduled by the hub.
 6. PS2 skips the graph rebuild; PS does it. New IDs come from the hub.
 
-## Compliance (pointer: current group committing, merge on Integration PASS; browser pass owed)
+## Compliance (pointer: merge main, then group 3: B-069 now; F-042, F-043, F-039 once PS2's group 3 is on main)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
-| 1 | 1 | (owed) | PMBook F-040 row: one-line update (NW-53110 keeps its tag: master status uses the database's own day, risk A8) | - | Docs only |
-| 2 | X | (owed) | Board Parity F-028/F-033/F-035/F-036; M-448120 on the board; B-048 re-measure | - | Moved to the end parity sweep (user, 18-11) |
-| 3 | 2 | COMPLIANCE-DASHBOARD-B-069 | Quarantine: Fees as at / Signing as at in the header | 1 | Unblocked: OFA-F-153 on main (ad2ebbd2) |
-| >> | 2 | COMPLIANCE-DASHBOARD-F-020 | Load dialog's Email subject; subject on the Wording page | 2 | W23 Done; ready |
-| >> | 2 | COMPLIANCE-DASHBOARD-F-041 | Drop repeated `autoFocus: 'dialog'` (compliance-review-section.ts:270, cull-list-section.ts:261, quarantine-section.ts:292); check load-wording-dialog.ts:132 focus spec; `.doc-link` for arrangements.scss:371-400 and Wording | 1 | From SHELL-F-116 |
-| >> | 2 | COMPLIANCE-DASHBOARD-B-080 | Q13 Done: keep each date on one line in the Quarantine details dialog (`quarantine.scss`, nowrap) | 1 | From the 18-11 design sync |
-| 5b | 3 | COMPLIANCE-DASHBOARD-F-042 | Catch up with PS2's group 3: quarantine fixture and S20187 scenario (F-146); the retired adviser-quarantine email slot, no seeded quarantine emails, the State Manager read from Quarantine or Weekly emails, no Compliance Cc, board emails gone for TD-44/46/53 (F-147); the upload check reads IsRequired, adviser emails have 5 fields (F-148) | 5 | Merges in one window with PS2's group 3 and advisor F-124 |
-| >> | 2 | COMPLIANCE-DASHBOARD-B-081 | Arrangement history shows the cycle month, not the platform account number | 2 | Functional; found by F-044 |
-| >> | 2 | COMPLIANCE-DASHBOARD-F-044 | Five business tests follow the corrected OFA-B-153 test data | 1 | Runs in its next app turn |
-| 5c | 3 | COMPLIANCE-DASHBOARD-F-043 | Show the OFA Team's own quarantine move (OfaTeamMoved) and its note | 1 | Same merge window as PS2's group 3 |
-| 6 | 3 | COMPLIANCE-DASHBOARD-F-010 | Compliance adds notes | 3 | OFA-F-042 (PS group 2) |
-| 7 | 3 | COMPLIANCE-DASHBOARD-F-029 | Account details: the Documents card's contents | 2 | OFA-F-128 (PS group 2) |
-| 8 | X | COMPLIANCE-DASHBOARD-F-039 | Three Adviser emails on Wording; Quarantine reads them | 2 | OFA-F-147 (PS group 3); rows W26, Q12 |
+| >> | 3 | COMPLIANCE-DASHBOARD-B-069 | Quarantine: Fees as at / Signing as at in the header | 1 | OFA-F-153 on main; build now, commit with group 3 |
+| 2 | 3 | COMPLIANCE-DASHBOARD-F-042 | Catch up with PS2's group 3: quarantine fixture and S20187 scenario (F-146); the retired adviser-quarantine email slot, no seeded quarantine emails, the State Manager read from Quarantine or Weekly emails, no Compliance Cc, board emails gone for TD-44/46/53 (F-147); the upload check reads IsRequired, adviser emails have 5 fields (F-148) | 5 | Joint window with PS2's group 3 and advisor F-124 |
+| 3 | 3 | COMPLIANCE-DASHBOARD-F-043 | Show the OFA Team's own quarantine move (OfaTeamMoved) and its note | 1 | Joint window |
+| 4 | 3 | COMPLIANCE-DASHBOARD-F-039 | Three Adviser emails on Wording; Quarantine reads them | 2 | OFA-F-147 (PS2 group 3); rows W26, Q12 |
+| 5 | 3 | (owed) | Browser pass for the merged group: touched screens; F-044, F-020, B-081 scenarios | - | Next quiet window |
+| 6 | 3 | (owed) | PMBook F-040 row: one-line update (NW-53110 keeps its tag: master status uses the database's own day, risk A8) | - | Docs only |
+| 7 | 4 | COMPLIANCE-DASHBOARD-F-010 | Compliance adds notes | 3 | OFA-F-042 (PS group 2) |
+| 8 | 4 | COMPLIANCE-DASHBOARD-F-029 | Account details: the Documents card's contents | 2 | OFA-F-128 (PS group 2) |
 | 9 | X | COMPLIANCE-DASHBOARD-F-037 | .NET test speed-up, part 2 | 2 | OFA-F-144 (PS) |
-| 10 | X | (no ID) | Parity sweep, parity-backlog rows 1-8 | - | Looks only, at the end |
+| 10 | X | (owed) | Board Parity F-028/F-033/F-035/F-036; M-448120 on the board; B-048 re-measure | - | End parity sweep (user, 18-11) |
+| 11 | X | (no ID) | Parity sweep, parity-backlog rows 1-8 | - | Looks only, at the end |
 
-Stack window 18-11: final run 160 passed, 1 failed (NW-53110), 77 skipped; 21 scenarios lost their waiting tags.
-Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079.
+Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079. Merged 4cf941b5: F-020, F-041, F-044, B-081, B-080 (browser pass owed).
 
 ## Advisor (pointer: F-124 b47859a1 + group 3 30114128 committed, both merge in the joint window; group 4 building, uncommitted)
 
