@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 18-11-2026 17:48
+Updated: 18-11-2026 17:50
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -25,7 +25,7 @@ Updated: 18-11-2026 17:48
 
 Done 18-11: F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160.
 
-## Portfolio Services (pointer: group 1b)
+## Portfolio Services (pointer: group 1b, Reviewers then merge main and Integration)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
@@ -37,7 +37,7 @@ Done 18-11: F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F
 | >> | 1b | OFA-F-153 | compliance.SourceTimes view: fees/signing as at and failed, for COMPLIANCE-DASHBOARD-B-069 | 1 | Raised 18-11 for compliance |
 | 6 | 1b | (follow-up) | Merge main (shell architecture v147, move pointers); drop the now-repeated `autoFocus: 'dialog'` at arrangement-record.ts:727, :759, exceptions-report.ts:620 | 1 | From SHELL-F-116 |
 | 4 | 2 | OFA-B-170 | issue-the-month and build-and-cull tests read the shell seed (seed a Ready-to-issue month and stage states, or assert the seed's counts) | 3 | Raised 18-11 from the ps window; ahead of group 2's features |
-| 4b | 2 | (to raise) | Fees and Signing rows in advisor.usp_DataFreshness_Read, plus seed values, for ADVISOR-DASHBOARD-F-116 | - | ps raises the ID |
+| 4b | 2 | OFA-F-154 | Fees and Signing rows in advisor.usp_DataFreshness_Read, plus seed values | 2 | Blocks ADVISOR-DASHBOARD-F-116's line |
 | 5 | 2 | OFA-F-042 | Compliance notes | 3 | - |
 | 5b | 2 | OFA-B-168 | Seed: a fourth platform account on S20114, for advisor B-104 | 1 | - |
 | 5c | 2 | OFA-B-169 | Seed: the remaining load-time stamps (ArrangementAdded, RenewalNoticeQueued trail rows, September PublishedUtc) get fixed times | 2 | Raised 18-11 from B-167 |
@@ -77,7 +77,7 @@ Collision rules (hub ruling 18-11):
 5. App turns: one at a time, scheduled by the hub.
 6. PS2 skips the graph rebuild; PS does it. New IDs come from the hub.
 
-## Compliance (pointer: current group passed review; waiting for its stack window after ps)
+## Compliance (pointer: current group in its stack window)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
@@ -121,7 +121,7 @@ Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F
 Awaiting the user: ADV-056 (advisor F-076). A closed account shares its platform with another account in the same S-Account; the warehouse keeps one value for both. Hub default: split by the current month's holding if it closed this month, else count the shared value once with a note.
 Decided 18-11: OFA-F-016 is marked Done once OFA-F-148 merges (user).
 
-Stack windows (one at a time): 1. shell, done 18-11 (F-144 parts 1+2 and B-130 PASS). 2. ps, running now (B-149, B-165 touched screens; O19 + compliance's 6 B-153 scenarios). 3. compliance (F-020, B-080 touched screens). 4. advisor (test-clock scenarios, touched screens). 5. ps2 (group 3, after its merge with advisor F-124 is near). Each checkout's first window starts make down, make test-data, make up.
+Stack windows (one at a time): 1. shell, done 18-11 (F-144 parts 1+2 and B-130 PASS). 2. ps, done 18-11 (B-149, B-165 PASS; reds to OFA-B-170). 3. compliance, running now (touched screens; F-044, F-020, B-081 scenarios). 4. advisor (test-clock scenarios, touched screens). 5. ps2 (group 3, after its merge with advisor F-124 is near). Each checkout's first window starts make down, make test-data, make up.
 
 0. Design sync 18-11 (f9cf27ce): O17, O18, O19, Q13 Done. The full board run is dropped (user, 18-11: functionality first; only impacted screens are checked). Waiting on Muhammed: O17/O18 heading rule (one line, or two lines allowed) and O19's wording (business to confirm).
 
