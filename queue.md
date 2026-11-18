@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 18-11-2026 18:12
+Updated: 18-11-2026 18:14
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -20,7 +20,7 @@ Updated: 18-11-2026 18:12
 |---|-----|----|------|------|---------------------|
 | 3 | X | (owed runs) | F-084/F-145 look runs (sweep); B-128 waits for a plugin to opt in | - | F-144 parts 1+2 and B-130 proved 18-11 |
 | 2 | X | SHELL-B-022 | Table card stays full height when a search finds nothing (theme half) | 3 | Look gap: end parity sweep (functionality first) |
-| >> | 1 | (to raise) | make test / test:dotnet pass OFA_LOCALDB_SERVER (Get-OfaTestDataServer); stale notes in dev-localdb.ps1, run-app SKILL.md:62, README.md:170 | - | Script half of OFA-B-166 |
+| >> | 1 | SHELL-B-132 | make test / test:dotnet pass OFA_LOCALDB_SERVER (Get-OfaTestDataServer); stale notes in dev-localdb.ps1, run-app SKILL.md:62, README.md:170 | 1 | Script half of OFA-B-166 |
 | >> | 1 | SHELL-B-131 | `.doc-link` has no focus ring (compliance's Wording Open links now use it, as the board draws) | 1 | From compliance F-041; builds after shell's next go |
 | 4 | X | SHELL-F-089 | Take off the temporary "Expired report" sidebar item | 1 | Blocked on OFA-F-056 (PS) |
 
