@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 11:00
+Updated: 19-11-2026 11:30
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -43,7 +43,7 @@ Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).
 
-## Portfolio Services 2 (pointer: group 6: OFA-F-024 first, then F-110, F-130, B-177, B-178)
+## Portfolio Services 2 (pointer: group 6: OFA-F-024 first, then F-110, F-130, F-157, B-177, B-178)
 
 Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfolio-services-2`, branch `portfolio-services-2`, port offset 40, artboard port 8799.
 
@@ -53,7 +53,9 @@ Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfo
 | >> | 6 | OFA-F-024 | Follow-ups for unsigned renewals and Initial OFAs | 5 | First; unblocks advisor group 7 |
 | 2 | 6 | OFA-F-110 | Advisor surface reads an Initial OFA's weekly follow-up emails | 2 | After F-024 |
 | 3 | 6 | OFA-F-130 | Advisor surface: a follow-up to the clients who have not signed a renewal | 3 | After F-024; unblocks ADVISOR-DASHBOARD-F-047 |
+| 3a | 6 | OFA-F-157 | Every email without words gets made-up placeholder wording, marked, with Luke-style merge tags (No OFA fee, Back Office deceased estate; F-024/F-130 new ones too) | 2 | Muhammed 19-11 |
 | 4 | 6 | OFA-B-177 | History shows EmailSwitchedOff under its fallback title | 1 | From F-118 |
+| 6 | X | OFA-F-158 | Replace every placeholder email with Luke's templates (merge tags as before) | 1 | Blocked on Luke's reply |
 | 5 | 6 | OFA-B-178 | Expired-report dialog still names the State Manager when StateManagerTold is off | 1 | From F-118 |
 
 Done 19-11 (group 5, merged 42c43e19): OFA-B-176, F-080 (0105), F-081 (0106), F-118 (0107). Terminate/cull email labels go to the business (Hub section).
@@ -104,7 +106,7 @@ Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F
 
 ## Hub
 
-- Waiting on the business (via Muhammed): wording for the terminate/cull email's two fact labels, "Master status set TERMINATED" and "Culled TERMINATED" (OFA-F-118). Never invented.
+- Waiting on Luke (Muhammed is sending one email for all of them): templates for the 8 emails without real wording. Placeholders meanwhile (OFA-F-157); OFA-F-158 swaps them in.
 
 Awaiting the user: ADV-056 (advisor F-076). A closed account shares its platform with another account in the same S-Account; the warehouse keeps one value for both. Built: the shared value is counted once, with a note (a closure is valued at the month-end before it, so the 'split this month' case never happens).
 Awaiting owners (from OFA-S-001, 19-11; PS items blocked until answered): DART admin: a DART document type for the signed renewal (OFA-F-138). Estate architect: the tool's own Agility credential, direct or an authenticated relay route (OFA-F-138). Business/infra: the URL that opens one DART document, and whether advisers and Compliance have DART logins (OFA-F-055, F-060 Open document, F-109). Two conditional items wait on these answers before they get IDs: an authenticated OFA route in DataConnectors.Agility; a tool endpoint that streams a document through Agility.
