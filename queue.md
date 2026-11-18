@@ -61,7 +61,7 @@ Done 19-11 (group 4, merged 12f68d74): OFA-S-001, OFA-F-145. Owner questions fro
 Done 19-11 (group 3, merged 0ab2aae7): OFA-F-146, F-147, F-148, F-149, F-150; OFA-F-016 Done. Seed 2026-11-19.5: every checkout runs make test-data before its next make up. Board Parity C163 owed to the end sweep. Release settings went to docs/deployment/release-runbook.md (4de24c89).
 
 Collision rules (hub ruling 18-11):
-1. Migration numbers: PS uses 0086-0099, PS2 uses 0100-0119.
+1. Migration numbers: PS uses 0086-0099 then 0120-0139, PS2 uses 0100-0119. dbo.usp_ArrangementTermination_TellStateManager is PS's (0120 puts @ToldUtc back in after 0107); PS2 does not redefine it.
 2. Test data and seed: PS only. PS2 asks PS through the hub.
 3. PMBook and handoff: each edits only its own items' rows; PS2 writes its notes in its own handoff section.
 4. No `make test-data` or `make up` in PS2 until SHELL-F-144 part 2 lands (the OFA test database is still shared).
