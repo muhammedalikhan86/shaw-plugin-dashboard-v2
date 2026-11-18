@@ -79,9 +79,9 @@
     "advisor-dashboard"
    ],
    "pointsDone": 414.0,
-   "pointsRemaining": 73.0,
-   "pointsTotal": 487.0,
-   "itemsRemaining": 20,
+   "pointsRemaining": 76.0,
+   "pointsTotal": 490.0,
+   "itemsRemaining": 21,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ],
@@ -99,9 +99,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 166.0,
-   "pointsRemaining": 24.0,
-   "pointsTotal": 190.0,
-   "itemsRemaining": 9,
+   "pointsRemaining": 26.0,
+   "pointsTotal": 192.0,
+   "itemsRemaining": 10,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 22.0,
@@ -258,7 +258,7 @@
    "Compliance": {
     "optimistic": "2026-11-20",
     "likely": "2026-11-20",
-    "pessimistic": "2026-11-20",
+    "pessimistic": "2026-11-23",
     "rateLast10": 20.38,
     "rateWhole": 12.56
    }
@@ -270,8 +270,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 94.69,
-   "pointsRemaining": 437.0,
-   "itemsRemaining": 164
+   "pointsRemaining": 442.0,
+   "itemsRemaining": 166
   }
  },
  "milestones": [
@@ -349,7 +349,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-18T11:11:31+11:00",
+ "updatedAt": "2026-11-18T11:24:50+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1838,6 +1838,11 @@
    "at": "2026-11-18T11:11:31+11:00",
    "change": "Shell: notification links into a plugin (SHELL-F-143) and plugin access fix (SHELL-B-123) done; shell's engineering work moved to found during build (recount from the PMBooks)",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-18T11:24:50+11:00",
+   "change": "Raised from Luke's email reply: Adviser removes the adviser's quarantine button (ADVISOR-DASHBOARD-F-124), Compliance follows the dropped quarantine email (COMPLIANCE-DASHBOARD-F-039)",
+   "pointsRaised": 5.0
   }
  ],
  "foundDuringBuild": {
