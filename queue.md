@@ -43,7 +43,7 @@ Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).
 
-## Portfolio Services 2 (pointer: parked f4ce9be1 at the usage limit; B-176 and F-080 committed, F-081 built and unreviewed; resumes about 07:07)
+## Portfolio Services 2 (pointer: group 5: B-176 and F-080 committed; F-081 review, then F-118)
 
 Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfolio-services-2`, branch `portfolio-services-2`, port offset 40, artboard port 8799.
 
