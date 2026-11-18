@@ -38,17 +38,17 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 454.0,
-   "pointsRemaining": 22.0,
-   "pointsTotal": 476.0,
-   "itemsRemaining": 9,
+   "pointsDone": 473.0,
+   "pointsRemaining": 5.0,
+   "pointsTotal": 478.0,
+   "itemsRemaining": 3,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
-    "pointsDone": 125.0,
-    "pointsRemaining": 17.0,
-    "pointsTotal": 142.0,
-    "itemsDone": 62,
-    "itemsRemaining": 6
+    "pointsDone": 137.0,
+    "pointsRemaining": 4.0,
+    "pointsTotal": 141.0,
+    "itemsDone": 67,
+    "itemsRemaining": 2
    }
   },
   {
@@ -56,10 +56,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 400.0,
-   "pointsRemaining": 318.0,
-   "pointsTotal": 718.0,
-   "itemsRemaining": 126,
+   "pointsDone": 420.0,
+   "pointsRemaining": 321.0,
+   "pointsTotal": 741.0,
+   "itemsRemaining": 129,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -78,19 +78,19 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 414.0,
+   "pointsDone": 415.0,
    "pointsRemaining": 76.0,
-   "pointsTotal": 490.0,
+   "pointsTotal": 491.0,
    "itemsRemaining": 21,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ],
    "foundDuringBuild": {
-    "pointsDone": 15.0,
-    "pointsRemaining": 11.0,
-    "pointsTotal": 26.0,
-    "itemsDone": 8,
-    "itemsRemaining": 4
+    "pointsDone": 31.0,
+    "pointsRemaining": 5.0,
+    "pointsTotal": 36.0,
+    "itemsDone": 16,
+    "itemsRemaining": 2
    }
   },
   {
@@ -98,16 +98,16 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 166.0,
+   "pointsDone": 168.0,
    "pointsRemaining": 26.0,
-   "pointsTotal": 192.0,
+   "pointsTotal": 194.0,
    "itemsRemaining": 10,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
-    "pointsDone": 22.0,
+    "pointsDone": 24.0,
     "pointsRemaining": 2.0,
-    "pointsTotal": 24.0,
-    "itemsDone": 12,
+    "pointsTotal": 26.0,
+    "itemsDone": 13,
     "itemsRemaining": 1
    }
   }
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 94.69,
+  "pointsPerWorkingDayWholePeriod": 97.92,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -225,8 +225,8 @@
    },
    {
     "date": "2026-11-18",
-    "pointsDone": 1231.0,
-    "pointsDoneThatDay": 39.0
+    "pointsDone": 1273.0,
+    "pointsDoneThatDay": 81.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -239,39 +239,39 @@
     "likely": "2026-11-19",
     "pessimistic": "2026-11-19",
     "rateLast10": 35.55,
-    "rateWhole": 23.69
+    "rateWhole": 25.15
    },
    "Portfolio Services": {
     "optimistic": "2026-12-01",
     "likely": "2026-12-02",
-    "pessimistic": "2026-12-04",
+    "pessimistic": "2026-12-03",
     "rateLast10": 38.95,
-    "rateWhole": 28.22
+    "rateWhole": 29.76
    },
    "Advisor": {
     "optimistic": "2026-11-23",
     "likely": "2026-11-24",
     "pessimistic": "2026-11-25",
     "rateLast10": 18.12,
-    "rateWhole": 30.23
+    "rateWhole": 30.31
    },
    "Compliance": {
     "optimistic": "2026-11-20",
     "likely": "2026-11-20",
     "pessimistic": "2026-11-23",
     "rateLast10": 20.38,
-    "rateWhole": 12.56
+    "rateWhole": 12.71
    }
   },
   "overall": {
    "optimistic": "2026-12-01",
    "likely": "2026-12-02",
-   "pessimistic": "2026-12-04",
+   "pessimistic": "2026-12-03",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 94.69,
-   "pointsRemaining": 442.0,
-   "itemsRemaining": 166
+   "rateWhole": 97.92,
+   "pointsRemaining": 428.0,
+   "itemsRemaining": 163
   }
  },
  "milestones": [
@@ -349,7 +349,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-18T11:24:50+11:00",
+ "updatedAt": "2026-11-18T15:49:00+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1843,13 +1843,19 @@
    "at": "2026-11-18T11:24:50+11:00",
    "change": "Raised from Luke's email reply: Adviser removes the adviser's quarantine button (ADVISOR-DASHBOARD-F-124), Compliance follows the dropped quarantine email (COMPLIANCE-DASHBOARD-F-039)",
    "pointsRaised": 5.0
+  },
+  {
+   "at": "2026-11-18T15:49:00+11:00",
+   "change": "18-11 work before the 16:30 account switch: shell done (F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160), Portfolio Services done (OFA-B-152, OFA-B-149, OFA-F-084), Advisor done (B-107, F-125 to F-130, F-123, F-082), Compliance done (F-028, F-030 to F-036, F-040, B-079)",
+   "pointsDone": 42.0,
+   "pointsRaised": 28.0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 174.0,
-  "pointsRemaining": 47.0,
-  "pointsTotal": 221.0,
-  "itemsDone": 87,
-  "itemsRemaining": 17
+  "pointsDone": 204.0,
+  "pointsRemaining": 28.0,
+  "pointsTotal": 232.0,
+  "itemsDone": 101,
+  "itemsRemaining": 11
  }
 }
