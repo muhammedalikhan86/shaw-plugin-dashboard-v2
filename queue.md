@@ -14,11 +14,11 @@ Updated: 18-11-2026 22:00
 4. Functionality first (user, 18-11): no full design checks; only the screens a change touches; look gaps wait for the end parity sweep.
 5. Unsupervised: nobody answers prompts. The hub rules on workers' defaults; anything only the user may decide waits on its default (marked "awaiting user" in the rulings). One app stack at a time (memory).
 
-## Shell (pointer: stack window — proving F-144 part 2 and the owed app checks)
+## Shell (pointer: writing proofs, then parks)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
-| >> | 3 | (owed runs) | Prove F-144 part 2; app checks for F-084, F-145, F-144, B-130, B-128 (functional only) | - | Stack window now (exclusive) |
+| >> | 3 | (owed runs) | F-144 parts 1+2 and B-130 proved; F-084/F-145 look runs to the sweep; B-128 waits for a plugin to opt in | - | Proofs being written |
 | 2 | X | SHELL-B-022 | Table card stays full height when a search finds nothing (theme half) | 3 | Look gap: end parity sweep (functionality first) |
 | 4 | X | SHELL-F-089 | Take off the temporary "Expired report" sidebar item | 1 | Blocked on OFA-F-056 (PS) |
 
@@ -28,6 +28,7 @@ Done 18-11: F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
+| 2a | 1b | (triage) | Two reds the shell saw: back-office-requests "closes it by hand"; issue-the-month (3) | - | In ps's window |
 | 3 | 1b | OFA-B-155 | Bug from today's merge | - | Look check waits for a turn with the running app |
 | >> | 1b | OFA-B-153 (reopened) | Seed OFA-B-153 data for 6 compliance scenarios: closed-months M2, compliance-review B5, cull-list S20012, S20244, single note, S20120 | 1 | From compliance's window |
 | >> | 1b | OFA-B-165, OFA-B-149 (reopened) | O17, O18 Done on the board: Expired report and Platform accounts tables' columns to content width, no fixed widths. O19 Done: draw the signing outage strip and banner from `sources.signingUnavailable` (reopen OFA-B-149 or a new item; then swap the O19 scenario's tag) | 2 | From the 18-11 design sync (f9cf27ce) |
@@ -101,7 +102,7 @@ Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F
 
 ## Hub
 
-Stack windows (one at a time): 1. shell, running now (prove F-144 part 2, owed app checks). 2. ps (B-149, B-165 touched screens; O19 + compliance's 6 B-153 scenarios). 3. compliance (F-020, B-080 touched screens). 4. advisor (test-clock scenarios, touched screens). 5. ps2 (group 3, after its merge with advisor F-124 is near). Each checkout's first window starts make down, make test-data, make up.
+Stack windows (one at a time): 1. shell, done 18-11 (F-144 parts 1+2 and B-130 PASS). 2. ps, running now (B-149, B-165 touched screens; O19 + compliance's 6 B-153 scenarios). 3. compliance (F-020, B-080 touched screens). 4. advisor (test-clock scenarios, touched screens). 5. ps2 (group 3, after its merge with advisor F-124 is near). Each checkout's first window starts make down, make test-data, make up.
 
 0. Design sync 18-11 (f9cf27ce): O17, O18, O19, Q13 Done. The full board run is dropped (user, 18-11: functionality first; only impacted screens are checked). Waiting on Muhammed: O17/O18 heading rule (one line, or two lines allowed) and O19's wording (business to confirm).
 
