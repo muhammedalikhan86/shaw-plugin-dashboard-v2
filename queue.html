@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shaw Portal - Work Queue</title>
+<link rel="stylesheet" href="assets/ds/roboto.css">
+<style>
+/* Content comes from queue.md, a copy of the Hub's .claude/queue.md, refreshed by the Hub session. This page only draws it. */
+:root{--bg:#F4F4F4;--card:#FFFFFF;--ink:#1A1A1A;--muted:#5C5C5C;--line:#E0E0E0;--accent:#E8501E;--now:#FFF3EC}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--accent:#FF6A33;--now:#2E1E16}}
+:root[data-theme="dark"]{--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--accent:#FF6A33;--now:#2E1E16}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/22px Roboto,"Helvetica Neue",Arial,sans-serif}
+header{background:#000;padding:16px}
+header img{width:150px;height:auto;display:block}
+main{max-width:1180px;margin:0 auto;padding:32px 16px 48px}
+h1{font-weight:400;font-size:26px;line-height:34px;margin:0 0 8px}
+h2{font-weight:500;font-size:19px;line-height:26px;margin:32px 0 10px}
+p,li{color:var(--ink)}
+code{font:500 13px/20px "Roboto Mono",Consolas,monospace;overflow-wrap:anywhere}
+a{color:var(--accent)}
+.scroll{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow-x:auto;margin:0 0 10px}
+table{width:100%;border-collapse:collapse;font-size:14px;line-height:20px}
+th{text-align:left;font-weight:500;color:var(--muted);padding:9px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+tr.now td{background:var(--now)}
+tr.now td:first-child{color:var(--accent);font-weight:500}
+#err{color:var(--accent)}
+</style>
+</head>
+<body>
+<header><a href="index.html"><img src="assets/logo-primary-reversed-3x.png" alt="Shaw and Partners"></a></header>
+<main>
+<div id="out"><p>Loading the queue…</p></div>
+<p id="err" hidden></p>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script>
+fetch('queue.md',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.text()}).then(md=>{
+  const out=document.getElementById('out');
+  out.innerHTML=marked.parse(md);
+  out.querySelectorAll('table').forEach(t=>{const w=document.createElement('div');w.className='scroll';t.parentNode.insertBefore(w,t);w.appendChild(t);
+    t.querySelectorAll('tbody tr').forEach(tr=>{if(tr.cells[0]&&tr.cells[0].textContent.trim()==='>>')tr.classList.add('now')})});
+}).catch(e=>{const el=document.getElementById('err');el.hidden=false;el.textContent='The queue could not be loaded ('+e.message+').'});
+</script>
+</body>
+</html>
