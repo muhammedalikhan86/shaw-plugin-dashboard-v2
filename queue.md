@@ -28,7 +28,7 @@ Done 18-11: F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
-| 2a | 1b | (triage) | Two reds the shell saw: back-office-requests (missing not-built tag); issue-the-month (3, being triaged) | - | In ps's window |
+| 2a | 1b | (triage) | Two reds the shell saw: both test-side (missing tag; tests never opened the Issuance step), fixed in this group | - | Re-run in ps's window |
 | 2b | 1b | OFA-B-167 | One seeded record gets a fixed time, not the load time (S19630) | 1 | Found in ps's window |
 | 3 | 1b | OFA-B-155 | Bug from today's merge | - | Look check waits for a turn with the running app |
 | >> | 1b | OFA-B-153 (reopened) | Seed OFA-B-153 data for 6 compliance scenarios: closed-months M2, compliance-review B5, cull-list S20012, S20244, single note, S20120 | 1 | From compliance's window |
@@ -36,6 +36,7 @@ Done 18-11: F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F
 | >> | 1b | OFA-F-153 | compliance.SourceTimes view: fees/signing as at and failed, for COMPLIANCE-DASHBOARD-B-069 | 1 | Raised 18-11 for compliance |
 | 6 | 1b | (follow-up) | Merge main (shell architecture v147, move pointers); drop the now-repeated `autoFocus: 'dialog'` at arrangement-record.ts:727, :759, exceptions-report.ts:620 | 1 | From SHELL-F-116 |
 | 5 | 2 | OFA-F-042 | Compliance notes | 3 | - |
+| 5b | 2 | OFA-B-168 | Seed: a fourth platform account on S20114, for advisor B-104 | 1 | - |
 | 5a | 2 | OFA-B-166 | Test fixtures use the checkout's own LocalDB (LocalDbTestDatabase.cs:24) | 1 | From SHELL-F-144 part 2 |
 | 6 | 2 | OFA-F-128 | A view of an account's documents for the Compliance tool | 2 | - |
 | 7 | 2 | OFA-F-136 | The client's acceptance evidence for the Compliance tool | 2 | - |
@@ -107,7 +108,7 @@ Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079
 | 7 | 3 | ADVISOR-DASHBOARD-F-116 | "Fees as at · Signing as at" line on every OFA view | 1 | Group 3 |
 | 8 | 4 | ADVISOR-DASHBOARD-F-071, F-080, F-093, F-100, F-075 (+ F-056 remainder) | The book and portfolio: every bucket a column, book levels, State Manager opens a book, personal-code accounts in tiles, every filter in every seat | ~21 | Group 4 |
 | 9 | X | F-047, F-057, F-059, F-060, F-048, F-049, F-117, F-118 | Blocked on Portfolio Services items (OFA-F-024, F-130, F-134..F-136, F-044, F-027, F-131, F-132) | - | Waiting |
-| 10 | X | ADVISOR-DASHBOARD-B-104 | S-Account page's scroll test needs a fourth platform account | - | Waiting on a PS seed item |
+| 10 | X | ADVISOR-DASHBOARD-B-104 | S-Account page's scroll test needs a fourth platform account | - | Waiting on OFA-B-168 (PS group 2) |
 
 Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F-128, F-129, F-130, F-123, F-082 (the shell run's 15 reds were raised and built in these).
 
