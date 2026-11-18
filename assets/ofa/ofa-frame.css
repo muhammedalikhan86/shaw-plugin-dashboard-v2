@@ -1230,3 +1230,7 @@ mat-card>.hist{flex:1 1 auto;min-height:0}
 mat-tab-group[data-nostretch="1"] mat-tab-header:is(.tabs,[classname~="tabs"]) mat-tab{flex:0 0 auto}
 /* P85: OFA Checklist loading: the card's title and steps dim to 0.4; its Month select stays at full opacity and enabled */
 .g24[data-ldim="1"] :is(mat-card,mat-card :has([data-msel])) > :not(:has([data-msel])):not([data-msel]){opacity:.4}
+
+/* Overview, Back Office requests counter: no info icon (comment 18-11-2026) */
+.app-layer mat-card:is(.trk,[classname~="trk"])[data-noinfo="true"] .trh>mat-icon:is(.ic16,[classname~="ic16"]){display:none!important}
+.app-layer mat-card:is(.trk,[classname~="trk"])[data-noinfo="true"] .trlead{border-right:0!important}
