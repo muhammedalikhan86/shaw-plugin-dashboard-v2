@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 13:00
+Updated: 19-11-2026 13:30
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -27,19 +27,16 @@ Updated: 19-11-2026 13:00
 
 Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostChanged] and (resetPressed)), B-133 (1877cdd8, proof in PS's next window). Done 18-11: B-131, B-132 (799cc46e), F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160.
 
-## Portfolio Services (pointer: group 3, last item B-154; B-171, B-174, F-152, B-173 and the 0120 fix are committed)
+## Portfolio Services (pointer: group 4 waits on Muhammed's scope answer; finishing in-progress F-010, F-014, F-033 meanwhile)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|---|---|---|---|---|
-| 1 | 3 | OFA-B-171 | Seed a separate month at List built and one at Ready to issue (October untouched) for I2, I4, B1 | 3 | Seed |
-| 2 | 3 | OFA-B-174 | Seed: about 30 more trail row types get fixed times | 3 | Seed, with B-171 |
-| 3 | 3 | OFA-F-152 | Add an account to this month (approved triage row) | 3 | Sized by the hub 19-11; switches on B-170's B8-B11, B13 |
-| 4 | 3 | OFA-B-173 | Move to cull list: Reason preselected "Account closed" and the "Add attachments (optional)" row, as the board draws | 2 | Cull list |
-| >> | 3 | OFA-B-154 | Test user: a State Manager seat that reaches every adviser | 2 | Seed |
+| >> | 4 | OFA-F-010, F-014, F-033 | Finish the in-progress go-live Musts: mail sender, settings, fees from GridPay | 15 | Must; functional only |
 | 6 | X | OFA-F-155 | Acceptance evidence per signatory | 2 | Held, for when COMPLIANCE-DASHBOARD-F-004 needs every signer |
 | 14 | X | OFA-F-144 | Test data: a register-only data set over a shared warehouse | 3 | - |
 | 17 | X | OFA-F-044 | The closure confirmation | 3 | OFA-F-010 (in progress) |
 
+Done 19-11 (group 3, merged 9549205a): OFA-F-152, B-171, B-173, B-174, B-154, 0120 fix. Seed 2026-11-19.7. Browser proof waits until after go-live.
 Done 19-11 (group 2, merged e88c4201): OFA-F-154, F-042, F-128, F-136, F-046; B-155, B-166, B-169, B-170, B-172 (B2/B14/B15 proof owed to the end sweep). Seed 2026-11-19.6.
 Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156. OFA-B-168 closed as a duplicate of OFA-B-150 (0 points). Group 1b merged ad2ebbd2: OFA-F-153, OFA-B-165, OFA-B-149, OFA-B-153, OFA-B-167, autoFocus follow-up, test fixes (seed 2026-11-19.4: run make test-data before the next make up).
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
