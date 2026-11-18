@@ -39,6 +39,8 @@ Done 18-11: F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F
 | 8 | 2 | OFA-F-136 | The client's acceptance evidence for the Compliance tool | 2 | - |
 | 9 | 2 | OFA-F-046 | Who a pending renewal is with | 3 | - |
 | 10 | 2 | OFA-B-155 | Bug from an earlier merge | - | Look check in group 2's window |
+| 11 | 2 | OFA-B-172 | Move to cull list: Master status gets its "Choose a master status" placeholder (board C125) | 1 | Fails build-and-cull B14 |
+| 12 | X | OFA-B-171 | Seed a separate month at List built and one at Ready to issue (October untouched) for I2, I4, B1 | 3 | Held, after group 2 |
 | 9 | 3 | OFA-F-146 | Only the OFA Team quarantines (adviser's own move removed) | 3 | - |
 | 10 | 3 | OFA-F-150 | OFA Team moves a single account into quarantine | 3 | F-146; design row C163 |
 | 11 | 3 | OFA-F-147 | Quarantine email dropped; weekly follow-up from the quarantine date | 3 | OFA-F-016, F-146 |
