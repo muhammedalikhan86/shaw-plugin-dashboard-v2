@@ -4,26 +4,25 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 18-11-2026 21:00
+Updated: 18-11-2026 21:30
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
 1. All four workers reopened on Lachlan's account and briefed. Each merges main first.
-2. Code-only work first. No `make up` or `make test-data` anywhere until SHELL-F-144 part 2 is merged; then each checkout runs `make test-data` once, and app turns go one at a time, scheduled by the hub.
+2. SHELL-F-144 part 2 is merged (8bce346d). Each checkout runs `make down` then `make test-data` once, in its own app turn. App turns go one at a time, scheduled by the hub: shell now.
 3. PS2 opened 18-11 for group 3, code only.
 4. Functionality first (user, 18-11): no full design checks; only the screens a change touches; look gaps wait for the end parity sweep.
 5. Unsupervised: nobody answers prompts. The hub rules on workers' defaults; anything only the user may decide waits on its default (marked "awaiting user" in the rulings). One app stack at a time (memory).
 
-## Shell (pointer: building SHELL-F-144 part 2)
+## Shell (pointer: stack window — proving F-144 part 2 and the owed app checks)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
-| >> | 1 | SHELL-F-144 | Part 2: OFA data moves to each checkout's own database | - | Unblocked: OFA-F-151 is on main. Merged when no app is running |
-| 2 | 2 | SHELL-B-022 | Table card stays full height when a search finds nothing (theme half) | 3 | Not tonight. Plugins then opt in, each in its own item |
-| 3 | 3 | (owed runs) | App checks for F-084, F-145, F-144, B-130, B-128 | - | Need a turn with the running app. Not tonight |
+| >> | 3 | (owed runs) | Prove F-144 part 2; app checks for F-084, F-145, F-144, B-130, B-128 (functional only) | - | Stack window now (exclusive) |
+| 2 | X | SHELL-B-022 | Table card stays full height when a search finds nothing (theme half) | 3 | Look gap: end parity sweep (functionality first) |
 | 4 | X | SHELL-F-089 | Take off the temporary "Expired report" sidebar item | 1 | Blocked on OFA-F-056 (PS) |
 
-Done 18-11: F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160.
+Done 18-11: F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160.
 
 ## Portfolio Services (pointer: group 1b)
 
