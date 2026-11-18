@@ -354,7 +354,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-19T03:17:53+11:00",
+ "updatedAt": "2026-11-19T03:29:33+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1941,6 +1941,11 @@
   {
    "at": "2026-11-19T03:17:53+11:00",
    "change": "19-11: SHELL-F-161 closed, no code needed (hook already in the toolkit)",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-19T03:29:33+11:00",
+   "change": "19-11: COMPLIANCE-DASHBOARD-F-045 raised (1 pt, waits on OFA-F-080)",
    "pointsDone": 0.0
   }
  ],

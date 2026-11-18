@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 06:20
+Updated: 19-11-2026 06:50
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -74,6 +74,7 @@ Collision rules (hub ruling 18-11):
 | 6 | X | (owed) | Clear the three @not-built-COMPLIANCE-DASHBOARD-F-040 tags (arrangements.feature:260) once they pass | - | End parity sweep |
 | >> | 4 | COMPLIANCE-DASHBOARD-F-010 | Compliance adds notes | 3 | OFA-F-042 on main; widen the notes read to ComplianceAndOfaTeam |
 | 8 | 4 | COMPLIANCE-DASHBOARD-F-029 | Account details: the Documents card's contents | 2 | OFA-F-128 and OFA-F-145 on main |
+| 9 | X | COMPLIANCE-DASHBOARD-F-045 | Wording fields show in document order (Ordinal); closes B-006's N4 | 1 | Blocked on OFA-F-080 (PS2 group 5) |
 | 9 | X | COMPLIANCE-DASHBOARD-F-037 | .NET test speed-up, part 2 | 2 | OFA-F-144 (PS) |
 | 10 | X | (owed) | Board Parity F-028/F-033/F-035/F-036; M-448120 on the board; B-048 re-measure | - | End parity sweep (user, 18-11) |
 | 11 | X | (no ID) | Parity sweep, parity-backlog rows 1-8 | - | Looks only, at the end |
