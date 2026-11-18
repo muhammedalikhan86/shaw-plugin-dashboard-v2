@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 01:51
+Updated: 19-11-2026 02:05
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -58,7 +58,7 @@ Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).
 
-## Portfolio Services 2 (pointer: opening; group 3 code-only)
+## Portfolio Services 2 (pointer: group 3 all passed review; stack window open now for the C163 Board Parity pass, then Finalizers and commit)
 
 Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfolio-services-2`, branch `portfolio-services-2`, port offset 40, artboard port 8799.
 
@@ -114,7 +114,7 @@ Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F
 Awaiting the user: ADV-056 (advisor F-076). A closed account shares its platform with another account in the same S-Account; the warehouse keeps one value for both. Built: the shared value is counted once, with a note (a closure is valued at the month-end before it, so the 'split this month' case never happens).
 Decided 18-11: OFA-F-016 is marked Done once OFA-F-148 merges (user).
 
-Stack windows (one at a time, quiet: no other worker's tests or builds): done 18-11: shell, ps (group 1b). Compliance's two tries killed for low memory (a stray full .NET run); its browser pass is owed. ps group 2 wave 1 done 19-11 (B-155, B-172 PASS; B-170 8 passed, 3 red on a shared find.ts step, shell fixing). Next: ps2 (gates the joint merge; F-146 to F-149 passed review, F-150 building), then advisor, compliance (owed pass). Each checkout's first window starts make down, make test-data, make up.
+Stack windows (one at a time, quiet: no other worker's tests or builds): done 18-11: shell, ps (group 1b). Compliance's two tries killed for low memory (a stray full .NET run); its browser pass is owed. ps group 2 wave 1 done 19-11 (B-155, B-172 PASS; B-170 8 passed, 3 red on a shared find.ts step, shell fixing). Now: ps2 (opened 19-11 02:05, C163 Board Parity on touched screens; gates the joint merge). Next: advisor, then compliance (owed pass). Each checkout's first window starts make down, make test-data, make up.
 
 0. Design sync 18-11 (f9cf27ce): O17, O18, O19, Q13 Done. The full board run is dropped (user, 18-11: functionality first; only impacted screens are checked). Waiting on Muhammed: O17/O18 heading rule (one line, or two lines allowed) and O19's wording (business to confirm).
 
