@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 18-11-2026 17:39
+Updated: 18-11-2026 17:48
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -37,6 +37,7 @@ Done 18-11: F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F
 | >> | 1b | OFA-F-153 | compliance.SourceTimes view: fees/signing as at and failed, for COMPLIANCE-DASHBOARD-B-069 | 1 | Raised 18-11 for compliance |
 | 6 | 1b | (follow-up) | Merge main (shell architecture v147, move pointers); drop the now-repeated `autoFocus: 'dialog'` at arrangement-record.ts:727, :759, exceptions-report.ts:620 | 1 | From SHELL-F-116 |
 | 4 | 2 | OFA-B-170 | issue-the-month and build-and-cull tests read the shell seed (seed a Ready-to-issue month and stage states, or assert the seed's counts) | 3 | Raised 18-11 from the ps window; ahead of group 2's features |
+| 4b | 2 | (to raise) | Fees and Signing rows in advisor.usp_DataFreshness_Read, plus seed values, for ADVISOR-DASHBOARD-F-116 | - | ps raises the ID |
 | 5 | 2 | OFA-F-042 | Compliance notes | 3 | - |
 | 5b | 2 | OFA-B-168 | Seed: a fourth platform account on S20114, for advisor B-104 | 1 | - |
 | 5c | 2 | OFA-B-169 | Seed: the remaining load-time stamps (ArrangementAdded, RenewalNoticeQueued trail rows, September PublishedUtc) get fixed times | 2 | Raised 18-11 from B-167 |
