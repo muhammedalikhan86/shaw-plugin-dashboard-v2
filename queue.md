@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 18-11-2026 18:31
+Updated: 19-11-2026 01:25
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
