@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 06:50
+Updated: 19-11-2026 06:30
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -43,7 +43,7 @@ Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).
 
-## Portfolio Services 2 (pointer: group 5, wording store and email switches)
+## Portfolio Services 2 (pointer: parked f4ce9be1 at the usage limit; B-176 and F-080 committed, F-081 built and unreviewed; resumes about 07:07)
 
 Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfolio-services-2`, branch `portfolio-services-2`, port offset 40, artboard port 8799.
 
@@ -82,7 +82,7 @@ Collision rules (hub ruling 18-11):
 Done 19-11 (group 3, merged 7c6979ec): B-069, F-042, F-039, F-043.
 Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079. Merged 4cf941b5: F-020, F-041, F-044, B-081, B-080 (browser pass owed).
 
-## Advisor (pointer: group 5: F-138, F-134, F-136, then F-137 once SHELL-F-161 lands)
+## Advisor (pointer: stopped at the usage limit; F-138, F-134, F-137 passed review, F-136 to review; resumes about 07:07)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
