@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 19-11-2026 13:30
+Updated: 19-11-2026 13:50
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -27,11 +27,16 @@ Updated: 19-11-2026 13:30
 
 Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostChanged] and (resetPressed)), B-133 (1877cdd8, proof in PS's next window). Done 18-11: B-131, B-132 (799cc46e), F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160.
 
-## Portfolio Services (pointer: group 4 waits on Muhammed's scope answer; finishing in-progress F-010, F-014, F-033 meanwhile)
+## Portfolio Services (pointer: group 4: F-014 part 2, F-011, F-023, F-026)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|---|---|---|---|---|
-| >> | 4 | OFA-F-010, F-014, F-033 | Finish the in-progress go-live Musts: mail sender, settings, fees from GridPay | 15 | Must; functional only |
+| >> | 4 | OFA-F-014 part 2 | Settings screen, report recipients from DART, job schedules, business ranges | 5 | Must; unknown ranges default 1-120 and go on the question list |
+| 2 | 4 | OFA-F-011 | Import (the master spreadsheet into the register) | 8 | Must; go-live data |
+| 3 | 4 | OFA-F-023 | Paper copies | 2 | Must |
+| 4 | 4 | OFA-F-026 | Weekly reports | 3 | Must |
+| 5 | X | OFA-F-010 | Job host and mail outbox sender | 5 | Blocked: Shaw.WebJob 2.1.0 not on the sic2tfs1 feed (Muhammed publishes) |
+| 6 | X | OFA-F-033 | The month's fees from GridPay | 5 | Blocked: no warehouse fee table, no gMSA read on GridPay (warehouse team) |
 | 6 | X | OFA-F-155 | Acceptance evidence per signatory | 2 | Held, for when COMPLIANCE-DASHBOARD-F-004 needs every signer |
 | 14 | X | OFA-F-144 | Test data: a register-only data set over a shared warehouse | 3 | - |
 | 17 | X | OFA-F-044 | The closure confirmation | 3 | OFA-F-010 (in progress) |
@@ -104,6 +109,7 @@ Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F
 
 ## Hub
 
+- Waiting on Muhammed: publish Shaw.WebJob 2.1.0 to the sic2tfs1 feed (blocks OFA-F-010, the mail sender); the GridPay fee source for OFA-F-033 (warehouse team).
 - Waiting on Luke (Muhammed is sending one email for all of them): templates for the 8 emails without real wording. Placeholders meanwhile (OFA-F-157); OFA-F-158 swaps them in.
 
 Awaiting the user: ADV-056 (advisor F-076). A closed account shares its platform with another account in the same S-Account; the warehouse keeps one value for both. Built: the shared value is counted once, with a note (a closure is valued at the month-end before it, so the 'split this month' case never happens).
