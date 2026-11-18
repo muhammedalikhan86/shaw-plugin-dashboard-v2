@@ -78,18 +78,18 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 415.0,
+   "pointsDone": 417.0,
    "pointsRemaining": 76.0,
-   "pointsTotal": 491.0,
+   "pointsTotal": 493.0,
    "itemsRemaining": 21,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ],
    "foundDuringBuild": {
-    "pointsDone": 31.0,
+    "pointsDone": 32.0,
     "pointsRemaining": 5.0,
-    "pointsTotal": 36.0,
-    "itemsDone": 16,
+    "pointsTotal": 37.0,
+    "itemsDone": 17,
     "itemsRemaining": 2
    }
   },
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 98.15,
+  "pointsPerWorkingDayWholePeriod": 98.3,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -225,8 +225,8 @@
    },
    {
     "date": "2026-11-18",
-    "pointsDone": 1276.0,
-    "pointsDoneThatDay": 84.0
+    "pointsDone": 1278.0,
+    "pointsDoneThatDay": 86.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -253,7 +253,7 @@
     "likely": "2026-11-24",
     "pessimistic": "2026-11-25",
     "rateLast10": 18.12,
-    "rateWhole": 30.31
+    "rateWhole": 30.46
    },
    "Compliance": {
     "optimistic": "2026-11-20",
@@ -269,7 +269,7 @@
    "pessimistic": "2026-12-03",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 98.15,
+   "rateWhole": 98.3,
    "pointsRemaining": 425.0,
    "itemsRemaining": 161
   }
@@ -349,7 +349,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-18T16:57:16+11:00",
+ "updatedAt": "2026-11-18T17:04:28+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1854,13 +1854,19 @@
    "at": "2026-11-18T16:57:16+11:00",
    "change": "SHELL-F-144 part 2 merged (2 points)",
    "pointsDone": 3.0
+  },
+  {
+   "at": "2026-11-18T17:04:28+11:00",
+   "change": "Advisor F-131, B-108, B-109 merged (3 points)",
+   "pointsDone": 2.0,
+   "pointsRaised": 2.0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 207.0,
+  "pointsDone": 208.0,
   "pointsRemaining": 25.0,
-  "pointsTotal": 232.0,
-  "itemsDone": 102,
+  "pointsTotal": 233.0,
+  "itemsDone": 103,
   "itemsRemaining": 10
  }
 }

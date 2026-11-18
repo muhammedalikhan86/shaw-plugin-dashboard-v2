@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 18-11-2026 21:30
+Updated: 18-11-2026 22:00
 
 ## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
@@ -90,17 +90,14 @@ Collision rules (hub ruling 18-11):
 Stack window 18-11: final run 160 passed, 1 failed (NW-53110), 77 skipped; 21 scenarios lost their waiting tags.
 Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079.
 
-## Advisor (pointer: follow-ups 3 and 4 as one group; app turn after SHELL-F-144 part 2)
+## Advisor (pointer: building F-124; app turn queued)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 2 | 1 | (item 5) | Test-clock scenarios; design check only on screens its merges touch | - | App turn after SHELL-F-144 part 2 |
-| >> | 1 | ADVISOR-DASHBOARD-F-131 | Lift `@not-built-OFA-B-156` on its two questionnaire tests; the built-app one checks X99/X91 on S20231 | 1 | In Integration |
-| >> | 1 | ADVISOR-DASHBOARD-B-108 | Dialogs follow the shell's focus default (repeated `autoFocus` removed) | 1 | In Integration |
-| >> | 1 | ADVISOR-DASHBOARD-B-109 | Stale test-clock doc lines corrected | 1 | In Integration |
-| 3 | 2 | ADVISOR-DASHBOARD-F-124 | Remove the adviser's own Move to Quarantined (T94 Done) | 3 | Merges with PS2's OFA-F-146 in one window; urgent single item |
+| >> | 2 | ADVISOR-DASHBOARD-F-124 | Remove the adviser's own Move to Quarantined (T94 Done) | 3 | Merges with PS2's OFA-F-146 in one window; urgent single item |
 
-Done 18-11: B-107, F-125, F-126, F-127, F-128, F-129, F-130, F-123, F-082 (the shell run's 15 reds were raised and built in these).
+Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F-128, F-129, F-130, F-123, F-082 (the shell run's 15 reds were raised and built in these).
 
 ## Hub
 
