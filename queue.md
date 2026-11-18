@@ -60,7 +60,7 @@ Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfo
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 1 | - | (setup) | In hub.json and opened 18-11 on Lachlan's account | - | Done |
-| >> | 3 | OFA-F-146 → F-147 → F-148 → F-149 → F-150 | PS group 3, Luke's quarantine changes, serial | 14 | Merges in one window with ADVISOR-DASHBOARD-F-124 (F-146 breaks the advisor surface). Owns seed lines RegisterSeed.cs:926 and :1416-1429 |
+| >> | 3 | OFA-F-146 → F-147 → F-148 → F-149 → F-150 | PS group 3, Luke's quarantine changes, serial | 14 | Merges in one window with ADVISOR-DASHBOARD-F-124 and a compliance fix (F-146: advisor surface version 2). Owns seed lines RegisterSeed.cs:926 and :1416-1429 |
 
 Collision rules (hub ruling 18-11):
 1. Migration numbers: PS uses 0086-0099, PS2 uses 0100-0119.
@@ -80,6 +80,7 @@ Collision rules (hub ruling 18-11):
 | >> | 2 | COMPLIANCE-DASHBOARD-F-020 | Load dialog's Email subject; subject on the Wording page | 2 | W23 Done; ready |
 | >> | 2 | COMPLIANCE-DASHBOARD-F-041 | Drop repeated `autoFocus: 'dialog'` (compliance-review-section.ts:270, cull-list-section.ts:261, quarantine-section.ts:292); check load-wording-dialog.ts:132 focus spec; `.doc-link` for arrangements.scss:371-400 and Wording | 1 | From SHELL-F-116 |
 | >> | 2 | COMPLIANCE-DASHBOARD-B-080 | Q13 Done: keep each date on one line in the Quarantine details dialog (`quarantine.scss`, nowrap) | 1 | From the 18-11 design sync |
+| 5b | 3 | (new, ID to come) | Fix its quarantine test fixture and S20187 scenario for OFA-F-146 | 1 | Merges in one window with PS2's group 3 and advisor F-124 |
 | 6 | 3 | COMPLIANCE-DASHBOARD-F-010 | Compliance adds notes | 3 | OFA-F-042 (PS group 2) |
 | 7 | 3 | COMPLIANCE-DASHBOARD-F-029 | Account details: the Documents card's contents | 2 | OFA-F-128 (PS group 2) |
 | 8 | X | COMPLIANCE-DASHBOARD-F-039 | Three Adviser emails on Wording; Quarantine reads them | 2 | OFA-F-147 (PS group 3); rows W26, Q12 |
