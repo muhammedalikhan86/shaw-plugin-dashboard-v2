@@ -4,13 +4,14 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 18-11-2026 20:10
+Updated: 18-11-2026 21:00
 
-## Now: Lachlan's account (from 18-11-2026 20:10)
+## Now: Lachlan's account (from 18-11-2026 20:10), running unsupervised
 
 1. All four workers reopened on Lachlan's account and briefed. Each merges main first.
 2. Code-only work first. No `make up` or `make test-data` anywhere until SHELL-F-144 part 2 is merged; then each checkout runs `make test-data` once, and app turns go one at a time, scheduled by the hub.
 3. PS2 opened 18-11 for group 3, code only.
+4. Unsupervised: nobody answers prompts. The hub rules on workers' defaults; anything only the user may decide waits on its default (marked "awaiting user" in the rulings). One app stack at a time (memory).
 
 ## Shell (pointer: building SHELL-F-144 part 2)
 
@@ -33,6 +34,7 @@ Done 18-11: F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119
 | >> | 1b | OFA-F-153 | compliance.SourceTimes view: fees/signing as at and failed, for COMPLIANCE-DASHBOARD-B-069 | 1 | Raised 18-11 for compliance |
 | 6 | 1b | (follow-up) | Merge main (shell architecture v147, move pointers); drop the now-repeated `autoFocus: 'dialog'` at arrangement-record.ts:727, :759, exceptions-report.ts:620 | 1 | From SHELL-F-116 |
 | 5 | 2 | OFA-F-042 | Compliance notes | 3 | - |
+| 5a | 2 | (new, ID to come) | Test fixtures use the checkout's own LocalDB (LocalDbTestDatabase.cs:24) | 1 | From SHELL-F-144 part 2 |
 | 6 | 2 | OFA-F-128 | A view of an account's documents for the Compliance tool | 2 | - |
 | 7 | 2 | OFA-F-136 | The client's acceptance evidence for the Compliance tool | 2 | - |
 | 8 | 2 | OFA-F-046 | Who a pending renewal is with | 3 | - |
