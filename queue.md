@@ -118,7 +118,7 @@ Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F
 
 ## Hub
 
-Awaiting the user: ADV-056 (advisor F-076). A closed account shares its platform with another account in the same S-Account; the warehouse keeps one value for both. Hub default: split by the current month's holding if it closed this month, else count the shared value once with a note.
+Awaiting the user: ADV-056 (advisor F-076). A closed account shares its platform with another account in the same S-Account; the warehouse keeps one value for both. Built: the shared value is counted once, with a note (a closure is valued at the month-end before it, so the 'split this month' case never happens).
 Decided 18-11: OFA-F-016 is marked Done once OFA-F-148 merges (user).
 
 Stack windows (one at a time): 1. shell, done 18-11 (F-144 parts 1+2 and B-130 PASS). 2. ps, done 18-11 (B-149, B-165 PASS; reds to OFA-B-170). 3. compliance, running now (touched screens; F-044, F-020, B-081 scenarios). 4. advisor (test-clock scenarios, touched screens). 5. ps2 (group 3, after its merge with advisor F-124 is near). Each checkout's first window starts make down, make test-data, make up.
