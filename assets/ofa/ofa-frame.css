@@ -1234,3 +1234,7 @@ mat-tab-group[data-nostretch="1"] mat-tab-header:is(.tabs,[classname~="tabs"]) m
 /* Overview, Back Office requests counter: no info icon (comment 18-11-2026) */
 .app-layer mat-card:is(.trk,[classname~="trk"])[data-noinfo="true"] .trh>mat-icon:is(.ic16,[classname~="ic16"]){display:none!important}
 .app-layer mat-card:is(.trk,[classname~="trk"])[data-noinfo="true"] .trlead{border-right:0!important}
+/* O17, O18: a table drawn at its columns' one-line widths. Each column is as wide as its heading or its longest value on one line, with no spare; a table wider than its card scrolls inside it */
+.app-layer table.ot.ot.ot[data-nat="true"]{width:max-content!important;min-width:0!important;table-layout:auto!important}
+.app-layer table.ot.ot.ot[data-nat="true"] > :is(thead,tbody) > tr > :is(th,td){width:auto!important;min-width:0!important;max-width:none!important}
+.app-layer table.ot.ot.ot[data-nat="true"] > tbody > tr > td[mat-cell] :is(span,div,a){white-space:nowrap}
