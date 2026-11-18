@@ -75,7 +75,7 @@ Collision rules (hub ruling 18-11):
 5. App turns: one at a time, scheduled by the hub.
 6. PS2 skips the graph rebuild; PS does it. New IDs come from the hub.
 
-## Compliance (pointer: group 1 docs + group 2 code; app turn after SHELL-F-144 part 2)
+## Compliance (pointer: current group passed review; waiting for its stack window after ps)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
