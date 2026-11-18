@@ -94,10 +94,10 @@ Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 2 | 1 | (item 5) | Test-clock scenarios; design check only on screens its merges touch | - | App turn after SHELL-F-144 part 2 |
-| >> | 1 | ADVISOR-DASHBOARD-F-131 | Ready (OFA-B-156 on main): lift `@not-built-OFA-B-156` on its two ofa-questionnaire.feature scenarios; the second uses X99/X91 and S9970019 (seed), not HI01/HT01 and S21015 | 1 | From OFA-B-156 |
-| >> | 1 | ADVISOR-DASHBOARD-B-108 (+ B-109 stale test-clock doc lines) | Drop repeated `autoFocus: 'dialog'` at initial-ofas-view.ts:663; judge questionnaire-view.ts:1524 and detail-table-panel.ts:547 against the B-058 step "no field in the open dialog has focus" | 1 | From SHELL-F-116 |
-
-| 5 | 2 | ADVISOR-DASHBOARD-F-124 | Remove the adviser's own Move to Quarantined (T94 Done) | 3 | Merges with PS2's OFA-F-146 in one window; urgent single item |
+| >> | 1 | ADVISOR-DASHBOARD-F-131 | Lift `@not-built-OFA-B-156` on its two questionnaire tests; the built-app one checks X99/X91 on S20231 | 1 | In Integration |
+| >> | 1 | ADVISOR-DASHBOARD-B-108 | Dialogs follow the shell's focus default (repeated `autoFocus` removed) | 1 | In Integration |
+| >> | 1 | ADVISOR-DASHBOARD-B-109 | Stale test-clock doc lines corrected | 1 | In Integration |
+| 3 | 2 | ADVISOR-DASHBOARD-F-124 | Remove the adviser's own Move to Quarantined (T94 Done) | 3 | Merges with PS2's OFA-F-146 in one window; urgent single item |
 
 Done 18-11: B-107, F-125, F-126, F-127, F-128, F-129, F-130, F-123, F-082 (the shell run's 15 reds were raised and built in these).
 
