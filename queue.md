@@ -83,6 +83,7 @@ Collision rules (hub ruling 18-11):
 | >> | 2 | COMPLIANCE-DASHBOARD-F-041 | Drop repeated `autoFocus: 'dialog'` (compliance-review-section.ts:270, cull-list-section.ts:261, quarantine-section.ts:292); check load-wording-dialog.ts:132 focus spec; `.doc-link` for arrangements.scss:371-400 and Wording | 1 | From SHELL-F-116 |
 | >> | 2 | COMPLIANCE-DASHBOARD-B-080 | Q13 Done: keep each date on one line in the Quarantine details dialog (`quarantine.scss`, nowrap) | 1 | From the 18-11 design sync |
 | 5b | 3 | COMPLIANCE-DASHBOARD-F-042 | Fix its quarantine test fixture and S20187 scenario for OFA-F-146 | 1 | Merges in one window with PS2's group 3 and advisor F-124 |
+| >> | 2 | COMPLIANCE-DASHBOARD-B-081 | Arrangement history shows the cycle month, not the platform account number | 2 | Functional; found by F-044 |
 | >> | 2 | COMPLIANCE-DASHBOARD-F-044 | Five business tests follow the corrected OFA-B-153 test data | 1 | Runs in its next app turn |
 | 5c | 3 | COMPLIANCE-DASHBOARD-F-043 | Show the OFA Team's own quarantine move (OfaTeamMoved) and its note | 1 | Same merge window as PS2's group 3 |
 | 6 | 3 | COMPLIANCE-DASHBOARD-F-010 | Compliance adds notes | 3 | OFA-F-042 (PS group 2) |
@@ -94,7 +95,7 @@ Collision rules (hub ruling 18-11):
 Stack window 18-11: final run 160 passed, 1 failed (NW-53110), 77 skipped; 21 scenarios lost their waiting tags.
 Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079.
 
-## Advisor (pointer: building F-124; app turn queued)
+## Advisor (pointer: F-124 in review; next functional group being picked)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
