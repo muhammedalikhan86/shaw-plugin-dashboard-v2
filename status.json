@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-19",
+ "asOf": "2026-11-20",
  "workingDays": {
   "rule": "Mon-Fri",
   "holidays": [],
@@ -38,9 +38,9 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 478.0,
+   "pointsDone": 480.0,
    "pointsRemaining": 5.0,
-   "pointsTotal": 483.0,
+   "pointsTotal": 485.0,
    "itemsRemaining": 3,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
@@ -56,10 +56,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 509.0,
-   "pointsRemaining": 262.0,
-   "pointsTotal": 771.0,
-   "itemsRemaining": 110,
+   "pointsDone": 558.0,
+   "pointsRemaining": 221.0,
+   "pointsTotal": 779.0,
+   "itemsRemaining": 98,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -78,10 +78,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 462.0,
-   "pointsRemaining": 43.0,
-   "pointsTotal": 505.0,
-   "itemsRemaining": 11,
+   "pointsDone": 483.0,
+   "pointsRemaining": 44.0,
+   "pointsTotal": 527.0,
+   "itemsRemaining": 13,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ],
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 110.23,
+  "pointsPerWorkingDayWholePeriod": 115.77,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -232,6 +232,11 @@
     "date": "2026-11-19",
     "pointsDone": 1433.0,
     "pointsDoneThatDay": 143.0
+   },
+   {
+    "date": "2026-11-20",
+    "pointsDone": 1505.0,
+    "pointsDoneThatDay": 72.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -240,30 +245,30 @@
   "method": "optimistic = the 2026-11-11 to 2026-11-15 rate (points per calendar day, the pace with the new skills); likely = mean of the two rates; pessimistic = whole-period rate (since 2026-10-28). The forecast counts Mon-Fri working days only; weekend points count in the totals.",
   "perComponent": {
    "Shell & Landing Page": {
-    "optimistic": "2026-11-20",
-    "likely": "2026-11-20",
-    "pessimistic": "2026-11-20",
+    "optimistic": "2026-11-23",
+    "likely": "2026-11-23",
+    "pessimistic": "2026-11-23",
     "rateLast10": 35.55,
-    "rateWhole": 25.53
+    "rateWhole": 25.68
    },
    "Portfolio Services": {
     "optimistic": "2026-11-30",
     "likely": "2026-11-30",
-    "pessimistic": "2026-12-01",
+    "pessimistic": "2026-11-30",
     "rateLast10": 38.95,
-    "rateWhole": 36.61
+    "rateWhole": 40.38
    },
    "Advisor": {
-    "optimistic": "2026-11-23",
-    "likely": "2026-11-23",
-    "pessimistic": "2026-11-24",
+    "optimistic": "2026-11-24",
+    "likely": "2026-11-24",
+    "pessimistic": "2026-11-25",
     "rateLast10": 18.12,
-    "rateWhole": 33.93
+    "rateWhole": 35.55
    },
    "Compliance": {
-    "optimistic": "2026-11-20",
-    "likely": "2026-11-20",
-    "pessimistic": "2026-11-20",
+    "optimistic": "2026-11-23",
+    "likely": "2026-11-23",
+    "pessimistic": "2026-11-23",
     "rateLast10": 20.38,
     "rateWhole": 14.16
    }
@@ -271,12 +276,12 @@
   "overall": {
    "optimistic": "2026-11-30",
    "likely": "2026-11-30",
-   "pessimistic": "2026-12-01",
+   "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 110.23,
-   "pointsRemaining": 324.0,
-   "itemsRemaining": 128
+   "rateWhole": 115.77,
+   "pointsRemaining": 284.0,
+   "itemsRemaining": 118
   }
  },
  "milestones": [
@@ -307,7 +312,7 @@
   },
   {
    "name": "Shell & Landing Page build complete (likely)",
-   "date": "2026-11-20",
+   "date": "2026-11-23",
    "kind": "forecast"
   },
   {
@@ -317,12 +322,12 @@
   },
   {
    "name": "Advisor build complete (likely)",
-   "date": "2026-11-23",
+   "date": "2026-11-24",
    "kind": "forecast"
   },
   {
    "name": "Compliance build complete (likely)",
-   "date": "2026-11-20",
+   "date": "2026-11-23",
    "kind": "forecast"
   },
   {
@@ -354,7 +359,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-19T11:32:14+11:00",
+ "updatedAt": "2026-11-20T08:32:45+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -1989,6 +1994,12 @@
    "change": "PS2 group 6 merged (F-024, F-110, F-130, F-157, B-177, B-178)",
    "pointsDone": 14.0,
    "pointsRaised": 6.0
+  },
+  {
+   "at": "2026-11-20T08:32:45+11:00",
+   "change": "Monthly cycle done: fees, closure confirmation, job host and outbox; real Annature client (mock-tested); Adviser OFA renewal tracker, notes and closures",
+   "pointsDone": 72.0,
+   "pointsRaised": 32.0
   }
  ],
  "foundDuringBuild": {
