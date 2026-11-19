@@ -78,9 +78,9 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 485.0,
-   "pointsRemaining": 45.0,
-   "pointsTotal": 530.0,
+   "pointsDone": 486.0,
+   "pointsRemaining": 46.0,
+   "pointsTotal": 532.0,
    "itemsRemaining": 14,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 117.16,
+  "pointsPerWorkingDayWholePeriod": 117.24,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -235,8 +235,8 @@
    },
    {
     "date": "2026-11-20",
-    "pointsDone": 1523.0,
-    "pointsDoneThatDay": 90.0
+    "pointsDone": 1524.0,
+    "pointsDoneThatDay": 91.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -263,7 +263,7 @@
     "likely": "2026-11-24",
     "pessimistic": "2026-11-25",
     "rateLast10": 18.12,
-    "rateWhole": 35.7
+    "rateWhole": 35.78
    },
    "Compliance": {
     "optimistic": "2026-11-23",
@@ -279,8 +279,8 @@
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 117.16,
-   "pointsRemaining": 272.0,
+   "rateWhole": 117.24,
+   "pointsRemaining": 273.0,
    "itemsRemaining": 116
   }
  },
@@ -359,7 +359,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-20T10:17:48+11:00",
+ "updatedAt": "2026-11-20T10:40:20+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2022,6 +2022,12 @@
    "at": "2026-11-20T10:17:48+11:00",
    "change": "Where we stand: PS group 6, PS2 group 12 building; shell and advisor parked",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-20T10:40:20+11:00",
+   "change": "Advisor group 9 merged (F-148 part 1, B-111)",
+   "pointsDone": 1.0,
+   "pointsRaised": 2.0
   }
  ],
  "foundDuringBuild": {
