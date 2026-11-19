@@ -37,7 +37,7 @@ Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostCh
 | 4 | 4 | OFA-F-026 | Weekly reports | 3 | Must |
 | 4a | 5 | OFA-B-033, B-079, B-048 | Record History "Add a note"; exceptions report Excel export; Fee status column on the expired record | 7 | Release 1 FUNC bugs, after group 4 |
 | 4b | 5 | OFA-F-010 | Job host and mail outbox sender | 5 | Unblocked: Shaw.WebJob 2.1.0 on the feed 19-11; first in group 5 |
-| 6 | X | OFA-F-033 | The month's fees from GridPay | 5 | Blocked: no warehouse fee table, no gMSA read on GridPay (warehouse team) |
+| 6 | 5 | OFA-F-033 | The month's fees from DataWarehouse.dbo.Fee, plus a "Refresh fees" endpoint that runs dbo.SyncFee; track the SQL Agent job and grant scripts in git | 5 | Group 5, after F-010. Table and procedure written by the hub with Muhammed (DataWarehouse .sqlproj); live needs Muhammed's check-in and the DBA |
 | 6 | X | OFA-F-155 | Acceptance evidence per signatory | 2 | Held, for when COMPLIANCE-DASHBOARD-F-004 needs every signer |
 | 14 | X | OFA-F-144 | Test data: a register-only data set over a shared warehouse | 3 | After go-live (Muhammed 19-11) |
 | 17 | X | OFA-F-044 | The closure confirmation | 3 | OFA-F-010 (in progress) |
@@ -48,22 +48,18 @@ Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).
 
-## Portfolio Services 2 (pointer: group 6: OFA-F-024 first, then F-110, F-130, F-157, B-177, B-178)
+## Portfolio Services 2 (pointer: group 7: OFA-B-066, B-068)
 
 Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfolio-services-2`, branch `portfolio-services-2`, port offset 40, artboard port 8799.
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 1 | - | (setup) | In hub.json and opened 18-11 on Lachlan's account | - | Done |
-| >> | 6 | OFA-F-024 | Follow-ups for unsigned renewals and Initial OFAs | 5 | First; unblocks advisor group 7 |
-| 2 | 6 | OFA-F-110 | Advisor surface reads an Initial OFA's weekly follow-up emails | 2 | After F-024 |
-| 3 | 6 | OFA-F-130 | Advisor surface: a follow-up to the clients who have not signed a renewal | 3 | After F-024; unblocks ADVISOR-DASHBOARD-F-047 |
-| 3a | 6 | OFA-F-157 | Every email without words gets made-up placeholder wording, marked, with Luke-style merge tags (No OFA fee, Back Office deceased estate; F-024/F-130 new ones too) | 2 | Muhammed 19-11 |
-| 4 | 6 | OFA-B-177 | History shows EmailSwitchedOff under its fallback title | 1 | From F-118 |
-| 5a | 7 | OFA-B-066, B-068 | Stop follow-up emails saves its note and attachments; renewal notice fee prints one dollar sign | 3 | Release 1 FUNC bugs, after group 6 |
+| >> | 7 | OFA-B-066, B-068 | Stop follow-up emails saves its note and attachments; renewal notice fee prints one dollar sign | 3 | Release 1 FUNC bugs, after group 6 |
 | 6 | X | OFA-F-158 | Replace every placeholder email with Luke's templates (merge tags as before) | 1 | Blocked on Luke's reply |
-| 5 | 6 | OFA-B-178 | Expired-report dialog still names the State Manager when StateManagerTold is off | 1 | From F-118 |
+| 7 | X | OFA-B-179 | Expired report wrong when the State Manager email switch is off (row text + help text) | 1 | After go-live (switch is ON at go-live) |
 
+Done 19-11 (group 6, merged f5e124ca): OFA-F-024, F-110, F-130, F-157, B-177, B-178 (0108-0110). Seed lines for F-024 sent to PS.
 Done 19-11 (group 5, merged 42c43e19): OFA-B-176, F-080 (0105), F-081 (0106), F-118 (0107). Terminate/cull email labels go to the business (Hub section).
 Done 19-11 (group 4, merged 12f68d74): OFA-S-001, OFA-F-145. Owner questions from S-001 are in the Hub section.
 Done 19-11 (group 3, merged 0ab2aae7): OFA-F-146, F-147, F-148, F-149, F-150; OFA-F-016 Done. Seed 2026-11-19.5: every checkout runs make test-data before its next make up. Board Parity C163 owed to the end sweep. Release settings went to docs/deployment/release-runbook.md (4de24c89).
@@ -91,16 +87,16 @@ Done 19-11 (group 4, merged a813a521): F-010, F-029.
 Done 19-11 (group 3, merged 7c6979ec): B-069, F-042, F-039, F-043.
 Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079. Merged 4cf941b5: F-020, F-041, F-044, B-081, B-080 (browser pass owed).
 
-## Advisor (pointer: parked 90fa8481 by Muhammed; group 7 waits for his go, even once OFA-F-024 is on main)
+## Advisor (pointer: group 7 resumed 19-11 by Muhammed; park after it. Only the OFA section is built: the Advisor Dashboard and Book of Business are hidden)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 0 | 7 | (OFA-B-154 follow-up) | Twin the six "All 6 advisers" scenarios in state-manager.feature: board as drawn, built app "All 7 advisers" | 1 | After PS group 3 merges |
-| 1 | 7 | ADVISOR-DASHBOARD-F-047, F-059, F-060 | S-Account page arrangement and History tab; notes with who sees them | 7+ | Wait on OFA-F-024 (PS2 next group, first) |
-| 2 | X | F-048, F-049, F-057, F-117, F-118 | Blocked on Portfolio Services items (OFA-F-024, F-027, F-044, F-131, F-132) | - | Waiting |
-| 7 | X | ADVISOR-DASHBOARD-F-080 part 2 | The book's levels screen | - | Waits for board row B90 |
-| 8 | X | ADVISOR-DASHBOARD-F-135 | Gross Revenue tiles count personal-code accounts | 2 | Held on PM-100 / ADV-050 |
-| 9 | X | (row B91) | Label for the personal-code row in the FUA by-adviser table | - | Waits for the designer |
+| 1 | 7 | ADVISOR-DASHBOARD-F-047, F-060 (+F-050 part 4), F-140 | Renewal tracker; notes; Fee turned off at the platform | 13 | Building |
+| 1b | X | F-141, F-059, F-142, F-143, F-144 | Arrangement record, follow-up email, history events, OFA timeline (split from F-047) | 17 | Queued; blocked on PS reads / design; don't start until Muhammed says |
+| 2 | X | F-048, F-049, F-057, F-117, F-118 | OFA section: blocked on Portfolio Services items (OFA-F-024, F-027, F-044, F-131, F-132) | - | Queued; don't start until Muhammed says |
+
+Not built (Muhammed 19-11, the Advisor Dashboard and Book of Business are hidden): F-080 part 2, F-135, row B91.
 
 Done 19-11 (group 6, merged 02b5e9b8): F-103, B-051, F-091, B-104. Owed to the end sweep: business and browser runs for groups 3 to 6, F-103 "All 6 advisers", F-093 @review-B8, F-046 parity re-run.
 Done 19-11 (group 5, merged 79b0181d): F-138, F-134, F-136, F-137.
@@ -111,10 +107,11 @@ Done 18-11: F-131, B-108, B-109 (merged 01be2667), B-107, F-125, F-126, F-127, F
 
 ## Hub
 
+- OFA-F-030 with Muhammed: new AnnatureInterfaceWebAPI (WebApis, TFVC), lifted from eSignatureWebAPI plus the six OFA routes. Then PS swaps its stub for a real client.
 - Release 1 (Muhammed 19-11): Shell, Portfolio Services, Compliance. Advisor OFA features in release 2. After go-live: OFA-F-032, F-062, F-059, F-144, every LOOK and TEST bug. In release 1: OFA-F-138 DART filing (blocked on the owners). FUNC bugs in release 1: OFA-B-068, B-033, B-066, B-079, B-048; the rest after go-live.
 
-- Before go-live, Muhammed supplies two addresses: the Compliance mailbox (weekly reports) and the Back Office address (Cycle:BackOfficeEmail:Address).
-- Shaw.WebJob 2.1.0 and Shaw.Word 2.1.0 published by Muhammed 19-11. Waiting on Muhammed: the four GridPay fee-sync answers for OFA-F-033.
+- Go-live addresses supplied 19-11 (rulings log); PS sets them in appsettings.Production.json.
+- Shaw.WebJob 2.1.0 and Shaw.Word 2.1.0 published by Muhammed 19-11. OFA-F-033: dbo.Fee and dbo.SyncFee written in the DataWarehouse .sqlproj; Muhammed to check in; the DBA deploys and grants.
 - Waiting on Luke (Muhammed is sending one email for all of them): templates for the 8 emails without real wording. Placeholders meanwhile (OFA-F-157); OFA-F-158 swaps them in.
 
 Awaiting the user: ADV-056 (advisor F-076). A closed account shares its platform with another account in the same S-Account; the warehouse keeps one value for both. Built: the shared value is counted once, with a note (a closure is valued at the month-end before it, so the 'split this month' case never happens).
