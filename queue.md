@@ -57,6 +57,7 @@ Waiting on the user: push main; check in the DataWarehouse Fee.sql, SyncFee.sql 
 | | 5 | SHELL-F-166 | Table toolkit: a table's filter dialog takes its own title ("Filter the Anniversary List"), for PS's monthly cycle board | ?? | Raised 20-11 from PS group 7 parity |
 | | 5 | SHELL-F-167 | Table toolkit: an embedded, untitled status-track variant, as the monthly cycle board draws it | ?? | Raised 20-11 from PS group 7 parity |
 | | 5 | SHELL-B-135 | Frozen columns are see-through when a table scrolls sideways; make them opaque in every row state, platform-wide | ?? | User 20-11 (seen on Advisor's OFA Questionnaire) |
+| | 5 | SHELL-F-168 | Table toolkit: the status track's fold state can be set by the page (two-way), for PS's Overview fold-all | ?? | For OFA-F-163 |
 | 1 | 1 | SHELL-F-163 | Shared status track in libs/table-tools (lifted from advisor's ad-questionnaire-track) for PS's renewal tracker | 2 | Done ec81a788 (arch v148) |
 | 3 | X | (owed runs) | F-084/F-145 look runs (sweep); B-128 waits for a plugin to opt in | - | F-144 parts 1+2 and B-130 proved 18-11 |
 | 1 | X | (owed) | Next stack window: ofa-test-data-drop.ps1 -Leftovers; SHELL-B-132 runbook check | - | From the 18-11 full-run incident |
@@ -75,7 +76,7 @@ Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostCh
 | | 7 | OFA-F-138 fix (merged b7b2d75d, 20-11) | DART Add body as AccountClosureWorkflow sends it (no documentId or status; "S" with sentDate and deliveryMethod); show the relay's reason on a refusal | - | Then the user retests once |
 | >> | 7 | OFA-B-191 | The monthly cycle against its boards (Muhammed 20-11): stepper rebuilt as drawn; table toolkit filter bar, status track and Filter dialog as on the Advisor Dashboard; other gaps fixed | ?? | Own-checkout stack, minimal processes; ahead of F-028 |
 | >> | 7 | OFA-B-192 | Initial OFAs > Add an arrangement by hand: the expanding "Add a platform" section is misaligned; whole dialog against its board (Muhammed 20-11) | ?? | Same parity run as the monthly cycle |
-| | 7 | OFA-F-163 | Overview: condensing one card condenses all; the Expired fee-not-yet-confirmed / Renewal notices not fully signed card gets a condense option | ?? | User 20-11 |
+| | 7 | OFA-F-163 | Overview: condensing one card condenses all; the Expired fee-not-yet-confirmed / Renewal notices not fully signed card gets a condense option | 3 | User 20-11; the two tracks join the shared fold once SHELL-F-168 lands |
 | 7 | 7 | OFA-F-028 | Go-live prep: deploy parts with -PrepareOnly, to the IIS Deployment Standard | 5 | Release 1, last (Muhammed 20-11) |
 | 6 | X | OFA-F-155 | Acceptance evidence per signatory | 2 | Held, for when COMPLIANCE-DASHBOARD-F-004 needs every signer |
 | 14 | X | OFA-F-144 | Test data: a register-only data set over a shared warehouse | 3 | After go-live (Muhammed 19-11) |
