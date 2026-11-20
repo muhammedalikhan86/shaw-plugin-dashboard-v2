@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 01:14
+Updated: 2026-11-21 01:24
 
 ## Shell (pointer: queue empty)
 
@@ -49,17 +49,14 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b). Group 19: OFA-B-209, B-201, B-210, F-144, B-211 (c342a0a3).
 
-## Compliance (pointer: group 14)
+## Compliance (pointer: waiting on PS2 group 20 for group 15)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: 31 scenarios on (group 13); the rest wait on built screens and design rows M34-M37 | - |
 | | 15 | COMPLIANCE-DASHBOARD-B-118 | S19780's record shows no closure summary (OFA-F-044 data) | Functional | 3 | Waits on the PS2 compliance closure view | OFA-F-177 |
-| >> | 14 | COMPLIANCE-DASHBOARD-B-119 | September closed month: S19648 shows the adviser as second signatory | Functional | 1 | Built, review passed (b57fa1ee); finalizes with F-037 | - |
-| | - | COMPLIANCE-DASHBOARD-B-116 | Two Quarantine scenarios red: Hannah Ilves's quarantined entries have no State Manager in the test data | Functional | 0 | Data on main (OFA-B-211); scenarios take twins for the last-prompt date | PS2 item |
-| >> | 14 | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | Functional | 2 | Go: OFA-F-144 on main (TestDataSetPair.CreateRegisterOnly) | OFA-F-144 |
 
-Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563); group 12 end sweep clean, B-115 fixed (merged 1f6dde4c); group 13 B-114, B-117 fixed, F-008 progress (a44de06b)
+Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563); group 12 end sweep clean, B-115 fixed (merged 1f6dde4c); group 13 B-114, B-117 fixed, F-008 progress (a44de06b); group 14 B-119, F-037; B-116 green with OFA-B-211 (2fdcd937)
 
 ## Advisor (pointer: group 16)
 
