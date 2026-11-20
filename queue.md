@@ -29,6 +29,7 @@ Updated: 2026-11-20 18:40
 | >> | 6 | LANDING-PAGE-B-004 | Card title regular weight | Look and Feel | 1 | Building | - |
 | >> | 6 | LANDING-PAGE-B-005 | Card footer type | Look and Feel | 1 | Building | - |
 | | 7 | SHELL-B-155 | Theme badge default 18px weight 500 for every plugin, as the boards draw it | Look and Feel | 1 | First in group 7 | - |
+| | 7 | SHELL-F-170 | Shared "built app only" test step in business-tests/support/steps; the component copies go | Undetermined | 1 | Group 7 | - |
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page)
 
 ## Portfolio Services
