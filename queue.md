@@ -25,7 +25,7 @@ Building now:
 1. PS group 7: monthly cycle parity (24 gaps) and add-by-hand parity (9 gaps). The F-138 DART body fix is already merged (21608d24); the user retests once the stack is free. Then F-028 go-live prep.
 2. PS2 group 13: OFA-F-161, the fee expected time for compliance's banner; then group 14: OFA-B-189, B-190 (the same blank platform in the closure email and Compliance Pending Renewals).
 3. Advisor group 11 (unparked by the user 20-11): F-145, F-146, F-142, F-049 (correction part), F-059, F-057.
-4. Compliance group 6 (unparked by the user 20-11): B-083, plus all 4 parity gaps (B-084 fees-not-arrived banner, B-085, B-086, B-087), owed docs.
+4. Compliance group 6 (unparked by the user 20-11): B-083, plus all 4 parity gaps (B-084 fees-not-arrived banner, B-085, B-086, B-087) and B-088 (a reviewed fee-only record still opens), owed docs.
 5. Shell holds the 4200 stack: a full parity run per component today (user, 20-11), findings queued for the weekend; the owed stack checks fold in.
 
 Tests stay light (user, 20-11): affected tests only; no business, browser or stack runs except shell's stack checks.
@@ -126,7 +126,7 @@ Collision rules (hub ruling 18-11):
 5. App turns: one at a time, scheduled by the hub.
 6. PS2 skips the graph rebuild; PS does it. New IDs come from the hub.
 
-## Compliance (pointer: group 6: B-083, B-084, B-085, B-086, B-087, owed docs; F-037 skipped, blocked on OFA-F-144)
+## Compliance (pointer: group 6: B-083, B-084, B-085, B-086, B-087, B-088 (reviewed fee-only record opens), owed docs; F-037 skipped, blocked on OFA-F-144)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
