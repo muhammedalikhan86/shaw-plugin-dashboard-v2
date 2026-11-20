@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 23:45
+Updated: 2026-11-20 23:46
 
 ## Shell (pointer: group 10)
 
@@ -51,18 +51,16 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b).
 
-## Compliance (pointer: group 12, end sweep)
+## Compliance (pointer: group 13)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 12 | End sweep | Board check and business scenarios on the built app for every screen groups 3 to 11 touched; remaining scenarios of F-008 | Look and Feel | ?? | Go 2026-11-20; one browser run allowed, look only | - |
-| >> | 12 | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | Go 2026-11-20, with the end sweep | - |
-| | 12 | COMPLIANCE-DASHBOARD-B-114 | Load dialog: Check column 60px left of the board | Look and Feel | 1 | Moved to the shell (shell group 10); the plugin adopts it after | - |
-| >> | 12 | COMPLIANCE-DASHBOARD-B-115 | Month picker takes select--picker-inset (SHELL-B-169) | Look and Feel | 1 | Built (picker-inset and field--label-box) | SHELL-B-169 |
-| | 12 | COMPLIANCE-DASHBOARD-B-116 | Two Quarantine scenarios red: Hannah Ilves's quarantined entries have no State Manager in the test data | Functional | 0 | Moved to portfolio-services test data (PS2 group 19, with OFA-F-144) | PS2 item |
-| | 13 | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | Functional | 2 | Group 13, once OFA-F-144 is on main | OFA-F-144 |
+| >> | 13 | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | Go 2026-11-20 (scenarios still missing a step: upload, typed value, calendar day) | - |
+| | 13 | COMPLIANCE-DASHBOARD-B-114 | Load dialog: Check column 60px left of the board | Look and Feel | 1 | Adopt SHELL-B-171 once it is on main | - |
+| | - | COMPLIANCE-DASHBOARD-B-116 | Two Quarantine scenarios red: Hannah Ilves's quarantined entries have no State Manager in the test data | Functional | 0 | Waits on PS2 group 19 test data; 2 scenarios known red | PS2 item |
+| | 14 | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | Functional | 2 | Group 14, once OFA-F-144 is on main | OFA-F-144 |
 
-Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563)
+Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563); group 12 end sweep clean, B-115 fixed (merged 1f6dde4c)
 
 ## Advisor (pointer: group 15)
 
