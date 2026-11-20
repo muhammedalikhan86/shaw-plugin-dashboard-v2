@@ -4,13 +4,16 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 02:03
+Updated: 2026-11-21 02:05
 
 ## Shell (pointer: group 11)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 11 | SHELL-B-172 | Notifications bell: group heading, empty line and an entry's second line and date, as the advisor board M18 draws (Plugin Context 1.11.0, architecture v157) | Look and Feel | ?? | Go 2026-11-21 | - |
+| | 12 | SHELL-B-(new) | Table toolkit heading-hold: cache its style reads so specs stay fast (found by OFA-B-212) | Functional | ?? | Go after group 11 | - |
+| | 12 | SHELL-B-(new) | Theme: an opt-in menu class that lifts Material's 280px menu cap, so a plugin can draw a board's wider menu (for OFA-B-200) | Look and Feel | ?? | Go after group 11 | - |
+| | 12 | SHELL-B-(new) | Table toolkit: hiding "Show or hide columns" on an empty table must not show the hidden headings (for OFA-B-202) | Functional | ?? | Go after group 11 | - |
 
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170. Group 8 (2e2ab1ec): SHELL-B-157..B-162, LANDING-PAGE-B-006.; group 9 SHELL-B-164 to B-170, LANDING-PAGE-B-007, B-163 closed with no change (90b40bf7); group 10 SHELL-B-171 (ac98f9f6)
 
@@ -29,6 +32,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | >> | 10 | OFA-B-204 | Renewal tracker cells and Exceptions date wrap at 1440 (re-run first) | Look and Feel | 1 | Go 2026-11-21 | - |
 | >> | 10 | OFA-B-207 | Quarantine list tab count colour, as drawn | Look and Feel | 1 | Go 2026-11-21 | - |
 | >> | 10 | OFA-B-212 | Initial OFAs spec "keeps each tab its own size when the other tab is opened and left" times out at 5000 ms on main (seen by PS2, group 19 Integration) | Functional | 1 | Go 2026-11-21 | - |
+| | X | OFA-B-(new) | Adopt shell group 12: Actions menu 380px and Exceptions menu about 322px (rest of B-200); hide the empty tab's columns icon (rest of B-202) | Look and Feel | 1 | After shell group 12 | shell group 12 |
 | | X | OFA-B-213 | Settings dialogs: the Add attachments row (the API takes files, then the picker, as drawn) | Functional | 3 | Next group, after group 10 | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 
