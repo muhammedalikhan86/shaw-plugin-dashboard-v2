@@ -18,7 +18,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | - | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
-| | 12 | OFA-F-133 (counter) | Overview counter that opens the manual-close list (board O13; PS2 builds the list) | Functional | 1 | Group 12, after PS2 group 22 | OFA-F-133 |
+| | 12 | OFA-F-133 (counter) | Overview counter that opens the manual-close list (board O13; PS2 builds the list) | Functional | 1 | Group 12; the list is on main (4c8b3fc9) | OFA-F-133 |
 | >> | 11 | OFA-B-005, B-006, B-043, B-046, B-059, B-123, F-052, F-054, F-055 | Initial OFAs as drawn, and its planned features | Look and Feel | 15 | Go 2026-11-21 | - |
 | | 12 | OFA-B-016, B-060, B-103, B-124, B-126, F-051, F-085, F-093 | Master list, tables and Expired report | Look and Feel | 14 | After go-live; after group 11 | - |
 | | 13 | OFA-B-113, B-127, F-139, F-140, B-115 | Quarantine cells; renewal tracker features; snack and loading bar on every page | Look and Feel | 13 | After go-live; after group 12 | - |
