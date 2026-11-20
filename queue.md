@@ -73,6 +73,7 @@ Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostCh
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|---|---|---|---|---|
 | | 8 | OFA-B-193 | OFA checklist: long step notes overlap each other (user 20-11) | ?? | FUNC (notes unreadable); next group |
+| | 8 | OFA-B-194 | Renewal notice viewer dialog scrolls; the PDF should fill the dialog with no outer scroll (user 20-11) | ?? | Next group; same shape as COMPLIANCE-DASHBOARD-B-093 |
 | 15 | X | OFA-F-160 | Remove the manual fee sync: the button, the frontend call and the endpoint that runs dbo.SyncFee | 2 | After go-live (Neeraj via Muhammed 20-11) |
 | | - | OFA-F-138 | File the signed renewal document in DART: the real filer | 3 | Built, test-locked to S110438 / MISC (merged 20-11). Test filing 20-11 got a 502 (Agility refused); body fix merged 21608d24, retest pending. Live filing needs OFAREN |
 | | 7 | OFA-F-138 fix (merged b7b2d75d, 20-11) | DART Add body as AccountClosureWorkflow sends it (no documentId or status; "S" with sentDate and deliveryMethod); show the relay's reason on a refusal | - | Then the user retests once |
@@ -140,6 +141,7 @@ Collision rules (hub ruling 18-11):
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | | 8 | COMPLIANCE-DASHBOARD-B-092 | OFA checklist: long step notes overlap each other (user 20-11) | ?? | FUNC (notes unreadable); next group |
+| | 8 | COMPLIANCE-DASHBOARD-B-093 | Closed months Issued notice viewer scrolls; the PDF should fill the dialog with no outer scroll (user 20-11) | ?? | Next group; same shape as OFA-B-194 |
 | X | X | COMPLIANCE-DASHBOARD-B-083 | History and closed-month cull notes skip a note a trail step names (put-back, stop follow-ups) | 1 | After go-live (display only) |
 | 5 | X | (owed) | Browser pass and Board Parity for groups 2 and 3: touched screens; F-044, F-020, B-081 and group 3 scenarios | - | End parity sweep |
 | 6 | X | (owed) | Clear the three @not-built-COMPLIANCE-DASHBOARD-F-040 tags (arrangements.feature:260) once they pass | - | End parity sweep |
