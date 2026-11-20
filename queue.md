@@ -4,34 +4,17 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 19:38
+Updated: 2026-11-20 19:39
 
-## Shell (pointer: group 6)
+## Shell (pointer: group 7)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 6 | SHELL-B-143 | Table headers stay frozen when the page scrolls down (they scroll away today) | Functional | 3 | Review passed; frozen-heading check on PS, compliance, advisor running | - |
-| >> | 6 | SHELL-B-145 | Profile and Preferences with Keep open on: the plugins card scrolls sideways and clips Notifications by 46px | Functional | 2 | Review passed; board check running | - |
-| >> | 6 | LANDING-PAGE-B-001 | Greeting wording as the board | Functional | 1 | Review passed; board check running | - |
-| >> | 6 | SHELL-B-146 | Keep-open switch sits 6px left | Look and Feel | 1 | Review passed; board check running | - |
-| >> | 6 | SHELL-B-149 | Avatar initials size and weight | Look and Feel | 1 | Review passed; board check running | - |
-| >> | 6 | SHELL-B-148 | Act As chip: size, icon and type | Look and Feel | 1 | Review passed; board check running | - |
-| >> | 6 | SHELL-B-151 | Act As panel labels colour | Look and Feel | 1 | Review passed; board check running | - |
-| >> | 6 | LANDING-PAGE-B-002 | Landing card icon 8px off | Look and Feel | 1 | Review passed; board check running | - |
-| >> | 6 | SHELL-B-139 | Plugins-unavailable message fits the rail | Functional | 1 | Review passed; board check running | - |
-| >> | 6 | SHELL-B-140 | Failed identity read: Try again, no blank area | Functional | 2 | Review passed; board check running | - |
-| >> | 6 | SHELL-B-141 | Search empty state says "dashboards" | Functional | 1 | Review passed; board check running | - |
-| >> | 6 | SHELL-B-142 | Profile and Preferences: black labels, page position as drawn | Look and Feel | 1 | Review passed; board check running | - |
-| >> | 6 | SHELL-B-152 | Keep open switch off-state, as drawn | Look and Feel | 1 | Review passed; board check running | - |
-| >> | 6 | SHELL-B-153 | Toolbar icons white, as drawn | Look and Feel | 1 | Review passed; board check running | - |
-| >> | 6 | SHELL-B-154 | Bell badge 18px weight 500 | Look and Feel | 1 | Review passed; board check running | - |
-| >> | 6 | LANDING-PAGE-B-003 | Card source line type | Look and Feel | 1 | Review passed; board check running | - |
-| >> | 6 | LANDING-PAGE-B-004 | Card title regular weight | Look and Feel | 1 | Review passed; board check running | - |
-| >> | 6 | LANDING-PAGE-B-005 | Card footer type | Look and Feel | 1 | Review passed; board check running | - |
-| | 7 | SHELL-B-155 | Theme badge default 18px weight 500 for every plugin, as the boards draw it | Look and Feel | 1 | First in group 7 | - |
-| | 7 | SHELL-F-170 | Shared "built app only" test step in business-tests/support/steps; the component copies go | Undetermined | 1 | Group 7 | - |
-| | 7 | SHELL-B-156 | Table toolkit: on a wide card, spare width spreads onto capped columns (Note past 500px); size the fixed table to its columns | Functional | 2 | Group 7; from COMPLIANCE-DASHBOARD-B-113 | - |
-Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page)
+| >> | 7 | SHELL-B-155 | Theme badge default 18px weight 500 for every plugin, as the boards draw it | Look and Feel | 1 | Building (B-155 first) | - |
+| >> | 7 | SHELL-F-170 | Shared "built app only" test step in business-tests/support/steps; the component copies go | Undetermined | 1 | Building (B-155 first) | - |
+| >> | 7 | SHELL-B-156 | Table toolkit: on a wide card, spare width spreads onto capped columns (Note past 500px); size the fixed table to its columns | Functional | 2 | Building (B-155 first) | - |
+| | 8 | (shell raises the IDs) | Look gaps within 20px: Profile table inset, role chip, Profile rule colours and Save row, landing card body margin, Act As chip gap from the bell; plus a Try again when identity fails after sign-in (B-140 limit) | Functional + Look and Feel | ?? | Group 8, after group 7 | - |
+Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards).
 
 ## Portfolio Services (pointer: group 9)
 
@@ -114,7 +97,7 @@ Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 
 
 1. Parity run: done 20-11 and routed for every component. Shell and landing-page findings are shell group 6.
 2. Next merges: advisor group 12, compliance group 11, shell group 6, PS OFA-F-028 part 2, PS2 group 17. After each one, its own tests run (all-app Jest after shell changes).
-3. Designer prompt (not yet sent; goes out after this queue round): W38, P92, P93, plus PS O20 (OFA-B-206: the paper-signed upload item on an imported Initial OFA row's menu, and its date hint with no form date), PS O21 (remove the Sync fees button from the Exceptions report board; OFA-F-160 removes it), PS O22 (Upload a paper-signed Initial OFA dialog: render the date field's hint, as the app does), plus advisor B92 (F-146 confirmed line on CONFIRMED OFF rows) and B93 (F-142 follow-up resend dialog sentence), plus 6 parity questions: Overview "not fully signed" count slot; Adviser review answers bar placement; read-failure card on six PS screens; scope line for an adviser with several codes; Renewal tracker filter Reset and intro; Arrangements empty/loading/error card; shell: logo width (#12) and collapsed rail width (#21), where the boards disagree; shell states with no board (#20: Keep open on, Notifications with items, Search results and no matches, Search loading); landing empty and bus-unavailable states (#6); shell error and empty states (#4), search panel drawn two ways (#5), Plugin0 buttons and chips (#7); compliance review page "Read only." line and OFA Checklist note chip and Month arrow; PS Import screen in the sidebar has no board; compliance board: drop the empty grid after the filter-dialog fields so the gap above the buttons is 48px like advisor and PS.
+3. Designer prompt (not yet sent; goes out after this queue round): W38, P92, P93, plus PS O20 (OFA-B-206: the paper-signed upload item on an imported Initial OFA row's menu, and its date hint with no form date), PS O21 (remove the Sync fees button from the Exceptions report board; OFA-F-160 removes it), PS O22 (Upload a paper-signed Initial OFA dialog: render the date field's hint, as the app does), plus advisor B92 (F-146 confirmed line on CONFIRMED OFF rows) and B93 (F-142 follow-up resend dialog sentence), plus 6 parity questions: Overview "not fully signed" count slot; Adviser review answers bar placement; read-failure card on six PS screens; scope line for an adviser with several codes; Renewal tracker filter Reset and intro; Arrangements empty/loading/error card; shell: logo width (#12) and collapsed rail width (#21), where the boards disagree; shell states with no board (#20: Keep open on, Notifications with items, Search results and no matches, Search loading); landing empty and bus-unavailable states (#6); shell error and empty states (#4), search panel drawn two ways (#5), Plugin0 buttons and chips (#7); compliance review page "Read only." line and OFA Checklist note chip and Month arrow; PS Import screen in the sidebar has no board; shell (from group 6): cloud_off rail icon and person-icon avatar have no board, search empty state has no glyph on the board; compliance board: drop the empty grid after the filter-dialog fields so the gap above the buttons is 48px like advisor and PS.
 4. End sweep: the browser, business-test and board checks skipped during the build, run once at the end.
 5. Waiting on you: push main; the SyncFee grant: drop the gMSA's EXECUTE on dbo.SyncFee once OFA-F-160 ships (the repo's services/PortfolioServices.WebAPI/.../Sql/Warehouse/SyncFee-grants.sql line 3 still grants it; PS left it for you); before go-live, approved wording for the renewal notice, covering email and both service-question lists (no placeholder covers them); check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest (another day); Luke's templates and Initial OFA envelope title; PS's 8 production settings.
 

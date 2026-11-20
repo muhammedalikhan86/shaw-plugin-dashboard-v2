@@ -38,10 +38,10 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 503.0,
-   "pointsRemaining": 11.0,
-   "pointsTotal": 514.0,
-   "itemsRemaining": 10,
+   "pointsDone": 527.0,
+   "pointsRemaining": 5.0,
+   "pointsTotal": 532.0,
+   "itemsRemaining": 4,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 140.0,
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 127.7,
+  "pointsPerWorkingDayWholePeriod": 129.55,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -235,8 +235,8 @@
    },
    {
     "date": "2026-11-20",
-    "pointsDone": 1660.0,
-    "pointsDoneThatDay": 227.0
+    "pointsDone": 1684.0,
+    "pointsDoneThatDay": 251.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -249,7 +249,7 @@
     "likely": "2026-11-23",
     "pessimistic": "2026-11-23",
     "rateLast10": 35.55,
-    "rateWhole": 27.45
+    "rateWhole": 29.3
    },
    "Portfolio Services": {
     "optimistic": "2026-11-27",
@@ -279,9 +279,9 @@
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 127.7,
-   "pointsRemaining": 284.0,
-   "itemsRemaining": 135
+   "rateWhole": 129.55,
+   "pointsRemaining": 278.0,
+   "itemsRemaining": 129
   }
  },
  "milestones": [
@@ -359,7 +359,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-20T19:34:48+11:00",
+ "updatedAt": "2026-11-20T19:39:58+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2189,6 +2189,12 @@
    "change": "Portfolio Services: adviser asks the Back Office for missing details, attachments on change requests, three fixes (PS2 group 17)",
    "pointsDone": 10.0,
    "pointsRaised": 3.0
+  },
+  {
+   "at": "2026-11-20T19:39:58+11:00",
+   "change": "Shell and Landing Page: frozen table headings and 18 parity fixes (shell group 6)",
+   "pointsDone": 24.0,
+   "pointsRaised": 18.0
   }
  ],
  "foundDuringBuild": {
