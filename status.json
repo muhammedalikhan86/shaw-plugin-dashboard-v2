@@ -359,7 +359,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-20T11:10:55+11:00",
+ "updatedAt": "2026-11-20T11:25:15+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2049,6 +2049,11 @@
    "at": "2026-11-20T11:10:55+11:00",
    "change": "Shell closed (F-089)",
    "pointsDone": 1.0
+  },
+  {
+   "at": "2026-11-20T11:25:15+11:00",
+   "change": "Advisor and Compliance unparked; shell running owed stack checks; DART test filing 502, fix in PS group 7",
+   "pointsDone": 0.0
   }
  ],
  "foundDuringBuild": {
