@@ -51,7 +51,7 @@ Done 2026-11-20: OFA-F-172 (merged with OFA-F-028 parts 4 and 4b).
 |---|---|---|---|---|---|---|---|
 | >> | 16 | OFA-F-173 | Outbox: hold every email until the OFA Team approves or bins it; a switch turns the hold off | Functional | 5 | Built; in review; release 1 | - |
 | >> | 16 | OFA-F-174 | Outbox: signing envelopes wait for approval too | Functional | 5 | Built, with the seed fix; in review; release 1 | OFA-F-173 |
-| | 17 | (PS2 to raise) | Hold the signing-request email when the covering email wording has no approved version, instead of sending it blank | Functional | ? | First in group 17, before go-live | - |
+| | 17 | OFA-B-205 | Hold the signing-request email when the covering email wording has no approved version, instead of sending it blank | Functional | 3 | In group 17, after F-170 and F-171; before go-live | - |
 | | 17 | OFA-F-170 | Adviser asks Back Office for a missing email or signer | Functional | ?? | After group 16 | - |
 | | 17 | OFA-F-171 | Attachments on a correction request | Functional | ?? | After group 16 | - |
 | | 18 | OFA-F-094 | Each history event says who can see it; the adviser side reads its own | Functional | 3 | After group 17; release 2 | - |
