@@ -56,10 +56,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 717.0,
-   "pointsRemaining": 123.0,
+   "pointsDone": 720.0,
+   "pointsRemaining": 120.0,
    "pointsTotal": 840.0,
-   "itemsRemaining": 66,
+   "itemsRemaining": 65,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 142.02,
+  "pointsPerWorkingDayWholePeriod": 142.25,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -240,8 +240,8 @@
    },
    {
     "date": "2026-11-21",
-    "pointsDone": 1846.0,
-    "pointsDoneThatDay": 113.0
+    "pointsDone": 1849.0,
+    "pointsDoneThatDay": 116.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -261,7 +261,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-26",
     "rateLast10": 38.95,
-    "rateWhole": 52.6
+    "rateWhole": 52.83
    },
    "Advisor": {
     "optimistic": "2026-11-23",
@@ -284,9 +284,9 @@
    "pessimistic": "2026-11-26",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 142.02,
-   "pointsRemaining": 149.0,
-   "itemsRemaining": 74
+   "rateWhole": 142.25,
+   "pointsRemaining": 146.0,
+   "itemsRemaining": 73
   }
  },
  "milestones": [
@@ -364,7 +364,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-21T06:12:13+11:00",
+ "updatedAt": "2026-11-21T06:22:37+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2349,6 +2349,11 @@
    "at": "2026-11-21T06:12:13+11:00",
    "change": "Advisor group 18 merged: every filter works",
    "pointsDone": 5.0
+  },
+  {
+   "at": "2026-11-21T06:22:37+11:00",
+   "change": "PS2 group 23 merged: paper-copy reads",
+   "pointsDone": 3.0
   }
  ],
  "foundDuringBuild": {

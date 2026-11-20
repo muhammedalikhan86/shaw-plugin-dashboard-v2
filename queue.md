@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 06:19
+Updated: 2026-11-21 06:22
 
 ## Shell (pointer: queue empty)
 
@@ -29,14 +29,13 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 
 Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed with it). Group 9: OFA-B-206, B-208, B-195, F-163 part 2, F-160, F-169 (43bb6578). Group 10: OFA-B-196, B-197, B-198, B-199, B-203, B-207, B-212; B-200 and B-202 in part (rest OFA-B-215); B-204 in part (Exceptions date wrap to the end-sweep crawl) (55e90b05).
 
-## Portfolio Services 2 (pointer: group 23)
+## Portfolio Services 2 (pointer: group 24)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | Blocked by you (Monday) | - |
 | | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Blocked by you (Monday) | - |
-| >> | 23 | OFA-F-180 | Adviser and compliance surface reads: Renewal tracker and compliance Pending renewal signatories carry paperCopy and paperUploadedUtc; the paper-copy trail event carries the signatory's name (for ADVISOR-DASHBOARD-F-139) | Functional | 2 | Go 2026-11-21 | - |
-| | 24 | OFA-F-181 | Adviser documents read for an arrangement (OFA documents only, one not yet available included), to advisor's contract (for ADVISOR-DASHBOARD-F-141) | Functional | 3 | Next, after group 23 | - |
+| >> | 24 | OFA-F-181 | Adviser documents read for an arrangement (OFA documents only, one not yet available included), to advisor's contract (for ADVISOR-DASHBOARD-F-141) | Functional | 3 | Go 2026-11-21 | - |
 | | 25 | OFA-B-078, B-100, B-104, B-105, B-114, B-122 | Exceptions report as drawn | Look and Feel | 9 | After go-live; after group 23 | - |
 | | 26 | OFA-B-024, B-045, B-047, B-071, B-073, B-107, B-128, B-130, B-137 | Monthly cycle as drawn (not the Quarantine tab); B-137 names who issued a closed month (migration) | Look and Feel | 14 | After go-live; after group 25 | - |
 | | 27 | OFA-B-015, B-027, B-129, B-131, B-132, B-133, B-134, F-088, B-084, B-109, B-125 | Arrangement record and OFA Checklist as drawn | Look and Feel | 15 | After go-live; after group 26 | - |
@@ -44,7 +43,7 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | | X | OFA-F-032, F-047, F-062, F-120 | Engineering, after go-live | Functional | 12 | After group 28 | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
-Done 2026-11-21: group 22 (4c8b3fc9): OFA-F-133, F-083, F-065, B-140, B-049, B-050; B-044 closed (O26), B-135 already fixed.
+Done 2026-11-21: group 23 (cb215b13): OFA-F-180. Group 22 (4c8b3fc9): OFA-F-133, F-083, F-065, B-140, B-049, B-050; B-044 closed (O26), B-135 already fixed.
 Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b). Group 19: OFA-B-209, B-201, B-210, F-144, B-211 (c342a0a3). Group 20: OFA-F-177, F-178, F-179, B-214 (3a9578c7). Group 21 sweep (a524e03b): 12 closed, including OFA-B-002, B-003, B-004, B-014, B-089, B-058, B-063, B-064, B-088, B-149, F-070, F-119.
 
 ## Compliance (pointer: group 18)
@@ -53,7 +52,7 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 |---|---|---|---|---|---|---|---|
 | >> | 18 | COMPLIANCE-DASHBOARD-F-004 | All OFA Arrangements: check it against OFA-F-136 and F-044 as built, fix small gaps, close it | Functional | - | Go 2026-11-21 | - |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
-| | X | COMPLIANCE-DASHBOARD-F-005 follow-up | The paper-copy line on Signing and expiry | Functional | 1 | After PS2 group 23 (OFA-F-180 also gives compliance.usp_PendingRenewal_Read the paper copy) | OFA-F-180 |
+| >> | 18 | COMPLIANCE-DASHBOARD-F-005 follow-up | The paper-copy line on Signing and expiry (OFA-F-180 is on main) | Functional | 1 | Go 2026-11-21 | - |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
 
 Done 2026-11-21: group 16 (c5436b08): COMPLIANCE-DASHBOARD-F-005. Group 17 (defce403): B-120, M38 @skip scenario.
@@ -63,7 +62,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | X | ADVISOR-DASHBOARD-F-139 | A paper-signed copy shows PAPER COPY UPLOADED, as the board draws (groundwork in group 18) | Functional | 1 | After PS2 group 23 | PS2 group 23 |
+| >> | 19 | ADVISOR-DASHBOARD-F-139 | A paper-signed copy shows PAPER COPY UPLOADED, as the board draws (OFA-F-180 is on main) | Functional | 1 | Go 2026-11-21 | - |
 | >> | 19 | ADVISOR-DASHBOARD-F-141 | The arrangement record; its documents part runs on a mock of the read until PS2 group 24 lands | Functional | 3 | Go 2026-11-21 | PS2 group 24 (for the real read) |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
