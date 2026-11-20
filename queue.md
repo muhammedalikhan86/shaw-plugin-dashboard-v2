@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 00:42
+Updated: 2026-11-21 00:43
 
 ## Shell (pointer: queue empty)
 
@@ -41,14 +41,14 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 19 | OFA-B-209 | Issuance: friendly label and Release button for a notice held by an unknown outcome (front end of OFA-B-183) | Functional | 1 | Built; in review | - |
-| >> | 19 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | Built; in review | - |
-| >> | 19 | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | Built; in review | - |
-| >> | 19 | OFA-B-211 | Test data: Hannah Ilves's quarantined entries (S20114, S20131, X91) record Marcus Ashcombe as State Manager (from COMPLIANCE-DASHBOARD-B-116); also TD-66 (S19648) second signatory named Emeka Okafor as the board draws (from COMPLIANCE-DASHBOARD-B-119) | Functional | 1 | Built; in review | - |
-| >> | 19 | OFA-B-210 | Monthly cycle and Exceptions report Cycle pickers take select--picker-inset (SHELL-B-169) | Look and Feel | 1 | Built; in review | SHELL-B-169 |
+| >> | 19 | OFA-B-209 | Issuance: friendly label and Release button for a notice held by an unknown outcome (front end of OFA-B-183) | Functional | 1 | Integration running | - |
+| >> | 19 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | Integration running | - |
+| >> | 19 | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | Integration running | - |
+| >> | 19 | OFA-B-211 | Test data: Hannah Ilves's quarantined entries (S20114, S20131, X91) record Marcus Ashcombe as State Manager (from COMPLIANCE-DASHBOARD-B-116); also TD-66 (S19648) second signatory named Emeka Okafor as the board draws (from COMPLIANCE-DASHBOARD-B-119) | Functional | 1 | Integration running | - |
+| >> | 19 | OFA-B-210 | Monthly cycle and Exceptions report Cycle pickers take select--picker-inset (SHELL-B-169) | Look and Feel | 1 | Integration running | SHELL-B-169 |
 | | 20 | OFA-F-177 | A compliance view of client closures (S-Account, requested on, adviser, recorded by, due date from the closure clock, fee marked off), for COMPLIANCE-DASHBOARD-B-118 | Functional | 2 | Group 20, after group 19 (migration 0155) | - |
-| | 20 | (PS2 raises it) | Adviser side withdraws an open Back Office ask (proc), for ADVISOR-DASHBOARD-F-154 | Functional | 1 | Group 20, after group 19 | - |
-| | 20 | (PS2 raises it) | Adviser side reads the account's DART parties (mock where the warehouse table is missing), for ADVISOR-DASHBOARD-F-155 | Functional | 2 | Group 20, after group 19 | - |
+| | 20 | OFA-F-178 | Adviser side withdraws an open Back Office ask (proc), for ADVISOR-DASHBOARD-F-154 | Functional | 1 | Group 20, after group 19 | - |
+| | 20 | OFA-F-179 | Adviser side reads the account's DART parties (mock where the warehouse table is missing), for ADVISOR-DASHBOARD-F-155 | Functional | 2 | Group 20, after group 19 | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b).
@@ -76,8 +76,8 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 | >> | 16 | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | Functional | 2 | Go 2026-11-21, wave 2, after F-143 | OFA-F-131 |
 | >> | 16 | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | Functional | 3 | Go 2026-11-21, wave 1 | OFA-F-132 |
 | >> | 16 | ADVISOR-DASHBOARD-F-153 | Counterpart, arrangements and closures pickers take select--picker-inset (drop local B-037); Initial OFA start date and DA picker take field--label-box | Look and Feel | 2 | Go 2026-11-21, wave 2 | SHELL-B-169, SHELL-B-170 |
-| | 17 | ADVISOR-DASHBOARD-F-154 | Remove a signatory from an open Back Office ask | Functional | 2 | Group 17, after PS2 group 20 | PS2 withdraw proc |
-| | 17 | ADVISOR-DASHBOARD-F-155 | Add signatory: pick from the account's DART parties | Functional | 2 | Group 17, after PS2 group 20 | PS2 DART parties read |
+| | 17 | ADVISOR-DASHBOARD-F-154 | Remove a signatory from an open Back Office ask | Functional | 2 | Group 17, after PS2 group 20 | OFA-F-178 |
+| | 17 | ADVISOR-DASHBOARD-F-155 | Add signatory: pick from the account's DART parties | Functional | 2 | Group 17, after PS2 group 20 | OFA-F-179 |
 
 Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777). Group 13 (bafb7b09): ADVISOR-DASHBOARD-B-116, B-117, B-118, B-119, five board-target reds. Group 14 (0c46c642): ADVISOR-DASHBOARD-F-151, F-152, B-120, B-121, B-122.; group 15 F-049 part 2, B-123, B-124 (59c7190f)
 
