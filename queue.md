@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 14:30
+Updated: 2026-11-20 14:50
 
 ## Shell
 
@@ -43,6 +43,9 @@ Updated: 2026-11-20 14:30
 | | 16 | OFA-F-174 | Outbox: signing envelopes wait for approval too | 5 | Next; release 1 | OFA-F-173 |
 | | 17 | OFA-F-170 | Adviser asks Back Office for a missing email or signer | ?? | After group 16 | - |
 | | 17 | OFA-F-171 | Attachments on a correction request | ?? | After group 16 | - |
+| | 18 | OFA-F-094 | Each history event says who can see it; the adviser side reads its own | 3 | After group 17; release 2 | - |
+| | 18 | OFA-F-131 | Adviser side reads ended arrangements and the account's history | 2 | After group 17; release 2 | - |
+| | 18 | OFA-F-132 | Adviser side records a request to Back Office | 3 | After group 17; release 2 | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | 1 | Blocked by Luke's templates | - |
 | | X | OFA-B-183 | A notice stuck as "send outcome unknown": label and release | 2 | After go-live | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
@@ -72,10 +75,10 @@ Updated: 2026-11-20 14:30
 | | 11 | ADVISOR-DASHBOARD-F-049 | Back Office change request | 3 | Next | OFA-F-170, OFA-F-171 |
 | | 11 | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals | 2 | Next | - |
 | | X | ADVISOR-DASHBOARD-F-141 | The arrangement record | 3 | Blocked by a Portfolio Services adviser documents read (no item yet) | - |
-| | X | ADVISOR-DASHBOARD-F-143 | History events | 5 | Blocked by OFA-F-094 (not queued) | - |
+| | X | ADVISOR-DASHBOARD-F-143 | History events | 5 | Waiting | OFA-F-094 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
-| | X | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | 2 | Blocked by OFA-F-131 (not queued) | - |
-| | X | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | 3 | Blocked by OFA-F-132 (not queued) | - |
+| | X | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | 2 | Waiting | OFA-F-131 |
+| | X | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | 3 | Waiting | OFA-F-132 |
 | | X | (no ID yet) | Use the shared status track | 1 | After go-live | SHELL-F-163 |
 
 ## Hub
