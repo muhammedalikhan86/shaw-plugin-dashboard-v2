@@ -56,21 +56,21 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 653.0,
-   "pointsRemaining": 200.0,
-   "pointsTotal": 853.0,
-   "itemsRemaining": 97,
+   "pointsDone": 659.0,
+   "pointsRemaining": 202.0,
+   "pointsTotal": 861.0,
+   "itemsRemaining": 99,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
     "OFA-F-118"
    ],
    "foundDuringBuild": {
-    "pointsDone": 12.0,
-    "pointsRemaining": 17.0,
+    "pointsDone": 15.0,
+    "pointsRemaining": 14.0,
     "pointsTotal": 29.0,
-    "itemsDone": 5,
-    "itemsRemaining": 6
+    "itemsDone": 6,
+    "itemsRemaining": 5
    }
   },
   {
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 134.02,
+  "pointsPerWorkingDayWholePeriod": 134.48,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -240,8 +240,8 @@
    },
    {
     "date": "2026-11-21",
-    "pointsDone": 1742.0,
-    "pointsDoneThatDay": 9.0
+    "pointsDone": 1748.0,
+    "pointsDoneThatDay": 15.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -261,7 +261,7 @@
     "likely": "2026-11-27",
     "pessimistic": "2026-11-30",
     "rateLast10": 38.95,
-    "rateWhole": 47.68
+    "rateWhole": 48.14
    },
    "Advisor": {
     "optimistic": "2026-11-23",
@@ -284,9 +284,9 @@
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 134.02,
-   "pointsRemaining": 254.0,
-   "itemsRemaining": 114
+   "rateWhole": 134.48,
+   "pointsRemaining": 256.0,
+   "itemsRemaining": 116
   }
  },
  "milestones": [
@@ -364,7 +364,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-21T00:33:05+11:00",
+ "updatedAt": "2026-11-21T01:03:20+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2258,13 +2258,19 @@
    "change": "Compliance group 13 merged",
    "pointsDone": 2.0,
    "pointsRaised": 6.0
+  },
+  {
+   "at": "2026-11-21T01:03:20+11:00",
+   "change": "PS2 group 19 merged",
+   "pointsDone": 6.0,
+   "pointsRaised": 8.0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 222.0,
-  "pointsRemaining": 20.0,
+  "pointsDone": 225.0,
+  "pointsRemaining": 17.0,
   "pointsTotal": 242.0,
-  "itemsDone": 109,
-  "itemsRemaining": 8
+  "itemsDone": 110,
+  "itemsRemaining": 7
  }
 }
