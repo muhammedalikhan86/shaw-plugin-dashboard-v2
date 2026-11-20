@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 06:44
+Updated: 2026-11-21 06:45
 
 ## Shell (pointer: queue empty)
 
@@ -66,7 +66,8 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 19 | ADVISOR-DASHBOARD-F-139 | A paper-signed copy shows PAPER COPY UPLOADED, as the board draws (OFA-F-180 is on main) | Functional | 1 | Go 2026-11-21 | - |
-| >> | 19 | ADVISOR-DASHBOARD-F-141 | The arrangement record; its documents part runs on a mock of the read until PS2 group 24 lands | Functional | 3 | Go 2026-11-21 | PS2 group 24 (for the real read) |
+| >> | 19 | ADVISOR-DASHBOARD-F-141 | The arrangement record; built on a mock, stays In Progress until the swap to OFA-F-181 | Functional | 3 | Go 2026-11-21 | PS2 group 24 (for the real read) |
+| | X | ADVISOR-DASHBOARD-F-158 | History names the signatory on signed and declined steps, as the board draws | Functional | - | After OFA-F-183 (PS2 group 25) | OFA-F-183 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
 Done 2026-11-21: group 18 (5492c090): ADVISOR-DASHBOARD-F-075; F-139 groundwork.
