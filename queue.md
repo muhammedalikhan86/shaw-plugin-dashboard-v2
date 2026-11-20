@@ -24,7 +24,7 @@ Building now:
 1. PS group 7: monthly cycle and Initial OFAs add-by-hand parity, plus the F-138 DART fix (the 20-11 test filing got a 502; the Add body is being aligned with AccountClosureWorkflow). Then F-028 go-live prep.
 2. PS2 group 13: OFA-B-188, the "- -" platform and product on both Renewal Trackers.
 3. Advisor group 11 (unparked by the user 20-11): F-145, F-146, F-142, F-049 (correction part), F-059, F-057.
-4. Compliance group 6 (unparked by the user 20-11): B-083, B-085, B-086 (B-084 held for PS's expected fee time), owed docs.
+4. Compliance group 6 (unparked by the user 20-11): B-083, plus all 4 parity gaps (B-084 fees-not-arrived banner, B-085, B-086, B-087), owed docs.
 5. Shell's stack window was killed for low memory (20-11 evening); the 4200 stack is down. The stack checks and the full Jest run wait on the user.
 
 Tests stay light (user, 20-11): affected tests only; no business, browser or stack runs except shell's stack checks.
@@ -120,7 +120,7 @@ Collision rules (hub ruling 18-11):
 5. App turns: one at a time, scheduled by the hub.
 6. PS2 skips the graph rebuild; PS does it. New IDs come from the hub.
 
-## Compliance (pointer: group 6: B-083, F-040 tag clear, static board parity, owed docs; F-037 skipped, blocked on OFA-F-144)
+## Compliance (pointer: group 6: B-083, B-084, B-085, B-086, B-087, owed docs; F-037 skipped, blocked on OFA-F-144)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
