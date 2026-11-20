@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 14:54
+Updated: 2026-11-20 14:55
 
 ## Shell
 
@@ -18,14 +18,15 @@ Updated: 2026-11-20 14:54
 | >> | 5 | SHELL-F-168 | Tables: the page can fold or unfold the status track | Functional | ?? | Building | - |
 | >> | 5 | SHELL-B-137 | Tables: header text grey, the board draws black | Look and Feel | 1 | Building | - |
 | >> | 5 | SHELL-B-138 | Filter dialog: a drop-down left on "All" looks greyed out | Look and Feel | 1 | Building | - |
+| >> | 5 | (parity) | Finish the cut-short parity check: shell leftovers and landing-page | Undetermined | ?? | Running beside group 5 | - |
 | >> | 5 | SHELL-B-144 | Layout check: Expired report route, stale KNOWN entries struck | Functional | 1 | Building | - |
 
 ## Portfolio Services
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | F-028 | OFA-F-028 | Go-live prep: release packages for each part | Functional | 10 | Parts 1-4 done; part 4b building | - |
-| | F-028 | OFA-F-172 | First weekly Expired report goes only to the OFA Team mailbox | Functional | ?? | With OFA-F-028 | - |
+| >> | F-028 | OFA-F-028 | Go-live prep: release packages for each part | Functional | 10 | Parts 4 and 4b built and committed (90a34e8b); wrapping up for merge | - |
+| >> | F-028 | OFA-F-172 | First weekly Expired report goes only to the OFA Team mailbox | Functional | ?? | Built and committed with OFA-F-028 (90a34e8b) | - |
 | | - | OFA-F-138 | File the signed renewal in DART | Functional | 3 | Blocked by your DART retest | - |
 | | 9 | OFA-B-195 | Settings: the page scrolls sideways by 11px | Functional | 1 | After PS2 group 16 merges | OFA-F-173 |
 | | 9 | OFA-B-196 | Settings: the four cards in two columns, as drawn | Look and Feel | 2 | After go-live; after PS2 group 16 | OFA-F-173 |
@@ -47,8 +48,8 @@ Updated: 2026-11-20 14:54
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 16 | OFA-F-173 | Outbox: hold every email until the OFA Team approves or bins it; a switch turns the hold off | Functional | 5 | Building; release 1 | - |
-| >> | 16 | OFA-F-174 | Outbox: signing envelopes wait for approval too | Functional | 5 | Building; release 1 | OFA-F-173 |
+| >> | 16 | OFA-F-173 | Outbox: hold every email until the OFA Team approves or bins it; a switch turns the hold off | Functional | 5 | Built; in review; release 1 | - |
+| >> | 16 | OFA-F-174 | Outbox: signing envelopes wait for approval too | Functional | 5 | Built, with the seed fix; in review; release 1 | OFA-F-173 |
 | | 17 | OFA-F-170 | Adviser asks Back Office for a missing email or signer | Functional | ?? | After group 16 | - |
 | | 17 | OFA-F-171 | Attachments on a correction request | Functional | ?? | After group 16 | - |
 | | 18 | OFA-F-094 | Each history event says who can see it; the adviser side reads its own | Functional | 3 | After group 17; release 2 | - |
@@ -64,25 +65,26 @@ Updated: 2026-11-20 14:54
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 10 | COMPLIANCE-DASHBOARD-B-100 | OFA Checklist: loading state shows no card or Month field | Look and Feel | 1 | Next | - |
-| >> | 10 | COMPLIANCE-DASHBOARD-B-101 | Load a new approved version: Check column and calendar button off by a few px | Look and Feel | 1 | Next | - |
-| >> | 10 | COMPLIANCE-DASHBOARD-B-102 | List screens: the could-not-be-read card stretches to the window foot | Look and Feel | 1 | Next | - |
-| >> | 10 | COMPLIANCE-DASHBOARD-B-103 | OFA Checklist rows: note-count chip and Month arrow differ from the board | Undetermined | 1 | Next; may become a design question | - |
-| >> | 10 | COMPLIANCE-DASHBOARD-B-104 | Closed months: tab strip, card position, tab label weight and colour, Removed chip, loading dim, picker label | Look and Feel | 2 | Next | - |
-| >> | 10 | COMPLIANCE-DASHBOARD-B-105 | Quarantine: the "Fees as at · Signing as at" header block | Look and Feel | 1 | Next | - |
-| >> | 10 | COMPLIANCE-DASHBOARD-B-106 | Closed months Quarantine: a long move reason widens the deadline cell | Look and Feel | 1 | Next | - |
-| >> | 10 | COMPLIANCE-DASHBOARD-B-107 | Wording: "brought in at go-live" under v1's Loaded cell | Look and Feel | 1 | Next | - |
-| >> | 10 | COMPLIANCE-DASHBOARD-B-108 | Platform shown by full name ("Shaw Managed Accounts", not "SMA") | Look and Feel | 1 | Next | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-100 | OFA Checklist: loading state shows no card or Month field | Look and Feel | 1 | Built; in group 10 review | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-101 | Load a new approved version: Check column and calendar button off by a few px | Look and Feel | 1 | Built; in group 10 review | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-102 | List screens: the could-not-be-read card stretches to the window foot | Look and Feel | 1 | Building | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-104 | Closed months: tab strip, card position, tab label weight and colour, Removed chip, loading dim, picker label | Look and Feel | 2 | Building | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-105 | Quarantine: the "Fees as at · Signing as at" header block | Look and Feel | 1 | Building | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-106 | Closed months Quarantine: a long move reason widens the deadline cell | Look and Feel | 1 | Building | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-107 | Wording: "brought in at go-live" under v1's Loaded cell | Look and Feel | 1 | Built; in group 10 review | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-108 | Platform shown by full name ("Shaw Managed Accounts", not "SMA") | Look and Feel | 1 | Building | - |
 | | X | COMPLIANCE-DASHBOARD-B-111 | Load a new approved version: Check column sits about 60px left of the board | Look and Feel | 1 | Next stack window (needs a live measurement) | - |
 | | X | COMPLIANCE-DASHBOARD-B-095 | Quarantine: Extension and Last prompt start at 250px | Look and Feel | 1 | Waiting | SHELL-F-169 |
 | | X | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | Functional | 2 | After go-live | OFA-F-144 |
+
+Done 2026-11-20: COMPLIANCE-DASHBOARD-B-103 closed, no change needed (the build matches the board).
 
 ## Advisor (release 2)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 12 | ADVISOR-DASHBOARD-F-146 | Closures: send and record the closure confirmation (part 2) | Functional | ?? | Next; merge main first | - |
-| >> | 12 | ADVISOR-DASHBOARD-F-142 | Send follow-up email to clients (part 2) | Functional | ?? | Next; merge main first | - |
+| >> | 12 | ADVISOR-DASHBOARD-F-146 | Closures: send and record the closure confirmation (part 2) | Functional | ?? | Building (main merged) | - |
+| >> | 12 | ADVISOR-DASHBOARD-F-142 | Send follow-up email to clients (part 2) | Functional | ?? | Building (main merged) | - |
 | | 13 | ADVISOR-DASHBOARD-B-116 | Closures: add the Filter and Export buttons | Functional | 2 | After group 12 | - |
 | | 13 | ADVISOR-DASHBOARD-B-117 | Closures default columns and the two column choosers, as drawn | Functional | 2 | After group 12 | - |
 | | 13 | ADVISOR-DASHBOARD-B-118 | "Fees as at · Signing as at" line on Renewal tracker and Closures | Functional | 1 | After group 12 | - |
