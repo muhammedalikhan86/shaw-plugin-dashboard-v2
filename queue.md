@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 20:35
+Updated: 2026-11-20 20:36
 
 ## Shell (pointer: group 9)
 
@@ -39,7 +39,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | | 10 | OFA-B-199 | Overview: "Entity type" heading on one line | Look and Feel | 1 | After group 9 | - |
 | | 10 | OFA-B-200 | Row and Actions menus at board widths; Exceptions menu in board order | Look and Feel | 2 | After group 9 | - |
 | | 10 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | After group 9 | - |
-| | 10 | (PS2 writes it up) | Issuance: friendly label and Release button for a notice held by an unknown outcome (front end of OFA-B-183) | Functional | 1 | Group 10, after PS2's OFA-B-183 back end is on main | OFA-B-183 |
+| | 10 | OFA-B-209 | Issuance: friendly label and Release button for a notice held by an unknown outcome (front end of OFA-B-183) | Functional | 1 | Group 10, after PS2 group 18 is on main | OFA-B-183 |
 | | 18 | OFA-F-176 | Adviser Renewal tracker read returns the account name (advisor.usp_RenewalTracker_Read has no AccountName; advisor mocks it today) | Functional | 1 | Group 18, right after OFA-F-131; from advisor | - |
 | | 10 | OFA-B-202 | Empty Initial OFAs and Exceptions: only Add and expand in the toolbar | Look and Feel | 1 | After group 9 | - |
 | | 10 | OFA-B-203 | Initial OFAs Accept dialog: board width, no hint under the date | Look and Feel | 1 | After group 9 | - |
@@ -54,11 +54,11 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | 18 | OFA-F-094 | Each history event says who can see it; the adviser side reads its own | Functional | 3 | Group 18, in order F-131, F-094, F-132, B-183 | - |
-| >> | 18 | OFA-F-131 | Adviser side reads ended arrangements and the account's history | Functional | 2 | Building (first) | - |
-| | 18 | OFA-F-132 | Adviser side records a request to Back Office | Functional | 3 | Group 18, in order F-131, F-094, F-132, B-183 | - |
+| >> | 18 | OFA-F-094 | Each history event says who can see it; the adviser side reads its own | Functional | 3 | Built (migrations 0150-0154), in review | - |
+| >> | 18 | OFA-F-131 | Adviser side reads ended arrangements and the account's history | Functional | 2 | Built (migrations 0150-0154), in review | - |
+| >> | 18 | OFA-F-132 | Adviser side records a request to Back Office | Functional | 3 | Built (migrations 0150-0154), in review | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
-| | 18 | OFA-B-183 | A notice stuck as "send outcome unknown": label and release | Functional | 2 | Group 18, in order F-131, F-094, F-132, B-183 | - |
+| >> | 18 | OFA-B-183 | A notice stuck as "send outcome unknown": label and release | Functional | 2 | Built (migrations 0150-0154), in review | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9).
 
@@ -81,12 +81,12 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 | >> | 15 | ADVISOR-DASHBOARD-F-049 | Back Office change request (part 2) | Functional | ?? | Building | OFA-F-170, OFA-F-171 |
 | >> | 15 | ADVISOR-DASHBOARD-B-123 | Renewal tracker: account name as the S-Account column's second line, as drawn | Functional | 1 | Building last; waits for OFA-F-176 on main | OFA-F-176 |
 | >> | 15 | ADVISOR-DASHBOARD-B-124 | Empty Renewal tracker and Initial OFAs cards: task_alt icon as drawn (folder_open today) | Look and Feel | 1 | Building | - |
-| | X | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals (part 2) | Functional | ?? | Waiting | OFA-F-094 |
+| | 16 | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals (part 2) | Functional | ?? | Group 16, after PS2 group 18 is on main (advisor proposes the order) | OFA-F-094 |
 | | X | ADVISOR-DASHBOARD-F-141 | The arrangement record | Functional | 3 | Blocked by a Portfolio Services adviser documents read (no item yet) | - |
-| | X | ADVISOR-DASHBOARD-F-143 | History events | Functional | 5 | Waiting | OFA-F-094 |
+| | 16 | ADVISOR-DASHBOARD-F-143 | History events | Functional | 5 | Group 16, after PS2 group 18 is on main (advisor proposes the order) | OFA-F-094 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
-| | X | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | Functional | 2 | Waiting | OFA-F-131 |
-| | X | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | Functional | 3 | Waiting | OFA-F-132 |
+| | 16 | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | Functional | 2 | Group 16, after PS2 group 18 is on main (advisor proposes the order) | OFA-F-131 |
+| | 16 | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | Functional | 3 | Group 16, after PS2 group 18 is on main (advisor proposes the order) | OFA-F-132 |
 
 Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777). Group 13 (bafb7b09): ADVISOR-DASHBOARD-B-116, B-117, B-118, B-119, five board-target reds. Group 14 (0c46c642): ADVISOR-DASHBOARD-F-151, F-152, B-120, B-121, B-122.
 
