@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 19:26
+Updated: 2026-11-20 19:31
 
 ## Shell (pointer: group 6)
 
@@ -63,11 +63,11 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 17 | OFA-F-170 | Adviser asks Back Office for a missing email or signer | Functional | ?? | Integration passed; final review and docs | - |
-| >> | 17 | OFA-F-171 | Attachments on a correction request | Functional | ?? | Integration passed; final review and docs | - |
-| >> | 17 | OFA-B-205 | Hold the signing-request email when the covering email wording has no approved version, instead of sending it blank | Functional | 3 | Integration passed; final review and docs | - |
-| >> | 17 | OFA-B-179 | Expired report wrong when the State Manager email is off | Functional | 1 | Integration passed; final review and docs | - |
-| >> | 17 | OFA-B-182 | Fee status column missing from show/hide, sort, export | Functional | 1 | Integration passed; final review and docs (widened to the server-side export) | - |
+| >> | 17 | OFA-F-170 | Adviser asks Back Office for a missing email or signer | Functional | ?? | Ready (abee8393); merge waits for shell to commit group 6 (shared doc pointers) | - |
+| >> | 17 | OFA-F-171 | Attachments on a correction request | Functional | ?? | Ready (abee8393); merge waits for shell to commit group 6 (shared doc pointers) | - |
+| >> | 17 | OFA-B-205 | Hold the signing-request email when the covering email wording has no approved version, instead of sending it blank | Functional | 3 | Ready (abee8393); merge waits for shell to commit group 6 (shared doc pointers) | - |
+| >> | 17 | OFA-B-179 | Expired report wrong when the State Manager email is off | Functional | 1 | Ready (abee8393); merge waits for shell to commit group 6 (shared doc pointers) | - |
+| >> | 17 | OFA-B-182 | Fee status column missing from show/hide, sort, export | Functional | 1 | Ready (abee8393); merge waits for shell to commit group 6 (shared doc pointers) | - |
 | | 18 | OFA-F-094 | Each history event says who can see it; the adviser side reads its own | Functional | 3 | After group 17 | - |
 | | 18 | OFA-F-131 | Adviser side reads ended arrangements and the account's history | Functional | 2 | After group 17 | - |
 | | 18 | OFA-F-132 | Adviser side records a request to Back Office | Functional | 3 | After group 17 | - |
@@ -99,7 +99,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 | | 14 | ADVISOR-DASHBOARD-B-120 | Test scenarios for the board's empty, reading, failed and few-row states | Functional | 2 | After group 13 | - |
 | | 14 | ADVISOR-DASHBOARD-B-121 | Termination wording dialog: the sentence before the wording | Look and Feel | 1 | After group 13 | - |
 | | 14 | ADVISOR-DASHBOARD-B-122 | Required asterisks on Start-an-OFA and No OFA obligations | Look and Feel | 1 | After group 13 | - |
-| | X | ADVISOR-DASHBOARD-F-049 | Back Office change request (part 2) | Functional | ?? | Waiting | OFA-F-170, OFA-F-171 |
+| | 15 | ADVISOR-DASHBOARD-F-049 | Back Office change request (part 2) | Functional | ?? | Group 15, after group 14: adopt OFA-F-170 and OFA-F-171 once PS2 group 17 is on main | OFA-F-170, OFA-F-171 |
 | | X | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals (part 2) | Functional | ?? | Waiting | OFA-F-094 |
 | | X | ADVISOR-DASHBOARD-F-141 | The arrangement record | Functional | 3 | Blocked by a Portfolio Services adviser documents read (no item yet) | - |
 | | X | ADVISOR-DASHBOARD-F-143 | History events | Functional | 5 | Waiting | OFA-F-094 |
