@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 01:29
+Updated: 2026-11-21 01:40
 
 ## Shell (pointer: queue empty)
 
@@ -37,8 +37,9 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 20 | OFA-F-177 | A compliance view of client closures (S-Account, requested on, adviser, recorded by, due date from the closure clock, fee marked off), for COMPLIANCE-DASHBOARD-B-118 | Functional | 2 | Go 2026-11-21 | - |
-| >> | 20 | OFA-F-178 | Adviser side withdraws an open Back Office ask (proc), for ADVISOR-DASHBOARD-F-154 | Functional | 1 | Go 2026-11-21 | - |
+| >> | 20 | OFA-F-178 | Adviser side withdraws an open Back Office ask (proc; the reminder email skips withdrawn asks), for ADVISOR-DASHBOARD-F-154 | Functional | 1 | Go 2026-11-21 | - |
 | >> | 20 | OFA-F-179 | Adviser side reads the account's DART parties (mock where the warehouse table is missing), for ADVISOR-DASHBOARD-F-155 | Functional | 2 | Go 2026-11-21 | - |
+| >> | 20 | OFA-B-214 | Migration 0152's refusal text says "Adviser" (new migration) | Functional | 1 | Go 2026-11-21 | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b). Group 19: OFA-B-209, B-201, B-210, F-144, B-211 (c342a0a3).
