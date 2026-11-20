@@ -67,17 +67,16 @@ Updated: 2026-11-20 14:58
 |---|---|---|---|---|---|---|---|
 | >> | 10 | COMPLIANCE-DASHBOARD-B-100 | OFA Checklist: loading state shows no card or Month field | Look and Feel | 1 | Built; in group 10 review | - |
 | >> | 10 | COMPLIANCE-DASHBOARD-B-101 | Load a new approved version: Check column and calendar button off by a few px | Look and Feel | 1 | Built; in group 10 review | - |
-| >> | 10 | COMPLIANCE-DASHBOARD-B-102 | List screens: the could-not-be-read card stretches to the window foot | Look and Feel | 1 | Building | - |
-| >> | 10 | COMPLIANCE-DASHBOARD-B-104 | Closed months: tab strip, card position, tab label weight and colour, Removed chip, loading dim, picker label | Look and Feel | 2 | Building | - |
-| >> | 10 | COMPLIANCE-DASHBOARD-B-105 | Quarantine: the "Fees as at · Signing as at" header block | Look and Feel | 1 | Building | - |
-| >> | 10 | COMPLIANCE-DASHBOARD-B-106 | Closed months Quarantine: a long move reason widens the deadline cell | Look and Feel | 1 | Building | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-104 | Closed months: tab strip, card position, tab label weight and colour, Removed chip, loading dim, picker label | Look and Feel | 2 | Built; in group 10 review | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-106 | Closed months Quarantine: a long move reason widens the deadline cell | Look and Feel | 1 | Built; in group 10 review | - |
 | >> | 10 | COMPLIANCE-DASHBOARD-B-107 | Wording: "brought in at go-live" under v1's Loaded cell | Look and Feel | 1 | Built; in group 10 review | - |
-| >> | 10 | COMPLIANCE-DASHBOARD-B-108 | Platform shown by full name ("Shaw Managed Accounts", not "SMA") | Look and Feel | 1 | Building | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-108 | Platform shown by full name ("Shaw Managed Accounts", not "SMA") | Look and Feel | 1 | Built; in group 10 review | - |
+| | X | COMPLIANCE-DASHBOARD-B-112 | Platform full names in the 8 other places the board draws them | Look and Feel | 1 | After go-live | - |
 | | X | COMPLIANCE-DASHBOARD-B-111 | Load a new approved version: Check column sits about 60px left of the board | Look and Feel | 1 | Next stack window (needs a live measurement) | - |
 | | X | COMPLIANCE-DASHBOARD-B-095 | Quarantine: Extension and Last prompt start at 250px | Look and Feel | 1 | Waiting | SHELL-F-169 |
 | | X | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | Functional | 2 | After go-live | OFA-F-144 |
 
-Done 2026-11-20: COMPLIANCE-DASHBOARD-B-103 closed, no change needed (the build matches the board).
+Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).
 
 ## Advisor (release 2)
 

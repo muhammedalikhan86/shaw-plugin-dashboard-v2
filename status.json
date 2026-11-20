@@ -99,9 +99,9 @@
     "compliance-dashboard"
    ],
    "pointsDone": 207.0,
-   "pointsRemaining": 19.0,
-   "pointsTotal": 226.0,
-   "itemsRemaining": 9,
+   "pointsRemaining": 20.0,
+   "pointsTotal": 227.0,
+   "itemsRemaining": 10,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 33.0,
@@ -280,8 +280,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 122.86,
-   "pointsRemaining": 316.0,
-   "itemsRemaining": 144
+   "pointsRemaining": 317.0,
+   "itemsRemaining": 145
   }
  },
  "milestones": [
@@ -359,7 +359,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-20T14:54:09+11:00",
+ "updatedAt": "2026-11-20T14:58:27+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2149,6 +2149,11 @@
    "at": "2026-11-20T14:54:09+11:00",
    "change": "Parity routed: PS OFA-B-195..B-204 (17), Advisor B-116..B-122 (10)",
    "pointsRaised": 27.0
+  },
+  {
+   "at": "2026-11-20T14:58:27+11:00",
+   "change": "Compliance: B-112 raised (1)",
+   "pointsRaised": 1.0
   }
  ],
  "foundDuringBuild": {
