@@ -2,77 +2,81 @@
 
 What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet.
+**Depends on** = items in a worker's queue that must land first. **Blocked by** = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 14:05
+Updated: 2026-11-20 14:25
 
 ## Shell
 
-| # | Grp | ID | Item | Size | Status | Depends on |
-|---|---|---|---|---|---|---|
-| >> | - | (parity run) | Compare every component's screens with the design boards | - | PS second pass, then shell and landing | - |
-| | 5 | SHELL-F-169 | Tables: a starting width per column; Reset goes back to it | 2 | Next | Parity run |
-| | 5 | SHELL-B-136 | Deploy script leaves out each API's .dll.config | ?? | Next | Parity run |
-| | 5 | SHELL-F-166 | Tables: a filter dialog can carry its own title | ?? | Next | Parity run |
-| | 5 | SHELL-F-167 | Tables: a status track with no title, inside a page | ?? | Next | Parity run |
-| | 5 | SHELL-B-135 | Tables: frozen columns see-through when scrolling sideways | ?? | Next | Parity run |
-| | 5 | SHELL-F-168 | Tables: the page can fold or unfold the status track | ?? | Next | Parity run |
+| # | Grp | ID | Item | Size | Status | Depends on | Blocked by |
+|---|---|---|---|---|---|---|---|
+| >> | - | (parity run) | Compare every component's screens with the design boards | - | PS done; shell and landing now | - | - |
+| | 5 | SHELL-F-169 | Tables: a starting width per column; Reset goes back to it | 2 | After the parity run | - | - |
+| | 5 | SHELL-B-136 | Deploy script leaves out each API's .dll.config | ?? | After the parity run | - | - |
+| | 5 | SHELL-F-166 | Tables: a filter dialog can carry its own title | ?? | After the parity run | - | - |
+| | 5 | SHELL-F-167 | Tables: a status track with no title, inside a page | ?? | After the parity run | - | - |
+| | 5 | SHELL-B-135 | Tables: frozen columns see-through when scrolling sideways | ?? | After the parity run | - | - |
+| | 5 | SHELL-F-168 | Tables: the page can fold or unfold the status track | ?? | After the parity run | - | - |
 
 ## Portfolio Services
 
-| # | Grp | ID | Item | Size | Status | Depends on |
-|---|---|---|---|---|---|---|
-| >> | F-028 | OFA-F-028 | Go-live prep: release packages for each part | 10 | Parts 1-4 done; part 4b building | - |
-| | F-028 | OFA-F-172 | First weekly Expired report goes only to the OFA Team mailbox | ?? | With OFA-F-028 | - |
-| | - | OFA-F-138 | File the signed renewal in DART | 3 | Built; fix merged | Your DART retest |
-| | X | OFA-F-169 | Cull notes: attach a file | 2 | Next | - |
-| | X | OFA-F-163 | Overview: the two tracks fold with the rest | ?? | Waiting | SHELL-F-168 |
-| | X | OFA-F-160 | Remove the manual fee sync | 2 | After go-live | - |
-| | X | OFA-F-155 | Proof of acceptance for each signer | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
-| | X | OFA-F-144 | Test data that stands apart from the warehouse | 3 | After go-live | - |
+| # | Grp | ID | Item | Size | Status | Depends on | Blocked by |
+|---|---|---|---|---|---|---|---|
+| >> | F-028 | OFA-F-028 | Go-live prep: release packages for each part | 10 | Parts 1-4 done; part 4b building | - | - |
+| | F-028 | OFA-F-172 | First weekly Expired report goes only to the OFA Team mailbox | ?? | With OFA-F-028 | - | - |
+| | - | OFA-F-138 | File the signed renewal in DART | 3 | Built; fix merged | - | Your DART retest |
+| | X | OFA-F-169 | Cull notes: attach a file | 2 | Next | - | - |
+| | X | OFA-F-163 | Overview: the two tracks fold with the rest | ?? | Waiting | SHELL-F-168 | - |
+| | X | OFA-F-160 | Remove the manual fee sync | 2 | After go-live | - | - |
+| | X | OFA-F-155 | Proof of acceptance for each signer | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 | - |
+| | X | OFA-F-144 | Test data that stands apart from the warehouse | 3 | After go-live | - | - |
 
 ## Portfolio Services 2
 
-| # | Grp | ID | Item | Size | Status | Depends on |
-|---|---|---|---|---|---|---|
-| >> | 15 | OFA-F-165 | Closure confirmation: client's email and who confirmed when | ?? | Building | - |
-| >> | 15 | OFA-F-166 | Renewal tracker shows each renewal's follow-up stage | ?? | Building | - |
-| >> | 15 | OFA-F-167 | Adviser resends a follow-up to another email | ?? | Built, in group 15 | - |
-| >> | 15 | OFA-F-168 | Adviser edits a follow-up's wording; preview it | ?? | Built, in group 15 | - |
-| | 16 | OFA-F-173 | Outbox: hold every email until the OFA Team approves or bins it; a switch turns the hold off | 5 | Next; release 1 | - |
-| | 16 | OFA-F-174 | Outbox: signing envelopes wait for approval too | 5 | Next; release 1 | OFA-F-173 |
-| | 17 | OFA-F-170 | Adviser asks Back Office for a missing email or signer | ?? | After group 16 | - |
-| | 17 | OFA-F-171 | Attachments on a correction request | ?? | After group 16 | - |
-| | X | OFA-F-158 | Swap placeholder emails for Luke's wording | 1 | Blocked | Luke's templates |
-| | X | OFA-B-183 | A notice stuck as "send outcome unknown": label and release | 2 | After go-live | - |
-| | X | OFA-B-184 | A timeout can send a signing request twice | 2 | After go-live | Lookup in AnnatureInterfaceWebAPI |
-| | X | OFA-B-182 | Fee status column missing from show/hide, sort, export | 1 | After go-live | - |
-| | X | OFA-B-179 | Expired report wrong when the State Manager email is off | 1 | After go-live | - |
+| # | Grp | ID | Item | Size | Status | Depends on | Blocked by |
+|---|---|---|---|---|---|---|---|
+| >> | 15 | OFA-F-165 | Closure confirmation: client's email and who confirmed when | ?? | Building | - | - |
+| >> | 15 | OFA-F-166 | Renewal tracker shows each renewal's follow-up stage | ?? | Building | - | - |
+| >> | 15 | OFA-F-167 | Adviser resends a follow-up to another email | ?? | Built, in group 15 | - | - |
+| >> | 15 | OFA-F-168 | Adviser edits a follow-up's wording; preview it | ?? | Built, in group 15 | - | - |
+| | 16 | OFA-F-173 | Outbox: hold every email until the OFA Team approves or bins it; a switch turns the hold off | 5 | Next; release 1 | - | - |
+| | 16 | OFA-F-174 | Outbox: signing envelopes wait for approval too | 5 | Next; release 1 | OFA-F-173 | - |
+| | 17 | OFA-F-170 | Adviser asks Back Office for a missing email or signer | ?? | After group 16 | - | - |
+| | 17 | OFA-F-171 | Attachments on a correction request | ?? | After group 16 | - | - |
+| | X | OFA-F-158 | Swap placeholder emails for Luke's wording | 1 | Waiting | - | Luke's templates |
+| | X | OFA-B-183 | A notice stuck as "send outcome unknown": label and release | 2 | After go-live | - | - |
+| | X | OFA-B-184 | A timeout can send a signing request twice | 2 | After go-live | - | A lookup in AnnatureInterfaceWebAPI (no item yet) |
+| | X | OFA-B-182 | Fee status column missing from show/hide, sort, export | 1 | After go-live | - | - |
+| | X | OFA-B-179 | Expired report wrong when the State Manager email is off | 1 | After go-live | - | - |
 
 ## Compliance
 
-| # | Grp | ID | Item | Size | Status | Depends on |
-|---|---|---|---|---|---|---|
-| >> | 9 | COMPLIANCE-DASHBOARD-B-096 | Wording versions table squashes at 1440x900 | ?? | Building | - |
-| >> | 9 | COMPLIANCE-DASHBOARD-B-097 | Fees-not-arrived error text | ?? | Building | - |
-| >> | 9 | COMPLIANCE-DASHBOARD-B-099 | A signer with no name shows twice | ?? | Building | - |
-| | X | COMPLIANCE-DASHBOARD-B-095 | Quarantine: Extension and Last prompt start at 250px | 1 | Waiting | SHELL-F-169 |
-| | X | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | 2 | After go-live | OFA-F-144 |
+| # | Grp | ID | Item | Size | Status | Depends on | Blocked by |
+|---|---|---|---|---|---|---|---|
+| >> | 9 | COMPLIANCE-DASHBOARD-B-096 | Wording versions table squashes at 1440x900 | ?? | Building | - | - |
+| >> | 9 | COMPLIANCE-DASHBOARD-B-097 | Fees-not-arrived error text | ?? | Building | - | - |
+| >> | 9 | COMPLIANCE-DASHBOARD-B-099 | A signer with no name shows twice | ?? | Building | - | - |
+| | X | COMPLIANCE-DASHBOARD-B-095 | Quarantine: Extension and Last prompt start at 250px | 1 | Waiting | SHELL-F-169 | - |
+| | X | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | 2 | After go-live | OFA-F-144 | - |
 
 ## Advisor (release 2)
 
-| # | Grp | ID | Item | Size | Status | Depends on |
-|---|---|---|---|---|---|---|
-| >> | 11 | ADVISOR-DASHBOARD-F-057 | Search finds S-Accounts and arrangements | ?? | Built; in review | - |
-| | 11 | ADVISOR-DASHBOARD-F-149 | Landing Page: Gross Revenue and Funds Under Advice cards removed | 1 | Code merged; tidy-up in group 11 | - |
-| | 11 | ADVISOR-DASHBOARD-F-150 | OFA Questionnaire: five columns hidden by default | ?? | Next | - |
-| | 11 | ADVISOR-DASHBOARD-F-145 | Hide "Fee turned off" once it is recorded | 1 | Next | - |
-| | 11 | ADVISOR-DASHBOARD-F-146 | Closures: send and record the closure confirmation | 3 | Next | OFA-F-165 |
-| | 11 | ADVISOR-DASHBOARD-F-142 | Follow-up emails to the client | ?? | Next | OFA-F-166, F-167, F-168 |
-| | 11 | ADVISOR-DASHBOARD-F-049 | Correction request to Back Office | ?? | Next | OFA-F-170, F-171 |
-| | 11 | ADVISOR-DASHBOARD-F-059 | Follow-up email | ?? | Next | - |
-| | X | ADVISOR-DASHBOARD-F-141, F-143, F-144 | Arrangement record, history events, OFA timeline | ?? | Blocked | Portfolio Services reads, design |
-| | X | ADVISOR-DASHBOARD-F-117, F-118 | OFA section items | ?? | Blocked | Portfolio Services items |
-| | X | (SHELL-F-163 follow-up) | Use the shared status track | 1 | After go-live | - |
+| # | Grp | ID | Item | Size | Status | Depends on | Blocked by |
+|---|---|---|---|---|---|---|---|
+| >> | 11 | ADVISOR-DASHBOARD-F-057 | Search finds S-Accounts and arrangements | ?? | Built; in review | - | - |
+| | 11 | ADVISOR-DASHBOARD-F-149 | Landing Page: Gross Revenue and Funds Under Advice cards removed | 1 | Code merged; tidy-up in group 11 | - | - |
+| | 11 | ADVISOR-DASHBOARD-F-150 | OFA Questionnaire: five columns hidden by default | ?? | Next | - | - |
+| | 11 | ADVISOR-DASHBOARD-F-145 | Hide "Fee turned off" once it is recorded | 1 | Next | - | - |
+| | 11 | ADVISOR-DASHBOARD-F-146 | Closures: send and record the closure confirmation | 3 | Next | OFA-F-165 | - |
+| | 11 | ADVISOR-DASHBOARD-F-142 | Send follow-up email to clients | 4 | Next | OFA-F-166, OFA-F-167, OFA-F-168 | - |
+| | 11 | ADVISOR-DASHBOARD-F-049 | Back Office change request | 3 | Next | OFA-F-170, OFA-F-171 | - |
+| | 11 | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals | 2 | Next | - | - |
+| | X | ADVISOR-DASHBOARD-F-141 | The arrangement record | 3 | Waiting | - | A Portfolio Services adviser documents read (no item yet) |
+| | X | ADVISOR-DASHBOARD-F-143 | History events | 5 | Waiting | - | OFA-F-094 (not queued) |
+| | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | 6 | Waiting | - | Design not drawn (Luke to show how Complii draws it) |
+| | X | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | 2 | Waiting | - | OFA-F-131 (not queued) |
+| | X | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | 3 | Waiting | - | OFA-F-132 (not queued) |
+| | X | (no ID yet) | Use the shared status track | 1 | After go-live | SHELL-F-163 | - |
 
 ## Hub
 
