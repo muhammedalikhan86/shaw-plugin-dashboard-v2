@@ -16,7 +16,7 @@ Updated: 2026-11-20 20:12
 | >> | 8 | SHELL-B-160 | Act As chip gap from the bell (24px) | Look and Feel | 1 | Building | - |
 | >> | 8 | SHELL-B-161 | Try again when identity fails after sign-in | Functional | 2 | Building (B-161 first) | - |
 | >> | 8 | LANDING-PAGE-B-006 | Landing card body margin, as drawn | Look and Feel | 1 | Building | - |
-| | 8 | (shell raises the ID) | Table toolkit specs test the status track look rules (plugin copies of these tests went with the old track) | Functional | 1 | Group 8, last; from advisor | - |
+| >> | 8 | SHELL-B-162 | Table toolkit specs test the status track look rules (plugin copies of these tests went with the old track) | Functional | 1 | Group 8, last | - |
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170.
 
 ## Portfolio Services (pointer: group 9)
