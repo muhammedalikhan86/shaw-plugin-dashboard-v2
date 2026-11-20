@@ -25,7 +25,7 @@ Building now:
 2. PS2 group 13: OFA-B-188, the "- -" platform and product on both Renewal Trackers.
 3. Advisor group 11 (unparked by the user 20-11): F-145, F-146, F-142, F-049 (correction part), F-059, F-057.
 4. Compliance group 6 (unparked by the user 20-11): B-083, plus all 4 parity gaps (B-084 fees-not-arrived banner, B-085, B-086, B-087), owed docs.
-5. Shell's stack window was killed for low memory (20-11 evening); the 4200 stack is down. The stack checks and the full Jest run wait on the user.
+5. Shell's stack window was killed for low memory (20-11 evening); the 4200 stack is down. The stack checks and the full Jest run rerun after the current groups merge (user).
 
 Tests stay light (user, 20-11): affected tests only; no business, browser or stack runs except shell's stack checks.
 
@@ -49,7 +49,7 @@ Waiting on the user: push main; check in the DataWarehouse Fee.sql, SyncFee.sql 
 7. Hub stack (4200) handed to shell by the user (20-11, evening) for its owed checks; no other worker uses a stack.
 5. Unsupervised: nobody answers prompts. The hub rules on workers' defaults; anything only the user may decide waits on its default (marked "awaiting user" in the rulings). One app stack at a time (memory).
 
-## Shell (pointer: stack window killed for low memory 20-11; test-data, -Leftovers and B-132 steps 1-3 PASS; rest waits on the user)
+## Shell (pointer: stack window killed for low memory 20-11; test-data, -Leftovers and B-132 steps 1-3 PASS; rest reruns after PS 7, PS2 13, advisor 11 and compliance 6 merge)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
