@@ -50,6 +50,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | | 10 | OFA-B-199 | Overview: "Entity type" heading on one line | Look and Feel | 1 | After group 9 | - |
 | | 10 | OFA-B-200 | Row and Actions menus at board widths; Exceptions menu in board order | Look and Feel | 2 | After group 9 | - |
 | | 10 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | After group 9 | - |
+| | 10 | (PS2 writes it up) | Issuance: friendly label and Release button for a notice held by an unknown outcome (front end of OFA-B-183) | Functional | 1 | Group 10, after PS2's OFA-B-183 back end is on main | OFA-B-183 |
 | | 10 | OFA-B-202 | Empty Initial OFAs and Exceptions: only Add and expand in the toolbar | Look and Feel | 1 | After group 9 | - |
 | | 10 | OFA-B-203 | Initial OFAs Accept dialog: board width, no hint under the date | Look and Feel | 1 | After group 9 | - |
 | | 10 | OFA-B-204 | Renewal tracker cells and Exceptions date wrap at 1440 (re-run first) | Look and Feel | 1 | After group 9 | - |
@@ -68,11 +69,11 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | >> | 17 | OFA-B-205 | Hold the signing-request email when the covering email wording has no approved version, instead of sending it blank | Functional | 3 | Ready (abee8393); merge waits for shell to commit group 6 (shared doc pointers) | - |
 | >> | 17 | OFA-B-179 | Expired report wrong when the State Manager email is off | Functional | 1 | Ready (abee8393); merge waits for shell to commit group 6 (shared doc pointers) | - |
 | >> | 17 | OFA-B-182 | Fee status column missing from show/hide, sort, export | Functional | 1 | Ready (abee8393); merge waits for shell to commit group 6 (shared doc pointers) | - |
-| | 18 | OFA-F-094 | Each history event says who can see it; the adviser side reads its own | Functional | 3 | After group 17 | - |
-| | 18 | OFA-F-131 | Adviser side reads ended arrangements and the account's history | Functional | 2 | After group 17 | - |
-| | 18 | OFA-F-132 | Adviser side records a request to Back Office | Functional | 3 | After group 17 | - |
+| | 18 | OFA-F-094 | Each history event says who can see it; the adviser side reads its own | Functional | 3 | Group 18, in order F-131, F-094, F-132, B-183 | - |
+| >> | 18 | OFA-F-131 | Adviser side reads ended arrangements and the account's history | Functional | 2 | Building (first) | - |
+| | 18 | OFA-F-132 | Adviser side records a request to Back Office | Functional | 3 | Group 18, in order F-131, F-094, F-132, B-183 | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
-| | 18 | OFA-B-183 | A notice stuck as "send outcome unknown": label and release | Functional | 2 | Group 18, with F-094, F-131, F-132 | - |
+| | 18 | OFA-B-183 | A notice stuck as "send outcome unknown": label and release | Functional | 2 | Group 18, in order F-131, F-094, F-132, B-183 | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 Done 2026-11-20: OFA-F-173, OFA-F-174 (merged a733211a)
 
