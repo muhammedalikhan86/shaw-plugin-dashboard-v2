@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 15:36
+Updated: 2026-11-20 15:37
 
 ## Shell (pointer: group 6)
 
@@ -40,16 +40,16 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | | 9 | OFA-B-206 | A sent Initial OFA takes its signing status from its envelopes (today it can only be declined) | Functional | 5 | First in group 9, before go-live | - |
 | | 9 | OFA-F-169 | Cull notes: attach a file | Functional | 2 | After OFA-F-028; first in group 9 with OFA-B-195 | - |
 | | 9 | OFA-B-195 | Settings: the page scrolls sideways by 11px | Functional | 1 | After OFA-F-028; PS2 group 16 merged | - |
-| | 9 | OFA-B-196 | Settings: the four cards in two columns, as drawn | Look and Feel | 2 | After go-live | - |
-| | 9 | OFA-B-197 | Settings dialogs: board width, Add attachments row, change request and Preview as drawn | Look and Feel | 3 | After go-live | - |
-| | 9 | OFA-B-198 | Overview: the counts move into the board's cards | Look and Feel | 2 | After go-live | - |
-| | 9 | OFA-B-199 | Overview: "Entity type" heading on one line | Look and Feel | 1 | After go-live | - |
-| | 9 | OFA-B-200 | Row and Actions menus at board widths; Exceptions menu in board order | Look and Feel | 2 | After go-live | - |
-| | 9 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | After go-live | - |
-| | 9 | OFA-B-202 | Empty Initial OFAs and Exceptions: only Add and expand in the toolbar | Look and Feel | 1 | After go-live | - |
-| | 9 | OFA-B-203 | Initial OFAs Accept dialog: board width, no hint under the date | Look and Feel | 1 | After go-live | - |
-| | 9 | OFA-B-204 | Renewal tracker cells and Exceptions date wrap at 1440 (re-run first) | Look and Feel | 1 | After go-live | - |
-| | 9 | OFA-B-207 | Quarantine list tab count colour, as drawn | Look and Feel | 1 | After go-live | - |
+| | 10 | OFA-B-196 | Settings: the four cards in two columns, as drawn | Look and Feel | 2 | After group 9 | - |
+| | 10 | OFA-B-197 | Settings dialogs: board width, Add attachments row, change request and Preview as drawn | Look and Feel | 3 | After group 9 | - |
+| | 10 | OFA-B-198 | Overview: the counts move into the board's cards | Look and Feel | 2 | After group 9 | - |
+| | 10 | OFA-B-199 | Overview: "Entity type" heading on one line | Look and Feel | 1 | After group 9 | - |
+| | 10 | OFA-B-200 | Row and Actions menus at board widths; Exceptions menu in board order | Look and Feel | 2 | After group 9 | - |
+| | 10 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | After group 9 | - |
+| | 10 | OFA-B-202 | Empty Initial OFAs and Exceptions: only Add and expand in the toolbar | Look and Feel | 1 | After group 9 | - |
+| | 10 | OFA-B-203 | Initial OFAs Accept dialog: board width, no hint under the date | Look and Feel | 1 | After group 9 | - |
+| | 10 | OFA-B-204 | Renewal tracker cells and Exceptions date wrap at 1440 (re-run first) | Look and Feel | 1 | After group 9 | - |
+| | 10 | OFA-B-207 | Quarantine list tab count colour, as drawn | Look and Feel | 1 | After group 9 | - |
 | | X | OFA-F-163 | Overview: the two tracks fold with the rest | Functional | ?? | Ready: SHELL-F-168 on main; not yet grouped | - |
 | | X | OFA-F-160 | Remove the manual fee sync | Functional | 2 | After go-live | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
