@@ -132,7 +132,7 @@ Collision rules (hub ruling 18-11):
 5. App turns: one at a time, scheduled by the hub.
 6. PS2 skips the graph rebuild; PS does it. New IDs come from the hub.
 
-## Compliance (pointer: parked after group 6 (merged 20-11); next group comes with the weekend plan; B-088 waits on OFA-F-162)
+## Compliance (pointer: group 7: B-089 entry page vs highlighted nav, B-048, parity line 11 header expected time; B-088 waits on OFA-F-162)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
