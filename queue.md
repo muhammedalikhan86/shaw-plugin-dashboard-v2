@@ -4,22 +4,19 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 19:58
+Updated: 2026-11-20 20:00
 
-## Shell (pointer: group 7)
+## Shell (pointer: group 8)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 7 | SHELL-B-155 | Theme badge default 18px weight 500 for every plugin, as the boards draw it | Look and Feel | 1 | Building (B-155 first) | - |
-| >> | 7 | SHELL-F-170 | Shared "built app only" test step in business-tests/support/steps; the component copies go | Undetermined | 1 | Building (B-155 first) | - |
-| >> | 7 | SHELL-B-156 | Table toolkit: on a wide card, spare width spreads onto capped columns (Note past 500px); size the fixed table to its columns | Functional | 2 | Building (B-155 first) | - |
-| | 8 | SHELL-B-157 | Profile table inset, as drawn | Look and Feel | 1 | Group 8, after group 7 | - |
-| | 8 | SHELL-B-158 | Role chip size, as drawn | Look and Feel | 1 | Group 8, after group 7 | - |
-| | 8 | SHELL-B-159 | Profile rule colours and Save row position | Look and Feel | 1 | Group 8, after group 7 | - |
-| | 8 | SHELL-B-160 | Act As chip gap from the bell (24px) | Look and Feel | 1 | Group 8, after group 7 | - |
-| | 8 | SHELL-B-161 | Try again when identity fails after sign-in | Functional | 2 | Group 8, after group 7 | - |
-| | 8 | LANDING-PAGE-B-006 | Landing card body margin, as drawn | Look and Feel | 1 | Group 8, after group 7 | - |
-Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards).
+| >> | 8 | SHELL-B-157 | Profile table inset, as drawn | Look and Feel | 1 | Building | - |
+| >> | 8 | SHELL-B-158 | Role chip size, as drawn | Look and Feel | 1 | Building | - |
+| >> | 8 | SHELL-B-159 | Profile rule colours and Save row position | Look and Feel | 1 | Building | - |
+| >> | 8 | SHELL-B-160 | Act As chip gap from the bell (24px) | Look and Feel | 1 | Building | - |
+| >> | 8 | SHELL-B-161 | Try again when identity fails after sign-in | Functional | 2 | Building (B-161 first) | - |
+| >> | 8 | LANDING-PAGE-B-006 | Landing card body margin, as drawn | Look and Feel | 1 | Building | - |
+Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170.
 
 ## Portfolio Services (pointer: group 9)
 
@@ -73,17 +70,13 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 
 Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c)
 
-## Advisor (pointer: group 13)
+## Advisor (pointer: group 14)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 13 | ADVISOR-DASHBOARD-B-116 | Closures: add the Filter and Export buttons | Functional | 2 | Ready (6be52be5); merge waits for shell to commit its v153 pointer edits | - |
-| >> | 13 | ADVISOR-DASHBOARD-B-117 | Closures default columns and the two column choosers, as drawn | Functional | 2 | Ready (6be52be5); merge waits for shell to commit its v153 pointer edits | - |
-| >> | 13 | ADVISOR-DASHBOARD-B-118 | "Fees as at · Signing as at" line on Renewal tracker and Closures | Functional | 1 | Ready (6be52be5); merge waits for shell to commit its v153 pointer edits | - |
-| >> | 13 | ADVISOR-DASHBOARD-B-119 | Product field in the Questionnaire and Initial OFAs filters | Functional | 1 | Ready (6be52be5); merge waits for shell to commit its v153 pointer edits | - |
-| | 14 | ADVISOR-DASHBOARD-B-120 | Test scenarios for the board's empty, reading, failed and few-row states | Functional | 2 | After group 13 | - |
-| | 14 | ADVISOR-DASHBOARD-B-121 | Termination wording dialog: the sentence before the wording | Look and Feel | 1 | After group 13 | - |
-| | 14 | ADVISOR-DASHBOARD-B-122 | Required asterisks on Start-an-OFA and No OFA obligations | Look and Feel | 1 | After group 13 | - |
+| >> | 14 | ADVISOR-DASHBOARD-B-120 | Test scenarios for the board's empty, reading, failed and few-row states | Functional | 2 | Building | - |
+| >> | 14 | ADVISOR-DASHBOARD-B-121 | Termination wording dialog: the sentence before the wording | Look and Feel | 1 | Building | - |
+| >> | 14 | ADVISOR-DASHBOARD-B-122 | Required asterisks on Start-an-OFA and No OFA obligations | Look and Feel | 1 | Building | - |
 | | 15 | ADVISOR-DASHBOARD-F-049 | Back Office change request (part 2) | Functional | ?? | Group 15, after group 14: adopt OFA-F-170 and OFA-F-171 (on main, 6e56c9f9) | OFA-F-170, OFA-F-171 |
 | | 15 | ADVISOR-DASHBOARD-B-123 | Renewal tracker: account name as the S-Account column's second line, as drawn | Functional | 1 | Group 15, after the PS2 read lands | OFA-F-176 |
 | | X | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals (part 2) | Functional | ?? | Waiting | OFA-F-094 |
@@ -92,9 +85,9 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 | | X | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | Functional | 2 | Waiting | OFA-F-131 |
 | | X | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | Functional | 3 | Waiting | OFA-F-132 |
-| | 14 | ADVISOR-DASHBOARD-F-151 | Use the shared status track | Look and Feel | 2 | Group 14 (SHELL-F-163 done) | - |
+| >> | 14 | ADVISOR-DASHBOARD-F-151 | Use the shared status track | Look and Feel | 2 | Building | - |
 
-Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777).
+Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777). Group 13 (bafb7b09): ADVISOR-DASHBOARD-B-116, B-117, B-118, B-119, five board-target reds.
 
 ## Hub
 
