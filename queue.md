@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 18:49
+Updated: 2026-11-20 18:56
 
 ## Shell (pointer: group 6)
 
@@ -30,6 +30,7 @@ Updated: 2026-11-20 18:49
 | >> | 6 | LANDING-PAGE-B-005 | Card footer type | Look and Feel | 1 | Building | - |
 | | 7 | SHELL-B-155 | Theme badge default 18px weight 500 for every plugin, as the boards draw it | Look and Feel | 1 | First in group 7 | - |
 | | 7 | SHELL-F-170 | Shared "built app only" test step in business-tests/support/steps; the component copies go | Undetermined | 1 | Group 7 | - |
+| | 7 | SHELL-B-156 | Table toolkit: on a wide card, spare width spreads onto capped columns (Note past 500px); size the fixed table to its columns | Functional | ?? | Group 7; from COMPLIANCE-DASHBOARD-B-113 | - |
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page)
 
 ## Portfolio Services (pointer: group 9)
@@ -80,8 +81,8 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (merged a733211a)
 |---|---|---|---|---|---|---|---|
 | >> | 11 | COMPLIANCE-DASHBOARD-B-095 | Quarantine: Extension and Last prompt start at 250px | Look and Feel | 1 | Building | - |
 | >> | 11 | COMPLIANCE-DASHBOARD-B-111 | Load a new approved version: Check column sits about 60px left of the board | Look and Feel | 1 | Closed, no change: build matches the board at 1440 | - |
-| >> | 11 | COMPLIANCE-DASHBOARD-B-112 | Platform full names in the 8 other places the board draws them | Look and Feel | 1 | Building | - |
-| >> | 11 | COMPLIANCE-DASHBOARD-B-113 | Closed months notes tab: the Note column stays within 500px and the note wraps | Look and Feel | 1 | Building | - |
+| >> | 11 | COMPLIANCE-DASHBOARD-B-112 | Platform full names in the 8 other places the board draws them | Look and Feel | 1 | Done in 7 of 8 places; the 8th is a view this plugin does not build | - |
+| >> | 11 | COMPLIANCE-DASHBOARD-B-113 | Closed months notes tab: the Note column stays within 500px and the note wraps | Look and Feel | 1 | Moved to the shell: SHELL-B-156 | - |
 | | 12 | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | Functional | 2 | Group 12, after group 11; once OFA-F-144 is on main | OFA-F-144 |
 
 Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c)
