@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 16:00
+Updated: 2026-11-20 16:10
 
 ## Shell
 
@@ -18,6 +18,7 @@ Updated: 2026-11-20 16:00
 | | 5 | SHELL-B-135 | Tables: frozen columns see-through when scrolling sideways | ?? | After the parity run | - |
 | | 5 | SHELL-F-168 | Tables: the page can fold or unfold the status track | ?? | After the parity run | - |
 | | 5 | SHELL-B-137 | Tables: header text grey, the board draws black | 1 | After the parity run | - |
+| | 5 | SHELL-B-138 | Filter dialog: a drop-down left on "All" looks greyed out | 1 | After the parity run | - |
 
 ## Portfolio Services
 
