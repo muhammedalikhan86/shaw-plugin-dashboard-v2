@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 14:59
+Updated: 2026-11-20 15:03
 
 ## Shell
 
@@ -27,6 +27,7 @@ Updated: 2026-11-20 14:59
 |---|---|---|---|---|---|---|---|
 | >> | F-028 | OFA-F-028 | Go-live prep: release packages for each part | Functional | 10 | Parts 4, 4b merged ; part 2 building, then 1, 3 | - |
 | | - | OFA-F-138 | File the signed renewal in DART | Functional | 3 | Blocked by your DART retest | - |
+| | 9 | OFA-F-169 | Cull notes: attach a file | Functional | 2 | After OFA-F-028; first in group 9 with OFA-B-195 | - |
 | | 9 | OFA-B-195 | Settings: the page scrolls sideways by 11px | Functional | 1 | After PS2 group 16 merges | OFA-F-173 |
 | | 9 | OFA-B-196 | Settings: the four cards in two columns, as drawn | Look and Feel | 2 | After go-live; after PS2 group 16 | OFA-F-173 |
 | | 9 | OFA-B-197 | Settings dialogs: board width, Add attachments row, change request and Preview as drawn | Look and Feel | 3 | After go-live; after PS2 group 16 | OFA-F-173 |
@@ -37,7 +38,6 @@ Updated: 2026-11-20 14:59
 | | 9 | OFA-B-202 | Empty Initial OFAs and Exceptions: only Add and expand in the toolbar | Look and Feel | 1 | After go-live | - |
 | | 9 | OFA-B-203 | Initial OFAs Accept dialog: board width, no hint under the date | Look and Feel | 1 | After go-live | - |
 | | 9 | OFA-B-204 | Renewal tracker cells and Exceptions date wrap at 1440 (re-run first) | Look and Feel | 1 | After go-live | - |
-| | X | OFA-F-169 | Cull notes: attach a file | Functional | 2 | Next | - |
 | | X | OFA-F-163 | Overview: the two tracks fold with the rest | Functional | ?? | Waiting | SHELL-F-168 |
 | | X | OFA-F-160 | Remove the manual fee sync | Functional | 2 | After go-live | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
