@@ -4,13 +4,13 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 18:35
+Updated: 2026-11-20 18:36
 
 ## Shell (pointer: group 6)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 6 | SHELL-B-143 | Table headers stay frozen when the page scrolls down (they scroll away today) | Functional | ? | First: user-reported | - |
+| >> | 6 | SHELL-B-143 | Table headers stay frozen when the page scrolls down (they scroll away today) | Functional | 3 | First: user-reported | - |
 | >> | 6 | SHELL-B-145 | Profile and Preferences with Keep open on: the plugins card scrolls sideways and clips Notifications by 46px | Functional | 2 | Building | - |
 | >> | 6 | LANDING-PAGE-B-001 | Greeting wording as the board | Functional | 1 | Building | - |
 | >> | 6 | SHELL-B-146 | Keep-open switch sits 6px left | Look and Feel | 1 | Building | - |
