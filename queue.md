@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 05:15
+Updated: 2026-11-21 05:28
 
 ## Shell (pointer: queue empty)
 
@@ -22,7 +22,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | >> | 11 | OFA-B-005, B-006, B-043, B-046, B-059, B-123, F-052, F-054, F-055 | Initial OFAs as drawn, and its planned features | Look and Feel | 15 | Go 2026-11-21 | - |
 | | 12 | OFA-B-016, B-060, B-103, B-124, B-126, F-051, F-085, F-093 | Master list, tables and Expired report | Look and Feel | 14 | After go-live; after group 11 | - |
 | | 13 | OFA-B-113, B-127, F-139, F-140, B-115 | Quarantine cells; renewal tracker features; snack and loading bar on every page | Look and Feel | 13 | After go-live; after group 12 | - |
-| | 14 | OFA-F-075, F-087, F-115, B-145 | Seed and test data; app-wide spec clean-up | Functional | 10 | After go-live; after group 13 | - |
+| | 14 | OFA-F-075, F-087, F-115, B-145 | Seed and test data (also: a DART party who does not sign yet on an open entry, for ADVISOR-DASHBOARD-F-155's live add); app-wide spec clean-up | Functional | 10 | After go-live; after group 13 | - |
 | | X | OFA-B-215 | Adopt shell groups 12 and 13: Actions menu 380px and Exceptions menu about 322px (rest of B-200); hide the empty tab's columns icon (rest of B-202); the four cycle filter dialogs' intro line (rest of B-043) | Look and Feel | 1 | Ready: shell groups 12 and 13 are on main (adopt .menu--wide, showColumnsWhenEmpty=false and filterDialogIntro) | SHELL-B-174, SHELL-B-175, shell group 13 |
 | >> | 11 | OFA-B-213 | Settings dialogs: the Add attachments row (the API takes files, then the picker, as drawn) | Functional | 3 | Go 2026-11-21 | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
@@ -55,17 +55,16 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 
 Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563); group 12 end sweep clean, B-115 fixed (merged 1f6dde4c); group 13 B-114, B-117 fixed, F-008 progress (a44de06b); group 14 B-119, F-037; B-116 green with OFA-B-211 (2fdcd937); group 15 B-118, F-008 progress (b005b57b)
 
-## Advisor (pointer: group 17)
+## Advisor (pointer: group 18)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| >> | 18 | ADVISOR-DASHBOARD-F-075 | Every filter works, in every seat (board M20, Done) | Functional | 5 | Go 2026-11-21 | - |
+| >> | 18 | ADVISOR-DASHBOARD-F-139 | A paper-signed copy shows as plain Signed | Functional | 1 | Go 2026-11-21 | OFA-F-023 |
 | | X | ADVISOR-DASHBOARD-F-141 | The arrangement record | Functional | 3 | Blocked by a Portfolio Services adviser documents read (no item yet) | - |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
-| >> | 17 | ADVISOR-DASHBOARD-F-154 | Remove a signatory from an open Back Office ask | Functional | 2 | Go 2026-11-21 | OFA-F-178 |
-| >> | 17 | ADVISOR-DASHBOARD-F-155 | Add signatory: pick from the account's DART parties | Functional | 2 | Go 2026-11-21 | OFA-F-179 |
-| | 17 | ADVISOR-DASHBOARD-F-156 | The "Arrangements that ended" bell adopts the shell's groups: group, second line (adviser and why), date, and the "Nothing has ended." empty line | Look and Feel | 1 | Go 2026-11-21, last in the group (SHELL-B-172 is on main) | SHELL-B-172 |
 
-Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777). Group 13 (bafb7b09): ADVISOR-DASHBOARD-B-116, B-117, B-118, B-119, five board-target reds. Group 14 (0c46c642): ADVISOR-DASHBOARD-F-151, F-152, B-120, B-121, B-122.; group 15 F-049 part 2, B-123, B-124 (59c7190f); group 16 F-143, F-118, F-153, F-059 part 2, F-117 (bb446a4b)
+Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777). Group 13 (bafb7b09): ADVISOR-DASHBOARD-B-116, B-117, B-118, B-119, five board-target reds. Group 14 (0c46c642): ADVISOR-DASHBOARD-F-151, F-152, B-120, B-121, B-122.; group 15 F-049 part 2, B-123, B-124 (59c7190f); group 16 F-143, F-118, F-153, F-059 part 2, F-117 (bb446a4b); group 17 F-154, F-155, F-156 (808e6eaf)
 
 ## Hub
 
