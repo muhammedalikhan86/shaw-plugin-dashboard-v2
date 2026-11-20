@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 16:35
+Updated: 2026-11-20 15:05
 
 ## Shell
 
@@ -69,15 +69,11 @@ Updated: 2026-11-20 16:35
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 11 | ADVISOR-DASHBOARD-F-057 | Search finds S-Accounts and arrangements | Functional | ?? | Built; in review | - |
-| | 11 | ADVISOR-DASHBOARD-F-149 | Landing Page: Gross Revenue and Funds Under Advice cards removed | Functional | 1 | Code merged; tidy-up in group 11 | - |
-| | 11 | ADVISOR-DASHBOARD-B-115 | Master list reads the real ASF figures (test red) | Functional | 1 | Next | - |
-| | 11 | ADVISOR-DASHBOARD-F-150 | OFA Questionnaire: five columns hidden by default | Look and Feel | ?? | Next | - |
-| | 11 | ADVISOR-DASHBOARD-F-145 | Hide "Fee turned off" once it is recorded | Functional | 1 | Next | - |
-| | 11 | ADVISOR-DASHBOARD-F-146 | Closures: send and record the closure confirmation | Functional | 3 | Next | - |
-| | 11 | ADVISOR-DASHBOARD-F-142 | Send follow-up email to clients | Functional | 4 | Next | - |
-| | 11 | ADVISOR-DASHBOARD-F-049 | Back Office change request | Functional | 3 | Next | OFA-F-170, OFA-F-171 |
-| | 11 | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals | Functional | 2 | Next | - |
+| >> | 12 | ADVISOR-DASHBOARD-F-146 | Closures: send and record the closure confirmation (part 2) | Functional | ?? | Next; merge main first | - |
+| >> | 12 | ADVISOR-DASHBOARD-F-142 | Send follow-up email to clients (part 2) | Functional | ?? | Next; merge main first | - |
+| | 13 | (parity) | Advisor parity findings (B-116 onward) | Undetermined | ?? | Waiting on your routing answer | - |
+| | X | ADVISOR-DASHBOARD-F-049 | Back Office change request (part 2) | Functional | ?? | Waiting | OFA-F-170, OFA-F-171 |
+| | X | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals (part 2) | Functional | ?? | Waiting | OFA-F-094 |
 | | X | ADVISOR-DASHBOARD-F-141 | The arrangement record | Functional | 3 | Blocked by a Portfolio Services adviser documents read (no item yet) | - |
 | | X | ADVISOR-DASHBOARD-F-143 | History events | Functional | 5 | Waiting | OFA-F-094 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
@@ -87,7 +83,7 @@ Updated: 2026-11-20 16:35
 
 ## Hub
 
-1. Parity run: finished 20-11; its findings are being routed (shell waits for its IDs).
+1. Parity run: finished 20-11; routing waits on your answer (shell group 5 waits for its IDs).
 2. Weekend queue: built with you once the parity run ends.
 3. Designer prompt (not yet sent; goes out after this queue round): W38 (Wording: CAT 1 and CAT 2 rows), P92 (Cull list Status column), P93 (Compliance review "Read only."). More rows join from the parity findings.
 4. End sweep: the browser, business-test and board checks skipped during the build, run once at the end.
