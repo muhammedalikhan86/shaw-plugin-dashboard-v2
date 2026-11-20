@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 15:25
+Updated: 2026-11-20 16:00
 
 ## Shell
 
@@ -27,6 +27,16 @@ Updated: 2026-11-20 15:25
 | >> | F-028 | OFA-F-028 | Go-live prep: release packages for each part | Functional | 10 | Parts 1-4 done; part 4b building | - |
 | | F-028 | OFA-F-172 | First weekly Expired report goes only to the OFA Team mailbox | Functional | ?? | With OFA-F-028 | - |
 | | - | OFA-F-138 | File the signed renewal in DART | Functional | 3 | Blocked by your DART retest | - |
+| | 9 | OFA-B-195 | Settings: the page scrolls sideways by 11px | Functional | 1 | After PS2 group 16 merges | OFA-F-173 |
+| | 9 | OFA-B-196 | Settings: the four cards in two columns, as drawn | Look and Feel | 2 | After go-live; after PS2 group 16 | OFA-F-173 |
+| | 9 | OFA-B-197 | Settings dialogs: board width, Add attachments row, change request and Preview as drawn | Look and Feel | 3 | After go-live; after PS2 group 16 | OFA-F-173 |
+| | 9 | OFA-B-198 | Overview: the counts move into the board's cards | Look and Feel | 2 | After go-live | - |
+| | 9 | OFA-B-199 | Overview: "Entity type" heading on one line | Look and Feel | 1 | After go-live | - |
+| | 9 | OFA-B-200 | Row and Actions menus at board widths; Exceptions menu in board order | Look and Feel | 2 | After go-live | - |
+| | 9 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | After go-live | - |
+| | 9 | OFA-B-202 | Empty Initial OFAs and Exceptions: only Add and expand in the toolbar | Look and Feel | 1 | After go-live | - |
+| | 9 | OFA-B-203 | Initial OFAs Accept dialog: board width, no hint under the date | Look and Feel | 1 | After go-live | - |
+| | 9 | OFA-B-204 | Renewal tracker cells and Exceptions date wrap at 1440 (re-run first) | Look and Feel | 1 | After go-live | - |
 | | X | OFA-F-169 | Cull notes: attach a file | Functional | 2 | Next | - |
 | | X | OFA-F-163 | Overview: the two tracks fold with the rest | Functional | ?? | Waiting | SHELL-F-168 |
 | | X | OFA-F-160 | Remove the manual fee sync | Functional | 2 | After go-live | - |
@@ -73,7 +83,13 @@ Updated: 2026-11-20 15:25
 |---|---|---|---|---|---|---|---|
 | >> | 12 | ADVISOR-DASHBOARD-F-146 | Closures: send and record the closure confirmation (part 2) | Functional | ?? | Next; merge main first | - |
 | >> | 12 | ADVISOR-DASHBOARD-F-142 | Send follow-up email to clients (part 2) | Functional | ?? | Next; merge main first | - |
-| | 13 | (parity) | Advisor parity findings (B-116 onward) | Undetermined | ?? | Waiting on your routing answer | - |
+| | 13 | ADVISOR-DASHBOARD-B-116 | Closures: add the Filter and Export buttons | Functional | 2 | After group 12 | - |
+| | 13 | ADVISOR-DASHBOARD-B-117 | Closures default columns and the two column choosers, as drawn | Functional | 2 | After group 12 | - |
+| | 13 | ADVISOR-DASHBOARD-B-118 | "Fees as at · Signing as at" line on Renewal tracker and Closures | Functional | 1 | After group 12 | - |
+| | 13 | ADVISOR-DASHBOARD-B-119 | Product field in the Questionnaire and Initial OFAs filters | Functional | 1 | After group 12 | - |
+| | X | ADVISOR-DASHBOARD-B-120 | Test scenarios for the board's empty, reading, failed and few-row states | Functional | 2 | After go-live | - |
+| | X | ADVISOR-DASHBOARD-B-121 | Termination wording dialog: the sentence before the wording | Look and Feel | 1 | After go-live | - |
+| | X | ADVISOR-DASHBOARD-B-122 | Required asterisks on Start-an-OFA and No OFA obligations | Look and Feel | 1 | After go-live | - |
 | | X | ADVISOR-DASHBOARD-F-049 | Back Office change request (part 2) | Functional | ?? | Waiting | OFA-F-170, OFA-F-171 |
 | | X | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals (part 2) | Functional | ?? | Waiting | OFA-F-094 |
 | | X | ADVISOR-DASHBOARD-F-141 | The arrangement record | Functional | 3 | Blocked by a Portfolio Services adviser documents read (no item yet) | - |
@@ -85,9 +101,9 @@ Updated: 2026-11-20 15:25
 
 ## Hub
 
-1. Parity run: finished 20-11; routing waits on your answer (shell group 5 waits for its IDs).
+1. Parity run: compliance, PS and advisor routed 20-11; shell finishing its cut-short part (shell, landing-page).
 2. Weekend queue: built with you once the parity run ends.
-3. Designer prompt (not yet sent; goes out after this queue round): W38 (Wording: CAT 1 and CAT 2 rows), P92 (Cull list Status column), P93 (Compliance review "Read only."). More rows join from the parity findings.
+3. Designer prompt (not yet sent; goes out after this queue round): W38, P92, P93, plus 6 parity questions: Overview "not fully signed" count slot; Adviser review answers bar placement; read-failure card on six PS screens; scope line for an adviser with several codes; Renewal tracker filter Reset and intro; Arrangements empty/loading/error card.
 4. End sweep: the browser, business-test and board checks skipped during the build, run once at the end.
 5. Waiting on you: push main; check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest; Luke's templates and Initial OFA envelope title.
 
