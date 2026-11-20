@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 19:25
+Updated: 2026-11-20 19:26
 
 ## Shell (pointer: group 6)
 
@@ -66,7 +66,7 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | >> | 17 | OFA-F-170 | Adviser asks Back Office for a missing email or signer | Functional | ?? | Integration passed; final review and docs | - |
 | >> | 17 | OFA-F-171 | Attachments on a correction request | Functional | ?? | Integration passed; final review and docs | - |
 | >> | 17 | OFA-B-205 | Hold the signing-request email when the covering email wording has no approved version, instead of sending it blank | Functional | 3 | Integration passed; final review and docs | - |
-| | 17 | OFA-B-179 | Expired report wrong when the State Manager email is off | Functional | 1 | Group 17 (group 18 first if 17 is in Integration) | - |
+| >> | 17 | OFA-B-179 | Expired report wrong when the State Manager email is off | Functional | 1 | Integration passed; final review and docs | - |
 | >> | 17 | OFA-B-182 | Fee status column missing from show/hide, sort, export | Functional | 1 | Integration passed; final review and docs (widened to the server-side export) | - |
 | | 18 | OFA-F-094 | Each history event says who can see it; the adviser side reads its own | Functional | 3 | After group 17 | - |
 | | 18 | OFA-F-131 | Adviser side reads ended arrangements and the account's history | Functional | 2 | After group 17 | - |
