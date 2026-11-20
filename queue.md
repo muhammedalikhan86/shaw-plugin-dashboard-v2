@@ -22,7 +22,7 @@ Built and on main:
 
 Building now:
 1. PS group 7: monthly cycle and Initial OFAs add-by-hand parity, plus the F-138 DART fix (the 20-11 test filing got a 502; the Add body is being aligned with AccountClosureWorkflow). Then F-028 go-live prep.
-2. PS2 group 13: OFA-B-188, the "- -" platform and product on both Renewal Trackers.
+2. PS2 group 13: OFA-B-188, the "- -" platform and product on both Renewal Trackers; then OFA-F-161, the fee expected time for compliance's banner.
 3. Advisor group 11 (unparked by the user 20-11): F-145, F-146, F-142, F-049 (correction part), F-059, F-057.
 4. Compliance group 6 (unparked by the user 20-11): B-083, plus all 4 parity gaps (B-084 fees-not-arrived banner, B-085, B-086, B-087), owed docs.
 5. Shell's stack window was killed for low memory (20-11 evening); the 4200 stack is down. The stack checks and the full Jest run rerun after the current groups merge (user).
@@ -87,7 +87,7 @@ Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).
 
-## Portfolio Services 2 (pointer: group 13: OFA-B-188, then free)
+## Portfolio Services 2 (pointer: group 13: OFA-B-188, then OFA-F-161)
 
 Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfolio-services-2`, branch `portfolio-services-2`, port offset 40, artboard port 8799.
 
@@ -95,6 +95,7 @@ Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfo
 |---|-----|----|------|------|---------------------|
 | 1 | - | (setup) | In hub.json and opened 18-11 on Lachlan's account | - | Done |
 | >> | 13 | OFA-B-188 | Renewal tracker "- -" platform/product, on both the Advisor and the OFA Dashboard trackers (and check usp_ClientClosure_List): resolve as the questionnaire surface does | ?? | ADVISOR-DASHBOARD-B-113 waits; migration 0116 |
+| | 13 | OFA-F-161 | compliance.SourceTimes gains FeesExpectedUtc (when today's fees were due), for the compliance fees-not-arrived banner | ?? | For COMPLIANCE-DASHBOARD-B-084; migration 0117 |
 | 9 | X | OFA-B-183 | A notice held as "send outcome unknown": friendly label on the Issuance tab, and a release action | 2 | After go-live (rare case; a person checks Annature) |
 | 10 | X | OFA-B-184 | A timeout on create-and-send can still send twice; needs a lookup route in AnnatureInterfaceWebAPI | 2 | After go-live |
 | 8 | X | OFA-B-182 | The Fee status column is not in table-tools show/hide, sort or export | 1 | After go-live (looks) |
