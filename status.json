@@ -78,8 +78,8 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 486.0,
-   "pointsRemaining": 46.0,
+   "pointsDone": 488.0,
+   "pointsRemaining": 44.0,
    "pointsTotal": 532.0,
    "itemsRemaining": 14,
    "itemsRemainingUnsized": [
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 119.09,
+  "pointsPerWorkingDayWholePeriod": 119.24,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -235,8 +235,8 @@
    },
    {
     "date": "2026-11-20",
-    "pointsDone": 1548.0,
-    "pointsDoneThatDay": 115.0
+    "pointsDone": 1550.0,
+    "pointsDoneThatDay": 117.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -263,7 +263,7 @@
     "likely": "2026-11-24",
     "pessimistic": "2026-11-25",
     "rateLast10": 18.12,
-    "rateWhole": 35.78
+    "rateWhole": 35.93
    },
    "Compliance": {
     "optimistic": "2026-11-23",
@@ -279,8 +279,8 @@
    "pessimistic": "2026-11-27",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 119.09,
-   "pointsRemaining": 251.0,
+   "rateWhole": 119.24,
+   "pointsRemaining": 249.0,
    "itemsRemaining": 110
   }
  },
@@ -359,7 +359,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-20T11:06:26+11:00",
+ "updatedAt": "2026-11-20T11:08:55+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2039,6 +2039,11 @@
    "at": "2026-11-20T11:06:26+11:00",
    "change": "PS group 6 merged (F-137, F-138, F-108, F-109)",
    "pointsDone": 16.0
+  },
+  {
+   "at": "2026-11-20T11:08:55+11:00",
+   "change": "Advisor group 10 merged (F-148)",
+   "pointsDone": 2.0
   }
  ],
  "foundDuringBuild": {
