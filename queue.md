@@ -56,6 +56,7 @@ Waiting on the user: push main; check in the DataWarehouse Fee.sql, SyncFee.sql 
 |---|-----|----|------|------|---------------------|
 | | 5 | SHELL-F-166 | Table toolkit: a table's filter dialog takes its own title ("Filter the Anniversary List"), for PS's monthly cycle board | ?? | Raised 20-11 from PS group 7 parity |
 | | 5 | SHELL-F-167 | Table toolkit: an embedded, untitled status-track variant, as the monthly cycle board draws it | ?? | Raised 20-11 from PS group 7 parity |
+| | 5 | SHELL-B-135 | Frozen columns are see-through when a table scrolls sideways; make them opaque in every row state, platform-wide | ?? | User 20-11 (seen on Advisor's OFA Questionnaire) |
 | 1 | 1 | SHELL-F-163 | Shared status track in libs/table-tools (lifted from advisor's ad-questionnaire-track) for PS's renewal tracker | 2 | Done ec81a788 (arch v148) |
 | 3 | X | (owed runs) | F-084/F-145 look runs (sweep); B-128 waits for a plugin to opt in | - | F-144 parts 1+2 and B-130 proved 18-11 |
 | 1 | X | (owed) | Next stack window: ofa-test-data-drop.ps1 -Leftovers; SHELL-B-132 runbook check | - | From the 18-11 full-run incident |
