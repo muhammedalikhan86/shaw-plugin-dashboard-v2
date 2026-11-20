@@ -78,10 +78,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 495.0,
-   "pointsRemaining": 43.0,
-   "pointsTotal": 538.0,
-   "itemsRemaining": 13,
+   "pointsDone": 501.0,
+   "pointsRemaining": 47.0,
+   "pointsTotal": 548.0,
+   "itemsRemaining": 18,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ],
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 126.47,
+  "pointsPerWorkingDayWholePeriod": 126.93,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -235,8 +235,8 @@
    },
    {
     "date": "2026-11-20",
-    "pointsDone": 1644.0,
-    "pointsDoneThatDay": 211.0
+    "pointsDone": 1650.0,
+    "pointsDoneThatDay": 217.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -263,7 +263,7 @@
     "likely": "2026-11-24",
     "pessimistic": "2026-11-25",
     "rateLast10": 18.12,
-    "rateWhole": 36.47
+    "rateWhole": 36.93
    },
    "Compliance": {
     "optimistic": "2026-11-23",
@@ -279,9 +279,9 @@
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 126.47,
-   "pointsRemaining": 287.0,
-   "itemsRemaining": 133
+   "rateWhole": 126.93,
+   "pointsRemaining": 291.0,
+   "itemsRemaining": 138
   }
  },
  "milestones": [
@@ -359,7 +359,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-20T18:47:01+11:00",
+ "updatedAt": "2026-11-20T19:00:05+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2177,6 +2177,12 @@
    "change": "Portfolio Services: go-live preparation finished (OFA-F-028)",
    "pointsDone": 13.0,
    "pointsRaised": 33.0
+  },
+  {
+   "at": "2026-11-20T19:00:05+11:00",
+   "change": "Advisor: closure confirmation and client follow-up emails finished (F-146, F-142 part 2)",
+   "pointsDone": 6.0,
+   "pointsRaised": 10.0
   }
  ],
  "foundDuringBuild": {
