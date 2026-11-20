@@ -22,7 +22,7 @@ Built and on main:
 7. Advisor group 10: wide filters and the Unfilled forecast ASF tick box (F-148), OFA Questionnaire column order (F-147).
 
 Building now:
-1. PS group 7: monthly cycle and Initial OFAs add-by-hand parity, plus the F-138 DART fix (the 20-11 test filing got a 502; the Add body is being aligned with AccountClosureWorkflow). Then F-028 go-live prep.
+1. PS group 7: monthly cycle parity (24 gaps) and add-by-hand parity (9 gaps). The F-138 DART body fix is already merged (21608d24); the user retests once the stack is free. Then F-028 go-live prep.
 2. PS2 group 13: OFA-F-161, the fee expected time for compliance's banner; then group 14: OFA-B-189, B-190 (the same blank platform in the closure email and Compliance Pending Renewals).
 3. Advisor group 11 (unparked by the user 20-11): F-145, F-146, F-142, F-049 (correction part), F-059, F-057.
 4. Compliance group 6 (unparked by the user 20-11): B-083, plus all 4 parity gaps (B-084 fees-not-arrived banner, B-085, B-086, B-087), owed docs.
@@ -54,6 +54,8 @@ Waiting on the user: push main; check in the DataWarehouse Fee.sql, SyncFee.sql 
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
+| | 5 | SHELL-F-166 | Table toolkit: a table's filter dialog takes its own title ("Filter the Anniversary List"), for PS's monthly cycle board | ?? | Raised 20-11 from PS group 7 parity |
+| | 5 | SHELL-F-167 | Table toolkit: an embedded, untitled status-track variant, as the monthly cycle board draws it | ?? | Raised 20-11 from PS group 7 parity |
 | 1 | 1 | SHELL-F-163 | Shared status track in libs/table-tools (lifted from advisor's ad-questionnaire-track) for PS's renewal tracker | 2 | Done ec81a788 (arch v148) |
 | 3 | X | (owed runs) | F-084/F-145 look runs (sweep); B-128 waits for a plugin to opt in | - | F-144 parts 1+2 and B-130 proved 18-11 |
 | 1 | X | (owed) | Next stack window: ofa-test-data-drop.ps1 -Leftovers; SHELL-B-132 runbook check | - | From the 18-11 full-run incident |
@@ -68,8 +70,8 @@ Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostCh
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|---|---|---|---|---|
 | 15 | X | OFA-F-160 | Remove the manual fee sync: the button, the frontend call and the endpoint that runs dbo.SyncFee | 2 | After go-live (Neeraj via Muhammed 20-11) |
-| | - | OFA-F-138 | File the signed renewal document in DART: the real filer | 3 | Built, test-locked to S110438 / MISC (merged 20-11). Test filing 20-11 got a 502 (Agility refused); fix in group 7. Live filing needs OFAREN |
-| >> | 7 | OFA-F-138 fix | DART Add body as AccountClosureWorkflow sends it (no documentId or status; "S" with sentDate and deliveryMethod); show the relay's reason on a refusal | - | Then the user retests once |
+| | - | OFA-F-138 | File the signed renewal document in DART: the real filer | 3 | Built, test-locked to S110438 / MISC (merged 20-11). Test filing 20-11 got a 502 (Agility refused); body fix merged 21608d24, retest pending. Live filing needs OFAREN |
+| | 7 | OFA-F-138 fix (merged b7b2d75d, 20-11) | DART Add body as AccountClosureWorkflow sends it (no documentId or status; "S" with sentDate and deliveryMethod); show the relay's reason on a refusal | - | Then the user retests once |
 | >> | 7 | (parity) | The monthly cycle against its boards (Muhammed 20-11): stepper rebuilt as drawn; table toolkit filter bar, status track and Filter dialog as on the Advisor Dashboard; other gaps fixed | ?? | Own-checkout stack, minimal processes; ahead of F-028 |
 | | 7 | (parity) | Initial OFAs > Add an arrangement by hand: the expanding "Add a platform" section is misaligned; whole dialog against its board (Muhammed 20-11) | ?? | Same parity run as the monthly cycle |
 | 7 | 7 | OFA-F-028 | Go-live prep: deploy parts with -PrepareOnly, to the IIS Deployment Standard | 5 | Release 1, last (Muhammed 20-11) |
