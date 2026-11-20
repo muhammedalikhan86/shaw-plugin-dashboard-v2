@@ -39,9 +39,9 @@
     "landing-page"
    ],
    "pointsDone": 491.0,
-   "pointsRemaining": 10.0,
-   "pointsTotal": 501.0,
-   "itemsRemaining": 7,
+   "pointsRemaining": 11.0,
+   "pointsTotal": 502.0,
+   "itemsRemaining": 8,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 140.0,
@@ -280,8 +280,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 122.86,
-   "pointsRemaining": 288.0,
-   "itemsRemaining": 126
+   "pointsRemaining": 289.0,
+   "itemsRemaining": 127
   }
  },
  "milestones": [
@@ -359,7 +359,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-20T14:43:47+11:00",
+ "updatedAt": "2026-11-20T14:46:24+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2138,6 +2138,11 @@
   {
    "at": "2026-11-20T14:43:47+11:00",
    "change": "Compliance: COMPLIANCE-DASHBOARD-B-111 raised (1)",
+   "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-20T14:46:24+11:00",
+   "change": "Shell: SHELL-B-144 raised (1)",
    "pointsRaised": 1.0
   }
  ],
