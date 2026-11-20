@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 07:00
+Updated: 2026-11-21 09:35
 
 ## Shell (pointer: queue empty)
 
@@ -18,14 +18,14 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | - | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
-| >> | 12 | Seed (moved from group 14) | A paper copy uploaded on S19611, Clara Ruiz (for ADVISOR-DASHBOARD-F-139, compliance's fully-signed scenario and A16) | Functional | 1 | Group 12 | - |
+| >> | 12 | Seed | A notice that stays partly signed (two signatories, one signed) on another S-Account, since S19611 is now fully signed (for compliance's partly-signed scenario) | Functional | 1 | Go 2026-11-21 | - |
 | >> | 12 | OFA-F-133 (counter) | Overview counter that opens the manual-close list (board O13; PS2 builds the list) | Functional | 1 | Go 2026-11-21 | OFA-F-133 |
 | >> | 12 | OFA-B-016, B-060, B-103, B-124, B-126, F-051, F-085, F-093 | Master list, tables and Expired report | Look and Feel | 14 | After go-live; after group 11 | - |
 | | 13 | OFA-B-113, B-127, F-139, F-140, B-115 | Quarantine cells; renewal tracker features; snack and loading bar on every page | Look and Feel | 13 | After go-live; after group 12 | - |
 | | 14 | OFA-F-075, F-087, F-115, B-145 | Seed and test data (also: a DART party who does not sign yet on an open entry, for ADVISOR-DASHBOARD-F-155); app-wide spec clean-up | Functional | 10 | After go-live; after group 13 | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 
-Done 2026-11-21: group 11 (53815a1c): OFA-B-213, B-005, B-006, B-043, B-046, B-059, B-123, B-215, F-052, F-054, F-055.
+Done 2026-11-21: S19611 paper-copy seed (10406e29). group 11 (53815a1c): OFA-B-213, B-005, B-006, B-043, B-046, B-059, B-123, B-215, F-052, F-054, F-055.
 Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed with it). Group 9: OFA-B-206, B-208, B-195, F-163 part 2, F-160, F-169 (43bb6578). Group 10: OFA-B-196, B-197, B-198, B-199, B-203, B-207, B-212; B-200 and B-202 in part (rest OFA-B-215); B-204 in part (Exceptions date wrap to the end-sweep crawl) (55e90b05).
 
 ## Portfolio Services 2 (pointer: group 26)
@@ -57,16 +57,15 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 Done 2026-11-21: group 16 (c5436b08): COMPLIANCE-DASHBOARD-F-005. Group 17 (defce403): B-120, M38 @skip scenario. Group 18 (289a5c94): F-004, the F-005 paper-copy line, M39 @skip scenario.
 Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563); group 12 end sweep clean, B-115 fixed (merged 1f6dde4c); group 13 B-114, B-117 fixed, F-008 progress (a44de06b); group 14 B-119, F-037; B-116 green with OFA-B-211 (2fdcd937); group 15 B-118, F-008 progress (b005b57b)
 
-## Advisor (pointer: group 19)
+## Advisor (pointer: group 20)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 19 | ADVISOR-DASHBOARD-F-139 | A paper-signed copy shows PAPER COPY UPLOADED, as the board draws (OFA-F-180 is on main) | Functional | 1 | Go 2026-11-21 | - |
-| >> | 19 | ADVISOR-DASHBOARD-F-141 | The arrangement record; built on a mock; swap to OFA-F-181 (now on main) | Functional | 3 | Go 2026-11-21 | PS2 group 24 (for the real read) |
-| | X | ADVISOR-DASHBOARD-F-158 | History names the signatory on signed and declined steps, as the board draws | Functional | - | Go after advisor group 20 (OFA-F-183 is on main) | - |
+| >> | 20 | ADVISOR-DASHBOARD-F-141 | The arrangement record: swap the mock for OFA-F-181 and close it | 3 | Go 2026-11-21 | PS2 group 24 (for the real read) |
+| >> | 20 | ADVISOR-DASHBOARD-F-158 | History names the signatory on signed and declined steps, as the board draws | Functional | - | Go 2026-11-21 | - |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
-Done 2026-11-21: group 18 (5492c090): ADVISOR-DASHBOARD-F-075; F-139 groundwork.
+Done 2026-11-21: group 19 (e8abe824): ADVISOR-DASHBOARD-F-139; F-141 built on a mock. Group 18 (5492c090): ADVISOR-DASHBOARD-F-075; F-139 groundwork.
 Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777). Group 13 (bafb7b09): ADVISOR-DASHBOARD-B-116, B-117, B-118, B-119, five board-target reds. Group 14 (0c46c642): ADVISOR-DASHBOARD-F-151, F-152, B-120, B-121, B-122.; group 15 F-049 part 2, B-123, B-124 (59c7190f); group 16 F-143, F-118, F-153, F-059 part 2, F-117 (bb446a4b); group 17 F-154, F-155, F-156 (808e6eaf)
 
 ## Hub

@@ -78,9 +78,9 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 543.0,
+   "pointsDone": 544.0,
    "pointsRemaining": 17.0,
-   "pointsTotal": 560.0,
+   "pointsTotal": 561.0,
    "itemsRemaining": 5,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 144.56,
+  "pointsPerWorkingDayWholePeriod": 144.64,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -240,8 +240,8 @@
    },
    {
     "date": "2026-11-21",
-    "pointsDone": 1879.0,
-    "pointsDoneThatDay": 146.0
+    "pointsDone": 1880.0,
+    "pointsDoneThatDay": 147.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -268,7 +268,7 @@
     "likely": "2026-11-23",
     "pessimistic": "2026-11-23",
     "rateLast10": 18.12,
-    "rateWhole": 40.15
+    "rateWhole": 40.23
    },
    "Compliance": {
     "optimistic": "2026-11-23",
@@ -284,7 +284,7 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 144.56,
+   "rateWhole": 144.64,
    "pointsRemaining": 123.0,
    "itemsRemaining": 62
   }
@@ -364,7 +364,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-21T07:00:45+11:00",
+ "updatedAt": "2026-11-21T09:35:55+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2376,6 +2376,12 @@
    "at": "2026-11-21T07:00:45+11:00",
    "change": "PS2 group 25 merged: adviser trail signer names",
    "pointsDone": 1.0
+  },
+  {
+   "at": "2026-11-21T09:35:55+11:00",
+   "change": "Advisor group 19 merged: paper copy shown",
+   "pointsDone": 1.0,
+   "pointsRaised": 1.0
   }
  ],
  "foundDuringBuild": {
