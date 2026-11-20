@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 15:11
+Updated: 2026-11-20 15:12
 
 ## Shell
 
@@ -49,14 +49,14 @@ Done 2026-11-20: OFA-F-172 (merged with OFA-F-028 parts 4 and 4b).
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 16 | OFA-F-173 | Outbox: hold every email until the OFA Team approves or bins it; a switch turns the hold off | Functional | 5 | Built; in review; release 1 | - |
-| >> | 16 | OFA-F-174 | Outbox: signing envelopes wait for approval too | Functional | 5 | Built, with the seed fix; in review; release 1 | OFA-F-173 |
+| >> | 16 | OFA-F-173 | Outbox: hold every email until the OFA Team approves or bins it; a switch turns the hold off | Functional | 5 | Built; in review | - |
+| >> | 16 | OFA-F-174 | Outbox: signing envelopes wait for approval too | Functional | 5 | Built, with the seed fix; in review | OFA-F-173 |
 | | 17 | OFA-B-205 | Hold the signing-request email when the covering email wording has no approved version, instead of sending it blank | Functional | 3 | In group 17, after F-170 and F-171; before go-live | - |
 | | 17 | OFA-F-170 | Adviser asks Back Office for a missing email or signer | Functional | ?? | After group 16 | - |
 | | 17 | OFA-F-171 | Attachments on a correction request | Functional | ?? | After group 16 | - |
-| | 18 | OFA-F-094 | Each history event says who can see it; the adviser side reads its own | Functional | 3 | After group 17; release 2 | - |
-| | 18 | OFA-F-131 | Adviser side reads ended arrangements and the account's history | Functional | 2 | After group 17; release 2 | - |
-| | 18 | OFA-F-132 | Adviser side records a request to Back Office | Functional | 3 | After group 17; release 2 | - |
+| | 18 | OFA-F-094 | Each history event says who can see it; the adviser side reads its own | Functional | 3 | After group 17 | - |
+| | 18 | OFA-F-131 | Adviser side reads ended arrangements and the account's history | Functional | 2 | After group 17 | - |
+| | 18 | OFA-F-132 | Adviser side records a request to Back Office | Functional | 3 | After group 17 | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
 | | X | OFA-B-183 | A notice stuck as "send outcome unknown": label and release | Functional | 2 | After go-live | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
@@ -80,7 +80,7 @@ Done 2026-11-20: OFA-F-172 (merged with OFA-F-028 parts 4 and 4b).
 
 Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).
 
-## Advisor (release 2)
+## Advisor
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
