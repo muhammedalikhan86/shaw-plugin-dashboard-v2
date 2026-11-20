@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 2026-11-20 evening (compliance group 7 merged)
+Updated: 2026-11-20 evening (PS group 7 merged)
 
 
 ## Where we stand (20-11, evening)
@@ -19,12 +19,13 @@ Built and on main:
 5. PS group 6: answer category (F-137), Initial OFA (F-108, F-109), DART filer test-locked to S110438 / MISC (F-138).
 6. Shell is finished: column widths (F-164), gap fix (B-134), filter dialog (F-165), Expired report item removed (F-089).
 8. The "- -" on both Renewal Trackers is fixed (OFA-B-188, 20-11 evening); restart the stack to see it.
+11. PS group 7 (merged 9a765ee8): monthly cycle parity (OFA-B-191), add-by-hand parity (B-192), Import moved under Settings (F-164), Overview cards fold together (F-163 part 1; part 2 waits on SHELL-F-168).
 10. Compliance group 7 (merged 38ac0d7f): the plugin opens on the cull list (B-089), the header shows when fees are expected (B-090), Renewal notice shows only its own wording (B-091; design row W38 open), a reviewed finding-only record opens (B-088, needs migration 0119 applied at the next stack restart); B-048 closed with no change.
 9. PS2 group 14 (merged 6575f4bc): the closure email and Compliance Pending Renewals now show the platform (OFA-B-189, B-190); compliance.FindingReview carries the account details (OFA-F-162), so compliance B-088 can start.
 7. Advisor group 10: wide filters and the Unfilled forecast ASF tick box (F-148), OFA Questionnaire column order (F-147).
 
 Building now:
-1. PS group 7: monthly cycle parity (24 gaps) and add-by-hand parity (9 gaps). The F-138 DART body fix is already merged (21608d24); the user retests once the stack is free. Then F-028 go-live prep.
+1. PS: OFA-F-028 go-live prep (-PrepareOnly only), then group 8 (B-193 checklist notes, B-194 notice viewer), then F-169. Group 7 merged 9a765ee8. DART retest once the stack is free.
 2. PS2 group 15: OFA-F-165 (closure confirmation reads), plus F-166, F-167, F-168 (the advisor-surface reads and sends ADVISOR-DASHBOARD-F-142 part 2 needs). Group 14 merged 6575f4bc.
 3. Advisor group 11 (unparked by the user 20-11): F-145, F-146, F-142, F-049 (correction part), F-059, F-057.
 4. Compliance group 8: B-092 (checklist notes overlap), B-093 (notice viewer scrolls), B-094 (Quarantine column widths). Group 7 merged 38ac0d7f.
@@ -70,7 +71,7 @@ Done 20-11 (group 3, 74c491a1): F-165 (filter dialog wide field, one-field range
 Done 20-11 (group 2, 003196ab): F-164, B-134, B-022 (theme half; plugins opt in after go-live). Owed next stack window: layout crawl, compliance closed-months A20, manual column check, B-134 look on Advisor's OFA Questionnaire.
 Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostChanged] and (resetPressed)), B-133 (1877cdd8, proof in PS's next window). Done 18-11: B-131, B-132 (799cc46e), F-144 part 2 (8bce346d), F-144 part 1, F-145, F-084, F-151, F-107, F-114, F-116, B-085, B-119, B-122, B-130, F-160.
 
-## Portfolio Services (pointer: group 7: monthly cycle + Initial OFAs add-by-hand parity, then F-028)
+## Portfolio Services (pointer: OFA-F-028 go-live prep (-PrepareOnly), then group 8: B-193 checklist notes, B-194 notice viewer; then F-169)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|---|---|---|---|---|
@@ -80,14 +81,12 @@ Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostCh
 | 15 | X | OFA-F-160 | Remove the manual fee sync: the button, the frontend call and the endpoint that runs dbo.SyncFee | 2 | After go-live (Neeraj via Muhammed 20-11) |
 | | - | OFA-F-138 | File the signed renewal document in DART: the real filer | 3 | Built, test-locked to S110438 / MISC (merged 20-11). Test filing 20-11 got a 502 (Agility refused); body fix merged 21608d24, retest pending. Live filing needs OFAREN |
 | | 7 | OFA-F-138 fix (merged b7b2d75d, 20-11) | DART Add body as AccountClosureWorkflow sends it (no documentId or status; "S" with sentDate and deliveryMethod); show the relay's reason on a refusal | - | Then the user retests once |
-| >> | 7 | OFA-B-191 | The monthly cycle against its boards (Muhammed 20-11): stepper rebuilt as drawn; table toolkit filter bar, status track and Filter dialog as on the Advisor Dashboard; other gaps fixed | ?? | Own-checkout stack, minimal processes; ahead of F-028 |
-| >> | 7 | OFA-B-192 | Initial OFAs > Add an arrangement by hand: the expanding "Add a platform" section is misaligned; whole dialog against its board (Muhammed 20-11) | ?? | Same parity run as the monthly cycle |
-| | 7 | OFA-F-163 | Overview: condensing one card condenses all; the Expired fee-not-yet-confirmed / Renewal notices not fully signed card gets a condense option | 3 | User 20-11; the two tracks join the shared fold once SHELL-F-168 lands |
-| | 7 | OFA-F-164 | Import leaves the sidebar; opened from Settings instead (same route and access) | ?? | User 20-11 |
+| | X | OFA-F-163 | Overview fold, part 2: the two tracks join the shared fold | ?? | Waits on SHELL-F-168 |
 | 7 | 7 | OFA-F-028 | Go-live prep: deploy parts with -PrepareOnly, to the IIS Deployment Standard | 5 | Release 1, last (Muhammed 20-11) |
 | 6 | X | OFA-F-155 | Acceptance evidence per signatory | 2 | Held, for when COMPLIANCE-DASHBOARD-F-004 needs every signer |
 | 14 | X | OFA-F-144 | Test data: a register-only data set over a shared warehouse | 3 | After go-live (Muhammed 19-11) |
 
+Done 20-11 (group 7, merged 9a765ee8): OFA-B-191, B-192 (0135), F-164, F-163 part 1. Full .NET run and business tests owed when the stack stops.
 Done 20-11 (group 6, merged with b81d9423): OFA-F-137, F-138 (test-locked, S110438/MISC), F-108, F-109 (migrations 0129, 0130, 0133, 0134; next PS 0135).
 Done 20-11 (B-187): the exceptions check job only reads dbo.Fee.
 Done 20-11 (B-186, merged on main): Sync fees hidden; SyncFee job monthly on the 1st at 06:00. F-030 closed as superseded.
