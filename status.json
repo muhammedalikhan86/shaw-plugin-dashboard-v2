@@ -78,10 +78,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 507.0,
-   "pointsRemaining": 44.0,
-   "pointsTotal": 551.0,
-   "itemsRemaining": 16,
+   "pointsDone": 514.0,
+   "pointsRemaining": 39.0,
+   "pointsTotal": 553.0,
+   "itemsRemaining": 13,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ],
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 130.94,
+  "pointsPerWorkingDayWholePeriod": 131.48,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -235,8 +235,8 @@
    },
    {
     "date": "2026-11-20",
-    "pointsDone": 1702.0,
-    "pointsDoneThatDay": 269.0
+    "pointsDone": 1709.0,
+    "pointsDoneThatDay": 276.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -263,7 +263,7 @@
     "likely": "2026-11-24",
     "pessimistic": "2026-11-25",
     "rateLast10": 18.12,
-    "rateWhole": 37.39
+    "rateWhole": 37.93
    },
    "Compliance": {
     "optimistic": "2026-11-23",
@@ -279,9 +279,9 @@
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 130.94,
-   "pointsRemaining": 271.0,
-   "itemsRemaining": 124
+   "rateWhole": 131.48,
+   "pointsRemaining": 266.0,
+   "itemsRemaining": 121
   }
  },
  "milestones": [
@@ -359,7 +359,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-20T20:30:40+11:00",
+ "updatedAt": "2026-11-20T20:35:24+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2207,6 +2207,12 @@
    "change": "Shell group 8: sign-in Try again, Profile and Act As look fixes, status track tests",
    "pointsDone": 8.0,
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-20T20:35:24+11:00",
+   "change": "Advisor group 14: shared status track on the Questionnaire and Renewal tracker, state test scenarios, two wording and form fixes",
+   "pointsDone": 7.0,
+   "pointsRaised": 2.0
   }
  ],
  "foundDuringBuild": {
