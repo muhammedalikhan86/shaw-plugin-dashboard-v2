@@ -18,11 +18,12 @@ Built and on main:
 4. Back Office requests and missing-details asks (F-027), insurance platforms (F-059), closures on master-list rows (F-078), Overview counters (F-056).
 5. PS group 6: answer category (F-137), Initial OFA (F-108, F-109), DART filer test-locked to S110438 / MISC (F-138).
 6. Shell is finished: column widths (F-164), gap fix (B-134), filter dialog (F-165), Expired report item removed (F-089).
+8. The "- -" on both Renewal Trackers is fixed (OFA-B-188, 20-11 evening); restart the stack to see it.
 7. Advisor group 10: wide filters and the Unfilled forecast ASF tick box (F-148), OFA Questionnaire column order (F-147).
 
 Building now:
 1. PS group 7: monthly cycle and Initial OFAs add-by-hand parity, plus the F-138 DART fix (the 20-11 test filing got a 502; the Add body is being aligned with AccountClosureWorkflow). Then F-028 go-live prep.
-2. PS2 group 13: OFA-B-188, the "- -" platform and product on both Renewal Trackers; then OFA-F-161, the fee expected time for compliance's banner.
+2. PS2 group 13: OFA-F-161, the fee expected time for compliance's banner; then group 14: OFA-B-189, B-190 (the same blank platform in the closure email and Compliance Pending Renewals).
 3. Advisor group 11 (unparked by the user 20-11): F-145, F-146, F-142, F-049 (correction part), F-059, F-057.
 4. Compliance group 6 (unparked by the user 20-11): B-083, plus all 4 parity gaps (B-084 fees-not-arrived banner, B-085, B-086, B-087), owed docs.
 5. Shell's stack window was killed for low memory (20-11 evening); the 4200 stack is down. The stack checks and the full Jest run rerun after the current groups merge (user).
@@ -87,21 +88,23 @@ Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).
 
-## Portfolio Services 2 (pointer: group 13: OFA-B-188, then OFA-F-161)
+## Portfolio Services 2 (pointer: group 13: OFA-F-161; then group 14: OFA-B-189, B-190)
 
 Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfolio-services-2`, branch `portfolio-services-2`, port offset 40, artboard port 8799.
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 1 | - | (setup) | In hub.json and opened 18-11 on Lachlan's account | - | Done |
-| >> | 13 | OFA-B-188 | Renewal tracker "- -" platform/product, on both the Advisor and the OFA Dashboard trackers (and check usp_ClientClosure_List): resolve as the questionnaire surface does | ?? | ADVISOR-DASHBOARD-B-113 waits; migration 0116 |
-| | 13 | OFA-F-161 | compliance.SourceTimes gains FeesExpectedUtc (when today's fees were due), for the compliance fees-not-arrived banner | ?? | For COMPLIANCE-DASHBOARD-B-084; migration 0117 |
+| >> | 13 | OFA-F-161 | compliance.SourceTimes gains FeesExpectedUtc (when today's fees were due), for the compliance fees-not-arrived banner | ?? | For COMPLIANCE-DASHBOARD-B-084; migration 0117 |
+| | 14 | OFA-B-189 | Closure confirmation email: blank platform; resolve it the B-188 way (0113) | ?? | FUNC |
+| | 14 | OFA-B-190 | Compliance Pending Renewals: platform and product the B-188 way (0108) | ?? | FUNC |
 | 9 | X | OFA-B-183 | A notice held as "send outcome unknown": friendly label on the Issuance tab, and a release action | 2 | After go-live (rare case; a person checks Annature) |
 | 10 | X | OFA-B-184 | A timeout on create-and-send can still send twice; needs a lookup route in AnnatureInterfaceWebAPI | 2 | After go-live |
 | 8 | X | OFA-B-182 | The Fee status column is not in table-tools show/hide, sort or export | 1 | After go-live (looks) |
 | 6 | X | OFA-F-158 | Replace every placeholder email with Luke's templates (merge tags as before) | 1 | Blocked on Luke's reply |
 | 7 | X | OFA-B-179 | Expired report wrong when the State Manager email switch is off (row text + help text) | 1 | After go-live (switch is ON at go-live) |
 
+Done 20-11 (group 13 part 1, merged 8cfef855): OFA-B-188 (0116; both Renewal Trackers and the export show platform and product).
 Done 20-11 (group 12, merged 7ea4ce2a): OFA-F-078, F-056 (GET /overview/counts; O13 not built).
 Done 20-11 (group 11, merged 321304ae): OFA-F-027 (0115), F-059, OFA-S-007 findings (parked with the DART pause).
 Done 19-11 (group 10, merged 39d785af): OFA-F-044 (0113, closure confirmation; Emails:ClosureConfirmation on, placeholder wording), OFA-B-185 (0114, feeOffRecordedOn). Compliance wording test now eighteen.
@@ -137,12 +140,12 @@ Done 19-11 (group 4, merged a813a521): F-010, F-029.
 Done 19-11 (group 3, merged 7c6979ec): B-069, F-042, F-039, F-043.
 Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079. Merged 4cf941b5: F-020, F-041, F-044, B-081, B-080 (browser pass owed).
 
-## Advisor (pointer: group 11, serial: F-145, F-146, F-142, F-049 (correction part), F-059, F-057; skipped as blocked: F-141, F-143, F-144, F-117, F-118; B-113 closes on OFA-B-188)
+## Advisor (pointer: group 11, serial: F-145, F-146, F-142, F-049 (correction part), F-059, F-057; skipped as blocked: F-141, F-143, F-144, F-117, F-118)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | | 8 | ADVISOR-DASHBOARD-F-147 | OFA Questionnaire column order (Muhammed's test 20-11): frozen Adviser code, S-Account, Account name, Platform, Platform account number, Product, Platform accounts; then read-only Status, Reference Date, past 12 months ASF (excl GST); then editable No OFA obligation, Payment frequency, Next reference date, Forecast ASF (excl GST), Salutation, Email, the questions, Notes | 2 | Done 20-11 (merged) |
-| | 10 | ADVISOR-DASHBOARD-B-113 | Renewal Tracker: Platform accounts column shows "- -" instead of platform and product | ?? | Blocked on OFA-B-188 (PS2 group 13); no advisor code |
+| | 10 | ADVISOR-DASHBOARD-B-113 | Renewal Tracker: Platform accounts column shows "- -" instead of platform and product | ?? | Fixed by OFA-B-188 (8cfef855); marked at group 11 Finalization |
 | 1d | X | ADVISOR-DASHBOARD-F-145 | Hide "Fee turned off" once recorded: feeOffAccounts reads feeOffRecordedOn from the renewal tracker read | 1 | After OFA-B-185 lands; with the next advisor group |
 | 1e | X | ADVISOR-DASHBOARD-F-146 | Closures: wire the closure confirmation to advisor.usp_ClosureConfirmation_Read / _Send / _RecordSentByAdviser (OFA-F-044, PS architecture §3.3) | 3 | With the next advisor group (release 2) |
 | 1c | X | (SHELL-F-163 follow-up) | Swap ad-questionnaire-track for the shared track | 1 | Queued; after go-live (looks only) |

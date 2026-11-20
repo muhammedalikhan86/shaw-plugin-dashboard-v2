@@ -56,9 +56,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 588.0,
+   "pointsDone": 589.0,
    "pointsRemaining": 189.0,
-   "pointsTotal": 777.0,
+   "pointsTotal": 778.0,
    "itemsRemaining": 90,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 119.32,
+  "pointsPerWorkingDayWholePeriod": 119.4,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -235,8 +235,8 @@
    },
    {
     "date": "2026-11-20",
-    "pointsDone": 1551.0,
-    "pointsDoneThatDay": 118.0
+    "pointsDone": 1552.0,
+    "pointsDoneThatDay": 119.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -256,7 +256,7 @@
     "likely": "2026-11-27",
     "pessimistic": "2026-11-27",
     "rateLast10": 38.95,
-    "rateWhole": 42.68
+    "rateWhole": 42.76
    },
    "Advisor": {
     "optimistic": "2026-11-24",
@@ -279,7 +279,7 @@
    "pessimistic": "2026-11-27",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 119.32,
+   "rateWhole": 119.4,
    "pointsRemaining": 248.0,
    "itemsRemaining": 109
   }
@@ -359,7 +359,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-20T11:25:15+11:00",
+ "updatedAt": "2026-11-20T11:33:19+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2054,6 +2054,12 @@
    "at": "2026-11-20T11:25:15+11:00",
    "change": "Advisor and Compliance unparked; shell running owed stack checks; DART test filing 502, fix in PS group 7",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-20T11:33:19+11:00",
+   "change": "PS2 merged OFA-B-188: platform and product show on both Renewal Trackers",
+   "pointsDone": 1.0,
+   "pointsRaised": 1.0
   }
  ],
  "foundDuringBuild": {
