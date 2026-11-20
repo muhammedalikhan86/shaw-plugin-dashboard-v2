@@ -4,24 +4,15 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 23:36
+Updated: 2026-11-20 23:38
 
-## Shell (pointer: group 9)
+## Shell (pointer: group 10)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 9 | SHELL-B-163 | Toolbar inline padding 20px, as drawn | Look and Feel | 1 | Closed: already matches the OFA boards (16px), 0 pts built | - |
-| >> | 9 | SHELL-B-164 | Preferences delay row inline padding | Look and Feel | 1 | Building | - |
-| >> | 9 | SHELL-B-165 | Plugins card title-row inset | Look and Feel | 1 | Building | - |
-| >> | 9 | SHELL-B-166 | Profile card sized to content, roles box max 156px | Look and Feel | 1 | Building | - |
-| >> | 9 | SHELL-B-167 | Plugins table edge 13px while scrolling | Look and Feel | 1 | Building | - |
-| >> | 9 | SHELL-B-168 | Date toggle icon 15px in | Look and Feel | 1 | Building | - |
-| >> | 9 | SHELL-B-169 | Toolbar pickers' edges | Look and Feel | 1 | Building | - |
-| >> | 9 | SHELL-B-170 | Picker outline notch closed | Look and Feel | 2 | Building | - |
-| >> | 9 | LANDING-PAGE-B-007 | Landing card body text 14/20 | Look and Feel | 1 | Building | - |
-| | 10 | (shell raises it) | A plain table can set one column's greatest width through the public table-tools API (from COMPLIANCE-DASHBOARD-B-114: the Load dialog's Field column at 560) | Functional | 1 | Group 10, after group 9 | - |
+| >> | 10 | SHELL-B-171 | A plain table can set one column's greatest width through the public table-tools API (from COMPLIANCE-DASHBOARD-B-114: the Load dialog's Field column at 560) | Functional | 1 | Go 2026-11-20 (compliance waits on it) | - |
 
-Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170. Group 8 (2e2ab1ec): SHELL-B-157..B-162, LANDING-PAGE-B-006.
+Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170. Group 8 (2e2ab1ec): SHELL-B-157..B-162, LANDING-PAGE-B-006.; group 9 SHELL-B-164 to B-170, LANDING-PAGE-B-007, B-163 closed with no change (90b40bf7)
 
 ## Portfolio Services (pointer: group 9)
 
@@ -54,6 +45,7 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | >> | 19 | OFA-B-209 | Issuance: friendly label and Release button for a notice held by an unknown outcome (front end of OFA-B-183) | Functional | 1 | Go 2026-11-20; moved from PS group 10 | - |
 | >> | 19 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | Go 2026-11-20; moved from PS group 10 (same Issuance files as B-209) | - |
 | >> | 19 | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | Go 2026-11-20; moved from PS group 11, unblocks COMPLIANCE-DASHBOARD-F-037 | - |
+| >> | 19 | (adopt) | Monthly cycle and Exceptions report Cycle pickers take select--picker-inset (SHELL-B-169) | Look and Feel | 1 | Go 2026-11-20 | SHELL-B-169 |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b).
@@ -65,6 +57,7 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 | >> | 12 | End sweep | Board check and business scenarios on the built app for every screen groups 3 to 11 touched; remaining scenarios of F-008 | Look and Feel | ?? | Go 2026-11-20; one browser run allowed, look only | - |
 | >> | 12 | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | Go 2026-11-20, with the end sweep | - |
 | | 12 | COMPLIANCE-DASHBOARD-B-114 | Load dialog: Check column 60px left of the board | Look and Feel | 1 | Moved to the shell (shell group 10); the plugin adopts it after | - |
+| >> | 12 | (adopt) | Month picker takes select--picker-inset (SHELL-B-169) | Look and Feel | 1 | Go 2026-11-20, with the end sweep | SHELL-B-169 |
 | | 13 | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | Functional | 2 | Group 13, once OFA-F-144 is on main | OFA-F-144 |
 
 Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563)
@@ -82,6 +75,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 | | 16 | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | Functional | 2 | Group 16, after group 15; PS2 reads on main (d4b81a3b) | OFA-F-131 |
 | | 16 | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | Functional | 3 | Group 16, after group 15; PS2 reads on main (d4b81a3b) | OFA-F-132 |
+| | 16 | (adopt) | Counterpart, arrangements and closures pickers take select--picker-inset (drop local B-037); Initial OFA start date and DA picker take field--label-box | Look and Feel | 2 | Group 16 | SHELL-B-169, SHELL-B-170 |
 
 Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777). Group 13 (bafb7b09): ADVISOR-DASHBOARD-B-116, B-117, B-118, B-119, five board-target reds. Group 14 (0c46c642): ADVISOR-DASHBOARD-F-151, F-152, B-120, B-121, B-122.
 
