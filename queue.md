@@ -142,6 +142,7 @@ Collision rules (hub ruling 18-11):
 |---|-----|----|------|------|---------------------|
 | | 8 | COMPLIANCE-DASHBOARD-B-092 | OFA checklist: long step notes overlap each other (user 20-11) | ?? | FUNC (notes unreadable); next group |
 | | 8 | COMPLIANCE-DASHBOARD-B-093 | Closed months Issued notice viewer scrolls; the PDF should fill the dialog with no outer scroll (user 20-11) | ?? | Next group; same shape as OFA-B-194 |
+| | 8 | COMPLIANCE-DASHBOARD-B-094 | Quarantine page: Extension and Last prompt columns 250px by default, still resizable 100-500px (user 20-11) | ?? | Next group |
 | X | X | COMPLIANCE-DASHBOARD-B-083 | History and closed-month cull notes skip a note a trail step names (put-back, stop follow-ups) | 1 | After go-live (display only) |
 | 5 | X | (owed) | Browser pass and Board Parity for groups 2 and 3: touched screens; F-044, F-020, B-081 and group 3 scenarios | - | End parity sweep |
 | 6 | X | (owed) | Clear the three @not-built-COMPLIANCE-DASHBOARD-F-040 tags (arrangements.feature:260) once they pass | - | End parity sweep |
