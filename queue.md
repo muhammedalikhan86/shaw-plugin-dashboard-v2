@@ -10,27 +10,27 @@ Updated: 2026-11-20 18:56
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 6 | SHELL-B-143 | Table headers stay frozen when the page scrolls down (they scroll away today) | Functional | 3 | First: user-reported | - |
-| >> | 6 | SHELL-B-145 | Profile and Preferences with Keep open on: the plugins card scrolls sideways and clips Notifications by 46px | Functional | 2 | Building | - |
-| >> | 6 | LANDING-PAGE-B-001 | Greeting wording as the board | Functional | 1 | Building | - |
-| >> | 6 | SHELL-B-146 | Keep-open switch sits 6px left | Look and Feel | 1 | Building | - |
-| >> | 6 | SHELL-B-149 | Avatar initials size and weight | Look and Feel | 1 | Building | - |
-| >> | 6 | SHELL-B-148 | Act As chip: size, icon and type | Look and Feel | 1 | Building | - |
-| >> | 6 | SHELL-B-151 | Act As panel labels colour | Look and Feel | 1 | Building | - |
-| >> | 6 | LANDING-PAGE-B-002 | Landing card icon 8px off | Look and Feel | 1 | Building | - |
-| >> | 6 | SHELL-B-139 | Plugins-unavailable message fits the rail | Functional | 1 | Building | - |
-| >> | 6 | SHELL-B-140 | Failed identity read: Try again, no blank area | Functional | 2 | Building | - |
-| >> | 6 | SHELL-B-141 | Search empty state says "dashboards" | Functional | 1 | Building | - |
-| >> | 6 | SHELL-B-142 | Profile and Preferences: black labels, page position as drawn | Look and Feel | 1 | Building | - |
-| >> | 6 | SHELL-B-152 | Keep open switch off-state, as drawn | Look and Feel | 1 | Building | - |
-| >> | 6 | SHELL-B-153 | Toolbar icons white, as drawn | Look and Feel | 1 | Building | - |
-| >> | 6 | SHELL-B-154 | Bell badge 18px weight 500 | Look and Feel | 1 | Building | - |
-| >> | 6 | LANDING-PAGE-B-003 | Card source line type | Look and Feel | 1 | Building | - |
-| >> | 6 | LANDING-PAGE-B-004 | Card title regular weight | Look and Feel | 1 | Building | - |
-| >> | 6 | LANDING-PAGE-B-005 | Card footer type | Look and Feel | 1 | Building | - |
+| >> | 6 | SHELL-B-143 | Table headers stay frozen when the page scrolls down (they scroll away today) | Functional | 3 | Review passed; frozen-heading check on PS, compliance, advisor running | - |
+| >> | 6 | SHELL-B-145 | Profile and Preferences with Keep open on: the plugins card scrolls sideways and clips Notifications by 46px | Functional | 2 | Review passed; board check running | - |
+| >> | 6 | LANDING-PAGE-B-001 | Greeting wording as the board | Functional | 1 | Review passed; board check running | - |
+| >> | 6 | SHELL-B-146 | Keep-open switch sits 6px left | Look and Feel | 1 | Review passed; board check running | - |
+| >> | 6 | SHELL-B-149 | Avatar initials size and weight | Look and Feel | 1 | Review passed; board check running | - |
+| >> | 6 | SHELL-B-148 | Act As chip: size, icon and type | Look and Feel | 1 | Review passed; board check running | - |
+| >> | 6 | SHELL-B-151 | Act As panel labels colour | Look and Feel | 1 | Review passed; board check running | - |
+| >> | 6 | LANDING-PAGE-B-002 | Landing card icon 8px off | Look and Feel | 1 | Review passed; board check running | - |
+| >> | 6 | SHELL-B-139 | Plugins-unavailable message fits the rail | Functional | 1 | Review passed; board check running | - |
+| >> | 6 | SHELL-B-140 | Failed identity read: Try again, no blank area | Functional | 2 | Review passed; board check running | - |
+| >> | 6 | SHELL-B-141 | Search empty state says "dashboards" | Functional | 1 | Review passed; board check running | - |
+| >> | 6 | SHELL-B-142 | Profile and Preferences: black labels, page position as drawn | Look and Feel | 1 | Review passed; board check running | - |
+| >> | 6 | SHELL-B-152 | Keep open switch off-state, as drawn | Look and Feel | 1 | Review passed; board check running | - |
+| >> | 6 | SHELL-B-153 | Toolbar icons white, as drawn | Look and Feel | 1 | Review passed; board check running | - |
+| >> | 6 | SHELL-B-154 | Bell badge 18px weight 500 | Look and Feel | 1 | Review passed; board check running | - |
+| >> | 6 | LANDING-PAGE-B-003 | Card source line type | Look and Feel | 1 | Review passed; board check running | - |
+| >> | 6 | LANDING-PAGE-B-004 | Card title regular weight | Look and Feel | 1 | Review passed; board check running | - |
+| >> | 6 | LANDING-PAGE-B-005 | Card footer type | Look and Feel | 1 | Review passed; board check running | - |
 | | 7 | SHELL-B-155 | Theme badge default 18px weight 500 for every plugin, as the boards draw it | Look and Feel | 1 | First in group 7 | - |
 | | 7 | SHELL-F-170 | Shared "built app only" test step in business-tests/support/steps; the component copies go | Undetermined | 1 | Group 7 | - |
-| | 7 | SHELL-B-156 | Table toolkit: on a wide card, spare width spreads onto capped columns (Note past 500px); size the fixed table to its columns | Functional | ?? | Group 7; from COMPLIANCE-DASHBOARD-B-113 | - |
+| | 7 | SHELL-B-156 | Table toolkit: on a wide card, spare width spreads onto capped columns (Note past 500px); size the fixed table to its columns | Functional | 2 | Group 7; from COMPLIANCE-DASHBOARD-B-113 | - |
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page)
 
 ## Portfolio Services (pointer: group 9)
