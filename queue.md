@@ -23,7 +23,12 @@ Updated: 2026-11-20 15:34
 | >> | 6 | SHELL-B-140 | Failed identity read: Try again, no blank area | Functional | ? | Building | - |
 | >> | 6 | SHELL-B-141 | Search empty state says "dashboards" | Functional | ? | Building | - |
 | >> | 6 | SHELL-B-142 | Profile and Preferences: black labels, page position as drawn | Look and Feel | ? | Building | - |
-| | 6 | (re-check) | Re-measure shell #8, #17, #18 and landing #2, #4, #5; raise and fold in the ones that stand | Undetermined | ?? | In group 6 board check | - |
+| >> | 6 | SHELL-B-152 | Keep open switch off-state, as drawn | Look and Feel | 1 | Building | - |
+| >> | 6 | SHELL-B-153 | Toolbar icons white, as drawn | Look and Feel | 1 | Building | - |
+| >> | 6 | SHELL-B-154 | Bell badge 18px weight 500 | Look and Feel | 1 | Building | - |
+| >> | 6 | LANDING-PAGE-B-003 | Card source line type | Look and Feel | 1 | Building | - |
+| >> | 6 | LANDING-PAGE-B-004 | Card title regular weight | Look and Feel | 1 | Building | - |
+| >> | 6 | LANDING-PAGE-B-005 | Card footer type | Look and Feel | 1 | Building | - |
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page)
 
 ## Portfolio Services
