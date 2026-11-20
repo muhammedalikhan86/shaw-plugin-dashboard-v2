@@ -98,10 +98,10 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 227.0,
-   "pointsRemaining": 13.0,
+   "pointsDone": 232.0,
+   "pointsRemaining": 8.0,
    "pointsTotal": 240.0,
-   "itemsRemaining": 3,
+   "itemsRemaining": 2,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 35.0,
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 139.33,
+  "pointsPerWorkingDayWholePeriod": 139.71,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -240,8 +240,8 @@
    },
    {
     "date": "2026-11-21",
-    "pointsDone": 1811.0,
-    "pointsDoneThatDay": 78.0
+    "pointsDone": 1816.0,
+    "pointsDoneThatDay": 83.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -275,7 +275,7 @@
     "likely": "2026-11-23",
     "pessimistic": "2026-11-23",
     "rateLast10": 20.38,
-    "rateWhole": 17.24
+    "rateWhole": 17.62
    }
   },
   "overall": {
@@ -284,9 +284,9 @@
    "pessimistic": "2026-11-27",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 139.33,
-   "pointsRemaining": 211.0,
-   "itemsRemaining": 94
+   "rateWhole": 139.71,
+   "pointsRemaining": 206.0,
+   "itemsRemaining": 93
   }
  },
  "milestones": [
@@ -364,7 +364,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-21T05:32:32+11:00",
+ "updatedAt": "2026-11-21T05:50:27+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2327,6 +2327,11 @@
    "change": "Shell B-176 on main",
    "pointsDone": 1.0,
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-21T05:50:27+11:00",
+   "change": "Compliance group 16 merged: Signing and expiry",
+   "pointsDone": 5.0
   }
  ],
  "foundDuringBuild": {
