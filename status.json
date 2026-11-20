@@ -98,10 +98,10 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 217.0,
-   "pointsRemaining": 16.0,
+   "pointsDone": 220.0,
+   "pointsRemaining": 13.0,
    "pointsTotal": 233.0,
-   "itemsRemaining": 6,
+   "itemsRemaining": 3,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 33.0,
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 131.48,
+  "pointsPerWorkingDayWholePeriod": 131.71,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -235,8 +235,8 @@
    },
    {
     "date": "2026-11-20",
-    "pointsDone": 1709.0,
-    "pointsDoneThatDay": 276.0
+    "pointsDone": 1712.0,
+    "pointsDoneThatDay": 279.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -270,7 +270,7 @@
     "likely": "2026-11-23",
     "pessimistic": "2026-11-23",
     "rateLast10": 20.38,
-    "rateWhole": 16.47
+    "rateWhole": 16.7
    }
   },
   "overall": {
@@ -279,9 +279,9 @@
    "pessimistic": "2026-11-30",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 131.48,
-   "pointsRemaining": 266.0,
-   "itemsRemaining": 121
+   "rateWhole": 131.71,
+   "pointsRemaining": 263.0,
+   "itemsRemaining": 118
   }
  },
  "milestones": [
@@ -359,7 +359,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-20T20:35:24+11:00",
+ "updatedAt": "2026-11-20T20:48:12+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2213,6 +2213,11 @@
    "change": "Advisor group 14: shared status track on the Questionnaire and Renewal tracker, state test scenarios, two wording and form fixes",
    "pointsDone": 7.0,
    "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-20T20:48:12+11:00",
+   "change": "Compliance group 11 merged",
+   "pointsDone": 3.0
   }
  ],
  "foundDuringBuild": {

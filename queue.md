@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 20:45
+Updated: 2026-11-20 20:48
 
 ## Shell (pointer: group 9)
 
@@ -62,17 +62,15 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9).
 
-## Compliance
+## Compliance (pointer: group 12, end sweep)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 11 | COMPLIANCE-DASHBOARD-B-095 | Quarantine: Extension and Last prompt start at 250px | Look and Feel | 1 | Integration green; finalizing | - |
-| >> | 11 | COMPLIANCE-DASHBOARD-B-111 | Load a new approved version: Check column sits about 60px left of the board | Look and Feel | 1 | Closed, no change: build matches the board at 1440 | - |
-| >> | 11 | COMPLIANCE-DASHBOARD-B-112 | Platform full names in the 8 other places the board draws them | Look and Feel | 1 | Integration green; finalizing | - |
-| >> | 11 | COMPLIANCE-DASHBOARD-B-113 | Closed months notes tab: the Note column stays within 500px and the note wraps | Look and Feel | 1 | Moved to the shell: SHELL-B-156 | - |
-| | 12 | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | Functional | 2 | Group 12, after group 11; once OFA-F-144 is on main | OFA-F-144 |
+| >> | 12 | End sweep | Board check and business scenarios on the built app for every screen groups 3 to 11 touched; remaining scenarios of F-008 | Look and Feel | ?? | Go 2026-11-20; one browser run allowed, look only | - |
+| >> | 12 | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | Go 2026-11-20, with the end sweep | - |
+| | 13 | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | Functional | 2 | Group 13, once OFA-F-144 is on main | OFA-F-144 |
 
-Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c)
+Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563)
 
 ## Advisor (pointer: group 15)
 
