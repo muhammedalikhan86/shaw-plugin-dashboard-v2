@@ -4,13 +4,21 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 20:30
+Updated: 2026-11-20 20:32
 
 ## Shell (pointer: group 9)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 9 | (shell raises SHELL-B-163 up, LANDING-PAGE-B-007) | Last look gaps against the board: toolbar inline padding 20px; landing card body text 14/20; Profile delay row padding, plugins card title inset, card sizing, table edge when scrolled; date-field calendar icon inset, column-chooser menu width, toolbar picker edge, outlined-field notch | Look and Feel | ~6 | Building, two developers max | - |
+| >> | 9 | SHELL-B-163 | Toolbar inline padding 20px, as drawn | Look and Feel | 1 | Building | - |
+| >> | 9 | SHELL-B-164 | Preferences delay row inline padding | Look and Feel | 1 | Building | - |
+| >> | 9 | SHELL-B-165 | Plugins card title-row inset | Look and Feel | 1 | Building | - |
+| >> | 9 | SHELL-B-166 | Profile card sized to content, roles box max 156px | Look and Feel | 1 | Building | - |
+| >> | 9 | SHELL-B-167 | Plugins table edge 13px while scrolling | Look and Feel | 1 | Building | - |
+| >> | 9 | SHELL-B-168 | Date toggle icon 15px in | Look and Feel | 1 | Building | - |
+| >> | 9 | SHELL-B-169 | Toolbar pickers' edges | Look and Feel | 1 | Building | - |
+| >> | 9 | SHELL-B-170 | Picker outline notch closed | Look and Feel | 2 | Building | - |
+| >> | 9 | LANDING-PAGE-B-007 | Landing card body text 14/20 | Look and Feel | 1 | Building | - |
 
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170. Group 8 (2e2ab1ec): SHELL-B-157..B-162, LANDING-PAGE-B-006.
 
