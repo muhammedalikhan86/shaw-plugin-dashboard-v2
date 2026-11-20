@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 15:14
+Updated: 2026-11-20 15:17
 
 ## Shell
 
@@ -28,9 +28,9 @@ Updated: 2026-11-20 15:14
 | >> | F-028 | OFA-F-028 | Go-live prep: release packages for each part | Functional | 10 | Parts 4, 4b merged ; part 2 building, then 1, 3 | - |
 | | - | OFA-F-138 | File the signed renewal in DART | Functional | 3 | Blocked by your DART retest | - |
 | | 9 | OFA-F-169 | Cull notes: attach a file | Functional | 2 | After OFA-F-028; first in group 9 with OFA-B-195 | - |
-| | 9 | OFA-B-195 | Settings: the page scrolls sideways by 11px | Functional | 1 | After PS2 group 16 merges | OFA-F-173 |
-| | 9 | OFA-B-196 | Settings: the four cards in two columns, as drawn | Look and Feel | 2 | After go-live; after PS2 group 16 | OFA-F-173 |
-| | 9 | OFA-B-197 | Settings dialogs: board width, Add attachments row, change request and Preview as drawn | Look and Feel | 3 | After go-live; after PS2 group 16 | OFA-F-173 |
+| | 9 | OFA-B-195 | Settings: the page scrolls sideways by 11px | Functional | 1 | After OFA-F-028; PS2 group 16 merged | - |
+| | 9 | OFA-B-196 | Settings: the four cards in two columns, as drawn | Look and Feel | 2 | After go-live | - |
+| | 9 | OFA-B-197 | Settings dialogs: board width, Add attachments row, change request and Preview as drawn | Look and Feel | 3 | After go-live | - |
 | | 9 | OFA-B-198 | Overview: the counts move into the board's cards | Look and Feel | 2 | After go-live | - |
 | | 9 | OFA-B-199 | Overview: "Entity type" heading on one line | Look and Feel | 1 | After go-live | - |
 | | 9 | OFA-B-200 | Row and Actions menus at board widths; Exceptions menu in board order | Look and Feel | 2 | After go-live | - |
@@ -49,11 +49,9 @@ Done 2026-11-20: OFA-F-172 (merged with OFA-F-028 parts 4 and 4b).
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 16 | OFA-F-173 | Outbox: hold every email until the OFA Team approves or bins it; a switch turns the hold off | Functional | 5 | Built; merge blocked by 7 PS doc conflicts, PS2 re-merging main | - |
-| >> | 16 | OFA-F-174 | Outbox: signing envelopes wait for approval too | Functional | 5 | Built; merge blocked by 7 PS doc conflicts, PS2 re-merging main | OFA-F-173 |
-| | 17 | OFA-B-205 | Hold the signing-request email when the covering email wording has no approved version, instead of sending it blank | Functional | 3 | In group 17, after F-170 and F-171; before go-live | - |
-| | 17 | OFA-F-170 | Adviser asks Back Office for a missing email or signer | Functional | ?? | After group 16 | - |
-| | 17 | OFA-F-171 | Attachments on a correction request | Functional | ?? | After group 16 | - |
+| >> | 17 | OFA-F-170 | Adviser asks Back Office for a missing email or signer | Functional | ?? | After group 16 | - |
+| >> | 17 | OFA-F-171 | Attachments on a correction request | Functional | ?? | After group 16 | - |
+| >> | 17 | OFA-B-205 | Hold the signing-request email when the covering email wording has no approved version, instead of sending it blank | Functional | 3 | In group 17, after F-170 and F-171; before go-live | - |
 | | 18 | OFA-F-094 | Each history event says who can see it; the adviser side reads its own | Functional | 3 | After group 17 | - |
 | | 18 | OFA-F-131 | Adviser side reads ended arrangements and the account's history | Functional | 2 | After group 17 | - |
 | | 18 | OFA-F-132 | Adviser side records a request to Back Office | Functional | 3 | After group 17 | - |
@@ -62,6 +60,7 @@ Done 2026-11-20: OFA-F-172 (merged with OFA-F-028 parts 4 and 4b).
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 | | X | OFA-B-182 | Fee status column missing from show/hide, sort, export | Functional | 1 | After go-live | - |
 | | X | OFA-B-179 | Expired report wrong when the State Manager email is off | Functional | 1 | After go-live | - |
+Done 2026-11-20: OFA-F-173, OFA-F-174 (merged a733211a)
 
 ## Compliance
 
