@@ -147,6 +147,7 @@ Done 18-11: F-028, F-030, F-031, F-032, F-033, F-034, F-035, F-036, F-040, B-079
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | | 11 | ADVISOR-DASHBOARD-F-149 | Gross Revenue and Funds Under Advice cards removed from the Landing Page (user 20-11) | 1 | Code merged 8dbbf66d (hub helper); advisor records the row, fixes arch :317-318/:322, drops the landing figures load (app.ts:342) |
+| | 11 | ADVISOR-DASHBOARD-F-150 | OFA Questionnaire: Platform, Platform account number, Product, S-Account and Account name hidden by default (the consolidated columns carry them) | ?? | User 20-11 |
 | | 8 | ADVISOR-DASHBOARD-F-147 | OFA Questionnaire column order (Muhammed's test 20-11): frozen Adviser code, S-Account, Account name, Platform, Platform account number, Product, Platform accounts; then read-only Status, Reference Date, past 12 months ASF (excl GST); then editable No OFA obligation, Payment frequency, Next reference date, Forecast ASF (excl GST), Salutation, Email, the questions, Notes | 2 | Done 20-11 (merged) |
 | | 10 | ADVISOR-DASHBOARD-B-113 | Renewal Tracker: Platform accounts column shows "- -" instead of platform and product | ?? | Fixed by OFA-B-188 (8cfef855); marked at group 11 Finalization |
 | 1d | X | ADVISOR-DASHBOARD-F-145 | Hide "Fee turned off" once recorded: feeOffAccounts reads feeOffRecordedOn from the renewal tracker read | 1 | After OFA-B-185 lands; with the next advisor group |
