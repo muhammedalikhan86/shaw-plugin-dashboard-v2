@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 15:06
+Updated: 2026-11-20 15:09
 
 ## Shell
 
@@ -105,7 +105,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 
 1. Parity run: compliance, PS and advisor routed 20-11; shell finishing its cut-short part (shell, landing-page).
 2. Weekend queue: built with you once the parity run ends.
-3. Designer prompt (not yet sent; goes out after this queue round): W38, P92, P93, plus advisor B92 (F-146 confirmed line on CONFIRMED OFF rows), plus 6 parity questions: Overview "not fully signed" count slot; Adviser review answers bar placement; read-failure card on six PS screens; scope line for an adviser with several codes; Renewal tracker filter Reset and intro; Arrangements empty/loading/error card.
+3. Designer prompt (not yet sent; goes out after this queue round): W38, P92, P93, plus advisor B92 (F-146 confirmed line on CONFIRMED OFF rows), plus 6 parity questions: Overview "not fully signed" count slot; Adviser review answers bar placement; read-failure card on six PS screens; scope line for an adviser with several codes; Renewal tracker filter Reset and intro; Arrangements empty/loading/error card; compliance board: drop the empty grid after the filter-dialog fields so the gap above the buttons is 48px like advisor and PS.
 4. End sweep: the browser, business-test and board checks skipped during the build, run once at the end.
 5. Waiting on you: push main; check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest; Luke's templates and Initial OFA envelope title.
 
