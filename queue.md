@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 05:40
+Updated: 2026-11-21 05:44
 
 ## Shell (pointer: queue empty)
 
@@ -37,6 +37,7 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Blocked by you (Monday) | - |
 | >> | 22 | OFA-F-133 | Manual close of a Back Office ask: backend and its list screen (board O13); the Overview counter goes to PS | Functional | 3 | Go 2026-11-21 | - |
 | >> | 22 | OFA-B-044, B-049, B-050, B-135, B-140, F-065, F-083 | Backend and engineering: cycles, notices, a slow questionnaire read (migration), calendar, master-list reads | Functional | 11 | Go 2026-11-21, with F-133 | - |
+| | 23 | OFA-F-(new) | Adviser surface reads: Renewal tracker signatories carry paperCopy and paperUploadedUtc; the paper-copy trail event carries the signatory's name (for ADVISOR-DASHBOARD-F-139) | Functional | 2 | Next, after group 22 | - |
 | | 24 | OFA-B-078, B-100, B-104, B-105, B-114, B-122 | Exceptions report as drawn | Look and Feel | 9 | After go-live; after group 23 | - |
 | | 25 | OFA-B-024, B-045, B-047, B-071, B-073, B-107, B-128, B-130, B-137 | Monthly cycle as drawn (not the Quarantine tab); B-137 names who issued a closed month (migration) | Look and Feel | 14 | After go-live; after group 24 | - |
 | | 26 | OFA-B-015, B-027, B-129, B-131, B-132, B-133, B-134, F-088, B-084, B-109, B-125 | Arrangement record and OFA Checklist as drawn | Look and Feel | 15 | After go-live; after group 25 | - |
@@ -60,7 +61,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 18 | ADVISOR-DASHBOARD-F-075 | Every filter works, in every seat (board M20, Done) | Functional | 5 | Go 2026-11-21 | - |
-| >> | 18 | ADVISOR-DASHBOARD-F-139 | A paper-signed copy shows as plain Signed | Functional | 1 | Go 2026-11-21 | OFA-F-023 |
+| | X | ADVISOR-DASHBOARD-F-139 | A paper-signed copy shows PAPER COPY UPLOADED, as the board draws (groundwork in group 18) | Functional | 1 | After PS2 group 23 | PS2 group 23 |
 | | X | ADVISOR-DASHBOARD-F-141 | The arrangement record | Functional | 3 | Blocked by a Portfolio Services adviser documents read (no item yet) | - |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
