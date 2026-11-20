@@ -132,7 +132,7 @@ Collision rules (hub ruling 18-11):
 5. App turns: one at a time, scheduled by the hub.
 6. PS2 skips the graph rebuild; PS does it. New IDs come from the hub.
 
-## Compliance (pointer: group 6: B-083, B-084, B-085, B-086, B-087, owed docs; B-088 waits on OFA-F-162; F-037 skipped, blocked on OFA-F-144)
+## Compliance (pointer: parked after group 6 (merged 20-11); next group comes with the weekend plan; B-088 waits on OFA-F-162)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
@@ -143,6 +143,7 @@ Collision rules (hub ruling 18-11):
 | 10 | X | (owed) | Board Parity F-028/F-033/F-035/F-036; M-448120 on the board; B-048 re-measure | - | End parity sweep (user, 18-11) |
 | 11 | X | (no ID) | Parity sweep, parity-backlog rows 1-8 | - | Looks only, at the end |
 
+Done 20-11 (group 6): B-083, B-084, B-085, B-086, B-087. Owed to the end sweep: E2E for B-084..B-087, board measuring pass, business scenarios (F-010 tag), runbook counts. Parity-backlog line 11 (header expected time) now buildable.
 Done 19-11 (group 5, merged 06cea28e): F-038, F-045. Owed to the end sweep: Board Parity groups 3-5, business scenarios (F-010, S20114, F-028 OFA PDF with the new wordsIn), component-wide business run for the wordsIn change, F-040 tag clear, runbook counts, closed-months tag recount, architecture §10 Quarantine status.
 Done 19-11 (group 4, merged a813a521): F-010, F-029.
 Done 19-11 (group 3, merged 7c6979ec): B-069, F-042, F-039, F-043.

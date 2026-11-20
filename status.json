@@ -98,10 +98,10 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 187.0,
-   "pointsRemaining": 14.0,
-   "pointsTotal": 201.0,
-   "itemsRemaining": 4,
+   "pointsDone": 194.0,
+   "pointsRemaining": 16.0,
+   "pointsTotal": 210.0,
+   "itemsRemaining": 5,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 33.0,
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 119.55,
+  "pointsPerWorkingDayWholePeriod": 120.09,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -235,8 +235,8 @@
    },
    {
     "date": "2026-11-20",
-    "pointsDone": 1554.0,
-    "pointsDoneThatDay": 121.0
+    "pointsDone": 1561.0,
+    "pointsDoneThatDay": 128.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -268,9 +268,9 @@
    "Compliance": {
     "optimistic": "2026-11-23",
     "likely": "2026-11-23",
-    "pessimistic": "2026-11-23",
+    "pessimistic": "2026-11-24",
     "rateLast10": 20.38,
-    "rateWhole": 14.16
+    "rateWhole": 14.7
    }
   },
   "overall": {
@@ -279,9 +279,9 @@
    "pessimistic": "2026-11-27",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 119.55,
-   "pointsRemaining": 253.0,
-   "itemsRemaining": 113
+   "rateWhole": 120.09,
+   "pointsRemaining": 255.0,
+   "itemsRemaining": 114
   }
  },
  "milestones": [
@@ -359,7 +359,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-20T11:57:50+11:00",
+ "updatedAt": "2026-11-20T12:08:31+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2076,6 +2076,12 @@
    "change": "PS2 merged OFA-F-161: the fee expected time for the compliance banner",
    "pointsDone": 2.0,
    "pointsRaised": 7.0
+  },
+  {
+   "at": "2026-11-20T12:08:31+11:00",
+   "change": "Compliance merged group 6: five fixes, including the fees-not-arrived banner",
+   "pointsDone": 7.0,
+   "pointsRaised": 9.0
   }
  ],
  "foundDuringBuild": {
