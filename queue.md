@@ -4,12 +4,13 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 09:35
+Updated: 2026-11-21 09:46
 
-## Shell (pointer: queue empty)
+## Shell (pointer: group 15)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| >> | 15 | SHELL-B-(new) | Opt-in wrapping modifier on the table card header (search and icons on a second row, as the board's ofa-frame.css:1046-1049), with the section 3 contract bump (for OFA-B-122) | Look and Feel | 1 | Go 2026-11-21 | - |
 
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170. Group 8 (2e2ab1ec): SHELL-B-157..B-162, LANDING-PAGE-B-006.; group 9 SHELL-B-164 to B-170, LANDING-PAGE-B-007, B-163 closed with no change (90b40bf7); group 10 SHELL-B-171 (ac98f9f6); group 11 SHELL-B-172 (bafaa60d); group 12 SHELL-B-173, B-174, B-175 (f19217e8); group 13 SHELL-F-171 (d0f6b0d4); group 14 SHELL-B-176 (7a61338c)
 
@@ -21,6 +22,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | >> | 12 | Seed | A notice that stays partly signed (two signatories, one signed) on another S-Account, since S19611 is now fully signed (for compliance's partly-signed scenario) | Functional | 1 | Go 2026-11-21 | - |
 | >> | 12 | OFA-F-133 (counter) | Overview counter that opens the manual-close list (board O13; PS2 builds the list) | Functional | 1 | Go 2026-11-21 | OFA-F-133 |
 | >> | 12 | OFA-B-016, B-060, B-103, B-124, B-126, F-051, F-085, F-093 | Master list, tables and Expired report | Look and Feel | 14 | After go-live; after group 11 | - |
+| | 13 | OFA-B-078 (parts 1, 10, 11) | Exceptions report retail Since reasons (a reason field from the Exceptions/ check, plus the sinceCell lines); the 20px select arrow on ofa-checklist's Cycle select; All as a real option in the master-list filter dialog | Look and Feel | 2 | After group 12 | - |
 | | 13 | OFA-B-113, B-127, F-139, F-140, B-115 | Quarantine cells; renewal tracker features; snack and loading bar on every page | Look and Feel | 13 | After go-live; after group 12 | - |
 | | 14 | OFA-F-075, F-087, F-115, B-145 | Seed and test data (also: a DART party who does not sign yet on an open entry, for ADVISOR-DASHBOARD-F-155); app-wide spec clean-up | Functional | 10 | After go-live; after group 13 | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
@@ -35,6 +37,7 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | Blocked by you (Monday) | - |
 | | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Blocked by you (Monday) | - |
 | >> | 26 | OFA-B-078, B-100, B-104, B-105, B-114, B-122 | Exceptions report as drawn | Look and Feel | 9 | After go-live; after group 23 | - |
+| | 27 | OFA-B-122 | Exceptions report card header on two rows: add the shell's new wrapping class | Look and Feel | 1 | After shell group 15 | SHELL-B-(new) |
 | | 27 | OFA-B-024, B-045, B-047, B-071, B-073, B-107, B-128, B-130, B-137 | Monthly cycle as drawn (not the Quarantine tab); B-137 names who issued a closed month (migration) | Look and Feel | 14 | After go-live; after group 26 | - |
 | | 28 | OFA-B-015, B-027, B-129, B-131, B-132, B-133, B-134, F-088, B-084, B-109, B-125 | Arrangement record and OFA Checklist as drawn | Look and Feel | 15 | After go-live; after group 27 | - |
 | | 29 | OFA-B-026, B-143, B-144, F-029 | Tests: start-up flake, stale tests, faster .NET run; parity.spec.ts drops B-002 and B-004 | Functional | 12 | After go-live; after group 28 | - |
