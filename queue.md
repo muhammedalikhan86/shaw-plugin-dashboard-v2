@@ -61,7 +61,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 20 | ADVISOR-DASHBOARD-F-141 | The arrangement record: swap the mock for OFA-F-181 and close it | 3 | Go 2026-11-21 | PS2 group 24 (for the real read) |
+| >> | 20 | ADVISOR-DASHBOARD-F-141 | The arrangement record: swap the mock for OFA-F-181 and close it | Functional | 3 | Go 2026-11-21 | PS2 group 24 (for the real read) |
 | >> | 20 | ADVISOR-DASHBOARD-F-158 | History names the signatory on signed and declined steps, as the board draws | Functional | - | Go 2026-11-21 | - |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
