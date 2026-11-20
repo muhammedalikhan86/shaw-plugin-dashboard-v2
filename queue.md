@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 19:39
+Updated: 2026-11-20 19:42
 
 ## Shell (pointer: group 7)
 
@@ -13,7 +13,12 @@ Updated: 2026-11-20 19:39
 | >> | 7 | SHELL-B-155 | Theme badge default 18px weight 500 for every plugin, as the boards draw it | Look and Feel | 1 | Building (B-155 first) | - |
 | >> | 7 | SHELL-F-170 | Shared "built app only" test step in business-tests/support/steps; the component copies go | Undetermined | 1 | Building (B-155 first) | - |
 | >> | 7 | SHELL-B-156 | Table toolkit: on a wide card, spare width spreads onto capped columns (Note past 500px); size the fixed table to its columns | Functional | 2 | Building (B-155 first) | - |
-| | 8 | (shell raises the IDs) | Look gaps within 20px: Profile table inset, role chip, Profile rule colours and Save row, landing card body margin, Act As chip gap from the bell; plus a Try again when identity fails after sign-in (B-140 limit) | Functional + Look and Feel | ?? | Group 8, after group 7 | - |
+| | 8 | SHELL-B-157 | Profile table inset, as drawn | Look and Feel | 1 | Group 8, after group 7 | - |
+| | 8 | SHELL-B-158 | Role chip size, as drawn | Look and Feel | 1 | Group 8, after group 7 | - |
+| | 8 | SHELL-B-159 | Profile rule colours and Save row position | Look and Feel | 1 | Group 8, after group 7 | - |
+| | 8 | SHELL-B-160 | Act As chip gap from the bell (24px) | Look and Feel | 1 | Group 8, after group 7 | - |
+| | 8 | SHELL-B-161 | Try again when identity fails after sign-in | Functional | 2 | Group 8, after group 7 | - |
+| | 8 | LANDING-PAGE-B-006 | Landing card body margin, as drawn | Look and Feel | 1 | Group 8, after group 7 | - |
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards).
 
 ## Portfolio Services (pointer: group 9)
