@@ -10,14 +10,14 @@ Updated: 2026-11-20 16:35
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | 5 | SHELL-F-169 | Tables: a starting width per column; Reset goes back to it | Look and Feel | 2 | After the parity run | - |
-| | 5 | SHELL-B-136 | Deploy script leaves out each API's .dll.config | Functional | ?? | After the parity run | - |
-| | 5 | SHELL-F-166 | Tables: a filter dialog can carry its own title | Look and Feel | ?? | After the parity run | - |
-| | 5 | SHELL-F-167 | Tables: a status track with no title, inside a page | Look and Feel | ?? | After the parity run | - |
-| | 5 | SHELL-B-135 | Tables: frozen columns see-through when scrolling sideways | Look and Feel | ?? | After the parity run | - |
-| | 5 | SHELL-F-168 | Tables: the page can fold or unfold the status track | Functional | ?? | After the parity run | - |
-| | 5 | SHELL-B-137 | Tables: header text grey, the board draws black | Look and Feel | 1 | After the parity run | - |
-| | 5 | SHELL-B-138 | Filter dialog: a drop-down left on "All" looks greyed out | Look and Feel | 1 | After the parity run | - |
+| | 5 | SHELL-F-169 | Tables: a starting width per column; Reset goes back to it | Look and Feel | 2 | Next | - |
+| | 5 | SHELL-B-136 | Deploy script leaves out each API's .dll.config | Functional | ?? | Next | - |
+| | 5 | SHELL-F-166 | Tables: a filter dialog can carry its own title | Look and Feel | ?? | Next | - |
+| | 5 | SHELL-F-167 | Tables: a status track with no title, inside a page | Look and Feel | ?? | Next | - |
+| | 5 | SHELL-B-135 | Tables: frozen columns see-through when scrolling sideways | Look and Feel | ?? | Next | - |
+| | 5 | SHELL-F-168 | Tables: the page can fold or unfold the status track | Functional | ?? | Next | - |
+| | 5 | SHELL-B-137 | Tables: header text grey, the board draws black | Look and Feel | 1 | Next | - |
+| | 5 | SHELL-B-138 | Filter dialog: a drop-down left on "All" looks greyed out | Look and Feel | 1 | Next | - |
 
 ## Portfolio Services
 
