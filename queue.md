@@ -4,20 +4,21 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 15:15
+Updated: 2026-11-20 15:20
 
 ## Shell
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | 5 | SHELL-F-169 | Tables: a starting width per column; Reset goes back to it | Look and Feel | 2 | Next | - |
-| | 5 | SHELL-B-136 | Deploy script leaves out each API's .dll.config | Functional | ?? | Next | - |
-| | 5 | SHELL-F-166 | Tables: a filter dialog can carry its own title | Look and Feel | ?? | Next | - |
-| | 5 | SHELL-F-167 | Tables: a status track with no title, inside a page | Look and Feel | ?? | Next | - |
-| | 5 | SHELL-B-135 | Tables: frozen columns see-through when scrolling sideways | Look and Feel | ?? | Next | - |
-| | 5 | SHELL-F-168 | Tables: the page can fold or unfold the status track | Functional | ?? | Next | - |
-| | 5 | SHELL-B-137 | Tables: header text grey, the board draws black | Look and Feel | 1 | Next | - |
-| | 5 | SHELL-B-138 | Filter dialog: a drop-down left on "All" looks greyed out | Look and Feel | 1 | Next | - |
+| >> | 5 | SHELL-F-169 | Tables: a starting width per column; Reset goes back to it | Look and Feel | 2 | Building | - |
+| >> | 5 | SHELL-B-136 | Deploy script leaves out each API's .dll.config | Functional | ?? | Building | - |
+| >> | 5 | SHELL-F-166 | Tables: a filter dialog can carry its own title | Look and Feel | ?? | Building | - |
+| >> | 5 | SHELL-F-167 | Tables: a status track with no title, inside a page | Look and Feel | ?? | Building | - |
+| >> | 5 | SHELL-B-135 | Tables: frozen columns see-through when scrolling sideways | Look and Feel | ?? | Building | - |
+| >> | 5 | SHELL-F-168 | Tables: the page can fold or unfold the status track | Functional | ?? | Building | - |
+| >> | 5 | SHELL-B-137 | Tables: header text grey, the board draws black | Look and Feel | 1 | Building | - |
+| >> | 5 | SHELL-B-138 | Filter dialog: a drop-down left on "All" looks greyed out | Look and Feel | 1 | Building | - |
+| >> | 5 | (harness) | Layout check: Expired report route, stale KNOWN entries struck | Functional | ?? | Building | - |
 
 ## Portfolio Services
 
