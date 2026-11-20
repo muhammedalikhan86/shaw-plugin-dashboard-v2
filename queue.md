@@ -77,6 +77,7 @@ Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostCh
 | >> | 7 | OFA-B-191 | The monthly cycle against its boards (Muhammed 20-11): stepper rebuilt as drawn; table toolkit filter bar, status track and Filter dialog as on the Advisor Dashboard; other gaps fixed | ?? | Own-checkout stack, minimal processes; ahead of F-028 |
 | >> | 7 | OFA-B-192 | Initial OFAs > Add an arrangement by hand: the expanding "Add a platform" section is misaligned; whole dialog against its board (Muhammed 20-11) | ?? | Same parity run as the monthly cycle |
 | | 7 | OFA-F-163 | Overview: condensing one card condenses all; the Expired fee-not-yet-confirmed / Renewal notices not fully signed card gets a condense option | 3 | User 20-11; the two tracks join the shared fold once SHELL-F-168 lands |
+| | 7 | OFA-F-164 | Import leaves the sidebar; opened from Settings instead (same route and access) | ?? | User 20-11 |
 | 7 | 7 | OFA-F-028 | Go-live prep: deploy parts with -PrepareOnly, to the IIS Deployment Standard | 5 | Release 1, last (Muhammed 20-11) |
 | 6 | X | OFA-F-155 | Acceptance evidence per signatory | 2 | Held, for when COMPLIANCE-DASHBOARD-F-004 needs every signer |
 | 14 | X | OFA-F-144 | Test data: a register-only data set over a shared warehouse | 3 | After go-live (Muhammed 19-11) |
