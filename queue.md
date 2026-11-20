@@ -78,6 +78,7 @@ Done 19-11: F-161 (9f78ffae, no code: the hook exists since SHELL-F-074, [hostCh
 |---|---|---|---|---|---|
 | | 8 | OFA-B-193 | OFA checklist: long step notes overlap each other (user 20-11) | ?? | FUNC (notes unreadable); next group |
 | | 8 | OFA-B-194 | Renewal notice viewer dialog scrolls; the PDF should fill the dialog with no outer scroll (user 20-11) | ?? | Next group; same shape as COMPLIANCE-DASHBOARD-B-093 |
+| | F-028 | OFA-F-172 | The first weekly Expired report after go-live goes only to the OFA Team mailbox; later ones as normal (user 20-11) | ?? | With the OFA-F-028 parts |
 | | X | OFA-F-169 | Cull notes: the attach button on the note composer (a cull note has no S-Account today) | 2 | After group 8; left over from OFA-B-191 |
 | 15 | X | OFA-F-160 | Remove the manual fee sync: the button, the frontend call and the endpoint that runs dbo.SyncFee | 2 | After go-live (Neeraj via Muhammed 20-11) |
 | | - | OFA-F-138 | File the signed renewal document in DART: the real filer | 3 | Built, test-locked to S110438 / MISC (merged 20-11). Test filing 20-11 got a 502 (Agility refused); body fix merged 21608d24, retest pending. Live filing needs OFAREN |
