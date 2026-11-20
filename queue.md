@@ -27,7 +27,7 @@ Built and on main:
 
 Building now:
 1. PS: OFA-F-028 go-live prep (-PrepareOnly only), then group 8 (B-193 checklist notes, B-194 notice viewer), then F-169. Group 7 merged 9a765ee8. DART retest once the stack is free.
-2. PS2 group 15: OFA-F-165 (closure confirmation reads), plus F-166, F-167, F-168 (the advisor-surface reads and sends ADVISOR-DASHBOARD-F-142 part 2 needs). Group 14 merged 6575f4bc.
+2. PS2 group 15: OFA-F-165..F-168 (advisor-surface reads and sends); then group 16: OFA-F-173 approval Outbox for Monday's dry run; then group 17: F-170, F-171. Group 14 merged 6575f4bc.
 3. Advisor group 11 (unparked by the user 20-11): F-145, F-146, F-142, F-049 (correction part), F-059, F-057.
 4. Compliance group 9: its own working (FUNC) findings from today's parity check (docs/compliance-dashboard/findings/2026-11-20-all.md); looks wait. Group 8 merged 4db19b71.
 5. Shell holds the 4200 stack: a full parity run per component today (user, 20-11), findings queued for the weekend; the owed stack checks fold in.
@@ -101,7 +101,7 @@ Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).
 
-## Portfolio Services 2 (pointer: group 15: OFA-F-165, F-166, F-167, F-168, F-170, F-171)
+## Portfolio Services 2 (pointer: group 15: OFA-F-165..F-168; then group 16: F-173 approval Outbox (Monday); then group 17: F-170, F-171)
 
 Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfolio-services-2`, branch `portfolio-services-2`, port offset 40, artboard port 8799.
 
@@ -112,9 +112,9 @@ Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfo
 | >> | 15 | OFA-F-166 | Renewal tracker read carries each renewal's client follow-up state (count, last sent, stage) | ?? | For ADVISOR-DASHBOARD-F-142 part 2 (W37 ladder chips) |
 | >> | 15 | OFA-F-167 | Advisor surface: resend a follow-up to another email ("Pick another email for ...") | ?? | For ADVISOR-DASHBOARD-F-142 part 2 |
 | >> | 15 | OFA-F-168 | Client renewal follow-up: the adviser's edited wording on send, and a preview read | ?? | For ADVISOR-DASHBOARD-F-142 part 2 |
-| >> | 15 | OFA-F-170 | Advisor surface: an adviser asks Back Office for a missing email or signatory | ?? | For ADVISOR-DASHBOARD-F-049 part 2; group 16 if 15 is at Integration |
-| >> | 15 | OFA-F-171 | Advisor surface: attachments on a correction request to Back Office | ?? | For ADVISOR-DASHBOARD-F-049 part 2; group 16 if 15 is at Integration |
-| | 16 | OFA-F-173 | Approval Outbox: a Settings switch holds all email; the OFA Team approves each to send; switch off = send as normal (ON at go-live, dry run) | ?? | Release 1, for Monday; design row C166 later |
+| | 17 | OFA-F-170 | Advisor surface: an adviser asks Back Office for a missing email or signatory | ?? | For ADVISOR-DASHBOARD-F-049 part 2; group 16 if 15 is at Integration |
+| | 17 | OFA-F-171 | Advisor surface: attachments on a correction request to Back Office | ?? | For ADVISOR-DASHBOARD-F-049 part 2; group 16 if 15 is at Integration |
+| | 16 | OFA-F-173 | Approval Outbox: a Settings switch holds all email; the OFA Team approves each to send; switch off = send as normal (ON at go-live, dry run) | 5 | Release 1, for Monday; design row C166 later |
 | 9 | X | OFA-B-183 | A notice held as "send outcome unknown": friendly label on the Issuance tab, and a release action | 2 | After go-live (rare case; a person checks Annature) |
 | 10 | X | OFA-B-184 | A timeout on create-and-send can still send twice; needs a lookup route in AnnatureInterfaceWebAPI | 2 | After go-live |
 | 8 | X | OFA-B-182 | The Fee status column is not in table-tools show/hide, sort or export | 1 | After go-live (looks) |
