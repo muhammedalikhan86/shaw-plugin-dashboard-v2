@@ -59,6 +59,7 @@ Waiting on the user: push main; check in the DataWarehouse Fee.sql, SyncFee.sql 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | | 5 | SHELL-F-169 | Table toolkit: a starting width per column (startWidth), held until the user resizes; Reset returns to it (user 20-11) | 2 | After parity; contract change (F-164/F-135); unblocks COMPLIANCE-DASHBOARD-B-095 |
+| | 5 | SHELL-B-136 | Deploy script: the mirror must exclude <ApiProject>.dll.config (DEP-4); affects every API part | ?? | After parity; found by PS's F-028 review |
 | | 5 | SHELL-F-166 | Table toolkit: a table's filter dialog takes its own title ("Filter the Anniversary List"), for PS's monthly cycle board | ?? | Raised 20-11 from PS group 7 parity |
 | | 5 | SHELL-F-167 | Table toolkit: an embedded, untitled status-track variant, as the monthly cycle board draws it | ?? | Raised 20-11 from PS group 7 parity |
 | | 5 | SHELL-B-135 | Frozen columns are see-through when a table scrolls sideways; make them opaque in every row state, platform-wide | ?? | User 20-11 (seen on Advisor's OFA Questionnaire) |
