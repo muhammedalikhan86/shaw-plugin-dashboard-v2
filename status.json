@@ -2168,7 +2168,7 @@
   },
   {
    "at": "2026-11-20T15:26:32+11:00",
-   "change": "Compliance group 10 merged: B-100, B-101, B-104, B-106, B-107, B-108 done; B-102, B-103, B-105 closed no change. Shell group 5 (on main) counted too",
+   "change": "Compliance group 10 merged: B-100, B-101, B-104, B-106, B-107, B-108 done; B-102, B-103, B-105 closed no change. Shell group 5: SHELL-F-166..F-169, B-135..B-138, B-144 done",
    "pointsDone": 22.0,
    "pointsRaised": 11.0
   }
