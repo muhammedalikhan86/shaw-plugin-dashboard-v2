@@ -4,12 +4,22 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 15:27
+Updated: 2026-11-20 15:28
 
-## Shell (pointer: group 5 merged; findings intake, then group 6 proposal)
+## Shell (pointer: group 6)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| >> | 6 | SHELL-B-145 | Profile and Preferences with Keep open on: the plugins card scrolls sideways and clips Notifications by 46px | Functional | 2 | Building | - |
+| >> | 6 | LANDING-PAGE-B-001 | Greeting wording as the board | Functional | 1 | Building | - |
+| >> | 6 | SHELL-B-146 | Keep-open switch sits 6px left | Look and Feel | 1 | Building | - |
+| >> | 6 | SHELL-B-147 | Nav sub-rows indented 12px less than the board | Look and Feel | 1 | Building | - |
+| >> | 6 | SHELL-B-149 | Avatar initials size and weight | Look and Feel | 1 | Building | - |
+| >> | 6 | SHELL-B-150 | Plugin group labels bold, as drawn | Look and Feel | 1 | Building | - |
+| >> | 6 | SHELL-B-148 | Act As chip: size, icon and type | Look and Feel | 1 | Building | - |
+| >> | 6 | SHELL-B-151 | Act As panel labels colour | Look and Feel | 1 | Building | - |
+| >> | 6 | LANDING-PAGE-B-002 | Landing card icon 8px off | Look and Feel | 1 | Building | - |
+| | 6 | (re-check) | Re-measure shell #8, #17, #18 and landing #2, #4, #5; raise and fold in the ones that stand | Undetermined | ?? | In group 6 board check | - |
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page)
 
 ## Portfolio Services
@@ -91,7 +101,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 
 1. Parity run: done 20-11. Compliance, PS and advisor routed; shell and landing-page intake after shell group 5.
 2. Weekend queue: built with you once the parity run ends.
-3. Designer prompt (not yet sent; goes out after this queue round): W38, P92, P93, plus advisor B92 (F-146 confirmed line on CONFIRMED OFF rows), plus 6 parity questions: Overview "not fully signed" count slot; Adviser review answers bar placement; read-failure card on six PS screens; scope line for an adviser with several codes; Renewal tracker filter Reset and intro; Arrangements empty/loading/error card; compliance board: drop the empty grid after the filter-dialog fields so the gap above the buttons is 48px like advisor and PS.
+3. Designer prompt (not yet sent; goes out after this queue round): W38, P92, P93, plus advisor B92 (F-146 confirmed line on CONFIRMED OFF rows), plus 6 parity questions: Overview "not fully signed" count slot; Adviser review answers bar placement; read-failure card on six PS screens; scope line for an adviser with several codes; Renewal tracker filter Reset and intro; Arrangements empty/loading/error card; shell: logo width (#12) and collapsed rail width (#21), where the boards disagree; shell states with no board (#20: Keep open on, Notifications with items, Search results and no matches, Search loading); landing empty and bus-unavailable states (#6); compliance board: drop the empty grid after the filter-dialog fields so the gap above the buttons is 48px like advisor and PS.
 4. End sweep: the browser, business-test and board checks skipped during the build, run once at the end.
 5. Waiting on you: push main; check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest; Luke's templates and Initial OFA envelope title.
 
