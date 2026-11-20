@@ -28,6 +28,10 @@ tr:last-child td{border-bottom:0}
 tr.now td{background:var(--now)}
 tr.now td:first-child{color:var(--accent);font-weight:500}
 #err{color:var(--accent)}
+a.jump{text-decoration:underline;text-underline-offset:2px}
+@keyframes flash{from{box-shadow:inset 4px 0 0 var(--accent);background:var(--now)}to{box-shadow:inset 4px 0 0 transparent}}
+tr.flash td{animation:flash 2.4s ease-out}
+tr.flash td:first-child{box-shadow:inset 4px 0 0 var(--accent)}
 </style>
 </head>
 <body>
@@ -43,6 +47,21 @@ fetch('queue.md',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(r.status)
   out.innerHTML=marked.parse(md);
   out.querySelectorAll('table').forEach(t=>{const w=document.createElement('div');w.className='scroll';t.parentNode.insertBefore(w,t);w.appendChild(t);
     t.querySelectorAll('tbody tr').forEach(tr=>{if(tr.cells[0]&&tr.cells[0].textContent.trim()==='>>')tr.classList.add('now')})});
+  // Each worker row gets an anchor from its ID; an ID in "Depends on" or "Status" that names a row here becomes an in-page link to it.
+  const col=(t,name)=>[...t.querySelectorAll('thead th')].findIndex(th=>th.textContent.trim()===name);
+  const rows=new Map();
+  out.querySelectorAll('table').forEach(t=>{const i=col(t,'ID');if(i<0)return;
+    t.querySelectorAll('tbody tr').forEach(tr=>{const id=tr.cells[i]&&tr.cells[i].textContent.trim();if(/^[A-Z]+(-[A-Z]+)*-[FBS]-\d+$/.test(id)){tr.id='q-'+id;rows.set(id,tr)}})});
+  const re=/\b[A-Z]+(?:-[A-Z]+)*-[FBS]-\d+\b/g;
+  out.querySelectorAll('table').forEach(t=>['Depends on','Status'].forEach(n=>{const i=col(t,n);if(i<0)return;
+    t.querySelectorAll('tbody tr').forEach(tr=>{const c=tr.cells[i];if(!c)return;
+      c.innerHTML=c.innerHTML.replace(re,m=>rows.has(m)&&rows.get(m)!==tr?'<a href="#q-'+m+'" class="jump">'+m+'</a>':m)})}));
+  out.addEventListener('click',e=>{const a=e.target.closest('a.jump');if(!a)return;e.preventDefault();
+    const tr=document.getElementById(a.getAttribute('href').slice(1));if(!tr)return;
+    history.replaceState(null,'',a.getAttribute('href'));
+    tr.scrollIntoView({behavior:'smooth',block:'center'});
+    tr.classList.remove('flash');void tr.offsetWidth;tr.classList.add('flash')});
+  if(location.hash){const tr=document.getElementById(location.hash.slice(1));if(tr){tr.scrollIntoView({block:'center'});tr.classList.add('flash')}}
 }).catch(e=>{const el=document.getElementById('err');el.hidden=false;el.textContent='The queue could not be loaded ('+e.message+').'});
 </script>
 </body>
