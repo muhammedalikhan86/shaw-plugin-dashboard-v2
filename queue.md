@@ -4,13 +4,13 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 01:58
+Updated: 2026-11-21 02:00
 
 ## Shell (pointer: group 11)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 11 | SHELL-B-(new) | Notifications bell: group heading, empty line and an entry's second line and date, as the advisor board M18 draws (for ADVISOR-DASHBOARD-F-117) | Look and Feel | ?? | Go 2026-11-21 | - |
+| >> | 11 | SHELL-B-172 | Notifications bell: group heading, empty line and an entry's second line and date, as the advisor board M18 draws (Plugin Context 1.11.0, architecture v157) | Look and Feel | ?? | Go 2026-11-21 | - |
 
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170. Group 8 (2e2ab1ec): SHELL-B-157..B-162, LANDING-PAGE-B-006.; group 9 SHELL-B-164 to B-170, LANDING-PAGE-B-007, B-163 closed with no change (90b40bf7); group 10 SHELL-B-171 (ac98f9f6)
 
@@ -63,6 +63,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 | | 17 | ADVISOR-DASHBOARD-F-154 | Remove a signatory from an open Back Office ask | Functional | 2 | Group 17, after PS2 group 20 | OFA-F-178 |
 | | 17 | ADVISOR-DASHBOARD-F-155 | Add signatory: pick from the account's DART parties | Functional | 2 | Group 17, after PS2 group 20 | OFA-F-179 |
+| | 17 | ADVISOR-DASHBOARD-F-156 | The "Arrangements that ended" bell adopts the shell's groups: group, second line (adviser and why), date, and the "Nothing has ended." empty line | Look and Feel | 1 | Group 17, after shell group 11 | SHELL-B-172 |
 
 Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777). Group 13 (bafb7b09): ADVISOR-DASHBOARD-B-116, B-117, B-118, B-119, five board-target reds. Group 14 (0c46c642): ADVISOR-DASHBOARD-F-151, F-152, B-120, B-121, B-122.; group 15 F-049 part 2, B-123, B-124 (59c7190f); group 16 F-143, F-118, F-153, F-059 part 2, F-117 (bb446a4b)
 
