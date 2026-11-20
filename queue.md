@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 15:12
+Updated: 2026-11-20 15:14
 
 ## Shell
 
@@ -18,7 +18,7 @@ Updated: 2026-11-20 15:12
 | >> | 5 | SHELL-F-168 | Tables: the page can fold or unfold the status track | Functional | ?? | Building | - |
 | >> | 5 | SHELL-B-137 | Tables: header text grey, the board draws black | Look and Feel | 1 | Building | - |
 | >> | 5 | SHELL-B-138 | Filter dialog: a drop-down left on "All" looks greyed out | Look and Feel | 1 | Building | - |
-| >> | 5 | (parity) | Finish the cut-short parity check: shell leftovers and landing-page | Undetermined | ?? | Running beside group 5 | - |
+| | 5 | (parity) | Finish the cut-short parity check: shell leftovers and landing-page | Undetermined | ?? | Done 20-11; findings intake after group 5 | - |
 | >> | 5 | SHELL-B-144 | Layout check: Expired report route, stale KNOWN entries struck | Functional | 1 | Building | - |
 
 ## Portfolio Services
@@ -49,8 +49,8 @@ Done 2026-11-20: OFA-F-172 (merged with OFA-F-028 parts 4 and 4b).
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 16 | OFA-F-173 | Outbox: hold every email until the OFA Team approves or bins it; a switch turns the hold off | Functional | 5 | Built; in review | - |
-| >> | 16 | OFA-F-174 | Outbox: signing envelopes wait for approval too | Functional | 5 | Built, with the seed fix; in review | OFA-F-173 |
+| >> | 16 | OFA-F-173 | Outbox: hold every email until the OFA Team approves or bins it; a switch turns the hold off | Functional | 5 | Built; merge blocked by 7 PS doc conflicts, PS2 re-merging main | - |
+| >> | 16 | OFA-F-174 | Outbox: signing envelopes wait for approval too | Functional | 5 | Built; merge blocked by 7 PS doc conflicts, PS2 re-merging main | OFA-F-173 |
 | | 17 | OFA-B-205 | Hold the signing-request email when the covering email wording has no approved version, instead of sending it blank | Functional | 3 | In group 17, after F-170 and F-171; before go-live | - |
 | | 17 | OFA-F-170 | Adviser asks Back Office for a missing email or signer | Functional | ?? | After group 16 | - |
 | | 17 | OFA-F-171 | Attachments on a correction request | Functional | ?? | After group 16 | - |
@@ -104,7 +104,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 
 ## Hub
 
-1. Parity run: compliance, PS and advisor routed 20-11; shell finishing its cut-short part (shell, landing-page).
+1. Parity run: done 20-11. Compliance, PS and advisor routed; shell and landing-page intake after shell group 5.
 2. Weekend queue: built with you once the parity run ends.
 3. Designer prompt (not yet sent; goes out after this queue round): W38, P92, P93, plus advisor B92 (F-146 confirmed line on CONFIRMED OFF rows), plus 6 parity questions: Overview "not fully signed" count slot; Adviser review answers bar placement; read-failure card on six PS screens; scope line for an adviser with several codes; Renewal tracker filter Reset and intro; Arrangements empty/loading/error card; compliance board: drop the empty grid after the filter-dialog fields so the gap above the buttons is 48px like advisor and PS.
 4. End sweep: the browser, business-test and board checks skipped during the build, run once at the end.
