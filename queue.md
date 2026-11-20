@@ -88,4 +88,4 @@ Updated: 2026-11-20 14:50
 3. End sweep: the browser, business-test and board checks skipped during the build, run once at the end.
 4. Waiting on you: push main; check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest; Luke's templates and Initial OFA envelope title.
 
-Push: `git -C C:/Users/muhammedali.khan/source/repos/shaw-plugin-dashboard push origin skills-test main`
+Push: `git -C C:/Users/muhammedali.khan/source/repos/shaw-plugin-dashboard push origin main`
