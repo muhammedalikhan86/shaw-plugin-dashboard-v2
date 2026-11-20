@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 18:39
+Updated: 2026-11-20 18:40
 
 ## Shell (pointer: group 6)
 
@@ -28,7 +28,7 @@ Updated: 2026-11-20 18:39
 | >> | 6 | LANDING-PAGE-B-003 | Card source line type | Look and Feel | 1 | Building | - |
 | >> | 6 | LANDING-PAGE-B-004 | Card title regular weight | Look and Feel | 1 | Building | - |
 | >> | 6 | LANDING-PAGE-B-005 | Card footer type | Look and Feel | 1 | Building | - |
-| | 7 | SHELL-B-155 | Theme badge default 18px weight 500 for every plugin, as the boards draw it | Look and Feel | ? | First in group 7 | - |
+| | 7 | SHELL-B-155 | Theme badge default 18px weight 500 for every plugin, as the boards draw it | Look and Feel | 1 | First in group 7 | - |
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page)
 
 ## Portfolio Services
