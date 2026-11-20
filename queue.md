@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 23:49
+Updated: 2026-11-21 00:08
 
 ## Shell (pointer: queue empty)
 
@@ -61,22 +61,19 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 
 Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563); group 12 end sweep clean, B-115 fixed (merged 1f6dde4c)
 
-## Advisor (pointer: group 15)
+## Advisor (pointer: group 16)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 15 | ADVISOR-DASHBOARD-F-049 | Back Office change request (part 2) | Functional | ?? | Building | OFA-F-170, OFA-F-171 |
-| >> | 15 | ADVISOR-DASHBOARD-B-123 | Renewal tracker: account name as the S-Account column's second line, as drawn | Functional | 1 | Building last; waits for OFA-F-176 on main | OFA-F-176 |
-| >> | 15 | ADVISOR-DASHBOARD-B-124 | Empty Renewal tracker and Initial OFAs cards: task_alt icon as drawn (folder_open today) | Look and Feel | 1 | Building | - |
-| | 16 | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals (part 2) | Functional | ?? | Group 16, after group 15; PS2 reads on main (d4b81a3b) | OFA-F-094 |
+| >> | 16 | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals (part 2) | Functional | ?? | Go 2026-11-21, wave 2, after F-143 | OFA-F-094 |
 | | X | ADVISOR-DASHBOARD-F-141 | The arrangement record | Functional | 3 | Blocked by a Portfolio Services adviser documents read (no item yet) | - |
-| | 16 | ADVISOR-DASHBOARD-F-143 | History events | Functional | 5 | Group 16, after group 15; PS2 reads on main (d4b81a3b) | OFA-F-094 |
+| >> | 16 | ADVISOR-DASHBOARD-F-143 | History events | Functional | 5 | Go 2026-11-21, wave 1 | OFA-F-094 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
-| | 16 | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | Functional | 2 | Group 16, after group 15; PS2 reads on main (d4b81a3b) | OFA-F-131 |
-| | 16 | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | Functional | 3 | Group 16, after group 15; PS2 reads on main (d4b81a3b) | OFA-F-132 |
-| | 16 | (adopt) | Counterpart, arrangements and closures pickers take select--picker-inset (drop local B-037); Initial OFA start date and DA picker take field--label-box | Look and Feel | 2 | Group 16 | SHELL-B-169, SHELL-B-170 |
+| >> | 16 | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | Functional | 2 | Go 2026-11-21, wave 2, after F-143 | OFA-F-131 |
+| >> | 16 | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | Functional | 3 | Go 2026-11-21, wave 1 | OFA-F-132 |
+| >> | 16 | ADVISOR-DASHBOARD-F-153 | Counterpart, arrangements and closures pickers take select--picker-inset (drop local B-037); Initial OFA start date and DA picker take field--label-box | Look and Feel | 2 | Go 2026-11-21, wave 2 | SHELL-B-169, SHELL-B-170 |
 
-Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777). Group 13 (bafb7b09): ADVISOR-DASHBOARD-B-116, B-117, B-118, B-119, five board-target reds. Group 14 (0c46c642): ADVISOR-DASHBOARD-F-151, F-152, B-120, B-121, B-122.
+Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777). Group 13 (bafb7b09): ADVISOR-DASHBOARD-B-116, B-117, B-118, B-119, five board-target reds. Group 14 (0c46c642): ADVISOR-DASHBOARD-F-151, F-152, B-120, B-121, B-122.; group 15 F-049 part 2, B-123, B-124 (59c7190f)
 
 ## Hub
 
