@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 20:00
+Updated: 2026-11-20 20:12
 
 ## Shell (pointer: group 8)
 
@@ -16,6 +16,7 @@ Updated: 2026-11-20 20:00
 | >> | 8 | SHELL-B-160 | Act As chip gap from the bell (24px) | Look and Feel | 1 | Building | - |
 | >> | 8 | SHELL-B-161 | Try again when identity fails after sign-in | Functional | 2 | Building (B-161 first) | - |
 | >> | 8 | LANDING-PAGE-B-006 | Landing card body margin, as drawn | Look and Feel | 1 | Building | - |
+| | 8 | (shell raises the ID) | Table toolkit specs test the status track look rules (plugin copies of these tests went with the old track) | Functional | 1 | Group 8, last; from advisor | - |
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170.
 
 ## Portfolio Services (pointer: group 9)
@@ -76,7 +77,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 |---|---|---|---|---|---|---|---|
 | >> | 14 | ADVISOR-DASHBOARD-B-120 | Test scenarios for the board's empty, reading, failed and few-row states | Functional | 2 | Building | - |
 | >> | 14 | ADVISOR-DASHBOARD-B-121 | Termination wording dialog: the sentence before the wording | Look and Feel | 1 | Building | - |
-| >> | 14 | ADVISOR-DASHBOARD-B-122 | Required asterisks on Start-an-OFA and No OFA obligations | Look and Feel | 1 | Building | - |
+| >> | 14 | ADVISOR-DASHBOARD-B-122 | Required asterisks on Start-an-OFA and No OFA obligations | Look and Feel | 1 | Closed: the stars were there (CSS-drawn); tests now lock them | - |
 | | 15 | ADVISOR-DASHBOARD-F-049 | Back Office change request (part 2) | Functional | ?? | Group 15, after group 14: adopt OFA-F-170 and OFA-F-171 (on main, 6e56c9f9) | OFA-F-170, OFA-F-171 |
 | | 15 | ADVISOR-DASHBOARD-B-123 | Renewal tracker: account name as the S-Account column's second line, as drawn | Functional | 1 | Group 15, after the PS2 read lands | OFA-F-176 |
 | | X | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals (part 2) | Functional | ?? | Waiting | OFA-F-094 |
@@ -86,6 +87,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 | | X | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | Functional | 2 | Waiting | OFA-F-131 |
 | | X | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | Functional | 3 | Waiting | OFA-F-132 |
 | >> | 14 | ADVISOR-DASHBOARD-F-151 | Use the shared status track | Look and Feel | 2 | Building | - |
+| >> | 14 | ADVISOR-DASHBOARD-F-152 | Renewal tracker on the shared status track too | Look and Feel | 1 | Group 14, folded in with F-151 | - |
 
 Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777). Group 13 (bafb7b09): ADVISOR-DASHBOARD-B-116, B-117, B-118, B-119, five board-target reds.
 
