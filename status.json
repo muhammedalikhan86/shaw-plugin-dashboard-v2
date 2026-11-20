@@ -56,9 +56,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 591.0,
+   "pointsDone": 595.0,
    "pointsRemaining": 189.0,
-   "pointsTotal": 780.0,
+   "pointsTotal": 784.0,
    "itemsRemaining": 90,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 120.09,
+  "pointsPerWorkingDayWholePeriod": 120.4,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -235,8 +235,8 @@
    },
    {
     "date": "2026-11-20",
-    "pointsDone": 1561.0,
-    "pointsDoneThatDay": 128.0
+    "pointsDone": 1565.0,
+    "pointsDoneThatDay": 132.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -256,7 +256,7 @@
     "likely": "2026-11-27",
     "pessimistic": "2026-11-27",
     "rateLast10": 38.95,
-    "rateWhole": 42.91
+    "rateWhole": 43.22
    },
    "Advisor": {
     "optimistic": "2026-11-24",
@@ -279,7 +279,7 @@
    "pessimistic": "2026-11-27",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 120.09,
+   "rateWhole": 120.4,
    "pointsRemaining": 255.0,
    "itemsRemaining": 114
   }
@@ -359,7 +359,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-20T12:08:31+11:00",
+ "updatedAt": "2026-11-20T12:33:05+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2082,6 +2082,12 @@
    "change": "Compliance merged group 6: five fixes, including the fees-not-arrived banner",
    "pointsDone": 7.0,
    "pointsRaised": 9.0
+  },
+  {
+   "at": "2026-11-20T12:33:05+11:00",
+   "change": "Portfolio Services 2 group 14 merged: closure email and Pending Renewals show the platform (OFA-B-189, B-190); reviewed finding records open (OFA-F-162)",
+   "pointsDone": 4.0,
+   "pointsRaised": 4.0
   }
  ],
  "foundDuringBuild": {

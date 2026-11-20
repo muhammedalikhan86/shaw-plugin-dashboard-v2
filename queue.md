@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 2026-11-20 evening
+Updated: 2026-11-20 evening (PS2 group 14 merged)
 
 
 ## Where we stand (20-11, evening)
@@ -19,11 +19,12 @@ Built and on main:
 5. PS group 6: answer category (F-137), Initial OFA (F-108, F-109), DART filer test-locked to S110438 / MISC (F-138).
 6. Shell is finished: column widths (F-164), gap fix (B-134), filter dialog (F-165), Expired report item removed (F-089).
 8. The "- -" on both Renewal Trackers is fixed (OFA-B-188, 20-11 evening); restart the stack to see it.
+9. PS2 group 14 (merged 6575f4bc): the closure email and Compliance Pending Renewals now show the platform (OFA-B-189, B-190); compliance.FindingReview carries the account details (OFA-F-162), so compliance B-088 can start.
 7. Advisor group 10: wide filters and the Unfilled forecast ASF tick box (F-148), OFA Questionnaire column order (F-147).
 
 Building now:
 1. PS group 7: monthly cycle parity (24 gaps) and add-by-hand parity (9 gaps). The F-138 DART body fix is already merged (21608d24); the user retests once the stack is free. Then F-028 go-live prep.
-2. PS2 group 14 (F-161 merged): OFA-B-189, B-190 (the same blank platform in the closure email and Compliance Pending Renewals), F-162 (for compliance B-088).
+2. PS2 group 15: OFA-F-165 (closure confirmation reads), plus F-166, F-167, F-168 (the advisor-surface reads and sends ADVISOR-DASHBOARD-F-142 part 2 needs). Group 14 merged 6575f4bc.
 3. Advisor group 11 (unparked by the user 20-11): F-145, F-146, F-142, F-049 (correction part), F-059, F-057.
 4. Compliance group 6 (unparked by the user 20-11): B-083, plus all 4 parity gaps (B-084 fees-not-arrived banner, B-085, B-086, B-087) owed docs. B-088 (a reviewed fee-only record still opens) waits on PS2's OFA-F-162.
 5. Shell holds the 4200 stack: a full parity run per component today (user, 20-11), findings queued for the weekend; the owed stack checks fold in.
@@ -94,23 +95,24 @@ Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).
 
-## Portfolio Services 2 (pointer: group 14: OFA-B-189, B-190, F-162)
+## Portfolio Services 2 (pointer: group 15: OFA-F-165, F-166, F-167, F-168)
 
 Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfolio-services-2`, branch `portfolio-services-2`, port offset 40, artboard port 8799.
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 1 | - | (setup) | In hub.json and opened 18-11 on Lachlan's account | - | Done |
-| >> | 14 | OFA-B-189 | Closure confirmation email: blank platform; resolve it the B-188 way (0113) | ?? | FUNC |
-| >> | 14 | OFA-B-190 | Compliance Pending Renewals: platform and product the B-188 way (0108) | ?? | FUNC |
-| >> | 14 | OFA-F-162 | compliance.FindingReview carries the finding's account details, so a reviewed finding-only record still opens | ?? | For COMPLIANCE-DASHBOARD-B-088; migration 0119 |
-| | 15 | OFA-F-165 | Closure confirmation: the client's email on file, and each closure row's confirmed state (who, when) | ?? | For ADVISOR-DASHBOARD-F-146 part 2; migrations from 0140 |
+| >> | 15 | OFA-F-165 | Closure confirmation: the client's email on file, and each closure row's confirmed state (who, when) | ?? | For ADVISOR-DASHBOARD-F-146 part 2; migrations from 0140 |
+| >> | 15 | OFA-F-166 | Renewal tracker read carries each renewal's client follow-up state (count, last sent, stage) | ?? | For ADVISOR-DASHBOARD-F-142 part 2 (W37 ladder chips) |
+| >> | 15 | OFA-F-167 | Advisor surface: resend a follow-up to another email ("Pick another email for ...") | ?? | For ADVISOR-DASHBOARD-F-142 part 2 |
+| >> | 15 | OFA-F-168 | Client renewal follow-up: the adviser's edited wording on send, and a preview read | ?? | For ADVISOR-DASHBOARD-F-142 part 2 |
 | 9 | X | OFA-B-183 | A notice held as "send outcome unknown": friendly label on the Issuance tab, and a release action | 2 | After go-live (rare case; a person checks Annature) |
 | 10 | X | OFA-B-184 | A timeout on create-and-send can still send twice; needs a lookup route in AnnatureInterfaceWebAPI | 2 | After go-live |
 | 8 | X | OFA-B-182 | The Fee status column is not in table-tools show/hide, sort or export | 1 | After go-live (looks) |
 | 6 | X | OFA-F-158 | Replace every placeholder email with Luke's templates (merge tags as before) | 1 | Blocked on Luke's reply |
 | 7 | X | OFA-B-179 | Expired report wrong when the State Manager email switch is off (row text + help text) | 1 | After go-live (switch is ON at go-live) |
 
+Done 20-11 (group 14, merged 6575f4bc): OFA-B-189, B-190 (0118), F-162 (0119).
 Done 20-11 (group 13 part 2): OFA-F-161 (0117, FeesExpectedUtc on compliance.SourceTimes).
 Done 20-11 (group 13 part 1, merged 8cfef855): OFA-B-188 (0116; both Renewal Trackers and the export show platform and product).
 Done 20-11 (group 12, merged 7ea4ce2a): OFA-F-078, F-056 (GET /overview/counts; O13 not built).
