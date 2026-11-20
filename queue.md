@@ -114,6 +114,7 @@ Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfo
 | >> | 15 | OFA-F-168 | Client renewal follow-up: the adviser's edited wording on send, and a preview read | ?? | For ADVISOR-DASHBOARD-F-142 part 2 |
 | >> | 15 | OFA-F-170 | Advisor surface: an adviser asks Back Office for a missing email or signatory | ?? | For ADVISOR-DASHBOARD-F-049 part 2; group 16 if 15 is at Integration |
 | >> | 15 | OFA-F-171 | Advisor surface: attachments on a correction request to Back Office | ?? | For ADVISOR-DASHBOARD-F-049 part 2; group 16 if 15 is at Integration |
+| | 16 | OFA-F-173 | Approval Outbox: a Settings switch holds all email; the OFA Team approves each to send; switch off = send as normal (ON at go-live, dry run) | ?? | Release 1, for Monday; design row C166 later |
 | 9 | X | OFA-B-183 | A notice held as "send outcome unknown": friendly label on the Issuance tab, and a release action | 2 | After go-live (rare case; a person checks Annature) |
 | 10 | X | OFA-B-184 | A timeout on create-and-send can still send twice; needs a lookup route in AnnatureInterfaceWebAPI | 2 | After go-live |
 | 8 | X | OFA-B-182 | The Fee status column is not in table-tools show/hide, sort or export | 1 | After go-live (looks) |
