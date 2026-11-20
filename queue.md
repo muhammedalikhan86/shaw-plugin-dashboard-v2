@@ -61,6 +61,7 @@ Updated: 2026-11-20 15:30
 |---|---|---|---|---|---|---|
 | >> | 11 | ADVISOR-DASHBOARD-F-057 | Search finds S-Accounts and arrangements | ?? | Built; in review | - |
 | | 11 | ADVISOR-DASHBOARD-F-149 | Landing Page: Gross Revenue and Funds Under Advice cards removed | 1 | Code merged; tidy-up in group 11 | - |
+| | 11 | ADVISOR-DASHBOARD-B-115 | Master list reads the real ASF figures (test red) | 1 | Next | - |
 | | 11 | ADVISOR-DASHBOARD-F-150 | OFA Questionnaire: five columns hidden by default | ?? | Next | - |
 | | 11 | ADVISOR-DASHBOARD-F-145 | Hide "Fee turned off" once it is recorded | 1 | Next | - |
 | | 11 | ADVISOR-DASHBOARD-F-146 | Closures: send and record the closure confirmation | 3 | Next | - |
