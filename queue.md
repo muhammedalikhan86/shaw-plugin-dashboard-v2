@@ -4,7 +4,7 @@ The hub's current direction for each worker. The hub updates this file every tim
 adjusts a worker. Grp = group: items that run together, lowest first. X = not grouped yet.
 **>>** = the item the worker is on now.
 
-Updated: 2026-11-20 evening (PS group 7 merged)
+Updated: 2026-11-20 evening (compliance group 8 merged)
 
 
 ## Where we stand (20-11, evening)
@@ -19,6 +19,7 @@ Built and on main:
 5. PS group 6: answer category (F-137), Initial OFA (F-108, F-109), DART filer test-locked to S110438 / MISC (F-138).
 6. Shell is finished: column widths (F-164), gap fix (B-134), filter dialog (F-165), Expired report item removed (F-089).
 8. The "- -" on both Renewal Trackers is fixed (OFA-B-188, 20-11 evening); restart the stack to see it.
+12. Compliance group 8 (merged 4db19b71): checklist notes no longer overlap (B-092), the Issued notice pop-up no longer scrolls (B-093), Quarantine Extension and Last prompt start at 250px (B-094; strict start follows as B-095).
 11. PS group 7 (merged 9a765ee8): monthly cycle parity (OFA-B-191), add-by-hand parity (B-192), Import moved under Settings (F-164), Overview cards fold together (F-163 part 1; part 2 waits on SHELL-F-168).
 10. Compliance group 7 (merged 38ac0d7f): the plugin opens on the cull list (B-089), the header shows when fees are expected (B-090), Renewal notice shows only its own wording (B-091; design row W38 open), a reviewed finding-only record opens (B-088, needs migration 0119 applied at the next stack restart); B-048 closed with no change.
 9. PS2 group 14 (merged 6575f4bc): the closure email and Compliance Pending Renewals now show the platform (OFA-B-189, B-190); compliance.FindingReview carries the account details (OFA-F-162), so compliance B-088 can start.
@@ -28,7 +29,7 @@ Building now:
 1. PS: OFA-F-028 go-live prep (-PrepareOnly only), then group 8 (B-193 checklist notes, B-194 notice viewer), then F-169. Group 7 merged 9a765ee8. DART retest once the stack is free.
 2. PS2 group 15: OFA-F-165 (closure confirmation reads), plus F-166, F-167, F-168 (the advisor-surface reads and sends ADVISOR-DASHBOARD-F-142 part 2 needs). Group 14 merged 6575f4bc.
 3. Advisor group 11 (unparked by the user 20-11): F-145, F-146, F-142, F-049 (correction part), F-059, F-057.
-4. Compliance group 8: B-092 (checklist notes overlap), B-093 (notice viewer scrolls), B-094 (Quarantine column widths). Group 7 merged 38ac0d7f.
+4. Compliance group 9: its own working (FUNC) findings from today's parity check (docs/compliance-dashboard/findings/2026-11-20-all.md); looks wait. Group 8 merged 4db19b71.
 5. Shell holds the 4200 stack: a full parity run per component today (user, 20-11), findings queued for the weekend; the owed stack checks fold in.
 
 Tests stay light (user, 20-11): affected tests only; no business, browser or stack runs except shell's stack checks.
@@ -140,13 +141,11 @@ Collision rules (hub ruling 18-11):
 5. App turns: one at a time, scheduled by the hub.
 6. PS2 skips the graph rebuild; PS does it. New IDs come from the hub.
 
-## Compliance (pointer: group 8: B-092 checklist notes, B-093 notice viewer, B-094 Quarantine column widths)
+## Compliance (pointer: group 9: its own FUNC findings from today's parity check; B-095 waits on SHELL-F-169)
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
-| | 8 | COMPLIANCE-DASHBOARD-B-092 | OFA checklist: long step notes overlap each other (user 20-11) | ?? | FUNC (notes unreadable); next group |
-| | 8 | COMPLIANCE-DASHBOARD-B-093 | Closed months Issued notice viewer scrolls; the PDF should fill the dialog with no outer scroll (user 20-11) | ?? | Next group; same shape as OFA-B-194 |
-| | 8 | COMPLIANCE-DASHBOARD-B-094 | Quarantine page: Extension and Last prompt columns 250px by default, still resizable 100-500px (user 20-11) | ?? | Next group |
+| >> | 9 | (parity findings) | Compliance's FUNC findings from the 20-11 parity check: Wording versions table collapses at 1440x900, fees-not-arrived error text, Hub24 spelling, a signatory with no name shown twice; Cull list Status column and the review line's "Read only." go to the hub as design-row questions | ?? | Findings file in the hub checkout; looks wait |
 | | X | COMPLIANCE-DASHBOARD-B-095 | Quarantine: switch Extension and Last prompt to a strict 250px start | 1 | After SHELL-F-169 merges |
 | X | X | COMPLIANCE-DASHBOARD-B-083 | History and closed-month cull notes skip a note a trail step names (put-back, stop follow-ups) | 1 | After go-live (display only) |
 | 5 | X | (owed) | Browser pass and Board Parity for groups 2 and 3: touched screens; F-044, F-020, B-081 and group 3 scenarios | - | End parity sweep |
@@ -155,6 +154,7 @@ Collision rules (hub ruling 18-11):
 | 10 | X | (owed) | Board Parity F-028/F-033/F-035/F-036; M-448120 on the board; B-048 re-measure | - | End parity sweep (user, 18-11) |
 | 11 | X | (no ID) | Parity sweep, parity-backlog rows 1-8 | - | Looks only, at the end |
 
+Done 20-11 (group 8, merged 4db19b71): B-092, B-093, B-094. Layout check owed to the end sweep.
 Done 20-11 (group 7, merged 38ac0d7f): B-088, B-089, B-090, B-091; B-048 closed (no change). E2E and business runs owed to the end sweep.
 Done 20-11 (group 6): B-083, B-084, B-085, B-086, B-087. Owed to the end sweep: E2E for B-084..B-087, board measuring pass, business scenarios (F-010 tag), runbook counts. Parity-backlog line 11 (header expected time) now buildable.
 Done 19-11 (group 5, merged 06cea28e): F-038, F-045. Owed to the end sweep: Board Parity groups 3-5, business scenarios (F-010, S20114, F-028 OFA PDF with the new wordsIn), component-wide business run for the wordsIn change, F-040 tag clear, runbook counts, closed-months tag recount, architecture §10 Quarantine status.

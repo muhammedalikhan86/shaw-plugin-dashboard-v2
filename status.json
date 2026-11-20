@@ -98,10 +98,10 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 200.0,
-   "pointsRemaining": 16.0,
-   "pointsTotal": 216.0,
-   "itemsRemaining": 6,
+   "pointsDone": 203.0,
+   "pointsRemaining": 14.0,
+   "pointsTotal": 217.0,
+   "itemsRemaining": 4,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 33.0,
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 121.01,
+  "pointsPerWorkingDayWholePeriod": 121.24,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -235,8 +235,8 @@
    },
    {
     "date": "2026-11-20",
-    "pointsDone": 1573.0,
-    "pointsDoneThatDay": 140.0
+    "pointsDone": 1576.0,
+    "pointsDoneThatDay": 143.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -268,9 +268,9 @@
    "Compliance": {
     "optimistic": "2026-11-23",
     "likely": "2026-11-23",
-    "pessimistic": "2026-11-24",
+    "pessimistic": "2026-11-23",
     "rateLast10": 20.38,
-    "rateWhole": 15.16
+    "rateWhole": 15.39
    }
   },
   "overall": {
@@ -279,9 +279,9 @@
    "pessimistic": "2026-11-27",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 121.01,
-   "pointsRemaining": 262.0,
-   "itemsRemaining": 118
+   "rateWhole": 121.24,
+   "pointsRemaining": 260.0,
+   "itemsRemaining": 116
   }
  },
  "milestones": [
@@ -359,7 +359,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-20T13:19:11+11:00",
+ "updatedAt": "2026-11-20T13:29:11+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2100,6 +2100,12 @@
    "change": "Portfolio Services group 7 merged: monthly cycle and add-by-hand parity, Import under Settings, Overview cards fold together",
    "pointsDone": 2.0,
    "pointsRaised": 9.0
+  },
+  {
+   "at": "2026-11-20T13:29:11+11:00",
+   "change": "Compliance group 8 merged: checklist notes no longer overlap, Issued notice pop-up no longer scrolls, Quarantine columns start at 250px",
+   "pointsDone": 3.0,
+   "pointsRaised": 1.0
   }
  ],
  "foundDuringBuild": {
