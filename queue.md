@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 02:16
+Updated: 2026-11-21 02:23
 
 ## Shell (pointer: group 11)
 
@@ -37,7 +37,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | | 12 | OFA-B-016, B-060, B-103, B-124, B-126, F-051, F-085, F-093 | Master list, tables and Expired report | Look and Feel | 14 | After go-live; after group 11 | - |
 | | 13 | OFA-B-113, B-127, F-139, F-140, B-115 | Quarantine cells; renewal tracker features; snack and loading bar on every page | Look and Feel | 13 | After go-live; after group 12 | - |
 | | 14 | OFA-F-075, F-087, F-115, B-145 | Seed and test data; app-wide spec clean-up | Functional | 10 | After go-live; after group 13 | - |
-| | X | OFA-B-(new) | Adopt shell group 12: Actions menu 380px and Exceptions menu about 322px (rest of B-200); hide the empty tab's columns icon (rest of B-202) | Look and Feel | 1 | After shell group 12 | shell group 12 |
+| | X | OFA-B-215 | Adopt shell group 12: Actions menu 380px and Exceptions menu about 322px (rest of B-200); hide the empty tab's columns icon (rest of B-202) | Look and Feel | 1 | After shell group 12 | shell group 12 |
 | | 11 | OFA-B-213 | Settings dialogs: the Add attachments row (the API takes files, then the picker, as drawn) | Functional | 3 | Group 11, first: Functional | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 
