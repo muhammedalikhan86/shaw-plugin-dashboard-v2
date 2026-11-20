@@ -104,6 +104,7 @@ Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfo
 | >> | 14 | OFA-B-189 | Closure confirmation email: blank platform; resolve it the B-188 way (0113) | ?? | FUNC |
 | >> | 14 | OFA-B-190 | Compliance Pending Renewals: platform and product the B-188 way (0108) | ?? | FUNC |
 | >> | 14 | OFA-F-162 | compliance.FindingReview carries the finding's account details, so a reviewed finding-only record still opens | ?? | For COMPLIANCE-DASHBOARD-B-088; migration 0119 |
+| | 15 | OFA-F-165 | Closure confirmation: the client's email on file, and each closure row's confirmed state (who, when) | ?? | For ADVISOR-DASHBOARD-F-146 part 2; migrations from 0140 |
 | 9 | X | OFA-B-183 | A notice held as "send outcome unknown": friendly label on the Issuance tab, and a release action | 2 | After go-live (rare case; a person checks Annature) |
 | 10 | X | OFA-B-184 | A timeout on create-and-send can still send twice; needs a lookup route in AnnatureInterfaceWebAPI | 2 | After go-live |
 | 8 | X | OFA-B-182 | The Fee status column is not in table-tools show/hide, sort or export | 1 | After go-live (looks) |
