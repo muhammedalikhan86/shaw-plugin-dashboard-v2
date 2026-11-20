@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 18:44
+Updated: 2026-11-20 18:47
 
 ## Shell (pointer: group 6)
 
@@ -32,17 +32,16 @@ Updated: 2026-11-20 18:44
 | | 7 | SHELL-F-170 | Shared "built app only" test step in business-tests/support/steps; the component copies go | Undetermined | 1 | Group 7 | - |
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page)
 
-## Portfolio Services
+## Portfolio Services (pointer: group 9)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | F-028 | OFA-F-028 | Go-live prep: release packages for each part | Functional | 10 | Parts 4, 4b merged; parts 1, 2, 3 built (41549c65), finalizing | - |
 | | - | OFA-F-138 | File the signed renewal in DART | Functional | 3 | Blocked by your DART retest | - |
-| | 9 | OFA-B-206 | A sent Initial OFA takes its signing status from its envelopes (today it can only be declined) | Functional | 5 | First in group 9, before go-live | - |
-| | 9 | OFA-F-169 | Cull notes: attach a file | Functional | 2 | After OFA-F-028; first in group 9 with OFA-B-195 | - |
-| | 9 | OFA-B-195 | Settings: the page scrolls sideways by 11px | Functional | 1 | After OFA-F-028; PS2 group 16 merged | - |
-| | 9 | OFA-F-163 | Overview: the two tracks fold with the rest | Functional | ?? | Last in group 9 | - |
-| | 9 | OFA-F-160 | Remove the manual fee sync | Functional | 2 | Group 9, after OFA-F-163 | - |
+| >> | 9 | OFA-B-206 | A sent Initial OFA takes its signing status from its envelopes (today it can only be declined) | Functional | 5 | Building (first) | - |
+| >> | 9 | OFA-F-169 | Cull notes: attach a file | Functional | 2 | Building | - |
+| >> | 9 | OFA-B-195 | Settings: the page scrolls sideways by 11px | Functional | 1 | Building, with OFA-F-163 part 2 | - |
+| >> | 9 | OFA-F-163 | Overview: the two tracks fold with the rest | Functional | ?? | Building | - |
+| >> | 9 | OFA-F-160 | Remove the manual fee sync | Functional | 2 | Group 9; SyncFee mocked until your grant script | - |
 | | 10 | OFA-B-196 | Settings: the four cards in two columns, as drawn | Look and Feel | 2 | After group 9 | - |
 | | 10 | OFA-B-197 | Settings dialogs: board width, Add attachments row, change request and Preview as drawn | Look and Feel | 3 | After group 9 | - |
 | | 10 | OFA-B-198 | Overview: the counts move into the board's cards | Look and Feel | 2 | After group 9 | - |
@@ -56,7 +55,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 | | 11 | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | Group 11, after group 10 | - |
 
-Done 2026-11-20: OFA-F-172 (merged with OFA-F-028 parts 4 and 4b).
+Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed with it).
 
 ## Portfolio Services 2
 
