@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 19:03
+Updated: 2026-11-20 19:05
 
 ## Shell (pointer: group 6)
 
@@ -39,7 +39,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 |---|---|---|---|---|---|---|---|
 | | - | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
 | >> | 9 | OFA-B-206 | A sent Initial OFA takes its signing status from its envelopes (today it can only be declined) | Functional | 5 | Built, in review | - |
-| >> | 9 | (PS raises the ID) | Electronic Initial OFA: refuse the send when the covering email has no approved wording (empty message today; same gap as OFA-B-205) | Functional | ?? | Group 9 with OFA-B-206; from PS2 | - |
+| >> | 9 | OFA-B-208 | Electronic Initial OFA: refuse the send when the covering email has no approved wording (empty message today; same gap as OFA-B-205) | Functional | 1 | Group 9, right after OFA-B-206 review; from PS2 | - |
 | >> | 9 | OFA-F-169 | Cull notes: attach a file | Functional | 2 | Building | - |
 | >> | 9 | OFA-B-195 | Settings: the page scrolls sideways by 11px | Functional | 1 | Building, with OFA-F-163 part 2 | - |
 | >> | 9 | OFA-F-163 | Overview: the two tracks fold with the rest | Functional | ?? | Building | - |
