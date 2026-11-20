@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 01:03
+Updated: 2026-11-21 01:14
 
 ## Shell (pointer: queue empty)
 
@@ -69,7 +69,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 | | X | ADVISOR-DASHBOARD-F-141 | The arrangement record | Functional | 3 | Blocked by a Portfolio Services adviser documents read (no item yet) | - |
 | >> | 16 | ADVISOR-DASHBOARD-F-143 | History events | Functional | 5 | Go 2026-11-21, wave 1 | OFA-F-094 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
-| >> | 16 | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | Functional | 2 | Go 2026-11-21, wave 2, after F-143 | OFA-F-131 |
+| >> | 16 | ADVISOR-DASHBOARD-F-117 | State Manager's "Arrangements that ended" bell (M18) and the hold-extension history line | Functional | 2 | Go 2026-11-21, wave 2, after F-143 | OFA-F-131 |
 | >> | 16 | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | Functional | 3 | Go 2026-11-21, wave 1 | OFA-F-132 |
 | >> | 16 | ADVISOR-DASHBOARD-F-153 | Counterpart, arrangements and closures pickers take select--picker-inset (drop local B-037); Initial OFA start date and DA picker take field--label-box | Look and Feel | 2 | Go 2026-11-21, wave 2 | SHELL-B-169, SHELL-B-170 |
 | | 17 | ADVISOR-DASHBOARD-F-154 | Remove a signatory from an open Back Office ask | Functional | 2 | Group 17, after PS2 group 20 | OFA-F-178 |
