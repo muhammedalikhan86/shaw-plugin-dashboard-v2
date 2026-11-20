@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 14:50
+Updated: 2026-11-20 15:10
 
 ## Shell
 
@@ -35,12 +35,8 @@ Updated: 2026-11-20 14:50
 
 | # | Grp | ID | Item | Size | Status | Depends on |
 |---|---|---|---|---|---|---|
-| >> | 15 | OFA-F-165 | Closure confirmation: client's email and who confirmed when | ?? | Building | - |
-| >> | 15 | OFA-F-166 | Renewal tracker shows each renewal's follow-up stage | ?? | Building | - |
-| >> | 15 | OFA-F-167 | Adviser resends a follow-up to another email | ?? | Built, in group 15 | - |
-| >> | 15 | OFA-F-168 | Adviser edits a follow-up's wording; preview it | ?? | Built, in group 15 | - |
-| | 16 | OFA-F-173 | Outbox: hold every email until the OFA Team approves or bins it; a switch turns the hold off | 5 | Next; release 1 | - |
-| | 16 | OFA-F-174 | Outbox: signing envelopes wait for approval too | 5 | Next; release 1 | OFA-F-173 |
+| >> | 16 | OFA-F-173 | Outbox: hold every email until the OFA Team approves or bins it; a switch turns the hold off | 5 | Building; release 1 | - |
+| >> | 16 | OFA-F-174 | Outbox: signing envelopes wait for approval too | 5 | Building; release 1 | OFA-F-173 |
 | | 17 | OFA-F-170 | Adviser asks Back Office for a missing email or signer | ?? | After group 16 | - |
 | | 17 | OFA-F-171 | Attachments on a correction request | ?? | After group 16 | - |
 | | 18 | OFA-F-094 | Each history event says who can see it; the adviser side reads its own | 3 | After group 17; release 2 | - |
@@ -70,8 +66,8 @@ Updated: 2026-11-20 14:50
 | | 11 | ADVISOR-DASHBOARD-F-149 | Landing Page: Gross Revenue and Funds Under Advice cards removed | 1 | Code merged; tidy-up in group 11 | - |
 | | 11 | ADVISOR-DASHBOARD-F-150 | OFA Questionnaire: five columns hidden by default | ?? | Next | - |
 | | 11 | ADVISOR-DASHBOARD-F-145 | Hide "Fee turned off" once it is recorded | 1 | Next | - |
-| | 11 | ADVISOR-DASHBOARD-F-146 | Closures: send and record the closure confirmation | 3 | Next | OFA-F-165 |
-| | 11 | ADVISOR-DASHBOARD-F-142 | Send follow-up email to clients | 4 | Next | OFA-F-166, OFA-F-167, OFA-F-168 |
+| | 11 | ADVISOR-DASHBOARD-F-146 | Closures: send and record the closure confirmation | 3 | Next | - |
+| | 11 | ADVISOR-DASHBOARD-F-142 | Send follow-up email to clients | 4 | Next | - |
 | | 11 | ADVISOR-DASHBOARD-F-049 | Back Office change request | 3 | Next | OFA-F-170, OFA-F-171 |
 | | 11 | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals | 2 | Next | - |
 | | X | ADVISOR-DASHBOARD-F-141 | The arrangement record | 3 | Blocked by a Portfolio Services adviser documents read (no item yet) | - |
