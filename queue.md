@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 06:26
+Updated: 2026-11-21 06:27
 
 ## Shell (pointer: queue empty)
 
@@ -54,7 +54,7 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 | >> | 18 | COMPLIANCE-DASHBOARD-F-004 | All OFA Arrangements: check it against OFA-F-136 and F-044 as built, fix small gaps, close it | Functional | - | Go 2026-11-21 | - |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
 | >> | 18 | COMPLIANCE-DASHBOARD-F-005 follow-up | The paper-copy line on Signing and expiry (OFA-F-180 is on main) | Functional | 1 | Go 2026-11-21 | - |
-| | X | COMPLIANCE-DASHBOARD-F-004 follow-up | Acceptance evidence on History's Accepted by <name>, as the board draws | Functional | 1 | After OFA-F-182 (PS2 group 24) | OFA-F-182 |
+| | X | COMPLIANCE-DASHBOARD-F-047 | Acceptance evidence on History's Accepted by <name>, as the board draws | Functional | 2 | After OFA-F-182 (PS2 group 24) | OFA-F-182 |
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Monday design sync | - |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
 
