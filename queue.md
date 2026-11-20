@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 06:49
+Updated: 2026-11-21 06:51
 
 ## Shell (pointer: queue empty)
 
@@ -49,7 +49,7 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 19 | COMPLIANCE-DASHBOARD-B-(new) | An automated test that no Only me note pairs with a closure confirmation in History | Functional | 1 | Go 2026-11-21 | - |
+| >> | 19 | COMPLIANCE-DASHBOARD-B-121 | An automated test that no Only me note pairs with a closure confirmation in History | Functional | 1 | Go 2026-11-21 | - |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
 | >> | 19 | COMPLIANCE-DASHBOARD-F-047 | Acceptance evidence on History's Accepted by <name>, as the board draws | Functional | 2 | Go 2026-11-21 (OFA-F-182 is on main) | - |
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Monday design sync | - |
