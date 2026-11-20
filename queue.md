@@ -4,13 +4,13 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 20:36
+Updated: 2026-11-20 20:45
 
 ## Shell (pointer: group 9)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 9 | SHELL-B-163 | Toolbar inline padding 20px, as drawn | Look and Feel | 1 | Building | - |
+| >> | 9 | SHELL-B-163 | Toolbar inline padding 20px, as drawn | Look and Feel | 1 | Closed: already matches the OFA boards (16px), 0 pts built | - |
 | >> | 9 | SHELL-B-164 | Preferences delay row inline padding | Look and Feel | 1 | Building | - |
 | >> | 9 | SHELL-B-165 | Plugins card title-row inset | Look and Feel | 1 | Building | - |
 | >> | 9 | SHELL-B-166 | Profile card sized to content, roles box max 156px | Look and Feel | 1 | Building | - |
