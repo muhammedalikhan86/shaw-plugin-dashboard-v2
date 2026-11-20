@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 15:30
+Updated: 2026-11-20 15:45
 
 ## Shell
 
@@ -17,6 +17,7 @@ Updated: 2026-11-20 15:30
 | | 5 | SHELL-F-167 | Tables: a status track with no title, inside a page | ?? | After the parity run | - |
 | | 5 | SHELL-B-135 | Tables: frozen columns see-through when scrolling sideways | ?? | After the parity run | - |
 | | 5 | SHELL-F-168 | Tables: the page can fold or unfold the status track | ?? | After the parity run | - |
+| | 5 | SHELL-B-137 | Tables: header text grey, the board draws black | 1 | Look; after go-live | - |
 
 ## Portfolio Services
 
@@ -54,6 +55,13 @@ Updated: 2026-11-20 15:30
 |---|---|---|---|---|---|---|
 | | X | COMPLIANCE-DASHBOARD-B-095 | Quarantine: Extension and Last prompt start at 250px | 1 | Waiting | SHELL-F-169 |
 | | X | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | 2 | After go-live | OFA-F-144 |
+| | X | COMPLIANCE-DASHBOARD-B-100 | OFA Checklist: loading state shows no card or Month field | 1 | Look; after go-live | - |
+| | X | COMPLIANCE-DASHBOARD-B-101 | Load a new approved version: Check column and calendar button off by a few px | 1 | Look; after go-live | - |
+| | X | COMPLIANCE-DASHBOARD-B-102 | List screens: the could-not-be-read card stretches to the window foot | 1 | Look; after go-live | - |
+| | X | COMPLIANCE-DASHBOARD-B-103 | OFA Checklist rows: note-count chip and Month arrow differ from the board | 1 | Look; after go-live; may be a design question | - |
+| | X | P92 (design row) | Cull list: keep or drop the Status column the board does not draw | - | Blocked by the designer's answer | - |
+| | X | P93 (design row) | Compliance review: the page line's "Read only." while the page has actions | - | Blocked by the designer's answer | - |
+| | X | (parity backlog 1-13) | Older look differences: tab strip gaps, header spacing, chip and tab colours, platform codes, filter dialog padding | ?? | Look; after go-live | - |
 
 ## Advisor (release 2)
 
