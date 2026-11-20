@@ -51,7 +51,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | | 10 | OFA-B-200 | Row and Actions menus at board widths; Exceptions menu in board order | Look and Feel | 2 | After group 9 | - |
 | | 10 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | After group 9 | - |
 | | 10 | (PS2 writes it up) | Issuance: friendly label and Release button for a notice held by an unknown outcome (front end of OFA-B-183) | Functional | 1 | Group 10, after PS2's OFA-B-183 back end is on main | OFA-B-183 |
-| | 18 | (PS2 raises the ID) | Adviser Renewal tracker read returns the account name (advisor.usp_RenewalTracker_Read has no AccountName; advisor mocks it today) | Functional | 1 | Group 18; from advisor | - |
+| | 18 | OFA-F-176 | Adviser Renewal tracker read returns the account name (advisor.usp_RenewalTracker_Read has no AccountName; advisor mocks it today) | Functional | 1 | Group 18, right after OFA-F-131; from advisor | - |
 | | 10 | OFA-B-202 | Empty Initial OFAs and Exceptions: only Add and expand in the toolbar | Look and Feel | 1 | After group 9 | - |
 | | 10 | OFA-B-203 | Initial OFAs Accept dialog: board width, no hint under the date | Look and Feel | 1 | After group 9 | - |
 | | 10 | OFA-B-204 | Renewal tracker cells and Exceptions date wrap at 1440 (re-run first) | Look and Feel | 1 | After group 9 | - |
@@ -97,7 +97,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 | | 14 | ADVISOR-DASHBOARD-B-121 | Termination wording dialog: the sentence before the wording | Look and Feel | 1 | After group 13 | - |
 | | 14 | ADVISOR-DASHBOARD-B-122 | Required asterisks on Start-an-OFA and No OFA obligations | Look and Feel | 1 | After group 13 | - |
 | | 15 | ADVISOR-DASHBOARD-F-049 | Back Office change request (part 2) | Functional | ?? | Group 15, after group 14: adopt OFA-F-170 and OFA-F-171 (on main, 6e56c9f9) | OFA-F-170, OFA-F-171 |
-| | 15 | ADVISOR-DASHBOARD-B-123 | Renewal tracker: account name as the S-Account column's second line, as drawn | Functional | 1 | Group 15, after the PS2 read lands | PS2 AccountName read |
+| | 15 | ADVISOR-DASHBOARD-B-123 | Renewal tracker: account name as the S-Account column's second line, as drawn | Functional | 1 | Group 15, after the PS2 read lands | OFA-F-176 |
 | | X | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals (part 2) | Functional | ?? | Waiting | OFA-F-094 |
 | | X | ADVISOR-DASHBOARD-F-141 | The arrangement record | Functional | 3 | Blocked by a Portfolio Services adviser documents read (no item yet) | - |
 | | X | ADVISOR-DASHBOARD-F-143 | History events | Functional | 5 | Waiting | OFA-F-094 |
