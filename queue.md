@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 06:27
+Updated: 2026-11-21 06:33
 
 ## Shell (pointer: queue empty)
 
@@ -18,11 +18,12 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | - | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
+| | 12 | Seed (moved from group 14) | A paper copy uploaded on S19611, Clara Ruiz (for ADVISOR-DASHBOARD-F-139, compliance's fully-signed scenario and A16) | Functional | 1 | Group 12 | - |
 | | 12 | OFA-F-133 (counter) | Overview counter that opens the manual-close list (board O13; PS2 builds the list) | Functional | 1 | Group 12; the list is on main (4c8b3fc9) | OFA-F-133 |
 | >> | 11 | OFA-B-005, B-006, B-043, B-046, B-059, B-123, F-052, F-054, F-055 | Initial OFAs as drawn, and its planned features | Look and Feel | 15 | Go 2026-11-21 | - |
 | | 12 | OFA-B-016, B-060, B-103, B-124, B-126, F-051, F-085, F-093 | Master list, tables and Expired report | Look and Feel | 14 | After go-live; after group 11 | - |
 | | 13 | OFA-B-113, B-127, F-139, F-140, B-115 | Quarantine cells; renewal tracker features; snack and loading bar on every page | Look and Feel | 13 | After go-live; after group 12 | - |
-| | 14 | OFA-F-075, F-087, F-115, B-145 | Seed and test data (also: a DART party who does not sign yet on an open entry, for ADVISOR-DASHBOARD-F-155; a paper copy uploaded on S19611, Clara Ruiz, for ADVISOR-DASHBOARD-F-139 and compliance A16); app-wide spec clean-up | Functional | 10 | After go-live; after group 13 | - |
+| | 14 | OFA-F-075, F-087, F-115, B-145 | Seed and test data (also: a DART party who does not sign yet on an open entry, for ADVISOR-DASHBOARD-F-155); app-wide spec clean-up | Functional | 10 | After go-live; after group 13 | - |
 | | X | OFA-B-215 | Adopt shell groups 12 and 13: Actions menu 380px and Exceptions menu about 322px (rest of B-200); hide the empty tab's columns icon (rest of B-202); the four cycle filter dialogs' intro line (rest of B-043) | Look and Feel | 1 | Ready: shell groups 12 and 13 are on main (adopt .menu--wide, showColumnsWhenEmpty=false and filterDialogIntro) | SHELL-B-174, SHELL-B-175, shell group 13 |
 | >> | 11 | OFA-B-213 | Settings dialogs: the Add attachments row (the API takes files, then the picker, as drawn) | Functional | 3 | Go 2026-11-21 | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
