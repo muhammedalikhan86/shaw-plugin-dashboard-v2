@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 05:50
+Updated: 2026-11-21 05:54
 
 ## Shell (pointer: queue empty)
 
@@ -51,10 +51,10 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 17 | COMPLIANCE-DASHBOARD-B-(new) | The Signing and expiry export writes History's words for Latest activity, not the raw event name | Functional | 1 | Go 2026-11-21 | - |
-| >> | 17 | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest that can run now) | Functional | 3 | In progress: group 16 switched 30 on | - |
+| >> | 17 | COMPLIANCE-DASHBOARD-B-120 | The Signing and expiry export writes History's words for Latest activity, not the raw event name | Functional | 1 | Go 2026-11-21 | - |
+| | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
 | | X | COMPLIANCE-DASHBOARD-F-005 follow-up | The paper-copy line on Signing and expiry | Functional | 1 | After PS2 group 23 (OFA-F-180 also gives compliance.usp_PendingRenewal_Read the paper copy) | OFA-F-180 |
-| | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync | - |
+| | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
 
 Done 2026-11-21: group 16 (c5436b08): COMPLIANCE-DASHBOARD-F-005.
 Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563); group 12 end sweep clean, B-115 fixed (merged 1f6dde4c); group 13 B-114, B-117 fixed, F-008 progress (a44de06b); group 14 B-119, F-037; B-116 green with OFA-B-211 (2fdcd937); group 15 B-118, F-008 progress (b005b57b)
