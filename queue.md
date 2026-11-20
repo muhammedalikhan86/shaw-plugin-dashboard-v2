@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 00:44
+Updated: 2026-11-21 00:55
 
 ## Shell (pointer: queue empty)
 
@@ -33,6 +33,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | | 10 | OFA-B-203 | Initial OFAs Accept dialog: board width, no hint under the date | Look and Feel | 1 | After group 9 | - |
 | | 10 | OFA-B-204 | Renewal tracker cells and Exceptions date wrap at 1440 (re-run first) | Look and Feel | 1 | After group 9 | - |
 | | 10 | OFA-B-207 | Quarantine list tab count colour, as drawn | Look and Feel | 1 | After group 9 | - |
+| | 10 | (PS raises it) | Initial OFAs spec "keeps each tab its own size when the other tab is opened and left" times out at 5000 ms on main (seen by PS2, group 19 Integration) | Functional | 1 | Group 10; check first whether it is a slow-machine timeout | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 
 Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed with it).
@@ -41,11 +42,11 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 19 | OFA-B-209 | Issuance: friendly label and Release button for a notice held by an unknown outcome (front end of OFA-B-183) | Functional | 1 | Integration running | - |
-| >> | 19 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | Integration running | - |
-| >> | 19 | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | Integration running | - |
-| >> | 19 | OFA-B-211 | Test data: Hannah Ilves's quarantined entries (S20114, S20131, X91) record Marcus Ashcombe as State Manager (from COMPLIANCE-DASHBOARD-B-116); also TD-66 (S19648) second signatory named Emeka Okafor as the board draws (from COMPLIANCE-DASHBOARD-B-119) | Functional | 1 | Integration running | - |
-| >> | 19 | OFA-B-210 | Monthly cycle and Exceptions report Cycle pickers take select--picker-inset (SHELL-B-169) | Look and Feel | 1 | Integration running | SHELL-B-169 |
+| >> | 19 | OFA-B-209 | Issuance: friendly label and Release button for a notice held by an unknown outcome (front end of OFA-B-183) | Functional | 1 | Integration passed; final review running | - |
+| >> | 19 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | Integration passed; final review running | - |
+| >> | 19 | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | Integration passed; final review running | - |
+| >> | 19 | OFA-B-211 | Test data: Hannah Ilves's quarantined entries (S20114, S20131, X91) record Marcus Ashcombe as State Manager (from COMPLIANCE-DASHBOARD-B-116); also TD-66 (S19648) second signatory named Emeka Okafor as the board draws (from COMPLIANCE-DASHBOARD-B-119) | Functional | 1 | Integration passed; final review running | - |
+| >> | 19 | OFA-B-210 | Monthly cycle and Exceptions report Cycle pickers take select--picker-inset (SHELL-B-169) | Look and Feel | 1 | Integration passed; final review running | SHELL-B-169 |
 | | 20 | OFA-F-177 | A compliance view of client closures (S-Account, requested on, adviser, recorded by, due date from the closure clock, fee marked off), for COMPLIANCE-DASHBOARD-B-118 | Functional | 2 | Group 20, after group 19 (migration 0155) | - |
 | | 20 | OFA-F-178 | Adviser side withdraws an open Back Office ask (proc), for ADVISOR-DASHBOARD-F-154 | Functional | 1 | Group 20, after group 19 | - |
 | | 20 | OFA-F-179 | Adviser side reads the account's DART parties (mock where the warehouse table is missing), for ADVISOR-DASHBOARD-F-155 | Functional | 2 | Group 20, after group 19 | - |
