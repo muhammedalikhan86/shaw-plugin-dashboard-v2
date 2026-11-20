@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 15:33
+Updated: 2026-11-20 15:34
 
 ## Shell (pointer: group 6)
 
@@ -19,6 +19,10 @@ Updated: 2026-11-20 15:33
 | >> | 6 | SHELL-B-148 | Act As chip: size, icon and type | Look and Feel | 1 | Building | - |
 | >> | 6 | SHELL-B-151 | Act As panel labels colour | Look and Feel | 1 | Building | - |
 | >> | 6 | LANDING-PAGE-B-002 | Landing card icon 8px off | Look and Feel | 1 | Building | - |
+| >> | 6 | SHELL-B-139 | Plugins-unavailable message fits the rail | Functional | ? | Building | - |
+| >> | 6 | SHELL-B-140 | Failed identity read: Try again, no blank area | Functional | ? | Building | - |
+| >> | 6 | SHELL-B-141 | Search empty state says "dashboards" | Functional | ? | Building | - |
+| >> | 6 | SHELL-B-142 | Profile and Preferences: black labels, page position as drawn | Look and Feel | ? | Building | - |
 | | 6 | (re-check) | Re-measure shell #8, #17, #18 and landing #2, #4, #5; raise and fold in the ones that stand | Undetermined | ?? | In group 6 board check | - |
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page)
 
@@ -28,7 +32,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 |---|---|---|---|---|---|---|---|
 | >> | F-028 | OFA-F-028 | Go-live prep: release packages for each part | Functional | 10 | Parts 4, 4b merged; parts 1, 3 in review; part 2 next | - |
 | | - | OFA-F-138 | File the signed renewal in DART | Functional | 3 | Blocked by your DART retest | - |
-| | 9 | OFA-B-206 | A sent Initial OFA takes its signing status from its envelopes (today it can only be declined) | Functional | ? | First in group 9, before go-live | - |
+| | 9 | OFA-B-206 | A sent Initial OFA takes its signing status from its envelopes (today it can only be declined) | Functional | 5 | First in group 9, before go-live | - |
 | | 9 | OFA-F-169 | Cull notes: attach a file | Functional | 2 | After OFA-F-028; first in group 9 with OFA-B-195 | - |
 | | 9 | OFA-B-195 | Settings: the page scrolls sideways by 11px | Functional | 1 | After OFA-F-028; PS2 group 16 merged | - |
 | | 9 | OFA-B-196 | Settings: the four cards in two columns, as drawn | Look and Feel | 2 | After go-live | - |
@@ -102,7 +106,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 
 1. Parity run: done 20-11 and routed for every component. Shell and landing-page findings are shell group 6.
 2. Next merges: advisor group 12, compliance group 11, shell group 6, PS OFA-F-028 part 2, PS2 group 17. After each one, its own tests run (all-app Jest after shell changes).
-3. Designer prompt (not yet sent; goes out after this queue round): W38, P92, P93, plus advisor B92 (F-146 confirmed line on CONFIRMED OFF rows), plus 6 parity questions: Overview "not fully signed" count slot; Adviser review answers bar placement; read-failure card on six PS screens; scope line for an adviser with several codes; Renewal tracker filter Reset and intro; Arrangements empty/loading/error card; shell: logo width (#12) and collapsed rail width (#21), where the boards disagree; shell states with no board (#20: Keep open on, Notifications with items, Search results and no matches, Search loading); landing empty and bus-unavailable states (#6); compliance board: drop the empty grid after the filter-dialog fields so the gap above the buttons is 48px like advisor and PS.
+3. Designer prompt (not yet sent; goes out after this queue round): W38, P92, P93, plus advisor B92 (F-146 confirmed line on CONFIRMED OFF rows), plus 6 parity questions: Overview "not fully signed" count slot; Adviser review answers bar placement; read-failure card on six PS screens; scope line for an adviser with several codes; Renewal tracker filter Reset and intro; Arrangements empty/loading/error card; shell: logo width (#12) and collapsed rail width (#21), where the boards disagree; shell states with no board (#20: Keep open on, Notifications with items, Search results and no matches, Search loading); landing empty and bus-unavailable states (#6); shell error and empty states (#4), search panel drawn two ways (#5), Plugin0 buttons and chips (#7); compliance review page "Read only." line and OFA Checklist note chip and Month arrow; compliance board: drop the empty grid after the filter-dialog fields so the gap above the buttons is 48px like advisor and PS.
 4. End sweep: the browser, business-test and board checks skipped during the build, run once at the end.
 5. Waiting on you: push main; before go-live, approved wording for the renewal notice, covering email and both service-question lists (no placeholder covers them); check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest (another day); Luke's templates and Initial OFA envelope title; PS's 8 production settings.
 
