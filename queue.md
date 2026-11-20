@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 18:47
+Updated: 2026-11-20 18:49
 
 ## Shell (pointer: group 6)
 
@@ -79,7 +79,7 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (merged a733211a)
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 11 | COMPLIANCE-DASHBOARD-B-095 | Quarantine: Extension and Last prompt start at 250px | Look and Feel | 1 | Building | - |
-| >> | 11 | COMPLIANCE-DASHBOARD-B-111 | Load a new approved version: Check column sits about 60px left of the board | Look and Feel | 1 | Building | - |
+| >> | 11 | COMPLIANCE-DASHBOARD-B-111 | Load a new approved version: Check column sits about 60px left of the board | Look and Feel | 1 | Closed, no change: build matches the board at 1440 | - |
 | >> | 11 | COMPLIANCE-DASHBOARD-B-112 | Platform full names in the 8 other places the board draws them | Look and Feel | 1 | Building | - |
 | >> | 11 | COMPLIANCE-DASHBOARD-B-113 | Closed months notes tab: the Note column stays within 500px and the note wraps | Look and Feel | 1 | Building | - |
 | | 12 | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | Functional | 2 | Group 12, after group 11; once OFA-F-144 is on main | OFA-F-144 |
