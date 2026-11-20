@@ -23,7 +23,7 @@ Built and on main:
 
 Building now:
 1. PS group 7: monthly cycle parity (24 gaps) and add-by-hand parity (9 gaps). The F-138 DART body fix is already merged (21608d24); the user retests once the stack is free. Then F-028 go-live prep.
-2. PS2 group 13: OFA-F-161, the fee expected time for compliance's banner; then group 14: OFA-B-189, B-190 (the same blank platform in the closure email and Compliance Pending Renewals), F-162 (for compliance B-088).
+2. PS2 group 14 (F-161 merged): OFA-B-189, B-190 (the same blank platform in the closure email and Compliance Pending Renewals), F-162 (for compliance B-088).
 3. Advisor group 11 (unparked by the user 20-11): F-145, F-146, F-142, F-049 (correction part), F-059, F-057.
 4. Compliance group 6 (unparked by the user 20-11): B-083, plus all 4 parity gaps (B-084 fees-not-arrived banner, B-085, B-086, B-087) owed docs. B-088 (a reviewed fee-only record still opens) waits on PS2's OFA-F-162.
 5. Shell holds the 4200 stack: a full parity run per component today (user, 20-11), findings queued for the weekend; the owed stack checks fold in.
@@ -94,23 +94,23 @@ Done 18-11 (group 1): OFA-B-152, OFA-B-149, OFA-F-084; then OFA-F-151, OFA-B-156
 Also queued in PS's handoff: triage rows OFA-B-157+ / OFA-F-152, G6.
 Parity list (looks only, at the end): "Add a platform account" menu width (by-hand-dialog.html:72).
 
-## Portfolio Services 2 (pointer: group 13: OFA-F-161; then group 14: OFA-B-189, B-190, F-162)
+## Portfolio Services 2 (pointer: group 14: OFA-B-189, B-190, F-162)
 
 Second PS checkout, approved by Muhammed 18-11: `../shaw-plugin-dashboard-portfolio-services-2`, branch `portfolio-services-2`, port offset 40, artboard port 8799.
 
 | # | Grp | ID | Item | Size | Status / depends on |
 |---|-----|----|------|------|---------------------|
 | 1 | - | (setup) | In hub.json and opened 18-11 on Lachlan's account | - | Done |
-| >> | 13 | OFA-F-161 | compliance.SourceTimes gains FeesExpectedUtc (when today's fees were due), for the compliance fees-not-arrived banner | ?? | For COMPLIANCE-DASHBOARD-B-084; migration 0117 |
-| | 14 | OFA-B-189 | Closure confirmation email: blank platform; resolve it the B-188 way (0113) | ?? | FUNC |
-| | 14 | OFA-B-190 | Compliance Pending Renewals: platform and product the B-188 way (0108) | ?? | FUNC |
-| | 14 | OFA-F-162 | compliance.FindingReview carries the finding's account details, so a reviewed finding-only record still opens | ?? | For COMPLIANCE-DASHBOARD-B-088; migration 0119 |
+| >> | 14 | OFA-B-189 | Closure confirmation email: blank platform; resolve it the B-188 way (0113) | ?? | FUNC |
+| >> | 14 | OFA-B-190 | Compliance Pending Renewals: platform and product the B-188 way (0108) | ?? | FUNC |
+| >> | 14 | OFA-F-162 | compliance.FindingReview carries the finding's account details, so a reviewed finding-only record still opens | ?? | For COMPLIANCE-DASHBOARD-B-088; migration 0119 |
 | 9 | X | OFA-B-183 | A notice held as "send outcome unknown": friendly label on the Issuance tab, and a release action | 2 | After go-live (rare case; a person checks Annature) |
 | 10 | X | OFA-B-184 | A timeout on create-and-send can still send twice; needs a lookup route in AnnatureInterfaceWebAPI | 2 | After go-live |
 | 8 | X | OFA-B-182 | The Fee status column is not in table-tools show/hide, sort or export | 1 | After go-live (looks) |
 | 6 | X | OFA-F-158 | Replace every placeholder email with Luke's templates (merge tags as before) | 1 | Blocked on Luke's reply |
 | 7 | X | OFA-B-179 | Expired report wrong when the State Manager email switch is off (row text + help text) | 1 | After go-live (switch is ON at go-live) |
 
+Done 20-11 (group 13 part 2): OFA-F-161 (0117, FeesExpectedUtc on compliance.SourceTimes).
 Done 20-11 (group 13 part 1, merged 8cfef855): OFA-B-188 (0116; both Renewal Trackers and the export show platform and product).
 Done 20-11 (group 12, merged 7ea4ce2a): OFA-F-078, F-056 (GET /overview/counts; O13 not built).
 Done 20-11 (group 11, merged 321304ae): OFA-F-027 (0115), F-059, OFA-S-007 findings (parked with the DART pause).
