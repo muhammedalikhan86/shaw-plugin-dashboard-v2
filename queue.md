@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 00:36
+Updated: 2026-11-21 00:37
 
 ## Shell (pointer: queue empty)
 
@@ -46,7 +46,7 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | >> | 19 | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | Built; in review | - |
 | >> | 19 | OFA-B-211 | Test data: Hannah Ilves's quarantined entries (S20114, S20131, X91) record Marcus Ashcombe as State Manager (from COMPLIANCE-DASHBOARD-B-116); also TD-66 (S19648) second signatory named Emeka Okafor as the board draws (from COMPLIANCE-DASHBOARD-B-119) | Functional | 1 | Built; in review | - |
 | >> | 19 | OFA-B-210 | Monthly cycle and Exceptions report Cycle pickers take select--picker-inset (SHELL-B-169) | Look and Feel | 1 | Built; in review | SHELL-B-169 |
-| | 20 | (PS2 raises it) | A compliance view of client closures (S-Account, requested on, adviser, recorded by, due date from the closure clock, fee marked off), for COMPLIANCE-DASHBOARD-B-118 | Functional | 2 | Group 20, after group 19 | - |
+| | 20 | OFA-F-177 | A compliance view of client closures (S-Account, requested on, adviser, recorded by, due date from the closure clock, fee marked off), for COMPLIANCE-DASHBOARD-B-118 | Functional | 2 | Group 20, after group 19 (migration 0155) | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b).
@@ -56,7 +56,7 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: 31 scenarios on (group 13); the rest wait on built screens and design rows M34-M37 | - |
-| | 15 | COMPLIANCE-DASHBOARD-B-118 | S19780's record shows no closure summary (OFA-F-044 data) | Functional | 3 | Waits on the PS2 compliance closure view | PS2 item |
+| | 15 | COMPLIANCE-DASHBOARD-B-118 | S19780's record shows no closure summary (OFA-F-044 data) | Functional | 3 | Waits on the PS2 compliance closure view | OFA-F-177 |
 | >> | 14 | COMPLIANCE-DASHBOARD-B-119 | September closed month: S19648 shows the adviser as second signatory | Functional | 1 | Building: Signatories are the signers across the month's notices | - |
 | | - | COMPLIANCE-DASHBOARD-B-116 | Two Quarantine scenarios red: Hannah Ilves's quarantined entries have no State Manager in the test data | Functional | 0 | Waits on PS2 group 19 test data; 2 scenarios known red | PS2 item |
 | | 14 | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | Functional | 2 | Group 14 with B-119, once OFA-F-144 (PS2 group 19) is on main | OFA-F-144 |
