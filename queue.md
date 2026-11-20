@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 02:05
+Updated: 2026-11-21 02:15
 
 ## Shell (pointer: group 11)
 
@@ -32,20 +32,30 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | >> | 10 | OFA-B-204 | Renewal tracker cells and Exceptions date wrap at 1440 (re-run first) | Look and Feel | 1 | Go 2026-11-21 | - |
 | >> | 10 | OFA-B-207 | Quarantine list tab count colour, as drawn | Look and Feel | 1 | Go 2026-11-21 | - |
 | >> | 10 | OFA-B-212 | Initial OFAs spec "keeps each tab its own size when the other tab is opened and left" times out at 5000 ms on main (seen by PS2, group 19 Integration) | Functional | 1 | Go 2026-11-21 | - |
+| | 11 | OFA-B-005, B-006, B-043, B-046, B-059, B-123, F-052, F-054, F-055 | Initial OFAs as drawn, and its planned features | Look and Feel | 15 | After go-live; after group 10 | - |
+| | 12 | OFA-B-016, B-060, B-103, B-124, B-126, F-051, F-085, F-093 | Master list, tables and Expired report | Look and Feel | 14 | After go-live; after group 11 | - |
+| | 13 | OFA-B-113, B-127, F-139, F-140, B-115 | Quarantine cells; renewal tracker features; snack and loading bar on every page | Look and Feel | 13 | After go-live; after group 12 | - |
+| | 14 | OFA-F-075, F-087, F-115, B-145 | Seed and test data; app-wide spec clean-up | Functional | 10 | After go-live; after group 13 | - |
 | | X | OFA-B-(new) | Adopt shell group 12: Actions menu 380px and Exceptions menu about 322px (rest of B-200); hide the empty tab's columns icon (rest of B-202) | Look and Feel | 1 | After shell group 12 | shell group 12 |
-| | X | OFA-B-213 | Settings dialogs: the Add attachments row (the API takes files, then the picker, as drawn) | Functional | 3 | Next group, after group 10 | - |
+| | 11 | OFA-B-213 | Settings dialogs: the Add attachments row (the API takes files, then the picker, as drawn) | Functional | 3 | Group 11, first: Functional | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 
 Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed with it). Group 9: OFA-B-206, B-208, B-195, F-163 part 2, F-160, F-169 (43bb6578).
 
-## Portfolio Services 2 (pointer: backlog sweep)
+## Portfolio Services 2 (pointer: group 22)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 21 | (sweep) | Backlog sweep: every open Portfolio Services PMBook item not in this queue (about 89: old board-parity bugs, Planned features). Close what main already fixes, then propose groups for the rest | Undetermined | ?? | Go 2026-11-21 | - |
+| >> | 22 | OFA-F-116, S-005, F-133 | Before go-live: holiday table for the closure clocks; finish the spike; manual close of a Back Office ask (backend first, screen once design row O24 is drawn) | Functional | 5 | Go 2026-11-21 | - |
+| | 23 | OFA-B-044, B-049, B-050, B-135, B-140, F-065, F-083 | Backend and engineering: cycles, notices, a slow questionnaire read (migration), calendar, master-list reads | Functional | 11 | After go-live; after group 22 | - |
+| | 24 | OFA-B-078, B-100, B-104, B-105, B-114, B-122 | Exceptions report as drawn | Look and Feel | 9 | After go-live; after group 23 | - |
+| | 25 | OFA-B-024, B-045, B-047, B-071, B-073, B-107, B-128, B-130, B-137 | Monthly cycle as drawn (not the Quarantine tab); B-137 names who issued a closed month (migration) | Look and Feel | 14 | After go-live; after group 24 | - |
+| | 26 | OFA-B-015, B-027, B-129, B-131, B-132, B-133, B-134, F-088, B-084, B-109, B-125 | Arrangement record and OFA Checklist as drawn | Look and Feel | 15 | After go-live; after group 25 | - |
+| | 27 | OFA-B-026, B-143, B-144, F-029 | Tests: start-up flake, stale tests, faster .NET run; parity.spec.ts drops B-002 and B-004 | Functional | 12 | After go-live; after group 26 | - |
+| | X | OFA-F-032, F-047, F-062, F-120 | Engineering, after go-live | Functional | 12 | After group 27 | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
-Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b). Group 19: OFA-B-209, B-201, B-210, F-144, B-211 (c342a0a3). Group 20: OFA-F-177, F-178, F-179, B-214 (3a9578c7).
+Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b). Group 19: OFA-B-209, B-201, B-210, F-144, B-211 (c342a0a3). Group 20: OFA-F-177, F-178, F-179, B-214 (3a9578c7). Group 21 sweep (a524e03b): 12 closed, including OFA-B-002, B-003, B-004, B-014, B-089, B-058, B-063, B-064, B-088, B-149, F-070, F-119.
 
 ## Compliance (pointer: group 15)
 
