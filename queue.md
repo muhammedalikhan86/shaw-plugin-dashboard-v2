@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 19:42
+Updated: 2026-11-20 19:58
 
 ## Shell (pointer: group 7)
 
@@ -77,10 +77,10 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 13 | ADVISOR-DASHBOARD-B-116 | Closures: add the Filter and Export buttons | Functional | 2 | Integration running | - |
-| >> | 13 | ADVISOR-DASHBOARD-B-117 | Closures default columns and the two column choosers, as drawn | Functional | 2 | Integration running | - |
-| >> | 13 | ADVISOR-DASHBOARD-B-118 | "Fees as at · Signing as at" line on Renewal tracker and Closures | Functional | 1 | Integration running | - |
-| >> | 13 | ADVISOR-DASHBOARD-B-119 | Product field in the Questionnaire and Initial OFAs filters | Functional | 1 | Integration running | - |
+| >> | 13 | ADVISOR-DASHBOARD-B-116 | Closures: add the Filter and Export buttons | Functional | 2 | Ready (6be52be5); merge waits for shell to commit its v153 pointer edits | - |
+| >> | 13 | ADVISOR-DASHBOARD-B-117 | Closures default columns and the two column choosers, as drawn | Functional | 2 | Ready (6be52be5); merge waits for shell to commit its v153 pointer edits | - |
+| >> | 13 | ADVISOR-DASHBOARD-B-118 | "Fees as at · Signing as at" line on Renewal tracker and Closures | Functional | 1 | Ready (6be52be5); merge waits for shell to commit its v153 pointer edits | - |
+| >> | 13 | ADVISOR-DASHBOARD-B-119 | Product field in the Questionnaire and Initial OFAs filters | Functional | 1 | Ready (6be52be5); merge waits for shell to commit its v153 pointer edits | - |
 | | 14 | ADVISOR-DASHBOARD-B-120 | Test scenarios for the board's empty, reading, failed and few-row states | Functional | 2 | After group 13 | - |
 | | 14 | ADVISOR-DASHBOARD-B-121 | Termination wording dialog: the sentence before the wording | Look and Feel | 1 | After group 13 | - |
 | | 14 | ADVISOR-DASHBOARD-B-122 | Required asterisks on Start-an-OFA and No OFA obligations | Look and Feel | 1 | After group 13 | - |
@@ -92,7 +92,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 | | X | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | Functional | 2 | Waiting | OFA-F-131 |
 | | X | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | Functional | 3 | Waiting | OFA-F-132 |
-| | 14 | ADVISOR-DASHBOARD-F-151 | Use the shared status track | Look and Feel | 1 | Group 14 (SHELL-F-163 done) | - |
+| | 14 | ADVISOR-DASHBOARD-F-151 | Use the shared status track | Look and Feel | 2 | Group 14 (SHELL-F-163 done) | - |
 
 Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777).
 
