@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 02:15
+Updated: 2026-11-21 02:16
 
 ## Shell (pointer: group 11)
 
@@ -32,6 +32,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | >> | 10 | OFA-B-204 | Renewal tracker cells and Exceptions date wrap at 1440 (re-run first) | Look and Feel | 1 | Go 2026-11-21 | - |
 | >> | 10 | OFA-B-207 | Quarantine list tab count colour, as drawn | Look and Feel | 1 | Go 2026-11-21 | - |
 | >> | 10 | OFA-B-212 | Initial OFAs spec "keeps each tab its own size when the other tab is opened and left" times out at 5000 ms on main (seen by PS2, group 19 Integration) | Functional | 1 | Go 2026-11-21 | - |
+| | 11 | OFA-F-133 (counter) | Overview counter that opens the manual-close list (board O13; PS2 builds the list) | Functional | 1 | Group 11, after PS2 group 22 | OFA-F-133 |
 | | 11 | OFA-B-005, B-006, B-043, B-046, B-059, B-123, F-052, F-054, F-055 | Initial OFAs as drawn, and its planned features | Look and Feel | 15 | After go-live; after group 10 | - |
 | | 12 | OFA-B-016, B-060, B-103, B-124, B-126, F-051, F-085, F-093 | Master list, tables and Expired report | Look and Feel | 14 | After go-live; after group 11 | - |
 | | 13 | OFA-B-113, B-127, F-139, F-140, B-115 | Quarantine cells; renewal tracker features; snack and loading bar on every page | Look and Feel | 13 | After go-live; after group 12 | - |
@@ -42,12 +43,14 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 
 Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed with it). Group 9: OFA-B-206, B-208, B-195, F-163 part 2, F-160, F-169 (43bb6578).
 
-## Portfolio Services 2 (pointer: group 22)
+## Portfolio Services 2 (pointer: group 22, with the old group 23)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 22 | OFA-F-116, S-005, F-133 | Before go-live: holiday table for the closure clocks; finish the spike; manual close of a Back Office ask (backend first, screen once design row O24 is drawn) | Functional | 5 | Go 2026-11-21 | - |
-| | 23 | OFA-B-044, B-049, B-050, B-135, B-140, F-065, F-083 | Backend and engineering: cycles, notices, a slow questionnaire read (migration), calendar, master-list reads | Functional | 11 | After go-live; after group 22 | - |
+| | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | Blocked by you (Monday) | - |
+| | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Blocked by you (Monday) | - |
+| >> | 22 | OFA-F-133 | Manual close of a Back Office ask: backend and its list screen (board O13); the Overview counter goes to PS | Functional | 3 | Go 2026-11-21 | - |
+| >> | 22 | OFA-B-044, B-049, B-050, B-135, B-140, F-065, F-083 | Backend and engineering: cycles, notices, a slow questionnaire read (migration), calendar, master-list reads | Functional | 11 | Go 2026-11-21, with F-133 | - |
 | | 24 | OFA-B-078, B-100, B-104, B-105, B-114, B-122 | Exceptions report as drawn | Look and Feel | 9 | After go-live; after group 23 | - |
 | | 25 | OFA-B-024, B-045, B-047, B-071, B-073, B-107, B-128, B-130, B-137 | Monthly cycle as drawn (not the Quarantine tab); B-137 names who issued a closed month (migration) | Look and Feel | 14 | After go-live; after group 24 | - |
 | | 26 | OFA-B-015, B-027, B-129, B-131, B-132, B-133, B-134, F-088, B-084, B-109, B-125 | Arrangement record and OFA Checklist as drawn | Look and Feel | 15 | After go-live; after group 25 | - |
@@ -86,6 +89,6 @@ Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 
 2. Next merges: advisor group 12, compliance group 11, shell group 6, PS OFA-F-028 part 2, PS2 group 17. After each one, its own tests run (all-app Jest after shell changes).
 3. Designer prompt (not yet sent; goes out after this queue round): W38, P92, P93, plus PS O20 (OFA-B-206: the paper-signed upload item on an imported Initial OFA row's menu, and its date hint with no form date), PS O21 (remove the Sync fees button from the Exceptions report board; OFA-F-160 removes it), PS O22 (Upload a paper-signed Initial OFA dialog: render the date field's hint, as the app does), plus advisor B92 (F-146 confirmed line on CONFIRMED OFF rows) and B93 (F-142 follow-up resend dialog sentence), plus 6 parity questions: Overview "not fully signed" count slot; Adviser review answers bar placement; read-failure card on six PS screens; scope line for an adviser with several codes; Renewal tracker filter Reset and intro; Arrangements empty/loading/error card; shell: logo width (#12) and collapsed rail width (#21), where the boards disagree; shell states with no board (#20: Keep open on, Notifications with items, Search results and no matches, Search loading); landing empty and bus-unavailable states (#6); shell error and empty states (#4), search panel drawn two ways (#5), Plugin0 buttons and chips (#7); compliance review page "Read only." line and OFA Checklist note chip and Month arrow; PS Import screen in the sidebar has no board; shell (from group 6): cloud_off rail icon and person-icon avatar have no board, search empty state has no glyph on the board; compliance board: drop the empty grid after the filter-dialog fields so the gap above the buttons is 48px like advisor and PS.
 4. End sweep: the browser, business-test and board checks skipped during the build, run once at the end.
-5. Waiting on you: push main; the SyncFee grant: OFA-F-160 is on main, so the gMSA's EXECUTE on dbo.SyncFee can be dropped on the server (PS removes line 3 of SyncFee-grants.sql in group 10); the Adviser Dashboard's "Arrangements that ended" bell lists every ending in a State Manager's scope with no time limit: say whether it should show only recent ones, and how far back; before go-live, approved wording for the renewal notice, covering email and both service-question lists (no placeholder covers them); check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest (another day); Luke's templates and Initial OFA envelope title; PS's 8 production settings.
+5. Waiting on you: push main; the SyncFee grant: OFA-F-160 is on main, so the gMSA's EXECUTE on dbo.SyncFee can be dropped on the server (PS removes line 3 of SyncFee-grants.sql in group 10); load 2027 into the warehouse's gov.PublicHolidays (OFA-F-116; none there yet, and closure due dates move once it lands); rerun the OFA-S-005 spike on the unredacted master spreadsheet (scripts in the PS checkout, spikes/OFA-S-005, uncommitted); the Adviser Dashboard's "Arrangements that ended" bell lists every ending in a State Manager's scope with no time limit: say whether it should show only recent ones, and how far back; before go-live, approved wording for the renewal notice, covering email and both service-question lists (no placeholder covers them); check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest (another day); Luke's templates and Initial OFA envelope title; PS's 8 production settings.
 
 Push: `git -C C:/Users/muhammedali.khan/source/repos/shaw-plugin-dashboard push origin main`
