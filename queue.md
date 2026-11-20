@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 14:58
+Updated: 2026-11-20 14:59
 
 ## Shell
 
@@ -25,8 +25,7 @@ Updated: 2026-11-20 14:58
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | F-028 | OFA-F-028 | Go-live prep: release packages for each part | Functional | 10 | Parts 4 and 4b built and committed (90a34e8b); wrapping up for merge | - |
-| >> | F-028 | OFA-F-172 | First weekly Expired report goes only to the OFA Team mailbox | Functional | ?? | Built and committed with OFA-F-028 (90a34e8b) | - |
+| >> | F-028 | OFA-F-028 | Go-live prep: release packages for each part | Functional | 10 | Parts 4, 4b merged ; part 2 building, then 1, 3 | - |
 | | - | OFA-F-138 | File the signed renewal in DART | Functional | 3 | Blocked by your DART retest | - |
 | | 9 | OFA-B-195 | Settings: the page scrolls sideways by 11px | Functional | 1 | After PS2 group 16 merges | OFA-F-173 |
 | | 9 | OFA-B-196 | Settings: the four cards in two columns, as drawn | Look and Feel | 2 | After go-live; after PS2 group 16 | OFA-F-173 |
@@ -43,6 +42,8 @@ Updated: 2026-11-20 14:58
 | | X | OFA-F-160 | Remove the manual fee sync | Functional | 2 | After go-live | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 | | X | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | After go-live | - |
+
+Done 2026-11-20: OFA-F-172 (merged with OFA-F-028 parts 4 and 4b).
 
 ## Portfolio Services 2
 
