@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 06:03
+Updated: 2026-11-21 06:06
 
 ## Shell (pointer: queue empty)
 
@@ -46,16 +46,16 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 Done 2026-11-21: group 22 (4c8b3fc9): OFA-F-133, F-083, F-065, B-140, B-049, B-050; B-044 closed (O26), B-135 already fixed.
 Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b). Group 19: OFA-B-209, B-201, B-210, F-144, B-211 (c342a0a3). Group 20: OFA-F-177, F-178, F-179, B-214 (3a9578c7). Group 21 sweep (a524e03b): 12 closed, including OFA-B-002, B-003, B-004, B-014, B-089, B-058, B-063, B-064, B-088, B-149, F-070, F-119.
 
-## Compliance (pointer: group 17)
+## Compliance (pointer: group 18)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 17 | COMPLIANCE-DASHBOARD-B-120 | The Signing and expiry export writes History's words for Latest activity, not the raw event name | Functional | 1 | Go 2026-11-21 | - |
+| >> | 18 | COMPLIANCE-DASHBOARD-F-004 | All OFA Arrangements: check it against OFA-F-136 and F-044 as built, fix small gaps, close it | Functional | - | Go 2026-11-21 | - |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
 | | X | COMPLIANCE-DASHBOARD-F-005 follow-up | The paper-copy line on Signing and expiry | Functional | 1 | After PS2 group 23 (OFA-F-180 also gives compliance.usp_PendingRenewal_Read the paper copy) | OFA-F-180 |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
 
-Done 2026-11-21: group 16 (c5436b08): COMPLIANCE-DASHBOARD-F-005.
+Done 2026-11-21: group 16 (c5436b08): COMPLIANCE-DASHBOARD-F-005. Group 17 (defce403): B-120, M38 @skip scenario.
 Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563); group 12 end sweep clean, B-115 fixed (merged 1f6dde4c); group 13 B-114, B-117 fixed, F-008 progress (a44de06b); group 14 B-119, F-037; B-116 green with OFA-B-211 (2fdcd937); group 15 B-118, F-008 progress (b005b57b)
 
 ## Advisor (pointer: group 18)
