@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 20:48
+Updated: 2026-11-20 20:56
 
 ## Shell (pointer: group 9)
 
@@ -19,6 +19,7 @@ Updated: 2026-11-20 20:48
 | >> | 9 | SHELL-B-169 | Toolbar pickers' edges | Look and Feel | 1 | Building | - |
 | >> | 9 | SHELL-B-170 | Picker outline notch closed | Look and Feel | 2 | Building | - |
 | >> | 9 | LANDING-PAGE-B-007 | Landing card body text 14/20 | Look and Feel | 1 | Building | - |
+| | 10 | (shell raises it) | A plain table can set one column's greatest width through the public table-tools API (from COMPLIANCE-DASHBOARD-B-114: the Load dialog's Field column at 560) | Functional | 1 | Group 10, after group 9 | - |
 
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170. Group 8 (2e2ab1ec): SHELL-B-157..B-162, LANDING-PAGE-B-006.
 
@@ -68,6 +69,7 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 |---|---|---|---|---|---|---|---|
 | >> | 12 | End sweep | Board check and business scenarios on the built app for every screen groups 3 to 11 touched; remaining scenarios of F-008 | Look and Feel | ?? | Go 2026-11-20; one browser run allowed, look only | - |
 | >> | 12 | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | Go 2026-11-20, with the end sweep | - |
+| | 12 | COMPLIANCE-DASHBOARD-B-114 | Load dialog: Check column 60px left of the board | Look and Feel | 1 | Moved to the shell (shell group 10); the plugin adopts it after | - |
 | | 13 | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | Functional | 2 | Group 13, once OFA-F-144 is on main | OFA-F-144 |
 
 Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563)
