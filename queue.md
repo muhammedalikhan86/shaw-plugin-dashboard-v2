@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 02:23
+Updated: 2026-11-21 02:27
 
 ## Shell (pointer: group 11)
 
@@ -17,31 +17,21 @@ Updated: 2026-11-21 02:23
 
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170. Group 8 (2e2ab1ec): SHELL-B-157..B-162, LANDING-PAGE-B-006.; group 9 SHELL-B-164 to B-170, LANDING-PAGE-B-007, B-163 closed with no change (90b40bf7); group 10 SHELL-B-171 (ac98f9f6)
 
-## Portfolio Services (pointer: group 10)
+## Portfolio Services (pointer: group 11)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | - | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
-| >> | 10 | OFA-B-196 | Settings: the four cards in two columns, as drawn | Look and Feel | 2 | Go 2026-11-21 | - |
-| >> | 10 | OFA-B-197 | Settings dialogs: board width, Add attachments row, change request and Preview as drawn | Look and Feel | 3 | Go 2026-11-21 | - |
-| >> | 10 | OFA-B-198 | Overview: the counts move into the board's cards | Look and Feel | 2 | Go 2026-11-21 | - |
-| >> | 10 | OFA-B-199 | Overview: "Entity type" heading on one line | Look and Feel | 1 | Go 2026-11-21 | - |
-| >> | 10 | OFA-B-200 | Row and Actions menus at board widths; Exceptions menu in board order | Look and Feel | 2 | Go 2026-11-21 | - |
-| >> | 10 | OFA-B-202 | Empty Initial OFAs and Exceptions: only Add and expand in the toolbar | Look and Feel | 1 | Go 2026-11-21 | - |
-| >> | 10 | OFA-B-203 | Initial OFAs Accept dialog: board width, no hint under the date | Look and Feel | 1 | Go 2026-11-21 | - |
-| >> | 10 | OFA-B-204 | Renewal tracker cells and Exceptions date wrap at 1440 (re-run first) | Look and Feel | 1 | Go 2026-11-21 | - |
-| >> | 10 | OFA-B-207 | Quarantine list tab count colour, as drawn | Look and Feel | 1 | Go 2026-11-21 | - |
-| >> | 10 | OFA-B-212 | Initial OFAs spec "keeps each tab its own size when the other tab is opened and left" times out at 5000 ms on main (seen by PS2, group 19 Integration) | Functional | 1 | Go 2026-11-21 | - |
-| | 11 | OFA-F-133 (counter) | Overview counter that opens the manual-close list (board O13; PS2 builds the list) | Functional | 1 | Group 11, after PS2 group 22 | OFA-F-133 |
-| | 11 | OFA-B-005, B-006, B-043, B-046, B-059, B-123, F-052, F-054, F-055 | Initial OFAs as drawn, and its planned features | Look and Feel | 15 | After go-live; after group 10 | - |
+| >> | 11 | OFA-F-133 (counter) | Overview counter that opens the manual-close list (board O13; PS2 builds the list) | Functional | 1 | Group 11, last, once PS2 group 22 is on main (else group 12) | OFA-F-133 |
+| >> | 11 | OFA-B-005, B-006, B-043, B-046, B-059, B-123, F-052, F-054, F-055 | Initial OFAs as drawn, and its planned features | Look and Feel | 15 | Go 2026-11-21 | - |
 | | 12 | OFA-B-016, B-060, B-103, B-124, B-126, F-051, F-085, F-093 | Master list, tables and Expired report | Look and Feel | 14 | After go-live; after group 11 | - |
 | | 13 | OFA-B-113, B-127, F-139, F-140, B-115 | Quarantine cells; renewal tracker features; snack and loading bar on every page | Look and Feel | 13 | After go-live; after group 12 | - |
 | | 14 | OFA-F-075, F-087, F-115, B-145 | Seed and test data; app-wide spec clean-up | Functional | 10 | After go-live; after group 13 | - |
 | | X | OFA-B-215 | Adopt shell group 12: Actions menu 380px and Exceptions menu about 322px (rest of B-200); hide the empty tab's columns icon (rest of B-202) | Look and Feel | 1 | After shell group 12 | shell group 12 |
-| | 11 | OFA-B-213 | Settings dialogs: the Add attachments row (the API takes files, then the picker, as drawn) | Functional | 3 | Group 11, first: Functional | - |
+| >> | 11 | OFA-B-213 | Settings dialogs: the Add attachments row (the API takes files, then the picker, as drawn) | Functional | 3 | Go 2026-11-21 | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 
-Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed with it). Group 9: OFA-B-206, B-208, B-195, F-163 part 2, F-160, F-169 (43bb6578).
+Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed with it). Group 9: OFA-B-206, B-208, B-195, F-163 part 2, F-160, F-169 (43bb6578). Group 10: OFA-B-196, B-197, B-198, B-199, B-203, B-207, B-212; B-200 and B-202 in part (rest OFA-B-215); B-204 in part (Exceptions date wrap to the end-sweep crawl) (55e90b05).
 
 ## Portfolio Services 2 (pointer: group 22, with the old group 23)
 
