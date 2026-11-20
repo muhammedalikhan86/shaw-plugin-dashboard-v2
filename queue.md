@@ -4,18 +4,17 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 15:40
+Updated: 2026-11-20 18:35
 
 ## Shell (pointer: group 6)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| >> | 6 | SHELL-B-143 | Table headers stay frozen when the page scrolls down (they scroll away today) | Functional | ? | First: user-reported | - |
 | >> | 6 | SHELL-B-145 | Profile and Preferences with Keep open on: the plugins card scrolls sideways and clips Notifications by 46px | Functional | 2 | Building | - |
 | >> | 6 | LANDING-PAGE-B-001 | Greeting wording as the board | Functional | 1 | Building | - |
 | >> | 6 | SHELL-B-146 | Keep-open switch sits 6px left | Look and Feel | 1 | Building | - |
-| >> | 6 | SHELL-B-147 | Nav sub-rows indented 12px less than the board | Look and Feel | 1 | Building | - |
 | >> | 6 | SHELL-B-149 | Avatar initials size and weight | Look and Feel | 1 | Building | - |
-| >> | 6 | SHELL-B-150 | Plugin group labels bold, as drawn | Look and Feel | 1 | Building | - |
 | >> | 6 | SHELL-B-148 | Act As chip: size, icon and type | Look and Feel | 1 | Building | - |
 | >> | 6 | SHELL-B-151 | Act As panel labels colour | Look and Feel | 1 | Building | - |
 | >> | 6 | LANDING-PAGE-B-002 | Landing card icon 8px off | Look and Feel | 1 | Building | - |
@@ -53,7 +52,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | | 10 | OFA-B-204 | Renewal tracker cells and Exceptions date wrap at 1440 (re-run first) | Look and Feel | 1 | After group 9 | - |
 | | 10 | OFA-B-207 | Quarantine list tab count colour, as drawn | Look and Feel | 1 | After group 9 | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
-| | X | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | After go-live | - |
+| | 11 | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | Group 11, after group 10 | - |
 
 Done 2026-11-20: OFA-F-172 (merged with OFA-F-028 parts 4 and 4b).
 
@@ -70,7 +69,7 @@ Done 2026-11-20: OFA-F-172 (merged with OFA-F-028 parts 4 and 4b).
 | | 18 | OFA-F-131 | Adviser side reads ended arrangements and the account's history | Functional | 2 | After group 17 | - |
 | | 18 | OFA-F-132 | Adviser side records a request to Back Office | Functional | 3 | After group 17 | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
-| | X | OFA-B-183 | A notice stuck as "send outcome unknown": label and release | Functional | 2 | After go-live | - |
+| | 18 | OFA-B-183 | A notice stuck as "send outcome unknown": label and release | Functional | 2 | Group 18, with F-094, F-131, F-132 | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 Done 2026-11-20: OFA-F-173, OFA-F-174 (merged a733211a)
 
@@ -82,7 +81,7 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (merged a733211a)
 | >> | 11 | COMPLIANCE-DASHBOARD-B-111 | Load a new approved version: Check column sits about 60px left of the board | Look and Feel | 1 | Building | - |
 | >> | 11 | COMPLIANCE-DASHBOARD-B-112 | Platform full names in the 8 other places the board draws them | Look and Feel | 1 | Building | - |
 | >> | 11 | COMPLIANCE-DASHBOARD-B-113 | Closed months notes tab: the Note column stays within 500px and the note wraps | Look and Feel | 1 | Building | - |
-| | X | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | Functional | 2 | After go-live | OFA-F-144 |
+| | 12 | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | Functional | 2 | Group 12, after group 11; once OFA-F-144 is on main | OFA-F-144 |
 
 Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c)
 
@@ -106,9 +105,11 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 | | X | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | Functional | 2 | Waiting | OFA-F-131 |
 | | X | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | Functional | 3 | Waiting | OFA-F-132 |
-| | X | (no ID yet) | Use the shared status track | Look and Feel | 1 | After go-live | SHELL-F-163 |
+| | 14 | (no ID yet) | Use the shared status track | Look and Feel | 1 | Group 14 (SHELL-F-163 done); advisor raises the ID | - |
 
 ## Hub
+
+0. Weekend round (20-11 to Monday, unsupervised): workers run their queues end to end and ask only the hub. Warehouse tables and procs that do not exist yet (GridPay and the like) are mocked; Muhammed creates the real ones on Monday. Designer prompts wait for Monday. Resume timer every 5 hours from 18:35; queue upkeep every 30 minutes.
 
 1. Parity run: done 20-11 and routed for every component. Shell and landing-page findings are shell group 6.
 2. Next merges: advisor group 12, compliance group 11, shell group 6, PS OFA-F-028 part 2, PS2 group 17. After each one, its own tests run (all-app Jest after shell changes).
