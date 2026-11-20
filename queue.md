@@ -36,6 +36,7 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | Blocked by you (Monday) | - |
 | | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Blocked by you (Monday) | - |
 | >> | 24 | OFA-F-181 | Adviser documents read for an arrangement (OFA documents only, one not yet available included), to advisor's contract (for ADVISOR-DASHBOARD-F-141) | Functional | 3 | Go 2026-11-21 | - |
+| >> | 24 | OFA-F-182 | Compliance trail: the signed step carries the platform account and the signer's name (for COMPLIANCE-DASHBOARD-F-004's follow-up) | Functional | 1 | Go 2026-11-21 | - |
 | | 25 | OFA-B-078, B-100, B-104, B-105, B-114, B-122 | Exceptions report as drawn | Look and Feel | 9 | After go-live; after group 23 | - |
 | | 26 | OFA-B-024, B-045, B-047, B-071, B-073, B-107, B-128, B-130, B-137 | Monthly cycle as drawn (not the Quarantine tab); B-137 names who issued a closed month (migration) | Look and Feel | 14 | After go-live; after group 25 | - |
 | | 27 | OFA-B-015, B-027, B-129, B-131, B-132, B-133, B-134, F-088, B-084, B-109, B-125 | Arrangement record and OFA Checklist as drawn | Look and Feel | 15 | After go-live; after group 26 | - |
@@ -53,7 +54,7 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 | >> | 18 | COMPLIANCE-DASHBOARD-F-004 | All OFA Arrangements: check it against OFA-F-136 and F-044 as built, fix small gaps, close it | Functional | - | Go 2026-11-21 | - |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
 | >> | 18 | COMPLIANCE-DASHBOARD-F-005 follow-up | The paper-copy line on Signing and expiry (OFA-F-180 is on main) | Functional | 1 | Go 2026-11-21 | - |
-| | X | COMPLIANCE-DASHBOARD-F-004 follow-up | Acceptance evidence on History's Accepted by <name>, as the board draws | Functional | 1 | After PS2's trail signer read (group 24 or 25) | PS2 |
+| | X | COMPLIANCE-DASHBOARD-F-004 follow-up | Acceptance evidence on History's Accepted by <name>, as the board draws | Functional | 1 | After OFA-F-182 (PS2 group 24) | OFA-F-182 |
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Monday design sync | - |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
 
