@@ -38,10 +38,10 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 550.0,
-   "pointsRemaining": 2.0,
+   "pointsDone": 551.0,
+   "pointsRemaining": 1.0,
    "pointsTotal": 552.0,
-   "itemsRemaining": 2,
+   "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 140.0,
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 138.25,
+  "pointsPerWorkingDayWholePeriod": 138.33,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -240,8 +240,8 @@
    },
    {
     "date": "2026-11-21",
-    "pointsDone": 1797.0,
-    "pointsDoneThatDay": 64.0
+    "pointsDone": 1798.0,
+    "pointsDoneThatDay": 65.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -254,7 +254,7 @@
     "likely": "2026-11-23",
     "pessimistic": "2026-11-23",
     "rateLast10": 35.55,
-    "rateWhole": 31.08
+    "rateWhole": 31.16
    },
    "Portfolio Services": {
     "optimistic": "2026-11-26",
@@ -284,9 +284,9 @@
    "pessimistic": "2026-11-27",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 138.25,
-   "pointsRemaining": 219.0,
-   "itemsRemaining": 98
+   "rateWhole": 138.33,
+   "pointsRemaining": 218.0,
+   "itemsRemaining": 97
   }
  },
  "milestones": [
@@ -364,7 +364,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-21T02:27:03+11:00",
+ "updatedAt": "2026-11-21T02:28:46+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2293,6 +2293,11 @@
    "change": "PS group 10 merged",
    "pointsDone": 15.0,
    "pointsRaised": 4.0
+  },
+  {
+   "at": "2026-11-21T02:28:46+11:00",
+   "change": "Shell B-172 on main",
+   "pointsDone": 1.0
   }
  ],
  "foundDuringBuild": {
