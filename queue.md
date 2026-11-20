@@ -19,10 +19,10 @@ Updated: 2026-11-20 15:35
 | >> | 6 | SHELL-B-148 | Act As chip: size, icon and type | Look and Feel | 1 | Building | - |
 | >> | 6 | SHELL-B-151 | Act As panel labels colour | Look and Feel | 1 | Building | - |
 | >> | 6 | LANDING-PAGE-B-002 | Landing card icon 8px off | Look and Feel | 1 | Building | - |
-| >> | 6 | SHELL-B-139 | Plugins-unavailable message fits the rail | Functional | ? | Building | - |
-| >> | 6 | SHELL-B-140 | Failed identity read: Try again, no blank area | Functional | ? | Building | - |
-| >> | 6 | SHELL-B-141 | Search empty state says "dashboards" | Functional | ? | Building | - |
-| >> | 6 | SHELL-B-142 | Profile and Preferences: black labels, page position as drawn | Look and Feel | ? | Building | - |
+| >> | 6 | SHELL-B-139 | Plugins-unavailable message fits the rail | Functional | 1 | Building | - |
+| >> | 6 | SHELL-B-140 | Failed identity read: Try again, no blank area | Functional | 2 | Building | - |
+| >> | 6 | SHELL-B-141 | Search empty state says "dashboards" | Functional | 1 | Building | - |
+| >> | 6 | SHELL-B-142 | Profile and Preferences: black labels, page position as drawn | Look and Feel | 1 | Building | - |
 | >> | 6 | SHELL-B-152 | Keep open switch off-state, as drawn | Look and Feel | 1 | Building | - |
 | >> | 6 | SHELL-B-153 | Toolbar icons white, as drawn | Look and Feel | 1 | Building | - |
 | >> | 6 | SHELL-B-154 | Bell badge 18px weight 500 | Look and Feel | 1 | Building | - |
