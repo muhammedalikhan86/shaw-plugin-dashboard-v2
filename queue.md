@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 23:38
+Updated: 2026-11-20 23:39
 
 ## Shell (pointer: group 10)
 
@@ -42,10 +42,10 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 19 | OFA-B-209 | Issuance: friendly label and Release button for a notice held by an unknown outcome (front end of OFA-B-183) | Functional | 1 | Go 2026-11-20; moved from PS group 10 | - |
-| >> | 19 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | Go 2026-11-20; moved from PS group 10 (same Issuance files as B-209) | - |
-| >> | 19 | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | Go 2026-11-20; moved from PS group 11, unblocks COMPLIANCE-DASHBOARD-F-037 | - |
-| >> | 19 | (adopt) | Monthly cycle and Exceptions report Cycle pickers take select--picker-inset (SHELL-B-169) | Look and Feel | 1 | Go 2026-11-20 | SHELL-B-169 |
+| >> | 19 | OFA-B-209 | Issuance: friendly label and Release button for a notice held by an unknown outcome (front end of OFA-B-183) | Functional | 1 | Building (from ea8ba07b) | - |
+| >> | 19 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | Building (from ea8ba07b) | - |
+| >> | 19 | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | Building (from ea8ba07b) | - |
+| >> | 19 | OFA-B-210 | Monthly cycle and Exceptions report Cycle pickers take select--picker-inset (SHELL-B-169) | Look and Feel | 1 | Go 2026-11-20 | SHELL-B-169 |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b).
