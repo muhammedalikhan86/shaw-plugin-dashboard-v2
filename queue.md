@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 20:12
+Updated: 2026-11-20 20:25
 
 ## Shell (pointer: group 8)
 
@@ -75,19 +75,20 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 14 | ADVISOR-DASHBOARD-B-120 | Test scenarios for the board's empty, reading, failed and few-row states | Functional | 2 | Building | - |
-| >> | 14 | ADVISOR-DASHBOARD-B-121 | Termination wording dialog: the sentence before the wording | Look and Feel | 1 | Building | - |
-| >> | 14 | ADVISOR-DASHBOARD-B-122 | Required asterisks on Start-an-OFA and No OFA obligations | Look and Feel | 1 | Closed: the stars were there (CSS-drawn); tests now lock them | - |
+| >> | 14 | ADVISOR-DASHBOARD-B-120 | Test scenarios for the board's empty, reading, failed and few-row states | Functional | 2 | Integration green; finalizing | - |
+| >> | 14 | ADVISOR-DASHBOARD-B-121 | Termination wording dialog: the sentence before the wording | Look and Feel | 1 | Integration green; finalizing | - |
+| >> | 14 | ADVISOR-DASHBOARD-B-122 | Required asterisks on Start-an-OFA and No OFA obligations | Look and Feel | 1 | Integration green; finalizing | - |
 | | 15 | ADVISOR-DASHBOARD-F-049 | Back Office change request (part 2) | Functional | ?? | Group 15, after group 14: adopt OFA-F-170 and OFA-F-171 (on main, 6e56c9f9) | OFA-F-170, OFA-F-171 |
 | | 15 | ADVISOR-DASHBOARD-B-123 | Renewal tracker: account name as the S-Account column's second line, as drawn | Functional | 1 | Group 15, after the PS2 read lands | OFA-F-176 |
+| | 15 | (advisor raises the ID) | Empty Renewal tracker and Initial OFAs cards: task_alt icon as drawn (folder_open today) | Look and Feel | 1 | Group 15 | - |
 | | X | ADVISOR-DASHBOARD-F-059 | S-Account page: the arrangement, OFA History tab, renewals (part 2) | Functional | ?? | Waiting | OFA-F-094 |
 | | X | ADVISOR-DASHBOARD-F-141 | The arrangement record | Functional | 3 | Blocked by a Portfolio Services adviser documents read (no item yet) | - |
 | | X | ADVISOR-DASHBOARD-F-143 | History events | Functional | 5 | Waiting | OFA-F-094 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 | | X | ADVISOR-DASHBOARD-F-117 | Adviser told on screen when a hold is extended | Functional | 2 | Waiting | OFA-F-131 |
 | | X | ADVISOR-DASHBOARD-F-118 | Ask Back Office to add a signer or a missing email | Functional | 3 | Waiting | OFA-F-132 |
-| >> | 14 | ADVISOR-DASHBOARD-F-151 | Use the shared status track | Look and Feel | 2 | Building | - |
-| >> | 14 | ADVISOR-DASHBOARD-F-152 | Renewal tracker on the shared status track too | Look and Feel | 1 | Group 14, folded in with F-151 | - |
+| >> | 14 | ADVISOR-DASHBOARD-F-151 | Use the shared status track | Look and Feel | 2 | Integration green; finalizing | - |
+| >> | 14 | ADVISOR-DASHBOARD-F-152 | Renewal tracker on the shared status track too | Look and Feel | 1 | Integration green; finalizing | - |
 
 Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777). Group 13 (bafb7b09): ADVISOR-DASHBOARD-B-116, B-117, B-118, B-119, five board-target reds.
 
