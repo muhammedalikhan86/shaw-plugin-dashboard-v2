@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 15:45
+Updated: 2026-11-20 16:00
 
 ## Shell
 
@@ -17,7 +17,7 @@ Updated: 2026-11-20 15:45
 | | 5 | SHELL-F-167 | Tables: a status track with no title, inside a page | ?? | After the parity run | - |
 | | 5 | SHELL-B-135 | Tables: frozen columns see-through when scrolling sideways | ?? | After the parity run | - |
 | | 5 | SHELL-F-168 | Tables: the page can fold or unfold the status track | ?? | After the parity run | - |
-| | 5 | SHELL-B-137 | Tables: header text grey, the board draws black | 1 | Look; after go-live | - |
+| | 5 | SHELL-B-137 | Tables: header text grey, the board draws black | 1 | After the parity run | - |
 
 ## Portfolio Services
 
@@ -53,15 +53,16 @@ Updated: 2026-11-20 15:45
 
 | # | Grp | ID | Item | Size | Status | Depends on |
 |---|---|---|---|---|---|---|
+| >> | 10 | COMPLIANCE-DASHBOARD-B-100 | OFA Checklist: loading state shows no card or Month field | 1 | Next | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-101 | Load a new approved version: Check column and calendar button off by a few px | 1 | Next | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-102 | List screens: the could-not-be-read card stretches to the window foot | 1 | Next | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-103 | OFA Checklist rows: note-count chip and Month arrow differ from the board | 1 | Next; may become a design question | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-104 | Closed months: tab strip, card position, tab label weight and colour, Removed chip, loading dim, picker label | 2 | Next | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-105 | Quarantine: the "Fees as at · Signing as at" header block | 1 | Next | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-106 | Closed months Quarantine: a long move reason widens the deadline cell | 1 | Next | - |
+| >> | 10 | COMPLIANCE-DASHBOARD-B-107 | Wording: "brought in at go-live" under v1's Loaded cell | 1 | Next | - |
 | | X | COMPLIANCE-DASHBOARD-B-095 | Quarantine: Extension and Last prompt start at 250px | 1 | Waiting | SHELL-F-169 |
 | | X | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | 2 | After go-live | OFA-F-144 |
-| | X | COMPLIANCE-DASHBOARD-B-100 | OFA Checklist: loading state shows no card or Month field | 1 | Look; after go-live | - |
-| | X | COMPLIANCE-DASHBOARD-B-101 | Load a new approved version: Check column and calendar button off by a few px | 1 | Look; after go-live | - |
-| | X | COMPLIANCE-DASHBOARD-B-102 | List screens: the could-not-be-read card stretches to the window foot | 1 | Look; after go-live | - |
-| | X | COMPLIANCE-DASHBOARD-B-103 | OFA Checklist rows: note-count chip and Month arrow differ from the board | 1 | Look; after go-live; may be a design question | - |
-| | X | P92 (design row) | Cull list: keep or drop the Status column the board does not draw | - | Blocked by the designer's answer | - |
-| | X | P93 (design row) | Compliance review: the page line's "Read only." while the page has actions | - | Blocked by the designer's answer | - |
-| | X | (parity backlog 1-13) | Older look differences: tab strip gaps, header spacing, chip and tab colours, platform codes, filter dialog padding | ?? | Look; after go-live | - |
 
 ## Advisor (release 2)
 
@@ -87,7 +88,8 @@ Updated: 2026-11-20 15:45
 
 1. Parity run findings: routed to each worker once the run ends.
 2. Weekend queue: built with you once the parity run ends.
-3. End sweep: the browser, business-test and board checks skipped during the build, run once at the end.
-4. Waiting on you: push main; check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest; Luke's templates and Initial OFA envelope title.
+3. Designer prompt (not yet sent; goes out after this queue round): W38 (Wording: CAT 1 and CAT 2 rows), P92 (Cull list Status column), P93 (Compliance review "Read only."). More rows join from the parity findings.
+4. End sweep: the browser, business-test and board checks skipped during the build, run once at the end.
+5. Waiting on you: push main; check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest; Luke's templates and Initial OFA envelope title.
 
 Push: `git -C C:/Users/muhammedali.khan/source/repos/shaw-plugin-dashboard push origin main`
