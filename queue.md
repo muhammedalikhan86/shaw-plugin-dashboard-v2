@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 15:10
+Updated: 2026-11-20 15:30
 
 ## Shell
 
@@ -52,9 +52,6 @@ Updated: 2026-11-20 15:10
 
 | # | Grp | ID | Item | Size | Status | Depends on |
 |---|---|---|---|---|---|---|
-| >> | 9 | COMPLIANCE-DASHBOARD-B-096 | Wording versions table squashes at 1440x900 | ?? | Building | - |
-| >> | 9 | COMPLIANCE-DASHBOARD-B-097 | Fees-not-arrived error text | ?? | Building | - |
-| >> | 9 | COMPLIANCE-DASHBOARD-B-099 | A signer with no name shows twice | ?? | Building | - |
 | | X | COMPLIANCE-DASHBOARD-B-095 | Quarantine: Extension and Last prompt start at 250px | 1 | Waiting | SHELL-F-169 |
 | | X | COMPLIANCE-DASHBOARD-F-037 | Faster .NET tests, part 2 | 2 | After go-live | OFA-F-144 |
 
