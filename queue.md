@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 02:00
+Updated: 2026-11-21 02:03
 
 ## Shell (pointer: group 11)
 
@@ -34,36 +34,33 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 
 Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed with it). Group 9: OFA-B-206, B-208, B-195, F-163 part 2, F-160, F-169 (43bb6578).
 
-## Portfolio Services 2 (pointer: group 20)
+## Portfolio Services 2 (pointer: backlog sweep)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 20 | OFA-F-177 | A compliance view of client closures (S-Account, requested on, adviser, recorded by, due date from the closure clock, fee marked off), for COMPLIANCE-DASHBOARD-B-118 | Functional | 2 | Go 2026-11-21 | - |
-| >> | 20 | OFA-F-178 | Adviser side withdraws an open Back Office ask (proc; the reminder email skips withdrawn asks), for ADVISOR-DASHBOARD-F-154 | Functional | 1 | Go 2026-11-21 | - |
-| >> | 20 | OFA-F-179 | Adviser side reads the account's DART parties (mock where the warehouse table is missing), for ADVISOR-DASHBOARD-F-155 | Functional | 2 | Go 2026-11-21 | - |
-| >> | 20 | OFA-B-214 | Migration 0152's refusal text says "Adviser" (new migration) | Functional | 1 | Go 2026-11-21 | - |
+| >> | 21 | (sweep) | Backlog sweep: every open Portfolio Services PMBook item not in this queue (about 89: old board-parity bugs, Planned features). Close what main already fixes, then propose groups for the rest | Undetermined | ?? | Go 2026-11-21 | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
-Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b). Group 19: OFA-B-209, B-201, B-210, F-144, B-211 (c342a0a3).
+Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b). Group 19: OFA-B-209, B-201, B-210, F-144, B-211 (c342a0a3). Group 20: OFA-F-177, F-178, F-179, B-214 (3a9578c7).
 
-## Compliance (pointer: waiting on PS2 group 20 for group 15)
+## Compliance (pointer: group 15)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: 31 scenarios on (group 13); the rest wait on built screens and design rows M34-M37 | - |
-| | 15 | COMPLIANCE-DASHBOARD-B-118 | S19780's record shows no closure summary (OFA-F-044 data) | Functional | 3 | Waits on the PS2 compliance closure view | OFA-F-177 |
+| >> | 15 | COMPLIANCE-DASHBOARD-B-118 | S19780's record shows no closure summary (OFA-F-044 data; reads compliance.ClientClosure) | Functional | 3 | Go 2026-11-21 | OFA-F-177 |
 
 Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563); group 12 end sweep clean, B-115 fixed (merged 1f6dde4c); group 13 B-114, B-117 fixed, F-008 progress (a44de06b); group 14 B-119, F-037; B-116 green with OFA-B-211 (2fdcd937)
 
-## Advisor (pointer: waiting on PS2 group 20 for group 17)
+## Advisor (pointer: group 17)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | ADVISOR-DASHBOARD-F-141 | The arrangement record | Functional | 3 | Blocked by a Portfolio Services adviser documents read (no item yet) | - |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
-| | 17 | ADVISOR-DASHBOARD-F-154 | Remove a signatory from an open Back Office ask | Functional | 2 | Group 17, after PS2 group 20 | OFA-F-178 |
-| | 17 | ADVISOR-DASHBOARD-F-155 | Add signatory: pick from the account's DART parties | Functional | 2 | Group 17, after PS2 group 20 | OFA-F-179 |
-| | 17 | ADVISOR-DASHBOARD-F-156 | The "Arrangements that ended" bell adopts the shell's groups: group, second line (adviser and why), date, and the "Nothing has ended." empty line | Look and Feel | 1 | Group 17, after shell group 11 | SHELL-B-172 |
+| >> | 17 | ADVISOR-DASHBOARD-F-154 | Remove a signatory from an open Back Office ask | Functional | 2 | Go 2026-11-21 | OFA-F-178 |
+| >> | 17 | ADVISOR-DASHBOARD-F-155 | Add signatory: pick from the account's DART parties | Functional | 2 | Go 2026-11-21 | OFA-F-179 |
+| | 17 | ADVISOR-DASHBOARD-F-156 | The "Arrangements that ended" bell adopts the shell's groups: group, second line (adviser and why), date, and the "Nothing has ended." empty line | Look and Feel | 1 | Go 2026-11-21, last in the group, once shell group 11 is on main | SHELL-B-172 |
 
 Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777). Group 13 (bafb7b09): ADVISOR-DASHBOARD-B-116, B-117, B-118, B-119, five board-target reds. Group 14 (0c46c642): ADVISOR-DASHBOARD-F-151, F-152, B-120, B-121, B-122.; group 15 F-049 part 2, B-123, B-124 (59c7190f); group 16 F-143, F-118, F-153, F-059 part 2, F-117 (bb446a4b)
 
