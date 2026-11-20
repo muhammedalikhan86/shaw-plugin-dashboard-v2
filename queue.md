@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 20:56
+Updated: 2026-11-20 23:35
 
 ## Shell (pointer: group 9)
 
@@ -39,29 +39,24 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | | 10 | OFA-B-198 | Overview: the counts move into the board's cards | Look and Feel | 2 | After group 9 | - |
 | | 10 | OFA-B-199 | Overview: "Entity type" heading on one line | Look and Feel | 1 | After group 9 | - |
 | | 10 | OFA-B-200 | Row and Actions menus at board widths; Exceptions menu in board order | Look and Feel | 2 | After group 9 | - |
-| | 10 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | After group 9 | - |
-| | 10 | OFA-B-209 | Issuance: friendly label and Release button for a notice held by an unknown outcome (front end of OFA-B-183) | Functional | 1 | Group 10, after PS2 group 18 is on main | OFA-B-183 |
-| | 18 | OFA-F-176 | Adviser Renewal tracker read returns the account name (advisor.usp_RenewalTracker_Read has no AccountName; advisor mocks it today) | Functional | 1 | Group 18, right after OFA-F-131; from advisor | - |
 | | 10 | OFA-B-202 | Empty Initial OFAs and Exceptions: only Add and expand in the toolbar | Look and Feel | 1 | After group 9 | - |
 | | 10 | OFA-B-203 | Initial OFAs Accept dialog: board width, no hint under the date | Look and Feel | 1 | After group 9 | - |
 | | 10 | OFA-B-204 | Renewal tracker cells and Exceptions date wrap at 1440 (re-run first) | Look and Feel | 1 | After group 9 | - |
 | | 10 | OFA-B-207 | Quarantine list tab count colour, as drawn | Look and Feel | 1 | After group 9 | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
-| | 11 | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | Group 11, after group 10 | - |
 
 Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed with it).
 
-## Portfolio Services 2 (pointer: group 18)
+## Portfolio Services 2 (pointer: group 19)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 18 | OFA-F-094 | Each history event says who can see it; the adviser side reads its own | Functional | 3 | Built (migrations 0150-0154), in review | - |
-| >> | 18 | OFA-F-131 | Adviser side reads ended arrangements and the account's history | Functional | 2 | Built (migrations 0150-0154), in review | - |
-| >> | 18 | OFA-F-132 | Adviser side records a request to Back Office | Functional | 3 | Built (migrations 0150-0154), in review | - |
+| >> | 19 | OFA-B-209 | Issuance: friendly label and Release button for a notice held by an unknown outcome (front end of OFA-B-183) | Functional | 1 | Go 2026-11-20; moved from PS group 10 | - |
+| >> | 19 | OFA-B-201 | Monthly cycle: Take off dialog, cycle select status line, Issuance badge and icon | Look and Feel | 3 | Go 2026-11-20; moved from PS group 10 (same Issuance files as B-209) | - |
+| >> | 19 | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | Go 2026-11-20; moved from PS group 11, unblocks COMPLIANCE-DASHBOARD-F-037 | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
-| >> | 18 | OFA-B-183 | A notice stuck as "send outcome unknown": label and release | Functional | 2 | Built (migrations 0150-0154), in review | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
-Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9).
+Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b).
 
 ## Compliance (pointer: group 12, end sweep)
 
