@@ -4,22 +4,13 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-20 15:25
+Updated: 2026-11-20 15:26
 
-## Shell
+## Shell (pointer: group 5 merged; findings intake, then group 6 proposal)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 5 | SHELL-F-169 | Tables: a starting width per column; Reset goes back to it | Look and Feel | 2 | Building | - |
-| >> | 5 | SHELL-B-136 | Deploy script leaves out each API's .dll.config | Functional | ?? | Building | - |
-| >> | 5 | SHELL-F-166 | Tables: a filter dialog can carry its own title | Look and Feel | ?? | Building | - |
-| >> | 5 | SHELL-F-167 | Tables: a status track with no title, inside a page | Look and Feel | ?? | Building | - |
-| >> | 5 | SHELL-B-135 | Tables: frozen columns see-through when scrolling sideways | Look and Feel | ?? | Building | - |
-| >> | 5 | SHELL-F-168 | Tables: the page can fold or unfold the status track | Functional | ?? | Building | - |
-| >> | 5 | SHELL-B-137 | Tables: header text grey, the board draws black | Look and Feel | 1 | Building | - |
-| >> | 5 | SHELL-B-138 | Filter dialog: a drop-down left on "All" looks greyed out | Look and Feel | 1 | Building | - |
-| | 5 | (parity) | Finish the cut-short parity check: shell leftovers and landing-page | Undetermined | ?? | Done 20-11; findings intake after group 5 | - |
-| >> | 5 | SHELL-B-144 | Layout check: Expired report route, stale KNOWN entries struck | Functional | 1 | Building | - |
+Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page)
 
 ## Portfolio Services
 
@@ -38,7 +29,7 @@ Updated: 2026-11-20 15:25
 | | 9 | OFA-B-202 | Empty Initial OFAs and Exceptions: only Add and expand in the toolbar | Look and Feel | 1 | After go-live | - |
 | | 9 | OFA-B-203 | Initial OFAs Accept dialog: board width, no hint under the date | Look and Feel | 1 | After go-live | - |
 | | 9 | OFA-B-204 | Renewal tracker cells and Exceptions date wrap at 1440 (re-run first) | Look and Feel | 1 | After go-live | - |
-| | X | OFA-F-163 | Overview: the two tracks fold with the rest | Functional | ?? | Waiting | SHELL-F-168 |
+| | X | OFA-F-163 | Overview: the two tracks fold with the rest | Functional | ?? | Ready: SHELL-F-168 on main; not yet grouped | - |
 | | X | OFA-F-160 | Remove the manual fee sync | Functional | 2 | After go-live | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 | | X | OFA-F-144 | Test data that stands apart from the warehouse | Functional | 3 | After go-live | - |
