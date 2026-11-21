@@ -98,10 +98,10 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 238.0,
-   "pointsRemaining": 5.0,
-   "pointsTotal": 243.0,
-   "itemsRemaining": 2,
+   "pointsDone": 241.0,
+   "pointsRemaining": 3.0,
+   "pointsTotal": 244.0,
+   "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 35.0,
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 148.88,
+  "pointsPerWorkingDayWholePeriod": 149.11,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -240,8 +240,8 @@
    },
    {
     "date": "2026-11-21",
-    "pointsDone": 1935.0,
-    "pointsDoneThatDay": 202.0
+    "pointsDone": 1938.0,
+    "pointsDoneThatDay": 205.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -275,7 +275,7 @@
     "likely": "2026-11-23",
     "pessimistic": "2026-11-23",
     "rateLast10": 20.38,
-    "rateWhole": 18.08
+    "rateWhole": 18.31
    }
   },
   "overall": {
@@ -284,9 +284,9 @@
    "pessimistic": "2026-11-24",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 148.88,
-   "pointsRemaining": 73.0,
-   "itemsRemaining": 30
+   "rateWhole": 149.11,
+   "pointsRemaining": 71.0,
+   "itemsRemaining": 29
   }
  },
  "milestones": [
@@ -364,7 +364,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-21T12:29:36+11:00",
+ "updatedAt": "2026-11-21T12:46:39+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2431,6 +2431,12 @@
    "at": "2026-11-21T12:29:36+11:00",
    "change": "PS2 group 29 merged (note files open, test housekeeping)",
    "pointsDone": 4.0
+  },
+  {
+   "at": "2026-11-21T12:46:39+11:00",
+   "change": "Compliance group 19 merged (F-047, B-121)",
+   "pointsDone": 3.0,
+   "pointsRaised": 1.0
   }
  ],
  "foundDuringBuild": {
