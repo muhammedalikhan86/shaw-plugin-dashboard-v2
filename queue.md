@@ -43,7 +43,7 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 21 | (compliance to raise) | Fail closed at startup on bad Attachments settings (ValidateOnStart), as the advisor API does; also fix appsettings.Production.json _comment ("read access", it now writes note files) | Functional | 1 | Go 2026-11-21 (only buildable item tonight) | SHELL-B-181 (docs) |
+| >> | 21 | COMPLIANCE-DASHBOARD-B-123 | Fail closed at startup on bad Attachments settings (ValidateOnStart), as the advisor API does; also fix appsettings.Production.json _comment ("read access", it now writes note files) | Functional | 1 | Go 2026-11-21 (only buildable item tonight) | SHELL-B-181 (docs) |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Monday design sync | - |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
