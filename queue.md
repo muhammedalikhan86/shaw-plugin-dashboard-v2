@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 14:44
+Updated: 2026-11-21 15:11
 
 ## Shell (pointer: queue empty)
 
@@ -24,6 +24,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | >> | 14 | OFA-B-217 | Add an arrangement by hand: a commencement date later than today is allowed; the board stops it | Functional | 1 | After group 13 | - |
 | >> | 14 | OFA-B-115 (follow-up) | OFA Checklist: drop its own dimming rule for the shell's .card__live (SHELL-B-180) once shell group 17 is on main | Look and Feel | ?? | After group 13 (shell part on main, 86205a06) | - |
 | >> | 14 | OFA-F-075, F-087, F-115, B-145 | Seed and test data (also: a DART party who does not sign yet on an open entry, for ADVISOR-DASHBOARD-F-155); app-wide spec clean-up; an "Only me" note on S19745 by the signed-in person, for O33's scenario | Functional | 10 | After go-live; after group 13 | - |
+| | X | OFA-B-219 | Expired report: an adviser's own fee-off mark should pull the row on, as a client closure's does (query, API, export, screen) | Functional | ?? | Awaiting user: business yes/no (default yes) | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 
 Done 2026-11-21: group 13 (ede59df5): OFA-B-078 parts 1, 10, 11; B-084, B-109, B-125; B-027 (by-hand); B-113, B-127, F-139, F-140, B-115. Group 12 (c82454ea): S9970024 partly-signed seed, OFA-F-133 counter, OFA-B-016, B-060, B-103, B-124, B-126, F-051, F-085, F-093. S19611 paper-copy seed (10406e29). Group 11 (53815a1c): OFA-B-213, B-005, B-006, B-043, B-046, B-059, B-123, B-215, F-052, F-054, F-055.
@@ -62,6 +63,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | (advisor to raise) | Read note attachments through the new attachment stores (OFA-F-032), not AppData only | Functional | ?? | Waits for more advisor work; store switch stays AppData until then | OFA-F-032 |
+| | X | (advisor to raise) | ofa-questionnaire.feature:318-334 (@not-built-OFA-F-115): search S9973010, not the board's "EV05", so it runs on the built app | Functional | 1 | Next advisor group; F-115 on main first | OFA-F-115 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
 Done 2026-11-21: group 20 (69b48a66): ADVISOR-DASHBOARD-F-141 (real read, mock gone), F-158; F-139 scenario on. Group 19 (e8abe824): ADVISOR-DASHBOARD-F-139; F-141 built on a mock. Group 18 (5492c090): ADVISOR-DASHBOARD-F-075; F-139 groundwork.
