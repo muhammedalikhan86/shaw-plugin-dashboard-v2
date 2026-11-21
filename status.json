@@ -66,11 +66,11 @@
     "OFA-F-118"
    ],
    "foundDuringBuild": {
-    "pointsDone": 24.0,
-    "pointsRemaining": 10.0,
+    "pointsDone": 34.0,
+    "pointsRemaining": 0.0,
     "pointsTotal": 34.0,
-    "itemsDone": 11,
-    "itemsRemaining": 2
+    "itemsDone": 13,
+    "itemsRemaining": 0
    }
   },
   {
@@ -364,7 +364,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-21T17:25:48+11:00",
+ "updatedAt": "2026-11-21T18:20:26+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2465,13 +2465,18 @@
    "at": "2026-11-21T17:25:48+11:00",
    "change": "Portfolio Services group 31 merged: B-220 fixed, B-144 part 1, B-222 raised",
    "pointsDone": 1.0
+  },
+  {
+   "at": "2026-11-21T18:20:26+11:00",
+   "change": "Portfolio Services group 32 merged: B-222, B-144 fixed",
+   "pointsDone": 0.0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 236.0,
-  "pointsRemaining": 11.0,
+  "pointsDone": 246.0,
+  "pointsRemaining": 1.0,
   "pointsTotal": 247.0,
-  "itemsDone": 116,
-  "itemsRemaining": 3
+  "itemsDone": 118,
+  "itemsRemaining": 1
  }
 }
