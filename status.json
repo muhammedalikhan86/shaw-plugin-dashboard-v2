@@ -78,10 +78,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 549.0,
-   "pointsRemaining": 19.0,
+   "pointsDone": 555.0,
+   "pointsRemaining": 13.0,
    "pointsTotal": 568.0,
-   "itemsRemaining": 5,
+   "itemsRemaining": 3,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ],
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 151.82,
+  "pointsPerWorkingDayWholePeriod": 152.28,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -240,8 +240,8 @@
    },
    {
     "date": "2026-11-21",
-    "pointsDone": 1973.0,
-    "pointsDoneThatDay": 240.0
+    "pointsDone": 1979.0,
+    "pointsDoneThatDay": 246.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -266,9 +266,9 @@
    "Advisor": {
     "optimistic": "2026-11-23",
     "likely": "2026-11-23",
-    "pessimistic": "2026-11-24",
+    "pessimistic": "2026-11-23",
     "rateLast10": 18.12,
-    "rateWhole": 40.62
+    "rateWhole": 41.08
    },
    "Compliance": {
     "optimistic": "2026-11-23",
@@ -281,12 +281,12 @@
   "overall": {
    "optimistic": "2026-11-23",
    "likely": "2026-11-23",
-   "pessimistic": "2026-11-24",
+   "pessimistic": "2026-11-23",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 151.82,
-   "pointsRemaining": 55.0,
-   "itemsRemaining": 20
+   "rateWhole": 152.28,
+   "pointsRemaining": 49.0,
+   "itemsRemaining": 18
   }
  },
  "milestones": [
@@ -364,7 +364,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-21T19:00:39+11:00",
+ "updatedAt": "2026-11-21T19:18:41+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2482,6 +2482,11 @@
    "change": "Portfolio Services group 16 merged: B-227, B-229 (surface attachment procs)",
    "pointsDone": 4.0,
    "pointsRaised": 4.0
+  },
+  {
+   "at": "2026-11-21T19:18:41+11:00",
+   "change": "Advisor group 22 merged: F-159, F-160 done",
+   "pointsDone": 6.0
   }
  ],
  "foundDuringBuild": {
