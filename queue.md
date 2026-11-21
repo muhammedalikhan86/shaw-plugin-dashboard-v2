@@ -4,12 +4,13 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 18:25
+Updated: 2026-11-21 18:57
 
 ## Shell (pointer: queue empty)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| | X | (shell to raise) | Deployment docs: AdvisorDashboard.WebAPI now refuses to start without a valid Attachments:Store and its settings: docs/deployment/README.md:98-99, :174-177; iis-setup.md:88-90 (SharePoint keys set by the deployer, never tracked); a release-runbook pre-release check | Docs | 1 | Shell group 18, after compliance group 20 merges (it may add its own lines) | ADVISOR-DASHBOARD-F-159 |
 | | X | (shell to raise) | business-tests/support/states.ts step "A note's file cannot be read" (the file download answers 404), for design row O35's scenario (OFA-B-216) | Functional | ?? | Waits for more shell work to group with | - |
 
 Done 2026-11-21: group 17 SHELL-B-179, SHELL-B-180 (86205a06). Group 16 SHELL-B-178 (fbdee3a8).
@@ -55,15 +56,14 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 Done 2026-11-21: group 19 (2b28cbf4): COMPLIANCE-DASHBOARD-F-047, B-121; S9970024 partly-signed scenario on. Group 16 (c5436b08): COMPLIANCE-DASHBOARD-F-005. Group 17 (defce403): B-120, M38 @skip scenario. Group 18 (289a5c94): F-004, the F-005 paper-copy line, M39 @skip scenario.
 Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563); group 12 end sweep clean, B-115 fixed (merged 1f6dde4c); group 13 B-114, B-117 fixed, F-008 progress (a44de06b); group 14 B-119, F-037; B-116 green with OFA-B-211 (2fdcd937); group 15 B-118, F-008 progress (b005b57b)
 
-## Advisor (pointer: group 21)
+## Advisor (pointer: parked after group 21; the mock swap waits on PS group 16)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 21 | ADVISOR-DASHBOARD-F-159, F-160 | Read (F-159) and write (F-160) note attachments through the new attachment stores (OFA-F-032), on mocks until PS adds the advisor-schema procs | Functional | ?? | Go 2026-11-21 (OFA-B-220 on main) | OFA-F-032 |
-| >> | 21 | ADVISOR-DASHBOARD-B-125 | ofa-questionnaire.feature:318-334 (@not-built-OFA-F-115): search S9973010, not the board's "EV05", so it runs on the built app | Functional | 1 | Go 2026-11-21 (OFA-B-220 on main) | OFA-F-115 |
+| | X | ADVISOR-DASHBOARD-F-159, F-160 (swap) | Swap the attachment mock for the real procs (Program.cs:542, one line) and run them; then F-159/F-160 Done | Functional | ?? | After OFA-B-227 is on main (PS group 16) | OFA-B-227 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
-Done 2026-11-21: group 20 (69b48a66): ADVISOR-DASHBOARD-F-141 (real read, mock gone), F-158; F-139 scenario on. Group 19 (e8abe824): ADVISOR-DASHBOARD-F-139; F-141 built on a mock. Group 18 (5492c090): ADVISOR-DASHBOARD-F-075; F-139 groundwork.
+Done 2026-11-21: group 21 (7222bad5): ADVISOR-DASHBOARD-B-125 fixed; F-159, F-160 built on a mock (In Progress). group 20 (69b48a66): ADVISOR-DASHBOARD-F-141 (real read, mock gone), F-158; F-139 scenario on. Group 19 (e8abe824): ADVISOR-DASHBOARD-F-139; F-141 built on a mock. Group 18 (5492c090): ADVISOR-DASHBOARD-F-075; F-139 groundwork.
 Done 2026-11-20: ADVISOR-DASHBOARD-F-146 part 2, ADVISOR-DASHBOARD-F-142 part 2 (018d9777). Group 13 (bafb7b09): ADVISOR-DASHBOARD-B-116, B-117, B-118, B-119, five board-target reds. Group 14 (0c46c642): ADVISOR-DASHBOARD-F-151, F-152, B-120, B-121, B-122.; group 15 F-049 part 2, B-123, B-124 (59c7190f); group 16 F-143, F-118, F-153, F-059 part 2, F-117 (bb446a4b); group 17 F-154, F-155, F-156 (808e6eaf)
 
 ## Hub
