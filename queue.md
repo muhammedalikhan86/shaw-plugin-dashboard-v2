@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 11:50
+Updated: 2026-11-21 11:53
 
 ## Shell (pointer: queue empty)
 
@@ -23,6 +23,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | >> | 13 | OFA-B-084, B-109, B-125; B-027 (Initial OFAs by-hand dialog parts) | OFA Checklist and the Initial OFAs by-hand dialog as drawn (routed back from PS2 group 28: PS folders) | Look and Feel | ?? | After go-live; after group 12 | - |
 | >> | 13 | OFA-B-113, B-127, F-139, F-140, B-115 | Quarantine cells; renewal tracker features; snack and loading bar on every page | Look and Feel | 13 | After go-live; after group 12 | - |
 | | 14 | OFA-B-015 (point 7) | Arrangement record: Actions move into the breadcrumb (app.html/app.ts; handed back by PS2 group 28) | Look and Feel | ?? | After group 13 | - |
+| | 14 | OFA-B-217 | Add an arrangement by hand: a commencement date later than today is allowed; the board stops it | Functional | 1 | After group 13 | - |
 | | 14 | OFA-F-075, F-087, F-115, B-145 | Seed and test data (also: a DART party who does not sign yet on an open entry, for ADVISOR-DASHBOARD-F-155); app-wide spec clean-up; an "Only me" note on S19745 by the signed-in person, for O33's scenario | Functional | 10 | After go-live; after group 13 | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 
