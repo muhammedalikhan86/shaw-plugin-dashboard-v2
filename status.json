@@ -56,9 +56,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 809.0,
+   "pointsDone": 810.0,
    "pointsRemaining": 38.0,
-   "pointsTotal": 847.0,
+   "pointsTotal": 848.0,
    "itemsRemaining": 17,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -66,11 +66,11 @@
     "OFA-F-118"
    ],
    "foundDuringBuild": {
-    "pointsDone": 20.0,
-    "pointsRemaining": 9.0,
+    "pointsDone": 21.0,
+    "pointsRemaining": 8.0,
     "pointsTotal": 29.0,
-    "itemsDone": 9,
-    "itemsRemaining": 3
+    "itemsDone": 10,
+    "itemsRemaining": 2
    }
   },
   {
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 150.42,
+  "pointsPerWorkingDayWholePeriod": 150.5,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -240,8 +240,8 @@
    },
    {
     "date": "2026-11-21",
-    "pointsDone": 1955.0,
-    "pointsDoneThatDay": 222.0
+    "pointsDone": 1956.0,
+    "pointsDoneThatDay": 223.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -261,7 +261,7 @@
     "likely": "2026-11-23",
     "pessimistic": "2026-11-23",
     "rateLast10": 38.95,
-    "rateWhole": 59.7
+    "rateWhole": 59.78
    },
    "Advisor": {
     "optimistic": "2026-11-23",
@@ -284,7 +284,7 @@
    "pessimistic": "2026-11-23",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 150.42,
+   "rateWhole": 150.5,
    "pointsRemaining": 55.0,
    "itemsRemaining": 22
   }
@@ -364,7 +364,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-21T13:01:58+11:00",
+ "updatedAt": "2026-11-21T13:21:56+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2443,13 +2443,19 @@
    "change": "PS group 13 merged (OFA Checklist, Quarantine, renewal tracker, Exceptions reasons)",
    "pointsDone": 17.0,
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-21T13:21:56+11:00",
+   "change": "PS2 group 30 merged (B-218, F-047; F-120 and F-032 built)",
+   "pointsDone": 1.0,
+   "pointsRaised": 1.0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 232.0,
-  "pointsRemaining": 10.0,
+  "pointsDone": 233.0,
+  "pointsRemaining": 9.0,
   "pointsTotal": 242.0,
-  "itemsDone": 114,
-  "itemsRemaining": 4
+  "itemsDone": 115,
+  "itemsRemaining": 3
  }
 }
