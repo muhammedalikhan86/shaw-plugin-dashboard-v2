@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 18:20
+Updated: 2026-11-21 18:22
 
 ## Shell (pointer: queue empty)
 
@@ -45,8 +45,8 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 20 | (compliance to raise) | Confirmed off list reads the real clock (SigningExpiryEndpoints.cs:83): quarantine-signing-expiry.feature's count of 4 drops to 3 after 30-11 and 2 after 25-12; pin a test clock or a fixed month | Functional | 1 | Go 2026-11-21 (OFA-B-220 on main) | - |
-| >> | 20 | (compliance to raise) | Read note attachments through the new attachment stores (OFA-F-032), not AppData only | Functional | ?? | Go 2026-11-21 (OFA-B-220 on main) | OFA-F-032 |
+| >> | 20 | COMPLIANCE-DASHBOARD-B-122 | Confirmed off list reads the real clock (SigningExpiryEndpoints.cs:83): quarantine-signing-expiry.feature's count of 4 drops to 3 after 30-11 and 2 after 25-12; pin a test clock or a fixed month | Functional | 1 | Go 2026-11-21 (OFA-B-220 on main) | - |
+| >> | 20 | COMPLIANCE-DASHBOARD-F-048 | Read note attachments through the new attachment stores (OFA-F-032), not AppData only | Functional | ?? | Go 2026-11-21 (OFA-B-220 on main) | OFA-F-032 |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Monday design sync | - |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
