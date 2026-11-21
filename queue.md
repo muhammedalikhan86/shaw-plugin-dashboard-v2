@@ -4,12 +4,13 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 11:53
+Updated: 2026-11-21 12:12
 
 ## Shell (pointer: queue empty)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| | X | (shell to raise) | The coverage tool skips items marked "Surface: none" (OFA-F-106, F-112, F-114 counted today; from PS2 OFA-F-029) | Functional | ?? | Waits for more shell work to group with | - |
 
 Done 2026-11-21: group 16 SHELL-B-178 (fbdee3a8).
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170. Group 8 (2e2ab1ec): SHELL-B-157..B-162, LANDING-PAGE-B-006.; group 9 SHELL-B-164 to B-170, LANDING-PAGE-B-007, B-163 closed with no change (90b40bf7); group 10 SHELL-B-171 (ac98f9f6); group 11 SHELL-B-172 (bafaa60d); group 12 SHELL-B-173, B-174, B-175 (f19217e8); group 13 SHELL-F-171 (d0f6b0d4); group 14 SHELL-B-176 (7a61338c) Group 15 SHELL-B-177 (ea2ad426).
@@ -39,6 +40,7 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | | X | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
 | >> | 29 | OFA-B-216 | A note's attached files on the record's History can't be opened: no download route in the API | Functional | ?? | After group 28 | - |
 | >> | 29 | OFA-B-026, B-143, F-029 | Tests: start-up flake, stale tests, faster .NET run; parity.spec.ts drops B-002 and B-004 | Functional | 12 | After go-live; after group 28 | - |
+| | 30 | OFA-B-218 | BusinessCalendarEndpointTests and EmailOptionsTests: the same host-start race as B-026; apply StartGate | Functional | ?? | After group 29 | - |
 | | X | OFA-B-144 | Faster .NET suite (5-7 min to about 2): needs several whole-suite runs | Functional | 5 | Held: waits for a full-run window | - |
 | | X | OFA-F-032, F-047, F-062, F-120 | Engineering, after go-live | Functional | 12 | After group 29 | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
