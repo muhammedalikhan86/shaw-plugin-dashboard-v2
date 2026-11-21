@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 13:21
+Updated: 2026-11-21 13:22
 
 ## Shell (pointer: queue empty)
 
@@ -29,7 +29,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 Done 2026-11-21: group 13 (ede59df5): OFA-B-078 parts 1, 10, 11; B-084, B-109, B-125; B-027 (by-hand); B-113, B-127, F-139, F-140, B-115. Group 12 (c82454ea): S9970024 partly-signed seed, OFA-F-133 counter, OFA-B-016, B-060, B-103, B-124, B-126, F-051, F-085, F-093. S19611 paper-copy seed (10406e29). Group 11 (53815a1c): OFA-B-213, B-005, B-006, B-043, B-046, B-059, B-123, B-215, F-052, F-054, F-055.
 Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed with it). Group 9: OFA-B-206, B-208, B-195, F-163 part 2, F-160, F-169 (43bb6578). Group 10: OFA-B-196, B-197, B-198, B-199, B-203, B-207, B-212; B-200 and B-202 in part (rest OFA-B-215); B-204 in part (Exceptions date wrap to the end-sweep crawl) (55e90b05).
 
-## Portfolio Services 2 (pointer: group 31 being planned)
+## Portfolio Services 2 (pointer: group 31)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
@@ -37,7 +37,7 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Blocked by you (Monday) | - |
 | | X | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
 | >> | 31 | OFA-B-220 | Mail outbox cannot attach a file moved to another store (MailOutboxSender.cs); blocks any attachment store switch | Functional | ?? | Go 2026-11-21 | - |
-| | X | OFA-B-144 | Faster .NET suite (5-7 min to about 2): needs several whole-suite runs | Functional | 5 | Held: waits for a full-run window | - |
+| >> | 31 | OFA-B-144 | Faster .NET suite (5-7 min to about 2): needs several whole-suite runs | Functional | 5 | Go 2026-11-21 (timing runs one at a time, never beside another .NET run) | - |
 | | X | OFA-F-120, F-032 | Word converter and attachment mover: built, waiting on your end-to-end and SharePoint live checks | Functional | - | Blocked by you (Monday) | - |
 | | X | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
