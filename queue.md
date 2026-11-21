@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 18:22
+Updated: 2026-11-21 18:23
 
 ## Shell (pointer: queue empty)
 
@@ -20,7 +20,8 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | - | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
-| | X | (docs) | PMBook history rows for PS's v280 and v281 (skipped on main when PS2's v282 merged) | Docs | - | With PS's next group | - |
+| | 16 | (PS to raise) | Advisor-schema attachment procs for ADVISOR-DASHBOARD-F-160/F-161: advisor.usp_AttachmentFile_Read, usp_AttachmentLocation_Read, usp_AttachmentFile_Add (and compliance's, if it needs them) | Functional | ?? | Waiting for the exact specs from advisor | - |
+| | 16 | (docs) | PMBook history rows for PS's v280 and v281 (skipped on main when PS2's v282 merged) | Docs | - | With PS's next group | - |
 | | X | OFA-B-219 | Expired report: an adviser's own fee-off mark should pull the row on, as a client closure's does (query, API, export, screen) | Functional | ?? | Awaiting user: business yes/no (default yes) | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 
@@ -58,8 +59,8 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 21 | (advisor to raise) | Read note attachments through the new attachment stores (OFA-F-032), not AppData only | Functional | ?? | Go 2026-11-21 (OFA-B-220 on main) | OFA-F-032 |
-| >> | 21 | (advisor to raise) | ofa-questionnaire.feature:318-334 (@not-built-OFA-F-115): search S9973010, not the board's "EV05", so it runs on the built app | Functional | 1 | Go 2026-11-21 (OFA-B-220 on main) | OFA-F-115 |
+| >> | 21 | ADVISOR-DASHBOARD-F-160, F-161 | Read (F-160) and write (F-161) note attachments through the new attachment stores (OFA-F-032), on mocks until PS adds the advisor-schema procs | Functional | ?? | Go 2026-11-21 (OFA-B-220 on main) | OFA-F-032 |
+| >> | 21 | ADVISOR-DASHBOARD-B-126 | ofa-questionnaire.feature:318-334 (@not-built-OFA-F-115): search S9973010, not the board's "EV05", so it runs on the built app | Functional | 1 | Go 2026-11-21 (OFA-B-220 on main) | OFA-F-115 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
 Done 2026-11-21: group 20 (69b48a66): ADVISOR-DASHBOARD-F-141 (real read, mock gone), F-158; F-139 scenario on. Group 19 (e8abe824): ADVISOR-DASHBOARD-F-139; F-141 built on a mock. Group 18 (5492c090): ADVISOR-DASHBOARD-F-075; F-139 groundwork.
