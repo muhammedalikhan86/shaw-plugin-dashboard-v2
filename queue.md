@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 15:48
+Updated: 2026-11-21 16:41
 
 ## Shell (pointer: queue empty)
 
@@ -47,6 +47,7 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| | X | (compliance to raise) | Confirmed off list reads the real clock (SigningExpiryEndpoints.cs:83): quarantine-signing-expiry.feature's count of 4 drops to 3 after 30-11 and 2 after 25-12; pin a test clock or a fixed month | Functional | 1 | Next compliance group, before 30-11 | - |
 | | X | (compliance to raise) | Read note attachments through the new attachment stores (OFA-F-032), not AppData only | Functional | ?? | Waits for more compliance work; store switch stays AppData until then | OFA-F-032 |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Monday design sync | - |
