@@ -98,16 +98,16 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 241.0,
+   "pointsDone": 242.0,
    "pointsRemaining": 3.0,
-   "pointsTotal": 244.0,
+   "pointsTotal": 245.0,
    "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
-    "pointsDone": 35.0,
+    "pointsDone": 38.0,
     "pointsRemaining": 0.0,
-    "pointsTotal": 35.0,
-    "itemsDone": 18,
+    "pointsTotal": 38.0,
+    "itemsDone": 19,
     "itemsRemaining": 0
    }
   }
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 152.28,
+  "pointsPerWorkingDayWholePeriod": 152.36,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -240,8 +240,8 @@
    },
    {
     "date": "2026-11-21",
-    "pointsDone": 1979.0,
-    "pointsDoneThatDay": 246.0
+    "pointsDone": 1980.0,
+    "pointsDoneThatDay": 247.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -275,7 +275,7 @@
     "likely": "2026-11-23",
     "pessimistic": "2026-11-23",
     "rateLast10": 20.38,
-    "rateWhole": 18.31
+    "rateWhole": 18.39
    }
   },
   "overall": {
@@ -284,7 +284,7 @@
    "pessimistic": "2026-11-23",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 152.28,
+   "rateWhole": 152.36,
    "pointsRemaining": 49.0,
    "itemsRemaining": 18
   }
@@ -364,7 +364,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-21T19:18:41+11:00",
+ "updatedAt": "2026-11-21T19:37:50+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2487,13 +2487,19 @@
    "at": "2026-11-21T19:18:41+11:00",
    "change": "Advisor group 22 merged: F-159, F-160 done",
    "pointsDone": 6.0
+  },
+  {
+   "at": "2026-11-21T19:37:50+11:00",
+   "change": "Compliance group 20 merged: F-048, B-122",
+   "pointsDone": 1.0,
+   "pointsRaised": 1.0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 246.0,
+  "pointsDone": 249.0,
   "pointsRemaining": 1.0,
-  "pointsTotal": 247.0,
-  "itemsDone": 118,
+  "pointsTotal": 250.0,
+  "itemsDone": 119,
   "itemsRemaining": 1
  }
 }
