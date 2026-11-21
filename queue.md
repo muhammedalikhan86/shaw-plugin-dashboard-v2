@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 19:46
+Updated: 2026-11-21 22:14
 
 ## Shell (pointer: parked after group 18; queue empty)
 
@@ -39,11 +39,11 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 Done 2026-11-21: group 32 (f3aa3f95): OFA-B-222, B-144 fixed (PS .NET suite 505 s to about 250 s). group 31 (923f5b3f): OFA-B-220 fixed; B-144 part 1. group 30 (9c83f855): OFA-B-218, F-047; F-120 and F-032 built (not Done); F-062 written. Group 29 (bc9bc985): OFA-B-216, B-026, B-143, F-029. Group 28 (78b599db): OFA-B-129, B-131, B-132, B-133, B-134, B-027 (PS2 parts), F-088. Group 27 (778309e8): OFA-B-024, B-045, B-047, B-071, B-073, B-122, B-128, B-130, B-137, B-078 part 10. Group 26 (a8f32e66): OFA-B-100, B-104, B-105, B-114, B-078 in part (rest routed). Group 25 (65537360): OFA-F-183. Group 24 (96d1df54): OFA-F-181, F-182. Group 23 (cb215b13): OFA-F-180. Group 22 (4c8b3fc9): OFA-F-133, F-083, F-065, B-140, B-049, B-050; B-044 closed (O26), B-135 already fixed.
 Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-205, OFA-B-179, OFA-B-182 (6e56c9f9). OFA-F-131, F-176, F-094, F-132, OFA-B-183 (d4b81a3b). Group 19: OFA-B-209, B-201, B-210, F-144, B-211 (c342a0a3). Group 20: OFA-F-177, F-178, F-179, B-214 (3a9578c7). Group 21 sweep (a524e03b): 12 closed, including OFA-B-002, B-003, B-004, B-014, B-089, B-058, B-063, B-064, B-088, B-149, F-070, F-119.
 
-## Compliance (pointer: parked after group 20; the rest waits on design rows)
+## Compliance (pointer: group 21)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | X | (compliance to raise) | Fail closed at startup on bad Attachments settings (ValidateOnStart), as the advisor API does; also fix appsettings.Production.json _comment ("read access", it now writes note files) | Functional | 1 | Next compliance group | SHELL-B-181 (docs) |
+| >> | 21 | (compliance to raise) | Fail closed at startup on bad Attachments settings (ValidateOnStart), as the advisor API does; also fix appsettings.Production.json _comment ("read access", it now writes note files) | Functional | 1 | Go 2026-11-21 (only buildable item tonight) | SHELL-B-181 (docs) |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Monday design sync | - |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
