@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 18:57
+Updated: 2026-11-21 19:00
 
 ## Shell (pointer: queue empty)
 
@@ -16,17 +16,15 @@ Updated: 2026-11-21 18:57
 Done 2026-11-21: group 17 SHELL-B-179, SHELL-B-180 (86205a06). Group 16 SHELL-B-178 (fbdee3a8).
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170. Group 8 (2e2ab1ec): SHELL-B-157..B-162, LANDING-PAGE-B-006.; group 9 SHELL-B-164 to B-170, LANDING-PAGE-B-007, B-163 closed with no change (90b40bf7); group 10 SHELL-B-171 (ac98f9f6); group 11 SHELL-B-172 (bafaa60d); group 12 SHELL-B-173, B-174, B-175 (f19217e8); group 13 SHELL-F-171 (d0f6b0d4); group 14 SHELL-B-176 (7a61338c) Group 15 SHELL-B-177 (ea2ad426).
 
-## Portfolio Services (pointer: group 16; OFA-B-219 still waits on your yes/no)
+## Portfolio Services (pointer: parked after group 16; only OFA-B-219 left, waiting on your yes/no)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | - | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
-| >> | 16 | OFA-B-227, B-229 | Surface attachment procs so advisor and compliance can use the stores: advisor.usp_AttachmentLocation_Read, usp_AttachmentFile_Read, usp_AttachmentFile_Add; compliance's three of the same names (by AttachmentId) | Functional | ?? | Go 2026-11-21; ADVISOR-DASHBOARD-F-159/F-160 and COMPLIANCE-DASHBOARD-F-048 wait on it | - |
-| >> | 16 | (docs) | PMBook history rows for PS's v280 and v281 (skipped on main when PS2's v282 merged) | Docs | - | With PS's next group | - |
 | | X | OFA-B-219 | Expired report: an adviser's own fee-off mark should pull the row on, as a client closure's does (query, API, export, screen) | Functional | ?? | Awaiting user: business yes/no (default yes) | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 
-Done 2026-11-21: group 15 (95e919d4): OFA-B-221, B-223, B-225 fixed; F-075 done. group 14 (b305223c): OFA-B-015 point 7 (row open for point 8), B-217, B-145 fixed; F-087, F-115 done; F-075 in part; SHELL-B-180 follow-up. group 13 (ede59df5): OFA-B-078 parts 1, 10, 11; B-084, B-109, B-125; B-027 (by-hand); B-113, B-127, F-139, F-140, B-115. Group 12 (c82454ea): S9970024 partly-signed seed, OFA-F-133 counter, OFA-B-016, B-060, B-103, B-124, B-126, F-051, F-085, F-093. S19611 paper-copy seed (10406e29). Group 11 (53815a1c): OFA-B-213, B-005, B-006, B-043, B-046, B-059, B-123, B-215, F-052, F-054, F-055.
+Done 2026-11-21: group 16 (b3925012): OFA-B-227, B-229 fixed (advisor and compliance surface attachment procs, migrations 0186-0187); PMBook history rows v280, v281. group 15 (95e919d4): OFA-B-221, B-223, B-225 fixed; F-075 done. group 14 (b305223c): OFA-B-015 point 7 (row open for point 8), B-217, B-145 fixed; F-087, F-115 done; F-075 in part; SHELL-B-180 follow-up. group 13 (ede59df5): OFA-B-078 parts 1, 10, 11; B-084, B-109, B-125; B-027 (by-hand); B-113, B-127, F-139, F-140, B-115. Group 12 (c82454ea): S9970024 partly-signed seed, OFA-F-133 counter, OFA-B-016, B-060, B-103, B-124, B-126, F-051, F-085, F-093. S19611 paper-copy seed (10406e29). Group 11 (53815a1c): OFA-B-213, B-005, B-006, B-043, B-046, B-059, B-123, B-215, F-052, F-054, F-055.
 Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed with it). Group 9: OFA-B-206, B-208, B-195, F-163 part 2, F-160, F-169 (43bb6578). Group 10: OFA-B-196, B-197, B-198, B-199, B-203, B-207, B-212; B-200 and B-202 in part (rest OFA-B-215); B-204 in part (Exceptions date wrap to the end-sweep crawl) (55e90b05).
 
 ## Portfolio Services 2 (pointer: parked after group 32; nothing unblocked)
@@ -56,11 +54,11 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 Done 2026-11-21: group 19 (2b28cbf4): COMPLIANCE-DASHBOARD-F-047, B-121; S9970024 partly-signed scenario on. Group 16 (c5436b08): COMPLIANCE-DASHBOARD-F-005. Group 17 (defce403): B-120, M38 @skip scenario. Group 18 (289a5c94): F-004, the F-005 paper-copy line, M39 @skip scenario.
 Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matches the board), B-102 (B-078 ruling: list cards fill; M25 has the board follow), B-105 (B-069 already draws it).; fixed COMPLIANCE-DASHBOARD-B-100, B-101, B-104, B-106, B-107, B-108 (merged 5d37d92c); B-095, B-112 fixed, B-111 closed with no change, B-113 moved to SHELL-B-156 (merged 5d7a9563); group 12 end sweep clean, B-115 fixed (merged 1f6dde4c); group 13 B-114, B-117 fixed, F-008 progress (a44de06b); group 14 B-119, F-037; B-116 green with OFA-B-211 (2fdcd937); group 15 B-118, F-008 progress (b005b57b)
 
-## Advisor (pointer: parked after group 21; the mock swap waits on PS group 16)
+## Advisor (pointer: group 22, the mock swap)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | X | ADVISOR-DASHBOARD-F-159, F-160 (swap) | Swap the attachment mock for the real procs (Program.cs:542, one line) and run them; then F-159/F-160 Done | Functional | ?? | After OFA-B-227 is on main (PS group 16) | OFA-B-227 |
+| >> | 22 | ADVISOR-DASHBOARD-F-159, F-160 (swap) | Swap the attachment mock for the real procs (Program.cs:542, one line) and run them; then F-159/F-160 Done | Functional | ?? | Go 2026-11-21 (OFA-B-227 on main) | OFA-B-227 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
 Done 2026-11-21: group 21 (7222bad5): ADVISOR-DASHBOARD-B-125 fixed; F-159, F-160 built on a mock (In Progress). group 20 (69b48a66): ADVISOR-DASHBOARD-F-141 (real read, mock gone), F-158; F-139 scenario on. Group 19 (e8abe824): ADVISOR-DASHBOARD-F-139; F-141 built on a mock. Group 18 (5492c090): ADVISOR-DASHBOARD-F-075; F-139 groundwork.

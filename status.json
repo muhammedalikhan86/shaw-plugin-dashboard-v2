@@ -56,9 +56,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 822.0,
+   "pointsDone": 826.0,
    "pointsRemaining": 32.0,
-   "pointsTotal": 854.0,
+   "pointsTotal": 858.0,
    "itemsRemaining": 13,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -115,7 +115,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 151.51,
+  "pointsPerWorkingDayWholePeriod": 151.82,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -240,8 +240,8 @@
    },
    {
     "date": "2026-11-21",
-    "pointsDone": 1969.0,
-    "pointsDoneThatDay": 236.0
+    "pointsDone": 1973.0,
+    "pointsDoneThatDay": 240.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -261,7 +261,7 @@
     "likely": "2026-11-23",
     "pessimistic": "2026-11-23",
     "rateLast10": 38.95,
-    "rateWhole": 60.71
+    "rateWhole": 61.02
    },
    "Advisor": {
     "optimistic": "2026-11-23",
@@ -284,7 +284,7 @@
    "pessimistic": "2026-11-24",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 151.51,
+   "rateWhole": 151.82,
    "pointsRemaining": 55.0,
    "itemsRemaining": 20
   }
@@ -364,7 +364,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-21T18:57:06+11:00",
+ "updatedAt": "2026-11-21T19:00:39+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2476,6 +2476,12 @@
    "change": "Advisor group 21 merged: B-125 fixed; F-159, F-160 built on a mock",
    "pointsDone": 1.0,
    "pointsRaised": 7.0
+  },
+  {
+   "at": "2026-11-21T19:00:39+11:00",
+   "change": "Portfolio Services group 16 merged: B-227, B-229 (surface attachment procs)",
+   "pointsDone": 4.0,
+   "pointsRaised": 4.0
   }
  ],
  "foundDuringBuild": {
