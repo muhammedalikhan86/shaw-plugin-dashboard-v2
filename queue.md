@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 18:24
+Updated: 2026-11-21 18:25
 
 ## Shell (pointer: queue empty)
 
@@ -20,7 +20,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | - | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
-| >> | 16 | (PS to raise) | Surface attachment procs so advisor and compliance can use the stores: advisor.usp_AttachmentLocation_Read, usp_AttachmentFile_Read, usp_AttachmentFile_Add; compliance's three of the same names (by AttachmentId) | Functional | ?? | Go 2026-11-21; ADVISOR-DASHBOARD-F-159/F-160 and COMPLIANCE-DASHBOARD-F-048 wait on it | - |
+| >> | 16 | OFA-B-227, B-229 | Surface attachment procs so advisor and compliance can use the stores: advisor.usp_AttachmentLocation_Read, usp_AttachmentFile_Read, usp_AttachmentFile_Add; compliance's three of the same names (by AttachmentId) | Functional | ?? | Go 2026-11-21; ADVISOR-DASHBOARD-F-159/F-160 and COMPLIANCE-DASHBOARD-F-048 wait on it | - |
 | >> | 16 | (docs) | PMBook history rows for PS's v280 and v281 (skipped on main when PS2's v282 merged) | Docs | - | With PS's next group | - |
 | | X | OFA-B-219 | Expired report: an adviser's own fee-off mark should pull the row on, as a client closure's does (query, API, export, screen) | Functional | ?? | Awaiting user: business yes/no (default yes) | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
