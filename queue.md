@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 13:01
+Updated: 2026-11-21 13:10
 
 ## Shell (pointer: queue empty)
 
@@ -37,6 +37,7 @@ Done 2026-11-20: OFA-F-172, OFA-F-028 (f259a44e; OFA-B-007 and OFA-B-075 fixed w
 | | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Blocked by you (Monday) | - |
 | | X | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
 | >> | 30 | OFA-B-218 | BusinessCalendarEndpointTests and EmailOptionsTests: the same host-start race as B-026; apply StartGate | Functional | ?? | After group 29 | - |
+| | X | OFA-B-220 | Mail outbox cannot attach a file moved to another store (MailOutboxSender.cs); blocks any attachment store switch | Functional | ?? | After group 30; grouped with the next PS2 work | - |
 | | X | OFA-B-144 | Faster .NET suite (5-7 min to about 2): needs several whole-suite runs | Functional | 5 | Held: waits for a full-run window | - |
 | >> | 30 | OFA-F-032, F-047, F-062, F-120 | Engineering, after go-live | Functional | 12 | Go 2026-11-21 | - |
 | | X | OFA-F-158 | Swap placeholder emails for Luke's wording | Functional | 1 | Blocked by Luke's templates | - |
@@ -48,6 +49,7 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| | X | (compliance to raise) | Read note attachments through the new attachment stores (OFA-F-032), not AppData only | Functional | ?? | Waits for more compliance work; store switch stays AppData until then | OFA-F-032 |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Monday design sync | - |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
@@ -59,6 +61,7 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| | X | (advisor to raise) | Read note attachments through the new attachment stores (OFA-F-032), not AppData only | Functional | ?? | Waits for more advisor work; store switch stays AppData until then | OFA-F-032 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
 Done 2026-11-21: group 20 (69b48a66): ADVISOR-DASHBOARD-F-141 (real read, mock gone), F-158; F-139 scenario on. Group 19 (e8abe824): ADVISOR-DASHBOARD-F-139; F-141 built on a mock. Group 18 (5492c090): ADVISOR-DASHBOARD-F-075; F-139 groundwork.
