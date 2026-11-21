@@ -364,7 +364,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-21T11:24:09+11:00",
+ "updatedAt": "2026-11-21T11:47:08+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2409,6 +2409,11 @@
    "change": "SHELL-B-178 done; OFA-B-216 raised",
    "pointsDone": 1.0,
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-21T11:47:08+11:00",
+   "change": "PS2 group 28 merged (the arrangement record)",
+   "pointsDone": 0.0
   }
  ],
  "foundDuringBuild": {
