@@ -4,16 +4,14 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 19:39
+Updated: 2026-11-21 19:46
 
-## Shell (pointer: group 18)
+## Shell (pointer: parked after group 18; queue empty)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 18 | SHELL-B-181 | Deployment docs: AdvisorDashboard.WebAPI now refuses to start without a valid Attachments:Store and its settings: docs/deployment/README.md:98-99, :174-177; iis-setup.md:88-90 (SharePoint keys set by the deployer, never tracked); a release-runbook pre-release check | Docs | 1 | Go 2026-11-21 | ADVISOR-DASHBOARD-F-159 |
-| >> | 18 | SHELL-B-182 | business-tests/support/states.ts step "A note's file cannot be read" (the file download answers 404), for design row O35's scenario (OFA-B-216) | Functional | ?? | Go 2026-11-21 | - |
 
-Done 2026-11-21: group 17 SHELL-B-179, SHELL-B-180 (86205a06). Group 16 SHELL-B-178 (fbdee3a8).
+Done 2026-11-21: group 18 SHELL-B-181, SHELL-B-182 (0eefe343). group 17 SHELL-B-179, SHELL-B-180 (86205a06). Group 16 SHELL-B-178 (fbdee3a8).
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170. Group 8 (2e2ab1ec): SHELL-B-157..B-162, LANDING-PAGE-B-006.; group 9 SHELL-B-164 to B-170, LANDING-PAGE-B-007, B-163 closed with no change (90b40bf7); group 10 SHELL-B-171 (ac98f9f6); group 11 SHELL-B-172 (bafaa60d); group 12 SHELL-B-173, B-174, B-175 (f19217e8); group 13 SHELL-F-171 (d0f6b0d4); group 14 SHELL-B-176 (7a61338c) Group 15 SHELL-B-177 (ea2ad426).
 
 ## Portfolio Services (pointer: parked after group 16; only OFA-B-219 left, waiting on your yes/no)
@@ -45,7 +43,7 @@ Done 2026-11-20: OFA-F-173, OFA-F-174 (a733211a); OFA-F-170, OFA-F-171, OFA-B-20
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | X | (compliance to raise) | Fail closed at startup on bad Attachments settings (ValidateOnStart), as the advisor API does; today it starts and fails on the first attachment read or write | Functional | 1 | Next compliance group | SHELL-B-181 (docs) |
+| | X | (compliance to raise) | Fail closed at startup on bad Attachments settings (ValidateOnStart), as the advisor API does; also fix appsettings.Production.json _comment ("read access", it now writes note files) | Functional | 1 | Next compliance group | SHELL-B-181 (docs) |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Monday design sync | - |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
