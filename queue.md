@@ -4,16 +4,14 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 12:19
+Updated: 2026-11-21 12:28
 
-## Shell (pointer: group 17)
+## Shell (pointer: queue empty)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 17 | SHELL-B-179 | The coverage tool skips items marked "Surface: none" (OFA-F-106, F-112, F-114 counted today; from PS2 OFA-F-029) | Functional | ?? | Go 2026-11-21 | - |
-| >> | 17 | SHELL-B-180 | .card__live: a no-dim child class under .card--loading, so a control the board keeps live (OFA Checklist Month select, design row P85) needs no plugin dimming CSS | Look and Feel | ?? | Go 2026-11-21 | - |
 
-Done 2026-11-21: group 16 SHELL-B-178 (fbdee3a8).
+Done 2026-11-21: group 17 SHELL-B-179, SHELL-B-180 (86205a06). Group 16 SHELL-B-178 (fbdee3a8).
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170. Group 8 (2e2ab1ec): SHELL-B-157..B-162, LANDING-PAGE-B-006.; group 9 SHELL-B-164 to B-170, LANDING-PAGE-B-007, B-163 closed with no change (90b40bf7); group 10 SHELL-B-171 (ac98f9f6); group 11 SHELL-B-172 (bafaa60d); group 12 SHELL-B-173, B-174, B-175 (f19217e8); group 13 SHELL-F-171 (d0f6b0d4); group 14 SHELL-B-176 (7a61338c) Group 15 SHELL-B-177 (ea2ad426).
 
 ## Portfolio Services (pointer: group 13)
@@ -26,7 +24,7 @@ Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHE
 | >> | 13 | OFA-B-113, B-127, F-139, F-140, B-115 | Quarantine cells; renewal tracker features; snack and loading bar on every page | Look and Feel | 13 | After go-live; after group 12 | - |
 | | 14 | OFA-B-015 (point 7) | Arrangement record: Actions move into the breadcrumb (app.html/app.ts; handed back by PS2 group 28) | Look and Feel | ?? | After group 13 | - |
 | | 14 | OFA-B-217 | Add an arrangement by hand: a commencement date later than today is allowed; the board stops it | Functional | 1 | After group 13 | - |
-| | 14 | OFA-B-115 (follow-up) | OFA Checklist: drop its own dimming rule for the shell's .card__live (SHELL-B-180) once shell group 17 is on main | Look and Feel | ?? | After shell group 17 | shell group 17 |
+| | 14 | OFA-B-115 (follow-up) | OFA Checklist: drop its own dimming rule for the shell's .card__live (SHELL-B-180) once shell group 17 is on main | Look and Feel | ?? | After group 13 (shell part on main, 86205a06) | - |
 | | 14 | OFA-F-075, F-087, F-115, B-145 | Seed and test data (also: a DART party who does not sign yet on an open entry, for ADVISOR-DASHBOARD-F-155); app-wide spec clean-up; an "Only me" note on S19745 by the signed-in person, for O33's scenario | Functional | 10 | After go-live; after group 13 | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 
