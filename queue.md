@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current.
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-21 18:23
+Updated: 2026-11-21 18:24
 
 ## Shell (pointer: queue empty)
 
@@ -15,13 +15,13 @@ Updated: 2026-11-21 18:23
 Done 2026-11-21: group 17 SHELL-B-179, SHELL-B-180 (86205a06). Group 16 SHELL-B-178 (fbdee3a8).
 Done 2026-11-20: group 5 SHELL-F-169, SHELL-B-136, SHELL-F-166, SHELL-F-167, SHELL-B-135, SHELL-F-168, SHELL-B-137, SHELL-B-138, SHELL-B-144 (8fd61171); the parity check (shell, landing-page) Group 6 (5a6651d1): SHELL-B-139..B-143, B-145, B-146, B-148, B-149, B-151..B-154, LANDING-PAGE-B-001..B-005; B-147, B-150 closed (OFA boards). Group 7 (2c911aca): SHELL-B-155, SHELL-B-156, SHELL-F-170. Group 8 (2e2ab1ec): SHELL-B-157..B-162, LANDING-PAGE-B-006.; group 9 SHELL-B-164 to B-170, LANDING-PAGE-B-007, B-163 closed with no change (90b40bf7); group 10 SHELL-B-171 (ac98f9f6); group 11 SHELL-B-172 (bafaa60d); group 12 SHELL-B-173, B-174, B-175 (f19217e8); group 13 SHELL-F-171 (d0f6b0d4); group 14 SHELL-B-176 (7a61338c) Group 15 SHELL-B-177 (ea2ad426).
 
-## Portfolio Services (pointer: parked after group 15; only OFA-B-219 left, waiting on your yes/no)
+## Portfolio Services (pointer: group 16; OFA-B-219 still waits on your yes/no)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | - | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
-| | 16 | (PS to raise) | Advisor-schema attachment procs for ADVISOR-DASHBOARD-F-160/F-161: advisor.usp_AttachmentFile_Read, usp_AttachmentLocation_Read, usp_AttachmentFile_Add (and compliance's, if it needs them) | Functional | ?? | Waiting for the exact specs from advisor | - |
-| | 16 | (docs) | PMBook history rows for PS's v280 and v281 (skipped on main when PS2's v282 merged) | Docs | - | With PS's next group | - |
+| >> | 16 | (PS to raise) | Surface attachment procs so advisor and compliance can use the stores: advisor.usp_AttachmentLocation_Read, usp_AttachmentFile_Read, usp_AttachmentFile_Add; compliance's three of the same names (by AttachmentId) | Functional | ?? | Go 2026-11-21; ADVISOR-DASHBOARD-F-159/F-160 and COMPLIANCE-DASHBOARD-F-048 wait on it | - |
+| >> | 16 | (docs) | PMBook history rows for PS's v280 and v281 (skipped on main when PS2's v282 merged) | Docs | - | With PS's next group | - |
 | | X | OFA-B-219 | Expired report: an adviser's own fee-off mark should pull the row on, as a client closure's does (query, API, export, screen) | Functional | ?? | Awaiting user: business yes/no (default yes) | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 
@@ -59,8 +59,8 @@ Done 2026-11-20: closed with no change: COMPLIANCE-DASHBOARD-B-103 (build matche
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 21 | ADVISOR-DASHBOARD-F-160, F-161 | Read (F-160) and write (F-161) note attachments through the new attachment stores (OFA-F-032), on mocks until PS adds the advisor-schema procs | Functional | ?? | Go 2026-11-21 (OFA-B-220 on main) | OFA-F-032 |
-| >> | 21 | ADVISOR-DASHBOARD-B-126 | ofa-questionnaire.feature:318-334 (@not-built-OFA-F-115): search S9973010, not the board's "EV05", so it runs on the built app | Functional | 1 | Go 2026-11-21 (OFA-B-220 on main) | OFA-F-115 |
+| >> | 21 | ADVISOR-DASHBOARD-F-159, F-160 | Read (F-159) and write (F-160) note attachments through the new attachment stores (OFA-F-032), on mocks until PS adds the advisor-schema procs | Functional | ?? | Go 2026-11-21 (OFA-B-220 on main) | OFA-F-032 |
+| >> | 21 | ADVISOR-DASHBOARD-B-125 | ofa-questionnaire.feature:318-334 (@not-built-OFA-F-115): search S9973010, not the board's "EV05", so it runs on the built app | Functional | 1 | Go 2026-11-21 (OFA-B-220 on main) | OFA-F-115 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
 Done 2026-11-21: group 20 (69b48a66): ADVISOR-DASHBOARD-F-141 (real read, mock gone), F-158; F-139 scenario on. Group 19 (e8abe824): ADVISOR-DASHBOARD-F-139; F-141 built on a mock. Group 18 (5492c090): ADVISOR-DASHBOARD-F-075; F-139 groundwork.
