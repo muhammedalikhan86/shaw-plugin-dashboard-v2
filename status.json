@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-21",
+ "asOf": "2026-11-23",
  "workingDays": {
   "rule": "Mon-Fri",
   "holidays": [],
@@ -8,27 +8,43 @@
  "phases": [
   {
    "name": "Build",
-   "status": "In progress",
+   "status": "Done",
    "start": "2026-10-28",
    "end": "2026-11-23",
-   "isForecast": true,
+   "isForecast": false,
    "note": "start = first day of the story-points record (hub chart, from 2026-10-28), not a documented kickoff; the shell, Landing Page and the pre-OFA Advisor Dashboard were built and released earlier as functional mocks (2026-10-12). Build includes OFA-F-028 Go-live and OFA-F-029 coverage gate (PS Phase 5), and OFA-F-030 in eSignatureWebAPI (outside this repo)."
   },
   {
-   "name": "Deployment",
-   "status": "Not started: only the functional mocks are deployed",
-   "start": null,
-   "end": null,
+   "name": "Deploy test site (test data)",
+   "status": "In progress",
+   "start": "2026-11-23",
+   "end": "2026-11-25",
    "isForecast": false,
-   "note": "The releases in docs/releases.md (2026-10-12, updates 1-2 2026-10-12, update 3 2026-10-14, update 4 2026-10-27, Advisor Dashboard 0.14.0) were labelled Alpha but are functional mocks: the artboards with surface-level behaviour to show look and feel, no backend. The product itself has not been deployed. OFA go-live is OFA-F-028 (Planned). No deployment date in any doc."
+   "note": null
   },
   {
-   "name": "Acceptance Testing",
-   "status": null,
-   "start": null,
-   "end": null,
-   "isForecast": false,
-   "note": "No acceptance-testing phase, UAT plan or date is recorded in docs/deployment, the PMBooks, PRDs or handoffs. Manual verification has been waived by Muhammed since 2026-11-11 (hub note)."
+   "name": "Acceptance testing (Luke)",
+   "status": "Planned",
+   "start": "2026-11-26",
+   "end": "2026-12-07",
+   "isForecast": true,
+   "note": null
+  },
+  {
+   "name": "Go-live (set-up until sign-off, then switch on)",
+   "status": "Planned",
+   "start": "2026-11-30",
+   "end": "2026-12-03",
+   "isForecast": true,
+   "note": null
+  },
+  {
+   "name": "Live checks (read only)",
+   "status": "Planned",
+   "start": "2026-12-04",
+   "end": "2026-12-11",
+   "isForecast": true,
+   "note": null
   }
  ],
  "components": [
@@ -108,6 +124,26 @@
     "pointsRemaining": 0.0,
     "pointsTotal": 38.0,
     "itemsDone": 19,
+    "itemsRemaining": 0
+   }
+  },
+  {
+   "name": "Deployment & Testing",
+   "counted": [
+    "leftovers"
+   ],
+   "stage": "deploy",
+   "start": "2026-11-23",
+   "pointsDone": 0.0,
+   "pointsRemaining": 43.0,
+   "pointsTotal": 43.0,
+   "itemsRemaining": 19,
+   "itemsRemainingUnsized": [],
+   "foundDuringBuild": {
+    "pointsDone": 0.0,
+    "pointsRemaining": 0.0,
+    "pointsTotal": 0.0,
+    "itemsDone": 0,
     "itemsRemaining": 0
    }
   }
@@ -242,6 +278,11 @@
     "date": "2026-11-21",
     "pointsDone": 1983.0,
     "pointsDoneThatDay": 250.0
+   },
+   {
+    "date": "2026-11-23",
+    "pointsDone": 1983.0,
+    "pointsDoneThatDay": 0.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -250,43 +291,50 @@
   "method": "optimistic = the 2026-11-11 to 2026-11-15 rate (points per calendar day, the pace with the new skills); likely = mean of the two rates; pessimistic = whole-period rate (since 2026-10-28). The forecast counts Mon-Fri working days only; weekend points count in the totals.",
   "perComponent": {
    "Shell & Landing Page": {
-    "optimistic": "2026-11-23",
-    "likely": "2026-11-23",
-    "pessimistic": "2026-11-23",
+    "optimistic": "2026-11-24",
+    "likely": "2026-11-24",
+    "pessimistic": "2026-11-24",
     "rateLast10": 35.55,
     "rateWhole": 32.01
    },
    "Portfolio Services": {
-    "optimistic": "2026-11-23",
-    "likely": "2026-11-23",
-    "pessimistic": "2026-11-23",
+    "optimistic": "2026-11-24",
+    "likely": "2026-11-24",
+    "pessimistic": "2026-11-24",
     "rateLast10": 38.95,
     "rateWhole": 61.02
    },
    "Advisor": {
-    "optimistic": "2026-11-23",
-    "likely": "2026-11-23",
-    "pessimistic": "2026-11-23",
+    "optimistic": "2026-11-24",
+    "likely": "2026-11-24",
+    "pessimistic": "2026-11-24",
     "rateLast10": 18.12,
     "rateWhole": 41.08
    },
    "Compliance": {
-    "optimistic": "2026-11-23",
-    "likely": "2026-11-23",
-    "pessimistic": "2026-11-23",
+    "optimistic": "2026-11-24",
+    "likely": "2026-11-24",
+    "pessimistic": "2026-11-24",
     "rateLast10": 20.38,
     "rateWhole": 18.47
+   },
+   "Deployment & Testing": {
+    "optimistic": "2026-11-25",
+    "likely": "2026-11-25",
+    "pessimistic": "2026-11-25",
+    "rateLast10": 21.5,
+    "rateWhole": 21.5
    }
   },
   "overall": {
-   "optimistic": "2026-11-23",
-   "likely": "2026-11-23",
-   "pessimistic": "2026-11-23",
+   "optimistic": "2026-11-25",
+   "likely": "2026-11-25",
+   "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 152.59,
-   "pointsRemaining": 49.0,
-   "itemsRemaining": 18
+   "pointsRemaining": 92.0,
+   "itemsRemaining": 37
   }
  },
  "milestones": [
@@ -317,28 +365,33 @@
   },
   {
    "name": "Shell & Landing Page build complete (likely)",
-   "date": "2026-11-23",
+   "date": "2026-11-24",
    "kind": "forecast"
   },
   {
    "name": "Portfolio Services build complete (likely)",
-   "date": "2026-11-23",
+   "date": "2026-11-24",
    "kind": "forecast"
   },
   {
    "name": "Advisor build complete (likely)",
-   "date": "2026-11-23",
+   "date": "2026-11-24",
    "kind": "forecast"
   },
   {
    "name": "Compliance build complete (likely)",
-   "date": "2026-11-23",
+   "date": "2026-11-24",
    "kind": "forecast"
   },
   {
-   "name": "Build complete (likely)",
+   "name": "Build complete",
    "date": "2026-11-23",
-   "kind": "forecast"
+   "kind": "actual"
+  },
+  {
+   "name": "Deployment and testing starts",
+   "date": "2026-11-23",
+   "kind": "actual"
   }
  ],
  "sources": [
@@ -364,7 +417,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-21T22:29:34+11:00",
+ "updatedAt": "2026-11-23T09:41:13+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2505,6 +2558,11 @@
    "change": "Compliance group 21 merged: B-123",
    "pointsDone": 1.0,
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-23T09:41:13+11:00",
+   "change": "Deployment and testing starts: 19 items, 43 points in the leftovers stack (recount from the PMBooks)",
+   "pointsDone": 0.0
   }
  ],
  "foundDuringBuild": {

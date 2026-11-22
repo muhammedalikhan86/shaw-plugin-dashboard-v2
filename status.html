@@ -98,7 +98,7 @@ details.acc[open]>summary{border-bottom:1px solid var(--line);border-radius:12px
 <p class="lede" id="lede">Loading…</p>
 
 <h2>Phases</h2>
-<p class="sub">Build, Deployment and Acceptance Testing. A date with "forecast" is a projection, not a commitment.</p>
+<p class="sub">From build to go-live. A date with "forecast" is a projection, not a commitment; a "planned" date is the agreed plan.</p>
 <div class="row3" id="phases"></div>
 
 <h2>Build work</h2>
@@ -173,7 +173,11 @@ details.acc[open]>summary{border-bottom:1px solid var(--line);border-radius:12px
   });
 
   function render(S){
-    var asOf=d(S.asOf),comps=S.components,fc=S.forecast,ov=fc.overall;
+    var asOf=d(S.asOf),allComps=S.components,fc=S.forecast,ov0=fc.overall;
+    // Build components carry no "stage"; a staged one (deployment and testing) is shown on its own rows.
+    var comps=allComps.filter(function(c){return !c.stage;}),relComps=allComps.filter(function(c){return c.stage;});
+    var ov={rateLast10:ov0.rateLast10,basis:ov0.basis};
+    ["optimistic","likely","pessimistic"].forEach(function(k){var v=comps.map(function(c){return (fc.perComponent[c.name]||{})[k];}).filter(Boolean).sort();ov[k]=v.length?v[v.length-1]:ov0[k];});
     var done=0,rem=0,items=0,unsized=[];
     comps.forEach(function(c){done+=c.pointsDone;rem+=c.pointsRemaining;items+=c.itemsRemaining;unsized=unsized.concat(c.itemsRemainingUnsized||[]);});
     var total=done+rem;
@@ -181,26 +185,27 @@ details.acc[open]>summary{border-bottom:1px solid var(--line);border-radius:12px
     $("lede").textContent="As of "+(S.updatedAt?stamp(S.updatedAt):fmt(asOf,true))+". Working days are "+S.workingDays.rule+(hol.length?", less "+hol.length+" public holidays":", no public holidays applied")+". The numbers are refreshed from the PMBooks by the Hub session.";
 
     // ---- Phases
-    var build=S.phases[0],dep=S.phases[1],acc=S.phases[2];
-    var mockDates=S.milestones.filter(isMock).map(function(m){return m.date;}).sort();
+    var build=S.phases[0],later=S.phases.slice(1),buildDone=/^done/i.test(build.status||"");
     function phase(p,chip,color,rows){
       return '<div class="card phase"><h3>'+esc(p.name)+'</h3><span class="chip"><i style="background:'+color+'"></i>'+esc(chip)+'</span><dl class="kv">'+
         rows.map(function(r){return "<dt>"+r[0]+"</dt><dd>"+r[1]+"</dd>";}).join("")+'</dl>'+
         (p.note?'<details><summary>Details</summary><ul>'+noteItems(p.note)+'</ul></details>':'')+'</div>';
     }
+    function tag(p){return p.isForecast?" <span class=muted>(planned)</span>":"";}
     $("phases").innerHTML=
+      (buildDone?phase(build,"Done","var(--ok)",[
+        ["Started",f(build.start)],
+        ["Finished",f(build.end)],
+        ["Done",n(done/total*100)+"% of points"]]):
       phase(build,build.status||"In progress","var(--done)",[
         ["Started",f(build.start)],
         ["Done",n(done/total*100)+"% of points"],
         ["Finish",f(ov.likely)+" <span class=muted>(forecast)</span>"],
-        ["Range",f(ov.optimistic)+" – "+f(ov.pessimistic)]]) +
-      phase(dep,"Not started","var(--idle)",[
-        ["Product","Not deployed"],
-        ["Go-live date",dep.end?f(dep.end):"Not scheduled"],
-        ["Functional mocks",mockDates.length?f(mockDates[0])+" – "+f(mockDates[mockDates.length-1]):"—"]]).replace("</dl>",'</dl><p class="muted" style="font-size:13px;line-height:18px;margin:10px 0 0">Functional mocks are these click-through artboards: look and feel only, no backend. They are not the product.</p>') +
-      phase(acc,acc.status||"Not planned yet","var(--idle)",[
-        ["Start",acc.start?f(acc.start):"Not planned yet"],
-        ["End",acc.end?f(acc.end):"Not planned yet"]]);
+        ["Range",f(ov.optimistic)+" – "+f(ov.pessimistic)]])) +
+      later.map(function(p){
+        var st=p.status||"Planned",col=/progress/i.test(st)?"var(--done)":/^done/i.test(st)?"var(--ok)":"var(--idle)";
+        return phase(p,st,col,[["Start",p.start?f(p.start)+tag(p):"Not planned yet"],["End",p.end?f(p.end)+tag(p):"Not planned yet"]]);
+      }).join("");
 
     // ---- Stats
     var v=S.velocity;
@@ -209,7 +214,8 @@ details.acc[open]>summary{border-bottom:1px solid var(--line);border-radius:12px
       stat("Points done",n(done/total*100)+"%",n(done)+" of "+n(total))+
       stat("Points status",n(done)+"/"+n(total),items+" items left, "+unsized.length+" not sized yet"+
         '<div class="rate"><div class="label">Rate of churn</div><div class="rv">'+v.pointsPerWorkingDay.toFixed(1)+'</div><div>points a day, based on '+esc(isoToShort(String(v.window).split(" (")[0]))+'</div></div>')+
-      stat("Build complete (likely)",fmt(d(ov.likely)),"range "+short(d(ov.optimistic))+" – "+short(d(ov.pessimistic))+", "+workingDaysBetween(asOf,d(ov.likely))+" working days away");
+      (buildDone?stat("Build complete",fmt(d(build.end)),"the last few build items finish alongside deployment"):
+      stat("Build complete (likely)",fmt(d(ov.likely)),"range "+short(d(ov.optimistic))+" – "+short(d(ov.pessimistic))+", "+workingDaysBetween(asOf,d(ov.likely))+" working days away"));
 
     // ---- Found during build (engineering-only work; absent or empty, nothing is drawn)
     function foundLine(fb){
@@ -228,8 +234,8 @@ details.acc[open]>summary{border-bottom:1px solid var(--line);border-radius:12px
     }
 
     // ---- Components table
-    var h='<thead><tr><th>Component</th><th class="num">Done</th><th class="num">Remaining</th><th class="num">Total</th><th>Progress</th><th class="num">Items left</th><th class="num">Rate / day</th><th>Build complete (forecast)</th></tr></thead><tbody>';
-    comps.forEach(function(c){
+    var h='<thead><tr><th>Component</th><th class="num">Done</th><th class="num">Remaining</th><th class="num">Total</th><th>Progress</th><th class="num">Items left</th><th class="num">Rate / day</th><th>Finish (forecast)</th></tr></thead><tbody>';
+    function compRow(c){
       var p=fc.perComponent[c.name]||{},pct=c.pointsDone/c.pointsTotal*100;
       h+="<tr><td>"+esc(c.name)+(c.note?'<br><span class="muted" style="font-size:12px;display:block;max-width:320px">'+esc(isoToShort(c.note))+"</span>":"")+foundLine(c.foundDuringBuild)+((c.itemsRemainingUnsized||[]).length?'<br><span class="muted" style="font-size:12px">Unsized: '+c.itemsRemainingUnsized.map(esc).join(", ")+"</span>":"")+"</td>"+
         '<td class="num">'+n(c.pointsDone)+'</td><td class="num">'+n(c.pointsRemaining)+'</td><td class="num">'+n(c.pointsTotal)+"</td>"+
@@ -238,24 +244,28 @@ details.acc[open]>summary{border-bottom:1px solid var(--line);border-radius:12px
         '<td class="num">'+(p.rateLast10!=null?p.rateLast10.toFixed(1):"—")+"</td>"+
         (!c.pointsRemaining||!p.likely?'<td><b style="font-weight:500">Complete</b><br><span class="muted" style="font-size:12px">no work left</span></td></tr>':
         "<td><b style=\"font-weight:500\">"+f(p.likely)+'</b><br><span class="muted" style="font-size:12px">'+short(d(p.optimistic))+" – "+short(d(p.pessimistic))+"</span></td></tr>");
-    });
-    h+='<tr><td><b style="font-weight:500">All</b></td><td class="num"><b style="font-weight:500">'+n(done)+'</b></td><td class="num"><b style="font-weight:500">'+n(rem)+'</b></td><td class="num"><b style="font-weight:500">'+n(total)+'</b></td><td><div class="bar"><span class="d" style="width:'+(done/total*100)+'%"></span><span class="r" style="width:'+(rem/total*100)+'%"></span></div><span class="muted" style="font-size:12px">'+n(done/total*100)+'%</span></td><td class="num">'+items+'</td><td class="num">'+ov.rateLast10.toFixed(1)+'</td><td><b style="font-weight:500">'+f(ov.likely)+'</b><br><span class="muted" style="font-size:12px">'+short(d(ov.optimistic))+" – "+short(d(ov.pessimistic))+"</span></td></tr></tbody>";
+    }
+    comps.forEach(compRow);
+    h+='<tr><td><b style="font-weight:500">All</b></td><td class="num"><b style="font-weight:500">'+n(done)+'</b></td><td class="num"><b style="font-weight:500">'+n(rem)+'</b></td><td class="num"><b style="font-weight:500">'+n(total)+'</b></td><td><div class="bar"><span class="d" style="width:'+(done/total*100)+'%"></span><span class="r" style="width:'+(rem/total*100)+'%"></span></div><span class="muted" style="font-size:12px">'+n(done/total*100)+'%</span></td><td class="num">'+items+'</td><td class="num">'+ov.rateLast10.toFixed(1)+'</td><td><b style="font-weight:500">'+f(ov.likely)+'</b><br><span class="muted" style="font-size:12px">'+short(d(ov.optimistic))+" – "+short(d(ov.pessimistic))+"</span></td></tr>";
+    if(relComps.length){h+='<tr><td colspan="8" style="padding-top:18px"><b style="font-weight:500">Deployment and testing</b><br><span class="muted" style="font-size:12px">Putting the product on a test site, testing it with the business, and going live. Counted separately from the build above.</span></td></tr>';relComps.forEach(compRow);}
+    h+="</tbody>";
     $("comps").innerHTML=h;
     $("caveat").innerHTML="<b style=\"font-weight:500\">This is a trend projection, not a plan.</b> It assumes the pace of 11–15 Nov (optimistic; points per calendar day, weekends included) or of the whole period (pessimistic; points per working day) continues; likely is the average of the two. "+
       "It ignores the "+unsized.length+" unsized items and the new items raised each day, so the dates move as work is added. The forecast counts Mon–Fri working days only; weekend points count toward the totals. "+
       "Overall build completion is the latest component (critical path: "+esc(ov.basis.split(";")[0].replace(/^critical path: the latest component date \(|\)$/g,""))+").";
 
     drawPace(S);
-    drawTimeline(S,asOf,ov);
+    drawTimeline(S,asOf,ov,build,buildDone,later);
 
     // ---- Dates table
     var rows=S.milestones.slice();
-    rows.push({name:"Build complete (optimistic)",date:ov.optimistic,kind:"forecast"},{name:"Build complete (pessimistic)",date:ov.pessimistic,kind:"forecast"});
+    if(!buildDone)rows.push({name:"Build complete (optimistic)",date:ov.optimistic,kind:"forecast"},{name:"Build complete (pessimistic)",date:ov.pessimistic,kind:"forecast"});
+    later.forEach(function(p){if(p.start)rows.push({name:p.name+" starts",date:p.start,kind:p.isForecast?"planned":"actual"});if(p.end)rows.push({name:p.name+" ends",date:p.end,kind:"planned"});});
     rows.sort(function(a,b){return d(a.date)-d(b.date);});
     var t='<thead><tr><th>Date</th><th>Event</th><th>Kind</th></tr></thead><tbody>';
-    rows.forEach(function(m){t+="<tr><td style=\"white-space:nowrap\">"+fmt(d(m.date),true)+"</td><td>"+esc(m.name)+"</td><td>"+(m.kind==="actual"?"Actual":"Forecast")+"</td></tr>";});
-    t+='<tr><td>Not scheduled</td><td>Product deployment (go-live)</td><td class="muted">No date in any doc</td></tr>';
-    t+='<tr><td>Not planned yet</td><td>Acceptance testing</td><td class="muted">No date in any doc</td></tr></tbody>';
+    rows.forEach(function(m){t+="<tr><td style=\"white-space:nowrap\">"+fmt(d(m.date),true)+"</td><td>"+esc(m.name)+"</td><td>"+(m.kind==="actual"?"Actual":m.kind==="planned"?"Planned":"Forecast")+"</td></tr>";});
+    later.filter(function(p){return !p.start;}).forEach(function(p){t+='<tr><td>Not planned yet</td><td>'+esc(p.name)+'</td><td class="muted">No date yet</td></tr>';});
+    t+='</tbody>';
     $("dates").innerHTML=t;
 
     // ---- Update log
@@ -315,16 +325,18 @@ details.acc[open]>summary{border-bottom:1px solid var(--line);border-radius:12px
     if(addFrom)$("paceNote").textContent+=" Points added are recorded from "+fmt(d(addFrom))+" (net of withdrawals; a day with more withdrawn than added shows no red bar).";
   }
 
-  function drawTimeline(S,asOf,ov){
+  function drawTimeline(S,asOf,ov,build,buildDone,later){
     var svg=$("timeline"),fc=S.forecast.perComponent;
     var dates=S.milestones.map(function(m){return d(m.date);}).concat([d(ov.pessimistic),asOf]);
+    later.forEach(function(p){if(p.end)dates.push(d(p.end));});
     var start=Math.min.apply(null,dates)-3*DAY,end=Math.max.apply(null,dates)+8*DAY;
     // Start on a Monday so week ticks line up.
     while(new Date(start).getUTCDay()!==1)start-=DAY;
     var rows=[{k:"mock",label:"Functional mocks"},{k:"build",label:"Build (all)"}]
       .concat(S.components.map(function(c){return{k:"comp",label:c.name,c:c};}))
-      .concat([{k:"dep",label:"Deployment"},{k:"acc",label:"Acceptance testing"},{k:"ms",label:"Other events"}]);
-    var W=Math.max(820,svg.parentNode.clientWidth||820),L=150,R=16,T=28,RH=34,H=T+rows.length*RH+8;
+      .concat(later.map(function(p){return{k:"phase",label:p.name,p:p};}))
+      .concat([{k:"ms",label:"Other events"}]);
+    var W=Math.max(820,svg.parentNode.clientWidth||820),L=rows.some(function(r){return r.label.length>22;})?320:150,R=16,T=28,RH=34,H=T+rows.length*RH+8;
     svg.setAttribute("viewBox","0 0 "+W+" "+H);svg.setAttribute("width",W);svg.setAttribute("height",H);
     var x=function(t){return L+(W-L-R)*(t-start)/(end-start);},dw=x(start+DAY)-x(start);
     var defs=s("defs",{},svg),pat=s("pattern",{id:"stripe",width:6,height:6,patternUnits:"userSpaceOnUse",patternTransform:"rotate(45)"},defs);
@@ -360,26 +372,32 @@ details.acc[open]>summary{border-bottom:1px solid var(--line);border-radius:12px
       var yy=cy(i);
       if(r.k==="mock"){
         S.milestones.filter(isMock).forEach(function(m){diamond(d(m.date),yy,"<b>"+esc(m.name)+"</b><br>"+fmt(d(m.date),true)+" (actual)<br>Look and feel only, no backend.");});
-      }else if(r.k==="dep"){
-        label(asOf,yy,"Product deployment: not scheduled",true);
+      }else if(r.k==="phase"){
+        var P=r.p;
+        if(!P.start){label(asOf,yy,"Not planned yet",true);return;}
+        var ps=d(P.start),pe=d(P.end||P.start)+DAY,tip="<b>"+esc(P.name)+"</b><br>"+f(P.start)+" to "+f(P.end)+" ("+esc((P.status||"planned").toLowerCase())+")";
+        if(P.isForecast||ps>asOf)bar(ps,pe,yy,tip,true);
+        else{bar(ps,Math.min(pe,todayEnd),yy,tip);if(pe>todayEnd)bar(todayEnd,pe,yy,tip,true);}
+      }else if(r.k==="build"&&buildDone){
+        var be=d(build.end)+DAY;
+        bar(bStart,be,yy,"<b>Build</b><br>"+fmt(bStart)+" to "+f(build.end)+" (done)<br>Start is when the story-points record begins.");
+        label(be,yy,"Done "+short(d(build.end)));
       }else if(r.k==="build"){
         bar(bStart,todayEnd,yy,"<b>Build</b><br>"+fmt(bStart)+" to today (actual)<br>Start is when the story-points record begins.");
         bar(todayEnd,d(ov.likely)+DAY,yy,"<b>Build complete (likely)</b><br>"+fmt(d(ov.likely),true)+" (forecast)",true);
         whisker(d(ov.optimistic),d(ov.pessimistic),yy+12,"<b>Build forecast range</b><br>"+f(ov.optimistic)+" – "+f(ov.pessimistic));
         label(d(ov.pessimistic)+DAY,yy,short(d(ov.likely)));
       }else if(r.k==="comp"){
-        var p=fc[r.c.name];
+        var p=fc[r.c.name],cs=r.c.start?d(r.c.start):bStart;
         if(!r.c.pointsRemaining||!p||!p.likely){
-          bar(bStart,todayEnd,yy,"<b>"+esc(r.c.name)+"</b><br>Complete: "+n(r.c.pointsDone)+" points done, none left");
+          bar(cs,todayEnd,yy,"<b>"+esc(r.c.name)+"</b><br>Complete: "+n(r.c.pointsDone)+" points done, none left");
           label(asOf,yy,"Complete, no work left",true);
           return;
         }
-        bar(bStart,todayEnd,yy,"<b>"+esc(r.c.name)+"</b><br>"+n(r.c.pointsDone)+" of "+n(r.c.pointsTotal)+" points done");
-        bar(todayEnd,d(p.likely)+DAY,yy,"<b>"+esc(r.c.name)+" build complete (likely)</b><br>"+fmt(d(p.likely),true)+"<br>"+n(r.c.pointsRemaining)+" points left at "+p.rateLast10.toFixed(1)+" a day – "+p.rateWhole.toFixed(1)+" a working day",true);
+        bar(cs,todayEnd,yy,"<b>"+esc(r.c.name)+"</b><br>"+n(r.c.pointsDone)+" of "+n(r.c.pointsTotal)+" points done");
+        bar(todayEnd,d(p.likely)+DAY,yy,"<b>"+esc(r.c.name)+(r.c.stage?" finish":" build complete")+" (likely)</b><br>"+fmt(d(p.likely),true)+"<br>"+n(r.c.pointsRemaining)+" points left at "+p.rateLast10.toFixed(1)+" a day – "+p.rateWhole.toFixed(1)+" a working day",true);
         whisker(d(p.optimistic),d(p.pessimistic),yy+12,"<b>"+esc(r.c.name)+" range</b><br>"+f(p.optimistic)+" – "+f(p.pessimistic));
         label(Math.max(d(p.pessimistic),d(p.likely))+DAY,yy,short(d(p.likely)));
-      }else if(r.k==="acc"){
-        label(asOf,yy,"Not planned yet: no plan or date in any doc",true);
       }else if(r.k==="ms"){
         S.milestones.filter(function(m){return m.kind==="actual"&&!isMock(m);}).forEach(function(m){diamond(d(m.date),yy,"<b>"+esc(m.name)+"</b><br>"+fmt(d(m.date),true)+" (actual)");});
       }
