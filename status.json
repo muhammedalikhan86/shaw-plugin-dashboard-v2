@@ -2571,5 +2571,143 @@
   "pointsTotal": 250.0,
   "itemsDone": 119,
   "itemsRemaining": 1
- }
+ },
+ "buildCompletedOn": "2026-11-23",
+ "deploymentBacklogNote": "The hub refreshes deploymentBacklog and waitingOnOthers from docs/leftovers.md (The stack, Waiting on others) in the hub checkout. The status page draws them as the deployment and testing work table. buildCompletedOn pins the Build finish date the patcher would otherwise reset.",
+ "deploymentBacklog": [
+  {
+   "item": "Decision record for the test site",
+   "size": 2,
+   "phase": "Deploy test site (test data)",
+   "owner": "Development team",
+   "status": "Open"
+  },
+  {
+   "item": "Database scripts for the test site",
+   "size": 5,
+   "phase": "Deploy test site (test data)",
+   "owner": "Development team",
+   "status": "Open"
+  },
+  {
+   "item": "Test site settings for the four services, with a safety check at start-up",
+   "size": 5,
+   "phase": "Deploy test site (test data)",
+   "owner": "Development team",
+   "status": "Open"
+  },
+  {
+   "item": "Portfolio Services: testers see the whole test data set",
+   "size": 1,
+   "phase": "Deploy test site (test data)",
+   "owner": "Development team",
+   "status": "Open"
+  },
+  {
+   "item": "Compliance: testers see the whole test data set",
+   "size": 1,
+   "phase": "Deploy test site (test data)",
+   "owner": "Development team",
+   "status": "Open"
+  },
+  {
+   "item": "Adviser Dashboard: testers see every test adviser",
+   "size": 1,
+   "phase": "Deploy test site (test data)",
+   "owner": "Development team",
+   "status": "Open"
+  },
+  {
+   "item": "Every email on the test site goes to one inbox",
+   "size": 3,
+   "phase": "Deploy test site (test data)",
+   "owner": "Development team",
+   "status": "Open"
+  },
+  {
+   "item": "Test site build of the six screens",
+   "size": 3,
+   "phase": "Deploy test site (test data)",
+   "owner": "Development team",
+   "status": "Open"
+  },
+  {
+   "item": "Deployment script for the test site",
+   "size": 3,
+   "phase": "Deploy test site (test data)",
+   "owner": "Development team",
+   "status": "Open"
+  },
+  {
+   "item": "Test site instructions for the person deploying",
+   "size": 1,
+   "phase": "Deploy test site (test data)",
+   "owner": "Development team",
+   "status": "Open"
+  },
+  {
+   "item": "Create the databases, load the test data, put the test site up",
+   "size": 2,
+   "phase": "Deploy test site (test data)",
+   "owner": "Muhammed",
+   "status": "Open"
+  },
+  {
+   "item": "Final tidy-up and checks before go-live",
+   "size": 3,
+   "phase": "Go-live (set-up until sign-off, then switch on)",
+   "owner": "Development team",
+   "status": "Open"
+  },
+  {
+   "item": "Live settings filled in",
+   "size": 2,
+   "phase": "Go-live (set-up until sign-off, then switch on)",
+   "owner": "Muhammed",
+   "status": "Open"
+  },
+  {
+   "item": "Put the e-signing service live",
+   "size": 2,
+   "phase": "Go-live (set-up until sign-off, then switch on)",
+   "owner": "Muhammed",
+   "status": "Open"
+  },
+  {
+   "item": "Notice printing set up on the server (Chrome and the letterhead)",
+   "size": 1,
+   "phase": "Go-live (set-up until sign-off, then switch on)",
+   "owner": "Muhammed",
+   "status": "Open"
+  },
+  {
+   "item": "Live release, labelled and recorded",
+   "size": 2,
+   "phase": "Go-live (set-up until sign-off, then switch on)",
+   "owner": "Muhammed",
+   "status": "Open"
+  },
+  {
+   "item": "Load the register from the master spreadsheet",
+   "size": 2,
+   "phase": "Go-live (set-up until sign-off, then switch on)",
+   "owner": "Muhammed",
+   "status": "Open"
+  },
+  {
+   "item": "Live checks: the read-only checklist",
+   "size": 3,
+   "phase": "Live checks (read only)",
+   "owner": "Development team",
+   "status": "Open"
+  },
+  {
+   "item": "Switch on emails, e-signing and DART filing",
+   "size": 1,
+   "phase": "Live checks (read only)",
+   "owner": "Muhammed",
+   "status": "Open"
+  }
+ ],
+ "waitingOnOthers": 17
 }
