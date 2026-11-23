@@ -40,10 +40,11 @@ Updated: 2026-11-23 12:15
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Monday design sync | - |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
 
-## Advisor (pointer: parked after group 23; F-144 blocked on the design; may get the closure personal-message screen item from ps2)
+## Advisor (pointer: group 24 waits on PS2 group 34; F-144 blocked on the design)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| | 24 | (new, from ps2) | Closure confirmation signed with the sending adviser's name: pass @SenderName in the preview and send calls, plus an endpoint test | Functional | 1 | Go once PS2 group 34 is merged (needs migration 0189) | OFA-F-186 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
 ## Hub
