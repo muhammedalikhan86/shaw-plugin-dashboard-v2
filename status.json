@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T09:49:17+11:00",
+ "updatedAt": "2026-11-24T10:16:04+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2711,6 +2711,11 @@
    "change": "Advisor group 47 merged to main (3ec1ac7b): ADVISOR-DASHBOARD-F-165 the test site keeps its data in the Misc database. 3 points. Compliance group 50 merged to main (c601ac3d): COMPLIANCE-DASHBOARD-F-054 the test site keeps its data in the Misc database (engineering work, 1 point, outside the product figures).",
    "pointsDone": 3.0,
    "pointsRaised": 3.0
+  },
+  {
+   "at": "2026-11-24T10:16:04+11:00",
+   "change": "Compliance group 51 merged to main (45030d5c): design rows P94 (filter dialogs hide an empty single-field slot and keep a 48px gap above the buttons) and P95 (OFA Checklist steps show the OFA Team's notes with the note-count chip). Both already matched the board; no app code changed; two new board scenarios switched on. Compliance board: 245 passed, 0 failed, 25 skipped. Next for Compliance: group 52, a small Look and Feel fix so OFA Checklist step notes list newest first, as the board draws them.",
+   "pointsDone": 0.0
   }
  ],
  "foundDuringBuild": {
