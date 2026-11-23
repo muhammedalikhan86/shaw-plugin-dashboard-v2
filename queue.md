@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 08:18
+Updated: 2026-11-24 08:40
 
 ## Now (from 2026-11-24 02:00)
 
@@ -39,13 +39,12 @@ Updated: 2026-11-24 08:18
 | | 40 | - | End sweep, on the stack: make test-data for migrations 0201-0203, and a look at the Wording page | Functional | 0 | End sweep | - |
 | | 40 | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 
-## Compliance (pointer: group 48 running: suite run, then B-125)
+## Compliance (pointer: group 49 from 2026-11-24)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | X | COMPLIANCE-DASHBOARD-F-053 | Wording field library (page side): the Wording page shows the whole field library (each field, what it fills, which slots take it) for anyone building a document, and each slot shows the fields it can fill; the upload check says "every field used will be filled" or refuses and names each field the slot cannot fill | Functional | 5 | Ruled by Muhammed 2026-11-23; spec docs/hub/wording-field-library.md §6; design rows W39-W43 sent to the designer 2026-11-23; ps2's store side is on main | - |
-| >> | 48 | COMPLIANCE-DASHBOARD-B-125 | The wording list reads which slots take a subject, and what each is for, from the database; Compliance's own document check knows the field aliases, refuses signing marks where a slot takes none, and reads headers and footers too | Bug | 3 | Building (OFA-F-192 is on main) | - |
-| | 48 | - | Run M28 and M38 on the built app (stack) and drop M38's @not-built-COMPLIANCE-DASHBOARD-F-052 tag; both pass on the board | Functional | 0 | Folds into the next Compliance group | - |
+| >> | 49 | COMPLIANCE-DASHBOARD-F-053 | Wording field library (page side): the Wording page shows the whole field library (each field, what it fills, which slots take it) for anyone building a document, and each slot shows the fields it can fill; the upload check says "every field used will be filled" or refuses and names each field the slot cannot fill | Functional | 5 | Building; spec docs/hub/wording-field-library.md §6; design rows W39-W43 back from the designer 2026-11-23; also: the load dialog shows the check's outcomes, and Missing/Required leave the Wording page | - |
+| | X | - | Run M28 and M38 on the built app (stack) and drop M38's @not-built-COMPLIANCE-DASHBOARD-F-052 tag; both pass on the board | Functional | 0 | End sweep: needs a stack window | - |
 
 ## Advisor (pointer: parked after group 46; B-132 waits for a stack window, F-144 waits on Luke)
 
