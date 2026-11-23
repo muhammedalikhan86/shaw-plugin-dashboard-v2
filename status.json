@@ -72,10 +72,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 888.0,
-   "pointsRemaining": 32.0,
+   "pointsDone": 889.0,
+   "pointsRemaining": 31.0,
    "pointsTotal": 920.0,
-   "itemsRemaining": 13,
+   "itemsRemaining": 12,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 160.81,
+  "pointsPerWorkingDayWholePeriod": 160.89,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2090.0,
-    "pointsDoneThatDay": 40.0
+    "pointsDone": 2091.0,
+    "pointsDoneThatDay": 41.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -307,7 +307,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 38.95,
-    "rateWhole": 65.79
+    "rateWhole": 65.87
    },
    "Advisor": {
     "optimistic": "2026-11-25",
@@ -337,9 +337,9 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 160.81,
-   "pointsRemaining": 76.0,
-   "itemsRemaining": 30
+   "rateWhole": 160.89,
+   "pointsRemaining": 75.0,
+   "itemsRemaining": 29
   }
  },
  "milestones": [
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T03:56:00+11:00",
+ "updatedAt": "2026-11-24T04:00:00+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2661,6 +2661,11 @@
    "change": "Portfolio Services 2 group 37 merged to main (6567d047): OFA-B-226 the Wording page Preview works for developers and says why when refused, OFA-B-228 the renewal confirmation goes to the client. 3 points. OFA-F-190 (client follow-up) raised and held for Muhammed.",
    "pointsDone": 3.0,
    "pointsRaised": 6.0
+  },
+  {
+   "at": "2026-11-24T04:00:00+11:00",
+   "change": "Portfolio Services group 48 merged to main (70a7ff7a): OFA-B-245 the Expired report, report closures and the arrangement record name the person, not the login. 1 point.",
+   "pointsDone": 1.0
   }
  ],
  "foundDuringBuild": {
