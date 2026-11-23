@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 09:48
+Updated: 2026-11-24 10:00
 
 ## Now (from 2026-11-24 09:00)
 
@@ -12,10 +12,13 @@ Updated: 2026-11-24 09:48
 2. No idle worker: a worker whose next item is blocked takes its next unblocked item.
 3. End sweep runs last, in this order: the designer's work synced, the developers have built it, Muhammed has tested by hand, then every parity check runs and each issue found is listed as Look and Feel.
 
-## Shell (group 49 merged 2026-11-24; standing by)
+## Shell (pointer: group 50 from 2026-11-24)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| >> | 50 | D10 | Shell states: Keep open on; Notifications open with a Mark all as read button; Search results, no matches and loading | Functional | - | Designer answered 2026-11-24; Shell redraws our boards, then builds; results' second lines to be confirmed | - |
+| >> | 50 | D8, D9, D12, D13 | Toolbar logo 150 wide; folded sidebar 72px with Keep open hidden; Search as the 420px box with a results panel under it; Plugin0 Buttons and actions keep the build's look; D11(g) search_off icon | Look and Feel | - | Designer answered 2026-11-24; the designer is also redrawing these boards (sent 2026-11-24), theirs replace ours on return | - |
+| | X | D11, D14 | Shell error and empty states (a)-(f); landing page's needs-a-newer-shell card | Look and Feel | - | Later: the words are placeholders until the business supplies them | - |
 | | X | - | Remove the old test-site check (ThrowIfAnyDatabaseIsNotUat) once every API uses the new rules; full Shell.WebAPI rerun when a stack is down | Functional | - | After PS, Advisor and Compliance merge their test-site parts | - |
 
 ## Portfolio Services (pointer: group 50 from 2026-11-24)
@@ -24,6 +27,9 @@ Updated: 2026-11-24 09:48
 |---|---|---|---|---|---|---|---|
 | >> | 50 | (new PS item) | Test site in Misc, Portfolio Services: its settings point at Misc; its warehouse and job-tracking reads use the Misc sections; mail on the test site comes from and goes to the UAT mailbox only | Functional | 5 | Building; critical path; spec docs/hub/uat-in-misc.md §2.2; the mailbox address comes from Muhammed | - |
 | >> | 51 | OFA-B-247 | Overview: remove the line under the "Client closures on the 10-day clock" card ("Nearest due … · S-Account"); not on the board and it breaks the cards' alignment | Look and Feel | 1 | Raised by Muhammed 2026-11-24; runs alongside group 50 | - |
+| | 52 | O20, O22, O36, O21 | Initial OFAs: paper-signed upload on an imported row with no form date, and its date hint (OFA-B-206); the SOA field's label (OFA-B-243); no Sync fees button on the Exceptions report, if still in the app | Bug | - | After group 50 (the test site); designer drew them 2026-11-24; O20's hint words to be confirmed | - |
+| | X | O39 | Settings report preview: the new report columns (OFA-F-191) | Functional | - | Later: Muhammed confirms the designer's guessed values (Renewal Notice Due Date = +60 days and others) | - |
+| | X | O40, O41, O42 | Remove the separate Adviser review answers card; could-not-load card on six screens; the Import page as drawn | Look and Feel | - | Later: O41's page names and O42's words wait for the business | - |
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 | | X | - | Browser checks owed from groups 36, 45 and 49, on the stack: the Settings report preview (both tables, a wide table scrolls, the empty-Expired line), B-233 opening month, B-235 row menu meets the card edge, B-237 Documents icon whole, B-241 table edges at 1440/1680/1920 (wide tables still scroll), F-189 Overview card | Look and Feel | 0 | Moved to the end sweep: two stack starts were killed for low memory on 2026-11-24 night; a restart needs Muhammed | - |
@@ -40,23 +46,25 @@ Updated: 2026-11-24 09:48
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
 | | X | OFA-F-032 | Attachment mover: built, waiting on your SharePoint live check | Functional | - | After go-live | - |
 | | 40 | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
-| | X | OFA-F-196 | Initial OFA from Luke's templates: four wording slots (electronic or print-and-sign, Estimate or Fixed), the prepare dialog asks Estimate or Fixed and whether the adviser nominates a Reference Date (design row O38), signing anchors mapped, four starters from Luke's documents (0204) | Functional | 5 | Group 41; blocked: six business questions for Muhammed (Reference Date fill, Authorised Representative number source, client name, per-provider fee, signers above two, a link wording in the print-and-sign templates) | OFA-F-192 |
+| | X | OFA-F-196 | Initial OFA from Luke's templates: four wording slots (electronic or print-and-sign, Estimate or Fixed), the prepare dialog asks Estimate or Fixed and whether the adviser nominates a Reference Date (design row O38, drawn 2026-11-24), signing anchors mapped, four starters from Luke's documents (0204) | Functional | 5 | Group 41; blocked: six business questions for Muhammed (Reference Date fill, Authorised Representative number source, client name, per-provider fee, signers above two, a link wording in the print-and-sign templates) | OFA-F-192 |
 | | X | OFA-F-190 | Client renewal follow-up with our own wording: Annature's reminder cannot carry our subject or message. Options: (a) Annature's own reminder as is (2), (b) a fresh signing link from Annature in our own email (3, ps2's pick), (c) hold | Functional | 2-3 | Blocked: Muhammed picks a, b or c | OFA-F-130 |
 | | 40 | - | End sweep, on the stack: make test-data for migrations 0201-0203, and a look at the Wording page | Functional | 0 | End sweep | - |
 | | 40 | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 
-## Compliance (group 50 merged 2026-11-24)
+## Compliance (pointer: group 51 from 2026-11-24)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | - | - | Design rows P94 and P95 from the designer's 2026-11-24 round | Look and Feel | - | After the hub syncs the round | - |
+| >> | 51 | P94, P95 | Filter dialogs' gap above the buttons is 48px; OFA Checklist rows show the OFA Team's notes with the note-count chip | Look and Feel | - | Designer drew them 2026-11-24 | - |
 | | X | - | Run M28 and M38 on the built app (stack) and drop M38's @not-built-COMPLIANCE-DASHBOARD-F-052 tag; both pass on the board | Functional | 0 | End sweep: needs a stack window | - |
 
-## Advisor (group 47 merged 2026-11-24; B-132 waits for a stack window, F-144 waits on Luke)
+## Advisor (pointer: group 48 from 2026-11-24; B-132 waits for a stack window, F-144 waits on Luke)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | - | - | Design rows B92-B99 from the designer's 2026-11-24 round | Look and Feel | - | After the hub syncs the round | - |
+| >> | 48 | B92, B93 | Closures: Confirm to the client only once TERMINATED, with the confirmed tip (F-146); the follow-up resend dialog's sentence (F-142) | Functional | - | Designer drew them 2026-11-24 | - |
+| >> | 48 | B94, B95, B96 | Closures S-Account opens the S-Account page (B-126); status line as the chip's tip (B-127); Show all events switch reads its name (B-134) | Bug | - | Designer drew them 2026-11-24 | - |
+| >> | 48 | B97-B100 | Scope line for several codes; Renewal tracker filter Reset; smaller Arrangements empty card; Closures wording in B92's order | Look and Feel | - | Designer drew them 2026-11-24 | - |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke. Asked 2026-11-23 what the Adviser's OFA History tab should show, with the Portfolio Services and Compliance tabs as examples; then the design | - |
 | | X | ADVISOR-DASHBOARD-B-132 | OFA questionnaire still stutters after ADVISOR-DASHBOARD-B-130 and SHELL-B-184: each answer edit and Select all block the screen for about 1 s; profile a production build in a real browser and fix it (shared shell code goes to Shell) | Bug | 3 | Blocked: needs a stack (production build in a real browser); no stack tonight |  - |
 
@@ -64,7 +72,7 @@ Updated: 2026-11-24 09:48
 
 Deployment and testing (from 2026-11-23): the work left is the REL- stack in `docs/leftovers.md`, worked top first. REL-001 to REL-010 are on go.
 
-1. Designer round back 2026-11-24 (sent the same day): sync, then route the rows. The prompt covered: W38, P92, P93, plus PS O20 (OFA-B-206: the paper-signed upload item on an imported Initial OFA row's menu, and its date hint with no form date), PS O21 (remove the Sync fees button from the Exceptions report board; OFA-F-160 removes it), PS O22 (Upload a paper-signed Initial OFA dialog: render the date field's hint, as the app does), PS O36 (the SOA field in Add an arrangement by hand gets its label), PS O37 (renewal confirmation labels say client: History and Renewal tracker; ps2 edits the repo board in OFA-B-228, the designer's copy needs the same two strings), PS O38 (Initial OFA prepare dialog: Estimate or Fixed, and the adviser nominates a Reference Date), PS O39 (Settings report preview with the new report columns; PS edits the repo board in OFA-F-191, the designer's copy needs the same), plus advisor B92 (F-146 confirmed line on CONFIRMED OFF rows), B93 (F-142 follow-up resend dialog sentence), B94 (Closures S-Account opens the S-Account page) and B95 (the two Closures status lines drawn as the chip's tip, reworded by Advisor), B96 (Account History's Show all events switch reads its own name: hide the thumb icon), plus 6 parity questions: Overview "not fully signed" count slot; Adviser review answers bar placement; read-failure card on six PS screens; scope line for an adviser with several codes; Renewal tracker filter Reset and intro; Arrangements empty/loading/error card; shell: logo width (#12) and collapsed rail width (#21), where the boards disagree; shell states with no board (#20: Keep open on, Notifications with items, Search results and no matches, Search loading); landing empty and bus-unavailable states (#6); shell error and empty states (#4), search panel drawn two ways (#5), Plugin0 buttons and chips (#7); compliance review page "Read only." line and OFA Checklist note chip and Month arrow; PS Import screen in the sidebar has no board; shell (from group 6): cloud_off rail icon and person-icon avatar have no board, search empty state has no glyph on the board; compliance board: drop the empty grid after the filter-dialog fields so the gap above the buttons is 48px like advisor and PS.
+1. Designer round synced 2026-11-24 and routed. Shell boards (Main, ShellCollapsed, AccountRow, NotificationPanel, SearchPanel, the current landing page) sent to the designer to draw D8-D14 on (Muhammed sends).
 2. End sweep, last: after the designer's work is synced, built, and tested by hand by Muhammed; every parity check, each issue listed as Look and Feel.
 3. Waiting on you: push main; the SyncFee grant: OFA-F-160 is on main, so the gMSA's EXECUTE on dbo.SyncFee can be dropped on the server (PS removes line 3 of SyncFee-grants.sql in group 10); rerun the OFA-S-005 spike on the unredacted master spreadsheet (scripts in the PS checkout, spikes/OFA-S-005, uncommitted); check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest (another day); the OFA-S-001 owner questions: DART's open-a-document URL and whether staff have DART logins (OFA-F-145 and F-055 are built behind Dart:DocumentLinkTemplate, off until it is set); PS's 8 production settings.
 4. 2026-11-24, with the stack up: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database through the Wording page's upload, so each slot shows the business wording, not the [Test data] text. NoOfaFeeAdvisorEmail and RenewalConfirmation wait for ps2's field-library fix.
