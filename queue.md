@@ -11,12 +11,10 @@ Updated: 2026-11-23 12:15
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 
-## Portfolio Services (pointer: group 17, REL-004 + PS test-site settings + REL-002)
+## Portfolio Services (pointer: parked after group 17; the rest is blocked, on hold or waiting on you)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 1 | REL-002 | Database scripts for the test site | Functional | 5 | Go 2026-11-23 | REL-001 |
-| | 1 | REL-004 | Testers see the whole test data set; PS test-site settings file | Functional | 1 | Go | REL-003 |
 | | - | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
 | | X | OFA-B-219 | Expired report: an adviser's own fee-off mark should pull the row on, as a client closure's does (query, API, export, screen) | Functional | ?? | Awaiting user: business yes/no (default yes) | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
