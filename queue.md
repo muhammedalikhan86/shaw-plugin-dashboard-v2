@@ -16,8 +16,8 @@ Updated: 2026-11-23 12:15
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | - | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
-| | X | OFA-B-219 | Expired report: an adviser's own fee-off mark should pull the row on, as a client closure's does (query, API, export, screen) | Functional | ?? | Awaiting user: business yes/no (default yes) | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
+| | X | OFA-B-219 | Expired report: an adviser's own fee-off mark should pull the row on, as a client closure's does (query, API, export, screen) | Functional | ?? | Awaiting user: business yes/no (default yes) | - |
 
 ## Portfolio Services 2 (pointer: group 34, Luke's templates)
 
@@ -25,12 +25,12 @@ Updated: 2026-11-23 12:15
 |---|---|---|---|---|---|---|---|
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | Blocked by you (Monday) | - |
 | | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Blocked by you (Monday) | - |
-| | X | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
 | | X | OFA-F-120, F-032 | Word converter and attachment mover: built, waiting on your end-to-end and SharePoint live checks | Functional | - | Blocked by you (Monday) | - |
-| | X | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
-| >> | 34 | OFA-F-158, F-186, F-185, F-184 | Luke's templates: No OFA fee words, State Manager and Back Office emails off; client closure confirmation; weekly Initial OFA lines; renewal reminders table | Functional | 9 | Go 2026-11-23; closure greeting, I/We and per-account question with Muhammed | - |
+| | X | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
+| >> | 34 | OFA-F-158, F-186, F-185, F-184 | Luke's templates: No OFA fee words, State Manager and Back Office emails off; client closure confirmation; weekly Initial OFA lines; renewal reminders table | Functional | 9 | Go 2026-11-23; template answers given | - |
 | | 34 | OFA-F-187 | Adviser's termination reminder email (new) | Functional | 5 | Taken in 2026-11-23; template "OFA Termination – Action Required" | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
+| | X | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 
 ## Compliance (pointer: parked after group 23; the rest waits on design rows)
 
