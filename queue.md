@@ -19,7 +19,6 @@ Updated: 2026-11-24 10:34
 | >> | 51 | SHELL-B-188 and a removal | Remove the old ThrowIfAnyDatabaseIsNotUat check (nothing calls it since REL-011); fix the shared switch test step so a switch's hidden icon is not read into its name (unblocks Advisor's B96 scenarios); the reads step also reads a button's text (unblocks PS's O36) | Bug | - | Building; one stack window at Integration also runs group 50's owed notification-panel e2e check | - |
 | | 52 | (new Shell item) | make graph C=<component> rebuilds only that component's graph | Bug | - | After group 51 | - |
 | | X | D11, D14 | Shell error and empty states (a)-(f); landing page's needs-a-newer-shell card | Look and Feel | - | Later: the words are placeholders until the business supplies them | - |
-| | X | - | Remove the old test-site check (ThrowIfAnyDatabaseIsNotUat) once every API uses the new rules; full Shell.WebAPI rerun when a stack is down | Functional | - | After PS, Advisor and Compliance merge their test-site parts | - |
 
 ## Portfolio Services (groups 50 and 51 merged 2026-11-24; pointer: group 52)
 
