@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-23 17:16
+Updated: 2026-11-24 02:06
 
 ## Now (from 2026-11-24 02:00)
 
@@ -17,18 +17,18 @@ Updated: 2026-11-23 17:16
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 
-## Portfolio Services (pointer: parked after OFA-B-231; the rest is blocked, on hold or waiting on you)
+## Portfolio Services (pointer: group 36 running since 2026-11-24)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
-| | 36 | OFA-B-219 | Expired report and the adviser's own fee-off mark: the row comes onto the Expired report when the OFA expired; not for a manual termination (the adviser closed the account) (query, API, export, screen) | Functional | ?? | Ruled by Muhammed 2026-11-23 (D-01); next PS group | - |
-| | 36 | (to raise) | The monthly cycle: the Cycle picker opens on the cycle that is open. On 23-11 November is not open yet: it still shows, marked Not opened, but October (open) is picked (05) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| | 36 | (to raise) | Arrangement record: the Platform accounts table does not use the full width of its card (08) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| | 36 | (to raise) | Arrangement record: the icon in the empty Documents (DART) box is broken, drawn as a bare corner (07) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
+| >> | 36 | OFA-B-219 | Expired report and the adviser's own fee-off mark: the row comes onto the Expired report when the OFA expired; not for a manual termination (the adviser closed the account) (query, API, export, screen) | Functional | ?? | Ruled by Muhammed 2026-11-23 (D-01); next PS group | - |
+| >> | 36 | (to raise) | The monthly cycle: the Cycle picker opens on the cycle that is open. On 23-11 November is not open yet: it still shows, marked Not opened, but October (open) is picked (05) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
+| >> | 36 | (to raise) | Arrangement record: the Platform accounts table does not use the full width of its card (08) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
+| >> | 36 | (to raise) | Arrangement record: the icon in the empty Documents (DART) box is broken, drawn as a bare corner (07) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
 
-## Portfolio Services 2 (pointer: group 35 paused 2026-11-23 at weekly usage 95%; resumes 2026-11-24, then OFA-S-005)
+## Portfolio Services 2 (pointer: group 35 resumed 2026-11-24; then 37 to 40)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
@@ -38,7 +38,7 @@ Updated: 2026-11-23 17:16
 | | X | OFA-F-032 | Attachment mover: built, waiting on your SharePoint live check | Functional | - | After go-live | - |
 | | 35 | - | Test runbook OFA-F-099: the Act As account named has left the directory; name a current Compliance Team member instead | Functional | - | Go 2026-11-23 | - |
 | | 40 | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
-| >> | 35 | OFA-F-188 | AnnatureInterfaceWebAPI: a lookup route, so a timed-out request can be checked before it is sent again (mock Annature only) | Functional | 3 | Paused; resumes 2026-11-24 | - |
+| >> | 35 | OFA-F-188 | AnnatureInterfaceWebAPI: a lookup route, so a timed-out request can be checked before it is sent again (mock Annature only) | Functional | 3 | Running | - |
 | | 35 | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Go 2026-11-23 | OFA-F-188 |
 | | 38 | (to raise) | Wording page Preview fails on make up: POST /notices/preview answers 403 to a developer (ComplianceTeam policy has no development bypass); add one, Development only, like OfaTeam's, and check the page says why on a 403 | Functional | ?? | Raised by Muhammed 2026-11-23; ps2 raises, sizes and builds it 2026-11-24 after group 35 | - |
 | | 38 | (to raise) | Renewal confirmation goes to the client, not the adviser: the business template (OFA Renewal Confirmation) thanks the client, so OFA-F-140 sends the RenewalConfirmation slot to the account's client email; fields %ACCOUNT_NAME% and %S_ACCOUNT% | Functional | ?? | Ruled by Muhammed 2026-11-23; ps2 raises, sizes and builds it 2026-11-24 after the Preview item | - |
@@ -49,28 +49,28 @@ Updated: 2026-11-23 17:16
 | | 40 | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 | | 38 | (to raise) | Reference paths: the business's emails and the starters moved on 2026-11-23 into `docs/stash/OFA Workflow/references/Wording/` (index in its README.md). Update the old paths in the Portfolio Services handoff (`...references\Email Templates\` becomes `...references\Wording\Email Templates\`) and PMBook (OFA-F-016 sources and OFA-F-187, `references/Email Templates/` becomes `references/Wording/Email Templates/`); the hub left them because ps2 has uncommitted edits in both | Docs | 0 | Fold into the next group's finalizers | - |
 
-## Compliance (pointer: parked after group 23; the rest waits on design rows)
+## Compliance (pointer: group 42 running since 2026-11-24; the rest waits on design rows)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | (to raise) | Wording field library (page side): the Wording page shows the whole field library (each field, what it fills, which slots take it) for anyone building a document, and each slot shows the fields it can fill; the upload check says "every field used will be filled" or refuses and names each field the slot cannot fill | Functional | ?? | Ruled by Muhammed 2026-11-23; spec docs/hub/wording-field-library.md §6; design rows W39-W43 sent to the designer 2026-11-23; builds after ps2's store side | ps2 field library row |
-| | 42 | - | Retire the @review-M31 scenario "Compliance add a note to an arrangement" in arrangements.feature: M31 is withdrawn (the record has a button and a dialog, not a field) | Docs | 0 | Go 2026-11-23 | - |
+| >> | 42 | - | Retire the @review-M31 scenario "Compliance add a note to an arrangement" in arrangements.feature: M31 is withdrawn (the record has a button and a dialog, not a field) | Docs | 0 | Go 2026-11-23 | - |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Sent to the designer 2026-11-23; waiting on the round | - |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Sent to the designer 2026-11-23; waiting on the round; its @skip scenario is written now | - |
 
-## Advisor (pointer: parked after group 24; F-144 blocked on the design)
+## Advisor (pointer: group 41 running since 2026-11-24; F-144 waits on Luke)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke. Asked 2026-11-23 what the Adviser's OFA History tab should show, with the Portfolio Services and Compliance tabs as examples; then the design | - |
-| | 41 | (to raise) | The State Manager's "Arrangements that ended" bell lists only endings from the last 2 weeks (follows ADVISOR-DASHBOARD-F-117) | Functional | ?? | Ruled by Muhammed 2026-11-23 (D-02); next advisor group | ADVISOR-DASHBOARD-F-117 |
-| | 41 | (to raise) | Closures: the S-Account is a link to the account's page, as on the other tables (screenshot 01) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| | 41 | (to raise) | Closures: the line under the status chip ("Fee turned off · date", "Sent to the OFA Team · date") becomes the chip's tooltip, not text under it (02) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| | 41 | (to raise) | OFA questionnaire: Submit says "Missing Q1" when Q1 is answered (after the answers were filled in automatically); a retry passes. It must not show at all (03) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| | 41 | (to raise) | OFA questionnaire: on a row the OFA Team entered, the adviser changed the forecast, saw it would not be saved, and the new value stayed. The field must be locked when it cannot be saved, or go back to the OFA Team's value (04) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| | 41 | (to raise) | OFA questionnaire feels jerky when editing and when selecting all rows (no screenshot) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| | 41 | (to raise) | S-Account notes show the Windows sign-in name (SHAW\muhammedali.khan); show the person's display name, as Compliance already does (06; 09 shows it right) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
+| >> | 41 | (to raise) | The State Manager's "Arrangements that ended" bell lists only endings from the last 2 weeks (follows ADVISOR-DASHBOARD-F-117) | Functional | ?? | Ruled by Muhammed 2026-11-23 (D-02); next advisor group | ADVISOR-DASHBOARD-F-117 |
+| >> | 41 | (to raise) | Closures: the S-Account is a link to the account's page, as on the other tables (screenshot 01) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
+| >> | 41 | (to raise) | Closures: the line under the status chip ("Fee turned off · date", "Sent to the OFA Team · date") becomes the chip's tooltip, not text under it (02) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
+| >> | 41 | (to raise) | OFA questionnaire: Submit says "Missing Q1" when Q1 is answered (after the answers were filled in automatically); a retry passes. It must not show at all (03) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
+| >> | 41 | (to raise) | OFA questionnaire: on a row the OFA Team entered, the adviser changed the forecast, saw it would not be saved, and the new value stayed. The field must be locked when it cannot be saved, or go back to the OFA Team's value (04) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
+| >> | 41 | (to raise) | OFA questionnaire feels jerky when editing and when selecting all rows (no screenshot) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
+| >> | 41 | (to raise) | S-Account notes show the Windows sign-in name (SHAW\muhammedali.khan); show the person's display name, as Compliance already does (06; 09 shows it right) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
 
 ## Hub
 
