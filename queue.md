@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-23 16:00
+Updated: 2026-11-23 16:30
 
 ## Shell (pointer: group 19 done; in-place Shell.WebAPI test window, then parked; queue empty)
 
@@ -25,7 +25,9 @@ Updated: 2026-11-23 16:00
 |---|---|---|---|---|---|---|---|
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | IT ticket raised; approval to run expected Wed 2026-11-25 | - |
 | | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Waiting on Luke: unredacted, most current master spreadsheet asked for (W-12); before go-live | - |
-| | X | OFA-F-120, F-032 | Word converter and attachment mover: built, waiting on your end-to-end and SharePoint live checks | Functional | - | After go-live. F-120: your local check, needs a ShawWord app login (tenant, client ID, secret). F-032: your SharePoint live check | - |
+| | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
+| | X | OFA-F-032 | Attachment mover: built, waiting on your SharePoint live check | Functional | - | After go-live | - |
+| | X | - | Test runbook OFA-F-099: the Act As account named has left the directory; name a current Compliance Team member instead | Functional | - | Fold into the next group | - |
 | | X | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 | | X | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
