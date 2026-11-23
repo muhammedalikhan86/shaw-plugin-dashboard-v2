@@ -94,10 +94,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 557.0,
-   "pointsRemaining": 13.0,
-   "pointsTotal": 570.0,
-   "itemsRemaining": 3,
+   "pointsDone": 567.0,
+   "pointsRemaining": 17.0,
+   "pointsTotal": 584.0,
+   "itemsRemaining": 5,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ],
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 159.81,
+  "pointsPerWorkingDayWholePeriod": 160.58,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2077.0,
-    "pointsDoneThatDay": 27.0
+    "pointsDone": 2087.0,
+    "pointsDoneThatDay": 37.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -314,7 +314,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 18.12,
-    "rateWhole": 41.24
+    "rateWhole": 42.01
    },
    "Compliance": {
     "optimistic": "2026-11-25",
@@ -337,9 +337,9 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 159.81,
-   "pointsRemaining": 69.0,
-   "itemsRemaining": 27
+   "rateWhole": 160.58,
+   "pointsRemaining": 73.0,
+   "itemsRemaining": 29
   }
  },
  "milestones": [
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T03:35:00+11:00",
+ "updatedAt": "2026-11-24T03:49:00+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2649,6 +2649,12 @@
    "change": "Portfolio Services group 45 merged to main (8bb217dc): OFA-F-189 Overview top row with the Needs attention card, OFA-B-239 notes show the person's name not the login, OFA-B-241 Expired report and Back Office requests tables fill their cards, OFA-B-243 four board-check failures traced to board gaps. 7 points.",
    "pointsDone": 7.0,
    "pointsRaised": 5.0
+  },
+  {
+   "at": "2026-11-24T03:49:00+11:00",
+   "change": "Advisor group 41 merged to main (358015dc): ADVISOR-DASHBOARD-F-163 the State Manager's ended-arrangements bell lists the last 2 weeks, B-126 Closures S-Account links to the account, B-127 the Closures chip line becomes a tip, B-128 no false 'Missing Q1' on Submit, B-129 a forecast that cannot be saved is locked, B-130 the questionnaire's own share of the stutter fixed. 10 points.",
+   "pointsDone": 10.0,
+   "pointsRaised": 14.0
   }
  ],
  "foundDuringBuild": {
