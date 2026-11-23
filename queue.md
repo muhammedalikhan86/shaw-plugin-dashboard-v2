@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-23 17:00
+Updated: 2026-11-23 17:15
 
 ## Shell (pointer: group 19 done; in-place Shell.WebAPI test window, then parked; queue empty)
 
@@ -24,7 +24,7 @@ Updated: 2026-11-23 17:00
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | IT ticket raised; approval to run expected Wed 2026-11-25 | - |
-| | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Waiting on Luke: unredacted, most current master spreadsheet asked for (W-12); before go-live | - |
+| | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Spreadsheet received 2026-11-23 (hub checkout, docs/stash/OFA Workflow/references/OFA Master Data.xlsx, gitignored). Runs 2026-11-24, after the weekly usage reset; before go-live | - |
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
 | | X | OFA-F-032 | Attachment mover: built, waiting on your SharePoint live check | Functional | - | After go-live | - |
 | | 35 | - | Test runbook OFA-F-099: the Act As account named has left the directory; name a current Compliance Team member instead | Functional | - | Go 2026-11-23 | - |
