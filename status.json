@@ -72,9 +72,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 872.0,
+   "pointsDone": 878.0,
    "pointsRemaining": 31.0,
-   "pointsTotal": 903.0,
+   "pointsTotal": 909.0,
    "itemsRemaining": 13,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 158.81,
+  "pointsPerWorkingDayWholePeriod": 159.27,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2064.0,
-    "pointsDoneThatDay": 14.0
+    "pointsDone": 2070.0,
+    "pointsDoneThatDay": 20.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -307,7 +307,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 38.95,
-    "rateWhole": 64.56
+    "rateWhole": 65.02
    },
    "Advisor": {
     "optimistic": "2026-11-25",
@@ -337,7 +337,7 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 158.81,
+   "rateWhole": 159.27,
    "pointsRemaining": 71.0,
    "itemsRemaining": 28
   }
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T03:21:18+11:00",
+ "updatedAt": "2026-11-24T03:21:00+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2637,6 +2637,12 @@
    "change": "Compliance group 44 merged to main (27e6c5a3): COMPLIANCE-DASHBOARD-F-051 business scenarios for the remaining UI items, F-052 days to the Expiry Date in the four colour bands. 5 points. Board check 242 passed, 0 failed. F-053 (5 points), the Wording field library page side, raised as a new held item.",
    "pointsDone": 2.0,
    "pointsRaised": 7.0
+  },
+  {
+   "at": "2026-11-24T03:21:00+11:00",
+   "change": "Portfolio Services 2 group 35 merged to main (43b8eaad): OFA-F-188 lookup route on the signing service, OFA-B-184 and OFA-B-224 a timed-out or 504 send is checked, never sent twice, plus a test runbook fix. 6 points.",
+   "pointsDone": 6.0,
+   "pointsRaised": 6.0
   }
  ],
  "foundDuringBuild": {
