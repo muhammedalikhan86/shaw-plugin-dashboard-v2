@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 10:22
+Updated: 2026-11-24 10:23
 
 ## Now (from 2026-11-24 09:00)
 
@@ -18,6 +18,7 @@ Updated: 2026-11-24 10:22
 |---|---|---|---|---|---|---|---|
 | >> | 50 | D10 | Shell states: Keep open on; Notifications open with a Mark all as read button; Search results, no matches and loading | Functional | - | Designer answered 2026-11-24; Shell redraws our boards, then builds; results' second lines to be confirmed | - |
 | >> | 50 | D8, D9, D12, D13 | Toolbar logo 150 wide; folded sidebar 72px with Keep open hidden; Search as the 420px box with a results panel under it; Plugin0 Buttons and actions keep the build's look; D11(g) search_off icon | Look and Feel | - | Designer answered 2026-11-24; the designer is also redrawing these boards (sent 2026-11-24), theirs replace ours on return | - |
+| | 51 | (new Shell items) | Remove the old ThrowIfAnyDatabaseIsNotUat check (nothing calls it since REL-011); fix the shared switch test step so a switch's hidden icon is not read into its name (unblocks Advisor's B96 scenarios) | Bug | - | After group 50 merges | - |
 | | X | D11, D14 | Shell error and empty states (a)-(f); landing page's needs-a-newer-shell card | Look and Feel | - | Later: the words are placeholders until the business supplies them | - |
 | | X | - | Remove the old test-site check (ThrowIfAnyDatabaseIsNotUat) once every API uses the new rules; full Shell.WebAPI rerun when a stack is down | Functional | - | After PS, Advisor and Compliance merge their test-site parts | - |
 
