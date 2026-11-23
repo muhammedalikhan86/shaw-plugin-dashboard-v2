@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 09:30
+Updated: 2026-11-24 09:31
 
 ## Now (from 2026-11-24 09:00)
 
@@ -12,11 +12,11 @@ Updated: 2026-11-24 09:30
 2. No idle worker: a worker whose next item is blocked takes its next unblocked item.
 3. End sweep runs last, in this order: the designer's work synced, the developers have built it, Muhammed has tested by hand, then every parity check runs and each issue found is listed as Look and Feel.
 
-## Shell (group 48 merged 2026-11-24)
+## Shell (pointer: group 49 from 2026-11-24)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | - | - | Next unblocked Shell work; the secrets-store backlog item (docs/hub/uat-in-misc.md §4) | Functional | - | Shell picks | - |
+| >> | 49 | (new Shell item) | The DBA grant script for the Misc login: create rights on our own sections of Misc only, ready to hand to the DBA | Functional | 1 | Building; critical path | - |
 
 ## Portfolio Services (pointer: group 50 from 2026-11-24)
 
