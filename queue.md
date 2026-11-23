@@ -6,6 +6,12 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 
 Updated: 2026-11-23 23:59
 
+## Now (from 2026-11-24 02:00)
+
+1. One stack up at a time, across every checkout. The hub hands the stack out and takes it back; a worker asks the hub before `make up` and says when it has run `make down`.
+2. Stack order: ps2 (group 35, then the Preview bypass), then Portfolio Services (OFA-B-219 and its three bugs), then Advisor (the bell item and its six bugs). A worker builds and runs Jest and its own .NET tests without the stack, and asks for it only for business tests, e2e and screen checks.
+3. No idle worker: when a worker's next item is blocked (external party, manual testing, keys, design rows), it takes its next unblocked item, including the testing-run bugs, rather than wait. Compliance and Shell have nothing unblocked: they stay parked unless the hub routes work to them.
+
 ## Shell (pointer: group 19 done; in-place Shell.WebAPI test window, then parked; queue empty)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
