@@ -114,10 +114,10 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 250.0,
-   "pointsRemaining": 11.0,
+   "pointsDone": 253.0,
+   "pointsRemaining": 8.0,
    "pointsTotal": 261.0,
-   "itemsRemaining": 3,
+   "itemsRemaining": 2,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 42.0,
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 162.04,
+  "pointsPerWorkingDayWholePeriod": 162.27,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2106.0,
-    "pointsDoneThatDay": 56.0
+    "pointsDone": 2109.0,
+    "pointsDoneThatDay": 59.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -321,7 +321,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 20.38,
-    "rateWhole": 19.0
+    "rateWhole": 19.23
    },
    "Deployment & Testing": {
     "optimistic": "2026-11-25",
@@ -337,9 +337,9 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 162.04,
-   "pointsRemaining": 77.0,
-   "itemsRemaining": 29
+   "rateWhole": 162.27,
+   "pointsRemaining": 74.0,
+   "itemsRemaining": 28
   }
  },
  "milestones": [
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T08:19:06+11:00",
+ "updatedAt": "2026-11-24T08:41:06+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2690,6 +2690,11 @@
    "change": "Compliance group 48 merged to main (7107f115): COMPLIANCE-DASHBOARD-B-124 the wording list matches the new wording slots. 3 points. Raised COMPLIANCE-DASHBOARD-B-125, the Compliance wording lists and checks read from the shared list instead of keeping their own (3 points).",
    "pointsDone": 3.0,
    "pointsRaised": 6.0
+  },
+  {
+   "at": "2026-11-24T08:41:06+11:00",
+   "change": "Compliance group 48 (second part) merged to main (855f7e1d): COMPLIANCE-DASHBOARD-B-125 the Compliance wording page and its document checks now read from the shared list of fields, the same way the stored wording does. 3 points.",
+   "pointsDone": 3.0
   }
  ],
  "foundDuringBuild": {
