@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 10:34
+Updated: 2026-11-24 10:39
 
 ## Now (from 2026-11-24 09:00)
 
@@ -50,12 +50,11 @@ Updated: 2026-11-24 10:34
 | | 40 | - | End sweep, on the stack: make test-data for migrations 0201-0203, and a look at the Wording page | Functional | 0 | End sweep | - |
 | | 40 | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 
-## Compliance (group 51 merged 2026-11-24; pointer: group 52)
+## Compliance (group 52 merged 2026-11-24; pointer: group 53)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 52 | (new Compliance bug) | OFA Checklist: a step's notes list newest first, as the board draws them | Look and Feel | 1 | Found while building P95; ruled by the hub 2026-11-24 (the board is the spec) | - |
-| | X | - | Run M28 and M38 on the built app (stack) and drop M38's @not-built-COMPLIANCE-DASHBOARD-F-052 tag; both pass on the board | Functional | 0 | End sweep: needs a stack window | - |
+| >> | 53 | - | Run M28 and M38 on the built app (stack) and drop M38's @not-built-COMPLIANCE-DASHBOARD-F-052 tag; both pass on the board | Functional | 0 | Preparing; next stack window after Shell's | - |
 
 ## Advisor (pointer: group 48 from 2026-11-24; B-132 waits for a stack window, F-144 waits on Luke)
 
