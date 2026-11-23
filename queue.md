@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 10:50
+Updated: 2026-11-24 10:53
 
 ## Now (from 2026-11-24 09:00)
 
@@ -25,6 +25,7 @@ Updated: 2026-11-24 10:50
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 53 | OFA-B-249 | Initial OFAs: an imported row shows NEW with the tip "Recorded in Complii before go-live", as the board's S18877 | Look and Feel | 1 | Building | - |
+| | 54 | OFA-B-253 | Initial OFAs Excel export writes NEW and On paper for an imported row, as the screen does | Functional | 1 | After group 53; needs a .NET window (after Shell and Compliance) | - |
 | | X | OFA-B-251 | Fee check banner: what date "next on" means (the app has no next-sync date; it checks each business day until the month's fees arrive) | Functional | - | Later: Muhammed decides | - |
 | | X | O39 | Settings report preview: the new report columns (OFA-F-191) | Functional | - | Later: Muhammed confirms the designer's guessed values (Renewal Notice Due Date = +60 days and others) | - |
 | | X | O40, O41, O42 | Remove the separate Adviser review answers card; could-not-load card on six screens; the Import page as drawn | Look and Feel | - | Later: O41's page names and O42's words wait for the business | - |
