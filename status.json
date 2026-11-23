@@ -114,16 +114,16 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 245.0,
-   "pointsRemaining": 3.0,
-   "pointsTotal": 248.0,
-   "itemsRemaining": 1,
+   "pointsDone": 247.0,
+   "pointsRemaining": 8.0,
+   "pointsTotal": 255.0,
+   "itemsRemaining": 2,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
-    "pointsDone": 39.0,
+    "pointsDone": 42.0,
     "pointsRemaining": 0.0,
-    "pointsTotal": 39.0,
-    "itemsDone": 20,
+    "pointsTotal": 42.0,
+    "itemsDone": 21,
     "itemsRemaining": 0
    }
   },
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 158.66,
+  "pointsPerWorkingDayWholePeriod": 158.81,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2062.0,
-    "pointsDoneThatDay": 12.0
+    "pointsDone": 2064.0,
+    "pointsDoneThatDay": 14.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -321,7 +321,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 20.38,
-    "rateWhole": 18.62
+    "rateWhole": 18.77
    },
    "Deployment & Testing": {
     "optimistic": "2026-11-25",
@@ -337,9 +337,9 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 158.66,
-   "pointsRemaining": 66.0,
-   "itemsRemaining": 27
+   "rateWhole": 158.81,
+   "pointsRemaining": 71.0,
+   "itemsRemaining": 28
   }
  },
  "milestones": [
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T02:55:37+11:00",
+ "updatedAt": "2026-11-24T03:21:18+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2631,13 +2631,19 @@
    "change": "Portfolio Services group 36 merged to main (5b25651f): OFA-B-219 Expired report and the adviser's own fee-off mark, OFA-B-233 Cycle picker opens on the open cycle, OFA-B-235 Platform accounts table uses the card's full width, OFA-B-237 Documents (DART) empty icon fixed. 7 points.",
    "pointsDone": 7.0,
    "pointsRaised": 7.0
+  },
+  {
+   "at": "2026-11-24T03:21:18+11:00",
+   "change": "Compliance group 44 merged to main (27e6c5a3): COMPLIANCE-DASHBOARD-F-051 business scenarios for the remaining UI items, F-052 days to the Expiry Date in the four colour bands. 5 points. Board check 242 passed, 0 failed. F-053 (5 points), the Wording field library page side, raised as a new held item.",
+   "pointsDone": 2.0,
+   "pointsRaised": 7.0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 261.0,
+  "pointsDone": 264.0,
   "pointsRemaining": 1.0,
-  "pointsTotal": 262.0,
-  "itemsDone": 125,
+  "pointsTotal": 265.0,
+  "itemsDone": 126,
   "itemsRemaining": 1
  },
  "buildCompletedOn": "2026-11-23",
