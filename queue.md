@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 02:26
+Updated: 2026-11-24 02:27
 
 ## Now (from 2026-11-24 02:00)
 
@@ -28,6 +28,7 @@ Updated: 2026-11-24 02:26
 | >> | 36 | OFA-B-235 | Arrangement record: the Platform accounts table does not use the full width of its card (08) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
 | >> | 36 | OFA-B-237 | Arrangement record: the icon in the empty Documents (DART) box is broken, drawn as a bare corner (07) | Bug | ?? | Unblocked 2026-11-24: SHELL-B-183 is on main; Portfolio Services confirms the icon | - |
 | | 45 | (to raise) | Overview top row as the designer redrew it on Muhammed's ask: Days to Expiry Date, Client closures on the 10-day clock, Needs attention (two counters: Renewal notices not fully signed, Open requests to the Back Office); the Back Office requests card goes; scenarios and layout checks follow; plus the 4 older board-run failures (Sync fees 2, Intake 2) | Look and Feel | ?? | After group 36; the card title and labels are the designer's words, waiting on Muhammed to confirm | - |
+| | 45 | (being raised) | Arrangement record notes show the Windows login (SHAW\muhammedali.khan), not the person's name: the record reads names from the Users table only, never the directory; read the directory first, as Compliance does (screenshot 06; moved from Advisor, was ADVISOR-DASHBOARD-B-131) | Bug | ?? | After group 36 | - |
 
 ## Portfolio Services 2 (pointer: group 35 resumed 2026-11-24; then 37 to 40)
 
@@ -69,7 +70,6 @@ Updated: 2026-11-24 02:26
 | >> | 41 | ADVISOR-DASHBOARD-B-128 | OFA questionnaire: Submit says "Missing Q1" when Q1 is answered (after the answers were filled in automatically); a retry passes. It must not show at all (03) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
 | >> | 41 | ADVISOR-DASHBOARD-B-129 | OFA questionnaire: on a row the OFA Team entered, the adviser changed the forecast, saw it would not be saved, and the new value stayed. The field must be locked when it cannot be saved, or go back to the OFA Team's value (04) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
 | >> | 41 | ADVISOR-DASHBOARD-B-130 | OFA questionnaire feels jerky when editing and when selecting all rows (no screenshot) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| >> | 41 | ADVISOR-DASHBOARD-B-131 | S-Account notes show the Windows sign-in name (SHAW\muhammedali.khan); show the person's display name, as Compliance already does (06; 09 shows it right) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
 | | 46 | (to raise) | 4 older board-run failures: Closures (1), S-Account history (3); folded into 41 if they touch its Closures files | Bug | ?? | After group 41 | - |
 
 ## Hub
