@@ -1244,3 +1244,8 @@ mat-tab-group[data-nostretch="1"] mat-tab-header:is(.tabs,[classname~="tabs"]) m
 /* W40: a wording's card scrolls as one; its versions table keeps its height above the field boxes */
 .app-layer mat-card[data-fix="true"][data-wd="true"]{overflow-y:auto}
 .app-layer mat-card[data-fix="true"][data-wd="true"] .tsc{flex:none!important;min-height:auto!important;overflow-y:visible!important}
+/* B95: a status chip's line as its tip, on hover and on keyboard focus (matTooltip in the build), never under the chip */
+mat-chip[data-tip]{position:relative;overflow:visible}
+mat-chip[data-tip]:is(:hover,:focus-visible)::after{content:attr(data-tip);position:absolute;left:0;top:calc(100% + 4px);z-index:20;white-space:nowrap;padding:4px 8px;border-radius:var(--mat-sys-corner-extra-small);background:var(--mat-sys-inverse-surface);color:var(--mat-sys-inverse-on-surface);font:var(--mat-sys-body-small);letter-spacing:0;text-transform:none;pointer-events:none}
+/* Item 13: no empty block after a filter dialog's last field */
+mat-dialog-content > div[data-i13]:empty{display:none!important}
