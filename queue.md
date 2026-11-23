@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-23 17:01
+Updated: 2026-11-23 17:06
 
 ## Now (from 2026-11-24 02:00)
 
@@ -62,7 +62,7 @@ Updated: 2026-11-23 17:01
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
+| | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke. Asked 2026-11-23 what the Adviser's OFA History tab should show, with the Portfolio Services and Compliance tabs as examples; then the design | - |
 | | 41 | (to raise) | The State Manager's "Arrangements that ended" bell lists only endings from the last 2 weeks (follows ADVISOR-DASHBOARD-F-117) | Functional | ?? | Ruled by Muhammed 2026-11-23 (D-02); next advisor group | ADVISOR-DASHBOARD-F-117 |
 | | 41 | (to raise) | Closures: the S-Account is a link to the account's page, as on the other tables (screenshot 01) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
 | | 41 | (to raise) | Closures: the line under the status chip ("Fee turned off · date", "Sent to the OFA Team · date") becomes the chip's tooltip, not text under it (02) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
