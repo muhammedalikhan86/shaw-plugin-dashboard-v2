@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 02:39
+Updated: 2026-11-24 02:44
 
 ## Now (from 2026-11-24 02:00)
 
@@ -12,10 +12,11 @@ Updated: 2026-11-24 02:39
 2. Stack order: ps2 (group 35, then the Preview bypass), then Portfolio Services (OFA-B-219 and its three bugs), then Advisor (the bell item and its six bugs). A worker builds and runs Jest and its own .NET tests without the stack, and asks for it only for business tests, e2e and screen checks.
 3. No idle worker: when a worker's next item is blocked (external party, manual testing, keys, design rows), it takes its next unblocked item, including the testing-run bugs, rather than wait. Compliance and Shell have nothing unblocked: they stay parked unless the hub routes work to them.
 
-## Shell (pointer: parked after SHELL-B-183; queue empty)
+## Shell (pointer: group 47 from 2026-11-24)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| >> | 47 | (to raise) | Shared table toolkit re-fits every table on any page change (table-fit.ts startTableFit, ~0.5 s a pass); one questionnaire answer triggers it up to 3 times, so editing feels jerky (found under ADVISOR-DASHBOARD-B-130). Re-fit only on changes inside a table or its card, or skip when no size changed | Bug | ?? | Go 2026-11-24 | - |
 
 ## Portfolio Services (pointer: group 36 running since 2026-11-24)
 
