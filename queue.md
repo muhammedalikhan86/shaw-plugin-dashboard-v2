@@ -31,7 +31,7 @@ Updated: 2026-11-23 12:15
 | | X | OFA-F-120, F-032 | Word converter and attachment mover: built, waiting on your end-to-end and SharePoint live checks | Functional | - | Blocked by you (Monday) | - |
 | | X | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 | >> | 34 | OFA-F-158, F-186, F-185, F-184 | Luke's templates: No OFA fee words, State Manager and Back Office emails off; client closure confirmation; weekly Initial OFA lines; renewal reminders table | Functional | 9 | Go 2026-11-23; closure greeting, I/We and per-account question with Muhammed | - |
-| | X | OFA-F-187 | Adviser's termination reminder email (new) | Functional | 3 | Held: Muhammed's intake | - |
+| | 34 | OFA-F-187 | Adviser's termination reminder email (new) | Functional | 3 | Taken in 2026-11-23; template "OFA Termination – Action Required" | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 
 ## Compliance (pointer: parked after group 23; the rest waits on design rows)
