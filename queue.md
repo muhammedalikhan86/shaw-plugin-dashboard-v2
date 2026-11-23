@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-23 17:11
+Updated: 2026-11-23 17:16
 
 ## Now (from 2026-11-24 02:00)
 
@@ -80,5 +80,7 @@ Deployment and testing (from 2026-11-23): the work left is the REL- stack in `do
 2. End sweep: the browser, business-test and board checks skipped during the build, run once at the end.
 3. Waiting on you: push main; the SyncFee grant: OFA-F-160 is on main, so the gMSA's EXECUTE on dbo.SyncFee can be dropped on the server (PS removes line 3 of SyncFee-grants.sql in group 10); rerun the OFA-S-005 spike on the unredacted master spreadsheet (scripts in the PS checkout, spikes/OFA-S-005, uncommitted); check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest (another day); the OFA-S-001 owner questions: DART's open-a-document URL and whether staff have DART logins (OFA-F-145 and F-055 are built behind Dart:DocumentLinkTemplate, off until it is set); PS's 8 production settings.
 4. 2026-11-24, with the stack up: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database through the Wording page's upload, so each slot shows the business wording, not the [Test data] text. NoOfaFeeAdvisorEmail and RenewalConfirmation wait for ps2's field-library fix.
+
+Designer round done 2026-11-23 17:16: not synced yet. Covers the W41 follow-up and correction, M38/M39, every open Compliance row, the M31 undo, and Muhammed's own Portfolio Services Overview changes (record those from the designer's log, no row). Run sync-artboards when Muhammed says sync.
 
 Push: `git -C C:/Users/muhammedali.khan/source/repos/shaw-plugin-dashboard push origin main`
