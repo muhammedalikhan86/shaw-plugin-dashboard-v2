@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-23 17:20
+Updated: 2026-11-23 17:40
 
 ## Shell (pointer: group 19 done; in-place Shell.WebAPI test window, then parked; queue empty)
 
@@ -31,6 +31,8 @@ Updated: 2026-11-23 17:20
 | | X | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
 | >> | 35 | OFA-F-188 | AnnatureInterfaceWebAPI: a lookup route, so a timed-out request can be checked before it is sent again (mock Annature only) | Functional | 3 | Paused; resumes 2026-11-24 | - |
 | | 35 | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Go 2026-11-23 | OFA-F-188 |
+| | X | (to raise) | Wording page Preview fails on make up: POST /notices/preview answers 403 to a developer (ComplianceTeam policy has no development bypass); add one, Development only, like OfaTeam's, and check the page says why on a 403 | Functional | ?? | Raised by Muhammed 2026-11-23; ps2 raises and sizes it on resume | - |
+| | X | (to raise) | Starter Word documents for every wording slot, made from the text we now hold (Luke's templates, the built-in wording), so Open document gives Compliance a Word file to edit | Functional | ?? | Raised by Muhammed 2026-11-23; ps2 raises and sizes it on resume; words only from the business's own text | - |
 | | X | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 
 ## Compliance (pointer: parked after group 23; the rest waits on design rows)
