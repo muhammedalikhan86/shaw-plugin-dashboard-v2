@@ -94,9 +94,9 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 555.0,
+   "pointsDone": 556.0,
    "pointsRemaining": 13.0,
-   "pointsTotal": 568.0,
+   "pointsTotal": 569.0,
    "itemsRemaining": 3,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
@@ -120,10 +120,10 @@
    "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
-    "pointsDone": 38.0,
+    "pointsDone": 39.0,
     "pointsRemaining": 0.0,
-    "pointsTotal": 38.0,
-    "itemsDone": 19,
+    "pointsTotal": 39.0,
+    "itemsDone": 20,
     "itemsRemaining": 0
    }
   },
@@ -134,10 +134,10 @@
    ],
    "stage": "deploy",
    "start": "2026-11-23",
-   "pointsDone": 7.0,
-   "pointsRemaining": 36.0,
+   "pointsDone": 9.0,
+   "pointsRemaining": 34.0,
    "pointsTotal": 43.0,
-   "itemsRemaining": 17,
+   "itemsRemaining": 15,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 0.0,
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 153.12,
+  "pointsPerWorkingDayWholePeriod": 153.35,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -281,8 +281,8 @@
    },
    {
     "date": "2026-11-23",
-    "pointsDone": 1990.0,
-    "pointsDoneThatDay": 7.0
+    "pointsDone": 1993.0,
+    "pointsDoneThatDay": 10.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -309,7 +309,7 @@
     "likely": "2026-11-24",
     "pessimistic": "2026-11-24",
     "rateLast10": 18.12,
-    "rateWhole": 41.08
+    "rateWhole": 41.16
    },
    "Compliance": {
     "optimistic": "2026-11-24",
@@ -323,7 +323,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 21.5,
-    "rateWhole": 22.03
+    "rateWhole": 22.18
    }
   },
   "overall": {
@@ -332,9 +332,9 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 153.12,
-   "pointsRemaining": 85.0,
-   "itemsRemaining": 35
+   "rateWhole": 153.35,
+   "pointsRemaining": 83.0,
+   "itemsRemaining": 33
   }
  },
  "milestones": [
@@ -417,7 +417,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-23T11:08:49+11:00",
+ "updatedAt": "2026-11-23T11:14:43+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2573,13 +2573,19 @@
    "at": "2026-11-23T11:08:49+11:00",
    "change": "REL-003 done: test-site settings with a start-up guard, shared pattern and the Shell service's settings (5 points)",
    "pointsDone": 5.0
+  },
+  {
+   "at": "2026-11-23T11:14:43+11:00",
+   "change": "REL-005 and REL-006 done: testers see the whole test data set in Compliance and every test adviser in the Adviser Dashboard (2 points)",
+   "pointsDone": 3.0,
+   "pointsRaised": 1.0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 254.0,
+  "pointsDone": 255.0,
   "pointsRemaining": 1.0,
-  "pointsTotal": 255.0,
-  "itemsDone": 121,
+  "pointsTotal": 256.0,
+  "itemsDone": 122,
   "itemsRemaining": 1
  },
  "buildCompletedOn": "2026-11-23",
@@ -2618,14 +2624,14 @@
    "size": 1,
    "phase": "Deploy test site (test data)",
    "owner": "Development team",
-   "status": "Open"
+   "status": "Done"
   },
   {
    "item": "Adviser Dashboard: testers see every test adviser",
    "size": 1,
    "phase": "Deploy test site (test data)",
    "owner": "Development team",
-   "status": "Open"
+   "status": "Done"
   },
   {
    "item": "Every email on the test site goes to one inbox",
