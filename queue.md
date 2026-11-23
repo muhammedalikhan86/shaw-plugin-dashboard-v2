@@ -4,11 +4,11 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 09:33
+Updated: 2026-11-24 09:36
 
 ## Now (from 2026-11-24 09:00)
 
-1. Critical path: the test site. Everything on it lives in the Misc database (docs/hub/uat-in-misc.md). Shell, Portfolio Services, ps2 and Advisor build their parts now; Compliance after F-053. External waits: the DBA runs scripts/uat/grant-misc-rights.sql (create rights for the Misc login), the UAT mailbox, the IIS pools and applications (Muhammed, walked through by the hub).
+1. Critical path: the test site. Everything on it lives in the Misc database (docs/hub/uat-in-misc.md). Shell, Portfolio Services, ps2 and Advisor build their parts now; Compliance after F-053. The Misc login works with create rights (2026-11-24). External waits: the UAT mailbox, the IIS pools and applications (Muhammed, walked through by the hub).
 2. No idle worker: a worker whose next item is blocked takes its next unblocked item.
 3. End sweep runs last, in this order: the designer's work synced, the developers have built it, Muhammed has tested by hand, then every parity check runs and each issue found is listed as Look and Feel.
 
