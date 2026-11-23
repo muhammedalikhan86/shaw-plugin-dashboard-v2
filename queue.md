@@ -11,11 +11,10 @@ Updated: 2026-11-23 12:15
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 
-## Portfolio Services (pointer: red after merge, 5 test-register tests)
+## Portfolio Services (pointer: parked after OFA-B-231; the rest is blocked, on hold or waiting on you)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 18 | (new bug) | Red after merge: 5 test-register tests expect the old "not a test data set's" message | Functional | ?? | Go 2026-11-23, ahead of everything | - |
 | | - | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 | | X | OFA-B-219 | Expired report: an adviser's own fee-off mark should pull the row on, as a client closure's does (query, API, export, screen) | Functional | ?? | Awaiting user: business yes/no (default yes) | - |
