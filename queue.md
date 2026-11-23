@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 02:51
+Updated: 2026-11-24 02:54
 
 ## Now (from 2026-11-24 02:00)
 
@@ -17,19 +17,15 @@ Updated: 2026-11-24 02:51
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 
-## Portfolio Services (pointer: group 36 running since 2026-11-24)
+## Portfolio Services (pointer: group 45 next; proposal coming)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
-| >> | 36 | OFA-B-219 | Expired report and the adviser's own fee-off mark: the row comes onto the Expired report when the OFA expired; not for a manual termination (the adviser closed the account) (query, API, export, screen) | Functional | ?? | Ruled by Muhammed 2026-11-23 (D-01); next PS group | - |
-| >> | 36 | OFA-B-233 | The monthly cycle: the Cycle picker opens on the cycle that is open. On 23-11 November is not open yet: it still shows, marked Not opened, but October (open) is picked (05) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| >> | 36 | OFA-B-235 | Arrangement record: the Platform accounts table does not use the full width of its card (08) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| >> | 36 | OFA-B-237 | Arrangement record: the icon in the empty Documents (DART) box is broken, drawn as a bare corner (07) | Bug | ?? | Unblocked 2026-11-24: SHELL-B-183 is on main; Portfolio Services confirms the icon | - |
 | | 45 | (to raise) | Overview top row as the designer redrew it on Muhammed's ask: Days to Expiry Date, Client closures on the 10-day clock, Needs attention (two counters: Renewal notices not fully signed, Open requests to the Back Office); the Back Office requests card goes; scenarios and layout checks follow; plus the 4 older board-run failures (Sync fees 2, Intake 2) | Look and Feel | ?? | After group 36; the card title and labels are the designer's words, waiting on Muhammed to confirm | - |
-| | 45 | OFA-B-241 | Expired report and Back Office requests tables stop short of their card: both carry .one-line-columns (min-width: 0) without B-235's override | Look and Feel | 1 | After group 36 | - |
-| | 45 | OFA-B-239 | Arrangement record notes show the Windows login (SHAW\muhammedali.khan), not the person's name: the record reads names from the Users table only, never the directory; read the directory first, as Compliance does (screenshot 06; moved from Advisor, was ADVISOR-DASHBOARD-B-131) | Bug | 2 | After group 36 | - |
+| | 45 | OFA-B-241 | Expired report and Back Office requests tables stop short of their card: both carry .one-line-columns (min-width: 0) without B-235's override | Look and Feel | 1 | Next | - |
+| | 45 | OFA-B-239 | Arrangement record notes show the Windows login (SHAW\muhammedali.khan), not the person's name: the record reads names from the Users table only, never the directory; read the directory first, as Compliance does (screenshot 06; moved from Advisor, was ADVISOR-DASHBOARD-B-131) | Bug | 2 | Next | - |
 
 ## Portfolio Services 2 (pointer: group 35 resumed 2026-11-24; then 37 to 40)
 
