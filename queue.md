@@ -24,8 +24,8 @@ Updated: 2026-11-23 12:15
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | IT ticket raised; approval to run expected Wed 2026-11-25 | - |
-| | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Blocked by you (Monday) | - |
-| | X | OFA-F-120, F-032 | Word converter and attachment mover: built, waiting on your end-to-end and SharePoint live checks | Functional | - | Blocked by you (Monday) | - |
+| | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Waiting on Luke: unredacted, most current master spreadsheet asked for (W-12); before go-live | - |
+| | X | OFA-F-120, F-032 | Word converter and attachment mover: built, waiting on your end-to-end and SharePoint live checks | Functional | - | After go-live. F-120: your local check, needs a ShawWord app login (tenant, client ID, secret). F-032: your SharePoint live check | - |
 | | X | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
 | >> | 34 | OFA-F-158, F-186, F-185, F-184 | Luke's templates: No OFA fee words, State Manager and Back Office emails off; client closure confirmation; weekly Initial OFA lines; renewal reminders table | Functional | 9 | Go 2026-11-23; template answers given | - |
 | | 34 | OFA-F-187 | Adviser's termination reminder email (new) | Functional | 5 | Taken in 2026-11-23; template "OFA Termination – Action Required" | - |
