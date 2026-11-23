@@ -114,9 +114,9 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 258.0,
+   "pointsDone": 259.0,
    "pointsRemaining": 3.0,
-   "pointsTotal": 261.0,
+   "pointsTotal": 262.0,
    "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 163.57,
+  "pointsPerWorkingDayWholePeriod": 163.65,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2126.0,
-    "pointsDoneThatDay": 76.0
+    "pointsDone": 2127.0,
+    "pointsDoneThatDay": 77.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -321,7 +321,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 20.38,
-    "rateWhole": 19.61
+    "rateWhole": 19.69
    },
    "Deployment & Testing": {
     "optimistic": "2026-11-25",
@@ -337,7 +337,7 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 163.57,
+   "rateWhole": 163.65,
    "pointsRemaining": 70.0,
    "itemsRemaining": 28
   }
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T10:29:38+11:00",
+ "updatedAt": "2026-11-24T10:40:29+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2728,6 +2728,12 @@
    "change": "Shell group 50 landed on main (e5584e6f): SHELL-B-187, the search panel (the 420px toolbar box with an outlined results panel under it, with results, no matches and loading states), 2 points; SHELL-F-179, Mark all as read in the notification panel's header, 1 point; the shell boards redrawn from the designer's answers D8 to D14. Checks: Shell Jest 1359 of 1359 in 106 suites; lint, typecheck and build green. Still owed: an e2e check of the notification panel and board parity at the end sweep. Next for Shell: group 51, removing an old database check nothing calls and fixing a shared switch test step.",
    "pointsDone": 3.0,
    "pointsRaised": 3.0
+  },
+  {
+   "at": "2026-11-24T10:40:29+11:00",
+   "change": "Compliance group 52 merged to main (c12a4740): COMPLIANCE-DASHBOARD-B-126, the OFA Checklist lists a step's notes newest first, as the board draws them, 1 point. Checks: .NET 947 passed, 0 failed; Compliance board: 246 passed, 0 failed, 25 skipped. Next for Compliance: group 53, running two board scenarios (M28 and M38) on the built app in the next stack window.",
+   "pointsDone": 1.0,
+   "pointsRaised": 1.0
   }
  ],
  "foundDuringBuild": {
