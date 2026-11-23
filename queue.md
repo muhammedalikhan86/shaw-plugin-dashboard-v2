@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 02:48
+Updated: 2026-11-24 02:49
 
 ## Now (from 2026-11-24 02:00)
 
@@ -16,8 +16,9 @@ Updated: 2026-11-24 02:48
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 47 | SHELL-B-184 | Shared table toolkit re-fits every table on any page change (table-fit.ts startTableFit, ~0.5 s a pass); one questionnaire answer triggers it up to 3 times, so editing feels jerky (found under ADVISOR-DASHBOARD-B-130). Re-fit only on changes inside a table or its card, or skip when no size changed | Bug | 1 | Building | - |
-| >> | 47 | (to raise) | Business-test staged states (business-tests/support/states.ts): a person can be in two Demo groups at once (Compliance M28), and the group "CAT 1 and CAT 2 · Renewal notice" is renamed "CAT 1 and CAT 2 · Service questions" (W38; Compliance P51) | Functional | ?? | Go 2026-11-24 | - |
+| >> | 47 | SHELL-B-184 | Shared table toolkit re-fits every table on any page change (table-fit.ts startTableFit, ~0.5 s a pass); one questionnaire answer triggers it up to 3 times, so editing feels jerky (found under ADVISOR-DASHBOARD-B-130). Re-fit only on changes inside a table or its card, or skip when no size changed | Bug | 1 | Built: 5 answers went from 10 re-fits (213 ms) to none | - |
+| >> | 47 | SHELL-B-185 | Business-test staged states: a staged state sets two or more Demo groups (Compliance M28) | Bug | 1 | Building | - |
+| >> | 47 | SHELL-B-186 | Business-test staged states: rename the Demo group to "CAT 1 and CAT 2 · Service questions" (W38; Compliance P51) | Bug | 1 | Building | - |
 
 ## Portfolio Services (pointer: group 36 running since 2026-11-24)
 
