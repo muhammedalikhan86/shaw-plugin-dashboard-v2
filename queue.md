@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 03:31
+Updated: 2026-11-24 03:34
 
 ## Now (from 2026-11-24 02:00)
 
@@ -17,17 +17,14 @@ Updated: 2026-11-24 03:31
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 
-## Portfolio Services (pointer: group 45 running since 2026-11-24)
+## Portfolio Services (pointer: group 48 from 2026-11-24)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
-| >> | 45 | OFA-F-189 | Overview top row as the designer redrew it on Muhammed's ask: Days to Expiry Date, Client closures on the 10-day clock, Needs attention (two counters: Renewal notices not fully signed, Open requests to the Back Office); the Back Office requests card goes | Look and Feel | 3 | Reviewed PASS; Integration; wording waits on Muhammed | - |
-| >> | 45 | OFA-B-243 | 4 older board-run failures, all board gaps: Sync fees 2 (wait for design row O21), Intake 2 (wait for O22 date hint and O36 SOA label) | Bug | 1 | Reviewed PASS; Integration | - |
-| >>| 45 | OFA-B-241 | Expired report and Back Office requests tables stop short of their card: both carry .one-line-columns (min-width: 0) without B-235's override | Look and Feel | 1 | Reviewed PASS; Integration | - |
-| >>| 45 | OFA-B-239 | Arrangement record notes show the Windows login (SHAW\muhammedali.khan), not the person's name: the record reads names from the Users table only, never the directory; read the directory first, as Compliance does (screenshot 06; moved from Advisor, was ADVISOR-DASHBOARD-B-131) | Bug | 2 | Reviewed PASS; Integration | - |
-| | 48 | OFA-B-245 | Three more stamps still show the login, not the name: Expired report Confirmed off "ConfirmedBy", report closure "RecordedBy", and the arrangement record's closure RecordedBy / FeeMarkedOffBy; same lookup as OFA-B-239 | Bug | 1 | Next PS group | OFA-B-239 |
+| >> | 48 | OFA-B-245 | Three more stamps still show the login, not the name: Expired report Confirmed off "ConfirmedBy", report closure "RecordedBy", and the arrangement record's closure RecordedBy / FeeMarkedOffBy; same lookup as OFA-B-239 | Bug | 1 | Building | OFA-B-239 |
+| | 48 | - | Browser checks owed from groups 36 and 45, on the stack: B-233 opening month, B-235 row menu meets the card edge, B-237 Documents icon whole, B-241 table edges at 1440/1680/1920 (wide tables still scroll), F-189 Overview card | Look and Feel | 0 | After OFA-B-245; needs the stack | - |
 
 ## Portfolio Services 2 (pointer: group 37 running since 2026-11-24; then 39, 40)
 
