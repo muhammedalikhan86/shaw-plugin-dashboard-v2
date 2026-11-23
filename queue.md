@@ -25,7 +25,7 @@ Updated: 2026-11-24 10:22
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 52 | O20, O22, O36, O21 | Initial OFAs: paper-signed upload on an imported row with no form date, and its date hint (OFA-B-206); the SOA field's label (OFA-B-243); no Sync fees button on the Exceptions report, if still in the app | Bug | - | Building; designer drew them 2026-11-24; O20's hint words to be confirmed; then OFA-B-249 | - |
+| >> | 52 | O20, O22, O36, O21 | Initial OFAs: paper-signed upload on an imported row with no form date, and its date hint (OFA-B-206); the SOA field's label (OFA-B-243); no Sync fees button on the Exceptions report, if still in the app | Bug | - | Building; designer drew them 2026-11-24; O20's hint words to be confirmed | - |
 | | X | O39 | Settings report preview: the new report columns (OFA-F-191) | Functional | - | Later: Muhammed confirms the designer's guessed values (Renewal Notice Due Date = +60 days and others) | - |
 | | X | O40, O41, O42 | Remove the separate Adviser review answers card; could-not-load card on six screens; the Import page as drawn | Look and Feel | - | Later: O41's page names and O42's words wait for the business | - |
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
