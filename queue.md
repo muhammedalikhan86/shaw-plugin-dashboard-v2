@@ -34,11 +34,10 @@ Updated: 2026-11-23 12:15
 | | X | OFA-F-187 | Adviser's termination reminder email (new) | Functional | 3 | Held: Muhammed's intake | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 
-## Compliance (pointer: group 23, Wording page subjects for four email slots)
+## Compliance (pointer: parked after group 23; the rest waits on design rows)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 23 | (new) | Wording page: subject line and Used for line for four email slots | Functional | 2 | Go 2026-11-23 | - |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Monday design sync | - |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
