@@ -94,9 +94,9 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 570.0,
+   "pointsDone": 573.0,
    "pointsRemaining": 16.0,
-   "pointsTotal": 586.0,
+   "pointsTotal": 589.0,
    "itemsRemaining": 4,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
@@ -120,10 +120,10 @@
    "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
-    "pointsDone": 42.0,
+    "pointsDone": 43.0,
     "pointsRemaining": 0.0,
-    "pointsTotal": 42.0,
-    "itemsDone": 21,
+    "pointsTotal": 43.0,
+    "itemsDone": 22,
     "itemsRemaining": 0
    }
   },
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 162.65,
+  "pointsPerWorkingDayWholePeriod": 162.88,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2114.0,
-    "pointsDoneThatDay": 64.0
+    "pointsDone": 2117.0,
+    "pointsDoneThatDay": 67.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -314,7 +314,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 18.12,
-    "rateWhole": 42.24
+    "rateWhole": 42.47
    },
    "Compliance": {
     "optimistic": "2026-11-25",
@@ -337,7 +337,7 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 162.65,
+   "rateWhole": 162.88,
    "pointsRemaining": 70.0,
    "itemsRemaining": 28
   }
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T09:38:20+11:00",
+ "updatedAt": "2026-11-24T09:49:17+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2705,13 +2705,19 @@
    "at": "2026-11-24T09:38:20+11:00",
    "change": "Portfolio Services group 42 merged to main (20a7f1e2): OFA-S-005 answered, the check of how many master spreadsheet rows match the warehouse, run on the full spreadsheet. Raised OFA-B-232, the import accepts a spreadsheet with a single sheet of any name (Open, 1 point).",
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-24T09:49:17+11:00",
+   "change": "Advisor group 47 merged to main (3ec1ac7b): ADVISOR-DASHBOARD-F-165 the test site keeps its data in the Misc database. 3 points. Compliance group 50 merged to main (c601ac3d): COMPLIANCE-DASHBOARD-F-054 the test site keeps its data in the Misc database (engineering work, 1 point, outside the product figures).",
+   "pointsDone": 3.0,
+   "pointsRaised": 3.0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 269.0,
+  "pointsDone": 270.0,
   "pointsRemaining": 1.0,
-  "pointsTotal": 270.0,
-  "itemsDone": 128,
+  "pointsTotal": 271.0,
+  "itemsDone": 129,
   "itemsRemaining": 1
  },
  "buildCompletedOn": "2026-11-23",
