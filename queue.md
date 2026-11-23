@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 04:55
+Updated: 2026-11-24 04:57
 
 ## Now (from 2026-11-24 02:00)
 
@@ -35,8 +35,8 @@ Updated: 2026-11-24 04:55
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
 | | X | OFA-F-032 | Attachment mover: built, waiting on your SharePoint live check | Functional | - | After go-live | - |
 | | 40 | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
-| >> | 39 | OFA-F-192 | Wording field library, store side: one library of known fields with aliases, the upload check rewritten against it, the slot catalogue fixed (four Initial OFA slots added; InitialOfa, FollowUpEmail, TerminationEmail retired; nothing required), report fields and %TODAY%, working starters for the 16 business slots (migrations 0201-0202) | Functional | 5 | Built, in review; spec docs/hub/wording-field-library.md §5 | - |
-| >> | 39 | OFA-F-194 | The emails and notices use the library: one shared fill, subjects filled everywhere, %REPORT_TABLE% placed where the document puts it, the renewal confirmation regains %ADVISERNAME% (0203) | Functional | 3 | After OFA-F-192 | OFA-F-192 |
+| >> | 39 | OFA-F-192 | Wording field library, store side: one library of known fields with aliases, the upload check rewritten against it, the slot catalogue fixed (four Initial OFA slots added; InitialOfa, FollowUpEmail, TerminationEmail retired; nothing required), report fields and %TODAY%, working starters for the 16 business slots (migrations 0201-0202) | Functional | 5 | Review passed; merges with OFA-F-194 after the group's Integration; spec docs/hub/wording-field-library.md §5 | - |
+| >> | 39 | OFA-F-194 | The emails and notices use the library: one shared fill, subjects filled everywhere, %REPORT_TABLE% placed where the document puts it, the renewal confirmation regains %ADVISERNAME% (0203) | Functional | 3 | Building | OFA-F-192 |
 | | X | OFA-F-196 | Initial OFA from Luke's templates: four wording slots (electronic or print-and-sign, Estimate or Fixed), the prepare dialog asks Estimate or Fixed and whether the adviser nominates a Reference Date (design row O38), signing anchors mapped, four starters from Luke's documents (0204) | Functional | 5 | Group 41; blocked: six business questions for Muhammed (Reference Date fill, Authorised Representative number source, client name, per-provider fee, signers above two, a link wording in the print-and-sign templates) | OFA-F-192 |
 | | X | OFA-F-190 | Client renewal follow-up with our own wording: Annature's reminder cannot carry our subject or message. Options: (a) Annature's own reminder as is (2), (b) a fresh signing link from Annature in our own email (3, ps2's pick), (c) hold | Functional | 2-3 | Blocked: Muhammed picks a, b or c | OFA-F-130 |
 | | 40 | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
