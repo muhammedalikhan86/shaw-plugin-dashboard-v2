@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 04:57
+Updated: 2026-11-24 05:03
 
 ## Now (from 2026-11-24 02:00)
 
@@ -17,14 +17,13 @@ Updated: 2026-11-24 04:57
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 
-## Portfolio Services (pointer: group 49 from 2026-11-24)
+## Portfolio Services (pointer: parked after group 49; nothing unblocked)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
-| >> | 49 | OFA-F-191 | Report emails match Portfolio Services' own: the Pending table's columns become S Account, Account Name, Client Class, Adviser, Remuneration Source, Branch, Reference Date, Expiry Date, Renewal Status, Provider No., Fees, Comments; the Expired table's become Account No., Account Name, Adviser, Remuneration Source, Anniversary Day, Renewal Notice Due Date, Fee Cessation Date, Renewal Status, Branch, Client Class; the agreed fees for the past 12 months and the state's total lost stay on the Expired report. The app adds "No action is required." only when the Expired report is empty. %STATE_MANAGER_NAME% needs a rule when a state has several recipients | Functional | 5 | Building; ps2 adds the report fields in OFA-F-192 | W-20 |
 |---|---|---|---|---|---|---|---|
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
-| | X | - | Browser checks owed from groups 36 and 45, on the stack: B-233 opening month, B-235 row menu meets the card edge, B-237 Documents icon whole, B-241 table edges at 1440/1680/1920 (wide tables still scroll), F-189 Overview card | Look and Feel | 0 | Moved to the end sweep: two stack starts were killed for low memory on 2026-11-24 night; a restart needs Muhammed | - |
+| | X | - | Browser checks owed from groups 36, 45 and 49, on the stack: the Settings report preview (both tables, a wide table scrolls, the empty-Expired line), B-233 opening month, B-235 row menu meets the card edge, B-237 Documents icon whole, B-241 table edges at 1440/1680/1920 (wide tables still scroll), F-189 Overview card | Look and Feel | 0 | Moved to the end sweep: two stack starts were killed for low memory on 2026-11-24 night; a restart needs Muhammed | - |
 
 ## Portfolio Services 2 (pointer: group 39 running since 2026-11-24; then 41, 40)
 
@@ -36,7 +35,7 @@ Updated: 2026-11-24 04:57
 | | X | OFA-F-032 | Attachment mover: built, waiting on your SharePoint live check | Functional | - | After go-live | - |
 | | 40 | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
 | >> | 39 | OFA-F-192 | Wording field library, store side: one library of known fields with aliases, the upload check rewritten against it, the slot catalogue fixed (four Initial OFA slots added; InitialOfa, FollowUpEmail, TerminationEmail retired; nothing required), report fields and %TODAY%, working starters for the 16 business slots (migrations 0201-0202) | Functional | 5 | Review passed; merges with OFA-F-194 after the group's Integration; spec docs/hub/wording-field-library.md §5 | - |
-| >> | 39 | OFA-F-194 | The emails and notices use the library: one shared fill, subjects filled everywhere, %REPORT_TABLE% placed where the document puts it, the renewal confirmation regains %ADVISERNAME% (0203) | Functional | 3 | Building | OFA-F-192 |
+| >> | 39 | OFA-F-194 | The emails and notices use the library: one shared fill, subjects filled everywhere, %REPORT_TABLE% placed where the document puts it, the renewal confirmation regains %ADVISERNAME% (0203) | Functional | 3 | Building; also wires %TOTAL_FEES% to the weekly report's Fees column (OFA-F-191 is on main) | OFA-F-192 |
 | | X | OFA-F-196 | Initial OFA from Luke's templates: four wording slots (electronic or print-and-sign, Estimate or Fixed), the prepare dialog asks Estimate or Fixed and whether the adviser nominates a Reference Date (design row O38), signing anchors mapped, four starters from Luke's documents (0204) | Functional | 5 | Group 41; blocked: six business questions for Muhammed (Reference Date fill, Authorised Representative number source, client name, per-provider fee, signers above two, a link wording in the print-and-sign templates) | OFA-F-192 |
 | | X | OFA-F-190 | Client renewal follow-up with our own wording: Annature's reminder cannot carry our subject or message. Options: (a) Annature's own reminder as is (2), (b) a fresh signing link from Annature in our own email (3, ps2's pick), (c) hold | Functional | 2-3 | Blocked: Muhammed picks a, b or c | OFA-F-130 |
 | | 40 | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
