@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-23 16:47
+Updated: 2026-11-23 17:01
 
 ## Now (from 2026-11-24 02:00)
 
@@ -55,8 +55,8 @@ Updated: 2026-11-23 16:47
 |---|---|---|---|---|---|---|---|
 | | X | (to raise) | Wording field library (page side): the Wording page shows the whole field library (each field, what it fills, which slots take it) for anyone building a document, and each slot shows the fields it can fill; the upload check says "every field used will be filled" or refuses and names each field the slot cannot fill | Functional | ?? | Ruled by Muhammed 2026-11-23; spec docs/hub/wording-field-library.md §6; design rows W39-W43 sent to the designer 2026-11-23; builds after ps2's store side | ps2 field library row |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
-| | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Not sent yet; goes in the next designer prompt | - |
-| | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Not sent yet; goes in the next designer prompt; its @skip scenario is written now | - |
+| | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Sent to the designer 2026-11-23; waiting on the round | - |
+| | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Sent to the designer 2026-11-23; waiting on the round; its @skip scenario is written now | - |
 
 ## Advisor (pointer: parked after group 24; F-144 blocked on the design)
 
