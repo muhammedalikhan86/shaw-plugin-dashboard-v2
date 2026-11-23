@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 07:52
+Updated: 2026-11-24 08:18
 
 ## Now (from 2026-11-24 02:00)
 
@@ -25,7 +25,7 @@ Updated: 2026-11-24 07:52
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 | | X | - | Browser checks owed from groups 36, 45 and 49, on the stack: the Settings report preview (both tables, a wide table scrolls, the empty-Expired line), B-233 opening month, B-235 row menu meets the card edge, B-237 Documents icon whole, B-241 table edges at 1440/1680/1920 (wide tables still scroll), F-189 Overview card | Look and Feel | 0 | Moved to the end sweep: two stack starts were killed for low memory on 2026-11-24 night; a restart needs Muhammed | - |
 
-## Portfolio Services 2 (pointer: group 39 paused on its usage limit, code committed on its branch; then 41, 40)
+## Portfolio Services 2 (pointer: parked after group 39; groups 41 and 40 blocked)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
@@ -34,19 +34,17 @@ Updated: 2026-11-24 07:52
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
 | | X | OFA-F-032 | Attachment mover: built, waiting on your SharePoint live check | Functional | - | After go-live | - |
 | | 40 | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
-| >> | 39 | OFA-F-192 | Wording field library, store side: one library of known fields with aliases, the upload check rewritten against it, the slot catalogue fixed (four Initial OFA slots added; InitialOfa, FollowUpEmail, TerminationEmail retired; nothing required), report fields and %TODAY%, working starters for the 16 business slots (migrations 0201-0202) | Functional | 5 | Review passed; merges with OFA-F-194 after the group's Integration; spec docs/hub/wording-field-library.md §5 | - |
-| >> | 39 | OFA-F-194 | The emails and notices use the library: one shared fill, subjects filled everywhere, %REPORT_TABLE% placed where the document puts it, the renewal confirmation regains %ADVISERNAME% (0203) | Functional | 3 | In review, then Integration (paused: usage limit); wires %TOTAL_FEES% to the weekly report's Fees column (OFA-F-191 is on main) | OFA-F-192 |
 | | X | OFA-F-196 | Initial OFA from Luke's templates: four wording slots (electronic or print-and-sign, Estimate or Fixed), the prepare dialog asks Estimate or Fixed and whether the adviser nominates a Reference Date (design row O38), signing anchors mapped, four starters from Luke's documents (0204) | Functional | 5 | Group 41; blocked: six business questions for Muhammed (Reference Date fill, Authorised Representative number source, client name, per-provider fee, signers above two, a link wording in the print-and-sign templates) | OFA-F-192 |
 | | X | OFA-F-190 | Client renewal follow-up with our own wording: Annature's reminder cannot carry our subject or message. Options: (a) Annature's own reminder as is (2), (b) a fresh signing link from Annature in our own email (3, ps2's pick), (c) hold | Functional | 2-3 | Blocked: Muhammed picks a, b or c | OFA-F-130 |
+| | 40 | - | End sweep, on the stack: make test-data for migrations 0201-0203, and a look at the Wording page | Functional | 0 | End sweep | - |
 | | 40 | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 
-## Compliance (pointer: parked after group 44; F-053 waits on ps2)
+## Compliance (pointer: group 48 running: suite run, then B-125)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | X | COMPLIANCE-DASHBOARD-F-053 | Wording field library (page side): the Wording page shows the whole field library (each field, what it fills, which slots take it) for anyone building a document, and each slot shows the fields it can fill; the upload check says "every field used will be filled" or refuses and names each field the slot cannot fill | Functional | 5 | Ruled by Muhammed 2026-11-23; spec docs/hub/wording-field-library.md §6; design rows W39-W43 sent to the designer 2026-11-23; builds after ps2's store side | ps2 field library row |
-| | 48 | COMPLIANCE-DASHBOARD-B-124 | Wording catalogue matches ps2's new slots (drops InitialOfa, FollowUpEmail, TerminationEmail; adds the four Initial OFA slots); the field check accepts names with a space and the signing marks; the store tests follow the new refusal messages | Bug | 3 | Built and reviewed (0c6ddef9; B-125's plan row 0855ce2d rides with it); merged right after OFA-F-192, then Compliance's .NET suite runs | OFA-F-192 |
-| | 48 | COMPLIANCE-DASHBOARD-B-125 | The wording list reads which slots take a subject, and what each is for, from the database; Compliance's own document check knows the field aliases, refuses signing marks where a slot takes none, and reads headers and footers too | Bug | 3 | Builds once OFA-F-192 is on main | OFA-F-192 |
+| | X | COMPLIANCE-DASHBOARD-F-053 | Wording field library (page side): the Wording page shows the whole field library (each field, what it fills, which slots take it) for anyone building a document, and each slot shows the fields it can fill; the upload check says "every field used will be filled" or refuses and names each field the slot cannot fill | Functional | 5 | Ruled by Muhammed 2026-11-23; spec docs/hub/wording-field-library.md §6; design rows W39-W43 sent to the designer 2026-11-23; ps2's store side is on main | - |
+| >> | 48 | COMPLIANCE-DASHBOARD-B-125 | The wording list reads which slots take a subject, and what each is for, from the database; Compliance's own document check knows the field aliases, refuses signing marks where a slot takes none, and reads headers and footers too | Bug | 3 | Building (OFA-F-192 is on main) | - |
 | | 48 | - | Run M28 and M38 on the built app (stack) and drop M38's @not-built-COMPLIANCE-DASHBOARD-F-052 tag; both pass on the board | Functional | 0 | Folds into the next Compliance group | - |
 
 ## Advisor (pointer: parked after group 46; B-132 waits for a stack window, F-144 waits on Luke)
