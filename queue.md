@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-23 16:45
+Updated: 2026-11-23 17:00
 
 ## Shell (pointer: group 19 done; in-place Shell.WebAPI test window, then parked; queue empty)
 
@@ -29,8 +29,8 @@ Updated: 2026-11-23 16:45
 | | X | OFA-F-032 | Attachment mover: built, waiting on your SharePoint live check | Functional | - | After go-live | - |
 | | 35 | - | Test runbook OFA-F-099: the Act As account named has left the directory; name a current Compliance Team member instead | Functional | - | Go 2026-11-23 | - |
 | | X | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
-| >> | 35 | (new ID) | AnnatureInterfaceWebAPI: a lookup route, so a timed-out request can be checked before it is sent again (mock Annature only) | Functional | ?? | Go 2026-11-23; ps2 raises and sizes it | - |
-| | 35 | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Go 2026-11-23 | the lookup route |
+| >> | 35 | OFA-F-188 | AnnatureInterfaceWebAPI: a lookup route, so a timed-out request can be checked before it is sent again (mock Annature only) | Functional | 3 | Go 2026-11-23 | - |
+| | 35 | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Go 2026-11-23 | OFA-F-188 |
 | | X | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 
 ## Compliance (pointer: parked after group 23; the rest waits on design rows)
