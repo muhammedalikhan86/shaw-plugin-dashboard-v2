@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 02:16
+Updated: 2026-11-24 02:17
 
 ## Now (from 2026-11-24 02:00)
 
@@ -16,7 +16,7 @@ Updated: 2026-11-24 02:16
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 43 | (being raised) | The 40px icon in an empty state is clipped to its corner (the shared empty-state style loses to the icon's own 24px box); seen in Portfolio Services' empty Documents (DART) box and the record's not-found icons | Bug | 1 | Go 2026-11-24; runs alone because Portfolio Services' OFA-B-237 waits on it | - |
+| >> | 43 | SHELL-B-183 | The 40px icon in an empty state is clipped to its corner (the shared empty-state style loses to the icon's own 24px box); seen in Portfolio Services' empty Documents (DART) box and the record's not-found icons | Bug | 1 | Go 2026-11-24; runs alone because Portfolio Services' OFA-B-237 waits on it | - |
 
 ## Portfolio Services (pointer: group 36 running since 2026-11-24)
 
@@ -27,7 +27,7 @@ Updated: 2026-11-24 02:16
 | >> | 36 | OFA-B-219 | Expired report and the adviser's own fee-off mark: the row comes onto the Expired report when the OFA expired; not for a manual termination (the adviser closed the account) (query, API, export, screen) | Functional | ?? | Ruled by Muhammed 2026-11-23 (D-01); next PS group | - |
 | >> | 36 | OFA-B-233 | The monthly cycle: the Cycle picker opens on the cycle that is open. On 23-11 November is not open yet: it still shows, marked Not opened, but October (open) is picked (05) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
 | >> | 36 | OFA-B-235 | Arrangement record: the Platform accounts table does not use the full width of its card (08) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| >> | X | OFA-B-237 | Arrangement record: the icon in the empty Documents (DART) box is broken, drawn as a bare corner (07) | Bug | ?? | Blocked: waits on the shell's empty-state icon fix | Shell group 43 |
+| | X | OFA-B-237 | Arrangement record: the icon in the empty Documents (DART) box is broken, drawn as a bare corner (07) | Bug | ?? | Blocked: waits on the shell's empty-state icon fix | SHELL-B-183 |
 
 ## Portfolio Services 2 (pointer: group 35 resumed 2026-11-24; then 37 to 40)
 
