@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-23 15:30
+Updated: 2026-11-23 16:00
 
 ## Shell (pointer: group 19 done; in-place Shell.WebAPI test window, then parked; queue empty)
 
@@ -38,11 +38,10 @@ Updated: 2026-11-23 15:30
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Monday design sync | - |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
 
-## Advisor (pointer: group 24, F-162; F-144 blocked on the design)
+## Advisor (pointer: parked after group 24; F-144 blocked on the design)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 24 | ADVISOR-DASHBOARD-F-162 | Closure confirmation signed with the sending adviser's name: pass @SenderName in the preview and send calls, plus an endpoint test | Functional | 1 | Go 2026-11-23 (PS2 group 34 merged) | OFA-F-186 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
 ## Hub
