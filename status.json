@@ -72,9 +72,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 889.0,
+   "pointsDone": 892.0,
    "pointsRemaining": 31.0,
-   "pointsTotal": 920.0,
+   "pointsTotal": 923.0,
    "itemsRemaining": 12,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 161.12,
+  "pointsPerWorkingDayWholePeriod": 161.35,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2094.0,
-    "pointsDoneThatDay": 44.0
+    "pointsDone": 2097.0,
+    "pointsDoneThatDay": 47.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -307,7 +307,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 38.95,
-    "rateWhole": 65.87
+    "rateWhole": 66.1
    },
    "Advisor": {
     "optimistic": "2026-11-25",
@@ -337,7 +337,7 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 161.12,
+   "rateWhole": 161.35,
    "pointsRemaining": 74.0,
    "itemsRemaining": 28
   }
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T04:41:00+11:00",
+ "updatedAt": "2026-11-24T05:04:59+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2672,6 +2672,12 @@
    "change": "Advisor group 46 merged to main (99ef8570): ADVISOR-DASHBOARD-B-133 the questionnaire Notes name the author, not the login; B-134 four older board-check failures fixed or traced to board gaps (row B96). 3 points.",
    "pointsDone": 3.0,
    "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-24T05:04:59+11:00",
+   "change": "Portfolio Services group 49 merged to main (880c67fc): OFA-F-191 the weekly report emails show the same columns as the business's own reports, and the Settings preview shows them too. 3 points.",
+   "pointsDone": 3.0,
+   "pointsRaised": 3.0
   }
  ],
  "foundDuringBuild": {
