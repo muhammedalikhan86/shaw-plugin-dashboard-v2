@@ -72,9 +72,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 904.0,
+   "pointsDone": 908.0,
    "pointsRemaining": 34.0,
-   "pointsTotal": 938.0,
+   "pointsTotal": 942.0,
    "itemsRemaining": 15,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 163.65,
+  "pointsPerWorkingDayWholePeriod": 163.96,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2127.0,
-    "pointsDoneThatDay": 77.0
+    "pointsDone": 2131.0,
+    "pointsDoneThatDay": 81.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -307,7 +307,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 38.95,
-    "rateWhole": 67.02
+    "rateWhole": 67.33
    },
    "Advisor": {
     "optimistic": "2026-11-25",
@@ -337,7 +337,7 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 163.65,
+   "rateWhole": 163.96,
    "pointsRemaining": 72.0,
    "itemsRemaining": 30
   }
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T10:46:14+11:00",
+ "updatedAt": "2026-11-24T10:51:19+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2739,6 +2739,12 @@
    "at": "2026-11-24T10:46:14+11:00",
    "change": "Portfolio Services group 52 merged to main (7a685d2d): OFA-B-206, the Initial OFAs upload dialog shows the date hint \"On or before today.\" when an imported row has no form date (design rows O20 and O22); OFA-B-243, the board steps for O21 and O22 tidied, with O36 waiting on a shared test-step fix from Shell. Two items raised and held: OFA-B-249, an imported row shows NEW, as the board draws it; OFA-B-251, what the fee check banner's \"next on\" date means, waiting on Muhammed. Checks: Jest 1754 of 1754; board exceptions-report and intake 41 passed, 0 failed, 4 skipped. Next for Portfolio Services: group 53 (OFA-B-249).",
    "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-24T10:51:19+11:00",
+   "change": "Portfolio Services 2 group 42 merged to main (503b69f4): OFA-F-198, the test site's set-up scripts now build the stand-in warehouse tables in the Misc database and load the test data, with 2027 public holidays; the first live load ran (35 stand-in tables, 663 holiday rows). The job-tracking tables wait on OFA-B-236, raised and building. OFA-B-234, \"Add an account to this month\" removed from the Cull notes card (board row O44). 4 points. Checks: .NET 4049 passed, 0 failed, 2 skipped; Jest 1753; Pester 50 of 50. Next for Portfolio Services 2: group 43 (OFA-B-236, then OFA-B-230 and OFA-B-232).",
+   "pointsDone": 4.0,
+   "pointsRaised": 4.0
   }
  ],
  "foundDuringBuild": {
