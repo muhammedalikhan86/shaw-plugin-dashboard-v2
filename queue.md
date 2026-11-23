@@ -4,19 +4,14 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-23 11:45
+Updated: 2026-11-23 12:15
 
-## Shell (pointer: parked after group 18; queue empty)
+## Shell (pointer: group 19 done; in-place Shell.WebAPI test window, then parked; queue empty)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 1 | REL-001 | Decision record for the test site | Functional | 2 | Go 2026-11-23 | - |
-| | 1 | REL-003 | Test-site settings pattern and start-up guard (Shell.WebAPI file) | Functional | 5 | Go | REL-001 |
-| | 1 | REL-008 | Test-site build of the six front ends | Functional | 3 | Go | REL-001 |
-| | 1 | REL-009 | Deploy script: test-site target | Functional | 3 | Go | REL-003, REL-008 |
-| | 1 | REL-010 | Test-site runbook | Functional | 1 | Go | REL-002, REL-009 |
 
-## Portfolio Services (pointer: parked after group 16; only OFA-B-219 left, waiting on your yes/no)
+## Portfolio Services (pointer: group 17, REL-004 + PS test-site settings + REL-002)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
@@ -26,7 +21,7 @@ Updated: 2026-11-23 11:45
 | | X | OFA-B-219 | Expired report: an adviser's own fee-off mark should pull the row on, as a client closure's does (query, API, export, screen) | Functional | ?? | Awaiting user: business yes/no (default yes) | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 
-## Portfolio Services 2 (pointer: Luke's templates, proposal to the hub)
+## Portfolio Services 2 (pointer: group 34, Luke's templates)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
@@ -35,13 +30,15 @@ Updated: 2026-11-23 11:45
 | | X | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
 | | X | OFA-F-120, F-032 | Word converter and attachment mover: built, waiting on your end-to-end and SharePoint live checks | Functional | - | Blocked by you (Monday) | - |
 | | X | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
-| >> | 1 | OFA-F-158 + new items | Luke's templates in (renewal reminders, weekly Initial OFA, No OFA fee, closure/termination); State Manager emails 4 and 5 off; deceased-estate Back Office email off; client renewal follow-up (7) keeps its placeholder until Luke's template | Functional | 1+ (ps2 sizes) | Proposal coming to the hub | - |
+| >> | 34 | OFA-F-158, F-186, F-185, F-184 | Luke's templates: No OFA fee words, State Manager and Back Office emails off; client closure confirmation; weekly Initial OFA lines; renewal reminders table | Functional | 9 | Go 2026-11-23; closure greeting, I/We and per-account question with Muhammed | - |
+| | X | OFA-F-187 | Adviser's termination reminder email (new) | Functional | 3 | Held: Muhammed's intake | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 
-## Compliance (pointer: parked after group 22; the rest waits on design rows)
+## Compliance (pointer: group 23, Wording page subjects for four email slots)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| >> | 23 | (new) | Wording page: subject line and Used for line for four email slots | Functional | 2 | Go 2026-11-23 | - |
 | | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Monday design sync | - |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
