@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 10:39
+Updated: 2026-11-24 10:45
 
 ## Now (from 2026-11-24 09:00)
 
@@ -20,12 +20,11 @@ Updated: 2026-11-24 10:39
 | | 52 | (new Shell item) | make graph C=<component> rebuilds only that component's graph | Bug | - | After group 51 | - |
 | | X | D11, D14 | Shell error and empty states (a)-(f); landing page's needs-a-newer-shell card | Look and Feel | - | Later: the words are placeholders until the business supplies them | - |
 
-## Portfolio Services (groups 50 and 51 merged 2026-11-24; pointer: group 52)
+## Portfolio Services (group 52 merged 2026-11-24; pointer: group 53)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 52 | O20, O22, O36, O21 | Initial OFAs: paper-signed upload on an imported row with no form date, and its date hint (OFA-B-206); the SOA field's label (OFA-B-243); no Sync fees button on the Exceptions report, if still in the app | Bug | - | Building; designer drew them 2026-11-24; O20's hint words to be confirmed | - |
-| | 53 | OFA-B-249 | Initial OFAs: an imported row shows NEW with the tip "Recorded in Complii before go-live", as the board's S18877 | Look and Feel | 1 | After group 52 | - |
+| >> | 53 | OFA-B-249 | Initial OFAs: an imported row shows NEW with the tip "Recorded in Complii before go-live", as the board's S18877 | Look and Feel | 1 | Building | - |
 | | X | OFA-B-251 | Fee check banner: what date "next on" means (the app has no next-sync date; it checks each business day until the month's fees arrive) | Functional | - | Later: Muhammed decides | - |
 | | X | O39 | Settings report preview: the new report columns (OFA-F-191) | Functional | - | Later: Muhammed confirms the designer's guessed values (Renewal Notice Due Date = +60 days and others) | - |
 | | X | O40, O41, O42 | Remove the separate Adviser review answers card; could-not-load card on six screens; the Import page as drawn | Look and Feel | - | Later: O41's page names and O42's words wait for the business | - |
