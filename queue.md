@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 09:01
+Updated: 2026-11-24 09:04
 
 ## Now (from 2026-11-24 09:00)
 
@@ -22,7 +22,7 @@ Updated: 2026-11-24 09:01
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 50 | (new PS item) | Test site in Misc, Portfolio Services: its settings point at Misc; its warehouse and job-tracking reads use the Misc sections; mail on the test site comes from and goes to the UAT mailbox only | Functional | 3 | Building; critical path; spec docs/hub/uat-in-misc.md §2.2; the mailbox address comes from Muhammed | Shell group 48 |
+| >> | 50 | (new PS item) | Test site in Misc, Portfolio Services: its settings point at Misc; its warehouse and job-tracking reads use the Misc sections; mail on the test site comes from and goes to the UAT mailbox only | Functional | 5 | Building; critical path; spec docs/hub/uat-in-misc.md §2.2; the mailbox address comes from Muhammed | Shell group 48 |
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 | | X | - | Browser checks owed from groups 36, 45 and 49, on the stack: the Settings report preview (both tables, a wide table scrolls, the empty-Expired line), B-233 opening month, B-235 row menu meets the card edge, B-237 Documents icon whole, B-241 table edges at 1440/1680/1920 (wide tables still scroll), F-189 Overview card | Look and Feel | 0 | Moved to the end sweep: two stack starts were killed for low memory on 2026-11-24 night; a restart needs Muhammed | - |
@@ -31,7 +31,7 @@ Updated: 2026-11-24 09:01
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 42 | (new ps2 item) | Test site in Misc, set-up scripts: build the stand-in warehouse and job tables in their Misc sections, load the test data, seed and reset; public holidays for 2027 included; scripts use the one Misc login and refuse any other database | Functional | 3 | Building; critical path; spec docs/hub/uat-in-misc.md §2.3; a live run waits for the Misc login | - |
+| >> | 42 | OFA-F-198 | Test site in Misc, set-up scripts: build the stand-in warehouse and job tables in their Misc sections, load the test data, seed and reset; public holidays for 2027 included; scripts use the one Misc login and refuse any other database; adds the missing Adviser and ShawCentral stand-in tables | Functional | 3-5 | Building; critical path; spec docs/hub/uat-in-misc.md §2.3; a live run waits for the Misc login | - |
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | IT ticket raised; approval to run expected Wed 2026-11-25 | - |
 | | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Blocked: the warehouse refuses both the read-only login and Windows sign-in (2026-11-24 03:2x); resumes when it is back | - |
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
@@ -54,7 +54,7 @@ Updated: 2026-11-24 09:01
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 47 | (new Advisor item) | Test site in Misc, Adviser Dashboard: its settings point at Misc; its directory read uses the Misc warehouse section | Functional | 2 | Building; critical path; spec docs/hub/uat-in-misc.md §2.4 | Shell group 48 |
+| >> | 47 | (new Advisor item) | Test site in Misc, Adviser Dashboard: its settings point at Misc; its directory read uses the Misc warehouse section | Functional | 3 | Building; critical path; spec docs/hub/uat-in-misc.md §2.4 | Shell group 48 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke. Asked 2026-11-23 what the Adviser's OFA History tab should show, with the Portfolio Services and Compliance tabs as examples; then the design | - |
 | | X | ADVISOR-DASHBOARD-B-132 | OFA questionnaire still stutters after ADVISOR-DASHBOARD-B-130 and SHELL-B-184: each answer edit and Select all block the screen for about 1 s; profile a production build in a real browser and fix it (shared shell code goes to Shell) | Bug | 3 | Blocked: needs a stack (production build in a real browser); no stack tonight |  - |
 
