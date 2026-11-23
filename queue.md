@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 04:07
+Updated: 2026-11-24 04:10
 
 ## Now (from 2026-11-24 02:00)
 
@@ -46,7 +46,7 @@ Updated: 2026-11-24 04:07
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | COMPLIANCE-DASHBOARD-F-053 | Wording field library (page side): the Wording page shows the whole field library (each field, what it fills, which slots take it) for anyone building a document, and each slot shows the fields it can fill; the upload check says "every field used will be filled" or refuses and names each field the slot cannot fill | Functional | 5 | Ruled by Muhammed 2026-11-23; spec docs/hub/wording-field-library.md §6; design rows W39-W43 sent to the designer 2026-11-23; builds after ps2's store side | ps2 field library row |
-| | 48 | (to raise) | Wording catalogue matches ps2's new slots (drop InitialOfa and FollowUpEmail, add the four Initial OFA slots); prepared on the branch, merged right after OFA-F-192 | Bug | ?? | Preparing; lands with OFA-F-192 | OFA-F-192 |
+| | 48 | COMPLIANCE-DASHBOARD-B-124 | Wording catalogue matches ps2's new slots (drops InitialOfa, FollowUpEmail, TerminationEmail; adds the four Initial OFA slots) | Bug | 1 | Built and reviewed (048c2fe8); merged right after OFA-F-192, then Compliance's .NET suite runs | OFA-F-192 |
 | | 48 | - | Run M28 and M38 on the built app (stack) and drop M38's @not-built-COMPLIANCE-DASHBOARD-F-052 tag; both pass on the board | Functional | 0 | Folds into the next Compliance group | - |
 
 ## Advisor (pointer: group 46 running since 2026-11-24; F-144 waits on Luke)
