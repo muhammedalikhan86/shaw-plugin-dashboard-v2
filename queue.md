@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 09:26
+Updated: 2026-11-24 09:27
 
 ## Now (from 2026-11-24 09:00)
 
@@ -43,12 +43,12 @@ Updated: 2026-11-24 09:26
 | | 40 | - | End sweep, on the stack: make test-data for migrations 0201-0203, and a look at the Wording page | Functional | 0 | End sweep | - |
 | | 40 | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 
-## Compliance (pointer: group 49 from 2026-11-24)
+## Compliance (pointer: group 50 from 2026-11-24)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 49 | COMPLIANCE-DASHBOARD-F-053 | Wording field library (page side): the Wording page shows the whole field library (each field, what it fills, which slots take it) for anyone building a document, and each slot shows the fields it can fill; the upload check says "every field used will be filled" or refuses and names each field the slot cannot fill | Functional | 5 | Building; spec docs/hub/wording-field-library.md §6; design rows W39-W43 back from the designer 2026-11-23; also: the load dialog shows the check's outcomes, and Missing/Required leave the Wording page | - |
-| | 50 | (new Compliance item) | Test site in Misc, Compliance Dashboard: reads the one Misc login file like the other APIs; settings point at Misc | Functional | 1 | After F-053; spec docs/hub/uat-in-misc.md §2.5 | Shell group 48 |
+| | 49 | COMPLIANCE-DASHBOARD-F-053 | Wording field library (page side): the Wording page shows the whole field library (each field, what it fills, which slots take it) for anyone building a document, and each slot shows the fields it can fill; the upload check says "every field used will be filled" or refuses and names each field the slot cannot fill | Functional | 5 | Ready to merge (waits for Shell group 48's commit on main); spec docs/hub/wording-field-library.md §6; design rows W39-W43 back from the designer 2026-11-23; also: the load dialog shows the check's outcomes, and Missing/Required leave the Wording page | - |
+| >> | 50 | COMPLIANCE-DASHBOARD-F-054 | Test site in Misc, Compliance Dashboard: reads the one Misc login file like the other APIs; settings point at Misc | Functional | 1 | Building; spec docs/hub/uat-in-misc.md §2.5 | Shell group 48 |
 | | X | - | Run M28 and M38 on the built app (stack) and drop M38's @not-built-COMPLIANCE-DASHBOARD-F-052 tag; both pass on the board | Functional | 0 | End sweep: needs a stack window | - |
 
 ## Advisor (pointer: group 47 from 2026-11-24; B-132 waits for a stack window, F-144 waits on Luke)
