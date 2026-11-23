@@ -4,11 +4,11 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 03:48
+Updated: 2026-11-24 03:49
 
 ## Now (from 2026-11-24 02:00)
 
-1. One stack up at a time, across every checkout. The hub hands the stack out and takes it back; a worker asks the hub before `make up` and says when it has run `make down`.
+1. No `make up` for the rest of the night of 2026-11-24: two stack starts were killed for low memory, and a restart needs Muhammed. Stack checks are listed as owed for the end sweep. Board-target runs (artboard server only) are fine.
 2. Stack order: ps2 (group 35, then the Preview bypass), then Portfolio Services (OFA-B-219 and its three bugs), then Advisor (the bell item and its six bugs). A worker builds and runs Jest and its own .NET tests without the stack, and asks for it only for business tests, e2e and screen checks.
 3. No idle worker: when a worker's next item is blocked (external party, manual testing, keys, design rows), it takes its next unblocked item, including the testing-run bugs, rather than wait. Compliance and Shell have nothing unblocked: they stay parked unless the hub routes work to them.
 
@@ -24,7 +24,7 @@ Updated: 2026-11-24 03:48
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 | >> | 48 | OFA-B-245 | Three more stamps still show the login, not the name: Expired report Confirmed off "ConfirmedBy", report closure "RecordedBy", and the arrangement record's closure RecordedBy / FeeMarkedOffBy; same lookup as OFA-B-239 | Bug | 1 | Building | OFA-B-239 |
-| | 48 | - | Browser checks owed from groups 36 and 45, on the stack: B-233 opening month, B-235 row menu meets the card edge, B-237 Documents icon whole, B-241 table edges at 1440/1680/1920 (wide tables still scroll), F-189 Overview card | Look and Feel | 0 | After OFA-B-245; needs the stack | - |
+| | X | - | Browser checks owed from groups 36 and 45, on the stack: B-233 opening month, B-235 row menu meets the card edge, B-237 Documents icon whole, B-241 table edges at 1440/1680/1920 (wide tables still scroll), F-189 Overview card | Look and Feel | 0 | Moved to the end sweep: two stack starts were killed for low memory on 2026-11-24 night; a restart needs Muhammed | - |
 
 ## Portfolio Services 2 (pointer: group 37 running since 2026-11-24; then 39, 40)
 
