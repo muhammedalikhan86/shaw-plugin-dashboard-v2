@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 04:02
+Updated: 2026-11-24 04:06
 
 ## Now (from 2026-11-24 02:00)
 
@@ -20,7 +20,7 @@ Updated: 2026-11-24 04:02
 ## Portfolio Services (pointer: group 49 from 2026-11-24)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
-| >> | 49 | (to raise) | Report emails match Portfolio Services' own: the Pending table's columns become S Account, Account Name, Client Class, Adviser, Remuneration Source, Branch, Reference Date, Expiry Date, Renewal Status, Provider No., Fees, Comments; the Expired table's become Account No., Account Name, Adviser, Remuneration Source, Anniversary Day, Renewal Notice Due Date, Fee Cessation Date, Renewal Status, Branch, Client Class; the agreed fees for the past 12 months and the state's total lost stay on the Expired report. The app adds "No action is required." only when the Expired report is empty. %STATE_MANAGER_NAME% needs a rule when a state has several recipients | Functional | ?? | Moved from ps2 2026-11-24; PS builds the tables and the empty line, ps2 adds the report fields to the library | W-20 |
+| >> | 49 | OFA-F-191 | Report emails match Portfolio Services' own: the Pending table's columns become S Account, Account Name, Client Class, Adviser, Remuneration Source, Branch, Reference Date, Expiry Date, Renewal Status, Provider No., Fees, Comments; the Expired table's become Account No., Account Name, Adviser, Remuneration Source, Anniversary Day, Renewal Notice Due Date, Fee Cessation Date, Renewal Status, Branch, Client Class; the agreed fees for the past 12 months and the state's total lost stay on the Expired report. The app adds "No action is required." only when the Expired report is empty. %STATE_MANAGER_NAME% needs a rule when a state has several recipients | Functional | 5 | Building; ps2 adds the report fields in OFA-F-192 | W-20 |
 |---|---|---|---|---|---|---|---|
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
