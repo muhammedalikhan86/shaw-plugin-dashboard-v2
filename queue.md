@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 03:49
+Updated: 2026-11-24 03:52
 
 ## Now (from 2026-11-24 02:00)
 
@@ -56,8 +56,8 @@ Updated: 2026-11-24 03:49
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke. Asked 2026-11-23 what the Adviser's OFA History tab should show, with the Portfolio Services and Compliance tabs as examples; then the design | - |
-| >> | 46 | (to raise) | 4 older board-run failures: Closures (1), S-Account history (3); folded into 41 if they touch its Closures files | Bug | ?? | Building | - |
-| >> | 46 | ADVISOR-DASHBOARD-B-132 | OFA questionnaire still stutters after ADVISOR-DASHBOARD-B-130 and SHELL-B-184: each answer edit and Select all block the screen for about 1 s; profile a production build in a real browser and fix it (shared shell code goes to Shell) | Bug | 3 | Building | - |
+| >> | 46 | ADVISOR-DASHBOARD-B-134 | 4 older board-check failures: Closures "Confirmed to the client" on S19780; S-Account Account History "Show all events" filter, "No history matches", "Hold extended to"; fit each to the board or raise a design row | Bug | 2 | Building | - |
+| | X | ADVISOR-DASHBOARD-B-132 | OFA questionnaire still stutters after ADVISOR-DASHBOARD-B-130 and SHELL-B-184: each answer edit and Select all block the screen for about 1 s; profile a production build in a real browser and fix it (shared shell code goes to Shell) | Bug | 3 | Blocked: needs a stack (production build in a real browser); no stack tonight |  - |
 | >> | 46 | ADVISOR-DASHBOARD-B-133 | OFA questionnaire Notes cell shows a raw login ("Entered by the OFA Team · TESTDATA\corinne.abbott"), not the name; check first whether only the test data is at fault | Bug | 1 | Building | - |
 
 ## Hub
