@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-23 12:15
+Updated: 2026-11-23 15:30
 
 ## Shell (pointer: group 19 done; in-place Shell.WebAPI test window, then parked; queue empty)
 
@@ -19,7 +19,7 @@ Updated: 2026-11-23 12:15
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 | | X | OFA-B-219 | Expired report: an adviser's own fee-off mark should pull the row on, as a client closure's does (query, API, export, screen) | Functional | ?? | Awaiting user: business yes/no (default yes) | - |
 
-## Portfolio Services 2 (pointer: group 34, Luke's templates)
+## Portfolio Services 2 (pointer: parked after group 34 merged; the rest is waiting on you, Luke or IT)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
@@ -27,8 +27,6 @@ Updated: 2026-11-23 12:15
 | | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Waiting on Luke: unredacted, most current master spreadsheet asked for (W-12); before go-live | - |
 | | X | OFA-F-120, F-032 | Word converter and attachment mover: built, waiting on your end-to-end and SharePoint live checks | Functional | - | After go-live. F-120: your local check, needs a ShawWord app login (tenant, client ID, secret). F-032: your SharePoint live check | - |
 | | X | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
-| >> | 34 | OFA-F-158, F-186, F-185, F-184 | Luke's templates: No OFA fee words, State Manager and Back Office emails off; client closure confirmation; weekly Initial OFA lines; renewal reminders table | Functional | 9 | Go 2026-11-23; template answers given | - |
-| | 34 | OFA-F-187 | Adviser's termination reminder email (new) | Functional | 5 | Taken in 2026-11-23; template "OFA Termination – Action Required" | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 | | X | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 
@@ -40,11 +38,11 @@ Updated: 2026-11-23 12:15
 | | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Monday design sync | - |
 | | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Monday design sync; its @skip scenario is written now | - |
 
-## Advisor (pointer: group 24 waits on PS2 group 34; F-144 blocked on the design)
+## Advisor (pointer: group 24, F-162; F-144 blocked on the design)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | 24 | ADVISOR-DASHBOARD-F-162 | Closure confirmation signed with the sending adviser's name: pass @SenderName in the preview and send calls, plus an endpoint test | Functional | 1 | Go once PS2 group 34 is merged (needs migration 0189) | OFA-F-186 |
+| >> | 24 | ADVISOR-DASHBOARD-F-162 | Closure confirmation signed with the sending adviser's name: pass @SenderName in the preview and send calls, plus an endpoint test | Functional | 1 | Go 2026-11-23 (PS2 group 34 merged) | OFA-F-186 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
 ## Hub
