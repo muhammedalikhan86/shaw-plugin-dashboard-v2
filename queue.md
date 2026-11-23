@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 02:19
+Updated: 2026-11-24 02:24
 
 ## Now (from 2026-11-24 02:00)
 
@@ -27,6 +27,7 @@ Updated: 2026-11-24 02:19
 | >> | 36 | OFA-B-233 | The monthly cycle: the Cycle picker opens on the cycle that is open. On 23-11 November is not open yet: it still shows, marked Not opened, but October (open) is picked (05) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
 | >> | 36 | OFA-B-235 | Arrangement record: the Platform accounts table does not use the full width of its card (08) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
 | >> | 36 | OFA-B-237 | Arrangement record: the icon in the empty Documents (DART) box is broken, drawn as a bare corner (07) | Bug | ?? | Unblocked 2026-11-24: SHELL-B-183 is on main; Portfolio Services confirms the icon | - |
+| | 45 | (to raise) | Overview top row as the designer redrew it on Muhammed's ask: Days to Expiry Date, Client closures on the 10-day clock, Needs attention (two counters: Renewal notices not fully signed, Open requests to the Back Office); the Back Office requests card goes; scenarios and layout checks follow; plus the 4 older board-run failures (Sync fees 2, Intake 2) | Look and Feel | ?? | After group 36; the card title and labels are the designer's words, waiting on Muhammed to confirm | - |
 
 ## Portfolio Services 2 (pointer: group 35 resumed 2026-11-24; then 37 to 40)
 
@@ -49,14 +50,13 @@ Updated: 2026-11-24 02:19
 | | 40 | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 | | 38 | (to raise) | Reference paths: the business's emails and the starters moved on 2026-11-23 into `docs/stash/OFA Workflow/references/Wording/` (index in its README.md). Update the old paths in the Portfolio Services handoff (`...references\Email Templates\` becomes `...references\Wording\Email Templates\`) and PMBook (OFA-F-016 sources and OFA-F-187, `references/Email Templates/` becomes `references/Wording/Email Templates/`); the hub left them because ps2 has uncommitted edits in both | Docs | 0 | Fold into the next group's finalizers | - |
 
-## Compliance (pointer: parked after group 42; the rest waits on design rows)
+## Compliance (pointer: group 44 running since 2026-11-24)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | (to raise) | Wording field library (page side): the Wording page shows the whole field library (each field, what it fills, which slots take it) for anyone building a document, and each slot shows the fields it can fill; the upload check says "every field used will be filled" or refuses and names each field the slot cannot fill | Functional | ?? | Ruled by Muhammed 2026-11-23; spec docs/hub/wording-field-library.md §6; design rows W39-W43 sent to the designer 2026-11-23; builds after ps2's store side | ps2 field library row |
-| | X | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | In progress: the 24 still off each wait on a design row, a held item or B-091's board | - |
-| | X | Design row M39 | The outbox-sent closure confirmation has no file at the source; the board drops that attachment | Look | - | Sent to the designer 2026-11-23; waiting on the round | - |
-| | X | Design row M38 | Days colour: the board draws one error band at 30 days or fewer, the row has four bands | Look | - | Sent to the designer 2026-11-23; waiting on the round; its @skip scenario is written now | - |
+| >> | 44 | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every UI item (the rest) | Functional | 3 | Go 2026-11-24: switch on the scenarios for the rows the designer finished, update the 17 board-run failures, write P92, P93 and W38 scenarios, fix S6 | - |
+| >> | 44 | COMPLIANCE-DASHBOARD-F-005 (M38) | Signing and expiry: days to the Expiry Date in the four colour bands (Pending, Expired, Confirmed off), from the shell's status tokens | Functional | ?? | Go 2026-11-24; board drawn | - |
 
 ## Advisor (pointer: group 41 running since 2026-11-24; F-144 waits on Luke)
 
@@ -70,6 +70,7 @@ Updated: 2026-11-24 02:19
 | >> | 41 | ADVISOR-DASHBOARD-B-129 | OFA questionnaire: on a row the OFA Team entered, the adviser changed the forecast, saw it would not be saved, and the new value stayed. The field must be locked when it cannot be saved, or go back to the OFA Team's value (04) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
 | >> | 41 | ADVISOR-DASHBOARD-B-130 | OFA questionnaire feels jerky when editing and when selecting all rows (no screenshot) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
 | >> | 41 | ADVISOR-DASHBOARD-B-131 | S-Account notes show the Windows sign-in name (SHAW\muhammedali.khan); show the person's display name, as Compliance already does (06; 09 shows it right) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
+| | 46 | (to raise) | 4 older board-run failures: Closures (1), S-Account history (3); folded into 41 if they touch its Closures files | Bug | ?? | After group 41 | - |
 
 ## Hub
 
@@ -80,6 +81,5 @@ Deployment and testing (from 2026-11-23): the work left is the REL- stack in `do
 3. Waiting on you: push main; the SyncFee grant: OFA-F-160 is on main, so the gMSA's EXECUTE on dbo.SyncFee can be dropped on the server (PS removes line 3 of SyncFee-grants.sql in group 10); rerun the OFA-S-005 spike on the unredacted master spreadsheet (scripts in the PS checkout, spikes/OFA-S-005, uncommitted); check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest (another day); the OFA-S-001 owner questions: DART's open-a-document URL and whether staff have DART logins (OFA-F-145 and F-055 are built behind Dart:DocumentLinkTemplate, off until it is set); PS's 8 production settings.
 4. 2026-11-24, with the stack up: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database through the Wording page's upload, so each slot shows the business wording, not the [Test data] text. NoOfaFeeAdvisorEmail and RenewalConfirmation wait for ps2's field-library fix.
 
-Designer round done 2026-11-23 17:16: not synced yet. Covers the W41 follow-up and correction, M38/M39, every open Compliance row, the M31 undo, and Muhammed's own Portfolio Services Overview changes (record those from the designer's log, no row). Run sync-artboards when Muhammed says sync.
 
 Push: `git -C C:/Users/muhammedali.khan/source/repos/shaw-plugin-dashboard push origin main`
