@@ -44,7 +44,7 @@ Updated: 2026-11-23 12:15
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| | 24 | (new, from ps2) | Closure confirmation signed with the sending adviser's name: pass @SenderName in the preview and send calls, plus an endpoint test | Functional | 1 | Go once PS2 group 34 is merged (needs migration 0189) | OFA-F-186 |
+| | 24 | ADVISOR-DASHBOARD-F-162 | Closure confirmation signed with the sending adviser's name: pass @SenderName in the preview and send calls, plus an endpoint test | Functional | 1 | Go once PS2 group 34 is merged (needs migration 0189) | OFA-F-186 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked by the design, not drawn yet (Luke to show how Complii draws it) | - |
 
 ## Hub
