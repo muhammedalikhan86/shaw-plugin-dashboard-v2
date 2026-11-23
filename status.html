@@ -8,12 +8,12 @@
 <style>
 /* Numbers come from status.json, which the Hub session refreshes. This page only draws them. */
 :root{--bg:#F4F4F4;--card:#FFFFFF;--ink:#1A1A1A;--muted:#5C5C5C;--faint:#898781;--line:#E0E0E0;--grid:#E1E0D9;--accent:#E8501E;
-  --done:#2a78d6;--done-soft:#b7d3f6;--track:#ECEBE7;--weekend:#F1F0EC;--forecast:#2a78d6;--added:#d0342c;--added-soft:#f3b9b5;
+  --done:#2a78d6;--done-soft:#b7d3f6;--track:#ECEBE7;--weekend:#F1F0EC;--forecast:#2a78d6;--added:#d0342c;--added-soft:#f3b9b5;--deploy:#e8830c;--deploy-soft:#f7d0a1;
   --ok:#0ca30c;--warn:#fab219;--idle:#898781}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--grid:#2c2c2a;--accent:#FF6A33;
-  --done:#3987e5;--done-soft:#184f95;--track:#2A2A28;--weekend:#191918;--forecast:#3987e5;--added:#f0605a;--added-soft:#7a2a27}}
+  --done:#3987e5;--done-soft:#184f95;--track:#2A2A28;--weekend:#191918;--forecast:#3987e5;--added:#f0605a;--added-soft:#7a2a27;--deploy:#f59a2e;--deploy-soft:#7a4a14}}
 :root[data-theme="dark"]{--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--grid:#2c2c2a;--accent:#FF6A33;
-  --done:#3987e5;--done-soft:#184f95;--track:#2A2A28;--weekend:#191918;--forecast:#3987e5;--added:#f0605a;--added-soft:#7a2a27}
+  --done:#3987e5;--done-soft:#184f95;--track:#2A2A28;--weekend:#191918;--forecast:#3987e5;--added:#f0605a;--added-soft:#7a2a27;--deploy:#f59a2e;--deploy-soft:#7a4a14}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/22px Roboto,"Helvetica Neue",Arial,sans-serif}
 header{background:#000;padding:16px}
@@ -89,6 +89,15 @@ details.acc[open]>summary{border-bottom:1px solid var(--line);border-radius:12px
 .found .fig{font-variant-numeric:tabular-nums}
 .found .bar{flex:0 0 160px}
 .found p{flex:1 1 100%;margin:0;color:var(--muted);font-size:13px;line-height:18px}
+/* Pace: deployment and testing work is orange; points added (found along the way) stay red in every phase. */
+.sw.deploy{background:var(--deploy)}
+.pace-deploy{fill:var(--deploy)}
+.pace-deploy.we{fill:var(--deploy-soft)}
+.tip-deploy{color:var(--deploy)}
+/* Timeline: about one month visible, the rest scrolls sideways; the row names stay put. */
+.tlwrap{display:flex;align-items:flex-start;overflow-x:auto;overscroll-behavior-x:contain}
+.tlwrap svg{flex:none}
+.tl-labels{position:sticky;left:0;z-index:1;background:var(--card);border-right:1px solid var(--line)}
 h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
 .stat.card .value{font-size:28px;line-height:36px}
 </style>
@@ -107,14 +116,14 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
 <p class="sub">Actual dates are solid; forecast dates are striped, with the optimistic to pessimistic range as a whisker.</p>
 <div class="card">
 <div class="legend"><span><i class="sw" style="background:var(--done)"></i>Actual</span><span><i class="sw" style="background:repeating-linear-gradient(135deg,var(--forecast) 0 3px,transparent 3px 6px);border:1px solid var(--forecast)"></i>Forecast (likely)</span><span><svg width="18" height="10"><line x1="1" y1="5" x2="17" y2="5" stroke="currentColor" stroke-width="2"/><line x1="1" y1="1" x2="1" y2="9" stroke="currentColor" stroke-width="2"/><line x1="17" y1="1" x2="17" y2="9" stroke="currentColor" stroke-width="2"/></svg>Forecast range</span><span><svg width="12" height="12"><path d="M6 1 L11 6 L6 11 L1 6Z" fill="var(--ink)"/></svg>Event</span><span><i class="sw" style="background:var(--accent);width:2px"></i>Today</span><span><i class="sw" style="background:var(--weekend);border:1px solid var(--line)"></i>Weekend</span></div>
-<div class="chartwrap"><svg id="timeline" role="img" aria-label="Project timeline"></svg></div>
+<div class="tlwrap" id="tlwrap"><svg id="timelineLabels" class="tl-labels" aria-hidden="true"></svg><svg id="timeline" role="img" aria-label="Project timeline"></svg></div>
 </div>
 <div class="card" style="margin-top:16px;padding:0"><details class="acc"><summary>Timeline dates</summary><div class="tablewrap"><table id="dates"></table></div></details></div>
 
 <h2>Pace</h2>
-<p class="sub">Points completed (blue) and points added to scope (red) each day. Weekend bars are overnight runs: their points count, but weekends never count as days in the forecast.</p>
+<p class="sub">Points completed (blue; orange for deployment and testing work) and points added to scope (red, in every phase) each day. Weekend bars are overnight runs: their points count, but weekends never count as days in the forecast.</p>
 <div class="card">
-<div class="legend"><span><i class="sw" style="background:var(--done)"></i>Points done</span><span><i class="sw" style="background:var(--added)"></i>Points added</span><span><i class="sw" style="background:var(--done-soft)"></i>Weekend (overnight runs)</span><span><i class="sw" style="background:var(--weekend);border:1px solid var(--line)"></i>Weekend</span></div>
+<div class="legend"><span><i class="sw" style="background:var(--done)"></i>Points done</span><span><i class="sw deploy"></i>Points done: deployment and testing</span><span><i class="sw" style="background:var(--added)"></i>Points added</span><span><i class="sw" style="background:var(--done-soft)"></i>Weekend (overnight runs)</span><span><i class="sw" style="background:var(--weekend);border:1px solid var(--line)"></i>Weekend</span></div>
 <div class="chartwrap"><svg id="pace" role="img" aria-label="Points completed and points added per day"></svg></div>
 <p class="sub" id="paceNote" style="margin:10px 0 0"></p>
 </div>
@@ -273,6 +282,8 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
     var ser=S.velocity.series,svg=$("pace");
     var W=Math.max(640,$("pace").parentNode.clientWidth||640),H=240,L=40,R=8,T=16,B=40;
     svg.setAttribute("viewBox","0 0 "+W+" "+H);svg.setAttribute("width",W);svg.setAttribute("height",H);
+    // Deployment and testing points done each day, from log lines that name a REL- item.
+    var dep={};(S.log||[]).forEach(function(e){if(!(e.pointsDone>0)||!/\bREL-\d+/.test(e.change||""))return;var k=String(e.at).slice(0,10);dep[k]=(dep[k]||0)+e.pointsDone;});
     var add={},addFrom=null;(S.log||[]).forEach(function(e){if(e.pointsRaised==null)return;var k=String(e.at).slice(0,10);add[k]=(add[k]||0)+e.pointsRaised;if(!addFrom||k<addFrom)addFrom=k;});
     var max=0;ser.forEach(function(p){max=Math.max(max,p.pointsDoneThatDay,add[p.date]||0);});
     var step=max>100?50:25,top=Math.ceil(max/step)*step;
@@ -285,12 +296,17 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
       var t=d(p.date),we=weekend(t),x=L+i*cw;
       if(we)s("rect",{x:x,y:T,width:cw,height:H-T-B,fill:"var(--weekend)"},svg);
       var v=p.pointsDoneThatDay,a=add[p.date],hasA=addFrom&&p.date>=addFrom,bw=Math.max(2,(cw-6)/2),bx=x+(cw-2*bw)/2;
-      var bar=function(val,bx0,fill){if(!(val>0))return;var h=Math.max(2,y(0)-y(val)),r=Math.min(4,bw/2,h);
-        s("path",{d:"M"+bx0+","+y(0)+"V"+(y(0)-h+r)+"q0,-"+r+" "+r+",-"+r+"H"+(bx0+bw-r)+"q"+r+",0 "+r+","+r+"V"+y(0)+"Z",fill:fill},svg);};
-      bar(v,bx,we?"var(--done-soft)":"var(--done)");
+      var dv=Math.min(v>0?v:0,dep[p.date]||0),bv=(v>0?v:0)-dv;
+      var bar=function(val,bx0,fill,base,cls){if(!(val>0))return;base=base||0;var y0=y(base),h=Math.max(2,y0-y(base+val)),r=Math.min(4,bw/2,h);
+        var a0={d:"M"+bx0+","+y0+"V"+(y0-h+r)+"q0,-"+r+" "+r+",-"+r+"H"+(bx0+bw-r)+"q"+r+",0 "+r+","+r+"V"+y0+"Z"};if(cls)a0["class"]=cls;else a0.fill=fill;
+        s("path",a0,svg);};
+      // Build work at the bottom, deployment and testing stacked on top in orange.
+      if(dv>0&&bv>0)s("rect",{x:bx,y:y(bv)-1,width:bw,height:y(0)-y(bv)+1,fill:we?"var(--done-soft)":"var(--done)"},svg);
+      else bar(bv,bx,we?"var(--done-soft)":"var(--done)");
+      bar(dv,bx,null,bv,we?"pace-deploy we":"pace-deploy");
       bar(a,bx+bw,we?"var(--added-soft)":"var(--added)");
       var hit=s("rect",{x:x,y:T,width:cw,height:H-T-B,fill:"transparent",tabindex:0,
-        "data-tip":"<b>"+fmt(t,true)+"</b>"+(we?" (weekend)":"")+"<br><span style=\"color:var(--done)\">"+n(v)+" points done</span>"+(hasA?"<br><span style=\"color:var(--added)\">"+((a||0)<0?"−"+n(-a):"+"+n(a||0))+" points added</span>":"")+"<br>"+n(p.pointsDone)+" points in the record so far"},svg);
+        "data-tip":"<b>"+fmt(t,true)+"</b>"+(we?" (weekend)":"")+"<br><span style=\"color:var(--done)\">"+n(v)+" points done</span>"+(dv>0?"<br><span class=\"tip-deploy\">"+n(dv)+" of them deployment and testing</span>":"")+(hasA?"<br><span style=\"color:var(--added)\">"+((a||0)<0?"−"+n(-a):"+"+n(a||0))+" points added</span>":"")+"<br>"+n(p.pointsDone)+" points in the record so far"},svg);
       if(i===ser.length-1||new Date(t).getUTCDay()===1||i===0){
         var lb=s("text",{x:x+cw/2,y:H-B+16,"text-anchor":"middle","font-size":11,fill:"var(--faint)"},svg);lb.textContent=short(t);}
     });
@@ -312,9 +328,13 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
       .concat(S.components.map(function(c){return{k:"comp",label:c.name,c:c};}))
       .concat(later.map(function(p){return{k:"phase",label:p.name,p:p};}))
       .concat([{k:"ms",label:"Other events"}]);
-    var W=Math.max(820,svg.parentNode.clientWidth||820),L=rows.some(function(r){return r.label.length>22;})?320:150,R=16,T=28,RH=34,H=T+rows.length*RH+8;
+    // Row names sit in their own pinned column; the chart shows about one month and scrolls sideways.
+    var wrap=$("tlwrap"),lsvg=$("timelineLabels"),CW=wrap.clientWidth||820;
+    var L=Math.min(rows.some(function(r){return r.label.length>22;})?320:150,Math.round(CW*0.4)),R=16,T=28,RH=34,H=T+rows.length*RH+8;
+    var vis=Math.max(120,CW-L-1),dayW=vis/30,W=Math.max(vis,Math.round((end-start)/DAY*dayW)+R);
+    lsvg.setAttribute("viewBox","0 0 "+L+" "+H);lsvg.setAttribute("width",L);lsvg.setAttribute("height",H);
     svg.setAttribute("viewBox","0 0 "+W+" "+H);svg.setAttribute("width",W);svg.setAttribute("height",H);
-    var x=function(t){return L+(W-L-R)*(t-start)/(end-start);},dw=x(start+DAY)-x(start);
+    var x=function(t){return 4+(W-4-R)*(t-start)/(end-start);},dw=x(start+DAY)-x(start);
     var defs=s("defs",{},svg),pat=s("pattern",{id:"stripe",width:6,height:6,patternUnits:"userSpaceOnUse",patternTransform:"rotate(45)"},defs);
     s("rect",{width:3,height:6,fill:"var(--forecast)"},pat);
     // Weekends, week ticks
@@ -328,7 +348,10 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
     function cy(i){return T+i*RH+RH/2;}
     rows.forEach(function(r,i){
       s("line",{x1:0,x2:W,y1:T+(i+1)*RH,y2:T+(i+1)*RH,stroke:"var(--line)"},svg);
-      var tx=s("text",{x:4,y:cy(i)+4,"font-size":13,fill:"var(--ink)"},svg);tx.textContent=r.label;
+      s("line",{x1:0,x2:L,y1:T+(i+1)*RH,y2:T+(i+1)*RH,stroke:"var(--line)"},lsvg);
+      var fit=Math.max(4,Math.floor((L-10)/6.2)),txt=r.label.length>fit?r.label.slice(0,fit-1)+"…":r.label;
+      var tx=s("text",{x:4,y:cy(i)+4,"font-size":13,fill:"var(--ink)"},lsvg);tx.textContent=txt;
+      if(txt!==r.label)s("title",{},tx).textContent=r.label;
     });
     function diamond(t,yy,tipTxt,fill){s("path",{d:"M"+x(t+DAY/2)+" "+(yy-7)+" l7 7 l-7 7 l-7 -7Z",fill:fill||"var(--ink)",tabindex:0,"data-tip":tipTxt},svg);}
     function bar(a,b,yy,tipTxt,forecast){
@@ -381,6 +404,7 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
     var tx=x(asOf+DAY);
     s("line",{x1:tx,x2:tx,y1:T-4,y2:H-8,stroke:"var(--accent)","stroke-width":2},svg);
     var tl=s("text",{x:tx+4,y:H-12,"font-size":11,fill:"var(--accent)"},svg);tl.textContent="Today";
+    wrap.scrollLeft=wrap.scrollWidth;
   }
 })();
 </script>
