@@ -73,9 +73,9 @@
     "portfolio-services"
    ],
    "pointsDone": 904.0,
-   "pointsRemaining": 32.0,
-   "pointsTotal": 936.0,
-   "itemsRemaining": 13,
+   "pointsRemaining": 34.0,
+   "pointsTotal": 938.0,
+   "itemsRemaining": 15,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -338,8 +338,8 @@
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 163.65,
-   "pointsRemaining": 70.0,
-   "itemsRemaining": 28
+   "pointsRemaining": 72.0,
+   "itemsRemaining": 30
   }
  },
  "milestones": [
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T10:40:29+11:00",
+ "updatedAt": "2026-11-24T10:46:14+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2734,6 +2734,11 @@
    "change": "Compliance group 52 merged to main (c12a4740): COMPLIANCE-DASHBOARD-B-126, the OFA Checklist lists a step's notes newest first, as the board draws them, 1 point. Checks: .NET 947 passed, 0 failed; Compliance board: 246 passed, 0 failed, 25 skipped. Next for Compliance: group 53, running two board scenarios (M28 and M38) on the built app in the next stack window.",
    "pointsDone": 1.0,
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-24T10:46:14+11:00",
+   "change": "Portfolio Services group 52 merged to main (7a685d2d): OFA-B-206, the Initial OFAs upload dialog shows the date hint \"On or before today.\" when an imported row has no form date (design rows O20 and O22); OFA-B-243, the board steps for O21 and O22 tidied, with O36 waiting on a shared test-step fix from Shell. Two items raised and held: OFA-B-249, an imported row shows NEW, as the board draws it; OFA-B-251, what the fee check banner's \"next on\" date means, waiting on Muhammed. Checks: Jest 1754 of 1754; board exceptions-report and intake 41 passed, 0 failed, 4 skipped. Next for Portfolio Services: group 53 (OFA-B-249).",
+   "pointsRaised": 2.0
   }
  ],
  "foundDuringBuild": {
