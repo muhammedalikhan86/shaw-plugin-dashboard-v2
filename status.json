@@ -54,9 +54,9 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 562.0,
+   "pointsDone": 563.0,
    "pointsRemaining": 1.0,
-   "pointsTotal": 563.0,
+   "pointsTotal": 564.0,
    "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 157.81,
+  "pointsPerWorkingDayWholePeriod": 157.89,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2051.0,
-    "pointsDoneThatDay": 1.0
+    "pointsDone": 2052.0,
+    "pointsDoneThatDay": 2.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -300,7 +300,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 35.55,
-    "rateWhole": 32.01
+    "rateWhole": 32.09
    },
    "Portfolio Services": {
     "optimistic": "2026-11-25",
@@ -337,7 +337,7 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 157.81,
+   "rateWhole": 157.89,
    "pointsRemaining": 66.0,
    "itemsRemaining": 26
   }
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T02:08:53+11:00",
+ "updatedAt": "2026-11-24T02:20:16+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2611,6 +2611,12 @@
   {
    "at": "2026-11-24T02:08:53+11:00",
    "change": "Compliance group 42 merged (retired a withdrawn test scenario, no points); Advisor group 41 raised 12 points of new items on its branch, counted once it merges",
+   "pointsDone": 1.0,
+   "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-24T02:20:16+11:00",
+   "change": "Shell: SHELL-B-183, the empty-state icon clipped to its corner, done (1 point)",
    "pointsDone": 1.0,
    "pointsRaised": 1.0
   }
