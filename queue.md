@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 03:15
+Updated: 2026-11-24 03:20
 
 ## Now (from 2026-11-24 02:00)
 
@@ -50,13 +50,12 @@ Updated: 2026-11-24 03:15
 | | 40 | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 | | 37 | (to raise) | Reference paths: the business's emails and the starters moved on 2026-11-23 into `docs/stash/OFA Workflow/references/Wording/` (index in its README.md). Update the old paths in the Portfolio Services handoff (`...references\Email Templates\` becomes `...references\Wording\Email Templates\`) and PMBook (OFA-F-016 sources and OFA-F-187, `references/Email Templates/` becomes `references/Wording/Email Templates/`); the hub left them because ps2 has uncommitted edits in both | Docs | 0 | Fold into the next group's finalizers | - |
 
-## Compliance (pointer: group 44 running since 2026-11-24)
+## Compliance (pointer: parked after group 44; F-053 waits on ps2)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | COMPLIANCE-DASHBOARD-F-053 | Wording field library (page side): the Wording page shows the whole field library (each field, what it fills, which slots take it) for anyone building a document, and each slot shows the fields it can fill; the upload check says "every field used will be filled" or refuses and names each field the slot cannot fill | Functional | 5 | Ruled by Muhammed 2026-11-23; spec docs/hub/wording-field-library.md §6; design rows W39-W43 sent to the designer 2026-11-23; builds after ps2's store side | ps2 field library row |
-| >> | 44 | COMPLIANCE-DASHBOARD-F-051 | Business scenarios for every UI item (the rest) | Functional | 3 | Go 2026-11-24: switch on the scenarios for the rows the designer finished, update the 17 board-run failures, write P92, P93 and W38 scenarios, fix S6 | - |
-| >> | 44 | COMPLIANCE-DASHBOARD-F-052 | Signing and expiry: days to the Expiry Date in the four colour bands (Pending, Expired, Confirmed off), from the shell's status tokens | Functional | 2 | Go 2026-11-24; board drawn | - |
+| | 48 | - | Run M28 and M38 on the built app (stack) and drop M38's @not-built-COMPLIANCE-DASHBOARD-F-052 tag; both pass on the board | Functional | 0 | Folds into the next Compliance group | - |
 
 ## Advisor (pointer: group 41 running since 2026-11-24; F-144 waits on Luke)
 
