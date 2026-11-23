@@ -72,10 +72,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 878.0,
-   "pointsRemaining": 31.0,
-   "pointsTotal": 909.0,
-   "itemsRemaining": 13,
+   "pointsDone": 885.0,
+   "pointsRemaining": 29.0,
+   "pointsTotal": 914.0,
+   "itemsRemaining": 12,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 159.27,
+  "pointsPerWorkingDayWholePeriod": 159.81,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2070.0,
-    "pointsDoneThatDay": 20.0
+    "pointsDone": 2077.0,
+    "pointsDoneThatDay": 27.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -307,7 +307,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 38.95,
-    "rateWhole": 65.02
+    "rateWhole": 65.56
    },
    "Advisor": {
     "optimistic": "2026-11-25",
@@ -337,9 +337,9 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 159.27,
-   "pointsRemaining": 71.0,
-   "itemsRemaining": 28
+   "rateWhole": 159.81,
+   "pointsRemaining": 69.0,
+   "itemsRemaining": 27
   }
  },
  "milestones": [
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T03:21:00+11:00",
+ "updatedAt": "2026-11-24T03:35:00+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2643,6 +2643,12 @@
    "change": "Portfolio Services 2 group 35 merged to main (43b8eaad): OFA-F-188 lookup route on the signing service, OFA-B-184 and OFA-B-224 a timed-out or 504 send is checked, never sent twice, plus a test runbook fix. 6 points.",
    "pointsDone": 6.0,
    "pointsRaised": 6.0
+  },
+  {
+   "at": "2026-11-24T03:35:00+11:00",
+   "change": "Portfolio Services group 45 merged to main (8bb217dc): OFA-F-189 Overview top row with the Needs attention card, OFA-B-239 notes show the person's name not the login, OFA-B-241 Expired report and Back Office requests tables fill their cards, OFA-B-243 four board-check failures traced to board gaps. 7 points.",
+   "pointsDone": 7.0,
+   "pointsRaised": 5.0
   }
  ],
  "foundDuringBuild": {
