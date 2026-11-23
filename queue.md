@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 03:34
+Updated: 2026-11-24 03:43
 
 ## Now (from 2026-11-24 02:00)
 
@@ -56,13 +56,15 @@ Updated: 2026-11-24 03:34
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke. Asked 2026-11-23 what the Adviser's OFA History tab should show, with the Portfolio Services and Compliance tabs as examples; then the design | - |
-| >> | 41 | ADVISOR-DASHBOARD-F-163 | The State Manager's "Arrangements that ended" bell lists only endings from the last 2 weeks (follows ADVISOR-DASHBOARD-F-117) | Functional | ?? | Ruled by Muhammed 2026-11-23 (D-02); next advisor group | ADVISOR-DASHBOARD-F-117 |
-| >> | 41 | ADVISOR-DASHBOARD-B-126 | Closures: the S-Account is a link to the account's page, as on the other tables (screenshot 01) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| >> | 41 | ADVISOR-DASHBOARD-B-127 | Closures: the line under the status chip ("Fee turned off · date", "Sent to the OFA Team · date") becomes the chip's tooltip, not text under it (02) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| >> | 41 | ADVISOR-DASHBOARD-B-128 | OFA questionnaire: Submit says "Missing Q1" when Q1 is answered (after the answers were filled in automatically); a retry passes. It must not show at all (03) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| >> | 41 | ADVISOR-DASHBOARD-B-129 | OFA questionnaire: on a row the OFA Team entered, the adviser changed the forecast, saw it would not be saved, and the new value stayed. The field must be locked when it cannot be saved, or go back to the OFA Team's value (04) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| >> | 41 | ADVISOR-DASHBOARD-B-130 | OFA questionnaire feels jerky when editing and when selecting all rows (no screenshot) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
+| >> | 41 | ADVISOR-DASHBOARD-F-163 | The State Manager's "Arrangements that ended" bell lists only endings from the last 2 weeks (follows ADVISOR-DASHBOARD-F-117) | Functional | ?? | Parity PASS; finalizing | ADVISOR-DASHBOARD-F-117 |
+| >> | 41 | ADVISOR-DASHBOARD-B-126 | Closures: the S-Account is a link to the account's page, as on the other tables (screenshot 01) | Bug | ?? | Parity PASS; finalizing | - |
+| >> | 41 | ADVISOR-DASHBOARD-B-127 | Closures: the line under the status chip ("Fee turned off · date", "Sent to the OFA Team · date") becomes the chip's tooltip, not text under it (02) | Bug | ?? | Parity PASS; finalizing | - |
+| >> | 41 | ADVISOR-DASHBOARD-B-128 | OFA questionnaire: Submit says "Missing Q1" when Q1 is answered (after the answers were filled in automatically); a retry passes. It must not show at all (03) | Bug | ?? | Parity PASS; finalizing | - |
+| >> | 41 | ADVISOR-DASHBOARD-B-129 | OFA questionnaire: on a row the OFA Team entered, the adviser changed the forecast, saw it would not be saved, and the new value stayed. The field must be locked when it cannot be saved, or go back to the OFA Team's value (04) | Bug | ?? | Parity PASS; finalizing | - |
+| >> | 41 | ADVISOR-DASHBOARD-B-130 | OFA questionnaire feels jerky when editing and when selecting all rows (no screenshot) | Bug | ?? | Parity PASS; finalizing | - |
 | | 46 | (to raise) | 4 older board-run failures: Closures (1), S-Account history (3); folded into 41 if they touch its Closures files | Bug | ?? | After group 41 | - |
+| | 46 | ADVISOR-DASHBOARD-B-132 | OFA questionnaire still stutters after ADVISOR-DASHBOARD-B-130 and SHELL-B-184: each answer edit and Select all block the screen for about 1 s; profile a production build in a real browser and fix it (shared shell code goes to Shell) | Bug | 3 | After group 41 | - |
+| | 46 | ADVISOR-DASHBOARD-B-133 | OFA questionnaire Notes cell shows a raw login ("Entered by the OFA Team · TESTDATA\corinne.abbott"), not the name; check first whether only the test data is at fault | Bug | 1 | After group 41 | - |
 
 ## Hub
 
