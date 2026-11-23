@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 04:18
+Updated: 2026-11-24 04:40
 
 ## Now (from 2026-11-24 02:00)
 
@@ -49,14 +49,12 @@ Updated: 2026-11-24 04:18
 | | 48 | COMPLIANCE-DASHBOARD-B-124 | Wording catalogue matches ps2's new slots (drops InitialOfa, FollowUpEmail, TerminationEmail; adds the four Initial OFA slots) | Bug | 1 | Built and reviewed (048c2fe8); merged right after OFA-F-192, then Compliance's .NET suite runs | OFA-F-192 |
 | | 48 | - | Run M28 and M38 on the built app (stack) and drop M38's @not-built-COMPLIANCE-DASHBOARD-F-052 tag; both pass on the board | Functional | 0 | Folds into the next Compliance group | - |
 
-## Advisor (pointer: group 46 running since 2026-11-24; F-144 waits on Luke)
+## Advisor (pointer: parked after group 46; B-132 waits for a stack window, F-144 waits on Luke)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke. Asked 2026-11-23 what the Adviser's OFA History tab should show, with the Portfolio Services and Compliance tabs as examples; then the design | - |
-| >> | 46 | ADVISOR-DASHBOARD-B-134 | 4 older board-check failures: Closures "Confirmed to the client" on S19780; S-Account Account History "Show all events" filter, "No history matches", "Hold extended to"; fit each to the board or raise a design row | Bug | 2 | Building | - |
 | | X | ADVISOR-DASHBOARD-B-132 | OFA questionnaire still stutters after ADVISOR-DASHBOARD-B-130 and SHELL-B-184: each answer edit and Select all block the screen for about 1 s; profile a production build in a real browser and fix it (shared shell code goes to Shell) | Bug | 3 | Blocked: needs a stack (production build in a real browser); no stack tonight |  - |
-| >> | 46 | ADVISOR-DASHBOARD-B-133 | OFA questionnaire Notes cell shows a raw login ("Entered by the OFA Team · TESTDATA\corinne.abbott"), not the name; check first whether only the test data is at fault | Bug | 1 | Building | - |
 
 ## Hub
 
