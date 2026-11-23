@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = not grouped yet. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-23 19:00
+Updated: 2026-11-23 19:30
 
 ## Shell (pointer: group 19 done; in-place Shell.WebAPI test window, then parked; queue empty)
 
@@ -33,7 +33,7 @@ Updated: 2026-11-23 19:00
 | | 35 | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Go 2026-11-23 | OFA-F-188 |
 | | X | (to raise) | Wording page Preview fails on make up: POST /notices/preview answers 403 to a developer (ComplianceTeam policy has no development bypass); add one, Development only, like OfaTeam's, and check the page says why on a 403 | Functional | ?? | Raised by Muhammed 2026-11-23; ps2 raises, sizes and builds it 2026-11-24 after group 35 | - |
 | | X | (to raise) | Renewal confirmation goes to the client, not the adviser: the business template (OFA Renewal Confirmation) thanks the client, so OFA-F-140 sends the RenewalConfirmation slot to the account's client email; fields %ACCOUNT_NAME% and %S_ACCOUNT% | Functional | ?? | Ruled by Muhammed 2026-11-23; ps2 raises, sizes and builds it 2026-11-24 after the Preview item | - |
-| | X | (to raise) | Wording field library (store side): one library of known fields; each slot lists the fields it can fill, all optional (a document may use some or all); an upload with a field the slot cannot fill, or an unknown one, is refused and names it; otherwise the check says every used field will be filled. Fixes the wrong lists (No OFA fee email requires %PLATFORM%/%PLATFORM_ACCOUNT%; RenewalConfirmation has none). Plus a fully working starter Word document for every slot in the test data, from the business wording | Functional | ?? | Ruled by Muhammed 2026-11-23; artboard first (Wording page), then ps2 builds the store side 2026-11-24 after the renewal confirmation item; replaces "required" fields | Compliance page row |
+| | X | (to raise) | Wording field library (store side): one library of known fields; each slot lists the fields it can fill, all optional (a document may use some or all); an upload with a field the slot cannot fill, or an unknown one, is refused and names it; otherwise the check says every used field will be filled. Fixes the wrong lists (No OFA fee email requires %PLATFORM%/%PLATFORM_ACCOUNT%; RenewalConfirmation has none). Plus a fully working starter Word document for every slot in the test data: the business wording where we have it (Muhammed's starters in %TEMP%\wording-starters; Pending and Expired report emails from Portfolio Services' own sent emails); a plain file marked TEST listing the slot's fields for the rest (ServiceQuestionsCat1/2, InitialOfa, FollowUpEmail, ClientRenewalFollowUp; leftovers W-13, W-14, W-20, D-04) | Functional | ?? | Ruled by Muhammed 2026-11-23; artboard first (Wording page), then ps2 builds the store side 2026-11-24 after the renewal confirmation item; replaces "required" fields | Compliance page row |
 | | X | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 
 ## Compliance (pointer: parked after group 23; the rest waits on design rows)
