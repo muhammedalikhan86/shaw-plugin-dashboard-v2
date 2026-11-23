@@ -6,13 +6,14 @@
 <title>Shaw Portal - Work Queue</title>
 <link rel="stylesheet" href="assets/ds/roboto.css">
 <style>
-/* Content comes from queue.md, a copy of the Hub's .claude/queue.md, refreshed by the Hub session. This page only draws it. */
-:root{--bg:#F4F4F4;--card:#FFFFFF;--ink:#1A1A1A;--muted:#5C5C5C;--line:#E0E0E0;--accent:#E8501E;--now:#FFF3EC}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--accent:#FF6A33;--now:#2E1E16}}
-:root[data-theme="dark"]{--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--accent:#FF6A33;--now:#2E1E16}
+/* Content comes from queue.md, a copy of the Hub's .claude/queue.md, refreshed by the Hub session. This page only draws it.
+   Opened from the folder (file://) the fetch is blocked, so it falls back to queue-data.js, which update-queue-data.ps1 regenerates. */
+:root{--bg:#F4F4F4;--card:#FFFFFF;--ink:#1A1A1A;--muted:#5C5C5C;--line:#E0E0E0;--accent:#E8501E;--now:#FFF3EC;--moved:#FDEBE3}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--accent:#FF6A33;--now:#2E1E16;--moved:#33221A}}
+:root[data-theme="dark"]{--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--accent:#FF6A33;--now:#2E1E16;--moved:#33221A}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/22px Roboto,"Helvetica Neue",Arial,sans-serif}
-header{background:#000;padding:16px}
+header{background:#000;padding:16px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 header img{width:150px;height:auto;display:block}
 main{max-width:1180px;margin:0 auto;padding:32px 16px 48px}
 h1{font-weight:400;font-size:26px;line-height:34px;margin:0 0 8px}
@@ -26,29 +27,46 @@ th{text-align:left;font-weight:500;color:var(--muted);padding:9px 12px;border-bo
 td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:0}
 tr.now td{background:var(--now)}
-tr.now td:first-child{color:var(--accent);font-weight:500}
+tr.now td:nth-child(2){color:var(--accent);font-weight:500}
 #err{color:var(--accent)}
 a.jump{text-decoration:underline;text-underline-offset:2px}
 @keyframes flash{from{box-shadow:inset 4px 0 0 var(--accent);background:var(--now)}to{box-shadow:inset 4px 0 0 transparent}}
 tr.flash td{animation:flash 2.4s ease-out}
 tr.flash td:first-child{box-shadow:inset 4px 0 0 var(--accent)}
+/* Reorder proposal: drag a row by its handle (or Alt+Up / Alt+Down on a focused row); Submit copies the proposal and resets. Nothing is saved. */
+#submit{font:500 14px/20px Roboto,"Helvetica Neue",Arial,sans-serif;color:#fff;background:var(--accent);border:0;border-radius:20px;padding:8px 20px;cursor:pointer}
+#submit:hover{filter:brightness(1.08)}
+#submit:focus-visible{outline:2px solid #fff;outline-offset:2px}
+th.grip,td.grip{width:28px;padding-left:10px;padding-right:0}
+td.grip{color:var(--muted);cursor:grab;user-select:none;letter-spacing:-1px;font-weight:700;white-space:nowrap}
+tr.dragging td{opacity:.45}
+tr.drop-above td{box-shadow:inset 0 2px 0 var(--accent)}
+tr.drop-below td{box-shadow:inset 0 -2px 0 var(--accent)}
+tr.moved td{background:var(--moved)}
+tr.moved td.grip{box-shadow:inset 3px 0 0 var(--accent);color:var(--accent)}
+tbody tr[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;font-size:14px;box-shadow:0 4px 16px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .2s}
+#toast.show{opacity:1}
 </style>
 </head>
 <body>
-<header><a href="index.html"><img src="assets/logo-primary-reversed-3x.png" alt="Shaw and Partners"></a></header>
+<header><a href="index.html"><img src="assets/logo-primary-reversed-3x.png" alt="Shaw and Partners"></a><button id="submit" type="button" title="Copy the proposed order to the clipboard and reset the page">Submit</button></header>
 <main>
 <div id="out"><p>Loading the queue…</p></div>
 <p id="err" hidden></p>
 </main>
+<div id="toast" role="status" aria-live="polite"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="queue-data.js"></script>
 <script>
-fetch('queue.md',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.text()}).then(md=>{
-  const out=document.getElementById('out');
+const out=document.getElementById('out');
+let MD=null;
+const col=(t,name)=>[...t.querySelectorAll('thead th')].findIndex(th=>th.textContent.trim()===name);
+function render(md){
   out.innerHTML=marked.parse(md);
   out.querySelectorAll('table').forEach(t=>{const w=document.createElement('div');w.className='scroll';t.parentNode.insertBefore(w,t);w.appendChild(t);
     t.querySelectorAll('tbody tr').forEach(tr=>{if(tr.cells[0]&&tr.cells[0].textContent.trim()==='>>')tr.classList.add('now')})});
   // Each worker row gets an anchor from its ID; an ID in "Depends on" or "Status" that names a row here becomes an in-page link to it.
-  const col=(t,name)=>[...t.querySelectorAll('thead th')].findIndex(th=>th.textContent.trim()===name);
   const rows=new Map();
   out.querySelectorAll('table').forEach(t=>{const i=col(t,'ID');if(i<0)return;
     t.querySelectorAll('tbody tr').forEach(tr=>{const id=tr.cells[i]&&tr.cells[i].textContent.trim();if(/^[A-Z]+(-[A-Z]+)*-[FBS]-\d+$/.test(id)){tr.id='q-'+id;rows.set(id,tr)}})});
@@ -56,13 +74,70 @@ fetch('queue.md',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(r.status)
   out.querySelectorAll('table').forEach(t=>['Depends on','Status'].forEach(n=>{const i=col(t,n);if(i<0)return;
     t.querySelectorAll('tbody tr').forEach(tr=>{const c=tr.cells[i];if(!c)return;
       c.innerHTML=c.innerHTML.replace(re,m=>rows.has(m)&&rows.get(m)!==tr?'<a href="#q-'+m+'" class="jump">'+m+'</a>':m)})}));
-  out.addEventListener('click',e=>{const a=e.target.closest('a.jump');if(!a)return;e.preventDefault();
-    const tr=document.getElementById(a.getAttribute('href').slice(1));if(!tr)return;
-    history.replaceState(null,'',a.getAttribute('href'));
-    tr.scrollIntoView({behavior:'smooth',block:'center'});
-    tr.classList.remove('flash');void tr.offsetWidth;tr.classList.add('flash')});
-  if(location.hash){const tr=document.getElementById(location.hash.slice(1));if(tr){tr.scrollIntoView({block:'center'});tr.classList.add('flash')}}
-}).catch(e=>{const el=document.getElementById('err');el.hidden=false;el.textContent='The queue could not be loaded ('+e.message+').'});
+  // Worker tables (those with ID and Item columns) get a drag handle per row and remember each row's original place.
+  out.querySelectorAll('table').forEach(t=>{const iId=col(t,'ID');if(iId<0||col(t,'Item')<0)return;
+    const h=document.createElement('th');h.className='grip';h.setAttribute('aria-label','Reorder');t.querySelector('thead tr').prepend(h);
+    const body=t.tBodies[0];if(!body)return;
+    [...body.rows].forEach((tr,i)=>{tr.dataset.orig=i;tr.tabIndex=0;
+      tr.setAttribute('aria-label',((tr.cells[iId]||{}).textContent||'Row')+'. Alt+Up or Alt+Down to move');
+      const g=document.createElement('td');g.className='grip';g.textContent='⋮⋮';g.title='Drag to reorder (or Alt+Up / Alt+Down)';tr.prepend(g)})});
+}
+const sameBody=(a,b)=>a&&b&&a!==b&&a.parentElement===b.parentElement;
+function markMoved(body){[...body.rows].forEach((tr,i)=>tr.classList.toggle('moved',String(i)!==tr.dataset.orig))}
+let dragRow=null;
+const clearDrop=()=>out.querySelectorAll('.drop-above,.drop-below').forEach(r=>r.classList.remove('drop-above','drop-below'));
+const above=(e,tr)=>{const r=tr.getBoundingClientRect();return e.clientY<r.top+r.height/2};
+out.addEventListener('mousedown',e=>{const g=e.target.closest('td.grip');if(g)g.parentElement.draggable=true});
+out.addEventListener('mouseup',e=>{const tr=e.target.closest('tr');if(tr&&!dragRow)tr.draggable=false});
+out.addEventListener('dragstart',e=>{const tr=e.target.closest&&e.target.closest('tr');if(!tr||!tr.draggable){e.preventDefault();return}
+  dragRow=tr;tr.classList.add('dragging');e.dataTransfer.effectAllowed='move';try{e.dataTransfer.setData('text/plain',tr.id||'row')}catch(_){}});
+out.addEventListener('dragover',e=>{const tr=e.target.closest('tr');if(!sameBody(tr,dragRow))return;
+  e.preventDefault();e.dataTransfer.dropEffect='move';clearDrop();tr.classList.add(above(e,tr)?'drop-above':'drop-below')});
+out.addEventListener('drop',e=>{const tr=e.target.closest('tr');if(!sameBody(tr,dragRow))return;e.preventDefault();
+  tr.parentElement.insertBefore(dragRow,above(e,tr)?tr:tr.nextSibling);markMoved(tr.parentElement)});
+out.addEventListener('dragend',()=>{if(dragRow){dragRow.classList.remove('dragging');dragRow.draggable=false}dragRow=null;clearDrop()});
+out.addEventListener('keydown',e=>{if(!e.altKey||(e.key!=='ArrowUp'&&e.key!=='ArrowDown'))return;
+  const tr=e.target;if(tr.tagName!=='TR'||tr.dataset.orig===undefined)return;e.preventDefault();
+  const sib=e.key==='ArrowUp'?tr.previousElementSibling:tr.nextElementSibling;if(!sib)return;
+  tr.parentElement.insertBefore(tr,e.key==='ArrowUp'?sib:sib.nextSibling);markMoved(tr.parentElement);tr.focus()});
+out.addEventListener('click',e=>{const a=e.target.closest('a.jump');if(!a)return;e.preventDefault();
+  const tr=document.getElementById(a.getAttribute('href').slice(1));if(!tr)return;
+  history.replaceState(null,'',a.getAttribute('href'));
+  tr.scrollIntoView({behavior:'smooth',block:'center'});
+  tr.classList.remove('flash');void tr.offsetWidth;tr.classList.add('flash')});
+// Submit: copy a plain-text proposal of only the tables whose order changed, then put the page back to the current queue.
+let toastTimer;
+function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),3200)}
+function legacyCopy(text){const ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.select();let ok=false;try{ok=document.execCommand('copy')}catch(_){}ta.remove();if(!ok)throw new Error('copy failed')}
+function copyText(text){
+  if(navigator.clipboard&&window.isSecureContext)return navigator.clipboard.writeText(text).catch(()=>legacyCopy(text));
+  try{legacyCopy(text);return Promise.resolve()}catch(err){return Promise.reject(err)}
+}
+function buildProposal(){
+  const parts=[];
+  out.querySelectorAll('table').forEach(t=>{const body=t.tBodies[0];if(!body||!body.querySelector('td.grip'))return;
+    const rows=[...body.rows];if(rows.every((tr,i)=>String(i)===tr.dataset.orig))return;
+    let h=t.closest('.scroll').previousElementSibling;while(h&&h.tagName!=='H2')h=h.previousElementSibling;
+    const worker=h?h.textContent.replace(/\s*\(.*$/,'').trim():'(unnamed table)';
+    const iId=col(t,'ID'),iItem=col(t,'Item');
+    parts.push('Proposed order for '+worker+': '+rows.map((tr,i)=>(i+1)+'. '+tr.cells[iId].textContent.trim()+' '+tr.cells[iItem].textContent.trim()).join(', '));
+  });
+  return parts.join('\n');
+}
+document.getElementById('submit').addEventListener('click',()=>{
+  if(MD===null)return;
+  const text=buildProposal();
+  if(!text){toast('Nothing changed');return}
+  window.__lastProposal=text;
+  copyText(text).then(()=>toast('Proposal copied — paste it to the hub'),()=>toast('Could not copy the proposal')).finally(()=>render(MD));
+});
+function start(md){MD=md;render(md);
+  if(location.hash){const tr=document.getElementById(location.hash.slice(1));if(tr){tr.scrollIntoView({block:'center'});tr.classList.add('flash')}}}
+// Over http (Vercel) the page fetches queue.md; from the folder (file://) the fetch is blocked, so it uses window.QUEUE_MD from queue-data.js.
+fetch('queue.md',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.text()}).then(start).catch(e=>{
+  if(typeof window.QUEUE_MD==='string'){start(window.QUEUE_MD);return}
+  const el=document.getElementById('err');el.hidden=false;el.textContent='The queue could not be loaded ('+e.message+').'});
 </script>
 </body>
 </html>
