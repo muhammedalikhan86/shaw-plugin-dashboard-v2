@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 09:04
+Updated: 2026-11-24 09:16
 
 ## Now (from 2026-11-24 09:00)
 
@@ -32,6 +32,7 @@ Updated: 2026-11-24 09:04
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 42 | OFA-F-198 | Test site in Misc, set-up scripts: build the stand-in warehouse and job tables in their Misc sections, load the test data, seed and reset; public holidays for 2027 included; scripts use the one Misc login and refuse any other database; adds the missing Adviser and ShawCentral stand-in tables | Functional | 3-5 | Building; critical path; spec docs/hub/uat-in-misc.md §2.3; a live run waits for the Misc login | - |
+| | 42 | OFA-B-230 | Test data: leave the Adviser Initial OFA follow-up wording with no version, so Compliance's "offers its first version" check can pass | Functional | 1 | After OFA-F-198 | OFA-F-198 |
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | IT ticket raised; approval to run expected Wed 2026-11-25 | - |
 | | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Blocked: the warehouse refuses both the read-only login and Windows sign-in (2026-11-24 03:2x); resumes when it is back | - |
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
