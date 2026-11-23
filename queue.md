@@ -4,31 +4,34 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 08:40
+Updated: 2026-11-24 09:01
 
-## Now (from 2026-11-24 02:00)
+## Now (from 2026-11-24 09:00)
 
-1. No `make up` for the rest of the night of 2026-11-24: two stack starts were killed for low memory, and a restart needs Muhammed. Stack checks are listed as owed for the end sweep. Board-target runs (artboard server only) are fine.
-2. Stack order: ps2 (group 35, then the Preview bypass), then Portfolio Services (OFA-B-219 and its three bugs), then Advisor (the bell item and its six bugs). A worker builds and runs Jest and its own .NET tests without the stack, and asks for it only for business tests, e2e and screen checks.
-3. No idle worker: when a worker's next item is blocked (external party, manual testing, keys, design rows), it takes its next unblocked item, including the testing-run bugs, rather than wait. Compliance and Shell have nothing unblocked: they stay parked unless the hub routes work to them.
+1. Critical path: the test site. Everything on it lives in the Misc database (docs/hub/uat-in-misc.md). Shell, Portfolio Services, ps2 and Advisor build their parts now; Compliance after F-053. External waits: the Misc login (database backups running), the UAT mailbox, the IIS pools and applications (Muhammed, walked through by the hub).
+2. No idle worker: a worker whose next item is blocked takes its next unblocked item.
+3. End sweep runs last, in this order: the designer's work synced, the developers have built it, Muhammed has tested by hand, then every parity check runs and each issue found is listed as Look and Feel.
 
-## Shell (pointer: parked after group 47; queue empty)
-
-| # | Grp | ID | Item | Category | Size | Status | Depends on |
-|---|---|---|---|---|---|---|---|
-
-## Portfolio Services (pointer: parked after group 49; nothing unblocked)
+## Shell (pointer: group 48 from 2026-11-24)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| >> | 48 | (new Shell item) | Test site in Misc, platform side: the one Misc login file is read on the test site; the test site refuses any database but Misc and the live site refuses Misc; each API's setup history kept apart; test-site releases carry the login file, live ones never; test-site docs and decision record | Functional | 3 | Building; critical path; spec docs/hub/uat-in-misc.md §2.1 | - |
+
+## Portfolio Services (pointer: group 50 from 2026-11-24)
+
+| # | Grp | ID | Item | Category | Size | Status | Depends on |
+|---|---|---|---|---|---|---|---|
+| >> | 50 | (new PS item) | Test site in Misc, Portfolio Services: its settings point at Misc; its warehouse and job-tracking reads use the Misc sections; mail on the test site comes from and goes to the UAT mailbox only | Functional | 3 | Building; critical path; spec docs/hub/uat-in-misc.md §2.2; the mailbox address comes from Muhammed | Shell group 48 |
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 | | X | - | Browser checks owed from groups 36, 45 and 49, on the stack: the Settings report preview (both tables, a wide table scrolls, the empty-Expired line), B-233 opening month, B-235 row menu meets the card edge, B-237 Documents icon whole, B-241 table edges at 1440/1680/1920 (wide tables still scroll), F-189 Overview card | Look and Feel | 0 | Moved to the end sweep: two stack starts were killed for low memory on 2026-11-24 night; a restart needs Muhammed | - |
 
-## Portfolio Services 2 (pointer: parked after group 39; groups 41 and 40 blocked)
+## Portfolio Services 2 (pointer: group 42 from 2026-11-24; then 41, 40)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| >> | 42 | (new ps2 item) | Test site in Misc, set-up scripts: build the stand-in warehouse and job tables in their Misc sections, load the test data, seed and reset; public holidays for 2027 included; scripts use the one Misc login and refuse any other database | Functional | 3 | Building; critical path; spec docs/hub/uat-in-misc.md §2.3; a live run waits for the Misc login | - |
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | IT ticket raised; approval to run expected Wed 2026-11-25 | - |
 | | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Blocked: the warehouse refuses both the read-only login and Windows sign-in (2026-11-24 03:2x); resumes when it is back | - |
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
@@ -44,12 +47,14 @@ Updated: 2026-11-24 08:40
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 49 | COMPLIANCE-DASHBOARD-F-053 | Wording field library (page side): the Wording page shows the whole field library (each field, what it fills, which slots take it) for anyone building a document, and each slot shows the fields it can fill; the upload check says "every field used will be filled" or refuses and names each field the slot cannot fill | Functional | 5 | Building; spec docs/hub/wording-field-library.md §6; design rows W39-W43 back from the designer 2026-11-23; also: the load dialog shows the check's outcomes, and Missing/Required leave the Wording page | - |
+| | 50 | (new Compliance item) | Test site in Misc, Compliance Dashboard: reads the one Misc login file like the other APIs; settings point at Misc | Functional | 1 | After F-053; spec docs/hub/uat-in-misc.md §2.5 | Shell group 48 |
 | | X | - | Run M28 and M38 on the built app (stack) and drop M38's @not-built-COMPLIANCE-DASHBOARD-F-052 tag; both pass on the board | Functional | 0 | End sweep: needs a stack window | - |
 
-## Advisor (pointer: parked after group 46; B-132 waits for a stack window, F-144 waits on Luke)
+## Advisor (pointer: group 47 from 2026-11-24; B-132 waits for a stack window, F-144 waits on Luke)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| >> | 47 | (new Advisor item) | Test site in Misc, Adviser Dashboard: its settings point at Misc; its directory read uses the Misc warehouse section | Functional | 2 | Building; critical path; spec docs/hub/uat-in-misc.md §2.4 | Shell group 48 |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke. Asked 2026-11-23 what the Adviser's OFA History tab should show, with the Portfolio Services and Compliance tabs as examples; then the design | - |
 | | X | ADVISOR-DASHBOARD-B-132 | OFA questionnaire still stutters after ADVISOR-DASHBOARD-B-130 and SHELL-B-184: each answer edit and Select all block the screen for about 1 s; profile a production build in a real browser and fix it (shared shell code goes to Shell) | Bug | 3 | Blocked: needs a stack (production build in a real browser); no stack tonight |  - |
 
@@ -57,8 +62,8 @@ Updated: 2026-11-24 08:40
 
 Deployment and testing (from 2026-11-23): the work left is the REL- stack in `docs/leftovers.md`, worked top first. REL-001 to REL-010 are on go.
 
-1. Designer prompt (not yet sent; goes out after this queue round): W38, P92, P93, plus PS O20 (OFA-B-206: the paper-signed upload item on an imported Initial OFA row's menu, and its date hint with no form date), PS O21 (remove the Sync fees button from the Exceptions report board; OFA-F-160 removes it), PS O22 (Upload a paper-signed Initial OFA dialog: render the date field's hint, as the app does), PS O36 (the SOA field in Add an arrangement by hand gets its label), PS O37 (renewal confirmation labels say client: History and Renewal tracker; ps2 edits the repo board in OFA-B-228, the designer's copy needs the same two strings), PS O38 (Initial OFA prepare dialog: Estimate or Fixed, and the adviser nominates a Reference Date), PS O39 (Settings report preview with the new report columns; PS edits the repo board in OFA-F-191, the designer's copy needs the same), plus advisor B92 (F-146 confirmed line on CONFIRMED OFF rows), B93 (F-142 follow-up resend dialog sentence), B94 (Closures S-Account opens the S-Account page) and B95 (the two Closures status lines drawn as the chip's tip, reworded by Advisor), B96 (Account History's Show all events switch reads its own name: hide the thumb icon), plus 6 parity questions: Overview "not fully signed" count slot; Adviser review answers bar placement; read-failure card on six PS screens; scope line for an adviser with several codes; Renewal tracker filter Reset and intro; Arrangements empty/loading/error card; shell: logo width (#12) and collapsed rail width (#21), where the boards disagree; shell states with no board (#20: Keep open on, Notifications with items, Search results and no matches, Search loading); landing empty and bus-unavailable states (#6); shell error and empty states (#4), search panel drawn two ways (#5), Plugin0 buttons and chips (#7); compliance review page "Read only." line and OFA Checklist note chip and Month arrow; PS Import screen in the sidebar has no board; shell (from group 6): cloud_off rail icon and person-icon avatar have no board, search empty state has no glyph on the board; compliance board: drop the empty grid after the filter-dialog fields so the gap above the buttons is 48px like advisor and PS.
-2. End sweep: the browser, business-test and board checks skipped during the build, run once at the end.
+1. Designer prompt (being drafted 2026-11-24; goes to Muhammed to send): W38, P92, P93, plus PS O20 (OFA-B-206: the paper-signed upload item on an imported Initial OFA row's menu, and its date hint with no form date), PS O21 (remove the Sync fees button from the Exceptions report board; OFA-F-160 removes it), PS O22 (Upload a paper-signed Initial OFA dialog: render the date field's hint, as the app does), PS O36 (the SOA field in Add an arrangement by hand gets its label), PS O37 (renewal confirmation labels say client: History and Renewal tracker; ps2 edits the repo board in OFA-B-228, the designer's copy needs the same two strings), PS O38 (Initial OFA prepare dialog: Estimate or Fixed, and the adviser nominates a Reference Date), PS O39 (Settings report preview with the new report columns; PS edits the repo board in OFA-F-191, the designer's copy needs the same), plus advisor B92 (F-146 confirmed line on CONFIRMED OFF rows), B93 (F-142 follow-up resend dialog sentence), B94 (Closures S-Account opens the S-Account page) and B95 (the two Closures status lines drawn as the chip's tip, reworded by Advisor), B96 (Account History's Show all events switch reads its own name: hide the thumb icon), plus 6 parity questions: Overview "not fully signed" count slot; Adviser review answers bar placement; read-failure card on six PS screens; scope line for an adviser with several codes; Renewal tracker filter Reset and intro; Arrangements empty/loading/error card; shell: logo width (#12) and collapsed rail width (#21), where the boards disagree; shell states with no board (#20: Keep open on, Notifications with items, Search results and no matches, Search loading); landing empty and bus-unavailable states (#6); shell error and empty states (#4), search panel drawn two ways (#5), Plugin0 buttons and chips (#7); compliance review page "Read only." line and OFA Checklist note chip and Month arrow; PS Import screen in the sidebar has no board; shell (from group 6): cloud_off rail icon and person-icon avatar have no board, search empty state has no glyph on the board; compliance board: drop the empty grid after the filter-dialog fields so the gap above the buttons is 48px like advisor and PS.
+2. End sweep, last: after the designer's work is synced, built, and tested by hand by Muhammed; every parity check, each issue listed as Look and Feel.
 3. Waiting on you: push main; the SyncFee grant: OFA-F-160 is on main, so the gMSA's EXECUTE on dbo.SyncFee can be dropped on the server (PS removes line 3 of SyncFee-grants.sql in group 10); rerun the OFA-S-005 spike on the unredacted master spreadsheet (scripts in the PS checkout, spikes/OFA-S-005, uncommitted); check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest (another day); the OFA-S-001 owner questions: DART's open-a-document URL and whether staff have DART logins (OFA-F-145 and F-055 are built behind Dart:DocumentLinkTemplate, off until it is set); PS's 8 production settings.
 4. 2026-11-24, with the stack up: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database through the Wording page's upload, so each slot shows the business wording, not the [Test data] text. NoOfaFeeAdvisorEmail and RenewalConfirmation wait for ps2's field-library fix.
 
