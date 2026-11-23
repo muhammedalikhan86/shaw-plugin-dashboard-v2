@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 10:20
+Updated: 2026-11-24 10:22
 
 ## Now (from 2026-11-24 09:00)
 
@@ -21,13 +21,11 @@ Updated: 2026-11-24 10:20
 | | X | D11, D14 | Shell error and empty states (a)-(f); landing page's needs-a-newer-shell card | Look and Feel | - | Later: the words are placeholders until the business supplies them | - |
 | | X | - | Remove the old test-site check (ThrowIfAnyDatabaseIsNotUat) once every API uses the new rules; full Shell.WebAPI rerun when a stack is down | Functional | - | After PS, Advisor and Compliance merge their test-site parts | - |
 
-## Portfolio Services (pointer: group 50 from 2026-11-24)
+## Portfolio Services (groups 50 and 51 merged 2026-11-24; pointer: group 52)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 50 | (new PS item) | Test site in Misc, Portfolio Services: its settings point at Misc; its warehouse and job-tracking reads use the Misc sections; mail on the test site comes from and goes to the UAT mailbox only | Functional | 5 | Building; critical path; spec docs/hub/uat-in-misc.md §2.2; the mailbox address comes from Muhammed | - |
-| >> | 51 | OFA-B-247 | Overview: remove the line under the "Client closures on the 10-day clock" card ("Nearest due … · S-Account"); not on the board and it breaks the cards' alignment | Look and Feel | 1 | Raised by Muhammed 2026-11-24; runs alongside group 50 | - |
-| | 52 | O20, O22, O36, O21 | Initial OFAs: paper-signed upload on an imported row with no form date, and its date hint (OFA-B-206); the SOA field's label (OFA-B-243); no Sync fees button on the Exceptions report, if still in the app | Bug | - | After group 50 (the test site); designer drew them 2026-11-24; O20's hint words to be confirmed | - |
+| >> | 52 | O20, O22, O36, O21 | Initial OFAs: paper-signed upload on an imported row with no form date, and its date hint (OFA-B-206); the SOA field's label (OFA-B-243); no Sync fees button on the Exceptions report, if still in the app | Bug | - | Building; designer drew them 2026-11-24; O20's hint words to be confirmed; then OFA-B-249 | - |
 | | X | O39 | Settings report preview: the new report columns (OFA-F-191) | Functional | - | Later: Muhammed confirms the designer's guessed values (Renewal Notice Due Date = +60 days and others) | - |
 | | X | O40, O41, O42 | Remove the separate Adviser review answers card; could-not-load card on six screens; the Import page as drawn | Look and Feel | - | Later: O41's page names and O42's words wait for the business | - |
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
