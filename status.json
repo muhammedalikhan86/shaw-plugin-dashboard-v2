@@ -72,9 +72,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 829.0,
+   "pointsDone": 850.0,
    "pointsRemaining": 32.0,
-   "pointsTotal": 861.0,
+   "pointsTotal": 882.0,
    "itemsRemaining": 13,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -114,9 +114,9 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 243.0,
+   "pointsDone": 245.0,
    "pointsRemaining": 3.0,
-   "pointsTotal": 246.0,
+   "pointsTotal": 248.0,
    "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
@@ -134,10 +134,10 @@
    ],
    "stage": "deploy",
    "start": "2026-11-23",
-   "pointsDone": 19.0,
-   "pointsRemaining": 24.0,
+   "pointsDone": 25.0,
+   "pointsRemaining": 18.0,
    "pointsTotal": 43.0,
-   "itemsRemaining": 11,
+   "itemsRemaining": 9,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 0.0,
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 154.35,
+  "pointsPerWorkingDayWholePeriod": 156.58,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -281,8 +281,8 @@
    },
    {
     "date": "2026-11-23",
-    "pointsDone": 2006.0,
-    "pointsDoneThatDay": 23.0
+    "pointsDone": 2035.0,
+    "pointsDoneThatDay": 52.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -302,7 +302,7 @@
     "likely": "2026-11-24",
     "pessimistic": "2026-11-24",
     "rateLast10": 38.95,
-    "rateWhole": 61.25
+    "rateWhole": 62.87
    },
    "Advisor": {
     "optimistic": "2026-11-24",
@@ -316,25 +316,25 @@
     "likely": "2026-11-24",
     "pessimistic": "2026-11-24",
     "rateLast10": 20.38,
-    "rateWhole": 18.47
+    "rateWhole": 18.62
    },
    "Deployment & Testing": {
-    "optimistic": "2026-11-25",
-    "likely": "2026-11-25",
-    "pessimistic": "2026-11-25",
+    "optimistic": "2026-11-24",
+    "likely": "2026-11-24",
+    "pessimistic": "2026-11-24",
     "rateLast10": 21.5,
-    "rateWhole": 22.95
+    "rateWhole": 23.41
    }
   },
   "overall": {
-   "optimistic": "2026-11-25",
-   "likely": "2026-11-25",
-   "pessimistic": "2026-11-25",
+   "optimistic": "2026-11-24",
+   "likely": "2026-11-24",
+   "pessimistic": "2026-11-24",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 154.35,
-   "pointsRemaining": 73.0,
-   "itemsRemaining": 29
+   "rateWhole": 156.58,
+   "pointsRemaining": 67.0,
+   "itemsRemaining": 27
   }
  },
  "milestones": [
@@ -417,7 +417,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-23T11:28:35+11:00",
+ "updatedAt": "2026-11-23T11:54:49+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2590,6 +2590,12 @@
    "at": "2026-11-23T11:28:35+11:00",
    "change": "REL-008 to REL-010 done: test-site builds of the six front ends, the deploy script's test-site target and the test-site runbook (7 points)",
    "pointsDone": 7.0
+  },
+  {
+   "at": "2026-11-23T11:54:49+11:00",
+   "change": "REL-002 and REL-004 done: the test site's database scripts, and testers see the whole test data set in Portfolio Services (6 points); with them, the rest of PS group 17's sizing and Compliance's latest Done rows",
+   "pointsDone": 29.0,
+   "pointsRaised": 23.0
   }
  ],
  "foundDuringBuild": {
@@ -2614,7 +2620,7 @@
    "size": 5,
    "phase": "Deploy test site (test data)",
    "owner": "Development team",
-   "status": "Open"
+   "status": "Done"
   },
   {
    "item": "Test site settings for the four services, with a safety check at start-up",
@@ -2628,7 +2634,7 @@
    "size": 1,
    "phase": "Deploy test site (test data)",
    "owner": "Development team",
-   "status": "Open"
+   "status": "Done"
   },
   {
    "item": "Compliance: testers see the whole test data set",
