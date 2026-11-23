@@ -54,9 +54,9 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 563.0,
+   "pointsDone": 566.0,
    "pointsRemaining": 1.0,
-   "pointsTotal": 564.0,
+   "pointsTotal": 567.0,
    "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 157.89,
+  "pointsPerWorkingDayWholePeriod": 158.12,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2052.0,
-    "pointsDoneThatDay": 2.0
+    "pointsDone": 2055.0,
+    "pointsDoneThatDay": 5.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -300,7 +300,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 35.55,
-    "rateWhole": 32.09
+    "rateWhole": 32.32
    },
    "Portfolio Services": {
     "optimistic": "2026-11-25",
@@ -337,7 +337,7 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 157.89,
+   "rateWhole": 158.12,
    "pointsRemaining": 66.0,
    "itemsRemaining": 26
   }
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T02:20:16+11:00",
+ "updatedAt": "2026-11-24T02:53:42+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2619,6 +2619,12 @@
    "change": "Shell: SHELL-B-183, the empty-state icon clipped to its corner, done (1 point)",
    "pointsDone": 1.0,
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-24T02:53:42+11:00",
+   "change": "Shell group 47 landed on main (3674bb54): SHELL-B-184 shared tables no longer re-fit on changes outside a table (5 questionnaire answers: 10 re-fits, 213 ms, down to none), SHELL-B-185 test setup can put a person in two Demo groups, SHELL-B-186 Demo group renamed 'CAT 1 and CAT 2 · Service questions'.",
+   "pointsDone": 3.0,
+   "pointsRaised": 3.0
   }
  ],
  "foundDuringBuild": {
