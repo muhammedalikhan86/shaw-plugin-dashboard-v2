@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 10:45
+Updated: 2026-11-24 10:50
 
 ## Now (from 2026-11-24 09:00)
 
@@ -32,14 +32,13 @@ Updated: 2026-11-24 10:45
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 | | X | - | Browser checks owed from groups 36, 45 and 49, on the stack: the Settings report preview (both tables, a wide table scrolls, the empty-Expired line), B-233 opening month, B-235 row menu meets the card edge, B-237 Documents icon whole, B-241 table edges at 1440/1680/1920 (wide tables still scroll), F-189 Overview card | Look and Feel | 0 | Moved to the end sweep: two stack starts were killed for low memory on 2026-11-24 night; a restart needs Muhammed | - |
 
-## Portfolio Services 2 (pointer: group 42 from 2026-11-24; then 41, 40)
+## Portfolio Services 2 (group 42 merged 2026-11-24; pointer: group 43; then 41, 40)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 42 | OFA-F-198 | Test site in Misc, set-up scripts: build the stand-in warehouse and job tables in their Misc sections, load the test data, seed and reset; public holidays for 2027 included; scripts use the one Misc login and refuse any other database; adds the missing dbo.AddressPostal stand-in | Functional | 3 | In review; critical path; spec docs/hub/uat-in-misc.md §2.3; a live run waits for the Misc login | - |
-| >> | 42 | OFA-B-234 | The monthly cycle › Anniversary list: remove "Add an account to this month" from the Cull notes card | Look and Feel | 1 | Raised by Muhammed 2026-11-24; runs alongside OFA-F-198 | - |
-| | 42 | OFA-B-230 | Test data: leave the Adviser Initial OFA follow-up wording with no version, so Compliance's "offers its first version" check can pass | Functional | 1 | After OFA-F-198 | OFA-F-198 |
-| | 42 | OFA-B-232 | Master spreadsheet import accepts a workbook whose only sheet carries the register header (today it needs the sheet named "OFA Master ACTIVE") | Functional | 1 | After OFA-B-230 | OFA-B-230 |
+| >> | 43 | OFA-B-236 | Test site set-up: the job-table script reads ShawCentral's definitions with the read-only database login, then runs live in Misc | Functional | 1 | Building; Misc step 1 (stand-in tables, 2027 holidays) done 2026-11-24 | - |
+| | 43 | OFA-B-230 | Test data: leave the Adviser Initial OFA follow-up wording with no version, so Compliance's "offers its first version" check can pass | Functional | 1 | After OFA-F-198 | OFA-F-198 |
+| | 43 | OFA-B-232 | Master spreadsheet import accepts a workbook whose only sheet carries the register header (today it needs the sheet named "OFA Master ACTIVE") | Functional | 1 | After OFA-B-230 | OFA-B-230 |
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | IT ticket raised; approval to run expected Wed 2026-11-25 | - |
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
 | | X | OFA-F-032 | Attachment mover: built, waiting on your SharePoint live check | Functional | - | After go-live | - |
