@@ -24,9 +24,9 @@ Updated: 2026-11-24 02:06
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 | >> | 36 | OFA-B-219 | Expired report and the adviser's own fee-off mark: the row comes onto the Expired report when the OFA expired; not for a manual termination (the adviser closed the account) (query, API, export, screen) | Functional | ?? | Ruled by Muhammed 2026-11-23 (D-01); next PS group | - |
-| >> | 36 | (to raise) | The monthly cycle: the Cycle picker opens on the cycle that is open. On 23-11 November is not open yet: it still shows, marked Not opened, but October (open) is picked (05) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| >> | 36 | (to raise) | Arrangement record: the Platform accounts table does not use the full width of its card (08) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
-| >> | 36 | (to raise) | Arrangement record: the icon in the empty Documents (DART) box is broken, drawn as a bare corner (07) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
+| >> | 36 | OFA-B-233 | The monthly cycle: the Cycle picker opens on the cycle that is open. On 23-11 November is not open yet: it still shows, marked Not opened, but October (open) is picked (05) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
+| >> | 36 | OFA-B-235 | Arrangement record: the Platform accounts table does not use the full width of its card (08) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
+| >> | 36 | OFA-B-237 | Arrangement record: the icon in the empty Documents (DART) box is broken, drawn as a bare corner (07) | Bug | ?? | Testing run 23-11-2026, docs/stash/testing-2311; raised by Muhammed; after the queued work, in the order listed (ruled 2026-11-23) | - |
 
 ## Portfolio Services 2 (pointer: group 35 resumed 2026-11-24; then 37 to 40)
 
