@@ -72,9 +72,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 826.0,
+   "pointsDone": 829.0,
    "pointsRemaining": 32.0,
-   "pointsTotal": 858.0,
+   "pointsTotal": 861.0,
    "itemsRemaining": 13,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -134,10 +134,10 @@
    ],
    "stage": "deploy",
    "start": "2026-11-23",
-   "pointsDone": 9.0,
-   "pointsRemaining": 34.0,
+   "pointsDone": 12.0,
+   "pointsRemaining": 31.0,
    "pointsTotal": 43.0,
-   "itemsRemaining": 15,
+   "itemsRemaining": 14,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 0.0,
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 153.35,
+  "pointsPerWorkingDayWholePeriod": 153.81,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -281,8 +281,8 @@
    },
    {
     "date": "2026-11-23",
-    "pointsDone": 1993.0,
-    "pointsDoneThatDay": 10.0
+    "pointsDone": 1999.0,
+    "pointsDoneThatDay": 16.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -302,7 +302,7 @@
     "likely": "2026-11-24",
     "pessimistic": "2026-11-24",
     "rateLast10": 38.95,
-    "rateWhole": 61.02
+    "rateWhole": 61.25
    },
    "Advisor": {
     "optimistic": "2026-11-24",
@@ -323,7 +323,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 21.5,
-    "rateWhole": 22.18
+    "rateWhole": 22.41
    }
   },
   "overall": {
@@ -332,9 +332,9 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 153.35,
-   "pointsRemaining": 83.0,
-   "itemsRemaining": 33
+   "rateWhole": 153.81,
+   "pointsRemaining": 80.0,
+   "itemsRemaining": 32
   }
  },
  "milestones": [
@@ -417,7 +417,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-23T11:14:43+11:00",
+ "updatedAt": "2026-11-23T11:22:14+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2579,6 +2579,12 @@
    "change": "REL-005 and REL-006 done: testers see the whole test data set in Compliance and every test adviser in the Adviser Dashboard (2 points)",
    "pointsDone": 3.0,
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-23T11:22:14+11:00",
+   "change": "REL-007 done: every email on the test site goes to one inbox (3 points)",
+   "pointsDone": 6.0,
+   "pointsRaised": 3.0
   }
  ],
  "foundDuringBuild": {
@@ -2638,7 +2644,7 @@
    "size": 3,
    "phase": "Deploy test site (test data)",
    "owner": "Development team",
-   "status": "Open"
+   "status": "Done"
   },
   {
    "item": "Test site build of the six screens",

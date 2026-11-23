@@ -26,17 +26,16 @@ Updated: 2026-11-23 11:45
 | | X | OFA-B-219 | Expired report: an adviser's own fee-off mark should pull the row on, as a client closure's does (query, API, export, screen) | Functional | ?? | Awaiting user: business yes/no (default yes) | - |
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 
-## Portfolio Services 2 (pointer: group 33, REL-007; then Luke's templates)
+## Portfolio Services 2 (pointer: Luke's templates, proposal to the hub)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 1 | REL-007 | Every email to one inbox on the test site | Functional | 3 | Go 2026-11-23 | REL-003 |
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | Blocked by you (Monday) | - |
 | | X | OFA-S-005 | Finish the spike: rerun on the unredacted master spreadsheet | Functional | 1 | Blocked by you (Monday) | - |
 | | X | OFA-B-107 | Monthly cycle S-Account not cut short: no plugin code (SHELL-F-135 covers it) | Look and Feel | - | Closes at the end-sweep parity look | - |
 | | X | OFA-F-120, F-032 | Word converter and attachment mover: built, waiting on your end-to-end and SharePoint live checks | Functional | - | Blocked by you (Monday) | - |
 | | X | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
-| | 2 | OFA-F-158 + new items | Luke's templates in (renewal reminders, weekly Initial OFA, No OFA fee, closure/termination); State Manager emails 4 and 5 off; deceased-estate Back Office email off; client renewal follow-up (7) keeps its placeholder until Luke's template | Functional | 1+ (ps2 sizes) | Go 2026-11-23, after REL-007 | REL-007 |
+| >> | 1 | OFA-F-158 + new items | Luke's templates in (renewal reminders, weekly Initial OFA, No OFA fee, closure/termination); State Manager emails 4 and 5 off; deceased-estate Back Office email off; client renewal follow-up (7) keeps its placeholder until Luke's template | Functional | 1+ (ps2 sizes) | Proposal coming to the hub | - |
 | | X | OFA-B-184 | A timeout can send a signing request twice | Functional | 2 | Blocked by a lookup in AnnatureInterfaceWebAPI (no item yet) | - |
 
 ## Compliance (pointer: parked after group 22; the rest waits on design rows)
