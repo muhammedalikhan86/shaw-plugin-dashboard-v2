@@ -72,9 +72,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 898.0,
+   "pointsDone": 904.0,
    "pointsRemaining": 32.0,
-   "pointsTotal": 930.0,
+   "pointsTotal": 936.0,
    "itemsRemaining": 13,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 162.88,
+  "pointsPerWorkingDayWholePeriod": 163.34,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2117.0,
-    "pointsDoneThatDay": 67.0
+    "pointsDone": 2123.0,
+    "pointsDoneThatDay": 73.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -307,7 +307,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 38.95,
-    "rateWhole": 66.56
+    "rateWhole": 67.02
    },
    "Advisor": {
     "optimistic": "2026-11-25",
@@ -337,7 +337,7 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 162.88,
+   "rateWhole": 163.34,
    "pointsRemaining": 70.0,
    "itemsRemaining": 28
   }
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T10:16:04+11:00",
+ "updatedAt": "2026-11-24T10:23:39+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2716,6 +2716,12 @@
    "at": "2026-11-24T10:16:04+11:00",
    "change": "Compliance group 51 merged to main (45030d5c): design rows P94 (filter dialogs hide an empty single-field slot and keep a 48px gap above the buttons) and P95 (OFA Checklist steps show the OFA Team's notes with the note-count chip). Both already matched the board; no app code changed; two new board scenarios switched on. Compliance board: 245 passed, 0 failed, 25 skipped. Next for Compliance: group 52, a small Look and Feel fix so OFA Checklist step notes list newest first, as the board draws them.",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-24T10:23:39+11:00",
+   "change": "Portfolio Services groups 50 and 51 merged to main (57eb0366): REL-011 Portfolio Services part, the test site's Portfolio Services API keeps its data in the Misc database (settings point at Misc, warehouse reads go through schema tokens, the job store is Misc's webJob schema, test-site mail goes only to the test mailbox, which still needs filling in), 5 points; OFA-B-247 removed the line under the Overview's \"Client closures on the 10-day clock\" card, 1 point. Checks: .NET 3983 passed, 2 skipped (4 database timeouts under load passed on re-run); Shell.Hosting 39 of 39; Jest 1753. Next for Portfolio Services: group 52, design rows O20, O22, O36 and O21.",
+   "pointsDone": 6.0,
+   "pointsRaised": 6.0
   }
  ],
  "foundDuringBuild": {
