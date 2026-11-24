@@ -1,8 +1,7 @@
 {
   "status": "Deploy 1 is out. Portfolio Services' API is waiting for its next deploy before it starts.",
   "parts": {
-    "portfolio-services-api": "Not starting yet: a database fix (OFA-B-261) goes out in the next deploy.",
-    "compliance-dashboard-api": "A database fix (COMPLIANCE-DASHBOARD-B-128) goes out in the next deploy."
+    "portfolio-services-api": "Not starting yet: a database fix (OFA-B-261) goes out in the next deploy."
   },
   "next": [
     "Deploy the Portfolio Services API with the database fix, then reload the test data.",
