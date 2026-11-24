@@ -54,17 +54,17 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 574.0,
-   "pointsRemaining": 7.0,
-   "pointsTotal": 581.0,
-   "itemsRemaining": 2,
+   "pointsDone": 575.0,
+   "pointsRemaining": 9.0,
+   "pointsTotal": 584.0,
+   "itemsRemaining": 3,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 161.0,
-    "pointsRemaining": 1.0,
-    "pointsTotal": 162.0,
+    "pointsRemaining": 4.0,
+    "pointsTotal": 165.0,
     "itemsDone": 79,
-    "itemsRemaining": 1
+    "itemsRemaining": 2
    }
   },
   {
@@ -72,10 +72,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 921.0,
-   "pointsRemaining": 34.0,
-   "pointsTotal": 955.0,
-   "itemsRemaining": 15,
+   "pointsDone": 925.0,
+   "pointsRemaining": 33.0,
+   "pointsTotal": 958.0,
+   "itemsRemaining": 14,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -137,7 +137,7 @@
    "pointsDone": 25.0,
    "pointsRemaining": 18.0,
    "pointsTotal": 43.0,
-   "itemsRemaining": 9,
+   "itemsRemaining": 10,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 0.0,
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 166.43,
+  "pointsPerWorkingDayWholePeriod": 166.81,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2163.0,
-    "pointsDoneThatDay": 113.0
+    "pointsDone": 2168.0,
+    "pointsDoneThatDay": 118.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -300,14 +300,14 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 35.55,
-    "rateWhole": 32.93
+    "rateWhole": 33.01
    },
    "Portfolio Services": {
     "optimistic": "2026-11-25",
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 38.95,
-    "rateWhole": 68.33
+    "rateWhole": 68.64
    },
    "Advisor": {
     "optimistic": "2026-11-25",
@@ -337,9 +337,9 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 166.43,
-   "pointsRemaining": 78.0,
-   "itemsRemaining": 31
+   "rateWhole": 166.81,
+   "pointsRemaining": 79.0,
+   "itemsRemaining": 32
   }
  },
  "milestones": [
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T15:30:13+11:00",
+ "updatedAt": "2026-11-24T16:22:04+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2838,14 +2838,61 @@
    "change": "Portfolio Services OFA-B-240 merged: the test data's bounced signatory has a second address to re-send to; OFA-B-242 raised",
    "pointsDone": 1.0,
    "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-24T16:22:04+11:00",
+   "change": "Portfolio Services OFA-B-240 docs merged: the test runbook and the migration numbering brought in line",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-24T16:22:04+11:00",
+   "change": "Compliance merged a guard test that keeps its database scripts working on the estate's older database setting (compatibility level 120); the sweep found nothing at risk",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-24T16:22:04+11:00",
+   "change": "Compliance merged its warehouse-reads list: it reads no warehouse data directly, only through Portfolio Services' own tables",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-24T16:22:04+11:00",
+   "change": "Compliance added Portfolio Services' warehouse-reads list and notes on how the PhoenixV3 app reads the warehouse (hub item 6)",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-24T16:22:04+11:00",
+   "change": "Portfolio Services group 56 and the OFA-B-261 code merged (OFA-B-257, OFA-B-259, OFA-B-260): import messages name the sheet that was read, the test site prints notices with Google Chrome on the business's 2021 letterhead, and the register's database scripts run at compatibility level 120",
+   "pointsDone": 4.0,
+   "pointsRaised": 3.0
+  },
+  {
+   "at": "2026-11-24T16:22:04+11:00",
+   "change": "Portfolio Services group 57 docs merged (OFA-B-261); OFA-B-263 raised (test hosts log to the console by default)",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-24T16:22:04+11:00",
+   "change": "Shell SHELL-B-194 on main: a release now stops on any copy error and creates a plugin's first folder; SHELL-B-193 raised (the first sign-in check can fail once and show an error) and SHELL-F-176 sized",
+   "pointsDone": 1.0,
+   "pointsRaised": 3.0
+  },
+  {
+   "at": "2026-11-24T16:22:04+11:00",
+   "change": "Hub and Shell notes on main: where the test site's database login is set, the four Initial OFA starters' reference line, and Shell's warehouse-reads list (no direct reads)",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-24T16:22:04+11:00",
+   "change": "Test site: deploy 1 completed on 2026-11-24. The Portfolio Services API is up on e1c85b26 with OFA-B-261, the Compliance API was redeployed with COMPLIANCE-DASHBOARD-B-128, and the register's test data was loaded",
+   "pointsDone": 0.0
   }
  ],
  "foundDuringBuild": {
   "pointsDone": 275.0,
-  "pointsRemaining": 1.0,
-  "pointsTotal": 276.0,
+  "pointsRemaining": 4.0,
+  "pointsTotal": 279.0,
   "itemsDone": 133,
-  "itemsRemaining": 1
+  "itemsRemaining": 2
  },
  "buildCompletedOn": "2026-11-23",
  "deploymentBacklogNote": "The hub refreshes deploymentBacklog and waitingOnOthers from docs/leftovers.md (The stack, Waiting on others) in the hub checkout. The status page draws them as the deployment and testing work table. buildCompletedOn pins the Build finish date the patcher would otherwise reset.",
