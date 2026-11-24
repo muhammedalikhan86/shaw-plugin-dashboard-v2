@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 12:58
+Updated: 2026-11-24 12:59
 
 ## Now (from 2026-11-24 09:00)
 
@@ -17,7 +17,6 @@ Updated: 2026-11-24 12:58
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 51 | SHELL-B-188 and a removal | Remove the old ThrowIfAnyDatabaseIsNotUat check (nothing calls it since REL-011); fix the shared switch test step so a switch's hidden icon is not read into its name (unblocks Advisor's B96 scenarios); the reads step also reads a button's text (unblocks PS's O36) | Bug | - | Building; one stack window at Integration also runs group 50's owed notification-panel e2e check | - |
-| | 52 | (new Shell bug) | Test site: the real AD group name "Shaw Portal UAT Testers" in deploy.ps1, Shell's settings and the test-site docs | Functional | 1 | Critical path; after group 51's board run | - |
 | | 52 | (new Shell item) | make graph C=<component> rebuilds only that component's graph | Bug | - | After group 51 | - |
 | | X | D11, D14 | Shell error and empty states (a)-(f); landing page's needs-a-newer-shell card | Look and Feel | - | Later: the words are placeholders until the business supplies them | - |
 
