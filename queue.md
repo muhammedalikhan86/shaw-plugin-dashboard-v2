@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 15:27
+Updated: 2026-11-24 15:30
 
 ## Now (from 2026-11-24 09:00)
 
@@ -50,12 +50,11 @@ Updated: 2026-11-24 15:27
 | | 40 | - | End sweep, on the stack: make test-data for migrations 0201-0203, and a look at the Wording page | Functional | 0 | End sweep | - |
 | | 40 | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 
-## Compliance (group 53 merged 2026-11-24; pointer: the level-120 sweep)
+## Compliance (level-120 sweep merged 2026-11-24: nothing at risk; pointer: warehouse-reads inventory)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | owed | - | Level-120 sweep of ComplianceDashboard.WebAPI: find any OPENJSON, STRING_SPLIT or other feature that needs a level above 120 (the test site's databases are at 120) | Functional | - | Started 2026-11-24 (B-128 fixed Pending); with a guard test | - |
-| | next | - | Warehouse-reads inventory for hub item 6: every direct DataWarehouse, ShawCentral or PowerBI read, as a list (read-only, no change to the test site) | Functional | - | After the sweep | - |
+| >> | - | - | Warehouse-reads inventory for hub item 6: every direct DataWarehouse, ShawCentral or PowerBI read, as a list (read-only, no change to the test site) | Functional | - | In progress | - |
 | | X | W44 | Wording page: the no-version slot says a placeholder is sent; Portfolio Services actually sends the approved built-in email (Adviser Initial OFA follow-up) | Look and Feel | - | Later: design row, goes to the designer next round; words need the business's approval | - |
 
 ## Advisor (group 49 merged 2026-11-24; B-132 waits for a stack window, F-144 waits on Luke)
@@ -72,7 +71,7 @@ Updated: 2026-11-24 15:27
 Deployment and testing (from 2026-11-23): the work left is the REL- stack in `docs/leftovers.md`, worked top first. REL-001 to REL-010 are on go.
 
 1. Designer round synced 2026-11-24 and routed. Shell boards (Main, ShellCollapsed, AccountRow, NotificationPanel, SearchPanel, the current landing page) sent to the designer to draw D8-D14 on (Muhammed sends).
-2. Test site: deploy 1 done for 8 of 9 parts (shell-api, advisor-dashboard-api, compliance-dashboard-api and all five web parts are up). portfolio-services-api fails to start (500.30) because Misc is at compatibility level 120. Next: PS's OFA-B-261, then re-deploy portfolio-services-api only, then ps2 loads the register test data, then Muhammed checks the pages and one email. Level-120 sweep: Advisor and Shell found nothing at risk; Compliance's is owed. A second PS-only deploy brings notices (Chrome and the letterhead).
+2. Test site: deploy 1 done for 8 of 9 parts (shell-api, advisor-dashboard-api, compliance-dashboard-api and all five web parts are up). portfolio-services-api fails to start (500.30) because Misc is at compatibility level 120. Next: PS's OFA-B-261, then re-deploy portfolio-services-api only, then ps2 loads the register test data, then Muhammed checks the pages and one email. Level-120 sweep: Advisor, Shell and Compliance found nothing at risk. A second PS-only deploy brings notices (Chrome and the letterhead).
 3. End sweep, last: after the designer's work is synced, built, and tested by hand by Muhammed; every parity check, each issue listed as Look and Feel.
 4. Waiting on you: push main; the SyncFee grant: OFA-F-160 is on main, so the gMSA's EXECUTE on dbo.SyncFee can be dropped on the server (PS removes line 3 of SyncFee-grants.sql in group 10); rerun the OFA-S-005 spike on the unredacted master spreadsheet (scripts in the PS checkout, spikes/OFA-S-005, uncommitted); check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest (another day); the OFA-S-001 owner questions: DART's open-a-document URL and whether staff have DART logins (OFA-F-145 and F-055 are built behind Dart:DocumentLinkTemplate, off until it is set); PS's 8 production settings.
 5. After ps2's OFA-F-202 (the starters on the letterhead), with the stack up: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database through the Wording page's upload, so each slot shows the business wording, not the [Test data] text. NoOfaFeeAdvisorEmail and RenewalConfirmation wait for ps2's field-library fix.
