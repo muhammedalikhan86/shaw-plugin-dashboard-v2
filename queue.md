@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 15:30
+Updated: 2026-11-24 15:32
 
 ## Now (from 2026-11-24 09:00)
 
@@ -17,7 +17,7 @@ Updated: 2026-11-24 15:30
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 53 | SHELL-F-184 | Testers see which release they are on: every part stamped with release.json at prepare time (tag, commit, date), GET /release on each API, a Release card on the Profile page with each shell, plugin and API row, marked UAT; board first (design row D15) | Functional | 6 | For deploy 2; tracked-file edits held until the PS re-deploy is done | - |
-| | 53 | - | deploy.ps1 fixes: create a missing plugin folder on first deploy; stop on any robocopy error instead of reporting "Deployed" | Functional | 1 | After group 53 or alongside | - |
+| >> | - | - | Hub doc fixes (UAT README login line, duplicate REL-011, wording starters note), then the Shell and Plugin0 warehouse-reads inventory for hub item 6 | Functional | - | In progress | - |
 | | X | D11, D14 | Shell error and empty states (a)-(f); landing page's needs-a-newer-shell card | Look and Feel | - | Later: the words are placeholders until the business supplies them | - |
 
 ## Portfolio Services (groups 54 and 55 merged 2026-11-24; pointer: group 56; group 57 is the critical path)
