@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 11:03
+Updated: 2026-11-24 11:05
 
 ## Now (from 2026-11-24 09:00)
 
@@ -24,7 +24,8 @@ Updated: 2026-11-24 11:03
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 54 | OFA-B-253 | Initial OFAs Excel export writes NEW and On paper for an imported row, as the screen does | Functional | 1 | Building; its .NET test waits for a window (after Shell and Compliance) | - |
+| >> | 54 | OFA-B-253 | Initial OFAs Excel export writes NEW and On paper for an imported row, as the screen does | Functional | 1 | Built and reviewed; its .NET test waits for a window (after Shell and Compliance) | - |
+| >> | 55 | OFA-B-232 | Master spreadsheet import accepts a workbook whose only sheet carries the register header (today it needs the sheet named "OFA Master ACTIVE") | Functional | 1 | After OFA-B-230 | OFA-B-230 |
 | | X | OFA-B-251 | Fee check banner: what date "next on" means (the app has no next-sync date; it checks each business day until the month's fees arrive) | Functional | - | Later: Muhammed decides | - |
 | | X | O39 | Settings report preview: the new report columns (OFA-F-191) | Functional | - | Later: Muhammed confirms the designer's guessed values (Renewal Notice Due Date = +60 days and others) | - |
 | | X | O40, O41, O42 | Remove the separate Adviser review answers card; could-not-load card on six screens; the Import page as drawn | Look and Feel | - | Later: O41's page names and O42's words wait for the business | - |
@@ -38,7 +39,6 @@ Updated: 2026-11-24 11:03
 |---|---|---|---|---|---|---|---|
 | >> | 43 | OFA-B-236 | Test site set-up: the job-table script reads ShawCentral's definitions with the read-only database login, then runs live in Misc | Functional | 1 | Building; Misc step 1 (stand-in tables, 2027 holidays) done 2026-11-24 | - |
 | | 43 | OFA-B-230 | Test data: leave the Adviser Initial OFA follow-up wording with no version, so Compliance's "offers its first version" check can pass | Functional | 1 | After OFA-F-198 | OFA-F-198 |
-| | 43 | OFA-B-232 | Master spreadsheet import accepts a workbook whose only sheet carries the register header (today it needs the sheet named "OFA Master ACTIVE") | Functional | 1 | After OFA-B-230 | OFA-B-230 |
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | IT ticket raised; approval to run expected Wed 2026-11-25 | - |
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
 | | X | OFA-F-032 | Attachment mover: built, waiting on your SharePoint live check | Functional | - | After go-live | - |
