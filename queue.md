@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 12:54
+Updated: 2026-11-24 12:57
 
 ## Now (from 2026-11-24 09:00)
 
@@ -63,7 +63,6 @@ Updated: 2026-11-24 12:54
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 49 | (new Advisor bug) | Test site: the real AD group name "Shaw Portal UAT Testers" | Functional | 1 | Critical path; first | - |
 | >> | 49 | ADVISOR-DASHBOARD-B-142 | Renewal tracker: pick another address for a bounced signing email, as the board draws it (S18471) | Functional | 2 | Muhammed ruled 2026-11-24: an Adviser may re-send a bounced signing request; builds on ps2's new resend procedure (ps2 group 44); its .NET test and group 48's owed built-app checks share one stack window | - |
 | | X | B101 | Signatory address link tip when the follow-up email failed | Look and Feel | - | Later: design row, goes to the designer next round | - |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke. Asked 2026-11-23 what the Adviser's OFA History tab should show, with the Portfolio Services and Compliance tabs as examples; then the design | - |
