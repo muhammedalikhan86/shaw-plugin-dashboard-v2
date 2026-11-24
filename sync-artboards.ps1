@@ -5,7 +5,7 @@
 .DESCRIPTION
   Copies four artboard pages, their shared assets and support.js into this folder, then patches
   them for the demo:
-    - each page loads demo-nav.js, which makes the Shaw and Partners logo go back to index.html;
+    - each page loads demo-nav.js, which makes the Shaw and Partners logo go back to mock-index.html;
     - the artboards link to each other by file name (the two advisor pages do), so each such link
       is pointed at that page's demo name from $pages;
     - each page gets its browser-tab title from $titles below (the artboards carry none);
@@ -15,7 +15,7 @@
       and exposes window.__demoRefresh, which re-reads the address without reloading, so a page
       keeps the view it is on when demo-nav.js changes a setting.
   Artboards a page imports ($imports) are copied under their own names, with the same rewrites.
-  index.html and demo-nav.js are maintained by hand and are not touched.
+  index.html, mock-index.html and demo-nav.js are maintained by hand and are not touched.
 
   Run it, check the pages locally, then commit and push. Vercel deploys on push.
 

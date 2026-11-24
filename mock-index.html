@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shaw Portal - Mock Designs</title>
+<link rel="stylesheet" href="assets/ds/roboto.css">
+<style>
+:root{--bg:#F4F4F4;--card:#FFFFFF;--ink:#1A1A1A;--muted:#5C5C5C;--line:#E0E0E0;--accent:#E8501E}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--accent:#FF6A33}}
+:root[data-theme="dark"]{--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--accent:#FF6A33}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/22px Roboto,"Helvetica Neue",Arial,sans-serif}
+header{background:#000;padding:16px}
+header img{width:150px;height:auto;display:block}
+main{max-width:880px;margin:0 auto;padding:32px 16px 48px}
+h1{font-weight:400;font-size:26px;line-height:34px;margin:0 0 8px}
+.lede{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:600px){.grid{grid-template-columns:1fr}}
+.grid a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 24px;color:inherit;text-decoration:none;transition:border-color .15s,box-shadow .15s}
+.grid a:hover,.grid a:focus-visible{border-color:var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.12);outline:none}
+.grid strong{display:block;font-size:17px;font-weight:500;margin:0 0 4px}
+.grid span{display:block;color:var(--muted)}
+.grid em{display:block;margin-top:14px;color:var(--accent);font-style:normal;font-weight:500}
+</style>
+</head>
+<body>
+<header><img src="assets/logo-primary-reversed-3x.png" alt="Shaw and Partners"></header>
+<main>
+<h1>Shaw Portal - Mock Designs</h1>
+<p class="lede">Click-through designs of the Shaw Portal. Everything you see is sample data, and nothing you do is saved: reload a page to start it again. Click the Shaw and Partners logo to come back here. Best viewed on a wide screen.</p>
+<div class="grid">
+<a href="plugin0.html"><strong>Component Library</strong><span>The portal's frame, with the reference plugin inside it.</span><em>Open</em></a>
+<a href="portfolio-services.html"><strong>Portfolio Services Dashboard</strong><span>For the OFA Team.</span><em>Open</em></a>
+<a href="advisor.html"><strong>Advisor Dashboard</strong><span>For advisors: the Ongoing Fee Arrangements part.</span><em>Open</em></a>
+<a href="compliance.html"><strong>Compliance Dashboard</strong><span>For Compliance.</span><em>Open</em></a>
+</div>
+</main>
+</body>
+</html>

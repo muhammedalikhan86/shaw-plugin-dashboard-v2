@@ -1,8 +1,8 @@
-// Demo only: the Shaw and Partners logo in each artboard goes back to the start page.
+// Demo only: the Shaw and Partners logo in each artboard goes back to the mock designs page.
 // A plain click opens it here; a middle click, or a Ctrl, Cmd or Shift click, opens it in a new tab.
 (function () {
   var LOGO = 'img[src*="logo-primary-reversed"]';
-  var HOME = './index.html';
+  var HOME = './mock-index.html';
   var style = document.createElement('style');
   style.textContent = LOGO + '{cursor:pointer}';
   document.head.appendChild(style);
