@@ -72,10 +72,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 912.0,
-   "pointsRemaining": 33.0,
-   "pointsTotal": 945.0,
-   "itemsRemaining": 14,
+   "pointsDone": 914.0,
+   "pointsRemaining": 36.0,
+   "pointsTotal": 950.0,
+   "itemsRemaining": 15,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 165.13,
+  "pointsPerWorkingDayWholePeriod": 165.28,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2146.0,
-    "pointsDoneThatDay": 96.0
+    "pointsDone": 2148.0,
+    "pointsDoneThatDay": 98.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -307,7 +307,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 38.95,
-    "rateWhole": 67.64
+    "rateWhole": 67.79
    },
    "Advisor": {
     "optimistic": "2026-11-25",
@@ -337,9 +337,9 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 165.13,
-   "pointsRemaining": 73.0,
-   "itemsRemaining": 30
+   "rateWhole": 165.28,
+   "pointsRemaining": 76.0,
+   "itemsRemaining": 31
   }
  },
  "milestones": [
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T13:17:57+11:00",
+ "updatedAt": "2026-11-24T13:27:58+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2775,6 +2775,12 @@
    "change": "Portfolio Services groups 54 and 55 merged (OFA-B-253, OFA-B-255, OFA-B-232); OFA-B-257 raised",
    "pointsDone": 4.0,
    "pointsRaised": 3.0
+  },
+  {
+   "at": "2026-11-24T13:27:58+11:00",
+   "change": "Portfolio Services group 43 merged (OFA-B-236, OFA-B-230); OFA-F-200 raised",
+   "pointsDone": 2.0,
+   "pointsRaised": 5.0
   }
  ],
  "foundDuringBuild": {
