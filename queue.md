@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 13:48
+Updated: 2026-11-24 13:51
 
 ## Now (from 2026-11-24 09:00)
 
@@ -16,8 +16,9 @@ Updated: 2026-11-24 13:48
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | - | - | Test-site release prepared: all 9 parts with -PrepareOnly -Environment UAT | Functional | 0 | 8 of 9 passed 2026-11-24; advisor-dashboard-api waits on Advisor's failing-test fix, then is prepared again | - |
-| >> | 52 | SHELL-F-181, SHELL-F-182, (new Shell bug) | make graph C=<component> rebuilds one graph (built, not committed); the REL-011 docs (ADR-031, leftovers.md, uat.md); the shared demoSetting step stops timing out at sign-in under load (3 scenarios) | Functional | 2 | Paused for the release prepare; resumes after it | - |
+| >> | - | - | Test-site release prepared: all 9 parts with -PrepareOnly -Environment UAT | Functional | 0 | 8 of 9 passed 2026-11-24; Advisor's test fix merged (ADVISOR-DASHBOARD-B-144); advisor-dashboard-api is prepared again after Advisor's .NET run | - |
+| >> | 52 | SHELL-F-181, SHELL-F-182, SHELL-B-192 | make graph C=<component> rebuilds one graph (built); the REL-011 docs (ADR-031, leftovers.md, uat.md); the shared demoSetting step stops timing out at sign-in under load (3 scenarios) | Functional | 2 | Nearly done: F-181 built, B-192 proven 12/12, F-182 docs being written; committed before Muhammed's deploy | - |
+| | 53 | SHELL-F-184 | Testers see which release they are on: every part stamped with release.json at prepare time (tag, commit, date), GET /release on each API, a Release card on the Profile page with each shell, plugin and API row, marked UAT; board first | Functional | 6 | After group 52; for deploy 2 | - |
 | | X | D11, D14 | Shell error and empty states (a)-(f); landing page's needs-a-newer-shell card | Look and Feel | - | Later: the words are placeholders until the business supplies them | - |
 
 ## Portfolio Services (groups 54 and 55 merged 2026-11-24; pointer: group 56)
@@ -60,7 +61,6 @@ Updated: 2026-11-24 13:48
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 49 | (new Advisor bug) | SqlQuestionnaireStoreTests fails on today's test data (AsfUnavailable, line 47); blocks the advisor-dashboard-api test-site release | Bug | 1 | Critical path; has the .NET window | - |
 | >> | 49 | ADVISOR-DASHBOARD-B-142 | Renewal tracker: pick another address for a bounced signing email, as the board draws it (S18471) | Functional | 2 | Built, reviewer PASS, front end green; waits for a 6-minute .NET window; group 48's owed built-app checks share a later stack window | OFA-F-200 |
 | | X | B101 | Signatory address link: the tip and the re-send dialog when the follow-up email failed (widened 2026-11-24) | Look and Feel | - | Later: design row, goes to the designer next round | - |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke. Asked 2026-11-23 what the Adviser's OFA History tab should show, with the Portfolio Services and Compliance tabs as examples; then the design | - |
