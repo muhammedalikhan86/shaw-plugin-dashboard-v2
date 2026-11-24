@@ -6,9 +6,9 @@
 <title>Shaw Portal - Test Site</title>
 <link rel="stylesheet" href="assets/ds/roboto.css">
 <style>
-:root{--bg:#F4F4F4;--card:#FFFFFF;--ink:#1A1A1A;--muted:#5C5C5C;--line:#E0E0E0;--accent:#E8501E;--ok:#1B7F3B;--warn:#B25E00}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--accent:#FF6A33;--ok:#5CC97F;--warn:#F0A04B}}
-:root[data-theme="dark"]{--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--accent:#FF6A33;--ok:#5CC97F;--warn:#F0A04B}
+:root{--bg:#F4F4F4;--card:#FFFFFF;--ink:#1A1A1A;--muted:#5C5C5C;--line:#E0E0E0;--accent:#E8501E;--ok:#1B7F3B;--warn:#B25E00;--bad:#C62828}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--accent:#FF6A33;--ok:#5CC97F;--warn:#F0A04B;--bad:#FF6B6B}}
+:root[data-theme="dark"]{--bg:#121212;--card:#1E1E1E;--ink:#F2F2F2;--muted:#B0B0B0;--line:#333333;--accent:#FF6A33;--ok:#5CC97F;--warn:#F0A04B;--bad:#FF6B6B}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/22px Roboto,"Helvetica Neue",Arial,sans-serif}
 header{background:#000;padding:16px}
@@ -17,7 +17,7 @@ main{max-width:1040px;margin:0 auto;padding:32px 16px 48px}
 h1{font-weight:400;font-size:26px;line-height:34px;margin:0 0 8px}
 h2{font-weight:400;font-size:20px;line-height:28px;margin:32px 0 12px}
 .lede{color:var(--muted);margin:0 0 20px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 @media (max-width:760px){.grid{grid-template-columns:1fr}}
 .grid a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 24px;color:inherit;text-decoration:none;transition:border-color .15s,box-shadow .15s}
 .grid a:hover,.grid a:focus-visible{border-color:var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.12);outline:none}
@@ -27,6 +27,7 @@ h2{font-weight:400;font-size:20px;line-height:28px;margin:32px 0 12px}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 24px}
 .panel p{margin:0 0 8px}
 .panel ol{margin:0;padding-left:20px}
+.panel li{margin:4px 0}
 .table{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:auto}
 .table.scroll{max-height:60vh}
 table{width:100%;border-collapse:collapse;font-size:14px;line-height:20px}
@@ -38,6 +39,11 @@ code{font:500 13px/20px "Roboto Mono",Consolas,monospace}
 .muted{color:var(--muted)}
 .note{color:var(--warn)}
 .okmark{color:var(--ok)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-weight:500;white-space:nowrap}
+.badge svg{width:18px;height:18px;flex:none}
+.badge.up{color:var(--ok)}
+.badge.down{color:var(--bad)}
+.badge.unknown{color:var(--muted)}
 .versions a{color:var(--accent);text-decoration:none}
 .versions a:hover{text-decoration:underline}
 .versions ul{margin:0;padding-left:18px}
@@ -55,17 +61,27 @@ code{font:500 13px/20px "Roboto Mono",Consolas,monospace}
 <a href="queue.html"><strong>Work Queue</strong><span>What each developer session is on now and what comes next.</span><em>Open</em></a>
 <a href="status.html"><strong>Project Status</strong><span>Build, deployment and acceptance testing: points done and left, forecast dates and the timeline.</span><em>Open</em></a>
 <a href="mock-index.html"><strong>Mock Designs</strong><span>Click-through designs of each dashboard, with sample data.</span><em>Open</em></a>
+<a href="https://intranet.shawandpartners.com.au/ShawPortalUAT/" target="_blank" rel="noopener"><strong>UAT Site</strong><span>The test site itself. Opens on the Shaw network only, signed in as you.</span><em>Open</em></a>
 </div>
 
-<h2>Where it stands</h2>
-<div class="panel" id="standing"><p class="muted">Loading…</p></div>
-
-<h2>What is on the test site</h2>
+<h2>Service status</h2>
 <div class="table">
 <table>
-<thead><tr><th scope="col">Part</th><th scope="col">Release</th><th scope="col">Deployed</th><th scope="col">Note</th></tr></thead>
+<thead><tr><th scope="col">Status</th><th scope="col">Part</th><th scope="col">Release</th><th scope="col">Last deployed</th><th scope="col">Note</th></tr></thead>
 <tbody id="parts"></tbody>
 </table>
+</div>
+<p class="gen" id="checked"></p>
+
+<h2>What is switched off on the test site</h2>
+<div class="panel">
+<ol>
+<li><strong>Electronic signing (Annature).</strong> Notices can be issued, but they are not sent out for signing.</li>
+<li><strong>Filing in DART.</strong> Signed documents are not filed, and there are no DART links.</li>
+<li><strong>Emails go to one test mailbox.</strong> Nothing reaches a client, Adviser or team: every email goes to the UAT testers' mailbox, with [UAT] at the start of the subject.</li>
+<li><strong>The Adviser Dashboard shows the OFA screens only.</strong> Its money figures are left empty.</li>
+<li><strong>All data is made up.</strong> There are no real S-Accounts and no real financial figures.</li>
+</ol>
 </div>
 
 <h2>Deployment log</h2>
@@ -105,27 +121,33 @@ code{font:500 13px/20px "Roboto Mono",Consolas,monospace}
   var d=window.UAT_DATA||{deploys:[],notes:null};
   var notes=d.notes||{};var partNotes=notes.parts||{};
 
-  // Where it stands
-  var st=document.getElementById("standing");st.textContent="";
-  st.appendChild(el("p",notes.status||"No notes yet."));
-  if(notes.next&&notes.next.length){
-    st.appendChild(el("p","Next:","muted"));
-    var ol=el("ol");notes.next.forEach(function(x){ol.appendChild(el("li",x));});st.appendChild(ol);
-  }
-
   // Latest deploy per part
   var latest={},count={};
   d.deploys.forEach(function(x){count[x.part]=(count[x.part]||0)+1;if(!latest[x.part])latest[x.part]=x;});
+  var status=d.status||null,checks=(status&&status.parts)||{};
+  var ICONS={
+    up:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    down:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>',
+    unknown:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12h8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>'
+  };
+  function badge(c){
+    var kind=!c?"unknown":(c.up?"up":"down");
+    var label=!c?"Not checked":(c.up?"Up":(c.code?"Down ("+c.code+")":"Down (no answer)"));
+    var s=el("span",null,"badge "+kind);s.innerHTML=ICONS[kind];s.appendChild(document.createTextNode(label));return s;
+  }
   var tb=document.getElementById("parts");
   PARTS.forEach(function(p){
-    var x=latest[p[0]],tr=el("tr");
+    var x=latest[p[0]],c=checks[p[0]],tr=el("tr");
+    cell(tr,badge(c),"nw");
     cell(tr,p[1]);
-    cell(tr,x?el("code",x.commit):el("span","Not deployed","muted"),"nw");
+    var rel=(c&&c.commit)||(x&&x.commit);
+    cell(tr,rel?el("code",rel):el("span","Not deployed","muted"),"nw");
     cell(tr,x?when(x.at)+(count[p[0]]>1?" ("+count[p[0]]+" deploys)":""):"","nw");
     var n=partNotes[p[0]];
-    cell(tr,n?el("span",n,"note"):(x?el("span","No known issue","okmark"):null));
+    cell(tr,n?el("span",n,"note"):null);
     tb.appendChild(tr);
   });
+  document.getElementById("checked").textContent=status&&status.checked?"Last checked "+when(status.checked)+". The page shows that check; it does not check live.":"Not checked yet.";
 
   // Log
   var lg=document.getElementById("log");

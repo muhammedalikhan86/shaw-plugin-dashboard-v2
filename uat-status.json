@@ -1,0 +1,50 @@
+{
+    "checked":  "2026-11-24T16:29:38",
+    "parts":  {
+                  "shell-web":  {
+                                    "up":  true,
+                                    "code":  200,
+                                    "commit":  null
+                                },
+                  "shell-api":  {
+                                    "up":  true,
+                                    "code":  200,
+                                    "commit":  "81d9418b"
+                                },
+                  "landing-page-web":  {
+                                           "up":  true,
+                                           "code":  200,
+                                           "commit":  null
+                                       },
+                  "portfolio-services-web":  {
+                                                 "up":  true,
+                                                 "code":  200,
+                                                 "commit":  null
+                                             },
+                  "portfolio-services-api":  {
+                                                 "up":  true,
+                                                 "code":  200,
+                                                 "commit":  "e1c85b26"
+                                             },
+                  "advisor-dashboard-web":  {
+                                                "up":  true,
+                                                "code":  200,
+                                                "commit":  null
+                                            },
+                  "advisor-dashboard-api":  {
+                                                "up":  true,
+                                                "code":  200,
+                                                "commit":  "81d9418b"
+                                            },
+                  "compliance-dashboard-web":  {
+                                                   "up":  true,
+                                                   "code":  200,
+                                                   "commit":  null
+                                               },
+                  "compliance-dashboard-api":  {
+                                                   "up":  true,
+                                                   "code":  200,
+                                                   "commit":  "21f8f2f4"
+                                               }
+              }
+}
