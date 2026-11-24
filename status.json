@@ -94,9 +94,9 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 581.0,
+   "pointsDone": 582.0,
    "pointsRemaining": 18.0,
-   "pointsTotal": 599.0,
+   "pointsTotal": 600.0,
    "itemsRemaining": 5,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 164.66,
+  "pointsPerWorkingDayWholePeriod": 164.74,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2140.0,
-    "pointsDoneThatDay": 90.0
+    "pointsDone": 2141.0,
+    "pointsDoneThatDay": 91.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -314,7 +314,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 18.12,
-    "rateWhole": 43.09
+    "rateWhole": 43.17
    },
    "Compliance": {
     "optimistic": "2026-11-25",
@@ -337,7 +337,7 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 164.66,
+   "rateWhole": 164.74,
    "pointsRemaining": 74.0,
    "itemsRemaining": 31
   }
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T11:06:44+11:00",
+ "updatedAt": "2026-11-24T12:58:26+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2757,6 +2757,12 @@
    "change": "Advisor group 48 merged to main (9663eea1): ADVISOR-DASHBOARD-B-126, B-127, B-134 and B-136 to B-141, the designer's round B92-B100. Closures: Confirm to the client only once terminated, the follow-up resend dialog's sentence, the S-Account link, the status line as the chip's tip, the Show all events switch's name, and the wording order. The scope line for several codes; the Renewal tracker filter Reset; a smaller Arrangements empty card; the resend dialogs now show the client's name beside the S-Account. 8 points. ADVISOR-DASHBOARD-B-142 raised and held as group 49 (pick another address for a bounced signing email); design row B101 raised. Checks: Jest 2275 passed; board business tests 272 passed, 0 failed, 54 skipped. Built-app checks owed in the next stack window. Next for Advisor: group 49 (B-142).",
    "pointsDone": 8.0,
    "pointsRaised": 10.0
+  },
+  {
+   "at": "2026-11-24T12:58:26+11:00",
+   "change": "Advisor B-143 merged to main (c37bb43f): ADVISOR-DASHBOARD-B-143, the test site's sign-in group is now named \"Shaw Portal UAT Testers\", with the space the directory group carries, in the Advisor settings and their checks. 1 point. The PMBook also records the ruling that an Adviser may re-send a bounced signing request (B-142). Checks: test-site settings checks 13 passed.",
+   "pointsDone": 1.0,
+   "pointsRaised": 1.0
   }
  ],
  "foundDuringBuild": {
