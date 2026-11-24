@@ -114,9 +114,9 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 259.0,
+   "pointsDone": 260.0,
    "pointsRemaining": 3.0,
-   "pointsTotal": 262.0,
+   "pointsTotal": 263.0,
    "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 164.74,
+  "pointsPerWorkingDayWholePeriod": 164.82,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2141.0,
-    "pointsDoneThatDay": 91.0
+    "pointsDone": 2142.0,
+    "pointsDoneThatDay": 92.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -321,7 +321,7 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 20.38,
-    "rateWhole": 19.69
+    "rateWhole": 19.77
    },
    "Deployment & Testing": {
     "optimistic": "2026-11-25",
@@ -337,7 +337,7 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 164.74,
+   "rateWhole": 164.82,
    "pointsRemaining": 74.0,
    "itemsRemaining": 31
   }
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T12:58:26+11:00",
+ "updatedAt": "2026-11-24T12:59:28+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2761,6 +2761,12 @@
   {
    "at": "2026-11-24T12:58:26+11:00",
    "change": "Advisor B-143 merged to main (c37bb43f): ADVISOR-DASHBOARD-B-143, the test site's sign-in group is now named \"Shaw Portal UAT Testers\", with the space the directory group carries, in the Advisor settings and their checks. 1 point. The PMBook also records the ruling that an Adviser may re-send a bounced signing request (B-142). Checks: test-site settings checks 13 passed.",
+   "pointsDone": 1.0,
+   "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-24T12:59:28+11:00",
+   "change": "Compliance group 54 merged to main (6892cdd4): COMPLIANCE-DASHBOARD-B-127, the test site's sign-in group is now named \"Shaw Portal UAT Testers\", with the space the directory group carries, so testers are let in and see the whole test data set. 1 point. Design row W44 raised: a wording with no version does not send a placeholder.",
    "pointsDone": 1.0,
    "pointsRaised": 1.0
   }
