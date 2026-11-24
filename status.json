@@ -54,10 +54,10 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 577.0,
-   "pointsRemaining": 8.0,
+   "pointsDone": 584.0,
+   "pointsRemaining": 1.0,
    "pointsTotal": 585.0,
-   "itemsRemaining": 3,
+   "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 161.0,
@@ -72,9 +72,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 926.0,
+   "pointsDone": 936.0,
    "pointsRemaining": 33.0,
-   "pointsTotal": 959.0,
+   "pointsTotal": 969.0,
    "itemsRemaining": 14,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -114,9 +114,9 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 261.0,
+   "pointsDone": 262.0,
    "pointsRemaining": 3.0,
-   "pointsTotal": 264.0,
+   "pointsTotal": 265.0,
    "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
@@ -134,9 +134,9 @@
    ],
    "stage": "deploy",
    "start": "2026-11-23",
-   "pointsDone": 25.0,
+   "pointsDone": 27.0,
    "pointsRemaining": 18.0,
-   "pointsTotal": 43.0,
+   "pointsTotal": 45.0,
    "itemsRemaining": 10,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 167.19,
+  "pointsPerWorkingDayWholePeriod": 168.73,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2173.0,
-    "pointsDoneThatDay": 123.0
+    "pointsDone": 2193.0,
+    "pointsDoneThatDay": 143.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -300,14 +300,14 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 35.55,
-    "rateWhole": 33.16
+    "rateWhole": 33.7
    },
    "Portfolio Services": {
     "optimistic": "2026-11-25",
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 38.95,
-    "rateWhole": 68.72
+    "rateWhole": 69.49
    },
    "Advisor": {
     "optimistic": "2026-11-25",
@@ -321,14 +321,14 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 20.38,
-    "rateWhole": 19.85
+    "rateWhole": 19.93
    },
    "Deployment & Testing": {
     "optimistic": "2026-11-25",
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 21.5,
-    "rateWhole": 23.41
+    "rateWhole": 23.56
    }
   },
   "overall": {
@@ -337,9 +337,9 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 167.19,
-   "pointsRemaining": 79.0,
-   "itemsRemaining": 33
+   "rateWhole": 168.73,
+   "pointsRemaining": 72.0,
+   "itemsRemaining": 31
   }
  },
  "milestones": [
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T16:46:14+11:00",
+ "updatedAt": "2026-11-24T18:25:26+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2891,6 +2891,12 @@
    "change": "Test site deploy 1 is complete: all nine parts are up and the test data is loaded. Acceptance testing starts on 2026-11-25; the remaining build work and any bugs found in testing are now worked alongside it. On main: Advisor group 50 (ADVISOR-DASHBOARD-B-145), Shell SHELL-B-195 (business-test finder fixes), SHELL-B-193 (the first sign-in check retries once) and the Profile page's Release card design (SHELL-F-184), and Portfolio Services OFA-B-242 (expired renewal for fee turned off); OFA-B-244 raised",
    "pointsDone": 5.0,
    "pointsRaised": 5.0
+  },
+  {
+   "at": "2026-11-24T18:25:26+11:00",
+   "change": "On main: Shell group 53 (SHELL-F-184, testers can see which release they are on, on the Profile page) and SHELL-B-195; Portfolio Services groups 58 and 59 (OFA-B-263, OFA-B-265, OFA-F-205); test site deploy 1 recorded done (REL-011). New on top of the deployment stack: REL-021, the live database is named ShawPortal-OngoingFeeArrangements. Portfolio Services group 60 is built and waiting to merge",
+   "pointsDone": 20.0,
+   "pointsRaised": 13.0
   }
  ],
  "foundDuringBuild": {
@@ -2979,6 +2985,13 @@
    "phase": "Deploy test site (test data)",
    "owner": "Muhammed",
    "status": "Done"
+  },
+  {
+   "item": "The live database is named ShawPortal-OngoingFeeArrangements",
+   "size": 2,
+   "phase": "Go-live (set-up until sign-off, then switch on)",
+   "owner": "Development team",
+   "status": "Open"
   },
   {
    "item": "Final tidy-up and checks before go-live",
