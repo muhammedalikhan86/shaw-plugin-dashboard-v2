@@ -4,13 +4,19 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 16:40
+Updated: 2026-11-24 16:45
 
-## Now (from 2026-11-24 09:00)
+## Now (from 2026-11-24, UAT started)
 
-1. Critical path: the test site. Deploy 1 is complete: all 9 parts up, test data loaded. Next deploy: PS group 58 (notices), then deploy 2 (SHELL-F-184 and the rollback rehearsal). Machine windows in order: PS (now), Shell, Advisor.
-2. No idle worker: a worker whose next item is blocked takes its next unblocked item.
-3. End sweep runs last, in this order: the designer's work synced, the developers have built it, Muhammed has tested by hand, then every parity check runs and each issue found is listed as Look and Feel.
+1. UAT is running on the test site. The critical-path hold is lifted: every worker builds all unblocked work in parallel, ordered by business value:
+   1. bugs the OFA Team finds in UAT, first;
+   2. anything that helps testers (release card, data refresh);
+   3. other functional items;
+   4. look and feel.
+2. One stack or .NET window at a time on the machine. Order: PS (now), Shell (F-184 packet A tests, B-195 board run), Advisor (B-146, B-132), ps2 (B-244 generate, the owed full business-test run), then the parity sweep.
+3. Parity sweep (queued after those windows; run again at the very end): each worker runs the disparity-checker on its own component in its own window, in this order: Compliance, Portfolio Services, Advisor, Shell. For every disparity, save a small actual-vs-expected screenshot pair (about 480 px wide, cropped to the difference) under docs/design/screenshots/parity/<component>/, and give each finding its breadcrumb path (e.g. Portfolio Services › Renewals › S19630 › Notice) and state. The hub gathers them on one private page for Muhammed to prioritise; each one is then queued as Look and Feel or Functional.
+4. No idle worker: a worker whose next item is blocked takes its next unblocked item.
+5. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 
 ## Shell (group 52 merged and deployed 2026-11-24; pointer: group 53)
 
@@ -33,13 +39,12 @@ Updated: 2026-11-24 16:40
 | | X | OFA-F-155 | Proof of acceptance for each signer | Functional | 2 | On hold | COMPLIANCE-DASHBOARD-F-004 |
 | | X | - | Browser checks owed from groups 36, 45 and 49, on the stack: the Settings report preview (both tables, a wide table scrolls, the empty-Expired line), B-233 opening month, B-235 row menu meets the card edge, B-237 Documents icon whole, B-241 table edges at 1440/1680/1920 (wide tables still scroll), F-189 Overview card | Look and Feel | 0 | Moved to the end sweep: two stack starts were killed for low memory on 2026-11-24 night; a restart needs Muhammed | - |
 
-## Portfolio Services 2 (group 45 and OFA-B-240 merged 2026-11-24; pointer: OFA-B-242)
+## Portfolio Services 2 (OFA-B-242 merged 2026-11-24; pointer: OFA-B-244)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 46 | OFA-B-242 | Seed gains a renewal already expired by the test clock date that can be offered the fee turned off (for ADVISOR-DASHBOARD-B-146) | Functional | - | .NET green (4114/0/2); Reviewer-Integration and finalizers, then merge | - |
-| | 47 | OFA-B-244 | Test-data shape drift: dbo.AddressPostal out of line with the live warehouse (Address width, Line1-4, Postcode, Country, CountryCode, dw_lastmodified); fix warehouse-shape.json and regenerate the CSVs, so make test-data-check passes | Functional | 1-2 | Next; generate step needs a machine window | OFA-B-242 |
-| | owed | - | Full business-test run on the changed shared seed (OFA-B-230, merged 2026-11-24) | Functional | - | Next free stack window | - |
+| >> | 47 | OFA-B-244 | Test-data shape drift: dbo.AddressPostal out of line with the live warehouse (Address width, Line1-4, Postcode, Country, CountryCode, dw_lastmodified); fix warehouse-shape.json and regenerate the CSVs, so make test-data-check passes | Functional | 1-2 | Prep now; generate step in its machine window | - |
+| | owed | - | Full business-test run on the changed shared seed (OFA-B-230 and OFA-B-242): expect Compliance quarantine-signing-expiry L468 (31→32) and closed-months "sixteen" text; check expiry-report page 1 keeps 7701-640 and NW-53110 | Functional | - | ps2 machine window | - |
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | IT ticket raised; approval to run expected Wed 2026-11-25 | - |
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
 | | X | OFA-F-032 | Attachment mover: built, waiting on your SharePoint live check | Functional | - | After go-live | - |
@@ -56,10 +61,11 @@ Updated: 2026-11-24 16:40
 | >> | - | - | Portfolio Services' warehouse-reads inventory for hub item 6 (direct reads, synonym reads, fee reads), done for PS while PS is on B-261; read-only | Functional | - | In progress (Compliance's own: none direct, merged) | - |
 | | X | W44 | Wording page: the no-version slot says a placeholder is sent; Portfolio Services actually sends the approved built-in email (Adviser Initial OFA follow-up) | Look and Feel | - | Later: design row, goes to the designer next round; words need the business's approval | - |
 
-## Advisor (group 49 merged 2026-11-24; B-132 waits for a stack window, F-144 waits on Luke)
+## Advisor (group 50 merged 2026-11-24; B-146 and B-132 in the Advisor machine window; F-144 waits on Luke)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| | 51 | ADVISOR-DASHBOARD-B-146 | Expired renewal offered the fee turned off (S9970025, NW-997025): scenario prepared, @skip off and run on the built app with the S19630 twin | Functional | - | Advisor machine window; OFA-B-242 on main | - |
 | >> | owed | - | Built-app checks owed, on the stack: B-142 live re-send, B-126, B-127, B-139, B-140, B-141, the S9970024 twins, @review-B96 | Functional | 0 | Running now | - |
 | | X | B101 | Signatory address link: the tip and the re-send dialog when the follow-up email failed (widened 2026-11-24) | Look and Feel | - | Later: design row, goes to the designer next round | - |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke. Asked 2026-11-23 what the Adviser's OFA History tab should show, with the Portfolio Services and Compliance tabs as examples; then the design | - |
