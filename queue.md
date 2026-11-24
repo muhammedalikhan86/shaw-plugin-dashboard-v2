@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 15:32
+Updated: 2026-11-24 15:33
 
 ## Now (from 2026-11-24 09:00)
 
@@ -50,11 +50,11 @@ Updated: 2026-11-24 15:32
 | | 40 | - | End sweep, on the stack: make test-data for migrations 0201-0203, and a look at the Wording page | Functional | 0 | End sweep | - |
 | | 40 | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 
-## Compliance (level-120 sweep merged 2026-11-24: nothing at risk; pointer: warehouse-reads inventory)
+## Compliance (level-120 sweep merged 2026-11-24: nothing at risk; pointer: PS warehouse-reads inventory)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | - | - | Warehouse-reads inventory for hub item 6: every direct DataWarehouse, ShawCentral or PowerBI read, as a list (read-only, no change to the test site) | Functional | - | In progress | - |
+| >> | - | - | Portfolio Services' warehouse-reads inventory for hub item 6 (direct reads, synonym reads, fee reads), done for PS while PS is on B-261; read-only | Functional | - | In progress (Compliance's own: none direct, merged) | - |
 | | X | W44 | Wording page: the no-version slot says a placeholder is sent; Portfolio Services actually sends the approved built-in email (Adviser Initial OFA follow-up) | Look and Feel | - | Later: design row, goes to the designer next round; words need the business's approval | - |
 
 ## Advisor (group 49 merged 2026-11-24; B-132 waits for a stack window, F-144 waits on Luke)
