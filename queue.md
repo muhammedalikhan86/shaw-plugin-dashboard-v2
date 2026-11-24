@@ -55,14 +55,11 @@ Updated: 2026-11-24 11:05
 | >> | 53 | - | Run M28 and M38 on the built app (stack) and drop M38's @not-built-COMPLIANCE-DASHBOARD-F-052 tag; both pass on the board | Functional | 0 | Preparing; next stack window after Shell's | - |
 | | X | W44 | Wording page: the no-version slot says a placeholder is sent; Portfolio Services actually sends the approved built-in email (Adviser Initial OFA follow-up) | Look and Feel | - | Later: design row, goes to the designer next round; words need the business's approval | - |
 
-## Advisor (pointer: group 48 from 2026-11-24; B-132 waits for a stack window, F-144 waits on Luke)
+## Advisor (group 48 merged 2026-11-24; pointer: group 49; B-132 waits for a stack window, F-144 waits on Luke)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 48 | B92, B93 | Closures: Confirm to the client only once TERMINATED, with the confirmed tip (F-146); the follow-up resend dialog's sentence (F-142) | Functional | - | Designer drew them 2026-11-24 | - |
-| >> | 48 | B94, B95, B96 | Closures S-Account opens the S-Account page (B-126); status line as the chip's tip (B-127); Show all events switch reads its name (B-134) | Bug | - | Designer drew them 2026-11-24 | - |
-| >> | 48 | B97-B100 | Scope line for several codes; Renewal tracker filter Reset; smaller Arrangements empty card; Closures wording in B92's order | Look and Feel | - | Designer drew them 2026-11-24 | - |
-| | 49 | ADVISOR-DASHBOARD-B-142 | Renewal tracker: pick another address for a bounced signing email, as the board draws it (S18471) | Functional | 2 | After group 48; needs an API change | - |
+| >> | 49 | ADVISOR-DASHBOARD-B-142 | Renewal tracker: pick another address for a bounced signing email, as the board draws it (S18471) | Functional | 2 | Building; its .NET test and group 48's owed built-app checks share one stack window (after ps2) | - |
 | | X | B101 | Signatory address link tip when the follow-up email failed | Look and Feel | - | Later: design row, goes to the designer next round | - |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke. Asked 2026-11-23 what the Adviser's OFA History tab should show, with the Portfolio Services and Compliance tabs as examples; then the design | - |
 | | X | ADVISOR-DASHBOARD-B-132 | OFA questionnaire still stutters after ADVISOR-DASHBOARD-B-130 and SHELL-B-184: each answer edit and Select all block the screen for about 1 s; profile a production build in a real browser and fix it (shared shell code goes to Shell) | Bug | 3 | Blocked: needs a stack (production build in a real browser); no stack tonight |  - |
