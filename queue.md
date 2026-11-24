@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 15:23
+Updated: 2026-11-24 15:27
 
 ## Now (from 2026-11-24 09:00)
 
@@ -54,7 +54,8 @@ Updated: 2026-11-24 15:23
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | owed | - | Level-120 sweep of ComplianceDashboard.WebAPI: find any OPENJSON, STRING_SPLIT or other feature that needs a level above 120 (the test site's databases are at 120) | Functional | - | Owed; Advisor and Shell swept theirs, nothing at risk | - |
+| >> | owed | - | Level-120 sweep of ComplianceDashboard.WebAPI: find any OPENJSON, STRING_SPLIT or other feature that needs a level above 120 (the test site's databases are at 120) | Functional | - | Started 2026-11-24 (B-128 fixed Pending); with a guard test | - |
+| | next | - | Warehouse-reads inventory for hub item 6: every direct DataWarehouse, ShawCentral or PowerBI read, as a list (read-only, no change to the test site) | Functional | - | After the sweep | - |
 | | X | W44 | Wording page: the no-version slot says a placeholder is sent; Portfolio Services actually sends the approved built-in email (Adviser Initial OFA follow-up) | Look and Feel | - | Later: design row, goes to the designer next round; words need the business's approval | - |
 
 ## Advisor (group 49 merged 2026-11-24; B-132 waits for a stack window, F-144 waits on Luke)
