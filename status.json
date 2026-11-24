@@ -16,19 +16,19 @@
   },
   {
    "name": "Deploy test site (test data)",
-   "status": "In progress",
+   "status": "Done",
    "start": "2026-11-23",
-   "end": "2026-11-25",
+   "end": "2026-11-24",
    "isForecast": false,
    "note": null
   },
   {
    "name": "Acceptance testing (Luke)",
-   "status": "Planned",
-   "start": "2026-11-26",
+   "status": "In progress",
+   "start": "2026-11-24",
    "end": "2026-12-07",
-   "isForecast": true,
-   "note": null
+   "isForecast": false,
+   "note": "Started 2026-11-24; the end date is still the plan. The remaining build work and any bugs found in testing are worked alongside acceptance testing."
   },
   {
    "name": "Go-live (set-up until sign-off, then switch on)",
@@ -54,9 +54,9 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 575.0,
-   "pointsRemaining": 9.0,
-   "pointsTotal": 584.0,
+   "pointsDone": 577.0,
+   "pointsRemaining": 8.0,
+   "pointsTotal": 585.0,
    "itemsRemaining": 3,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
@@ -72,9 +72,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 925.0,
+   "pointsDone": 926.0,
    "pointsRemaining": 33.0,
-   "pointsTotal": 958.0,
+   "pointsTotal": 959.0,
    "itemsRemaining": 14,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -94,10 +94,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 585.0,
-   "pointsRemaining": 16.0,
-   "pointsTotal": 601.0,
-   "itemsRemaining": 4,
+   "pointsDone": 587.0,
+   "pointsRemaining": 17.0,
+   "pointsTotal": 604.0,
+   "itemsRemaining": 5,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ],
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 166.81,
+  "pointsPerWorkingDayWholePeriod": 167.19,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2168.0,
-    "pointsDoneThatDay": 118.0
+    "pointsDone": 2173.0,
+    "pointsDoneThatDay": 123.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -300,21 +300,21 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 35.55,
-    "rateWhole": 33.01
+    "rateWhole": 33.16
    },
    "Portfolio Services": {
     "optimistic": "2026-11-25",
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 38.95,
-    "rateWhole": 68.64
+    "rateWhole": 68.72
    },
    "Advisor": {
     "optimistic": "2026-11-25",
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 18.12,
-    "rateWhole": 43.4
+    "rateWhole": 43.55
    },
    "Compliance": {
     "optimistic": "2026-11-25",
@@ -337,9 +337,9 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 166.81,
+   "rateWhole": 167.19,
    "pointsRemaining": 79.0,
-   "itemsRemaining": 32
+   "itemsRemaining": 33
   }
  },
  "milestones": [
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T16:22:04+11:00",
+ "updatedAt": "2026-11-24T16:46:14+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2885,6 +2885,12 @@
    "at": "2026-11-24T16:22:04+11:00",
    "change": "Test site: deploy 1 completed on 2026-11-24. The Portfolio Services API is up on e1c85b26 with OFA-B-261, the Compliance API was redeployed with COMPLIANCE-DASHBOARD-B-128, and the register's test data was loaded",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-24T16:46:14+11:00",
+   "change": "Test site deploy 1 is complete: all nine parts are up and the test data is loaded. Acceptance testing started on 2026-11-24; the remaining build work and any bugs found in testing are now worked alongside it. On main: Advisor group 50 (ADVISOR-DASHBOARD-B-145), Shell SHELL-B-195 (business-test finder fixes), SHELL-B-193 (the first sign-in check retries once) and the Profile page's Release card design (SHELL-F-184), and Portfolio Services OFA-B-242 (expired renewal for fee turned off); OFA-B-244 raised",
+   "pointsDone": 5.0,
+   "pointsRaised": 5.0
   }
  ],
  "foundDuringBuild": {
@@ -2972,7 +2978,7 @@
    "size": 2,
    "phase": "Deploy test site (test data)",
    "owner": "Muhammed",
-   "status": "Open"
+   "status": "Done"
   },
   {
    "item": "Final tidy-up and checks before go-live",
