@@ -4,11 +4,11 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 16:20
+Updated: 2026-11-24 16:40
 
 ## Now (from 2026-11-24 09:00)
 
-1. Critical path: the test site. Deploy 1 is up for 8 of 9 parts. portfolio-services-api is deployed but fails to start (500.30): the Misc database is at compatibility level 120, where OPENJSON and STRING_SPLIT do not exist. DataWarehouse, ShawCentral and PowerBI are at 120 too, so production warehouse queries would fail as well. Next: PS's OFA-B-261 (rewrite to level 120, plus a level-120 guard test), then re-deploy portfolio-services-api only, then ps2 loads the register test data, then Muhammed checks the pages and one email.
+1. Critical path: the test site. Deploy 1 is complete: all 9 parts up, test data loaded. Next deploy: PS group 58 (notices), then deploy 2 (SHELL-F-184 and the rollback rehearsal). Machine windows in order: PS (now), Shell, Advisor.
 2. No idle worker: a worker whose next item is blocked takes its next unblocked item.
 3. End sweep runs last, in this order: the designer's work synced, the developers have built it, Muhammed has tested by hand, then every parity check runs and each issue found is listed as Look and Feel.
 
@@ -24,7 +24,7 @@ Updated: 2026-11-24 16:20
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 58 | OFA-B-263, OFA-B-265 | Quiet test-host logging; notice page numbers the PhoenixV3 way: one Chrome print, PDFsharp stamps Page N on pages 2+, the letterhead overlaid on page 1 (Muhammed's ruling 2026-11-24) | Functional | 3 | Reviewed; waits for the .NET window (after Advisor, then ps2) | - |
+| >> | 58 | OFA-B-263, OFA-B-265 | Quiet test-host logging; notice page numbers the PhoenixV3 way: one Chrome print, PDFsharp stamps Page N on pages 2+, the letterhead overlaid on page 1 (Muhammed's ruling 2026-11-24) | Functional | 3 | Machine window now (from ps2, 2026-11-24) | - |
 | | 59 | - | Test site: one-step data refresh script (reset, app restart through app_offline as the deploy does, wait for the API, seed), for when the OFA Team asks for fresh data | Functional | - | Next | - |
 | | X | OFA-B-251 | Fee check banner: what date "next on" means (the app has no next-sync date; it checks each business day until the month's fees arrive) | Functional | - | Later: Muhammed decides | - |
 | | X | O39 | Settings report preview: the new report columns (OFA-F-191) | Functional | - | Later: Muhammed confirms the designer's guessed values (Renewal Notice Due Date = +60 days and others) | - |
@@ -37,6 +37,8 @@ Updated: 2026-11-24 16:20
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
+| >> | 46 | OFA-B-242 | Seed gains a renewal already expired by the test clock date that can be offered the fee turned off (for ADVISOR-DASHBOARD-B-146) | Functional | - | .NET green (4114/0/2); Reviewer-Integration and finalizers, then merge | - |
+| | 47 | OFA-B-244 | Test-data shape drift: dbo.AddressPostal out of line with the live warehouse (Address width, Line1-4, Postcode, Country, CountryCode, dw_lastmodified); fix warehouse-shape.json and regenerate the CSVs, so make test-data-check passes | Functional | 1-2 | Next; generate step needs a machine window | OFA-B-242 |
 | | owed | - | Full business-test run on the changed shared seed (OFA-B-230, merged 2026-11-24) | Functional | - | Next free stack window | - |
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | IT ticket raised; approval to run expected Wed 2026-11-25 | - |
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
