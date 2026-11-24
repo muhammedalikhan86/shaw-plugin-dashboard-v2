@@ -54,17 +54,17 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 572.0,
-   "pointsRemaining": 1.0,
-   "pointsTotal": 573.0,
-   "itemsRemaining": 1,
+   "pointsDone": 574.0,
+   "pointsRemaining": 7.0,
+   "pointsTotal": 581.0,
+   "itemsRemaining": 2,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
-    "pointsDone": 157.0,
-    "pointsRemaining": 3.0,
-    "pointsTotal": 160.0,
-    "itemsDone": 76,
-    "itemsRemaining": 3
+    "pointsDone": 161.0,
+    "pointsRemaining": 1.0,
+    "pointsTotal": 162.0,
+    "itemsDone": 79,
+    "itemsRemaining": 1
    }
   },
   {
@@ -72,9 +72,9 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 914.0,
-   "pointsRemaining": 36.0,
-   "pointsTotal": 950.0,
+   "pointsDone": 921.0,
+   "pointsRemaining": 34.0,
+   "pointsTotal": 955.0,
    "itemsRemaining": 15,
    "itemsRemainingUnsized": [
     "OFA-B-066",
@@ -94,10 +94,10 @@
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 582.0,
-   "pointsRemaining": 18.0,
-   "pointsTotal": 600.0,
-   "itemsRemaining": 5,
+   "pointsDone": 585.0,
+   "pointsRemaining": 16.0,
+   "pointsTotal": 601.0,
+   "itemsRemaining": 4,
    "itemsRemainingUnsized": [
     "ADVISOR-DASHBOARD-F-103"
    ],
@@ -114,9 +114,9 @@
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 260.0,
+   "pointsDone": 261.0,
    "pointsRemaining": 3.0,
-   "pointsTotal": 263.0,
+   "pointsTotal": 264.0,
    "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 165.43,
+  "pointsPerWorkingDayWholePeriod": 166.43,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -286,8 +286,8 @@
    },
    {
     "date": "2026-11-24",
-    "pointsDone": 2150.0,
-    "pointsDoneThatDay": 100.0
+    "pointsDone": 2163.0,
+    "pointsDoneThatDay": 113.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -300,28 +300,28 @@
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 35.55,
-    "rateWhole": 32.78
+    "rateWhole": 32.93
    },
    "Portfolio Services": {
     "optimistic": "2026-11-25",
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 38.95,
-    "rateWhole": 67.79
+    "rateWhole": 68.33
    },
    "Advisor": {
     "optimistic": "2026-11-25",
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 18.12,
-    "rateWhole": 43.17
+    "rateWhole": 43.4
    },
    "Compliance": {
     "optimistic": "2026-11-25",
     "likely": "2026-11-25",
     "pessimistic": "2026-11-25",
     "rateLast10": 20.38,
-    "rateWhole": 19.77
+    "rateWhole": 19.85
    },
    "Deployment & Testing": {
     "optimistic": "2026-11-25",
@@ -337,8 +337,8 @@
    "pessimistic": "2026-11-25",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 165.43,
-   "pointsRemaining": 76.0,
+   "rateWhole": 166.43,
+   "pointsRemaining": 78.0,
    "itemsRemaining": 31
   }
  },
@@ -422,7 +422,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-24T13:32:03+11:00",
+ "updatedAt": "2026-11-24T15:30:13+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2787,14 +2787,65 @@
    "change": "Shell group 51 on main (SHELL-F-180, SHELL-B-188, SHELL-B-189)",
    "pointsDone": 2.0,
    "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-24T15:30:13+11:00",
+   "change": "Shell SHELL-F-183 and SHELL-B-191 on main: an API release takes the API offline with a holding page instead of stopping its pool, and preparing a release now leaves every front end in the publish folder",
+   "pointsDone": 1.0,
+   "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-24T15:30:13+11:00",
+   "change": "Advisor ADVISOR-DASHBOARD-B-144 merged: the questionnaire store test checks the shape of the data, not one row",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-24T15:30:13+11:00",
+   "change": "Shell group 52 on main (SHELL-F-181, SHELL-F-182, SHELL-B-192): one component's graph rebuilds alone, the test-site decision records brought in line, a flaky sign-in test step steadied; SHELL-F-184 raised (testers can see which release they are on)",
+   "pointsDone": 1.0,
+   "pointsRaised": 7.0
+  },
+  {
+   "at": "2026-11-24T15:30:13+11:00",
+   "change": "Compliance group 53 merged: board rows M28, M38 and W42 now run on the built app",
+   "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-24T15:30:13+11:00",
+   "change": "Portfolio Services group 44 merged (OFA-F-200, OFA-B-238): an Adviser may re-send a bounced signing request to another address, and the bounced envelope is closed; OFA-F-202 raised",
+   "pointsDone": 4.0,
+   "pointsRaised": 3.0
+  },
+  {
+   "at": "2026-11-24T15:30:13+11:00",
+   "change": "Advisor group 49 merged (ADVISOR-DASHBOARD-B-142): pick another address for a bounced signing email",
+   "pointsDone": 3.0,
+   "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-24T15:30:13+11:00",
+   "change": "Portfolio Services group 45 merged (OFA-F-202): the four Initial OFA starters follow the Shaw letterhead",
+   "pointsDone": 2.0
+  },
+  {
+   "at": "2026-11-24T15:30:13+11:00",
+   "change": "Compliance COMPLIANCE-DASHBOARD-B-128 merged: the Pending list on Signing and expiry works on the test site's database",
+   "pointsDone": 1.0,
+   "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-24T15:30:13+11:00",
+   "change": "Portfolio Services OFA-B-240 merged: the test data's bounced signatory has a second address to re-send to; OFA-B-242 raised",
+   "pointsDone": 1.0,
+   "pointsRaised": 2.0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 271.0,
-  "pointsRemaining": 3.0,
-  "pointsTotal": 274.0,
-  "itemsDone": 130,
-  "itemsRemaining": 3
+  "pointsDone": 275.0,
+  "pointsRemaining": 1.0,
+  "pointsTotal": 276.0,
+  "itemsDone": 133,
+  "itemsRemaining": 1
  },
  "buildCompletedOn": "2026-11-23",
  "deploymentBacklogNote": "The hub refreshes deploymentBacklog and waitingOnOthers from docs/leftovers.md (The stack, Waiting on others) in the hub checkout. The status page draws them as the deployment and testing work table. buildCompletedOn pins the Build finish date the patcher would otherwise reset.",
