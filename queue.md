@@ -39,7 +39,7 @@ Updated: 2026-11-24 13:27
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 44 | OFA-F-200 | Advisor surface: re-send a bounced signing request to another address (advisor.usp_Signing_Resend and the signatory's addresses), for ADVISOR-DASHBOARD-B-142 | Functional | - | After group 43; Muhammed ruled 2026-11-24 that an Adviser may re-send | - |
-| | 45 | OFA-F-196 | The four starter templates on the 2021 letterhead (Muhammed's file, 2026-11-24): sample text becomes field-library placeholders; the six open questions' fields marked awaiting answer | Functional | - | After group 44; ps2 sizes it | - |
+| | 45 | OFA-F-202 | The four Initial OFA starters rebuilt on the 2021 letterhead (Muhammed's file, 2026-11-24): each sample line becomes a field; the Adviser's title and the reference line are gaps put to Muhammed; the six F-196 fields marked awaiting answer | Functional | 3 | After group 44 | - |
 | | owed | - | Full business-test run on the changed shared seed (OFA-B-230, merged 2026-11-24) | Functional | - | Next free stack window | - |
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | IT ticket raised; approval to run expected Wed 2026-11-25 | - |
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
