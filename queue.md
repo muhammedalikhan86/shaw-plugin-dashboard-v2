@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 12:59
+Updated: 2026-11-24 13:00
 
 ## Now (from 2026-11-24 09:00)
 
@@ -27,6 +27,7 @@ Updated: 2026-11-24 12:59
 | >> | 54 | OFA-B-253 | Initial OFAs Excel export writes NEW and On paper for an imported row, as the screen does | Functional | 1 | Built and reviewed; its .NET test waits for a window (after Shell and Compliance) | - |
 | >> | 54 | (new PS bug) | Test site: the UAT mailbox in place of the placeholder, and the real AD group name "Shaw Portal UAT Testers" | Functional | 1 | Critical path; with B-253 in the same .NET window | - |
 | >> | 55 | OFA-B-232 | Master spreadsheet import accepts a workbook whose only sheet carries the register header (today it needs the sheet named "OFA Master ACTIVE") | Functional | 1 | After OFA-B-230 | OFA-B-230 |
+| | 56 | OFA-B-257 | Import messages name the sheet actually read ('Sheet1'), not always 'OFA Master ACTIVE' | Look and Feel | 1 | After group 55 | - |
 | | X | OFA-B-251 | Fee check banner: what date "next on" means (the app has no next-sync date; it checks each business day until the month's fees arrive) | Functional | - | Later: Muhammed decides | - |
 | | X | O39 | Settings report preview: the new report columns (OFA-F-191) | Functional | - | Later: Muhammed confirms the designer's guessed values (Renewal Notice Due Date = +60 days and others) | - |
 | | X | O40, O41, O42 | Remove the separate Adviser review answers card; could-not-load card on six screens; the Import page as drawn | Look and Feel | - | Later: O41's page names and O42's words wait for the business | - |
