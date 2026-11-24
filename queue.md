@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-24 11:05
+Updated: 2026-11-24 12:54
 
 ## Now (from 2026-11-24 09:00)
 
@@ -17,6 +17,7 @@ Updated: 2026-11-24 11:05
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 51 | SHELL-B-188 and a removal | Remove the old ThrowIfAnyDatabaseIsNotUat check (nothing calls it since REL-011); fix the shared switch test step so a switch's hidden icon is not read into its name (unblocks Advisor's B96 scenarios); the reads step also reads a button's text (unblocks PS's O36) | Bug | - | Building; one stack window at Integration also runs group 50's owed notification-panel e2e check | - |
+| | 52 | (new Shell bug) | Test site: the real AD group name "Shaw Portal UAT Testers" in deploy.ps1, Shell's settings and the test-site docs | Functional | 1 | Critical path; after group 51's board run | - |
 | | 52 | (new Shell item) | make graph C=<component> rebuilds only that component's graph | Bug | - | After group 51 | - |
 | | X | D11, D14 | Shell error and empty states (a)-(f); landing page's needs-a-newer-shell card | Look and Feel | - | Later: the words are placeholders until the business supplies them | - |
 
@@ -25,6 +26,7 @@ Updated: 2026-11-24 11:05
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 54 | OFA-B-253 | Initial OFAs Excel export writes NEW and On paper for an imported row, as the screen does | Functional | 1 | Built and reviewed; its .NET test waits for a window (after Shell and Compliance) | - |
+| >> | 54 | (new PS bug) | Test site: the UAT mailbox in place of the placeholder, and the real AD group name "Shaw Portal UAT Testers" | Functional | 1 | Critical path; with B-253 in the same .NET window | - |
 | >> | 55 | OFA-B-232 | Master spreadsheet import accepts a workbook whose only sheet carries the register header (today it needs the sheet named "OFA Master ACTIVE") | Functional | 1 | After OFA-B-230 | OFA-B-230 |
 | | X | OFA-B-251 | Fee check banner: what date "next on" means (the app has no next-sync date; it checks each business day until the month's fees arrive) | Functional | - | Later: Muhammed decides | - |
 | | X | O39 | Settings report preview: the new report columns (OFA-F-191) | Functional | - | Later: Muhammed confirms the designer's guessed values (Renewal Notice Due Date = +60 days and others) | - |
@@ -39,6 +41,7 @@ Updated: 2026-11-24 11:05
 |---|---|---|---|---|---|---|---|
 | >> | 43 | OFA-B-236 | Test site set-up: the job-table script reads ShawCentral's definitions with the read-only database login, then runs live in Misc | Functional | 1 | Building; Misc step 1 (stand-in tables, 2027 holidays) done 2026-11-24 | - |
 | | 43 | OFA-B-230 | Test data: leave the Adviser Initial OFA follow-up wording with no version, so Compliance's "offers its first version" check can pass | Functional | 1 | After OFA-F-198 | OFA-F-198 |
+| | 44 | (new ps2 item) | Advisor surface: re-send a bounced signing request to another address (advisor.usp_Signing_Resend and the signatory's addresses), for ADVISOR-DASHBOARD-B-142 | Functional | - | After group 43; Muhammed ruled 2026-11-24 that an Adviser may re-send | - |
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | IT ticket raised; approval to run expected Wed 2026-11-25 | - |
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
 | | X | OFA-F-032 | Attachment mover: built, waiting on your SharePoint live check | Functional | - | After go-live | - |
@@ -53,13 +56,15 @@ Updated: 2026-11-24 11:05
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 53 | - | Run M28 and M38 on the built app (stack) and drop M38's @not-built-COMPLIANCE-DASHBOARD-F-052 tag; both pass on the board | Functional | 0 | Preparing; next stack window after Shell's | - |
+| | 54 | (new Compliance bug) | Test site: the real AD group name "Shaw Portal UAT Testers" | Functional | 1 | Critical path; after group 53 | - |
 | | X | W44 | Wording page: the no-version slot says a placeholder is sent; Portfolio Services actually sends the approved built-in email (Adviser Initial OFA follow-up) | Look and Feel | - | Later: design row, goes to the designer next round; words need the business's approval | - |
 
 ## Advisor (group 48 merged 2026-11-24; pointer: group 49; B-132 waits for a stack window, F-144 waits on Luke)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 49 | ADVISOR-DASHBOARD-B-142 | Renewal tracker: pick another address for a bounced signing email, as the board draws it (S18471) | Functional | 2 | Building; its .NET test and group 48's owed built-app checks share one stack window (after ps2) | - |
+| >> | 49 | (new Advisor bug) | Test site: the real AD group name "Shaw Portal UAT Testers" | Functional | 1 | Critical path; first | - |
+| >> | 49 | ADVISOR-DASHBOARD-B-142 | Renewal tracker: pick another address for a bounced signing email, as the board draws it (S18471) | Functional | 2 | Muhammed ruled 2026-11-24: an Adviser may re-send a bounced signing request; builds on ps2's new resend procedure (ps2 group 44); its .NET test and group 48's owed built-app checks share one stack window | - |
 | | X | B101 | Signatory address link tip when the follow-up email failed | Look and Feel | - | Later: design row, goes to the designer next round | - |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke. Asked 2026-11-23 what the Adviser's OFA History tab should show, with the Portfolio Services and Compliance tabs as examples; then the design | - |
 | | X | ADVISOR-DASHBOARD-B-132 | OFA questionnaire still stutters after ADVISOR-DASHBOARD-B-130 and SHELL-B-184: each answer edit and Select all block the screen for about 1 s; profile a production build in a real browser and fix it (shared shell code goes to Shell) | Bug | 3 | Blocked: needs a stack (production build in a real browser); no stack tonight |  - |
@@ -69,7 +74,7 @@ Updated: 2026-11-24 11:05
 Deployment and testing (from 2026-11-23): the work left is the REL- stack in `docs/leftovers.md`, worked top first. REL-001 to REL-010 are on go.
 
 1. Designer round synced 2026-11-24 and routed. Shell boards (Main, ShellCollapsed, AccountRow, NotificationPanel, SearchPanel, the current landing page) sent to the designer to draw D8-D14 on (Muhammed sends).
-2. Test site server set up 2026-11-24 (Muhammed; checked from screenshots): four pools, four applications, Windows sign-in, folder rights. Before the first deploy: Misc job tables (ps2 OFA-B-236), the test mailbox address (Muhammed), then deploy with -Environment UAT.
+2. Test site server set up 2026-11-24 (Muhammed; checked from screenshots): four pools, four applications, Windows sign-in, folder rights. Misc fully loaded 2026-11-24 (stand-ins, 2027 holidays, job tables). The mailbox arrived and the AD group exists; its real name is "Shaw Portal UAT Testers" (the code says "ShawPortal UAT Testers"), so every API, deploy.ps1 and the docs change first. Then deploy with -Environment UAT.
 3. End sweep, last: after the designer's work is synced, built, and tested by hand by Muhammed; every parity check, each issue listed as Look and Feel.
 4. Waiting on you: push main; the SyncFee grant: OFA-F-160 is on main, so the gMSA's EXECUTE on dbo.SyncFee can be dropped on the server (PS removes line 3 of SyncFee-grants.sql in group 10); rerun the OFA-S-005 spike on the unredacted master spreadsheet (scripts in the PS checkout, spikes/OFA-S-005, uncommitted); check in the DataWarehouse Fee.sql, SyncFee.sql and .sqlproj; the DART retest (another day); the OFA-S-001 owner questions: DART's open-a-document URL and whether staff have DART logins (OFA-F-145 and F-055 are built behind Dart:DocumentLinkTemplate, off until it is set); PS's 8 production settings.
 5. 2026-11-24, with the stack up: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database through the Wording page's upload, so each slot shows the business wording, not the [Test data] text. NoOfaFeeAdvisorEmail and RenewalConfirmation wait for ps2's field-library fix.
