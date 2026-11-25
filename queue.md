@@ -85,5 +85,5 @@ Updated: 2026-11-25 16:35
 4. Next test-site deploy: PS group 58 (notices) and deploy 2 (SHELL-F-184, rollback rehearsal). Deployment and testing work is the REL- stack in `docs/leftovers.md`.
 5. With the stack up, after OFA-F-202: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database.
 6. Parity round 2: when Muhammed says, after every P1 fix. Parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
-7. Designer prompt 2026-11-25 (2): Adviser, Compliance and Portfolio Services parts go tonight; the Shell part (B103-B106, B113) waits for Muhammed on 2026-11-26, who attaches NotificationPanel.dc.html and Main.dc.html (only his account can). No build waits on it.
+7. Designer prompt 2026-11-25 (2): Adviser, Compliance and Portfolio Services parts go tonight; the Shell part (B103-B106, B113) waits for Muhammed on 2026-11-26, who attaches docs/design/artboards/shell/NotificationPanel.dc.html and docs/design/artboards/shell/Main.dc.html (only his account can). No build waits on it.
 8. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
