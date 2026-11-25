@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 19:08
+Updated: 2026-11-25 19:09
 
 ## Now
 
@@ -26,8 +26,8 @@ One machine window at a time, in this order. Code-only work runs alongside.
 | 1 | Shell | 1 | SHELL-B-207, SHELL-B-208 | Done, on main 0133fb50 |
 | 2 | Advisor | WS | F-166, F-167, F-168, F-169, B-159 (warehouse switch) | Done, merged 7351f973 |
 | 3 | Compliance | P2+P3 | B-152, B-153, B117, OI-002 | Done, merged 14660477 |
-| 4 | Portfolio Services | 65+66 | OFA-B-098, B-099, B-107, B-015, F-143 seed, browser checks owed, F-116 close; O38, F-108 frame | Now, window 3 |
-| 5 | Compliance | C2 | F-143 follow-up, F-008, OI-001/OI-009 close; design rows B109-B112, B117, Q23, Q24, M25, W44 and the stale test at quarantine-signing-expiry.feature:153/172 | After PS group 65 merges |
+| 4 | Portfolio Services | 65+66 | OFA-B-098, B-099, B-107, B-015, F-143 seed, browser checks owed, F-116 close; O38, F-108 frame | Done, merged 9d588115 |
+| 5 | Compliance | C2 | F-143 follow-up, F-008, OI-001/OI-009 close; design rows B109-B112, B117, Q23, Q24, M25, W44 and the stale test at quarantine-signing-expiry.feature:153/172 | Now, window 4 |
 | 6 | Portfolio Services 2 | 40 | make test-data 0200-0203, Wording page look, REL-014 Annature tests; O47 / OFA-F-206 Initial OFA prepare | After Compliance C2 |
 | 7 | Advisor | A2 | Parity backlog, PM-113 close, ASF tip off 3 fields; design rows P86, P87, P91, B101, B107, B108, B116, B118, B119 and the stale test at renewal-tracker.feature:110 | Coded f3f232f1, Review PASS; window after PS2 40 |
 | 8 | Shell | 2 | SHELL-B-209 (B104, B105); B103, B106, B113 closed with no build | Done, on main acfc536d |
@@ -35,7 +35,7 @@ One machine window at a time, in this order. Code-only work runs alongside.
 
 Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of prompt 2026-11-25 (2). Each worker has its rows in its next group. Questions the designer asked back go to the next round (Hub item 9).
 
-## Compliance (pointer: P2+P3 merged 14660477; C2 waits on PS group 65)
+## Compliance (pointer: C2 in its window, window 4)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
@@ -67,18 +67,13 @@ Done 2026-11-25: COMPLIANCE-DASHBOARD-B-152, B-153, OI-002, OI-011 (B117 stays a
 
 Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
 
-## Portfolio Services (pointer: in its window, groups 65+66)
+## Portfolio Services (pointer: group 65+66 merged 9d588115; group 67 code only; parity check last, alone)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 65 | OFA-B-098, B-099, B-107, B-015 | Exceptions report and Anniversary list at 1440/1680/1920: Adviser and Product on one line, S-Account never cut, side-by-side parity | Look and Feel | 5 | Built; board run in its window |
-| >> | 65 | OFA-F-143 seed | Follow-up steps seeded (S9970002 Adviser told, S20412 Initial OFA sent); TD-119 | Functional | 1 | Done 89fcf9eb; tested in the window |
-| >> | 65 | - | Browser checks owed from groups 36, 45, 49 (Settings report preview, B-233, B-235, B-237, B-241, F-189) | Look and Feel | 0 | Same window, stack already up |
-| >> | 65 | OFA-F-116 | Close on paper: 2027 holidays loaded and checked (106 rows, ruling 2026-11-25) | Functional | 1 | At finalize |
-| >> | 66 | - | Parity backlog: O38 checkbox colour and gap; OFA-F-108 dialog frame | Look and Feel | ?? | Coded e9180683; Note notch measured in the window |
-| | 67 | OFA-B-273 | Test data: seed one open missing-details Request from Back Office for S20114 (OFA-F-133 scenario finds none) | Functional | ?? | Raised tonight; next PS group after the parity check |
-| | 67 | OFA-B-275 | Scenario fix: review-answers "attach" scenario clicks a Change… answer first (the dialog offers Attach a file only then) | Functional | ?? | Raised tonight; with OFA-B-273 |
-| | 67 | OFA-B-277 | Outbox at 1440, Keep open on: the Queued at date breaks over two lines (table not one-line-columns) | Look and Feel | ?? | Raised tonight; with OFA-B-273 |
+| | 67 | OFA-B-273 | Test data: seed one open missing-details Request from Back Office for S20114 (OFA-F-133 scenario finds none) | Functional | ?? | Code now; checked in the parity window |
+| | 67 | OFA-B-275 | Scenario fix: review-answers "attach" scenario clicks a Change… answer first (the dialog offers Attach a file only then) | Functional | ?? | Code now; with OFA-B-273 |
+| | 67 | OFA-B-277 | Outbox at 1440, Keep open on: the Queued at date breaks over two lines (table not one-line-columns) | Look and Feel | ?? | Code now; with OFA-B-273 |
 | | P | REL-012 | Full Portfolio Services parity check (disparity-checker), findings and screenshot pairs on the parity page | Look and Feel | - | Last tonight, alone on the machine |
 | | X | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Held for Muhammed's intake |
 | | 67 | O25-O35, O43, O48, B114 | Designer's rows back 2026-11-25, and switch on the two @review-O48 Outbox scenarios (O27 tips and B114's "Follow-up step recorded." are the designer's words, to be confirmed) | Look and Feel | ?? | After the parity check |
@@ -86,6 +81,8 @@ Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
 | | X | OFA-F-138 | File the signed renewal in DART; real signing-status reader | Functional | 3 | Blocked: Muhammed's DART retest |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
+
+Done 2026-11-25: OFA-B-099, OFA-F-116, OFA-F-143 seed, TD-119, browser checks (F-189, B-233, B-235, B-237, B-241, Settings report preview), O38, OFA-F-108 frame. B-098, B-107, B-015 close at the parity check. O38 gap 24px vs board 56px goes to the parity check.
 
 ## Shell (pointer: parked; group 2 on main acfc536d)
 
