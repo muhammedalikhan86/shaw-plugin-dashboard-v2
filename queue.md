@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 08:51
+Updated: 2026-11-26 08:54
 
 ## Now
 
@@ -62,13 +62,13 @@ Done 2026-11-25: COMPLIANCE-DASHBOARD-B-154, B-155, F-008 part (B102, B110, B111
 Done 2026-11-25: OFA-F-206 (O47), make test-data to 0224, Wording page look, REL-014 Annature tests 127/127 (merged 2568a959).
 Done 2026-11-26: OFA-F-228 (merged 2ac26530).
 
-## Advisor (pointer: A2 merged 9f388f33; parked)
+## Advisor (pointer: A3 building; browser check after Compliance C4)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | A3 | B101 | Signer chip reads "Email not delivered" when a follow-up email bounces, as for a signing request (board draws it on S18515) | Look and Feel | ?? | Code now; checked in a short window after Compliance C4 |
-| | A3 | P87 / B112 | S-Account Product cell wraps again at 1440px, so the table never scrolls sideways (as the board draws) | Look and Feel | ?? | Same group |
-| | A3 | P86 | Check the built DA (Dealer's Assistant) seat shows the picked Adviser's clients (Tobias, not Hannah); fix if not (PRD rule 28) | Functional | ?? | Same group |
+| >> | A3 | B101 | Signer chip reads "Email not delivered" when a follow-up email bounces, as for a signing request (board draws it on S18515) | Look and Feel | ?? | Code now; checked in a short window after Compliance C4 |
+| >> | A3 | P87 / B112 | S-Account Product cell wraps again at 1440px, so the table never scrolls sideways (as the board draws) | Look and Feel | ?? | Same group |
+| >> | A3 | P86 | Check the built DA (Dealer's Assistant) seat shows the picked Adviser's clients (Tobias, not Hannah); fix if not (PRD rule 28) | Functional | ?? | Same group |
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
 | | X | F-144 | The OFA timeline | Functional | 6 | Blocked: Luke |
 
