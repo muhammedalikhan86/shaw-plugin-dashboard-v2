@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 10:18
+Updated: 2026-11-26 10:23
 
 ## Now
 
@@ -33,6 +33,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 |---|---|---|---|---|---|---|
 | >> | 44 | OFA-F-230 | The PS API refuses the test sign-in outside the test host, as SHELL-F-190 does for the shell (PM-057) | Functional | 2 | Code done; .NET slot after Compliance, merges before the UAT release |
 | >> | 45 | OFA-F-232 | Act As on the PS API cannot reach test-data people (Corinne Abbott, PS O33): adopt the dev-only test-data directory the shell, Advisor and Compliance APIs already have (SHELL-F-108 pattern), Development only | Functional | 3 | Code outside Program.cs now; wiring after the F-230 commit; can follow the release |
+| | 45 | (PS2 raises) | Shaw.Word app registration values into the PS API's tracked appsettings (no server step) | Functional | 1 | With OFA-F-232 |
 | | X | - | Parity backlog from O47: "Signers" label in sentence case; "Salutation" label floats on the outline before typing | Look and Feel | ?? | Rows in parity-backlog.md; for triage |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
@@ -74,7 +75,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 4 | (Shell raises) | Avatar shows initials, not the Microsoft photo: the Graph credentials were never in tracked config; hard-code them the way PhoenixV3 does (Muhammed, 2026-11-26), ADR-013 amended | Functional | 1 | First; goes in the UAT release |
+| >> | 4 | (Shell raises) | Secrets into tracked appsettings, as PhoenixV3 does (Muhammed, 2026-11-26): Graph photo values into Shell.WebAPI config (fixes the initials avatar); DEP-9, deployment README, release runbook and ADR-013 amended; deploy/server-secrets scripts removed | Functional | 2 | First; goes in the UAT release |
 | | 4 | B106 | Notification frames: Mark all as read and the close X as mat-button / mat-icon-button in every frame (designer redrew 2026-11-26) | Look and Feel | ?? | After the avatar fix, code only |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
@@ -88,4 +89,5 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 4. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html, from the repo) into his design project.
 5. Next designer round: P97 (Advisor board gets the OFA history section), once Advisor writes the row.
 6. Owed: npm run test:business:coverage and make design-checks, in a machine window.
-7. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
+7. Skill feedback for Claude Improvements: the shaw-estate skill's DEP-9 (secrets out of appsettings) is overruled; secrets go in tracked appsettings (Muhammed, 2026-11-26).
+8. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
