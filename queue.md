@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-25 14:24
+Updated: 2026-11-25 14:51
 
 ## Go-live gate (before prod)
 
@@ -12,24 +12,27 @@ Only the OFA database talks to the warehouse and PowerBI; the APIs keep no DW/PB
 
 ## Now (from 2026-11-24, UAT started)
 
-1. UAT is running on the test site. The critical-path hold is lifted: every worker builds all unblocked work in parallel, ordered by business value:
+1. Code freeze 2026-12-11 (Muhammed). Everything still to build lands before it.
+2. Restart 2026-11-25 14:51: every worker parked for a session restart; nothing lost. Resume: each worker carries on from its pointer below. Machine window order on resume: Compliance (P2 + P3 checks, interrupted), PS group 65 board run, Advisor's short B116 run. PS2 needs no window (Jest only) unless a full .slnx is wanted.
+3. Known red everywhere: TestSiteStandInsTests.EverySchemaTheScriptsCreate_IsOneTheMiscLoginIsGranted, until datawarehouse_gridpay is added to scripts/uat/grant-misc-rights.sql (waiting on Muhammed, grant code).
+4. UAT is running on the test site. The critical-path hold is lifted: every worker builds all unblocked work in parallel, ordered by business value:
    1. bugs the OFA Team finds in UAT, first;
    2. anything that helps testers (release card, data refresh);
    3. other functional items;
    4. look and feel.
-2. One stack or .NET window at a time on the machine. Order: PS2 (running), then Compliance, then Advisor's short run, then PS group 65's board run.
-3. Parity sweep (queued after those windows; run again at the very end): each worker runs the disparity-checker on its own component in its own window, in this order: Compliance, Portfolio Services, Advisor, Shell. For every disparity, save a small actual-vs-expected screenshot pair (about 480 px wide, cropped to the difference) under docs/design/screenshots/parity/<component>/, and give each finding its breadcrumb path (e.g. Portfolio Services › Renewals › S19630 › Notice) and state. The hub gathers them on one private page for Muhammed to prioritise; each one is then queued as Look and Feel or Functional.
-4. No idle worker: a worker whose next item is blocked takes its next unblocked item.
-5. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
+5. One stack or .NET window at a time on the machine. Order: PS2 (running), then Compliance, then Advisor's short run, then PS group 65's board run.
+6. Parity sweep (queued after those windows; run again at the very end): each worker runs the disparity-checker on its own component in its own window, in this order: Compliance, Portfolio Services, Advisor, Shell. For every disparity, save a small actual-vs-expected screenshot pair (about 480 px wide, cropped to the difference) under docs/design/screenshots/parity/<component>/, and give each finding its breadcrumb path (e.g. Portfolio Services › Renewals › S19630 › Notice) and state. The hub gathers them on one private page for Muhammed to prioritise; each one is then queued as Look and Feel or Functional.
+7. No idle worker: a worker whose next item is blocked takes its next unblocked item.
+8. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 
-## Shell (pointer: parked, queue empty; SHELL-B-206 and SHELL-F-187 on main 4dd7be29)
+## Shell (pointer: parked 99e7be5d, queue empty)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | Shell 2 | Filter dialog copies the column's info tip onto the ASF fields | Look and Feel | - | Later (Muhammed) | - |
 | | X | B103-B106 | Shell 4 (user card seat line), 7 ("Seconds" label), 8 (Act As 4px gap), 9 (empty notifications' Mark all as read): the build is right, the boards change | Look and Feel | - | Design rows, later | - |
 
-## Portfolio Services (pointer: group 65 parity pass (building, Jest now; board run in a later window))
+## Portfolio Services (pointer: parked 0642877d: next = group 65 board run (exceptions-report and monthly-cycle scenarios on the artboards, built app at 1440/1680/1920, Keep open on/off) then one finalize)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
@@ -46,7 +49,7 @@ Only the OFA database talks to the warehouse and PowerBI; the APIs keep no DW/PB
 | | X | - | Browser checks owed from groups 36, 45 and 49, on the stack: the Settings report preview (both tables, a wide table scrolls, the empty-Expired line), B-233 opening month, B-235 row menu meets the card edge, B-237 Documents icon whole, B-241 table edges at 1440/1680/1920 (wide tables still scroll), F-189 Overview card | Look and Feel | 0 | Moved to the end sweep: two stack starts were killed for low memory on 2026-11-24 night; a restart needs Muhammed | - |
 | | X | - | Parity backlog from ps2 window 2026-11-24: O38 checkbox label colour (#404040) and radio-to-checkbox gap (56px); OFA-F-108 dialog frame: dashed 120px wording box, "Add attachments (optional)" row, 110px notched Note label | Look and Feel | - | End sweep; raise as rows then | - |
 
-## Portfolio Services 2 (pointer: joint A+B+C Integration in the machine window)
+## Portfolio Services 2 (pointer: parked e0b628ee (main merged, no conflicts; fees through dbo.WarehouseFee -> gridpay.Fee via 0223): next = Jest, then finalizers (PMBook v320, architecture v230, changelog, runbook, test-cases, handoff, graph), then ready-to-merge)
 
 Groups A+B built and reviewed; group C (bc9ba66a) merged into the PS2 branch as 32a36046 (F-212, F-214, F-222, F-224). Now: one joint A+B+C Integration in the machine window, then finalizers, then ready-to-merge. Group D after.
 
@@ -63,12 +66,11 @@ Groups A+B built and reviewed; group C (bc9ba66a) merged into the PS2 branch as 
 | >> | C | OFA-F-214 | M4 (migration 0219): fee reads as procedures | Functional | 3 | Built (32a36046); joint A+B+C Integration running in the machine window | - |
 | >> | C | OFA-F-224 | The main fee reader reads through the OFA database | Functional | 3 | Built (32a36046); joint A+B+C Integration running in the machine window | - |
 |  | D | OFA-F-226 | Drop DataWarehouse from PS Production and UAT settings (ruled exception: dev-up.ps1, the shared Development settings, docs/deployment) | Functional | 3 | After group C | - |
-| | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | IT ticket raised; approval to run expected Wed 2026-11-25 | - |
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
 | | X | OFA-F-032 | Attachment mover: built, waiting on your SharePoint live check | Functional | - | After go-live | - |
 | | 40 | - | End sweep, on the stack: make test-data for migrations 0201-0203, and a look at the Wording page | Functional | 0 | End sweep | - |
 
-## Compliance (pointer: P3 (paper), then pointer fix v167 to v168 (paper))
+## Compliance (pointer: parking (P2 + P3 test window interrupted; branch HEAD 45075d77 or later): next = rerun P2's .NET tests and layout check plus OI-002 scenarios in its window, then finalize)
 
 a51ce2d4 (P2: B-152, B-153, design row B117) still parked to its window after PS2: the ComplianceDashboard.WebAPI .NET tests and the layout check (which also proves SHELL-B-206). P3 is written on paper now and runs in the same window with P2.
 
@@ -81,7 +83,7 @@ a51ce2d4 (P2: B-152, B-153, design row B117) still parked to its window after PS
 | | X | B109-B111 | B-132 (Expired platform columns), B-135 (Arrangements filter State), B-138 (Wording fields gap): the build is right, the boards change; the bugs are withdrawn | Look and Feel | - | Design rows, later | - |
 | | X | W44 | Wording page: the no-version slot says a placeholder is sent; Portfolio Services actually sends the approved built-in email (Adviser Initial OFA follow-up) | Look and Feel | - | Later: design row, goes to the designer next round; words need the business's approval | - |
 
-## Advisor (pointer: parked; ADVISOR-DASHBOARD-B-159 fix on main 3f31aabe)
+## Advisor (pointer: parked 3cc9553e: next = warehouse switch F-166..F-168 once PS2 merges; short B116 run in a window)
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
@@ -94,6 +96,8 @@ a51ce2d4 (P2: B-152, B-153, design row B117) still parked to its window after PS
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke | - |
 
 ## Hub
+
+Open questions for Muhammed: (1) the grant-script line, datawarehouse_gridpay in scripts/uat/grant-misc-rights.sql; (2) the Development PowerBI source for Advisor F-168.
 
 OI-001 shared make-check script and OI-009 cause in shared find.ts (Compliance raised, hub items).
 
