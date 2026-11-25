@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 19:32
+Updated: 2026-11-25 19:33
 
 ## Now
 
@@ -68,13 +68,11 @@ Done 2026-11-25: COMPLIANCE-DASHBOARD-B-152, B-153, OI-002, OI-011 (B117 stays a
 
 Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
 
-## Portfolio Services (pointer: group 65+66 merged 9d588115; group 67 code only; parity check last, alone)
+## Portfolio Services (pointer: group 67 bugs merged 37347b65; parity check last, alone; designer rows after it)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | 67 | OFA-B-273 | Test data: seed one open missing-details Request from Back Office for S20114 (OFA-F-133 scenario finds none) | Functional | ?? | Code now; checked in the parity window |
-| | 67 | OFA-B-275 | Scenario fix: review-answers "attach" scenario clicks a Change… answer first (the dialog offers Attach a file only then) | Functional | ?? | Code now; with OFA-B-273 |
-| | 67 | OFA-B-277 | Outbox at 1440, Keep open on: the Queued at date breaks over two lines (table not one-line-columns) | Look and Feel | ?? | Code now; with OFA-B-273 |
+| | P | - | Owed tests: back-office-requests.feature and review-answers.feature on the shell target; layout check on the Outbox and the 3 leftover views | Functional | 0 | First in the parity window |
 | | P | REL-012 | Full Portfolio Services parity check (disparity-checker), findings and screenshot pairs on the parity page | Look and Feel | - | Last tonight, alone on the machine |
 | | X | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Held for Muhammed's intake |
 | | 67 | O25-O35, O43, O48, B114 | Designer's rows back 2026-11-25, and switch on the two @review-O48 Outbox scenarios (O27 tips and B114's "Follow-up step recorded." are the designer's words, to be confirmed) | Look and Feel | ?? | After the parity check |
@@ -84,6 +82,7 @@ Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 Done 2026-11-25: OFA-B-099, OFA-F-116, OFA-F-143 seed, TD-119, browser checks (F-189, B-233, B-235, B-237, B-241, Settings report preview), O38, OFA-F-108 frame. B-098, B-107, B-015 close at the parity check. O38 gap 24px vs board 56px goes to the parity check.
+Done 2026-11-25: OFA-B-273, OFA-B-275, OFA-B-277 (merged 37347b65).
 
 ## Shell (pointer: parked; group 2 on main acfc536d)
 
