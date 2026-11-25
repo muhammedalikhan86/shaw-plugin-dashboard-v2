@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 09:19
+Updated: 2026-11-26 09:30
 
 ## Now
 
@@ -54,15 +54,16 @@ Done 2026-11-26: COMPLIANCE-DASHBOARD-B-157 Renewal notice label (merged 91e5b31
 Done 2026-11-26: COMPLIANCE-DASHBOARD-OI-001, OI-009, B-150 reason (merged ad1eff9b).
 Done 2026-11-25: COMPLIANCE-DASHBOARD-B-154, B-155, F-008 part (B102, B110, B111, B112, M25 scenarios on), OFA-F-143 follow-up, Q23, Q24, B117 (merged bf5925e2).
 
-## Portfolio Services 2 (pointer: group 42, PM-058 across the APIs)
+## Portfolio Services 2 (pointer: group 43, import the held history rows)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 42 | PM-058 | Every API answers only to its UAT and Prod host names (Development keeps any); must never block UAT or Prod | Functional | 5 | Code only; before the UAT release |
+| >> | 43 | (PS raises the ID) | Import the master spreadsheet's TERMINATED and No OFA history rows (no longer held; all history from the master and Complii, Muhammed 2026-11-26), through the go-live loader too | Functional | ?? | Code only; after the UAT release unless tiny |
 | | X | - | Parity backlog from O47: "Signers" label in sentence case; "Salutation" label floats on the outline before typing | Look and Feel | ?? | Rows in parity-backlog.md; for triage |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
+Done 2026-11-26: PM-058 (merged 3cfd81bf).
 Done 2026-11-25: OFA-F-206 (O47), make test-data to 0224, Wording page look, REL-014 Annature tests 127/127 (merged 2568a959).
 Done 2026-11-26: OFA-F-228 (merged 2ac26530).
 
@@ -103,19 +104,19 @@ Done 2026-11-26: REL-012 parity check (merged 5aa51d57); owed shell-target scena
 Done 2026-11-26: OFA-B-107 (merged ce436203).
 Done 2026-11-26: OFA-B-279, B-281, B-283; F-051, B-005 (width, date), B-006, B-007, F-055 closed by the parity check; design rows O25-O35, O43, O48, B114 (O33 board-only: Act As gap, Shell list) (merged 1be7dd22).
 
-## Shell (pointer: SHELL-F-188 building; before the UAT release only if the UAT-manifest check passes)
+## Shell (pointer: group 3b, F-189, F-190, B-210, code only)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 3a | SHELL-F-188 (PM-056) | Plugins load only from trusted server addresses (an allowed list, checked by the API and the browser) | Functional | 3 | Now: approach and size first; lands before today's UAT release only if safe |
-| | 3b | SHELL-F-189 (PM-055) | Profile page: a person never sees their own security groups; only the development team (diagnostics) and Act As (UAT testers included) do; plugins get the same trimmed list | Functional | 3 | After PM-056 |
-| | 3b | SHELL-F-190 (PM-057) | Shell API refuses the test sign-in outside the test host; each plugin API adopts it in its own item | Functional | 3 | After PM-056 |
+| >> | 3b | SHELL-F-189 (PM-055) | Profile page: a person never sees their own security groups; only the development team (diagnostics) and Act As (UAT testers included) do; plugins get the same trimmed list | Functional | 3 | After PM-056 |
+| >> | 3b | SHELL-F-190 (PM-057) | Shell API refuses the test sign-in outside the test host; each plugin API adopts it in its own item | Functional | 3 | After PM-056 |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
-| | 3b | PM-113 | Plugin0 extended FAB padding to the board (22/22) | Look and Feel | ?? | After F-188, code only |
+| >> | 3b | SHELL-B-210 (PM-113) | Plugin0 extended FAB padding to the board (22/22) | Look and Feel | ?? | After F-188, code only |
 | | 3 | B106 | Notification frames: Mark all as read and the close X as mat-button / mat-icon-button in every frame | Look and Feel | ?? | After the designer redraws the frames |
 | | X | - | Act As on a plugin API looks people up in real AD, so a test-data person (Corinne Abbott, PS O33) cannot be acted as; a dev-only directory that knows the test-data people (SHELL-ADR-020 seam) | Functional | ?? | Held: Muhammed (identity seam) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
 
+Done 2026-11-26: SHELL-F-188 (c9748975; full suite in the next window, before the release).
 Done 2026-11-25: SHELL-B-207, SHELL-B-208, SHELL-B-209.
 
 ## Hub
