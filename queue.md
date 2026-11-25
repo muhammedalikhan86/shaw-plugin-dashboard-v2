@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 18:22
+Updated: 2026-11-25 18:43
 
 ## Now
 
@@ -76,6 +76,7 @@ Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
 | >> | 66 | - | Parity backlog: O38 checkbox colour and gap; OFA-F-108 dialog frame | Look and Feel | ?? | Coded e9180683; Note notch measured in the window |
 | | 67 | OFA-B-273 | Test data: seed one open missing-details Request from Back Office for S20114 (OFA-F-133 scenario finds none) | Functional | ?? | Raised tonight; next PS group after the parity check |
 | | 67 | OFA-B-275 | Scenario fix: review-answers "attach" scenario clicks a Change… answer first (the dialog offers Attach a file only then) | Functional | ?? | Raised tonight; with OFA-B-273 |
+| | 67 | OFA-B-277 | Outbox at 1440, Keep open on: the Queued at date breaks over two lines (table not one-line-columns) | Look and Feel | ?? | Raised tonight; with OFA-B-273 |
 | | P | REL-012 | Full Portfolio Services parity check (disparity-checker), findings and screenshot pairs on the parity page | Look and Feel | - | Last tonight, alone on the machine |
 | | X | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Held for Muhammed's intake |
 | | X | - | Switch on the two @review-O48 Outbox scenarios | Functional | 0 | Blocked: designer (O48) |
