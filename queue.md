@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 18:46
+Updated: 2026-11-25 18:49
 
 ## Now
 
@@ -43,6 +43,7 @@ Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of p
 | | C2 | F-008 | Business scenarios still off whose boards are drawn (M38, M39 back 2026-11-23) | Functional | 3 | With the C2 follow-up, one window |
 | | C2 | OI-001, OI-009 | Close on paper: fixed by SHELL-B-097 and SHELL-B-120 | Functional | 0 | At C2 finalize |
 | | C2 | B109-B112, B117, Q23, Q24, M25, W44 | Designer's rows back 2026-11-25: Expired platform columns, Arrangements filter State, Wording fields gap, no-version slot wording, Quarantine widths, "OFA Team moved them" line; plus the stale test at quarantine-signing-expiry.feature:153 and :172 | Look and Feel | ?? | With C2, one window |
+| | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
 
 Done 2026-11-25: COMPLIANCE-DASHBOARD-B-152, B-153, OI-002, OI-011 (B117 stays a design row).
 
@@ -105,5 +106,5 @@ Done 2026-11-25: SHELL-B-207, SHELL-B-208.
 6. Parity round 2: when Muhammed says, after every P1 fix. Parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
 7. Designer prompt 2026-11-25 (2): all four parts sent 2026-11-25 from Lachlan's account; the Shell part (B103-B106, B113) in a new designer chat with docs/design/artboards/shell/NotificationPanel.dc.html and Main.dc.html attached. At the next switch to Muhammed's account: he uploads the two returned shell boards (from the repo, after the sync) into his design project, so its copies are current.
 8. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
-9. Next designer round (when Muhammed resumes): the designer's questions in the review files: P86 (Tobias's book in the Delegated Access seat?), Q23 (sample mover Hannah or Corinne Abbott?), B112 (Adviser S-Account and PS Platform accounts tables scroll sideways: right, or Product wraps?), O27 (disabled Open file at .38 opacity?), B106 (Mark all as read and close X as Material buttons in every frame? also a contract finding). Carry O44 back to the designer's copy (it lost it). Token finding: ofa-frame.css adds 250px, 500px and .38 that are not tokens.
+9. Next designer round (when Muhammed resumes): the designer's questions in the review files: P86 (Tobias's book in the Delegated Access seat?), Q23 (sample mover Hannah or Corinne Abbott?), B112 (Adviser S-Account and PS Platform accounts tables scroll sideways: right, or Product wraps?), O27 (disabled Open file at .38 opacity?), B106 (Mark all as read and close X as Material buttons in every frame? also a contract finding). Carry O44 back to the designer's copy (it lost it). W44 words for the no-version slot line and subtitle (Compliance B-156 holds on them). Token finding: ofa-frame.css adds 250px, 500px and .38 that are not tokens.
 10. Owed after the sync: npm run test:business:coverage and make design-checks (machine busy tonight); demo refresh in v2 done.
