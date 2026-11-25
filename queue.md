@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 03:44
+Updated: 2026-11-26 03:49
 
 ## Now
 
@@ -67,14 +67,14 @@ Done 2026-11-26: OFA-F-228 (merged 2ac26530).
 Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
 Done 2026-11-26: A2 parity backlog, PM-113, design rows P86, P87 (built app; board still wraps), P91, B101, B107, B108, B116, B118, B119 (merged 9f388f33).
 
-## Portfolio Services (pointer: parity check merged 5aa51d57; group 68 code only, no stack)
+## Portfolio Services (pointer: group 68 coded bdb021a2; group 69 code only; one window for both when Muhammed is back)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | 69 | OFA-B-283 | Test data: five renewal confirmations, one per FULLY SIGNED state; then O33 (Corinne Abbott seat, Shell) and O34 scenarios run on the built app | Functional | 2 | After group 68; seat on main 5cfe93f3 |
+| >> | 69 | OFA-B-283 | Test data: five renewal confirmations, one per FULLY SIGNED state; then O33 (Corinne Abbott seat, Shell) and O34 scenarios run on the built app | Functional | 2 | Code now; seat on main 5cfe93f3 |
 | | X | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Held for Muhammed's intake |
-| >> | 68 | - | Findings Intake of findings/2026-11-26-all.md: close OFA-F-051, B-007, B-006, B-005, F-055 (their KNOWN entries no longer show; remove PS's own KNOWN lines in parity.spec); raise Quarantine list wrap at 1920 (High, Bug) and Separate initial OFAs first column weight 500 (Medium) | Look and Feel | ?? | Code now; board run in a window when Muhammed is back |
-| >> | 68 | O25-O35, O43, O48, B114 | Designer's rows back 2026-11-25, and switch on the two @review-O48 Outbox scenarios (O27 tips and B114's "Follow-up step recorded." are the designer's words, to be confirmed) | Look and Feel | ?? | Code now, with group 68 |
+| | 68 | OFA-B-279, B-281 + findings | Quarantine list one line at 1920; Separate initial OFAs first column 500; KNOWN lines removed for F-051, B-005 (width, date), B-006, B-007, F-055 | Look and Feel | ?? | Coded bdb021a2, Review PASS; parity at 1920 in the next window |
+| | 68 | O25-O35, O43, O48, B114 | Designer rows: O27 tips on the board's words; scenarios on for O28-O35, B114, O48 (O33, O34 board only until OFA-B-283) | Look and Feel | ?? | Coded bdb021a2; shell-target run in the next window |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 | | X | OFA-F-138 | File the signed renewal in DART; real signing-status reader | Functional | 3 | Blocked: Muhammed's DART retest |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
