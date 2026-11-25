@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-25 13:15
+Updated: 2026-11-25 13:27
 
 ## Go-live gate (before prod)
 
@@ -105,7 +105,7 @@ Deployment and testing (from 2026-11-23): the work left is the REL- stack in `do
 1. Designer round synced 2026-11-24 and routed. Shell boards (Main, ShellCollapsed, AccountRow, NotificationPanel, SearchPanel, the current landing page) sent to the designer to draw D8-D14 on (Muhammed sends).
 2. Test site: deploy 1 complete 2026-11-24. All nine parts up; portfolio-services-api on e1c85b26 (OFA-B-261); compliance-dashboard-api redeployed with B-128; the register's test data loaded. Status on the test site page of the demo site (update-uat-status.ps1, then update-uat-data.ps1). Next deploy: PS group 58 (notices) and deploy 2 (SHELL-F-184, rollback rehearsal).
 3. End sweep, last: after the designer's work is synced, built, and tested by hand by Muhammed; every parity check, each issue listed as Look and Feel.
-4. Waiting on you (also D-04 and D-05 in `docs/leftovers.md`): rerun the OFA-S-005 spike on the unredacted master spreadsheet (scripts in the PS checkout, spikes/OFA-S-005, uncommitted); check in MonitorLastModifiedDate.sql and add the gridpay PRTG sensor (W-21 in docs/leftovers.md); the DART retest (another day); the OFA-S-001 owner questions: DART's open-a-document URL and whether staff have DART logins (OFA-F-145 and F-055 are built behind Dart:DocumentLinkTemplate, off until it is set); PS's 8 production settings.
+4. Waiting on you (also D-04 and D-05 in `docs/leftovers.md`): rerun the OFA-S-005 spike on the unredacted master spreadsheet (scripts in the PS checkout, spikes/OFA-S-005, uncommitted); the DART retest (another day); the OFA-S-001 owner questions: DART's open-a-document URL and whether staff have DART logins (OFA-F-145 and F-055 are built behind Dart:DocumentLinkTemplate, off until it is set); PS's 8 production settings.
 5. After ps2's OFA-F-202 (the starters on the letterhead), with the stack up: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database through the Wording page's upload, so each slot shows the business wording, not the [Test data] text. NoOfaFeeAdvisorEmail and RenewalConfirmation wait for ps2's field-library fix.
 6. Later, large (after the OFA Team has the test site): the OFA APIs stop connecting to DataWarehouse, ShawCentral and PowerBI. Procedures in the OFA database read the warehouse instead, and fees come GridPay → DataWarehouse → an OFA-database procedure, never copied in. Ruling and plan: `docs/hub/dw-through-stored-procs.md`. The test site stays as it is.
 
