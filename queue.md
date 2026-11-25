@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-25 13:27
+Updated: 2026-11-25 13:36
 
 ## Go-live gate (before prod)
 
@@ -32,16 +32,16 @@ Only the OFA database talks to the warehouse and PowerBI; the APIs keep no DW/PB
 
 ## Portfolio Services (pointer: parked f0911374, group 64)
 
-Group 64: OFA-F-143, OFA-F-141 (Reference Date part), the gridpay move, migrations 0220, 0221, 0223; 0222 held for F-141 option a (waits on Muhammed). Next, in its machine window, one at a time: .NET, the PS business project, Jest; then one finalize (PS architecture v229, PMBook v318, Platform Architecture pointers to v168); then ready-to-merge.
+Group 64: OFA-F-143, OFA-F-141 (Reference Date part), OFA-B-251 (the banner's next 1st of the month), the gridpay move, migrations 0220, 0221, 0223; 0222 held for F-141 option a (waits on Muhammed). Next, in its machine window, one at a time: .NET, the PS business project, Jest; then one finalize (PS architecture v229, PMBook v318, Platform Architecture pointers to v168); then ready-to-merge.
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | >> | 64 | OFA-F-143 | Record a reviewed finding's follow-up steps | Functional | 3 | Built (parked); tests in the window | - |
 | >> | 64 | OFA-F-141 | Correct a Reference Date or product, logged in the compliance trail (Reference Date part; 0222 held for option a) | Functional | 5 | Built (parked); tests in the window | - |
 | >> | 64 | - | The gridpay move (0223); SyncFee-grants.sql deleted, docs drop grant lines | Functional | 0 | Built (parked); tests in the window | - |
+| | 64 | OFA-B-251 | Exceptions report banner: 'next on' shows the next 1st of the month | Functional | 1 | To build when PS resumes | - |
 | | P1 | B-137 | Arrangement record: Platform and Platform account number already two columns, nowrap, nothing cut (OFA-B-111) | Look and Feel | 0 | Not applicable: already built; B112 checks the PS board | - |
 | | X | - | Rename the local databases to `ShawPortal-OngoingFeeArrangements-*` (dev, warehouse and test databases; scripts, Makefile, tests, docs in every OFA component), to match the live name | Functional | - | Later: Muhammed says when; raised as a sized item then | - |
-| | X | OFA-B-251 | Fee check banner: what date "next on" means (the app has no next-sync date; it checks each business day until the month's fees arrive) | Functional | - | Later: Muhammed decides | - |
 | | X | O39 | Settings report preview: the new report columns (OFA-F-191) | Functional | - | Later: Muhammed confirms the designer's guessed values (Renewal Notice Due Date = +60 days and others) | - |
 | | X | O41, O42 | Could-not-load card on six screens; the Import page as drawn | Look and Feel | - | Later: O41's page names and O42's words wait for the business | - |
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
