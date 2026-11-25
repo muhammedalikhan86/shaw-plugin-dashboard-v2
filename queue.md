@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 16:32
+Updated: 2026-11-25 16:33
 
 ## Now
 
@@ -59,8 +59,9 @@ Updated: 2026-11-25 16:32
 | >> | 65 | OFA-F-143 seed | Follow-up steps seeded (S9970002 Adviser told, S20412 Initial OFA sent); TD-119 | Functional | 1 | Done 89fcf9eb; tested in the window |
 | | 65 | - | Browser checks owed from groups 36, 45, 49 (Settings report preview, B-233, B-235, B-237, B-241, F-189) | Look and Feel | 0 | Same window, stack already up |
 | | 65 | OFA-F-116 | Close on paper: 2027 holidays loaded and checked (106 rows, ruling 2026-11-25) | Functional | 1 | At finalize |
-| | 66 | - | Parity backlog: O38 checkbox colour and gap; OFA-F-108 dialog frame | Look and Feel | ?? | Same window, before the parity check |
+| | 66 | - | Parity backlog: O38 checkbox colour and gap; OFA-F-108 dialog frame | Look and Feel | ?? | Coded e9180683; Note notch measured in the window |
 | | P | REL-012 | Full Portfolio Services parity check (disparity-checker), findings and screenshot pairs on the parity page | Look and Feel | - | Last tonight, alone on the machine |
+| | X | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Held for Muhammed's intake |
 | | X | - | Switch on the two @review-O48 Outbox scenarios | Functional | 0 | Blocked: designer (O48) |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 | | X | OFA-F-138 | File the signed renewal in DART; real signing-status reader | Functional | 3 | Blocked: Muhammed's DART retest |
