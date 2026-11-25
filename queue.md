@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 19:33
+Updated: 2026-11-25 19:54
 
 ## Now
 
@@ -27,27 +27,25 @@ One machine window at a time, in this order. Code-only work runs alongside.
 | 2 | Advisor | WS | F-166, F-167, F-168, F-169, B-159 (warehouse switch) | Done, merged 7351f973 |
 | 3 | Compliance | P2+P3 | B-152, B-153, B117, OI-002 | Done, merged 14660477 |
 | 4 | Portfolio Services | 65+66 | OFA-B-098, B-099, B-107, B-015, F-143 seed, browser checks owed, F-116 close; O38, F-108 frame | Done, merged 9d588115 |
-| 5 | Compliance | C2 | F-143 follow-up, F-008, OI-001/OI-009 close; design rows B109-B112, B117, Q23, Q24, M25, W44 and the stale test at quarantine-signing-expiry.feature:153/172 | Now, window 4 |
-| 6 | Portfolio Services 2 | 40 | make test-data 0200-0203, Wording page look, REL-014 Annature tests; O47 / OFA-F-206 Initial OFA prepare | After Compliance C2 |
+| 5 | Compliance | C2 | F-143 follow-up, F-008, OI-001/OI-009 close; design rows B109-B112, B117, Q23, Q24, M25, W44 and the stale test at quarantine-signing-expiry.feature:153/172 | Done, merged bf5925e2 (OI-001/OI-009 stay open) |
+| 6 | Portfolio Services 2 | 40 | make test-data 0200-0203, Wording page look, REL-014 Annature tests; O47 / OFA-F-206 Initial OFA prepare | Now, window 5 |
 | 7 | Advisor | A2 | Parity backlog, PM-113 close, ASF tip off 3 fields; design rows P86, P87, P91, B101, B107, B108, B116, B118, B119 and the stale test at renewal-tracker.feature:110 | Coded f3f232f1, Review PASS; window after PS2 40 |
 | 8 | Shell | 2 | SHELL-B-209 (B104, B105); B103, B106, B113 closed with no build | Done, on main acfc536d |
 | 9 | Portfolio Services | P | REL-012 full parity check (about 1 to 1.5 hours) | Last, alone on the machine |
 
 Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of prompt 2026-11-25 (2). Each worker has its rows in its next group. Questions the designer asked back go to the next round (Hub item 9).
 
-## Compliance (pointer: C2 in its window, window 4)
+## Compliance (pointer: C2 merged bf5925e2; parked until B-156 words come)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | C2 | - | Follow-up to PS's OFA-F-143 seed: SqlComplianceReviewStoreTests.cs:112 asserts the two follow-up steps; drop @not-built-OFA-F-143 at compliance-review.feature:81 | Functional | ?? | After PS group 65 merges, then make test-data |
-| | C2 | F-008 | Business scenarios still off whose boards are drawn (M38, M39 back 2026-11-23) | Functional | 3 | With the C2 follow-up, one window |
-| | C2 | OI-001, OI-009 | Close on paper: fixed by SHELL-B-097 and SHELL-B-120 | Functional | 0 | At C2 finalize |
-| | C2 | B109-B112, B117, Q23, Q24, M25, W44 | Designer's rows back 2026-11-25: Expired platform columns, Arrangements filter State, Wording fields gap, no-version slot wording, Quarantine widths, "OFA Team moved them" line; plus the stale test at quarantine-signing-expiry.feature:153 and :172 | Look and Feel | ?? | With C2, one window |
+| | C3 | OI-001, OI-009 | Close on paper once the empty-library scenario is checked by name; fix B-150's stale reason (Q24 Done) | Functional | 0 | Next Compliance group |
 | | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
 
 Done 2026-11-25: COMPLIANCE-DASHBOARD-B-152, B-153, OI-002, OI-011 (B117 stays a design row).
+Done 2026-11-25: COMPLIANCE-DASHBOARD-B-154, B-155, F-008 part (B102, B110, B111, B112, M25 scenarios on), OFA-F-143 follow-up, Q23, Q24, B117 (merged bf5925e2).
 
-## Portfolio Services 2 (pointer: parked 3e8e4480; group 40 window after Compliance C2)
+## Portfolio Services 2 (pointer: group 40 in its window, window 5)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
