@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 17:20
+Updated: 2026-11-25 17:35
 
 ## Now
 
@@ -55,11 +55,11 @@ Design sync at 18:02 tonight (unattended): takes whatever the designer built and
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive, Muhammed's check |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
-## Advisor (pointer: WS merged 7351f973; A2 code now, its check in a short window after PS2 40)
+## Advisor (pointer: parked 4da0a987; A2 coded, Review PASS; board check in a short window after PS2 40)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | A2 | - | Parity backlog: loading bar sits low; dead CSS line in app.scss; F-169 heading shade and 12px column width; close PM-113 on paper; drop `tip: ASF_TIP` from 3 filter fields and their specs | Look and Feel | 1 | Code after WS; checked in a short window after PS2 40 |
+| | A2 | - | Parity backlog: loading bar sits low; dead CSS line in app.scss; F-169 12px column width (heading shade is the shell theme: parity pick); close PM-113 on paper; drop `tip: ASF_TIP` from 3 filter fields and their specs | Look and Feel | 1 | Code after WS; checked in a short window after PS2 40 |
 | | X | B101, B107, B108, + 2 new | Signatory link tip; paginator; "Reported by"; "Done for the month" filtered; questionnaire row height | Look and Feel | - | Sent to the designer 2026-11-25; built when back |
 | | X | F-144 | The OFA timeline | Functional | 6 | Blocked: Luke |
 
