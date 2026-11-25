@@ -3,16 +3,16 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 15:59
+Updated: 2026-11-25 16:04
 
 ## Now
 
 1. Code freeze 2026-12-11. Everything still to build lands before it.
-2. Account switch to lachlan at 16:30 today: every worker parks by 16:20; the new hub resumes them on lachlan.
+2. Account switch to lachlan at 16:30 today: every worker is parked; the new hub resumes them on lachlan.
 3. After the switch, overnight and unsupervised, one machine window at a time, the hub merging on delegation: (a) Shell fixes table-fit, then Compliance finishes P2+P3; PS seeds the F-143 follow-up steps; (b) Advisor's warehouse switch (F-167, F-168, then review and tests); (c) PS group 65's board run, its window starting with `make up` and the PS business tests (they prove the dev-up.ps1 change); (d) last, alone on the machine: Portfolio Services' full parity check (never run; about 1 to 1.5 hours), findings with screenshot pairs on the parity page. Morning, with Muhammed: he picks from the parity page; the picks go to the designer as design rows; then sync.
 4. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI; the APIs keep no DW/PBI connection strings. PS2's procedures are on main (46ed7123). Left: Advisor's warehouse switch. Plan: docs/hub/analysis/dw-procedures-plan.md.
 5. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
-6. Machine: one stack or .NET window at a time. Now: Compliance. Next: Advisor, once it says "code ready". Then PS group 65's board run. Others write code only meanwhile.
+6. Machine: one stack or .NET window at a time. Now: Compliance. Next: Advisor (code ready). Then PS group 65's board run. Others write code only meanwhile.
 7. Parity sweep, after those windows: each worker runs the disparity-checker on its own component (Compliance, Portfolio Services, Advisor, Shell), with small actual-vs-expected screenshot pairs under docs/design/screenshots/parity/<component>/ and a breadcrumb per finding. The hub gathers them on one page for Muhammed.
 8. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 
@@ -34,14 +34,14 @@ Updated: 2026-11-25 15:59
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Waiting on IT for a drive |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Your SharePoint live check, after go-live |
 
-## Advisor (pointer: F-167 code-only slot until 16:20 (on top of parked 376f3006: F-166 + F-169 code done, untested); then parked for the switch; next = F-168, then one .NET + Jest window)
+## Advisor (pointer: parked 1dcbbc00: F-166..F-169 code done, untested; next = one .NET + Jest window: baseline, Review of all four, F-169 parity, Integration, B-159 run)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | WS | F-166 | Warehouse readers a-1..a-8 read through OFA-db procedures | Functional | 5 | Building |
-| >> | WS | F-169 | S-Account card: "ASF (excl. GST) · past 12 months" column | Functional | 1 | Building |
-| >> | WS | F-167 | PowerBI readers a-9..a-20 read through OFA-db procedures | Functional | 5 | Building (code only) |
-| | WS | F-168 | Connection strings go; UAT money empty; Development reads live (SHELL-ADR-021) | Functional | 3 | After F-167 |
+| >> | WS | F-166 | Warehouse readers a-1..a-8 read through OFA-db procedures | Functional | 5 | Code done; tested in its window |
+| >> | WS | F-169 | S-Account card: "ASF (excl. GST) · past 12 months" column | Functional | 1 | Code done; tested in its window |
+| >> | WS | F-167 | PowerBI readers a-9..a-20 read through OFA-db procedures | Functional | 5 | Code done; tested in its window |
+| >> | WS | F-168 | Connection strings go; UAT money empty; Development reads live (SHELL-ADR-021) | Functional | 3 | Code done; tested in its window |
 | | WS | B-159 | Short real business run (proves the B116 runtime skip) | Functional | 0 | In its window |
 | | X | - | Design rows: "Done for the month" on a filtered month; questionnaire row height (build right) | Look and Feel | 0 | Row IDs after the group |
 | | X | - | Parity backlog: loading bar sits low; dead CSS line in app.scss; close PM-113 on paper | Look and Feel | 1 | Parity sweep |
