@@ -427,7 +427,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-25T17:51:23+11:00",
+ "updatedAt": "2026-11-25T18:47:35+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2984,6 +2984,11 @@
    "change": "Compliance: P2+P3 done (Quarantine columns fit at every width; Expired and Confirmed filters; empty, loading and unavailable states tested)",
    "pointsDone": 2.0,
    "pointsRaised": 1.0
+  },
+  {
+   "at": "2026-11-25T18:47:35+11:00",
+   "change": "Designer round back: all 38 design rows built; each worker has its rows in its next group",
+   "pointsDone": 0.0
   }
  ],
  "foundDuringBuild": {

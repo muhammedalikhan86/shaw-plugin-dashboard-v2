@@ -1249,3 +1249,11 @@ mat-chip[data-tip]{position:relative;overflow:visible}
 mat-chip[data-tip]:is(:hover,:focus-visible)::after{content:attr(data-tip);position:absolute;left:0;top:calc(100% + 4px);z-index:20;white-space:nowrap;padding:4px 8px;border-radius:var(--mat-sys-corner-extra-small);background:var(--mat-sys-inverse-surface);color:var(--mat-sys-inverse-on-surface);font:var(--mat-sys-body-small);letter-spacing:0;text-transform:none;pointer-events:none}
 /* Item 13: no empty block after a filter dialog's last field */
 mat-dialog-content > div[data-i13]:empty{display:none!important}
+/* O48: the Outbox's switch row and its hold banner sit on the card, without the strip's band, as the app draws them */
+.mstrip:is([data-o48],[data-plain]){background:var(--mat-sys-surface);border-color:transparent}
+/* B119: an OFA questionnaire row takes the height its content needs: a cell's empty value and sub-line add no gap */
+.app-layer mat-card[data-exp="month"] table.ot td[mat-cell] :is(.cl,.stk) > :empty{display:none!important}
+/* Q24 (Compliance): Extension and Last prompt start at 250px and grow to fit their words, up to 500px; never cut short */
+.app-layer table.ot :is(th,td):is(.x250,[classname~="x250"]){min-width:250px;max-width:500px;box-sizing:border-box}
+/* O27: a disabled file field (SOA › Open from DART…) at Material's disabled opacity */
+.app-layer mat-form-field[disabled="true"] .mofi{opacity:.38;cursor:default!important;pointer-events:none}
