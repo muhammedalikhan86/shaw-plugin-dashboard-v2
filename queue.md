@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 08:54
+Updated: 2026-11-26 08:56
 
 ## Now
 
@@ -12,7 +12,7 @@ Updated: 2026-11-26 08:54
 3. Overnight, unsupervised, one machine window at a time, the hub merging on delegation: the list is in *Overnight* below. Morning, with Muhammed: he picks from the parity page; the picks go to the designer as design rows; then sync.
 4. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI; the APIs keep no DW/PBI connection strings. PS2's procedures are on main (46ed7123); Advisor's warehouse switch merged 7351f973 (ADVISOR-DASHBOARD-ADR-009). Plan: docs/hub/analysis/dw-procedures-plan.md.
 5. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
-6. Machine: one stack or .NET window at a time. Overnight order: Advisor WS; Compliance P2+P3 (after SHELL-B-207 merges); PS 65+66; Compliance C2; PS2 40; Advisor A2; last, alone, PS's parity check. Others write code only meanwhile.
+6. Machine: one stack or .NET window at a time. Today (2026-11-26): Compliance C4; Advisor A3 check; Shell PM-056 if it lands; UAT release (Muhammed deploys) after the UI work; then PS 70 flaky; Advisor A4 flaky. Others write code only meanwhile.
 7. Parity sweep, after those windows: each worker runs the disparity-checker on its own component (Compliance, Portfolio Services, Advisor, Shell), with small actual-vs-expected screenshot pairs under docs/design/screenshots/parity/<component>/ and a breadcrumb per finding. The hub gathers them on one page for Muhammed.
 8. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 9. Grouped 2026-11-25 evening: every unblocked item has a group; only blocked items stay X. Design rows of prompt 2026-11-25 (2) are back and grouped.
@@ -70,6 +70,7 @@ Done 2026-11-26: OFA-F-228 (merged 2ac26530).
 | >> | A3 | P87 / B112 | S-Account Product cell wraps again at 1440px, so the table never scrolls sideways (as the board draws) | Look and Feel | ?? | Same group |
 | >> | A3 | P86 | Check the built DA (Dealer's Assistant) seat shows the picked Adviser's clients (Tobias, not Hannah); fix if not (PRD rule 28) | Functional | ?? | Same group |
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
+| | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Window after PS's flaky group |
 | | X | F-144 | The OFA timeline | Functional | 6 | Blocked: Luke |
 
 Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
@@ -79,6 +80,7 @@ Done 2026-11-26: A2 parity backlog, PM-113, design rows P86, P87 (built app; boa
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| | 70 | - | 9 flaky tests (AttachmentRegistration, ExpiryRegister, exceptions-report x3, ofa-checklist x2, quarantine, QuarantineReadEndpoint): causes and fixes | Functional | ?? | Window after Advisor A3's check |
 | | X | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Held for Muhammed's intake |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 | | X | OFA-F-209 | Real signing-status reader (renewals and Initial OFAs) + live DART filing check (split from F-138, which is Done) | Functional | 3 | Blocked: Muhammed's DART retest |
@@ -92,10 +94,15 @@ Done 2026-11-26: REL-012 parity check (merged 5aa51d57); owed shell-target scena
 Done 2026-11-26: OFA-B-107 (merged ce436203).
 Done 2026-11-26: OFA-B-279, B-281, B-283; F-051, B-005 (width, date), B-006, B-007, F-055 closed by the parity check; design rows O25-O35, O43, O48, B114 (O33 board-only: Act As gap, Shell list) (merged 1be7dd22).
 
-## Shell (pointer: parked; seat line on main 5cfe93f3)
+## Shell (pointer: PM-056 approach and size)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 3a | PM-056 | Plugin code loads with an integrity check (Native Federation remotes) | Functional | ?? | Now: approach and size first; lands before today's UAT release only if safe |
+| | 3b | PM-055 | Profile page: a person never sees their own security groups; only the development team (diagnostics) and Act As (UAT testers included) do | Functional | ?? | After PM-056 |
+| | 3b | PM-057 | Dev/Test builds refuse an unsigned-in user (build guard) | Functional | ?? | After PM-056 |
+| | X | PM-058 | API accepts any host name (AllowedHosts *) | Functional | ?? | Held: Muhammed's answer |
+| | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | 3 | B106 | Notification frames: Mark all as read and the close X as mat-button / mat-icon-button in every frame | Look and Feel | ?? | After the designer redraws the frames |
 | | X | - | Act As on a plugin API looks people up in real AD, so a test-data person (Corinne Abbott, PS O33) cannot be acted as; a dev-only directory that knows the test-data people (SHELL-ADR-020 seam) | Functional | ?? | Held: Muhammed (identity seam) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
