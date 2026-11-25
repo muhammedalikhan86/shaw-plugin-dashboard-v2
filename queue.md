@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 16:19
+Updated: 2026-11-25 16:20
 
 ## Now
 
@@ -22,15 +22,16 @@ Updated: 2026-11-25 16:19
 |---|---|---|---|---|---|---|
 | >> | P2 | B-152, B-153, B117 | Quarantine Extension and Last prompt minWidth 250 (grow up to 500); fix the 7 layout reds | Look and Feel | ?? | In its window |
 | >> | P3 | OI-002 | Business scenarios: Arrangements Empty, Loading, Data unavailable; Wording Loading, Failed | Functional | ?? | In its window |
+| | F1 | - | Follow-up to PS's OFA-F-143 seed: SqlComplianceReviewStoreTests.cs:112 asserts the two follow-up steps; drop @not-built-OFA-F-143 at compliance-review.feature:81 | Functional | ?? | After PS group 65 merges, then make test-data |
 | | X | B109-B111 | Expired platform columns, Arrangements filter State, Wording fields gap: build right, boards change | Look and Feel | - | Design rows, later |
 | | X | W44 | Wording page no-version slot wording (actual send is the built-in email) | Look and Feel | - | Design row, next round; business approves words |
 
-## Portfolio Services 2 (pointer: group 40 test data, code only; O47 / OFA-F-206 once the designer draws O47)
+## Portfolio Services 2 (pointer: parked 294c5dff, merged; next = a stack window after PS's for group 40, or O47 / OFA-F-206 once drawn)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | | P2 | O47, OFA-F-206 | Initial OFA prepare: tick the signers, set the salutation | Functional | ?? | Waiting on the designer (O47) |
-| >> | 40 | - | End sweep: test data for migrations 0201-0203 (code now); look at the Wording page | Functional | 0 | Code now; run and look in a later window |
+| | 40 | - | End sweep: make test-data for 0200-0203; look at the Wording page (seed already in group 39; TD-13 doc fixed) | Functional | 0 | Next stack window, after PS's |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Waiting on IT for a drive |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Your SharePoint live check, after go-live |
 
@@ -67,7 +68,7 @@ Updated: 2026-11-25 16:19
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | (raise SHELL-B) | Table-fit: a free-width column can end 4px over its cap (Compliance Quarantine "Extension" 504px > 500px at 1920px, Keep open off; libs/table-tools table-fit.ts) | Look and Feel | ?? | Overnight; Compliance P2 waits on it |
+| >> | 1 | SHELL-B-207 | Table-fit: a free-width column can end 4px over its cap (Compliance Quarantine "Extension" 504px > 500px at 1920px, Keep open off; libs/table-tools table-fit.ts) | Look and Feel | 1 | Building; Compliance P2 waits on it |
 | | X | Shell 2 | Filter dialog copies the column's info tip onto the ASF fields | Look and Feel | - | Later (Muhammed) |
 | | X | B103-B106 | User card seat line, "Seconds" label, Act As gap, empty notifications: build right, boards change | Look and Feel | - | Design rows, later |
 
