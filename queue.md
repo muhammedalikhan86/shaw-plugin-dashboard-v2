@@ -24,7 +24,6 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | C4 | OI-003 | Flaky "The list pages at 25" (arrangements.feature, shell target): find the cause, fix the wait or locator | Functional | 1 | After the release |
 | | C4 | OI-007 | Flaky under load (P27 export, A14, Closed months, B-068, B4, P38, F-025, "opens to its history"; SQL timeouts): causes and fixes; shared support causes go to Shell | Functional | 3 | In its window |
 | | C4 | B-158, B-159 | Two more flaky tests found in the run: closed-month card height read once (poll it); cull list "show every column" needs the extra time Advisor got 2026-11-17 | Functional | 2 | In its window |
-| | C4 | OI-006 | Move the closed row out of Open Items (docs tidy) | Functional | 0 | Same group |
 | | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
 
 
@@ -69,13 +68,14 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 
-## Shell (pointer: B-210 browser measurement in the full-suite window; then 3, B106 after the redraw)
+## Shell (pointer: group 4, avatar photo bug then Act As test directory; B-210 measurement in the full-suite window)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 4 | (Shell raises) | BUG: Muhammed's Microsoft display picture no longer shows in the avatar (suspect F-188 CSP or F-189) | Functional | ?? | First; before the UAT release if today's changes caused it |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | 3 | B106 | Notification frames: Mark all as read and the close X as mat-button / mat-icon-button in every frame | Look and Feel | ?? | After the designer redraws the frames |
-| | X | - | Act As on a plugin API looks people up in real AD, so a test-data person (Corinne Abbott, PS O33) cannot be acted as; a dev-only directory that knows the test-data people (SHELL-ADR-020 seam) | Functional | ?? | Held: Muhammed (identity seam) |
+| >> | 4 | (Shell raises) | Act As on a plugin API looks people up in real AD, so a test-data person (Corinne Abbott, PS O33) cannot be acted as; a dev-only directory that knows the test-data people (SHELL-ADR-020 seam) | Functional | ?? | Scheduled by Muhammed 2026-11-26; code only; can follow the release |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
 
 
