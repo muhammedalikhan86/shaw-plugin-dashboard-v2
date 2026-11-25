@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 10:13
+Updated: 2026-11-26 10:18
 
 ## Now
 
@@ -70,12 +70,12 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 
-## Shell (pointer: group 4, B106 code only; B-210 measurement in the full-suite window)
+## Shell (pointer: group 4, avatar credentials into config, then B106; B-210 measurement in the full-suite window)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | 4 | (Shell raises, size 0) | Avatar shows initials, not the Microsoft photo: not a code defect; the photo settings file (appsettings.Local.json, Graph credentials) is missing from every checkout | Functional | 0 | Waits: Muhammed places the file |
-| >> | 4 | B106 | Notification frames: Mark all as read and the close X as mat-button / mat-icon-button in every frame (designer redrew 2026-11-26) | Look and Feel | ?? | Code only, now |
+| >> | 4 | (Shell raises) | Avatar shows initials, not the Microsoft photo: the Graph credentials were never in tracked config; hard-code them the way PhoenixV3 does (Muhammed, 2026-11-26), ADR-013 amended | Functional | 1 | First; goes in the UAT release |
+| | 4 | B106 | Notification frames: Mark all as read and the close X as mat-button / mat-icon-button in every frame (designer redrew 2026-11-26) | Look and Feel | ?? | After the avatar fix, code only |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
 
