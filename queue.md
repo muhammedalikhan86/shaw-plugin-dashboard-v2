@@ -71,7 +71,7 @@ Done 2026-11-26: A2 parity backlog, PM-113, design rows P86, P87 (built app; boa
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | 69 | OFA-B-283 | Test data: five renewal confirmations, one per FULLY SIGNED state; then O33 (Corinne Abbott seat, Shell) and O34 scenarios run on the built app | Functional | 2 | After group 68; seat line with Shell |
+| | 69 | OFA-B-283 | Test data: five renewal confirmations, one per FULLY SIGNED state; then O33 (Corinne Abbott seat, Shell) and O34 scenarios run on the built app | Functional | 2 | After group 68; seat on main 5cfe93f3 |
 | | X | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Held for Muhammed's intake |
 | >> | 68 | - | Findings Intake of findings/2026-11-26-all.md: close OFA-F-051, B-007, B-006, B-005, F-055 (their KNOWN entries no longer show; remove PS's own KNOWN lines in parity.spec); raise Quarantine list wrap at 1920 (High, Bug) and Separate initial OFAs first column weight 500 (Medium) | Look and Feel | ?? | Code now; board run in a window when Muhammed is back |
 | >> | 68 | O25-O35, O43, O48, B114 | Designer's rows back 2026-11-25, and switch on the two @review-O48 Outbox scenarios (O27 tips and B114's "Follow-up step recorded." are the designer's words, to be confirmed) | Look and Feel | ?? | Code now, with group 68 |
@@ -84,11 +84,10 @@ Done 2026-11-25: OFA-B-099, OFA-F-116, OFA-F-143 seed, TD-119, browser checks (F
 Done 2026-11-25: OFA-B-273, OFA-B-275, OFA-B-277 (merged 37347b65).
 Done 2026-11-26: REL-012 parity check (merged 5aa51d57); owed shell-target scenarios and layout views 8/8 passed.
 
-## Shell (pointer: seats.ts line for PS O33)
+## Shell (pointer: parked; seat line on main 5cfe93f3)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 3 | - | seats.ts: add the "OFA Team · Corinne Abbott" seat (corinne.abbott) for PS O33 / OFA-B-283 | Functional | 0 | Now |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
 
 Done 2026-11-25: SHELL-B-207, SHELL-B-208, SHELL-B-209.
