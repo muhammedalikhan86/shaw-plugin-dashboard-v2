@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 16:48
+Updated: 2026-11-25 16:55
 
 ## Now
 
@@ -32,9 +32,9 @@ One machine window at a time, in this order. Code-only work runs alongside.
 | 7 | Advisor | A2 | Parity backlog, PM-113 close, ASF tip off 3 fields | After PS2 40 (code after WS) |
 | 8 | Portfolio Services | P | REL-012 full parity check (about 1 to 1.5 hours) | Last, alone on the machine |
 
-Waiting on the designer (prompt sent 2026-11-25): Compliance B109-B111, W44; Advisor B101, B107, B108, + 2 new; Shell B103-B106; PS2 O47; PS O48 scenarios.
+Design sync at 18:02 tonight (unattended): takes whatever the designer built and hands it to each worker's next group. It unblocks Compliance B109-B111, W44; Advisor B101, B107, B108, + 2 new; Shell B103-B106; PS2 O47; PS the O48 scenarios. Rows still open, or only questions back, go to the next designer round on 2026-11-26.
 
-## Compliance (pointer: parked 0887b391; P2+P3 waits on SHELL-B-207; window after Advisor)
+## Compliance (pointer: main merged 6660cefa; P2+P3 coded, waiting for the window after Advisor)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
