@@ -708,7 +708,7 @@ function tableFor(id, names) {
 const seatNames = (seat) => seat === "nat" ? (window.ADBOOK || {}).NAT || ADVISORS : seat === "sel" ? ["Hannah Ilves", "Tobias Marlow"] : seat === "one" ? ["Tobias Marlow"] : seat === "own2" ? ["Marcus Ashcombe (you)", "Hannah Ilves", "Tobias Marlow"] : ADVISORS;
 const SEATS = { "Adviser": "advisor", "SM · all advisers": "all", "SM · selected advisers": "sel", "SM · one adviser": "one", "SM · own clients and two advisers": "own2", "National": "nat", "DA (Dealer's Assistant)": "da" };
 // B77: the sample DA is mapped to one adviser and one State Manager; picking one opens that person's view or seat, with no revenue anywhere
-const DA_MAP = [["Hannah Ilves", "advisor"], ["Marcus Ashcombe", "all"]];
+const DA_MAP = [["Hannah Ilves", "advisor"], ["Tobias Marlow", "advisor"] /* P86 */, ["Marcus Ashcombe", "all"]];
 const DA_NOREV = ["gr", "sc", "aeb", "aebp", "t-gr", "t-prof"]; // the cards that show revenue (brokerage is revenue too)
 
 class Component extends DCLogic {
@@ -761,6 +761,8 @@ class Component extends DCLogic {
   openBook(m, mon, slice, adv) { const c = document.querySelector(".content"); if (c) c.scrollTop = 0; const k0 = { fua: "plat", all: "plat", nnm: "ptype", sma: "model", ofa: "status" }[m], f = {}; if (slice && k0) f[k0] = slice; if (adv) f.adv = adv; const mo = m === "sma" ? 23 : mon == null ? (this._repIx != null ? this._repIx : 23) : mon; /* B63: only today's weightings exist, so the SMA book opens at the newest month */ if (m === "sma") this.setState({ repDate: window.ADBOOK.M24[23].long }); // B51: the book opens at the selected Reporting Date; only a Net New Money opener names its own month
     this.setState({ view: "book", bk: { m, mon: mo, mon0: mo, f, f0: Object.assign({}, f) }, hot: null, expId: null, bkOpen: false, advOpen: false, cf: {}, cq: {}, gp: {}, bx: {}, hid: Object.assign({}, this.state.hid, { "book:sa": {} }) }); }
   _go(sa, back) { if (this.props.onOpenSa) return this.props.onOpenSa(sa, back); window.location.href = "advisor.html#sa=" + encodeURIComponent(sa) + "&seat=" + encodeURIComponent(this._seat()) + "&back=" + back; }
+  /* P86: the DA (Dealer's Assistant) with an Adviser picked sees that Adviser's own book */
+  _daAdv(seat) { return seat === "advisor" && this._isDa() && this._daPick() !== "Hannah Ilves" ? [this._daPick()] : null; }
   _pick(seat) { const ps = this._pickSet(seat); if (ps) return ps.length === 1 ? ps[0] : null; const p = this.state.natAdv; return seat !== "advisor" && p && seatNames(seat).some(n => n.replace(/ \(you\)$/, "") === p) ? p : null; }
   /* B76: a State Manager ticks several advisers; null is every adviser of the seat, [] is nobody */
   _pickSet(seat) { const ps = this.state.natSet; if (seat === "advisor" || !Array.isArray(ps)) return null; const all = seatNames(seat).map(n => n.replace(/ \(you\)$/, "")), ok = all.filter(n => ps.includes(n)); return ok.length === all.length ? null : ok; }
@@ -777,7 +779,7 @@ class Component extends DCLogic {
     const crumbsD = [{ label: "Adviser dashboard", link: true, cur: false, sep: false, go: (e) => { if (e) e.preventDefault(); this.setState({ view: "dash" }); } }];
     if (!K || !B) return Object.assign(o, { crumbs: crumbsD.concat([{ label: "Portfolio", cur: true, link: false, sep: true }]), isDash: true, isBook: false, bk: {}, blocks: [], fullView: "0", fillRows: "0", bodyOpacity: 1, dlgOn: false, dlg: null, closeDlg: () => {}, snackOn: false, snack: null });
     const { btn, part, block, col, ncol, ff } = K;
-    const TW = B.TOWHO_OFA || B.TOWHO, who = this._pickSet(seat) ? this._pickSet(seat) : this._pick(seat) ? [this._pick(seat)] : (TW[seat] || TW.all), SAS = who.flatMap(a => B.BOOKS[a] || []);
+    const TW = B.TOWHO_OFA || B.TOWHO, who = this._pickSet(seat) ? this._pickSet(seat) : this._pick(seat) ? [this._pick(seat)] : (this._daAdv(seat) || TW[seat] || TW.all), SAS = who.flatMap(a => B.BOOKS[a] || []);
     const figP = (q, m, mon) => m === "fua" ? q.fua : mon === "12" ? q.nnm.slice(12).reduce((t, v) => t + v, 0) : q.nnm[mon];
     this._repIx = repIx;
     const pasOf = (x, pf) => pf ? x.pas.filter(pa => GRP(pa.plat) === pf) : x.pas;
@@ -785,7 +787,7 @@ class Component extends DCLogic {
     const tot = (m, mon, pf) => SAS.reduce((t, x) => t + figS(x, m, mon, pf), 0);
     const totTy = (mon, ty) => SAS.reduce((t, x) => t + x.pas.reduce((u, pa) => u + pa.prods.filter(q => q.ty === ty).reduce((v, q) => v + figP(q, "nnm", mon), 0), 0), 0);
     const smaPas = (x) => x.pas.filter(pa => pa.models), modBal = (pa, md) => Math.round(figPa(pa, "fua") * md.w / 100);
-    { const cd = { key: seat + (this._pickSet(seat) ? ":" + this._pickSet(seat).join("+") : this._pick(seat) ? ":" + this._pick(seat) : ""), fuaNow: {}, fuaHist: {}, nnm: {}, fuaTot: tot("fua", null), sma: {}, smaTot: 0, ofa: {}, ofaN: 0 };
+    { const cd = { key: seat + (this._pickSet(seat) ? ":" + this._pickSet(seat).join("+") : this._pick(seat) ? ":" + this._pick(seat) : this._daAdv(seat) ? ":" + this._daAdv(seat)[0] : ""), fuaNow: {}, fuaHist: {}, nnm: {}, fuaTot: tot("fua", null), sma: {}, smaTot: 0, ofa: {}, ofaN: 0 };
       FUA.forEach(g => { cd.fuaNow[g] = tot("fua", null, g); const nn = MONTHS.map((_, i) => tot("nnm", 12 + i, g)); let bal = cd.fuaNow[g]; const h = []; for (let i = 11; i >= 0; i--) { h[i] = Math.max(0, bal); bal -= nn[i]; } cd.fuaHist[g] = h; });
       NTY.forEach(t => { cd.nnm[t] = MONTHS.map((_, i) => totTy(12 + i, t)); }); cd.nnmNet = MONTHS.map((_, i) => tot("nnm", 12 + i));
       MGRPS.forEach(g => { cd.sma[g] = 0; }); SAS.forEach(x => smaPas(x).forEach(pa => pa.models.forEach(md => { cd.sma[MGRP(md.code)] += md.w; /* B60: the summed weighting, not money */ }))); cd.smaTot = Object.values(cd.sma).reduce((t, v) => t + v, 0);
