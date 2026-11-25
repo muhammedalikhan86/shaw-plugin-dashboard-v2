@@ -3,14 +3,14 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 16:55
+Updated: 2026-11-25 17:20
 
 ## Now
 
 1. Code freeze 2026-12-11. Everything still to build lands before it.
 2. Hub and all five workers run on lachlan since the 16:30 switch.
 3. Overnight, unsupervised, one machine window at a time, the hub merging on delegation: the list is in *Overnight* below. Morning, with Muhammed: he picks from the parity page; the picks go to the designer as design rows; then sync.
-4. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI; the APIs keep no DW/PBI connection strings. PS2's procedures are on main (46ed7123). Left: Advisor's warehouse switch. Plan: docs/hub/analysis/dw-procedures-plan.md.
+4. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI; the APIs keep no DW/PBI connection strings. PS2's procedures are on main (46ed7123); Advisor's warehouse switch merged 7351f973 (ADVISOR-DASHBOARD-ADR-009). Plan: docs/hub/analysis/dw-procedures-plan.md.
 5. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
 6. Machine: one stack or .NET window at a time. Overnight order: Advisor WS; Compliance P2+P3 (after SHELL-B-207 merges); PS 65+66; Compliance C2; PS2 40; Advisor A2; last, alone, PS's parity check. Others write code only meanwhile.
 7. Parity sweep, after those windows: each worker runs the disparity-checker on its own component (Compliance, Portfolio Services, Advisor, Shell), with small actual-vs-expected screenshot pairs under docs/design/screenshots/parity/<component>/ and a breadcrumb per finding. The hub gathers them on one page for Muhammed.
@@ -24,8 +24,8 @@ One machine window at a time, in this order. Code-only work runs alongside.
 | # | Worker | Grp | Items | Starts when |
 |---|---|---|---|---|
 | 1 | Shell | 1 | SHELL-B-207, SHELL-B-208 | Done, on main 0133fb50 |
-| 2 | Advisor | WS | F-166, F-167, F-168, F-169, B-159 (warehouse switch) | Now, window 1 |
-| 3 | Compliance | P2+P3 | B-152, B-153, B117, OI-002 | After SHELL-B-207 merges and Advisor's window ends |
+| 2 | Advisor | WS | F-166, F-167, F-168, F-169, B-159 (warehouse switch) | Done, merged 7351f973 |
+| 3 | Compliance | P2+P3 | B-152, B-153, B117, OI-002 | Now, window 2 |
 | 4 | Portfolio Services | 65+66 | OFA-B-098, B-099, B-107, B-015, F-143 seed, browser checks owed, F-116 close; O38, F-108 frame | After Compliance P2+P3 |
 | 5 | Compliance | C2 | F-143 follow-up, F-008, OI-001/OI-009 close | After PS group 65 merges |
 | 6 | Portfolio Services 2 | 40 | make test-data 0200-0203, Wording page look, REL-014 Annature tests | After Compliance C2 |
@@ -34,7 +34,7 @@ One machine window at a time, in this order. Code-only work runs alongside.
 
 Design sync at 18:02 tonight (unattended): takes whatever the designer built and hands it to each worker's next group. It unblocks Compliance B109-B111, W44; Advisor B101, B107, B108, + 2 new; Shell B103-B106; PS2 O47; PS the O48 scenarios. Rows still open, or only questions back, go to the next designer round on 2026-11-26.
 
-## Compliance (pointer: main merged 6660cefa; P2+P3 coded, waiting for the window after Advisor)
+## Compliance (pointer: in its window, P2+P3: make up, layout check, business tests, Integration, finalize)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
@@ -55,18 +55,15 @@ Design sync at 18:02 tonight (unattended): takes whatever the designer built and
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive, Muhammed's check |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
-## Advisor (pointer: in its window: .NET baseline, Review of F-166..F-169, F-169 parity, Integration, B-159 run)
+## Advisor (pointer: WS merged 7351f973; A2 code now, its check in a short window after PS2 40)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | WS | F-166 | Warehouse readers a-1..a-8 read through OFA-db procedures | Functional | 5 | In its window |
-| >> | WS | F-169 | S-Account card: "ASF (excl. GST) · past 12 months" column | Functional | 1 | In its window |
-| >> | WS | F-167 | PowerBI readers a-9..a-20 read through OFA-db procedures | Functional | 5 | In its window |
-| >> | WS | F-168 | Connection strings go; UAT money empty; Development reads live (SHELL-ADR-021) | Functional | 3 | In its window |
-| >> | WS | B-159 | Short real business run (proves the B116 runtime skip) | Functional | 0 | In its window |
-| | A2 | - | Parity backlog: loading bar sits low; dead CSS line in app.scss; close PM-113 on paper | Look and Feel | 1 | Code after WS; checked in a short window after PS2 40 |
+| >> | A2 | - | Parity backlog: loading bar sits low; dead CSS line in app.scss; F-169 heading shade and 12px column width; close PM-113 on paper; drop `tip: ASF_TIP` from 3 filter fields and their specs | Look and Feel | 1 | Code after WS; checked in a short window after PS2 40 |
 | | X | B101, B107, B108, + 2 new | Signatory link tip; paginator; "Reported by"; "Done for the month" filtered; questionnaire row height | Look and Feel | - | Sent to the designer 2026-11-25; built when back |
 | | X | F-144 | The OFA timeline | Functional | 6 | Blocked: Luke |
+
+Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
 
 ## Portfolio Services (pointer: F-143 seed done 89fcf9eb; group 65+66 in the window after Compliance P2+P3)
 
