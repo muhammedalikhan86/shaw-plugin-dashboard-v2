@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 03:25
+Updated: 2026-11-26 03:26
 
 ## Now
 
@@ -83,11 +83,10 @@ Done 2026-11-25: OFA-B-099, OFA-F-116, OFA-F-143 seed, TD-119, browser checks (F
 Done 2026-11-25: OFA-B-273, OFA-B-275, OFA-B-277 (merged 37347b65).
 Done 2026-11-26: REL-012 parity check (merged 5aa51d57); owed shell-target scenarios and layout views 8/8 passed.
 
-## Shell (pointer: group 3, states.ts staged state for PS O35)
+## Shell (pointer: parked; group 2 on main acfc536d)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 3 | - | Staged state "A note's file cannot be read" in business-tests/support/states.ts (404 on the master-list note file); PS O35 waits on it | Functional | ?? | Now, code only |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
 
 Done 2026-11-25: SHELL-B-207, SHELL-B-208, SHELL-B-209.
