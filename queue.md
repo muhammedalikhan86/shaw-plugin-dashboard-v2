@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 15:24
+Updated: 2026-11-25 15:30
 
 ## Now
 
@@ -11,9 +11,8 @@ Updated: 2026-11-25 15:24
 2. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI; the APIs keep no DW/PBI connection strings. PS2's procedures are on main (46ed7123). Left: PS2 group D, Advisor's warehouse switch. Plan: docs/hub/analysis/dw-procedures-plan.md.
 3. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
 4. Machine: one stack or .NET window at a time. Now: Compliance. Next: whichever of PS2 group D or Advisor says "code ready" first. Then PS group 65's board run. Others write code only meanwhile.
-5. Known red everywhere: TestSiteStandInsTests (datawarehouse_gridpay missing from scripts/uat/grant-misc-rights.sql). Waiting on Muhammed.
-6. Parity sweep, after those windows: each worker runs the disparity-checker on its own component (Compliance, Portfolio Services, Advisor, Shell), with small actual-vs-expected screenshot pairs under docs/design/screenshots/parity/<component>/ and a breadcrumb per finding. The hub gathers them on one page for Muhammed.
-7. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
+5. Parity sweep, after those windows: each worker runs the disparity-checker on its own component (Compliance, Portfolio Services, Advisor, Shell), with small actual-vs-expected screenshot pairs under docs/design/screenshots/parity/<component>/ and a breadcrumb per finding. The hub gathers them on one page for Muhammed.
+6. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 
 ## Compliance (pointer: machine window: test data, stack, .NET, layout check, then finalize P2+P3)
 
@@ -71,7 +70,7 @@ Updated: 2026-11-25 15:24
 
 ## Hub
 
-1. Waiting on Muhammed: the datawarehouse_gridpay line in scripts/uat/grant-misc-rights.sql; the OFA-S-005 spike rerun on the unredacted spreadsheet; the DART retest; DART's open-a-document URL and staff DART logins (OFA-S-001); PS's 8 production settings.
+1. Waiting on Muhammed: rerun scripts/uat/grant-misc-rights.sql on Misc at the next deploy (datawarehouse_gridpay added); the OFA-S-005 spike rerun on the unredacted spreadsheet; the DART retest; DART's open-a-document URL and staff DART logins (OFA-S-001); PS's 8 production settings.
 2. Waiting on Luke: OFA-F-141 (a or b; a releases migration 0222); Advisor F-144.
 3. Hub items: OI-001 shared make-check script; OI-009 cause in shared find.ts.
 4. Next test-site deploy: PS group 58 (notices) and deploy 2 (SHELL-F-184, rollback rehearsal). Deployment and testing work is the REL- stack in `docs/leftovers.md`.
