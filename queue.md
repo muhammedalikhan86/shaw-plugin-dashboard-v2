@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 09:13
+Updated: 2026-11-26 09:18
 
 ## Now
 
@@ -72,6 +72,7 @@ Done 2026-11-26: OFA-F-228 (merged 2ac26530).
 |---|---|---|---|---|---|---|
 | >> | A3 | B101 | Signer chip reads "Email not delivered" when a follow-up email bounces, as for a signing request (board draws it on S18515) | Look and Feel | ?? | Code now; checked in a short window after PS's parity check |
 | >> | A3 | P87 / B112 | S-Account Product cell wraps again at 1440px, so the table never scrolls sideways (as the board draws) | Look and Feel | ?? | Same group |
+| >> | A3 | new B | S-Account page and Add signatory send no DA (Dealer's Assistant) pick, so a DA working for any Adviser but the first is refused there; send the pick, server still checks the mapping | Functional | 3 | Same group, before the release |
 | | X | P86 | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah) | Functional | ?? | Waits: Power BI pages hidden until after the OFA work |
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
 | | A4 | - | card-looks.steps.ts reads card height once and never retries (same cause as Compliance B-158): poll it | Functional | ?? | With A4 |
