@@ -70,7 +70,7 @@ Groups A+B built and reviewed; group C (bc9ba66a) merged into the PS2 branch as 
 | | X | OFA-F-032 | Attachment mover: built, waiting on your SharePoint live check | Functional | - | After go-live | - |
 | | 40 | - | End sweep, on the stack: make test-data for migrations 0201-0203, and a look at the Wording page | Functional | 0 | End sweep | - |
 
-## Compliance (pointer: parking (P2 + P3 test window interrupted; branch HEAD 45075d77 or later): next = rerun P2's .NET tests and layout check plus OI-002 scenarios in its window, then finalize)
+## Compliance (pointer: parked 45075d77; .NET 973/973, Jest, lint, typecheck green; layout check 23 passed, 7 red (Quarantine history dialog at 1440/1680/1920 both Keep open states; views, tabs and toolbars at 1920 Keep open off), not diagnosed. Next in its window: make up (make test-data first), rerun the layout check, diagnose the 7 (likely B-152 minWidth or the stale B-131 KNOWN entry), then the OI-002 business tests, then finalize)
 
 a51ce2d4 (P2: B-152, B-153, design row B117) still parked to its window after PS2: the ComplianceDashboard.WebAPI .NET tests and the layout check (which also proves SHELL-B-206). P3 is written on paper now and runs in the same window with P2.
 
