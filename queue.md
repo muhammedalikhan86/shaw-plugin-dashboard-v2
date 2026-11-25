@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 18:49
+Updated: 2026-11-25 18:58
 
 ## Now
 
@@ -30,7 +30,7 @@ One machine window at a time, in this order. Code-only work runs alongside.
 | 5 | Compliance | C2 | F-143 follow-up, F-008, OI-001/OI-009 close; design rows B109-B112, B117, Q23, Q24, M25, W44 and the stale test at quarantine-signing-expiry.feature:153/172 | After PS group 65 merges |
 | 6 | Portfolio Services 2 | 40 | make test-data 0200-0203, Wording page look, REL-014 Annature tests; O47 / OFA-F-206 Initial OFA prepare | After Compliance C2 |
 | 7 | Advisor | A2 | Parity backlog, PM-113 close, ASF tip off 3 fields; design rows P86, P87, P91, B101, B107, B108, B116, B118, B119 and the stale test at renewal-tracker.feature:110 | After PS2 40 |
-| 8 | Shell | 2 | B103-B106, B113 (user card seat line, Seconds label, Act As gap, empty notifications, Mark all as read) | Now (Jest only, no window) |
+| 8 | Shell | 2 | SHELL-B-209 (B104, B105); B103, B106, B113 closed with no build | Done, on main acfc536d |
 | 9 | Portfolio Services | P | REL-012 full parity check (about 1 to 1.5 hours) | Last, alone on the machine |
 
 Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of prompt 2026-11-25 (2). Each worker has its rows in its next group. Questions the designer asked back go to the next round (Hub item 9).
@@ -87,14 +87,13 @@ Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
-## Shell (pointer: group 2 now, Jest only)
+## Shell (pointer: parked; group 2 on main acfc536d)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
-| >> | 2 | B103-B106, B113 | Designer's rows back 2026-11-25: user card seat line, "Seconds" label, Act As gap, empty notifications, B113 | Look and Feel | ?? | Now; boards in docs/design/artboards/shell/ |
 
-Done 2026-11-25: SHELL-B-207, SHELL-B-208.
+Done 2026-11-25: SHELL-B-207, SHELL-B-208, SHELL-B-209.
 
 ## Hub
 
