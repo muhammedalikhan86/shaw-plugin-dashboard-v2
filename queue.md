@@ -3,19 +3,36 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 16:43
+Updated: 2026-11-25 16:44
 
 ## Now
 
 1. Code freeze 2026-12-11. Everything still to build lands before it.
 2. Hub and all five workers run on lachlan since the 16:30 switch.
-3. After the switch, overnight and unsupervised, one machine window at a time, the hub merging on delegation: (a) Shell fixes table-fit, then Compliance finishes P2+P3; PS seeds the F-143 follow-up steps; (b) Advisor's warehouse switch (F-167, F-168, then review and tests); (c) PS group 65's board run, its window starting with `make up` and the PS business tests (they prove the dev-up.ps1 change); (d) last, alone on the machine: Portfolio Services' full parity check (never run; about 1 to 1.5 hours), findings with screenshot pairs on the parity page. Morning, with Muhammed: he picks from the parity page; the picks go to the designer as design rows; then sync.
+3. Overnight, unsupervised, one machine window at a time, the hub merging on delegation: the list is in *Overnight* below. Morning, with Muhammed: he picks from the parity page; the picks go to the designer as design rows; then sync.
 4. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI; the APIs keep no DW/PBI connection strings. PS2's procedures are on main (46ed7123). Left: Advisor's warehouse switch. Plan: docs/hub/analysis/dw-procedures-plan.md.
 5. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
 6. Machine: one stack or .NET window at a time. Overnight order: Advisor WS; Compliance P2+P3 (after SHELL-B-207 merges); PS 65+66; Compliance C2; PS2 40; Advisor A2; last, alone, PS's parity check. Others write code only meanwhile.
 7. Parity sweep, after those windows: each worker runs the disparity-checker on its own component (Compliance, Portfolio Services, Advisor, Shell), with small actual-vs-expected screenshot pairs under docs/design/screenshots/parity/<component>/ and a breadcrumb per finding. The hub gathers them on one page for Muhammed.
 8. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
-9. Grouped 2026-11-25 evening: every unblocked item has a group; only blocked items stay X. Design rows once marked "later" go to the designer in tonight's prompt.
+9. Grouped 2026-11-25 evening: every unblocked item has a group; only blocked items stay X. Every waiting design row went to the designer on 2026-11-25 (prompt 2026-11-25 (2)).
+
+## Overnight (2026-11-25 into 2026-11-26)
+
+One machine window at a time, in this order. Code-only work runs alongside.
+
+| # | Worker | Grp | Items | Starts when |
+|---|---|---|---|---|
+| 1 | Shell | 1 | SHELL-B-207 table-fit cap, SHELL-B-208 filter fields drop the column tip | Now (Jest only, no window) |
+| 2 | Advisor | WS | F-166, F-167, F-168, F-169, B-159 (warehouse switch) | Now, window 1 |
+| 3 | Compliance | P2+P3 | B-152, B-153, B117, OI-002 | After SHELL-B-207 merges and Advisor's window ends |
+| 4 | Portfolio Services | 65+66 | OFA-B-098, B-099, B-107, B-015, F-143 seed, browser checks owed, F-116 close; O38, F-108 frame | After Compliance P2+P3 |
+| 5 | Compliance | C2 | F-143 follow-up, F-008, OI-001/OI-009 close | After PS group 65 merges |
+| 6 | Portfolio Services 2 | 40 | make test-data 0200-0203, Wording page look, REL-014 Annature tests | After Compliance C2 |
+| 7 | Advisor | A2 | Parity backlog, PM-113 close, ASF tip off 3 fields | After PS2 40 (code after WS) |
+| 8 | Portfolio Services | P | REL-012 full parity check (about 1 to 1.5 hours) | Last, alone on the machine |
+
+Waiting on the designer (prompt sent 2026-11-25): Compliance B109-B111, W44; Advisor B101, B107, B108, + 2 new; Shell B103-B106; PS2 O47; PS O48 scenarios.
 
 ## Compliance (pointer: parked 0887b391; P2+P3 waits on SHELL-B-207; window after Advisor)
 
@@ -26,7 +43,7 @@ Updated: 2026-11-25 16:43
 | | C2 | - | Follow-up to PS's OFA-F-143 seed: SqlComplianceReviewStoreTests.cs:112 asserts the two follow-up steps; drop @not-built-OFA-F-143 at compliance-review.feature:81 | Functional | ?? | After PS group 65 merges, then make test-data |
 | | C2 | F-008 | Business scenarios still off whose boards are drawn (M38, M39 back 2026-11-23) | Functional | 3 | With the C2 follow-up, one window |
 | | C2 | OI-001, OI-009 | Close on paper: fixed by SHELL-B-097 and SHELL-B-120 | Functional | 0 | At C2 finalize |
-| | X | B109-B111, W44 | Expired platform columns, Arrangements filter State, Wording fields gap; no-version slot wording | Look and Feel | - | With the designer (tonight's prompt); built when back |
+| | X | B109-B111, W44 | Expired platform columns, Arrangements filter State, Wording fields gap; no-version slot wording | Look and Feel | - | Sent to the designer 2026-11-25; built when back |
 
 ## Portfolio Services 2 (pointer: parked 294c5dff, merged; next = group 40 in a window after Compliance C2)
 
@@ -48,7 +65,7 @@ Updated: 2026-11-25 16:43
 | >> | WS | F-168 | Connection strings go; UAT money empty; Development reads live (SHELL-ADR-021) | Functional | 3 | In its window |
 | >> | WS | B-159 | Short real business run (proves the B116 runtime skip) | Functional | 0 | In its window |
 | | A2 | - | Parity backlog: loading bar sits low; dead CSS line in app.scss; close PM-113 on paper | Look and Feel | 1 | Code after WS; checked in a short window after PS2 40 |
-| | X | B101, B107, B108, + 2 new | Signatory link tip; paginator; "Reported by"; "Done for the month" filtered; questionnaire row height | Look and Feel | - | With the designer (tonight's prompt); built when back |
+| | X | B101, B107, B108, + 2 new | Signatory link tip; paginator; "Reported by"; "Done for the month" filtered; questionnaire row height | Look and Feel | - | Sent to the designer 2026-11-25; built when back |
 | | X | F-144 | The OFA timeline | Functional | 6 | Blocked: Luke |
 
 ## Portfolio Services (pointer: F-143 seed done 89fcf9eb; group 65+66 in the window after Compliance P2+P3)
@@ -75,7 +92,7 @@ Updated: 2026-11-25 16:43
 | >> | 1 | SHELL-B-207 | Table-fit: a free-width column can end 4px over its cap (Compliance Quarantine "Extension" 504px > 500px at 1920px) | Look and Feel | 1 | Building; Compliance P2 waits on it |
 | >> | 1 | SHELL-B-208 | Filter fields stop copying the column's info tip (was "Shell 2") | Look and Feel | 1 | Folded into B-207's group, one finalize |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
-| | X | B103-B106 | User card seat line, "Seconds" label, Act As gap, empty notifications | Look and Feel | - | With the designer (tonight's prompt); built when back |
+| | X | B103-B106 | User card seat line, "Seconds" label, Act As gap, empty notifications | Look and Feel | - | Sent to the designer 2026-11-25; built when back |
 
 ## Hub
 

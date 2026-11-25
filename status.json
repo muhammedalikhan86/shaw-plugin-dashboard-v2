@@ -427,7 +427,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-25T15:59:30+11:00",
+ "updatedAt": "2026-11-25T16:44:49+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2961,6 +2961,11 @@
    "at": "2026-11-25T15:59:30+11:00",
    "change": "Portfolio Services: OFA-F-226 done (no DataWarehouse connection string in Production and UAT)",
    "pointsDone": 3.0
+  },
+  {
+   "at": "2026-11-25T16:44:49+11:00",
+   "change": "Designer prompt sent: every waiting design row (Portfolio Services, Advisor, Compliance, Shell) is with the designer",
+   "pointsDone": 0.0
   }
  ],
  "foundDuringBuild": {
