@@ -43,6 +43,7 @@ Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of p
 |---|---|---|---|---|---|---|
 | >> | C4 | OI-003 | Flaky "The list pages at 25" (arrangements.feature, shell target): find the cause, fix the wait or locator | Functional | 1 | In its window |
 | >> | C4 | OI-007 | Flaky under load (P27 export, A14, Closed months, B-068, B4, P38, F-025, "opens to its history"; SQL timeouts): causes and fixes; shared support causes go to Shell | Functional | 3 | In its window |
+| >> | C4 | B-158, B-159 | Two more flaky tests found in the run: closed-month card height read once (poll it); cull list "show every column" needs the extra time Advisor got 2026-11-17 | Functional | 2 | In its window |
 | >> | C4 | OI-006 | Move the closed row out of Open Items (docs tidy) | Functional | 0 | Same group |
 | >> | C4 | - | Arrangement record › Documents shows a filed signed renewal as raw "OFAREN": add its label (board R28 decides the words) plus a spec | Functional | 0 | Folded into C4 |
 | | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
@@ -70,6 +71,7 @@ Done 2026-11-26: OFA-F-228 (merged 2ac26530).
 | >> | A3 | P87 / B112 | S-Account Product cell wraps again at 1440px, so the table never scrolls sideways (as the board draws) | Look and Feel | ?? | Same group |
 | >> | A3 | P86 | Check the built DA (Dealer's Assistant) seat shows the picked Adviser's clients (Tobias, not Hannah); fix if not (PRD rule 28) | Functional | ?? | Same group |
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
+| | A4 | - | card-looks.steps.ts reads card height once and never retries (same cause as Compliance B-158): poll it | Functional | ?? | With A4 |
 | | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Window after PS's flaky group |
 | | X | F-144 | The OFA timeline | Functional | 6 | Blocked: Luke |
 
