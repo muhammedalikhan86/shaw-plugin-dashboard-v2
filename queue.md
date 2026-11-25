@@ -3,13 +3,13 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 15:33
+Updated: 2026-11-25 15:37
 
 ## Now
 
 1. Code freeze 2026-12-11. Everything still to build lands before it.
 2. Account switch to lachlan at 16:30 today: every worker parks by 16:20; the new hub resumes them on lachlan.
-3. After the switch, in order: (a) the machine windows left: Compliance finishes P2+P3, then PS2 group D and Advisor's warehouse switch review and tests; (b) Portfolio Services' full parity check (never run), findings on the parity page for Muhammed's picks; (c) the picked rows go to the designer as design rows, then sync. Overnight, unsupervised: (a) and PS group 65's board run, one window at a time, the hub merging on delegation.
+3. After the switch, overnight and unsupervised, one machine window at a time, the hub merging on delegation: (a) Compliance finishes P2+P3; (b) PS2 group D review and tests; (c) Advisor's warehouse switch (F-167, F-168, then review and tests); (d) PS group 65's board run; (e) last, alone on the machine: Portfolio Services' full parity check (never run; about 1 to 1.5 hours), findings with screenshot pairs on the parity page. Morning, with Muhammed: he picks from the parity page; the picks go to the designer as design rows; then sync.
 4. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI; the APIs keep no DW/PBI connection strings. PS2's procedures are on main (46ed7123). Left: PS2 group D, Advisor's warehouse switch. Plan: docs/hub/analysis/dw-procedures-plan.md.
 5. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
 6. Machine: one stack or .NET window at a time. Now: Compliance. Next: whichever of PS2 group D or Advisor says "code ready" first. Then PS group 65's board run. Others write code only meanwhile.
