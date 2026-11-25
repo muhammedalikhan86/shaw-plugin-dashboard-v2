@@ -432,7 +432,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-26T04:37:01+11:00",
+ "updatedAt": "2026-11-26T07:20:21+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -3044,6 +3044,11 @@
    "change": "Portfolio Services: groups 68+69 merged (Quarantine list one line at 1920, designer rows, five closed by the parity check)",
    "pointsDone": 5.0,
    "pointsRaised": 5.0
+  },
+  {
+   "at": "2026-11-26T07:20:21+11:00",
+   "change": "Compliance: group C3 merged (ad1eff9b), OI-001 and OI-009 closed",
+   "pointsDone": 0.0
   }
  ],
  "foundDuringBuild": {

@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 07:15
+Updated: 2026-11-26 07:20
 
 ## Now
 
@@ -37,14 +37,14 @@ One machine window at a time, in this order. Code-only work runs alongside.
 
 Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of prompt 2026-11-25 (2). Each worker has its rows in its next group. Questions the designer asked back go to the next round (Hub item 9).
 
-## Compliance (pointer: C3 running, told at the 07:15 resume; B-156 held for words)
+## Compliance (pointer: C3 merged ad1eff9b; parked until B-156 words come)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | C3 | OI-001, OI-009 | Close on paper once the empty-library scenario is checked by name; fix B-150's stale reason (Q24 Done) | Functional | 0 | Next Compliance group |
 | | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
 
 Done 2026-11-25: COMPLIANCE-DASHBOARD-B-152, B-153, OI-002, OI-011 (B117 stays a design row).
+Done 2026-11-26: COMPLIANCE-DASHBOARD-OI-001, OI-009, B-150 reason (merged ad1eff9b).
 Done 2026-11-25: COMPLIANCE-DASHBOARD-B-154, B-155, F-008 part (B102, B110, B111, B112, M25 scenarios on), OFA-F-143 follow-up, Q23, Q24, B117 (merged bf5925e2).
 
 ## Portfolio Services 2 (pointer: group 41 merged 2ac26530; parked, only blocked items left)
@@ -96,7 +96,7 @@ Done 2026-11-25: SHELL-B-207, SHELL-B-208, SHELL-B-209.
 
 1. Waiting on Muhammed: rerun scripts/uat/grant-misc-rights.sql on Misc at the next deploy (datawarehouse_gridpay added); the OFA-S-005 spike rerun on the unredacted spreadsheet; the DART retest; DART's open-a-document URL and staff DART logins (OFA-S-001); PS's 8 production settings.
 2. Waiting on Luke: OFA-F-141 (a or b; a releases migration 0222); Advisor F-144.
-3. OI-001 and OI-009 were already fixed (SHELL-B-097, SHELL-B-120); Compliance closes them in C2.
+3. OI-001 and OI-009 closed 2026-11-26 (Compliance C3, ad1eff9b).
 4. Next test-site deploy: PS group 58 (notices) and deploy 2 (SHELL-F-184, rollback rehearsal). Deployment and testing work is the REL- stack in `docs/leftovers.md`.
 5. With the stack up, after OFA-F-202: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database.
 6. Parity round 2: when Muhammed says, after every P1 fix. Parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
