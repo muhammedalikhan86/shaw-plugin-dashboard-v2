@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 08:56
+Updated: 2026-11-26 08:58
 
 ## Now
 
@@ -94,14 +94,14 @@ Done 2026-11-26: REL-012 parity check (merged 5aa51d57); owed shell-target scena
 Done 2026-11-26: OFA-B-107 (merged ce436203).
 Done 2026-11-26: OFA-B-279, B-281, B-283; F-051, B-005 (width, date), B-006, B-007, F-055 closed by the parity check; design rows O25-O35, O43, O48, B114 (O33 board-only: Act As gap, Shell list) (merged 1be7dd22).
 
-## Shell (pointer: PM-056 approach and size)
+## Shell (pointer: SHELL-F-188 building; before the UAT release only if the UAT-manifest check passes)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 3a | PM-056 | Plugin code loads with an integrity check (Native Federation remotes) | Functional | ?? | Now: approach and size first; lands before today's UAT release only if safe |
-| | 3b | PM-055 | Profile page: a person never sees their own security groups; only the development team (diagnostics) and Act As (UAT testers included) do | Functional | ?? | After PM-056 |
-| | 3b | PM-057 | Dev/Test builds refuse an unsigned-in user (build guard) | Functional | ?? | After PM-056 |
-| | X | PM-058 | API accepts any host name (AllowedHosts *) | Functional | ?? | Held: Muhammed's answer |
+| >> | 3a | SHELL-F-188 (PM-056) | Plugins load only from trusted server addresses (an allowed list, checked by the API and the browser) | Functional | 3 | Now: approach and size first; lands before today's UAT release only if safe |
+| | 3b | SHELL-F-189 (PM-055) | Profile page: a person never sees their own security groups; only the development team (diagnostics) and Act As (UAT testers included) do; plugins get the same trimmed list | Functional | 3 | After PM-056 |
+| | 3b | SHELL-F-190 (PM-057) | Shell API refuses the test sign-in outside the test host; each plugin API adopts it in its own item | Functional | 3 | After PM-056 |
+| | X | PM-058 | API accepts any host name (AllowedHosts *): not CORS; 1 point per API | Functional | 5 | Held: Muhammed's answer |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | 3 | B106 | Notification frames: Mark all as read and the close X as mat-button / mat-icon-button in every frame | Look and Feel | ?? | After the designer redraws the frames |
 | | X | - | Act As on a plugin API looks people up in real AD, so a test-data person (Corinne Abbott, PS O33) cannot be acted as; a dev-only directory that knows the test-data people (SHELL-ADR-020 seam) | Functional | ?? | Held: Muhammed (identity seam) |
