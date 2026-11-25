@@ -3,14 +3,14 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 09:52
+Updated: 2026-11-26 09:59
 
 ## Now
 
 Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orders the workers only.
 
 1. Code freeze 2026-12-11. Everything still to build lands before it.
-2. Today, release-first, one machine window at a time: PS P2 (parity of the 5 unchecked screens and its fixes); Advisor A3 browser check; then the hub's full suite (SHELL-F-188 and PM-058 are on main); then the UAT release (Muhammed deploys). Everyone else writes code only meanwhile. After the release: Compliance C4 rest, PS 70, PS2 43 (OFA-F-213), Advisor A4.
+2. Today, release-first, one machine window at a time: PS P2 (parity of the 5 unchecked screens and its fixes); Advisor A3 browser check; then the hub's full suite (SHELL-F-188, PM-058, F-189, F-190, B-210 and OFA-F-213 are on main) with B-210's browser measurement; then the UAT release (Muhammed deploys). Everyone else writes code only meanwhile. After the release: Compliance C4 rest, PS 70, Advisor A4.
 3. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
 4. Advisor's two Power BI pages (Book of business, and the dashboard with the revenue cards) wait until the OFA work is complete: data security and user segregation come first (Muhammed, 2026-11-26).
 5. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022).
@@ -20,6 +20,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| | C4 | (Compliance raises) | The Compliance API refuses the test sign-in outside the test host, as SHELL-F-190 does (PM-057) | Functional | ?? | Code only |
 | | C4 | OI-003 | Flaky "The list pages at 25" (arrangements.feature, shell target): find the cause, fix the wait or locator | Functional | 1 | After the release |
 | | C4 | OI-007 | Flaky under load (P27 export, A14, Closed months, B-068, B4, P38, F-025, "opens to its history"; SQL timeouts): causes and fixes; shared support causes go to Shell | Functional | 3 | In its window |
 | | C4 | B-158, B-159 | Two more flaky tests found in the run: closed-month card height read once (poll it); cull list "show every column" needs the extra time Advisor got 2026-11-17 | Functional | 2 | In its window |
@@ -27,11 +28,11 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
 
 
-## Portfolio Services 2 (pointer: group 43, import the held history rows)
+## Portfolio Services 2 (pointer: group 44, the test sign-in guard on the PS API)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 43 | OFA-F-213 | Import the master spreadsheet's TERMINATED and No OFA history rows (no longer held; all history from the master and Complii, Muhammed 2026-11-26), through the go-live loader too | Functional | 5 | Building, code only; merges after the UAT release |
+| >> | 44 | (PS2 raises) | The PS API refuses the test sign-in outside the test host, as SHELL-F-190 does for the shell (PM-057) | Functional | ?? | Code only; merges before the UAT release if ready |
 | | X | - | Parity backlog from O47: "Signers" label in sentence case; "Salutation" label floats on the outline before typing | Look and Feel | ?? | Rows in parity-backlog.md; for triage |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
@@ -41,6 +42,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| | A4 | (Advisor raises) | The Advisor API refuses the test sign-in outside the test host, as SHELL-F-190 does (PM-057) | Functional | ?? | Code only, after A3 |
 | >> | A3 | B101 | Signer chip reads "Email not delivered" when a follow-up email bounces, as for a signing request (board draws it on S18515) | Look and Feel | ?? | Code now; checked in a short window after PS's parity check |
 | >> | A3 | P87 / B112 | S-Account Product cell wraps again at 1440px, so the table never scrolls sideways (as the board draws) | Look and Feel | ?? | Same group |
 | >> | A3 | new B | S-Account page and Add signatory send no DA (Dealer's Assistant) pick, so a DA working for any Adviser but the first is refused there; send the pick, server still checks the mapping | Functional | 3 | Same group, before the release |
@@ -67,14 +69,11 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 
-## Shell (pointer: group 3b, F-189, F-190, B-210, code only)
+## Shell (pointer: B-210 browser measurement in the full-suite window; then 3, B106 after the redraw)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 3b | SHELL-F-189 (PM-055) | Profile page: a person never sees their own security groups; only the development team (diagnostics) and Act As (UAT testers included) do; plugins get the same trimmed list | Functional | 3 | After PM-056 |
-| >> | 3b | SHELL-F-190 (PM-057) | Shell API refuses the test sign-in outside the test host; each plugin API adopts it in its own item | Functional | 3 | After PM-056 |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
-| >> | 3b | SHELL-B-210 (PM-113) | Plugin0 extended FAB padding to the board (22/22) | Look and Feel | ?? | After F-188, code only |
 | | 3 | B106 | Notification frames: Mark all as read and the close X as mat-button / mat-icon-button in every frame | Look and Feel | ?? | After the designer redraws the frames |
 | | X | - | Act As on a plugin API looks people up in real AD, so a test-data person (Corinne Abbott, PS O33) cannot be acted as; a dev-only directory that knows the test-data people (SHELL-ADR-020 seam) | Functional | ?? | Held: Muhammed (identity seam) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |

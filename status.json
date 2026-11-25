@@ -54,10 +54,10 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 610.0,
-   "pointsRemaining": 8.0,
+   "pointsDone": 617.0,
+   "pointsRemaining": 1.0,
    "pointsTotal": 618.0,
-   "itemsRemaining": 4,
+   "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 167.0,
@@ -134,10 +134,10 @@
    ],
    "stage": "deploy",
    "start": "2026-11-23",
-   "pointsDone": 27.0,
-   "pointsRemaining": 18.0,
-   "pointsTotal": 45.0,
-   "itemsRemaining": 10,
+   "pointsDone": 0.0,
+   "pointsRemaining": 20.0,
+   "pointsTotal": 20.0,
+   "itemsRemaining": 11,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 0.0,
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 181.65,
+  "pointsPerWorkingDayWholePeriod": 180.11,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -296,8 +296,8 @@
    },
    {
     "date": "2026-11-26",
-    "pointsDone": 2361.0,
-    "pointsDoneThatDay": 11.0
+    "pointsDone": 2341.0,
+    "pointsDoneThatDay": -9.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -310,7 +310,7 @@
     "likely": "2026-11-27",
     "pessimistic": "2026-11-27",
     "rateLast10": 35.55,
-    "rateWhole": 35.72
+    "rateWhole": 36.26
    },
    "Portfolio Services": {
     "optimistic": "2026-11-27",
@@ -338,7 +338,7 @@
     "likely": "2026-11-27",
     "pessimistic": "2026-11-27",
     "rateLast10": 21.5,
-    "rateWhole": 23.56
+    "rateWhole": 21.48
    }
   },
   "overall": {
@@ -347,9 +347,9 @@
    "pessimistic": "2026-11-27",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 181.65,
-   "pointsRemaining": 75.0,
-   "itemsRemaining": 32
+   "rateWhole": 180.11,
+   "pointsRemaining": 70.0,
+   "itemsRemaining": 30
   }
  },
  "milestones": [
@@ -432,7 +432,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-26T09:30:38+11:00",
+ "updatedAt": "2026-11-26T09:59:38+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -3060,6 +3060,12 @@
    "at": "2026-11-26T09:30:38+11:00",
    "change": "Shell F-188 trusted plugin origins and PM-058 host names merged; full suite before the UAT release",
    "pointsDone": 3.0
+  },
+  {
+   "at": "2026-11-26T09:59:38+11:00",
+   "change": "Shell F-189, F-190, B-210 and PS2 OFA-F-213 merged",
+   "pointsDone": -20.0,
+   "pointsRaised": -25.0
   }
  ],
  "foundDuringBuild": {
