@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 15:44
+Updated: 2026-11-25 15:47
 
 ## Now
 
@@ -35,13 +35,13 @@ Updated: 2026-11-25 15:44
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Waiting on IT for a drive |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Your SharePoint live check, after go-live |
 
-## Advisor (pointer: parked 376f3006: F-166 + F-169 code done, untested; next = F-167, F-168, then one .NET + Jest window)
+## Advisor (pointer: F-167 code-only slot until 16:20 (on top of parked 376f3006: F-166 + F-169 code done, untested); then parked for the switch; next = F-168, then one .NET + Jest window)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | >> | WS | F-166 | Warehouse readers a-1..a-8 read through OFA-db procedures | Functional | 5 | Building |
 | >> | WS | F-169 | S-Account card: "ASF (excl. GST) · past 12 months" column | Functional | 1 | Building |
-| | WS | F-167 | PowerBI readers a-9..a-20 read through OFA-db procedures | Functional | 5 | After F-166 |
+| >> | WS | F-167 | PowerBI readers a-9..a-20 read through OFA-db procedures | Functional | 5 | Building (code only) |
 | | WS | F-168 | Connection strings go; UAT money empty; Development reads live (SHELL-ADR-021) | Functional | 3 | After F-167 |
 | | WS | B-159 | Short real business run (proves the B116 runtime skip) | Functional | 0 | In its window |
 | | X | - | Design rows: "Done for the month" on a filtered month; questionnaire row height (build right) | Look and Feel | 0 | Row IDs after the group |
