@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 08:58
+Updated: 2026-11-26 09:13
 
 ## Now
 
@@ -12,7 +12,9 @@ Updated: 2026-11-26 08:58
 3. Overnight, unsupervised, one machine window at a time, the hub merging on delegation: the list is in *Overnight* below. Morning, with Muhammed: he picks from the parity page; the picks go to the designer as design rows; then sync.
 4. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI; the APIs keep no DW/PBI connection strings. PS2's procedures are on main (46ed7123); Advisor's warehouse switch merged 7351f973 (ADVISOR-DASHBOARD-ADR-009). Plan: docs/hub/analysis/dw-procedures-plan.md.
 5. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
-6. Machine: one stack or .NET window at a time. Today (2026-11-26): Compliance C4; Advisor A3 check; Shell PM-056 if it lands; UAT release (Muhammed deploys) after the UI work; then PS 70 flaky; Advisor A4 flaky. Others write code only meanwhile.
+6. Machine: one stack or .NET window at a time. Today (2026-11-26), release-first: Compliance frees the window at a safe point (C4 rest after the release); PS P2 parity check of the 5 unchecked screens and its fixes; Advisor A3 check; Shell F-188 (full suite after merge); then the UAT release (Muhammed deploys). PM-058 (PS2) is code only. After the release: Compliance C4 rest, PS 70, Advisor A4. Others write code only meanwhile.
+10. Queue rule (Muhammed, 2026-11-26): get everything that can be done out of the way. Advisor's two Power BI pages (Book of business, and the dashboard with the revenue cards) are hidden in this release and wait until the OFA work is complete: data security and user segregation come first.
+11. After the second UAT release: the DART retest (tomorrow, likely; production test account S110438; document type OFAREN made by Middle Office through Muhammed; a least-impact type until then), the IT drive check, the SharePoint check.
 7. Parity sweep, after those windows: each worker runs the disparity-checker on its own component (Compliance, Portfolio Services, Advisor, Shell), with small actual-vs-expected screenshot pairs under docs/design/screenshots/parity/<component>/ and a breadcrumb per finding. The hub gathers them on one page for Muhammed.
 8. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 9. Grouped 2026-11-25 evening: every unblocked item has a group; only blocked items stay X. Design rows of prompt 2026-11-25 (2) are back and grouped.
@@ -37,7 +39,7 @@ One machine window at a time, in this order. Code-only work runs alongside.
 
 Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of prompt 2026-11-25 (2). Each worker has its rows in its next group. Questions the designer asked back go to the next round (Hub item 9).
 
-## Compliance (pointer: C4 in its machine window; B-156 held for words)
+## Compliance (pointer: C4 pausing at a safe point to free the window; rest after the release)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
@@ -52,12 +54,13 @@ Done 2026-11-25: COMPLIANCE-DASHBOARD-B-152, B-153, OI-002, OI-011 (B117 stays a
 Done 2026-11-26: COMPLIANCE-DASHBOARD-OI-001, OI-009, B-150 reason (merged ad1eff9b).
 Done 2026-11-25: COMPLIANCE-DASHBOARD-B-154, B-155, F-008 part (B102, B110, B111, B112, M25 scenarios on), OFA-F-143 follow-up, Q23, Q24, B117 (merged bf5925e2).
 
-## Portfolio Services 2 (pointer: group 41 merged 2ac26530; parked, only blocked items left)
+## Portfolio Services 2 (pointer: group 42, PM-058 across the APIs)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 42 | PM-058 | Every API answers only to its UAT and Prod host names (Development keeps any); must never block UAT or Prod | Functional | 5 | Code only; before the UAT release |
 | | X | - | Parity backlog from O47: "Signers" label in sentence case; "Salutation" label floats on the outline before typing | Look and Feel | ?? | Rows in parity-backlog.md; for triage |
-| | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive, Muhammed's check |
+| | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 Done 2026-11-25: OFA-F-206 (O47), make test-data to 0224, Wording page look, REL-014 Annature tests 127/127 (merged 2568a959).
@@ -78,16 +81,17 @@ Done 2026-11-26: OFA-F-228 (merged 2ac26530).
 Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
 Done 2026-11-26: A2 parity backlog, PM-113, design rows P86, P87 (built app; board still wraps), P91, B101, B107, B108, B116, B118, B119 (merged 9f388f33).
 
-## Portfolio Services (pointer: groups 68 + 69 merged 1be7dd22; parked)
+## Portfolio Services (pointer: P2 parity check, UAT release blocker)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | P2 | REL-012 rest | Parity check of the 5 unchecked screens (Renewal tracker, Exceptions report, Arrangement record with B-015 pts 7-9, Outbox, Settings and dialogs) at 1920 and 1440, then fix its findings | Look and Feel | ?? | UAT release blocker; window after Compliance frees it |
+| | P2 | OFA-F-209 b | DART live filing check step list for Muhammed (S110438; least-impact document type until OFAREN exists) | Functional | 0 | Prep now, code-free |
 | | 70 | - | 9 flaky tests (AttachmentRegistration, ExpiryRegister, exceptions-report x3, ofa-checklist x2, quarantine, QuarantineReadEndpoint): causes and fixes | Functional | ?? | Window after Advisor A3's check |
 | | 70 | - | Handoff and test runbook: Compliance ("Renewal notice", B-157) and Advisor ("Signed renewal notice") now label OFAREN | Functional | 0 | After B-157 is on main |
 | | X | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Held for Muhammed's intake |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
-| | X | OFA-F-209 | Real signing-status reader (renewals and Initial OFAs) + live DART filing check (split from F-138, which is Done) | Functional | 3 | Blocked: Muhammed's DART retest |
-| | X | OFA-B-015 | Arrangement record: ACTIONS and freshness line (pt 7), Documents empty-state icon (pt 8), cull note raw login (pt 9) | Look and Feel | 1 | Browser look next PS window |
+| | X | OFA-F-209 | Real signing-status reader (renewals and Initial OFAs) + live DART filing check (split from F-138, which is Done) | Functional | 3 | Blocked: DART retest after the 2nd UAT release (likely 2026-11-27) |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
@@ -104,8 +108,8 @@ Done 2026-11-26: OFA-B-279, B-281, B-283; F-051, B-005 (width, date), B-006, B-0
 | >> | 3a | SHELL-F-188 (PM-056) | Plugins load only from trusted server addresses (an allowed list, checked by the API and the browser) | Functional | 3 | Now: approach and size first; lands before today's UAT release only if safe |
 | | 3b | SHELL-F-189 (PM-055) | Profile page: a person never sees their own security groups; only the development team (diagnostics) and Act As (UAT testers included) do; plugins get the same trimmed list | Functional | 3 | After PM-056 |
 | | 3b | SHELL-F-190 (PM-057) | Shell API refuses the test sign-in outside the test host; each plugin API adopts it in its own item | Functional | 3 | After PM-056 |
-| | X | PM-058 | API accepts any host name (AllowedHosts *): not CORS; 1 point per API | Functional | 5 | Held: Muhammed's answer |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
+| | 3b | PM-113 | Plugin0 extended FAB padding to the board (22/22) | Look and Feel | ?? | After F-188, code only |
 | | 3 | B106 | Notification frames: Mark all as read and the close X as mat-button / mat-icon-button in every frame | Look and Feel | ?? | After the designer redraws the frames |
 | | X | - | Act As on a plugin API looks people up in real AD, so a test-data person (Corinne Abbott, PS O33) cannot be acted as; a dev-only directory that knows the test-data people (SHELL-ADR-020 seam) | Functional | ?? | Held: Muhammed (identity seam) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
