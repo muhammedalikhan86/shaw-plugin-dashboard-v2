@@ -54,16 +54,16 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 605.0,
+   "pointsDone": 606.0,
    "pointsRemaining": 1.0,
-   "pointsTotal": 606.0,
+   "pointsTotal": 607.0,
    "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
-    "pointsDone": 166.0,
+    "pointsDone": 167.0,
     "pointsRemaining": 3.0,
-    "pointsTotal": 169.0,
-    "itemsDone": 82,
+    "pointsTotal": 170.0,
+    "itemsDone": 83,
     "itemsRemaining": 1
    }
   },
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 178.35,
+  "pointsPerWorkingDayWholePeriod": 178.43,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -291,8 +291,8 @@
    },
    {
     "date": "2026-11-25",
-    "pointsDone": 2318.0,
-    "pointsDoneThatDay": 103.0
+    "pointsDone": 2319.0,
+    "pointsDoneThatDay": 104.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -305,7 +305,7 @@
     "likely": "2026-11-26",
     "pessimistic": "2026-11-26",
     "rateLast10": 35.55,
-    "rateWhole": 35.33
+    "rateWhole": 35.41
    },
    "Portfolio Services": {
     "optimistic": "2026-11-26",
@@ -342,7 +342,7 @@
    "pessimistic": "2026-11-27",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 178.35,
+   "rateWhole": 178.43,
    "pointsRemaining": 84.0,
    "itemsRemaining": 32
   }
@@ -427,7 +427,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-25T16:44:49+11:00",
+ "updatedAt": "2026-11-25T16:48:23+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2966,13 +2966,19 @@
    "at": "2026-11-25T16:44:49+11:00",
    "change": "Designer prompt sent: every waiting design row (Portfolio Services, Advisor, Compliance, Shell) is with the designer",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-25T16:48:23+11:00",
+   "change": "Shell: SHELL-B-207 and SHELL-B-208 done (table-fit cap; filter fields drop the column tip)",
+   "pointsDone": 1.0,
+   "pointsRaised": 1.0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 283.0,
+  "pointsDone": 284.0,
   "pointsRemaining": 3.0,
-  "pointsTotal": 286.0,
-  "itemsDone": 139,
+  "pointsTotal": 287.0,
+  "itemsDone": 140,
   "itemsRemaining": 1
  },
  "buildCompletedOn": "2026-11-23",

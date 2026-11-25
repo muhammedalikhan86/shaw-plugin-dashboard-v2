@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 16:44
+Updated: 2026-11-25 16:48
 
 ## Now
 
@@ -23,7 +23,7 @@ One machine window at a time, in this order. Code-only work runs alongside.
 
 | # | Worker | Grp | Items | Starts when |
 |---|---|---|---|---|
-| 1 | Shell | 1 | SHELL-B-207 table-fit cap, SHELL-B-208 filter fields drop the column tip | Now (Jest only, no window) |
+| 1 | Shell | 1 | SHELL-B-207, SHELL-B-208 | Done, on main 0133fb50 |
 | 2 | Advisor | WS | F-166, F-167, F-168, F-169, B-159 (warehouse switch) | Now, window 1 |
 | 3 | Compliance | P2+P3 | B-152, B-153, B117, OI-002 | After SHELL-B-207 merges and Advisor's window ends |
 | 4 | Portfolio Services | 65+66 | OFA-B-098, B-099, B-107, B-015, F-143 seed, browser checks owed, F-116 close; O38, F-108 frame | After Compliance P2+P3 |
@@ -38,7 +38,7 @@ Waiting on the designer (prompt sent 2026-11-25): Compliance B109-B111, W44; Adv
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | P2 | B-152, B-153, B117 | Quarantine Extension and Last prompt minWidth 250 (grow up to 500); fix the 7 layout reds | Look and Feel | ?? | Window after Advisor |
+| >> | P2 | B-152, B-153, B117 | Quarantine Extension and Last prompt minWidth 250 (grow up to 500); fix the 7 layout reds | Look and Feel | ?? | Window after Advisor (SHELL-B-207 on main) |
 | >> | P3 | OI-002 | Business scenarios: Arrangements Empty, Loading, Data unavailable; Wording Loading, Failed | Functional | ?? | Same window as P2 |
 | | C2 | - | Follow-up to PS's OFA-F-143 seed: SqlComplianceReviewStoreTests.cs:112 asserts the two follow-up steps; drop @not-built-OFA-F-143 at compliance-review.feature:81 | Functional | ?? | After PS group 65 merges, then make test-data |
 | | C2 | F-008 | Business scenarios still off whose boards are drawn (M38, M39 back 2026-11-23) | Functional | 3 | With the C2 follow-up, one window |
@@ -85,14 +85,14 @@ Waiting on the designer (prompt sent 2026-11-25): Compliance B109-B111, W44; Adv
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
-## Shell (pointer: SHELL-B-207, window 1)
+## Shell (pointer: parked; group 1 on main 0133fb50)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | SHELL-B-207 | Table-fit: a free-width column can end 4px over its cap (Compliance Quarantine "Extension" 504px > 500px at 1920px) | Look and Feel | 1 | Building; Compliance P2 waits on it |
-| >> | 1 | SHELL-B-208 | Filter fields stop copying the column's info tip (was "Shell 2") | Look and Feel | 1 | Folded into B-207's group, one finalize |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
 | | X | B103-B106 | User card seat line, "Seconds" label, Act As gap, empty notifications | Look and Feel | - | Sent to the designer 2026-11-25; built when back |
+
+Done 2026-11-25: SHELL-B-207, SHELL-B-208.
 
 ## Hub
 
