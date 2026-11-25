@@ -73,8 +73,8 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | >> | 4 | (Shell raises) | BUG: Muhammed's Microsoft display picture no longer shows in the avatar (suspect F-188 CSP or F-189) | Functional | ?? | First; before the UAT release if today's changes caused it |
+| | 4 | B106 | Notification frames: Mark all as read and the close X as mat-button / mat-icon-button in every frame (designer redrew 2026-11-26) | Look and Feel | ?? | After the avatar bug, code only |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
-| | 3 | B106 | Notification frames: Mark all as read and the close X as mat-button / mat-icon-button in every frame | Look and Feel | ?? | After the designer redraws the frames |
 | >> | 4 | (Shell raises) | Act As on a plugin API looks people up in real AD, so a test-data person (Corinne Abbott, PS O33) cannot be acted as; a dev-only directory that knows the test-data people (SHELL-ADR-020 seam) | Functional | ?? | Scheduled by Muhammed 2026-11-26; code only; can follow the release |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
 
@@ -85,6 +85,6 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 2. With the stack up, after OFA-F-202: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database.
 3. Parity round 2: when Muhammed says, after every P1 fix. Parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
 4. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html, from the repo) into his design project.
-5. Next designer round: P86, Q23, B106 redraws, B112/P87 confirmations, O44 carry-back, rule P96 (DA = Dealer's Assistant), P97 (Advisor board gets the OFA history section). Muhammed's answers to the designer's questions are in docs/hub/rulings.md (2026-11-26).
+5. Next designer round: P97 (Advisor board gets the OFA history section), once Advisor writes the row.
 6. Owed: npm run test:business:coverage and make design-checks, in a machine window.
 7. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
