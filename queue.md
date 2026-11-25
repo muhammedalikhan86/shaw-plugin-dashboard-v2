@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-25 13:44
+Updated: 2026-11-25 14:02
 
 ## Go-live gate (before prod)
 
@@ -29,16 +29,17 @@ Only the OFA database talks to the warehouse and PowerBI; the APIs keep no DW/PB
 | | X | Shell 2 | Filter dialog copies the column's info tip onto the ASF fields | Look and Feel | - | Later (Muhammed) | - |
 | | X | B103-B106 | Shell 4 (user card seat line), 7 ("Seconds" label), 8 (Act As 4px gap), 9 (empty notifications' Mark all as read): the build is right, the boards change | Look and Feel | - | Design rows, later | - |
 
-## Portfolio Services (pointer: parked f0911374, group 64)
+## Portfolio Services (pointer: group 64 in its test window)
 
-Group 64: OFA-F-143, OFA-F-141 (Reference Date part), OFA-B-251 (the banner's next 1st of the month), the gridpay move, migrations 0220, 0221, 0223; 0222 held for F-141 option a (waits on Muhammed). Next, in its machine window, one at a time: .NET, the PS business project, Jest; then one finalize (PS architecture v229, PMBook v318, Platform Architecture pointers to v168); then ready-to-merge.
+Group 64: OFA-F-143, OFA-F-141 (Reference Date part), OFA-B-251 (the banner's next 1st of the month), the O48 Outbox scenario, the gridpay move, migrations 0220, 0221, 0223; 0222 held for F-141 option a (waits on Muhammed). B-251 and the O48 scenario built in dbd9a5da. Now, in its machine window, tests running one at a time: .NET, the PS business project, Jest; then one finalize (PS architecture v229, PMBook v318, Platform Architecture pointers to v168); then ready-to-merge.
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | 64 | OFA-F-143 | Record a reviewed finding's follow-up steps | Functional | 3 | Built (parked); tests in the window | - |
-| >> | 64 | OFA-F-141 | Correct a Reference Date or product, logged in the compliance trail (Reference Date part; 0222 held for option a) | Functional | 5 | Built (parked); tests in the window | - |
-| >> | 64 | - | The gridpay move (0223); SyncFee-grants.sql deleted, docs drop grant lines | Functional | 0 | Built (parked); tests in the window | - |
-| | 64 | OFA-B-251 | Exceptions report banner: 'next on' shows the next 1st of the month | Functional | 1 | To build when PS resumes | - |
+| >> | 64 | OFA-F-143 | Record a reviewed finding's follow-up steps | Functional | 3 | Built; tests running one at a time, then finalize and ready-to-merge | - |
+| >> | 64 | OFA-F-141 | Correct a Reference Date or product, logged in the compliance trail (Reference Date part; 0222 held for option a) | Functional | 5 | Built; tests running one at a time, then finalize and ready-to-merge | - |
+| >> | 64 | - | The gridpay move (0223); SyncFee-grants.sql deleted, docs drop grant lines | Functional | 0 | Built; tests running one at a time, then finalize and ready-to-merge | - |
+| >> | 64 | OFA-B-251 | Exceptions report banner: 'next on' shows the next 1st of the month | Functional | 1 | Built dbd9a5da; tests running one at a time, then finalize and ready-to-merge | - |
+| >> | 64 | O48 | Held @review-O48 @skip scenario for the Outbox page | Functional | 0 | Built dbd9a5da; tests running one at a time, then finalize and ready-to-merge | - |
 | | P1 | B-137 | Arrangement record: Platform and Platform account number already two columns, nowrap, nothing cut (OFA-B-111) | Look and Feel | 0 | Not applicable: already built; B112 checks the PS board | - |
 | | X | - | Rename the local databases to `ShawPortal-OngoingFeeArrangements-*` (dev, warehouse and test databases; scripts, Makefile, tests, docs in every OFA component), to match the live name | Functional | - | Later: Muhammed says when; raised as a sized item then | - |
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
@@ -47,20 +48,20 @@ Group 64: OFA-F-143, OFA-F-141 (Reference Date part), OFA-B-251 (the banner's ne
 
 ## Portfolio Services 2 (pointer: parked d5ba3d5a)
 
-Groups A+B built and reviewed; next: one joint Integration in its window, then finalizers, then ready-to-merge. Group C is uncommitted in the detached worktree C:\Users\muhammedali.khan\source\repos\ps2c: production code builds, tests left. Group D after C.
+Groups A+B built and reviewed; next: one joint A+B Integration in the window after PS, then finalizers, then ready-to-merge. Group C: writing its tests now in the detached worktree C:\Users\muhammedali.khan\source\repos\ps2c (production code builds; no window needed). Group D after C.
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | P2 | O47, OFA-F-206 | Initial OFA prepare: tick the signers on the letter, set the salutation (design row first, then build) | Functional | ?? | Design row now; build blocked on the designer | O47 drawn |
-| >> | A | OFA-F-208 | M1 (migration 0214): the datawarehouse, powerbi and shawcentral schemas, list types and synonyms | Functional | 3 | Built; joint Integration in the window | - |
-| >> | A | OFA-F-210 | M2 (migration 0215): PS scope, calendar and directory reads as procedures | Functional | 5 | Built; joint Integration in the window | - |
-| >> | A | OFA-F-220 | PS readers 1–3 and 14–20 switch to the procedures (ShawCentral 15, 16, 19, 20 via shawcentral.*) | Functional | 5 | Built; joint Integration in the window | - |
-| >> | B | OFA-F-216 | M5 (migration 0216): Advisor's DataWarehouse reads as procedures | Functional | 8 | Built; joint Integration in the window | - |
-| >> | B | OFA-F-218 | M6 (migration 0217): Advisor's PowerBI reads as procedures | Functional | 8 | Built; joint Integration in the window | - |
-|  | C | OFA-F-212 | M3 (migration 0218): master-list, document, signing and postal reads as procedures (adds GetAdvisorArNumber) | Functional | 5 | In progress in ps2c (parked) | - |
-|  | C | OFA-F-222 | PS readers 4–13 switch to the M3 procedures | Functional | 5 | In progress in ps2c (parked) | - |
-|  | C | OFA-F-214 | M4 (migration 0219): fee reads as procedures | Functional | 3 | In progress in ps2c (parked) | - |
-|  | C | OFA-F-224 | The main fee reader reads through the OFA database | Functional | 3 | In progress in ps2c (parked) | - |
+| >> | A | OFA-F-208 | M1 (migration 0214): the datawarehouse, powerbi and shawcentral schemas, list types and synonyms | Functional | 3 | Built; joint A+B Integration in the window after PS | - |
+| >> | A | OFA-F-210 | M2 (migration 0215): PS scope, calendar and directory reads as procedures | Functional | 5 | Built; joint A+B Integration in the window after PS | - |
+| >> | A | OFA-F-220 | PS readers 1–3 and 14–20 switch to the procedures (ShawCentral 15, 16, 19, 20 via shawcentral.*) | Functional | 5 | Built; joint A+B Integration in the window after PS | - |
+| >> | B | OFA-F-216 | M5 (migration 0216): Advisor's DataWarehouse reads as procedures | Functional | 8 | Built; joint A+B Integration in the window after PS | - |
+| >> | B | OFA-F-218 | M6 (migration 0217): Advisor's PowerBI reads as procedures | Functional | 8 | Built; joint A+B Integration in the window after PS | - |
+|  | C | OFA-F-212 | M3 (migration 0218): master-list, document, signing and postal reads as procedures (adds GetAdvisorArNumber) | Functional | 5 | Writing tests in ps2c (no window) | - |
+|  | C | OFA-F-222 | PS readers 4–13 switch to the M3 procedures | Functional | 5 | Writing tests in ps2c (no window) | - |
+|  | C | OFA-F-214 | M4 (migration 0219): fee reads as procedures | Functional | 3 | Writing tests in ps2c (no window) | - |
+|  | C | OFA-F-224 | The main fee reader reads through the OFA database | Functional | 3 | Writing tests in ps2c (no window) | - |
 |  | D | OFA-F-226 | Drop DataWarehouse from PS Production and UAT settings (ruled exception: dev-up.ps1, the shared Development settings, docs/deployment) | Functional | 3 | After group C | - |
 | | X | OFA-F-116 | Holiday table for the closure clocks: needs 2027 loaded into the warehouse's gov.PublicHolidays | Functional | 1 | IT ticket raised; approval to run expected Wed 2026-11-25 | - |
 | | X | OFA-F-120 | Word converter: built; the login works, but Shaw.Word 2.1.0 uploads to an empty drive ID (Drives[""]), so Graph refuses | Functional | - | Parked 2026-11-23 until IT names a drive the app login can write to; then a Shaw.Word DriveId setting (branch, your review) | - |
@@ -69,14 +70,15 @@ Groups A+B built and reviewed; next: one joint Integration in its window, then f
 | | 40 | - | End sweep, on the stack: make test-data for migrations 0201-0203, and a look at the Wording page | Functional | 0 | End sweep | - |
 | | 40 | OFA-F-062 | Load test: written, runs once in the end-sweep load window | Functional | - | End sweep | - |
 
-## Compliance (pointer: parked a51ce2d4: B-152, B-153, design row B117)
+## Compliance (pointer: P3 (paper))
 
-Held until its window runs the ComplianceDashboard.WebAPI .NET tests and the layout check (which also proves SHELL-B-206).
+a51ce2d4 (P2: B-152, B-153, design row B117) still parked to its window after PS2: the ComplianceDashboard.WebAPI .NET tests and the layout check (which also proves SHELL-B-206). P3 is written on paper now and runs in the same window with P2.
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
 | | X | - | Drop @not-built-OFA-F-143 on "The latest step is a tip on the finding's chip" | Functional | 0 | Blocked | OFA-F-143 merged |
-| >> | P2 | COMPLIANCE-DASHBOARD-B-152, B-153, B117 | Quarantine Extension and Last prompt adopt minWidth 250 (grow to fit, up to 500); B-153; design row B117 | Look and Feel | ?? | Built a51ce2d4 (parked); .NET tests and layout check in the window | - |
+| >> | P3 | COMPLIANCE-DASHBOARD-OI-002 | Business scenarios for Arrangements Empty, Loading and Data unavailable, and Wording Loading and Failed | Functional | ?? | Paper now; runs in its window with P2 | - |
+| | P2 | COMPLIANCE-DASHBOARD-B-152, B-153, B117 | Quarantine Extension and Last prompt adopt minWidth 250 (grow to fit, up to 500); B-153; design row B117 | Look and Feel | ?? | Built a51ce2d4 (parked); .NET tests and layout check in its window after PS2 | - |
 | | X | B109-B111 | B-132 (Expired platform columns), B-135 (Arrangements filter State), B-138 (Wording fields gap): the build is right, the boards change; the bugs are withdrawn | Look and Feel | - | Design rows, later | - |
 | | X | W44 | Wording page: the no-version slot says a placeholder is sent; Portfolio Services actually sends the approved built-in email (Adviser Initial OFA follow-up) | Look and Feel | - | Later: design row, goes to the designer next round; words need the business's approval | - |
 
@@ -84,13 +86,19 @@ Held until its window runs the ComplianceDashboard.WebAPI .NET tests and the lay
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | - | ADVISOR-DASHBOARD-B-159 | One real business run of the advisor project in its window (proves the 72 B116 scenarios' runtime skip) | Functional | 0 | Owed, in its short window | - |
-| | X | (ID to come) | Switch the 20 readers to the OFA-db procedures; drop DW/PBI connection strings; Development money tiles need the LocalDB warehouse copy. Notes: a-18 is two procedures; a-9 Newest is powerbi.GetGrossRevenueNewest; GetAccountDocuments built in 0216; the switch item decides where Development's EstateDatabases:PowerBI points | Functional | ?? | Blocked | PS2 groups A+B merged; go-live gate |
+| >> | - | ADVISOR-DASHBOARD-B-159 | One real business run of the advisor project in its window (proves the 72 B116 scenarios' runtime skip) | Functional | 0 | Owed: short B116 run in the window after Compliance | - |
+| | Warehouse switch | ADVISOR-DASHBOARD-F-166 | Warehouse readers a-1..a-8 switch to the OFA-db procedures (GetAccountDocuments built in 0216) | Functional | 5 | Blocked | PS2 groups A+B merged |
+| | Warehouse switch | ADVISOR-DASHBOARD-F-167 | PowerBI readers a-9..a-20 switch to the OFA-db procedures (a-18 is two procedures; a-9 Newest is powerbi.GetGrossRevenueNewest) | Functional | 5 | Blocked | PS2 groups A+B merged |
+| | Warehouse switch | ADVISOR-DASHBOARD-F-168 | Connection strings go; UAT money stays empty; the Development setting | Functional | 3 | Blocked; Development PowerBI source open with Muhammed | PS2 groups A+B merged |
 | | X | B107, B108 | Adviser 7 (paginator hidden on one page), 10 ("Reported by" without the team): the build is right, the boards change | Look and Feel | - | Design rows, later | - |
 | | X | B101 | Signatory address link: the tip and the re-send dialog when the follow-up email failed | Look and Feel | - | Later: design row, next designer round | - |
 | | X | ADVISOR-DASHBOARD-F-144 | The OFA timeline | Functional | 6 | Blocked: waiting on Luke | - |
 
 ## Hub
+
+OI-001 shared make-check script and OI-009 cause in shared find.ts (Compliance raised, hub items).
+
+5 unpicked Advisor findings from 2026-11-24 and 4 older Advisor gap files (11-13 f-109, 11-15 b-063, 11-17 f-112-b-075, 11-17 f-114-b-092) wait for the hub's strict check.
 
 Parity round 2: unscheduled. Muhammed says when, after every P1 fix is in. Portfolio Services is checked this time (missed in round 1); compare B102's Mark as reviewed dialog. The page gets a notes field per finding.
 
