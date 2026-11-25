@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 19:09
+Updated: 2026-11-25 19:19
 
 ## Now
 
@@ -53,7 +53,8 @@ Done 2026-11-25: COMPLIANCE-DASHBOARD-B-152, B-153, OI-002, OI-011 (B117 stays a
 |---|---|---|---|---|---|---|
 | | 40 | - | make test-data for 0200-0203; look at the Wording page | Functional | 0 | Window after Compliance C2 |
 | | 40 | REL-014 | AnnatureInterfaceWebAPI 38fff52 (route 6, OFA-F-190): run its tests on this machine before Muhammed's review | Functional | 0 | Same window |
-| | 40 | O47, OFA-F-206 | Initial OFA prepare: tick the signers, set the salutation (board back 2026-11-25; refusal tips are the designer's words, to be confirmed) | Functional | 5 | Code now; tested in the group 40 window |
+| | 40 | O47, OFA-F-206 | Initial OFA prepare: tick the signers, set the salutation (board back 2026-11-25; refusal tips are the designer's words, to be confirmed) | Functional | 5 | Coded, in review (migration 0224); tested in the group 40 window |
+| | 41 | OFA-F-228 | Download-to-print dialog: O47's wording line and "Note · optional"; the note kept on the record and shown in History | Functional | 2 | Raised tonight; next PS2 group, after OFA-F-206 |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive, Muhammed's check |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
