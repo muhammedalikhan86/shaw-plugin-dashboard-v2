@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 08:45
+Updated: 2026-11-26 08:51
 
 ## Now
 
@@ -66,6 +66,9 @@ Done 2026-11-26: OFA-F-228 (merged 2ac26530).
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| | A3 | B101 | Signer chip reads "Email not delivered" when a follow-up email bounces, as for a signing request (board draws it on S18515) | Look and Feel | ?? | Code now; checked in a short window after Compliance C4 |
+| | A3 | P87 / B112 | S-Account Product cell wraps again at 1440px, so the table never scrolls sideways (as the board draws) | Look and Feel | ?? | Same group |
+| | A3 | P86 | Check the built DA (Dealer's Assistant) seat shows the picked Adviser's clients (Tobias, not Hannah); fix if not (PRD rule 28) | Functional | ?? | Same group |
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
 | | X | F-144 | The OFA timeline | Functional | 6 | Blocked: Luke |
 
@@ -93,6 +96,7 @@ Done 2026-11-26: OFA-B-279, B-281, B-283; F-051, B-005 (width, date), B-006, B-0
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| | 3 | B106 | Notification frames: Mark all as read and the close X as mat-button / mat-icon-button in every frame | Look and Feel | ?? | After the designer redraws the frames |
 | | X | - | Act As on a plugin API looks people up in real AD, so a test-data person (Corinne Abbott, PS O33) cannot be acted as; a dev-only directory that knows the test-data people (SHELL-ADR-020 seam) | Functional | ?? | Held: Muhammed (identity seam) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
 
@@ -108,5 +112,5 @@ Done 2026-11-25: SHELL-B-207, SHELL-B-208, SHELL-B-209.
 6. Parity round 2: when Muhammed says, after every P1 fix. Parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
 7. Designer prompt 2026-11-25 (2): all four parts sent 2026-11-25 from Lachlan's account; the Shell part (B103-B106, B113) in a new designer chat with docs/design/artboards/shell/NotificationPanel.dc.html and Main.dc.html attached. At the next switch to Muhammed's account: he uploads the two returned shell boards (from the repo, after the sync) into his design project, so its copies are current.
 8. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
-9. Next designer round (when Muhammed resumes): the designer's questions in the review files: P86 (Tobias's book in the Delegated Access seat?), Q23 (sample mover Hannah or Corinne Abbott?), B112 (Adviser S-Account and PS Platform accounts tables scroll sideways: right, or Product wraps?); P87 with it: the board's nowrap on the S-Account Product cells does not take effect (S18490, 1440px, 4 cells wrap), O27 (disabled Open file at .38 opacity?), B106 (Mark all as read and close X as Material buttons in every frame? also a contract finding). Carry O44 back to the designer's copy (it lost it). B101: should the signatory chip read "Email not delivered" when a follow-up bounces (the board draws it on S18515; not built)? W44 words for the no-version slot line and subtitle (Compliance B-156 holds on them). Token finding: ofa-frame.css adds 250px, 500px and .38 that are not tokens.
+9. Next designer round: answers from Muhammed 2026-11-26: P86 yes (the DA (Dealer's Assistant) seat shows the picked Adviser's clients); P87/B112 Adviser yes, Product wraps again; B112 Portfolio, sideways scroll is right; Q23 yes, Corinne Abbott everywhere, the OFA Dashboard included; O27 yes, .38; B106 yes, Material buttons in every frame; B101 yes, same label; W44 leave the placeholder (B-156 stays held). Prompt to the designer: P86, Q23, B106 redraws, B112/P87 confirmations, O44 carry-back, and rule P96 (DA = Dealer's Assistant). Token finding: .38 is Material's disabled opacity; 250px and 500px stay as Q24 widths.
 10. Owed after the sync: npm run test:business:coverage and make design-checks (machine busy tonight); demo refresh in v2 done.
