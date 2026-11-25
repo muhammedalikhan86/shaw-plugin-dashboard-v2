@@ -3,16 +3,16 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 15:47
+Updated: 2026-11-25 15:59
 
 ## Now
 
 1. Code freeze 2026-12-11. Everything still to build lands before it.
 2. Account switch to lachlan at 16:30 today: every worker parks by 16:20; the new hub resumes them on lachlan.
-3. After the switch, overnight and unsupervised, one machine window at a time, the hub merging on delegation: (a) Shell fixes table-fit, then Compliance finishes P2+P3; PS seeds the F-143 follow-up steps; (b) PS2 group D review and tests; (c) Advisor's warehouse switch (F-167, F-168, then review and tests); (d) PS group 65's board run; (e) last, alone on the machine: Portfolio Services' full parity check (never run; about 1 to 1.5 hours), findings with screenshot pairs on the parity page. Morning, with Muhammed: he picks from the parity page; the picks go to the designer as design rows; then sync.
-4. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI; the APIs keep no DW/PBI connection strings. PS2's procedures are on main (46ed7123). Left: PS2 group D, Advisor's warehouse switch. Plan: docs/hub/analysis/dw-procedures-plan.md.
+3. After the switch, overnight and unsupervised, one machine window at a time, the hub merging on delegation: (a) Shell fixes table-fit, then Compliance finishes P2+P3; PS seeds the F-143 follow-up steps; (b) Advisor's warehouse switch (F-167, F-168, then review and tests); (c) PS group 65's board run, its window starting with `make up` and the PS business tests (they prove the dev-up.ps1 change); (d) last, alone on the machine: Portfolio Services' full parity check (never run; about 1 to 1.5 hours), findings with screenshot pairs on the parity page. Morning, with Muhammed: he picks from the parity page; the picks go to the designer as design rows; then sync.
+4. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI; the APIs keep no DW/PBI connection strings. PS2's procedures are on main (46ed7123). Left: Advisor's warehouse switch. Plan: docs/hub/analysis/dw-procedures-plan.md.
 5. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
-6. Machine: one stack or .NET window at a time. Now: Compliance. Next: whichever of PS2 group D or Advisor says "code ready" first. Then PS group 65's board run. Others write code only meanwhile.
+6. Machine: one stack or .NET window at a time. Now: Compliance. Next: Advisor, once it says "code ready". Then PS group 65's board run. Others write code only meanwhile.
 7. Parity sweep, after those windows: each worker runs the disparity-checker on its own component (Compliance, Portfolio Services, Advisor, Shell), with small actual-vs-expected screenshot pairs under docs/design/screenshots/parity/<component>/ and a breadcrumb per finding. The hub gathers them on one page for Muhammed.
 8. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 
@@ -25,11 +25,10 @@ Updated: 2026-11-25 15:47
 | | X | B109-B111 | Expired platform columns, Arrangements filter State, Wording fields gap: build right, boards change | Look and Feel | - | Design rows, later |
 | | X | W44 | Wording page no-version slot wording (actual send is the built-in email) | Look and Feel | - | Design row, next round; business approves words |
 
-## Portfolio Services 2 (pointer: parked 6d26e448: group D code done, untested; next = its window)
+## Portfolio Services 2 (pointer: groups A-D done and merged; parked; next = O47 / OFA-F-206 once the designer draws O47)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | D | OFA-F-226 | Drop DataWarehouse from PS Production and UAT settings, plus leftovers (DatabaseName key, ConnectionStrings comments, unused WarehouseSql) | Functional | 3 | Building |
 | | P2 | O47, OFA-F-206 | Initial OFA prepare: tick the signers, set the salutation | Functional | ?? | Waiting on the designer (O47) |
 | | 40 | - | End sweep: test data for migrations 0201-0203; look at the Wording page | Functional | 0 | End sweep |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Waiting on IT for a drive |
