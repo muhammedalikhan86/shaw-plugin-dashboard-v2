@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 08:40
+Updated: 2026-11-26 08:45
 
 ## Now
 
@@ -44,6 +44,7 @@ Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of p
 | >> | C4 | OI-003 | Flaky "The list pages at 25" (arrangements.feature, shell target): find the cause, fix the wait or locator | Functional | 1 | In its window |
 | >> | C4 | OI-007 | Flaky under load (P27 export, A14, Closed months, B-068, B4, P38, F-025, "opens to its history"; SQL timeouts): causes and fixes; shared support causes go to Shell | Functional | 3 | In its window |
 | >> | C4 | OI-006 | Move the closed row out of Open Items (docs tidy) | Functional | 0 | Same group |
+| >> | C4 | - | Arrangement record › Documents shows a filed signed renewal as raw "OFAREN": add its label (board R28 decides the words) plus a spec | Functional | 0 | Folded into C4 |
 | | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
 
 Done 2026-11-25: COMPLIANCE-DASHBOARD-B-152, B-153, OI-002, OI-011 (B117 stays a design row).
@@ -77,13 +78,15 @@ Done 2026-11-26: A2 parity backlog, PM-113, design rows P86, P87 (built app; boa
 |---|---|---|---|---|---|---|
 | | X | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Held for Muhammed's intake |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
-| | X | OFA-F-138 | File the signed renewal in DART; real signing-status reader | Functional | 3 | Blocked: Muhammed's DART retest |
+| | X | OFA-F-209 | Real signing-status reader (renewals and Initial OFAs) + live DART filing check (split from F-138, which is Done) | Functional | 3 | Blocked: Muhammed's DART retest |
+| | X | OFA-B-015 | Arrangement record: ACTIONS and freshness line (pt 7), Documents empty-state icon (pt 8), cull note raw login (pt 9) | Look and Feel | 1 | Browser look next PS window |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 Done 2026-11-25: OFA-B-099, OFA-F-116, OFA-F-143 seed, TD-119, browser checks (F-189, B-233, B-235, B-237, B-241, Settings report preview), O38, OFA-F-108 frame. B-098, B-107, B-015 close at the parity check. O38 sifted at the parity check (56px vs board 55px).
 Done 2026-11-25: OFA-B-273, OFA-B-275, OFA-B-277 (merged 37347b65).
 Done 2026-11-26: REL-012 parity check (merged 5aa51d57); owed shell-target scenarios and layout views 8/8 passed.
+Done 2026-11-26: OFA-B-107 (merged ce436203).
 Done 2026-11-26: OFA-B-279, B-281, B-283; F-051, B-005 (width, date), B-006, B-007, F-055 closed by the parity check; design rows O25-O35, O43, O48, B114 (O33 board-only: Act As gap, Shell list) (merged 1be7dd22).
 
 ## Shell (pointer: parked; seat line on main 5cfe93f3)
