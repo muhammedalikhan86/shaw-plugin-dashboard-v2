@@ -3,16 +3,18 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 15:30
+Updated: 2026-11-25 15:33
 
 ## Now
 
 1. Code freeze 2026-12-11. Everything still to build lands before it.
-2. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI; the APIs keep no DW/PBI connection strings. PS2's procedures are on main (46ed7123). Left: PS2 group D, Advisor's warehouse switch. Plan: docs/hub/analysis/dw-procedures-plan.md.
-3. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
-4. Machine: one stack or .NET window at a time. Now: Compliance. Next: whichever of PS2 group D or Advisor says "code ready" first. Then PS group 65's board run. Others write code only meanwhile.
-5. Parity sweep, after those windows: each worker runs the disparity-checker on its own component (Compliance, Portfolio Services, Advisor, Shell), with small actual-vs-expected screenshot pairs under docs/design/screenshots/parity/<component>/ and a breadcrumb per finding. The hub gathers them on one page for Muhammed.
-6. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
+2. Account switch to lachlan at 16:30 today: every worker parks by 16:20; the new hub resumes them on lachlan.
+3. After the switch, in order: (a) the machine windows left: Compliance finishes P2+P3, then PS2 group D and Advisor's warehouse switch review and tests; (b) Portfolio Services' full parity check (never run), findings on the parity page for Muhammed's picks; (c) the picked rows go to the designer as design rows, then sync. Overnight, unsupervised: (a) and PS group 65's board run, one window at a time, the hub merging on delegation.
+4. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI; the APIs keep no DW/PBI connection strings. PS2's procedures are on main (46ed7123). Left: PS2 group D, Advisor's warehouse switch. Plan: docs/hub/analysis/dw-procedures-plan.md.
+5. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
+6. Machine: one stack or .NET window at a time. Now: Compliance. Next: whichever of PS2 group D or Advisor says "code ready" first. Then PS group 65's board run. Others write code only meanwhile.
+7. Parity sweep, after those windows: each worker runs the disparity-checker on its own component (Compliance, Portfolio Services, Advisor, Shell), with small actual-vs-expected screenshot pairs under docs/design/screenshots/parity/<component>/ and a breadcrumb per finding. The hub gathers them on one page for Muhammed.
+8. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 
 ## Compliance (pointer: machine window: test data, stack, .NET, layout check, then finalize P2+P3)
 
