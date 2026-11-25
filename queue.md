@@ -88,7 +88,7 @@ Done 2026-11-26: A2 parity backlog, PM-113, design rows P86, P87 (built app; boa
 |---|---|---|---|---|---|---|
 | >> | P2 | REL-012 rest | Parity check of the 5 unchecked screens (Renewal tracker, Exceptions report, Arrangement record with B-015 pts 7-9, Outbox, Settings and dialogs) at 1920 and 1440, then fix its findings | Look and Feel | ?? | UAT release blocker; window after Compliance frees it |
 | | P2 | OFA-F-209 b | DART live filing check step list for Muhammed (S110438; least-impact document type until OFAREN exists) | Functional | 0 | Prep now, code-free |
-| | 70 | - | Remove the switched-off deceased-estate Back Office email; the tool only reads a deceased estate from DART (PRD and PMBook corrected at P2 finalize) | Functional | ?? | First in group 70 unless tiny enough for P2 |
+| | 70 | OFA-F-211 | Remove the switched-off deceased-estate Back Office email; the tool only reads a deceased estate from DART (PRD and PMBook corrected at P2 finalize); one design row owed | Functional | 3 | First in group 70 |
 | | 70 | - | 9 flaky tests (AttachmentRegistration, ExpiryRegister, exceptions-report x3, ofa-checklist x2, quarantine, QuarantineReadEndpoint): causes and fixes | Functional | ?? | Window after Advisor A3's check |
 | | 70 | - | Handoff and test runbook: Compliance ("Renewal notice", B-157) and Advisor ("Signed renewal notice") now label OFAREN | Functional | 0 | After B-157 is on main |
 | | X | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Held for Muhammed's intake |
