@@ -58,7 +58,7 @@ Done 2026-11-25: COMPLIANCE-DASHBOARD-B-154, B-155, F-008 part (B102, B110, B111
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 43 | (PS raises the ID) | Import the master spreadsheet's TERMINATED and No OFA history rows (no longer held; all history from the master and Complii, Muhammed 2026-11-26), through the go-live loader too | Functional | ?? | Code only; after the UAT release unless tiny |
+| >> | 43 | OFA-F-213 | Import the master spreadsheet's TERMINATED and No OFA history rows (no longer held; all history from the master and Complii, Muhammed 2026-11-26), through the go-live loader too | Functional | 5 | Building, code only; merges after the UAT release |
 | | X | - | Parity backlog from O47: "Signers" label in sentence case; "Salutation" label floats on the outline before typing | Look and Feel | ?? | Rows in parity-backlog.md; for triage |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
