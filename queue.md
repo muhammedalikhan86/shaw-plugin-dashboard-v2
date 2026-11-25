@@ -70,9 +70,9 @@ Done 2026-11-26: OFA-F-228 (merged 2ac26530).
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | A3 | B101 | Signer chip reads "Email not delivered" when a follow-up email bounces, as for a signing request (board draws it on S18515) | Look and Feel | ?? | Code now; checked in a short window after Compliance C4 |
+| >> | A3 | B101 | Signer chip reads "Email not delivered" when a follow-up email bounces, as for a signing request (board draws it on S18515) | Look and Feel | ?? | Code now; checked in a short window after PS's parity check |
 | >> | A3 | P87 / B112 | S-Account Product cell wraps again at 1440px, so the table never scrolls sideways (as the board draws) | Look and Feel | ?? | Same group |
-| >> | A3 | P86 | Check the built DA (Dealer's Assistant) seat shows the picked Adviser's clients (Tobias, not Hannah); fix if not (PRD rule 28) | Functional | ?? | Same group |
+| | X | P86 | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah) | Functional | ?? | Waits: Power BI pages hidden until after the OFA work |
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
 | | A4 | - | card-looks.steps.ts reads card height once and never retries (same cause as Compliance B-158): poll it | Functional | ?? | With A4 |
 | | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Window after PS's flaky group |
