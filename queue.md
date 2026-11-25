@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 07:20
+Updated: 2026-11-26 08:40
 
 ## Now
 
@@ -37,10 +37,13 @@ One machine window at a time, in this order. Code-only work runs alongside.
 
 Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of prompt 2026-11-25 (2). Each worker has its rows in its next group. Questions the designer asked back go to the next round (Hub item 9).
 
-## Compliance (pointer: C3 merged ad1eff9b; parked until B-156 words come)
+## Compliance (pointer: C4 in its machine window; B-156 held for words)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | C4 | OI-003 | Flaky "The list pages at 25" (arrangements.feature, shell target): find the cause, fix the wait or locator | Functional | 1 | In its window |
+| >> | C4 | OI-007 | Flaky under load (P27 export, A14, Closed months, B-068, B4, P38, F-025, "opens to its history"; SQL timeouts): causes and fixes; shared support causes go to Shell | Functional | 3 | In its window |
+| >> | C4 | OI-006 | Move the closed row out of Open Items (docs tidy) | Functional | 0 | Same group |
 | | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
 
 Done 2026-11-25: COMPLIANCE-DASHBOARD-B-152, B-153, OI-002, OI-011 (B117 stays a design row).
