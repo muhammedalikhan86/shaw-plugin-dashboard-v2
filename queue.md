@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-25 14:21
+Updated: 2026-11-25 14:23
 
 ## Go-live gate (before prod)
 
@@ -17,7 +17,7 @@ Only the OFA database talks to the warehouse and PowerBI; the APIs keep no DW/PB
    2. anything that helps testers (release card, data refresh);
    3. other functional items;
    4. look and feel.
-2. One stack or .NET window at a time on the machine. Order: PS2 (running), then Compliance, then Advisor's short run.
+2. One stack or .NET window at a time on the machine. Order: PS2 (running), then Compliance, then Advisor's short run, then PS group 65's board run.
 3. Parity sweep (queued after those windows; run again at the very end): each worker runs the disparity-checker on its own component in its own window, in this order: Compliance, Portfolio Services, Advisor, Shell. For every disparity, save a small actual-vs-expected screenshot pair (about 480 px wide, cropped to the difference) under docs/design/screenshots/parity/<component>/, and give each finding its breadcrumb path (e.g. Portfolio Services › Renewals › S19630 › Notice) and state. The hub gathers them on one private page for Muhammed to prioritise; each one is then queued as Look and Feel or Functional.
 4. No idle worker: a worker whose next item is blocked takes its next unblocked item.
 5. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
@@ -29,13 +29,16 @@ Only the OFA database talks to the warehouse and PowerBI; the APIs keep no DW/PB
 | | X | Shell 2 | Filter dialog copies the column's info tip onto the ASF fields | Look and Feel | - | Later (Muhammed) | - |
 | | X | B103-B106 | Shell 4 (user card seat line), 7 ("Seconds" label), 8 (Act As 4px gap), 9 (empty notifications' Mark all as read): the build is right, the boards change | Look and Feel | - | Design rows, later | - |
 
-## Portfolio Services (pointer: job-name doc fix (paper), then next-group proposal)
+## Portfolio Services (pointer: group 65 parity pass (building, Jest now; board run in a later window))
 
 | # | Grp | ID | Item | Category | Size | Status | Depends on |
 |---|---|---|---|---|---|---|---|
-| >> | - | - | Job-name doc fix: "SOM 6am" mentions read "SOM 6am-9am" | Functional | 0 | Paper now | - |
-| | - | - | Next-group proposal | Functional | - | After the job-name fix | - |
-| | X | OFA-F-141 | Correct a product, logged in the compliance trail (product part: option a or b; option a releases migration 0222) | Functional | - | Waiting on Luke | - |
+| >> | 65 | OFA-B-098 | Adviser and Product on one line, ellipsis, full text on hover (P76): Exceptions report and Anniversary list at 1440/1680/1920px | Look and Feel | - | Building, Jest now; board run in a later window | - |
+| >> | 65 | OFA-B-107 | S-Account never cut: Exceptions report and Anniversary list at 1440/1680/1920px | Look and Feel | - | Building, Jest now; board run in a later window | - |
+| >> | 65 | OFA-B-015 | Side-by-side parity pass: Exceptions report and Anniversary list at 1440/1680/1920px | Look and Feel | - | Building, Jest now; board run in a later window | - |
+| | X | - | Switch on the two @review-O48 Outbox scenarios (joins group 65 as it unblocks) | Functional | 0 | Blocked: O48 not Done | O48 |
+| | X | OFA-F-141 | Correct a product, logged in the compliance trail: product part, plus migration 0222 (joins group 65 as it unblocks) | Functional | - | Waiting on Luke (option a or b; a releases 0222) | - |
+| | X | OFA-F-062 | February-peak load test (joins group 65 as it unblocks) | Functional | - | End-sweep load window | - |
 | | X | - | TestSiteStandInsTests red until datawarehouse_gridpay is added to scripts/uat/grant-misc-rights.sql | Functional | 0 | Waiting on Muhammed (grant code) | - |
 | | P1 | B-137 | Arrangement record: Platform and Platform account number already two columns, nowrap, nothing cut (OFA-B-111) | Look and Feel | 0 | Not applicable: already built; B112 checks the PS board | - |
 | | X | - | Rename the local databases to `ShawPortal-OngoingFeeArrangements-*` (dev, warehouse and test databases; scripts, Makefile, tests, docs in every OFA component), to match the live name | Functional | - | Later: Muhammed says when; raised as a sized item then | - |
