@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 04:37
+Updated: 2026-11-26 07:15
 
 ## Now
 
@@ -37,11 +37,11 @@ One machine window at a time, in this order. Code-only work runs alongside.
 
 Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of prompt 2026-11-25 (2). Each worker has its rows in its next group. Questions the designer asked back go to the next round (Hub item 9).
 
-## Compliance (pointer: C2 merged bf5925e2; parked until B-156 words come)
+## Compliance (pointer: C3 running, told at the 07:15 resume; B-156 held for words)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | C3 | OI-001, OI-009 | Close on paper once the empty-library scenario is checked by name; fix B-150's stale reason (Q24 Done) | Functional | 0 | Next Compliance group |
+| >> | C3 | OI-001, OI-009 | Close on paper once the empty-library scenario is checked by name; fix B-150's stale reason (Q24 Done) | Functional | 0 | Next Compliance group |
 | | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
 
 Done 2026-11-25: COMPLIANCE-DASHBOARD-B-152, B-153, OI-002, OI-011 (B117 stays a design row).
