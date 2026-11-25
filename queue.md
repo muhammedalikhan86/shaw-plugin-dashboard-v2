@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 19:01
+Updated: 2026-11-25 19:08
 
 ## Now
 
@@ -29,7 +29,7 @@ One machine window at a time, in this order. Code-only work runs alongside.
 | 4 | Portfolio Services | 65+66 | OFA-B-098, B-099, B-107, B-015, F-143 seed, browser checks owed, F-116 close; O38, F-108 frame | Now, window 3 |
 | 5 | Compliance | C2 | F-143 follow-up, F-008, OI-001/OI-009 close; design rows B109-B112, B117, Q23, Q24, M25, W44 and the stale test at quarantine-signing-expiry.feature:153/172 | After PS group 65 merges |
 | 6 | Portfolio Services 2 | 40 | make test-data 0200-0203, Wording page look, REL-014 Annature tests; O47 / OFA-F-206 Initial OFA prepare | After Compliance C2 |
-| 7 | Advisor | A2 | Parity backlog, PM-113 close, ASF tip off 3 fields; design rows P86, P87, P91, B101, B107, B108, B116, B118, B119 and the stale test at renewal-tracker.feature:110 | After PS2 40 |
+| 7 | Advisor | A2 | Parity backlog, PM-113 close, ASF tip off 3 fields; design rows P86, P87, P91, B101, B107, B108, B116, B118, B119 and the stale test at renewal-tracker.feature:110 | Coded f3f232f1, Review PASS; window after PS2 40 |
 | 8 | Shell | 2 | SHELL-B-209 (B104, B105); B103, B106, B113 closed with no build | Done, on main acfc536d |
 | 9 | Portfolio Services | P | REL-012 full parity check (about 1 to 1.5 hours) | Last, alone on the machine |
 
@@ -57,7 +57,7 @@ Done 2026-11-25: COMPLIANCE-DASHBOARD-B-152, B-153, OI-002, OI-011 (B117 stays a
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive, Muhammed's check |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
-## Advisor (pointer: parked 4da0a987; A2 coded, Review PASS; board check in a short window after PS2 40)
+## Advisor (pointer: parked f3f232f1; A2 coded, Review PASS; board check in a short window after PS2 40)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
