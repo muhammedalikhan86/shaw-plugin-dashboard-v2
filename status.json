@@ -72,10 +72,10 @@
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 1011.0,
-   "pointsRemaining": 30.0,
+   "pointsDone": 1013.0,
+   "pointsRemaining": 28.0,
    "pointsTotal": 1041.0,
-   "itemsRemaining": 12,
+   "itemsRemaining": 11,
    "itemsRemainingUnsized": [
     "OFA-B-066",
     "OFA-B-067",
@@ -151,7 +151,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 180.81,
+  "pointsPerWorkingDayWholePeriod": 180.96,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -296,8 +296,8 @@
    },
    {
     "date": "2026-11-26",
-    "pointsDone": 2350.0,
-    "pointsDoneThatDay": 0.0
+    "pointsDone": 2352.0,
+    "pointsDoneThatDay": 2.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -317,7 +317,7 @@
     "likely": "2026-11-27",
     "pessimistic": "2026-11-27",
     "rateLast10": 38.95,
-    "rateWhole": 75.26
+    "rateWhole": 75.41
    },
    "Advisor": {
     "optimistic": "2026-11-27",
@@ -347,9 +347,9 @@
    "pessimistic": "2026-11-27",
    "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 180.81,
-   "pointsRemaining": 66.0,
-   "itemsRemaining": 28
+   "rateWhole": 180.96,
+   "pointsRemaining": 64.0,
+   "itemsRemaining": 27
   }
  },
  "milestones": [
@@ -432,7 +432,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-26T02:41:31+11:00",
+ "updatedAt": "2026-11-26T03:03:32+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -3033,6 +3033,11 @@
    "at": "2026-11-26T02:41:31+11:00",
    "change": "Advisor Dashboard: A2 merged (parity backlog and nine designer rows; board parity 6/6)",
    "pointsDone": 0.0
+  },
+  {
+   "at": "2026-11-26T03:03:32+11:00",
+   "change": "Portfolio Services: OFA-F-228 merged (note on the download-to-print dialog)",
+   "pointsDone": 2.0
   }
  ],
  "foundDuringBuild": {
