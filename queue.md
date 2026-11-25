@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 16:30
+Updated: 2026-11-25 16:32
 
 ## Now
 
@@ -73,7 +73,7 @@ Updated: 2026-11-25 16:30
 |---|---|---|---|---|---|---|
 | >> | 1 | SHELL-B-207 | Table-fit: a free-width column can end 4px over its cap (Compliance Quarantine "Extension" 504px > 500px at 1920px) | Look and Feel | 1 | Building; Compliance P2 waits on it |
 | >> | 1 | SHELL-B-208 | Filter fields stop copying the column's info tip (was "Shell 2") | Look and Feel | 1 | Folded into B-207's group, one finalize |
-| | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held: your call (touches deploy settings during UAT) |
+| | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
 | | X | B103-B106 | User card seat line, "Seconds" label, Act As gap, empty notifications | Look and Feel | - | With the designer (tonight's prompt); built when back |
 
 ## Hub
