@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-25 13:43
+Updated: 2026-11-25 13:44
 
 ## Go-live gate (before prod)
 
@@ -28,7 +28,6 @@ Only the OFA database talks to the warehouse and PowerBI; the APIs keep no DW/PB
 |---|---|---|---|---|---|---|---|
 | | X | Shell 2 | Filter dialog copies the column's info tip onto the ASF fields | Look and Feel | - | Later (Muhammed) | - |
 | | X | B103-B106 | Shell 4 (user card seat line), 7 ("Seconds" label), 8 (Act As 4px gap), 9 (empty notifications' Mark all as read): the build is right, the boards change | Look and Feel | - | Design rows, later | - |
-| | X | D11, D14 | Shell error and empty states (a)-(f); landing page's needs-a-newer-shell card | Look and Feel | - | Later: the words are placeholders until the business supplies them | - |
 
 ## Portfolio Services (pointer: parked f0911374, group 64)
 
