@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 04:35
+Updated: 2026-11-26 04:37
 
 ## Now
 
@@ -33,7 +33,7 @@ One machine window at a time, in this order. Code-only work runs alongside.
 | 8 | Shell | 2 | SHELL-B-209 (B104, B105); B103, B106, B113 closed with no build | Done, on main acfc536d |
 | 8b | Portfolio Services 2 | 41 | OFA-F-228 print dialog note (migration 0225): full PortfolioServices .NET, intake business tests, print dialog look | Done, merged 2ac26530 |
 | 9 | Portfolio Services | P | REL-012 full parity check (about 1 to 1.5 hours) | Done, merged 5aa51d57 (findings 2026-11-26-all.md) |
-| 10 | Portfolio Services | 68+69 | OFA-B-279, B-281, findings intake, designer rows O25-O35, O43, O48, B114; OFA-B-283 seed | Now, window 9, alone |
+| 10 | Portfolio Services | 68+69 | OFA-B-279, B-281, findings intake, designer rows O25-O35, O43, O48, B114; OFA-B-283 seed | Done, merged 1be7dd22 |
 
 Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of prompt 2026-11-25 (2). Each worker has its rows in its next group. Questions the designer asked back go to the next round (Hub item 9).
 
@@ -68,14 +68,11 @@ Done 2026-11-26: OFA-F-228 (merged 2ac26530).
 Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
 Done 2026-11-26: A2 parity backlog, PM-113, design rows P86, P87 (built app; board still wraps), P91, B101, B107, B108, B116, B118, B119 (merged 9f388f33).
 
-## Portfolio Services (pointer: groups 68 + 69 in window 9, alone)
+## Portfolio Services (pointer: groups 68 + 69 merged 1be7dd22; parked)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 69 | OFA-B-283 | Test data: five renewal confirmations, one per FULLY SIGNED state; then O33 (Corinne Abbott seat, Shell) and O34 scenarios run on the built app | Functional | 2 | Coded 27d34010; tested in window 9 |
 | | X | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Held for Muhammed's intake |
-| >> | 68 | OFA-B-279, B-281 + findings | Quarantine list one line at 1920; Separate initial OFAs first column 500; KNOWN lines removed for F-051, B-005 (width, date), B-006, B-007, F-055 | Look and Feel | ?? | Coded bdb021a2, Review PASS; parity at 1920 in the next window |
-| >> | 68 | O25-O35, O43, O48, B114 | Designer rows: O27 tips on the board's words; scenarios on for O28-O35, B114, O48 (O33, O34 board only until OFA-B-283) | Look and Feel | ?? | Coded bdb021a2; shell-target run in the next window |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 | | X | OFA-F-138 | File the signed renewal in DART; real signing-status reader | Functional | 3 | Blocked: Muhammed's DART retest |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
@@ -84,6 +81,7 @@ Done 2026-11-26: A2 parity backlog, PM-113, design rows P86, P87 (built app; boa
 Done 2026-11-25: OFA-B-099, OFA-F-116, OFA-F-143 seed, TD-119, browser checks (F-189, B-233, B-235, B-237, B-241, Settings report preview), O38, OFA-F-108 frame. B-098, B-107, B-015 close at the parity check. O38 sifted at the parity check (56px vs board 55px).
 Done 2026-11-25: OFA-B-273, OFA-B-275, OFA-B-277 (merged 37347b65).
 Done 2026-11-26: REL-012 parity check (merged 5aa51d57); owed shell-target scenarios and layout views 8/8 passed.
+Done 2026-11-26: OFA-B-279, B-281, B-283; F-051, B-005 (width, date), B-006, B-007, F-055 closed by the parity check; design rows O25-O35, O43, O48, B114 (O33 board-only: Act As gap, Shell list) (merged 1be7dd22).
 
 ## Shell (pointer: parked; seat line on main 5cfe93f3)
 
