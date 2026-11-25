@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 02:18
+Updated: 2026-11-26 02:41
 
 ## Now
 
@@ -29,9 +29,9 @@ One machine window at a time, in this order. Code-only work runs alongside.
 | 4 | Portfolio Services | 65+66 | OFA-B-098, B-099, B-107, B-015, F-143 seed, browser checks owed, F-116 close; O38, F-108 frame | Done, merged 9d588115 |
 | 5 | Compliance | C2 | F-143 follow-up, F-008, OI-001/OI-009 close; design rows B109-B112, B117, Q23, Q24, M25, W44 and the stale test at quarantine-signing-expiry.feature:153/172 | Done, merged bf5925e2 (OI-001/OI-009 stay open) |
 | 6 | Portfolio Services 2 | 40 | make test-data 0200-0203, Wording page look, REL-014 Annature tests; O47 / OFA-F-206 Initial OFA prepare | Done, merged 2568a959 |
-| 7 | Advisor | A2 | Parity backlog, PM-113 close, ASF tip off 3 fields; design rows P86, P87, P91, B101, B107, B108, B116, B118, B119 and the stale test at renewal-tracker.feature:110 | Now, window 6 |
+| 7 | Advisor | A2 | Parity backlog, PM-113 close, ASF tip off 3 fields; design rows P86, P87, P91, B101, B107, B108, B116, B118, B119 and the stale test at renewal-tracker.feature:110 | Done, merged 9f388f33 |
 | 8 | Shell | 2 | SHELL-B-209 (B104, B105); B103, B106, B113 closed with no build | Done, on main acfc536d |
-| 8b | Portfolio Services 2 | 41 | OFA-F-228 print dialog note (migration 0225): full PortfolioServices .NET, intake business tests, print dialog look | After Advisor A2 |
+| 8b | Portfolio Services 2 | 41 | OFA-F-228 print dialog note (migration 0225): full PortfolioServices .NET, intake business tests, print dialog look | Now, window 7 |
 | 9 | Portfolio Services | P | REL-012 full parity check (about 1 to 1.5 hours) | Last, alone on the machine |
 
 Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of prompt 2026-11-25 (2). Each worker has its rows in its next group. Questions the designer asked back go to the next round (Hub item 9).
@@ -46,7 +46,7 @@ Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of p
 Done 2026-11-25: COMPLIANCE-DASHBOARD-B-152, B-153, OI-002, OI-011 (B117 stays a design row).
 Done 2026-11-25: COMPLIANCE-DASHBOARD-B-154, B-155, F-008 part (B102, B110, B111, B112, M25 scenarios on), OFA-F-143 follow-up, Q23, Q24, B117 (merged bf5925e2).
 
-## Portfolio Services 2 (pointer: parked 036e2254; group 41 window after Advisor A2)
+## Portfolio Services 2 (pointer: group 41 in its window, window 7)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
@@ -57,15 +57,15 @@ Done 2026-11-25: COMPLIANCE-DASHBOARD-B-154, B-155, F-008 part (B102, B110, B111
 
 Done 2026-11-25: OFA-F-206 (O47), make test-data to 0224, Wording page look, REL-014 Annature tests 127/127 (merged 2568a959).
 
-## Advisor (pointer: A2 in its window, window 6)
+## Advisor (pointer: A2 merged 9f388f33; parked)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | A2 | - | Parity backlog: loading bar sits low; dead CSS line in app.scss; F-169 12px column width (heading shade is the shell theme: parity pick); close PM-113 on paper; drop `tip: ASF_TIP` from 3 filter fields and their specs | Look and Feel | 1 | Code after WS; checked in a short window after PS2 40 |
-| | A2 | P86, P87, P91, B101, B107, B108, B116, B118, B119 | Designer's rows back 2026-11-25: signatory link tip, paginator, "Reported by", "Done for the month" filtered, questionnaire row height and the rest; plus the stale test at renewal-tracker.feature:110 (S18515 now shows ADDRESS ISSUE) | Look and Feel | ?? | Code now, with A2; one finalize |
+| | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
 | | X | F-144 | The OFA timeline | Functional | 6 | Blocked: Luke |
 
 Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
+Done 2026-11-26: A2 parity backlog, PM-113, design rows P86, P87 (built app; board still wraps), P91, B101, B107, B108, B116, B118, B119 (merged 9f388f33).
 
 ## Portfolio Services (pointer: group 67 bugs merged 37347b65; parity check last, alone; designer rows after it)
 
