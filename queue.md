@@ -1,45 +1,22 @@
 # Worker queue
 
-What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
+What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 09:30
+Updated: 2026-11-26 09:52
 
 ## Now
 
+Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orders the workers only.
+
 1. Code freeze 2026-12-11. Everything still to build lands before it.
-2. Hub and all five workers run on lachlan since the 16:30 switch.
-3. Overnight, unsupervised, one machine window at a time, the hub merging on delegation: the list is in *Overnight* below. Morning, with Muhammed: he picks from the parity page; the picks go to the designer as design rows; then sync.
-4. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI; the APIs keep no DW/PBI connection strings. PS2's procedures are on main (46ed7123); Advisor's warehouse switch merged 7351f973 (ADVISOR-DASHBOARD-ADR-009). Plan: docs/hub/analysis/dw-procedures-plan.md.
-5. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
-6. Machine: one stack or .NET window at a time. Today (2026-11-26), release-first: Compliance frees the window at a safe point (C4 rest after the release); PS P2 parity check of the 5 unchecked screens and its fixes; Advisor A3 check; Shell F-188 (full suite after merge); then the UAT release (Muhammed deploys). PM-058 (PS2) is code only. After the release: Compliance C4 rest, PS 70, Advisor A4. Others write code only meanwhile.
-10. Queue rule (Muhammed, 2026-11-26): get everything that can be done out of the way. Advisor's two Power BI pages (Book of business, and the dashboard with the revenue cards) are hidden in this release and wait until the OFA work is complete: data security and user segregation come first.
-11. After the second UAT release: the DART retest (tomorrow, likely; production test account S110438; document type OFAREN made by Middle Office through Muhammed; a least-impact type until then), the IT drive check, the SharePoint check.
-7. Parity sweep, after those windows: each worker runs the disparity-checker on its own component (Compliance, Portfolio Services, Advisor, Shell), with small actual-vs-expected screenshot pairs under docs/design/screenshots/parity/<component>/ and a breadcrumb per finding. The hub gathers them on one page for Muhammed.
-8. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
-9. Grouped 2026-11-25 evening: every unblocked item has a group; only blocked items stay X. Design rows of prompt 2026-11-25 (2) are back and grouped.
+2. Today, release-first, one machine window at a time: PS P2 (parity of the 5 unchecked screens and its fixes); Advisor A3 browser check; then the hub's full suite (SHELL-F-188 and PM-058 are on main); then the UAT release (Muhammed deploys). Everyone else writes code only meanwhile. After the release: Compliance C4 rest, PS 70, PS2 43 (OFA-F-213), Advisor A4.
+3. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
+4. Advisor's two Power BI pages (Book of business, and the dashboard with the revenue cards) wait until the OFA work is complete: data security and user segregation come first (Muhammed, 2026-11-26).
+5. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022).
+6. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 
-## Overnight (2026-11-25 into 2026-11-26)
-
-One machine window at a time, in this order. Code-only work runs alongside.
-
-| # | Worker | Grp | Items | Starts when |
-|---|---|---|---|---|
-| 1 | Shell | 1 | SHELL-B-207, SHELL-B-208 | Done, on main 0133fb50 |
-| 2 | Advisor | WS | F-166, F-167, F-168, F-169, B-159 (warehouse switch) | Done, merged 7351f973 |
-| 3 | Compliance | P2+P3 | B-152, B-153, B117, OI-002 | Done, merged 14660477 |
-| 4 | Portfolio Services | 65+66 | OFA-B-098, B-099, B-107, B-015, F-143 seed, browser checks owed, F-116 close; O38, F-108 frame | Done, merged 9d588115 |
-| 5 | Compliance | C2 | F-143 follow-up, F-008, OI-001/OI-009 close; design rows B109-B112, B117, Q23, Q24, M25, W44 and the stale test at quarantine-signing-expiry.feature:153/172 | Done, merged bf5925e2 (OI-001/OI-009 stay open) |
-| 6 | Portfolio Services 2 | 40 | make test-data 0200-0203, Wording page look, REL-014 Annature tests; O47 / OFA-F-206 Initial OFA prepare | Done, merged 2568a959 |
-| 7 | Advisor | A2 | Parity backlog, PM-113 close, ASF tip off 3 fields; design rows P86, P87, P91, B101, B107, B108, B116, B118, B119 and the stale test at renewal-tracker.feature:110 | Done, merged 9f388f33 |
-| 8 | Shell | 2 | SHELL-B-209 (B104, B105); B103, B106, B113 closed with no build | Done, on main acfc536d |
-| 8b | Portfolio Services 2 | 41 | OFA-F-228 print dialog note (migration 0225): full PortfolioServices .NET, intake business tests, print dialog look | Done, merged 2ac26530 |
-| 9 | Portfolio Services | P | REL-012 full parity check (about 1 to 1.5 hours) | Done, merged 5aa51d57 (findings 2026-11-26-all.md) |
-| 10 | Portfolio Services | 68+69 | OFA-B-279, B-281, findings intake, designer rows O25-O35, O43, O48, B114; OFA-B-283 seed | Done, merged 1be7dd22 |
-
-Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of prompt 2026-11-25 (2). Each worker has its rows in its next group. Questions the designer asked back go to the next round (Hub item 9).
-
-## Compliance (pointer: C4 part 1 merged 91e5b316; rest of C4 after the release)
+## Compliance (pointer: C4 rest, after the UAT release)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
@@ -49,10 +26,6 @@ Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of p
 | | C4 | OI-006 | Move the closed row out of Open Items (docs tidy) | Functional | 0 | Same group |
 | | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
 
-Done 2026-11-25: COMPLIANCE-DASHBOARD-B-152, B-153, OI-002, OI-011 (B117 stays a design row).
-Done 2026-11-26: COMPLIANCE-DASHBOARD-B-157 Renewal notice label (merged 91e5b316).
-Done 2026-11-26: COMPLIANCE-DASHBOARD-OI-001, OI-009, B-150 reason (merged ad1eff9b).
-Done 2026-11-25: COMPLIANCE-DASHBOARD-B-154, B-155, F-008 part (B102, B110, B111, B112, M25 scenarios on), OFA-F-143 follow-up, Q23, Q24, B117 (merged bf5925e2).
 
 ## Portfolio Services 2 (pointer: group 43, import the held history rows)
 
@@ -63,11 +36,8 @@ Done 2026-11-25: COMPLIANCE-DASHBOARD-B-154, B-155, F-008 part (B102, B110, B111
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
-Done 2026-11-26: PM-058 (merged 3cfd81bf).
-Done 2026-11-25: OFA-F-206 (O47), make test-data to 0224, Wording page look, REL-014 Annature tests 127/127 (merged 2568a959).
-Done 2026-11-26: OFA-F-228 (merged 2ac26530).
 
-## Advisor (pointer: A3 building; browser check after Compliance C4)
+## Advisor (pointer: A3 built; browser check after PS P2)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
@@ -80,8 +50,6 @@ Done 2026-11-26: OFA-F-228 (merged 2ac26530).
 | | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Window after PS's flaky group |
 | | A4 | F-144 | The OFA timeline: copy the OFA history section PS and Compliance already have (Luke, 2026-11-26) | Functional | 6 | After the UAT release, with A4 |
 
-Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
-Done 2026-11-26: A2 parity backlog, PM-113, design rows P86, P87 (built app; board still wraps), P91, B101, B107, B108, B116, B118, B119 (merged 9f388f33).
 
 ## Portfolio Services (pointer: P2 parity check, UAT release blocker)
 
@@ -98,11 +66,6 @@ Done 2026-11-26: A2 parity backlog, PM-113, design rows P86, P87 (built app; boa
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
-Done 2026-11-25: OFA-B-099, OFA-F-116, OFA-F-143 seed, TD-119, browser checks (F-189, B-233, B-235, B-237, B-241, Settings report preview), O38, OFA-F-108 frame. B-098, B-107, B-015 close at the parity check. O38 sifted at the parity check (56px vs board 55px).
-Done 2026-11-25: OFA-B-273, OFA-B-275, OFA-B-277 (merged 37347b65).
-Done 2026-11-26: REL-012 parity check (merged 5aa51d57); owed shell-target scenarios and layout views 8/8 passed.
-Done 2026-11-26: OFA-B-107 (merged ce436203).
-Done 2026-11-26: OFA-B-279, B-281, B-283; F-051, B-005 (width, date), B-006, B-007, F-055 closed by the parity check; design rows O25-O35, O43, O48, B114 (O33 board-only: Act As gap, Shell list) (merged 1be7dd22).
 
 ## Shell (pointer: group 3b, F-189, F-190, B-210, code only)
 
@@ -116,18 +79,13 @@ Done 2026-11-26: OFA-B-279, B-281, B-283; F-051, B-005 (width, date), B-006, B-0
 | | X | - | Act As on a plugin API looks people up in real AD, so a test-data person (Corinne Abbott, PS O33) cannot be acted as; a dev-only directory that knows the test-data people (SHELL-ADR-020 seam) | Functional | ?? | Held: Muhammed (identity seam) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
 
-Done 2026-11-26: SHELL-F-188 (c9748975; full suite in the next window, before the release).
-Done 2026-11-25: SHELL-B-207, SHELL-B-208, SHELL-B-209.
 
 ## Hub
 
-1. Waiting on Muhammed: rerun scripts/uat/grant-misc-rights.sql on Misc at the next deploy (datawarehouse_gridpay added); the OFA-S-005 spike rerun on the unredacted spreadsheet; the DART retest; DART's open-a-document URL and staff DART logins (OFA-S-001); PS's 8 production settings.
-2. Waiting on Luke: OFA-F-141 (a or b; a releases migration 0222).
-3. OI-001 and OI-009 closed 2026-11-26 (Compliance C3, ad1eff9b).
-4. Next test-site deploy: PS group 58 (notices) and deploy 2 (SHELL-F-184, rollback rehearsal). Deployment and testing work is the REL- stack in `docs/leftovers.md`.
-5. With the stack up, after OFA-F-202: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database.
-6. Parity round 2: when Muhammed says, after every P1 fix. Parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
-7. Designer prompt 2026-11-25 (2): all four parts sent 2026-11-25 from Lachlan's account; the Shell part (B103-B106, B113) in a new designer chat with docs/design/artboards/shell/NotificationPanel.dc.html and Main.dc.html attached. At the next switch to Muhammed's account: he uploads the two returned shell boards (from the repo, after the sync) into his design project, so its copies are current.
-8. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
-9. Next designer round: answers from Muhammed 2026-11-26: P86 yes (the DA (Dealer's Assistant) seat shows the picked Adviser's clients); P87/B112 Adviser yes, Product wraps again; B112 Portfolio, sideways scroll is right; Q23 yes, Corinne Abbott everywhere, the OFA Dashboard included; O27 yes, .38; B106 yes, Material buttons in every frame; B101 yes, same label; W44 leave the placeholder (B-156 stays held). Prompt to the designer: P86, Q23, B106 redraws, B112/P87 confirmations, O44 carry-back, and rule P96 (DA = Dealer's Assistant). Token finding: .38 is Material's disabled opacity; 250px and 500px stay as Q24 widths.
-10. Owed after the sync: npm run test:business:coverage and make design-checks (machine busy tonight); demo refresh in v2 done.
+1. Next test-site deploy: PS group 58 (notices) and deploy 2 (SHELL-F-184, rollback rehearsal).
+2. With the stack up, after OFA-F-202: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database.
+3. Parity round 2: when Muhammed says, after every P1 fix. Parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
+4. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html, from the repo) into his design project.
+5. Next designer round: P86, Q23, B106 redraws, B112/P87 confirmations, O44 carry-back, rule P96 (DA = Dealer's Assistant), P97 (Advisor board gets the OFA history section). Muhammed's answers to the designer's questions are in docs/hub/rulings.md (2026-11-26).
+6. Owed: npm run test:business:coverage and make design-checks, in a machine window.
+7. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
