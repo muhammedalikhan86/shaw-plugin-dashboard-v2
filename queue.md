@@ -4,7 +4,7 @@ What each worker does next, in order. The hub keeps it current. Forward view onl
 **>>** = being worked on now. Grp = group, lowest runs first; X = blocked, grouped once it is free. Category: Functional, Look and Feel, or Undetermined.
 **Depends on** = items in a worker's queue that must land first. "Blocked by" in Status = what stops it starting: a person, a missing design, or an item no worker has queued.
 
-Updated: 2026-11-25 13:36
+Updated: 2026-11-25 13:39
 
 ## Go-live gate (before prod)
 
@@ -42,7 +42,6 @@ Group 64: OFA-F-143, OFA-F-141 (Reference Date part), OFA-B-251 (the banner's ne
 | | 64 | OFA-B-251 | Exceptions report banner: 'next on' shows the next 1st of the month | Functional | 1 | To build when PS resumes | - |
 | | P1 | B-137 | Arrangement record: Platform and Platform account number already two columns, nowrap, nothing cut (OFA-B-111) | Look and Feel | 0 | Not applicable: already built; B112 checks the PS board | - |
 | | X | - | Rename the local databases to `ShawPortal-OngoingFeeArrangements-*` (dev, warehouse and test databases; scripts, Makefile, tests, docs in every OFA component), to match the live name | Functional | - | Later: Muhammed says when; raised as a sized item then | - |
-| | X | O39 | Settings report preview: the new report columns (OFA-F-191) | Functional | - | Later: Muhammed confirms the designer's guessed values (Renewal Notice Due Date = +60 days and others) | - |
 | | X | O41, O42 | Could-not-load card on six screens; the Import page as drawn | Look and Feel | - | Later: O41's page names and O42's words wait for the business | - |
 | | X | OFA-F-138 | File the signed renewal in DART; also the real signing-status reader for renewals and Initial OFAs | Functional | 3 | Blocked by your DART retest | - |
 | | X | - | Browser checks owed from groups 36, 45 and 49, on the stack: the Settings report preview (both tables, a wide table scrolls, the empty-Expired line), B-233 opening month, B-235 row menu meets the card edge, B-237 Documents icon whole, B-241 table edges at 1440/1680/1920 (wide tables still scroll), F-189 Overview card | Look and Feel | 0 | Moved to the end sweep: two stack starts were killed for low memory on 2026-11-24 night; a restart needs Muhammed | - |
