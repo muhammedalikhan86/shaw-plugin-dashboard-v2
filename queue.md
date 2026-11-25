@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 17:35
+Updated: 2026-11-25 17:51
 
 ## Now
 
@@ -25,8 +25,8 @@ One machine window at a time, in this order. Code-only work runs alongside.
 |---|---|---|---|---|
 | 1 | Shell | 1 | SHELL-B-207, SHELL-B-208 | Done, on main 0133fb50 |
 | 2 | Advisor | WS | F-166, F-167, F-168, F-169, B-159 (warehouse switch) | Done, merged 7351f973 |
-| 3 | Compliance | P2+P3 | B-152, B-153, B117, OI-002 | Now, window 2 |
-| 4 | Portfolio Services | 65+66 | OFA-B-098, B-099, B-107, B-015, F-143 seed, browser checks owed, F-116 close; O38, F-108 frame | After Compliance P2+P3 |
+| 3 | Compliance | P2+P3 | B-152, B-153, B117, OI-002 | Done, merged 14660477 |
+| 4 | Portfolio Services | 65+66 | OFA-B-098, B-099, B-107, B-015, F-143 seed, browser checks owed, F-116 close; O38, F-108 frame | Now, window 3 |
 | 5 | Compliance | C2 | F-143 follow-up, F-008, OI-001/OI-009 close | After PS group 65 merges |
 | 6 | Portfolio Services 2 | 40 | make test-data 0200-0203, Wording page look, REL-014 Annature tests | After Compliance C2 |
 | 7 | Advisor | A2 | Parity backlog, PM-113 close, ASF tip off 3 fields | After PS2 40 (code after WS) |
@@ -34,16 +34,16 @@ One machine window at a time, in this order. Code-only work runs alongside.
 
 Design sync at 18:02 tonight (unattended): takes whatever the designer built and hands it to each worker's next group. It unblocks Compliance B109-B111, W44; Advisor B101, B107, B108, + 2 new; Shell B103-B106; PS2 O47; PS the O48 scenarios. Rows still open, or only questions back, go to the next designer round on 2026-11-26.
 
-## Compliance (pointer: in its window, P2+P3: make up, layout check, business tests, Integration, finalize)
+## Compliance (pointer: P2+P3 merged 14660477; C2 waits on PS group 65)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | P2 | B-152, B-153, B117 | Quarantine Extension and Last prompt minWidth 250 (grow up to 500); fix the 7 layout reds | Look and Feel | ?? | Window after Advisor (SHELL-B-207 on main) |
-| >> | P3 | OI-002 | Business scenarios: Arrangements Empty, Loading, Data unavailable; Wording Loading, Failed | Functional | ?? | Same window as P2 |
 | | C2 | - | Follow-up to PS's OFA-F-143 seed: SqlComplianceReviewStoreTests.cs:112 asserts the two follow-up steps; drop @not-built-OFA-F-143 at compliance-review.feature:81 | Functional | ?? | After PS group 65 merges, then make test-data |
 | | C2 | F-008 | Business scenarios still off whose boards are drawn (M38, M39 back 2026-11-23) | Functional | 3 | With the C2 follow-up, one window |
 | | C2 | OI-001, OI-009 | Close on paper: fixed by SHELL-B-097 and SHELL-B-120 | Functional | 0 | At C2 finalize |
 | | X | B109-B111, W44 | Expired platform columns, Arrangements filter State, Wording fields gap; no-version slot wording | Look and Feel | - | Sent to the designer 2026-11-25; built when back |
+
+Done 2026-11-25: COMPLIANCE-DASHBOARD-B-152, B-153, OI-002, OI-011 (B117 stays a design row).
 
 ## Portfolio Services 2 (pointer: parked 294c5dff, merged; next = group 40 in a window after Compliance C2)
 
@@ -65,15 +65,15 @@ Design sync at 18:02 tonight (unattended): takes whatever the designer built and
 
 Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
 
-## Portfolio Services (pointer: F-143 seed done 89fcf9eb; group 65+66 in the window after Compliance P2+P3)
+## Portfolio Services (pointer: in its window, groups 65+66)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | >> | 65 | OFA-B-098, B-099, B-107, B-015 | Exceptions report and Anniversary list at 1440/1680/1920: Adviser and Product on one line, S-Account never cut, side-by-side parity | Look and Feel | 5 | Built; board run in its window |
 | >> | 65 | OFA-F-143 seed | Follow-up steps seeded (S9970002 Adviser told, S20412 Initial OFA sent); TD-119 | Functional | 1 | Done 89fcf9eb; tested in the window |
-| | 65 | - | Browser checks owed from groups 36, 45, 49 (Settings report preview, B-233, B-235, B-237, B-241, F-189) | Look and Feel | 0 | Same window, stack already up |
-| | 65 | OFA-F-116 | Close on paper: 2027 holidays loaded and checked (106 rows, ruling 2026-11-25) | Functional | 1 | At finalize |
-| | 66 | - | Parity backlog: O38 checkbox colour and gap; OFA-F-108 dialog frame | Look and Feel | ?? | Coded e9180683; Note notch measured in the window |
+| >> | 65 | - | Browser checks owed from groups 36, 45, 49 (Settings report preview, B-233, B-235, B-237, B-241, F-189) | Look and Feel | 0 | Same window, stack already up |
+| >> | 65 | OFA-F-116 | Close on paper: 2027 holidays loaded and checked (106 rows, ruling 2026-11-25) | Functional | 1 | At finalize |
+| >> | 66 | - | Parity backlog: O38 checkbox colour and gap; OFA-F-108 dialog frame | Look and Feel | ?? | Coded e9180683; Note notch measured in the window |
 | | P | REL-012 | Full Portfolio Services parity check (disparity-checker), findings and screenshot pairs on the parity page | Look and Feel | - | Last tonight, alone on the machine |
 | | X | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Held for Muhammed's intake |
 | | X | - | Switch on the two @review-O48 Outbox scenarios | Functional | 0 | Blocked: designer (O48) |
