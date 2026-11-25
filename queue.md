@@ -78,7 +78,7 @@ Done 2026-11-26: OFA-F-228 (merged 2ac26530).
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
 | | A4 | - | card-looks.steps.ts reads card height once and never retries (same cause as Compliance B-158): poll it | Functional | ?? | With A4 |
 | | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Window after PS's flaky group |
-| | X | F-144 | The OFA timeline | Functional | 6 | Blocked: Luke |
+| | A4 | F-144 | The OFA timeline: copy the OFA history section PS and Compliance already have (Luke, 2026-11-26) | Functional | 6 | After the UAT release, with A4 |
 
 Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
 Done 2026-11-26: A2 parity backlog, PM-113, design rows P86, P87 (built app; board still wraps), P91, B101, B107, B108, B116, B118, B119 (merged 9f388f33).
@@ -122,7 +122,7 @@ Done 2026-11-25: SHELL-B-207, SHELL-B-208, SHELL-B-209.
 ## Hub
 
 1. Waiting on Muhammed: rerun scripts/uat/grant-misc-rights.sql on Misc at the next deploy (datawarehouse_gridpay added); the OFA-S-005 spike rerun on the unredacted spreadsheet; the DART retest; DART's open-a-document URL and staff DART logins (OFA-S-001); PS's 8 production settings.
-2. Waiting on Luke: OFA-F-141 (a or b; a releases migration 0222); Advisor F-144.
+2. Waiting on Luke: OFA-F-141 (a or b; a releases migration 0222).
 3. OI-001 and OI-009 closed 2026-11-26 (Compliance C3, ad1eff9b).
 4. Next test-site deploy: PS group 58 (notices) and deploy 2 (SHELL-F-184, rollback rehearsal). Deployment and testing work is the REL- stack in `docs/leftovers.md`.
 5. With the stack up, after OFA-F-202: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database.
