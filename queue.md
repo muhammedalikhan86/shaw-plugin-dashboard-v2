@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 04:28
+Updated: 2026-11-26 04:35
 
 ## Now
 
@@ -89,6 +89,7 @@ Done 2026-11-26: REL-012 parity check (merged 5aa51d57); owed shell-target scena
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| | X | - | Act As on a plugin API looks people up in real AD, so a test-data person (Corinne Abbott, PS O33) cannot be acted as; a dev-only directory that knows the test-data people (SHELL-ADR-020 seam) | Functional | ?? | Held: Muhammed (identity seam) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
 
 Done 2026-11-25: SHELL-B-207, SHELL-B-208, SHELL-B-209.
