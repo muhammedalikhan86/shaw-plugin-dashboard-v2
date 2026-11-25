@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 10:11
+Updated: 2026-11-26 10:13
 
 ## Now
 
@@ -32,7 +32,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | >> | 44 | OFA-F-230 | The PS API refuses the test sign-in outside the test host, as SHELL-F-190 does for the shell (PM-057) | Functional | 2 | Code done; .NET slot after Compliance, merges before the UAT release |
-| | 45 | (PS2 raises) | Act As on the PS API cannot reach test-data people (Corinne Abbott, PS O33): adopt the dev-only test-data directory the shell, Advisor and Compliance APIs already have (SHELL-F-108 pattern), Development only | Functional | 3 | After OFA-F-230; can follow the release |
+| >> | 45 | OFA-F-232 | Act As on the PS API cannot reach test-data people (Corinne Abbott, PS O33): adopt the dev-only test-data directory the shell, Advisor and Compliance APIs already have (SHELL-F-108 pattern), Development only | Functional | 3 | Code outside Program.cs now; wiring after the F-230 commit; can follow the release |
 | | X | - | Parity backlog from O47: "Signers" label in sentence case; "Salutation" label floats on the outline before typing | Look and Feel | ?? | Rows in parity-backlog.md; for triage |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
