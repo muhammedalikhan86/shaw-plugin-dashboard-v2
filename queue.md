@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-25 16:29
+Updated: 2026-11-25 16:30
 
 ## Now
 
@@ -12,7 +12,7 @@ Updated: 2026-11-25 16:29
 3. After the switch, overnight and unsupervised, one machine window at a time, the hub merging on delegation: (a) Shell fixes table-fit, then Compliance finishes P2+P3; PS seeds the F-143 follow-up steps; (b) Advisor's warehouse switch (F-167, F-168, then review and tests); (c) PS group 65's board run, its window starting with `make up` and the PS business tests (they prove the dev-up.ps1 change); (d) last, alone on the machine: Portfolio Services' full parity check (never run; about 1 to 1.5 hours), findings with screenshot pairs on the parity page. Morning, with Muhammed: he picks from the parity page; the picks go to the designer as design rows; then sync.
 4. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI; the APIs keep no DW/PBI connection strings. PS2's procedures are on main (46ed7123). Left: Advisor's warehouse switch. Plan: docs/hub/analysis/dw-procedures-plan.md.
 5. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
-6. Machine: one stack or .NET window at a time. Overnight order: Advisor WS; Compliance P2+P3 (after SHELL-B-207 merges); PS 65+66; Compliance C2; PS2 40; Advisor A2; Shell 2; last, alone, PS's parity check. Others write code only meanwhile.
+6. Machine: one stack or .NET window at a time. Overnight order: Advisor WS; Compliance P2+P3 (after SHELL-B-207 merges); PS 65+66; Compliance C2; PS2 40; Advisor A2; last, alone, PS's parity check. Others write code only meanwhile.
 7. Parity sweep, after those windows: each worker runs the disparity-checker on its own component (Compliance, Portfolio Services, Advisor, Shell), with small actual-vs-expected screenshot pairs under docs/design/screenshots/parity/<component>/ and a breadcrumb per finding. The hub gathers them on one page for Muhammed.
 8. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 9. Grouped 2026-11-25 evening: every unblocked item has a group; only blocked items stay X. Design rows once marked "later" go to the designer in tonight's prompt.
@@ -25,6 +25,7 @@ Updated: 2026-11-25 16:29
 | >> | P3 | OI-002 | Business scenarios: Arrangements Empty, Loading, Data unavailable; Wording Loading, Failed | Functional | ?? | Same window as P2 |
 | | C2 | - | Follow-up to PS's OFA-F-143 seed: SqlComplianceReviewStoreTests.cs:112 asserts the two follow-up steps; drop @not-built-OFA-F-143 at compliance-review.feature:81 | Functional | ?? | After PS group 65 merges, then make test-data |
 | | C2 | F-008 | Business scenarios still off whose boards are drawn (M38, M39 back 2026-11-23) | Functional | 3 | With the C2 follow-up, one window |
+| | C2 | OI-001, OI-009 | Close on paper: fixed by SHELL-B-097 and SHELL-B-120 | Functional | 0 | At C2 finalize |
 | | X | B109-B111, W44 | Expired platform columns, Arrangements filter State, Wording fields gap; no-version slot wording | Look and Feel | - | With the designer (tonight's prompt); built when back |
 
 ## Portfolio Services 2 (pointer: parked 294c5dff, merged; next = group 40 in a window after Compliance C2)
@@ -71,9 +72,7 @@ Updated: 2026-11-25 16:29
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | >> | 1 | SHELL-B-207 | Table-fit: a free-width column can end 4px over its cap (Compliance Quarantine "Extension" 504px > 500px at 1920px) | Look and Feel | 1 | Building; Compliance P2 waits on it |
-| | 2 | COMPLIANCE-DASHBOARD-OI-001 | Shared make-check script: the dotnet format step diffs against a local main a branch checkout lacks | Functional | ?? | After B-207; size when raised |
-| | 2 | COMPLIANCE-DASHBOARD-OI-009 | Shared business-tests/support/find.ts `control` picks the Wording sort header (flaky "empty library" scenario) | Functional | ?? | Same group |
-| | 2 | Shell 2 | Filter dialog copies the column's info tip onto the ASF fields | Look and Feel | ?? | Same group |
+| >> | 1 | SHELL-B-208 | Filter fields stop copying the column's info tip (was "Shell 2") | Look and Feel | 1 | Folded into B-207's group, one finalize |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held: your call (touches deploy settings during UAT) |
 | | X | B103-B106 | User card seat line, "Seconds" label, Act As gap, empty notifications | Look and Feel | - | With the designer (tonight's prompt); built when back |
 
@@ -81,7 +80,7 @@ Updated: 2026-11-25 16:29
 
 1. Waiting on Muhammed: rerun scripts/uat/grant-misc-rights.sql on Misc at the next deploy (datawarehouse_gridpay added); the OFA-S-005 spike rerun on the unredacted spreadsheet; the DART retest; DART's open-a-document URL and staff DART logins (OFA-S-001); PS's 8 production settings.
 2. Waiting on Luke: OFA-F-141 (a or b; a releases migration 0222); Advisor F-144.
-3. OI-001 and OI-009 moved to Shell group 2 (shared files are the shell's).
+3. OI-001 and OI-009 were already fixed (SHELL-B-097, SHELL-B-120); Compliance closes them in C2.
 4. Next test-site deploy: PS group 58 (notices) and deploy 2 (SHELL-F-184, rollback rehearsal). Deployment and testing work is the REL- stack in `docs/leftovers.md`.
 5. With the stack up, after OFA-F-202: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database.
 6. Parity round 2: when Muhammed says, after every P1 fix. Parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
