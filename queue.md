@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: finished work leaves this file; the back view is the status page's update log.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 03:03
+Updated: 2026-11-26 03:21
 
 ## Now
 
@@ -32,7 +32,7 @@ One machine window at a time, in this order. Code-only work runs alongside.
 | 7 | Advisor | A2 | Parity backlog, PM-113 close, ASF tip off 3 fields; design rows P86, P87, P91, B101, B107, B108, B116, B118, B119 and the stale test at renewal-tracker.feature:110 | Done, merged 9f388f33 |
 | 8 | Shell | 2 | SHELL-B-209 (B104, B105); B103, B106, B113 closed with no build | Done, on main acfc536d |
 | 8b | Portfolio Services 2 | 41 | OFA-F-228 print dialog note (migration 0225): full PortfolioServices .NET, intake business tests, print dialog look | Done, merged 2ac26530 |
-| 9 | Portfolio Services | P | REL-012 full parity check (about 1 to 1.5 hours) | Now, window 8, alone |
+| 9 | Portfolio Services | P | REL-012 full parity check (about 1 to 1.5 hours) | Done, merged 5aa51d57 (findings 2026-11-26-all.md) |
 
 Design sync ran 2026-11-25 18:46 (3acbeee0): the designer built all 38 rows of prompt 2026-11-25 (2). Each worker has its rows in its next group. Questions the designer asked back go to the next round (Hub item 9).
 
@@ -67,21 +67,21 @@ Done 2026-11-26: OFA-F-228 (merged 2ac26530).
 Done 2026-11-25: ADVISOR-DASHBOARD-F-166, F-167, F-168, F-169, B-159.
 Done 2026-11-26: A2 parity backlog, PM-113, design rows P86, P87 (built app; board still wraps), P91, B101, B107, B108, B116, B118, B119 (merged 9f388f33).
 
-## Portfolio Services (pointer: parity check in window 8, alone; designer rows after it)
+## Portfolio Services (pointer: parity check merged 5aa51d57; group 68 code only, no stack)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | P | - | Owed tests: back-office-requests.feature and review-answers.feature on the shell target; layout check on the Outbox and the 3 leftover views | Functional | 0 | First in the parity window |
-| >> | P | REL-012 | Full Portfolio Services parity check (disparity-checker), findings and screenshot pairs on the parity page | Look and Feel | - | Last tonight, alone on the machine |
 | | X | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Held for Muhammed's intake |
-| | 67 | O25-O35, O43, O48, B114 | Designer's rows back 2026-11-25, and switch on the two @review-O48 Outbox scenarios (O27 tips and B114's "Follow-up step recorded." are the designer's words, to be confirmed) | Look and Feel | ?? | After the parity check |
+| >> | 68 | - | Findings Intake of findings/2026-11-26-all.md: close OFA-F-051, B-007, B-006, B-005, F-055 (their KNOWN entries no longer show; remove PS's own KNOWN lines in parity.spec); raise Quarantine list wrap at 1920 (High, Bug) and Separate initial OFAs first column weight 500 (Medium) | Look and Feel | ?? | Code now; board run in a window when Muhammed is back |
+| >> | 68 | O25-O35, O43, O48, B114 | Designer's rows back 2026-11-25, and switch on the two @review-O48 Outbox scenarios (O27 tips and B114's "Follow-up step recorded." are the designer's words, to be confirmed) | Look and Feel | ?? | Code now, with group 68 |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 | | X | OFA-F-138 | File the signed renewal in DART; real signing-status reader | Functional | 3 | Blocked: Muhammed's DART retest |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
-Done 2026-11-25: OFA-B-099, OFA-F-116, OFA-F-143 seed, TD-119, browser checks (F-189, B-233, B-235, B-237, B-241, Settings report preview), O38, OFA-F-108 frame. B-098, B-107, B-015 close at the parity check. O38 gap 24px vs board 56px goes to the parity check.
+Done 2026-11-25: OFA-B-099, OFA-F-116, OFA-F-143 seed, TD-119, browser checks (F-189, B-233, B-235, B-237, B-241, Settings report preview), O38, OFA-F-108 frame. B-098, B-107, B-015 close at the parity check. O38 sifted at the parity check (56px vs board 55px).
 Done 2026-11-25: OFA-B-273, OFA-B-275, OFA-B-277 (merged 37347b65).
+Done 2026-11-26: REL-012 parity check (merged 5aa51d57); owed shell-target scenarios and layout views 8/8 passed.
 
 ## Shell (pointer: parked; group 2 on main acfc536d)
 
