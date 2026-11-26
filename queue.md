@@ -3,14 +3,14 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 12:53
+Updated: 2026-11-26 13:06
 
 ## Now
 
 Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orders the workers only.
 
 1. Code freeze 2026-12-11. Everything still to build lands before it.
-2. Today, release-first, one machine window at a time: AnnatureInterfaceWebAPI deployed; Shell group 4 merged 4ffdf1b4; Advisor merged; PS2 group 45 merged; PS re-check of its P2 fixes (now); then the hub's full suite with Shell's B-210 browser measurement; then the UAT release (Muhammed deploys). Everyone else writes code only meanwhile. After the release: Compliance C4 rest, PS 70, Advisor A4.
+2. Today, release-first, one machine window at a time: AnnatureInterfaceWebAPI deployed; Shell group 4 merged 4ffdf1b4; Advisor merged; PS2 group 45 merged; PS P2 merged ed9bf87a; the hub's full suite (now) with Shell's B-210 browser measurement; then the UAT release (Muhammed deploys). Everyone else writes code only meanwhile. After the release: Compliance C4 rest, PS 70, Advisor A4.
 3. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
 4. Advisor's two Power BI pages (Book of business, and the dashboard with the revenue cards) wait until the OFA work is complete: data security and user segregation come first (Muhammed, 2026-11-26).
 5. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022).
@@ -46,12 +46,13 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | A4 | F-144 | The OFA timeline: copy the OFA history section PS and Compliance already have (Luke, 2026-11-26); P97 already drawn | Functional | 6 | After the UAT release |
 
 
-## Portfolio Services (pointer: P2 fixes d79e5a9c, X35 change 5da95a8b; re-check in the machine window now)
+## Portfolio Services (pointer: parked; P2, X35 and the Initial OFA title merged ed9bf87a; group 70 after the release)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | P2 | REL-012 rest | Parity check of the 5 unchecked screens (Renewal tracker, Exceptions report, Arrangement record with B-015 pts 7-9, Outbox, Settings and dialogs) at 1920 and 1440, then fix its findings | Look and Feel | ?? | Check done: 27 findings, all being fixed now; re-check in the window after PS2; UAT release blocker |
 | | 70 | (PS raises) | OFA-B-313 paperclip on the Settings Notes: files on report notes (migration, procedure file list, trail link) | Functional | 2 | Split from P2 so the release is not held |
+| | 70 | OFA-F-215 | Accepting an Adviser's answer updates the arrangement | Functional | 4 | After the release |
+| | 70 | (PS raises) | Step code for the P81, P84, P85 scenarios (still @skip), with the loading state's entry in shared business-tests/support | Functional | ?? | After the release |
 | | 70 | OFA-F-211 | Remove the emails Luke ruled out: the deceased-estate email to the Back Office (the tool only reads it from DART) and the State Manager's ended / terminated / culled emails (PRD and PMBook corrected at P2 finalize); one design row owed | Functional | 5 | First in group 70; Adviser's termination email and the weekly Expired report stay |
 | | 70 | - | 9 flaky tests (AttachmentRegistration, ExpiryRegister, exceptions-report x3, ofa-checklist x2, quarantine, QuarantineReadEndpoint): causes and fixes | Functional | ?? | Window after Advisor A3's check |
 | | 70 | - | Handoff and test runbook: Compliance ("Renewal notice", B-157) and Advisor ("Signed renewal notice") now label OFAREN | Functional | 0 | After B-157 is on main |
