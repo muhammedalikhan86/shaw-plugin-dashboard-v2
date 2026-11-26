@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 11:25
+Updated: 2026-11-26 11:26
 
 ## Now
 
@@ -40,17 +40,14 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: A3 finalized ebb6fda1; merges after Shell commits its pointer sweep)
+## Advisor (pointer: A4 code only (guard, card-looks); A3 ebb6fda1 merges after Shell commits)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | A4 | (Advisor raises) | The Advisor API refuses the test sign-in outside the test host, as SHELL-F-190 does (PM-057) | Functional | ?? | Code only, after A3 |
-| >> | A3 | B101 | Signer chip reads "Email not delivered" when a follow-up email bounces, as for a signing request (board draws it on S18515) | Look and Feel | ?? | In the window now |
-| >> | A3 | P87 / B112 | S-Account Product cell wraps again at 1440px, so the table never scrolls sideways (as the board draws) | Look and Feel | ?? | Same group |
-| >> | A3 | ADVISOR-DASHBOARD-B-160 | S-Account page and Add signatory send no DA (Dealer's Assistant) pick, so a DA working for any Adviser but the first is refused there; send the pick, server still checks the mapping | Functional | 3 | Same group, before the release |
+| >> | A4 | (Advisor raises) | The Advisor API refuses the test sign-in outside the test host, as SHELL-F-190 does (PM-057) | Functional | ?? | Code only now |
 | | X | P86 | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | ?? | Waits: Power BI pages hidden until after the OFA work |
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
-| | A4 | - | card-looks.steps.ts reads card height once and never retries (same cause as Compliance B-158): poll it | Functional | ?? | With A4 |
+| >> | A4 | - | card-looks.steps.ts reads card height once and never retries (same cause as Compliance B-158): poll it | Functional | ?? | With A4 |
 | | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Window after PS's flaky group |
 | | A4 | F-144 | The OFA timeline: copy the OFA history section PS and Compliance already have (Luke, 2026-11-26) | Functional | 6 | After the UAT release, with A4 |
 
