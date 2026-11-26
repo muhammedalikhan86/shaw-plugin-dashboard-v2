@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 18:54
+Updated: 2026-11-26 18:56
 
 ## Hub
 
@@ -44,10 +44,11 @@ Updated: 2026-11-26 18:54
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: A4 merged 3e9b20ec; its stack-window checks wait on make up)
+## Advisor (pointer: group A5, parity lines and small fixes)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | A5 | PM-101, PM-102, PM-115, parity | Questionnaire ASF heading on one line; past-12-months gap 4px; Forecast fees grey; S-Account Platform accounts heading info icon after the words, text black; grid-resize-handle tokens; ADV-051 against SHELL-ADR-028; SqlReaderBaseCancellationTests look; "Marcus Delahunt" specs to Marcus Ashcombe | Look and Feel | ?? | Now, no make up |
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
 | | A4 | P68 (full suite 2026-11-26) | Sidebar count with the sidebar open: the app draws the number grey (rgb 64,64,64), the board white on maroon (the step's locator is fixed, 43f3b42e) | Look and Feel | ?? | Next make-up window (built-app check) |
 | | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Next make-up window, with B-161's business run and the H10 scenarios on the built app |
@@ -73,13 +74,11 @@ Updated: 2026-11-26 18:54
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 
-## Shell (pointer: group 5 now)
+## Shell (pointer: group 6, SHELL-F-192)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 5 | SHELL-F-191 | Dev and test databases live in %USERPROFILE%\.databases, not the profile root: dev-up creates them there, the LocalDB sweep looks there, existing ones moved once with every stack down | Functional | 2 | After the release |
+| >> | 6 | SHELL-F-192 | Shared helper that creates LocalDB databases under %USERPROFILE%\.databases; the shell adopts it; each component adopts it in its own item | Functional | ?? | Now, no make up |
+| | 6 | - | Board Parity for PLUGIN0-B-004, SHELL-B-210, SHELL-B-212; move-localdb-files.ps1 dry run then move, every stack down | Functional | ?? | Next stack window; the move in Muhammed's window |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
-| >> | 5 | PLUGIN0-F-016 | Plugin0 gallery: screen text says Adviser | Look and Feel | 1 | After the release |
-| >> | 5 | PLUGIN0-F-017 | Plugin0 gallery: sample State Manager is Marcus Ashcombe | Look and Feel | 1 | After the release |
-| >> | 5 | PLUGIN0-B-004 | Plugin0 gallery: OFA Checklist drawn as a timeline, built as expansion panels | Look and Feel | 3 | After the release |
