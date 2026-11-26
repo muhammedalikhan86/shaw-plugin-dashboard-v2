@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 19:05
+Updated: 2026-11-26 19:06
 
 ## Hub
 
@@ -27,6 +27,7 @@ Updated: 2026-11-26 19:05
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | C5 | (raises) | Adopt SHELL-F-192: LocalDB test databases via Shell.TestKit.LocalDbDatabaseFiles (separate commit after 65c22a1b) | Functional | ?? | Code now; dotnet test in a window |
 | >> | C4 | OI-003 | Flaky "The list pages at 25" (arrangements.feature, shell target): find the cause, fix the wait or locator | Functional | 1 | Code side now; runs in its window |
 | >> | C4 | OI-007 | Flaky under load (P27 export, A14, Closed months, B-068, B4, P38, F-025, "opens to its history"; SQL timeouts): causes and fixes; shared support causes go to Shell | Functional | 3 | In its window |
 | >> | C4 | B-158, B-159 | Two more flaky tests found in the run: closed-month card height read once (poll it); cull list "show every column" needs the extra time Advisor got 2026-11-17 | Functional | 2 | In its window |
@@ -44,10 +45,11 @@ Updated: 2026-11-26 19:05
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: A5 merged; idle until the morning make-up window)
+## Advisor (pointer: group A6, adopt SHELL-F-192)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | A6 | (raises) | Adopt SHELL-F-192: LocalDB test databases via Shell.TestKit.LocalDbDatabaseFiles | Functional | ?? | Code now; dotnet test in a window |
 | | A4 | P68 (full suite 2026-11-26) | Sidebar count with the sidebar open: the app draws the number grey (rgb 64,64,64), the board white on maroon (the step's locator is fixed, 43f3b42e) | Look and Feel | ?? | Next make-up window (built-app check) |
 | | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Next make-up window, with B-161's business run and the H10 scenarios on the built app |
 | | A4 | PM-115 | SqlReaderBaseCancellationTests: looped run under load to prove the missed-cancel cause | Functional | ?? | Next make-up window |
@@ -58,6 +60,7 @@ Updated: 2026-11-26 19:05
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| | 72 | (raises) | Adopt SHELL-F-192: LocalDB test databases via Shell.TestKit.LocalDbDatabaseFiles (adds a TestKit reference to the tests and the TestData tool) | Functional | ?? | Code now; dotnet test in a window |
 | >> | 70 | (PS raises) | OFA-B-313 paperclip on the Settings Notes: files on report notes (migration, procedure file list, trail link) | Functional | 2 | Split from P2 so the release is not held |
 | >> | 70 | OFA-F-215 | Accepting an Adviser's answer updates the arrangement | Functional | 4 | After the release |
 | >> | 70 | OFA-F-217 | Step code for the P81, P84, P85 scenarios (still @skip), with the loading state's entry in shared business-tests/support | Functional | 2 | After the release |
@@ -73,11 +76,11 @@ Updated: 2026-11-26 19:05
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 
-## Shell (pointer: group 6, SHELL-F-192)
+## Shell (pointer: group 7, Plugin0 adopts SHELL-F-192)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 6 | SHELL-F-192 | Shared helper that creates LocalDB databases under %USERPROFILE%\.databases; the shell adopts it; each component adopts it in its own item | Functional | ?? | Now, no make up |
+| >> | 7 | (raises) | Adopt SHELL-F-192: LocalDB test databases via Shell.TestKit.LocalDbDatabaseFiles (Plugin0.WebAPI) | Functional | ?? | Code now; dotnet test in a window |
 | | 6 | - | Board Parity for PLUGIN0-B-004, SHELL-B-210, SHELL-B-212; move-localdb-files.ps1 dry run then move, every stack down | Functional | ?? | Next stack window; the move in Muhammed's window |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
