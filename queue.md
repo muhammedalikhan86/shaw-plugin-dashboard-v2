@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 19:20
+Updated: 2026-11-26 19:24
 
 ## Hub
 
@@ -17,7 +17,7 @@ Updated: 2026-11-26 19:20
 7. With the stack up: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database.
 8. Overnight (Muhammed, 2026-11-26): workers churn their queues; ONE STACK, windows in order ps2, Compliance, PS, Advisor, Shell. When every queued item is done: full parity check (disparity-checker, all components). Do NOT fix its findings: build the decision artifact (each finding: take in or not, board or code wins, a comment box), and wait for Muhammed to hand it back. Old parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
 8a. Designer done 2026-11-26 evening: O57 board run done (756 passed, 7 failed: 4 expected until B-160 merges, 3 being checked); sync commits next. UAT redeploy tomorrow (Muhammed).
-8b. Tonight the low-memory guard stops make up: Compliance and PS wait for Muhammed (restart compliance with CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1, or run make up himself). dotnet-test windows go on: Advisor A4 now, then Shell.
+8b. Tonight the low-memory guard stops make up: Compliance and PS wait for Muhammed (restart compliance with CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1, or run make up himself). dotnet-test windows go on: Advisor A4 now, then Shell. Morning window also re-runs @review-C131|C161|C163 x5 on the shell target (SHELL-B-213).
 9. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html) into his design project.
 10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
 11. Skill feedback for Claude Improvements: DEP-9 overruled (secrets in tracked appsettings); no Now section in the queue, Hub first; status-page shape (2026-11-26); shaw-estate databases-and-querying: the DatabaseReader login cannot see availability-group membership or other server-level facts, so never report one from it.
@@ -74,11 +74,10 @@ Updated: 2026-11-26 19:20
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 
-## Shell (pointer: group 8, shared settle wait)
+## Shell (pointer: idle; window checks wait for the morning)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 8 | (raises) | common.steps.ts: `I open` and the drop-down of `I choose … for …` end with openScreen's settle wait (App.steady, public wrapper); from PS's OFA-B-347 (checklist C131/C161, Quarantine C163) | Functional | ?? | Code now; re-run in the morning full suite |
 | | 6 | - | Board Parity for PLUGIN0-B-004, SHELL-B-210, SHELL-B-212; move-localdb-files.ps1 dry run then move, every stack down | Functional | ?? | Next stack window; the move in Muhammed's window |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
