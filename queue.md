@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 18:11
+Updated: 2026-11-26 18:46
 
 ## Hub
 
@@ -16,30 +16,28 @@ Updated: 2026-11-26 18:11
 6. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022).
 7. With the stack up: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database.
 8. Overnight (Muhammed, 2026-11-26): workers churn their queues; ONE STACK, windows in order ps2, Compliance, PS, Advisor, Shell. When every queued item is done: full parity check (disparity-checker, all components). Do NOT fix its findings: build the decision artifact (each finding: take in or not, board or code wins, a comment box), and wait for Muhammed to hand it back. Old parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
-8a. Designer done 2026-11-26 evening: O57 sync running; UAT redeploy tomorrow (Muhammed).
+8a. Designer done 2026-11-26 evening: O57 board run done (756 passed, 7 failed: 4 expected until B-160 merges, 3 being checked); sync commits next. UAT redeploy tomorrow (Muhammed).
+8b. Tonight the low-memory guard stops make up: Compliance and PS wait for Muhammed (restart compliance with CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1, or run make up himself). dotnet-test windows go on: Advisor A4 now, then Shell.
 9. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html) into his design project.
 10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
 11. Skill feedback for Claude Improvements: DEP-9 overruled (secrets in tracked appsettings); no Now section in the queue, Hub first; status-page shape (2026-11-26); shaw-estate databases-and-querying: the DatabaseReader login cannot see availability-group membership or other server-level facts, so never report one from it.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
-## Compliance (pointer: C4 flaky group now; B-160 + B-162 merge after OFA-B-337)
+## Compliance (pointer: parked at 65c22a1b; make up waits on Muhammed, the low-memory guard stops it)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | >> | C4 | OI-003 | Flaky "The list pages at 25" (arrangements.feature, shell target): find the cause, fix the wait or locator | Functional | 1 | Code side now; runs in its window |
 | >> | C4 | OI-007 | Flaky under load (P27 export, A14, Closed months, B-068, B4, P38, F-025, "opens to its history"; SQL timeouts): causes and fixes; shared support causes go to Shell | Functional | 3 | In its window |
 | >> | C4 | B-158, B-159 | Two more flaky tests found in the run: closed-month card height read once (poll it); cull list "show every column" needs the extra time Advisor got 2026-11-17 | Functional | 2 | In its window |
-| | 1 | B-160, B-162 | No-version state removed (2c2fe473); OFA Checklist notes no longer overlap (c177c9e8). Committed; .NET and business runs at the hub's go | Functional | ?? | Merge after OFA-B-337 is on main |
+| | 1 | B-160, B-162 | No-version state removed (2c2fe473); OFA Checklist notes no longer overlap (c177c9e8). Committed; .NET and business runs at the hub's go | Functional | ?? | OFA-B-337 is on main; runs when make up can start |
 | >> | C4 | B-161 | Release-build test `AttachmentOptionsValidatorTests.TheHost_FailsAtStartup_OnABadStore("appdata")` fails under load (UAT 2 step 6): cause and fix | Functional | 1 | Now, with C4 |
 
 
-## Portfolio Services 2 (pointer: UAT P0 group, OFA-B-337 + OFA-B-339)
+## Portfolio Services 2 (pointer: queue clear; only blocked items left)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | OFA-B-337 | (with the empty-Subject fallback and the "Dear ," fix) Seed every wording's v1 from its starter (the 20 in `docs/stash/OFA Workflow/references/Wording/Starters/`), in every environment (migration), so no wording is ever without a version; approved by Compliance, loaded by the OFA tool, dated the day the seed runs; migration 0227 | Functional | ?? | Running; Compliance waits on it |
-| >> | 1 | OFA-B-339 | Remove the "[Placeholder wording, awaiting approval]" marker from every email and text the PS API builds (code, appsettings, migration 0228); sweep test. Weekly report subjects: "Weekly Pending report", "Weekly Expired report" | Functional | ?? | Running; UAT P0 |
-| | X | - | Parity backlog from O47: "Signers" label in sentence case; "Salutation" label floats on the outline before typing | Look and Feel | ?? | Rows in parity-backlog.md; for triage |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
