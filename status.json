@@ -132,13 +132,14 @@
    ],
    "stage": "deploy",
    "start": "2026-11-23",
-   "pointsDone": 364.0,
-   "pointsRemaining": 43.0,
-   "pointsTotal": 407.0,
-   "itemsRemaining": 18,
+   "pointsDone": 384.0,
+   "pointsRemaining": 45.0,
+   "pointsTotal": 429.0,
+   "itemsRemaining": 21,
    "itemsRemainingUnsized": [
     "REL-022",
-    "REL-024"
+    "REL-024",
+    "OFA-B-361"
    ],
    "foundDuringBuild": {
     "pointsDone": 25.0,
@@ -302,8 +303,8 @@
    },
    {
     "date": "2026-11-27",
-    "pointsDone": 2347.0,
-    "pointsDoneThatDay": 6.0
+    "pointsDone": 2367.0,
+    "pointsDoneThatDay": 26.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -354,8 +355,8 @@
    "basis": "critical path: the latest date of the work still open (User Acceptance Testing). Component lines end at their build (buildDoneOn); every item raised after 2026-11-23 counts in User Acceptance Testing, whatever its component. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 180.34,
-   "pointsRemaining": 76.0,
-   "itemsRemaining": 27
+   "pointsRemaining": 78.0,
+   "itemsRemaining": 30
   }
  },
  "milestones": [
@@ -438,7 +439,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-27T10:24:43+11:00",
+ "updatedAt": "2026-11-27T10:35:16+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -3098,6 +3099,12 @@
    "at": "2026-11-27T10:24:43+11:00",
    "change": "Shell production plugin lock done (REL-027): the three OFA screens show only to the Development Team on the live site until go-live",
    "pointsDone": 3.0
+  },
+  {
+   "at": "2026-11-27T10:35:16+11:00",
+   "change": "Portfolio Services groups 70-72 merged: notes carry files on the reports and the Initial OFA send, an accepted answer updates the arrangement, production Chrome path, test fixes; two follow-ups raised (B-363, B-365)",
+   "pointsDone": 20.0,
+   "pointsRaised": 22.0
   }
  ],
  "foundDuringBuild": {

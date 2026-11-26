@@ -3,11 +3,11 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 10:26
+Updated: 2026-11-27 10:33
 
 ## Hub
 
-1. UAT redeploy today, 2026-11-27 (Muhammed), after the morning window: Portfolio Services HELD until PS group 70 (with 71, 72) is merged (Muhammed, 2026-11-27) (ps2's P0 group, OFA-F-211, OFA-F-209 part 1), Compliance (B-158 to B-162, merged 470dbac4), advisor-dashboard (F-144 timeline, A5), and PS groups 70-72 if their business run passes. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
+1. UAT redeploy today, 2026-11-27 (Muhammed), after the morning window: Portfolio Services hold lifted: PS groups 70-72 merged (a2b449d0) (ps2's P0 group, OFA-F-211, OFA-F-209 part 1), Compliance (B-158 to B-162, merged 470dbac4), advisor-dashboard (F-144 timeline, A5), and PS groups 70-72 if their business run passes. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 2a. Annature and Chrome test release (Muhammed, 2026-11-27): the next UAT release after PS group 73 ships REL-029 with UAT `Signing:BaseUrl` set to the live Annature address. Hub drives UAT in Playwright: make the notice PDF, send it, track it on the site; Muhammed reports the UAT mailbox; then the other Annature paths (reminder, remove signer, void, signed PDF). Muhammed asks the other testers to stop using UAT for the test window. Then a redeploy with `Signing:BaseUrl` empty again closes the Annature test.
 2. Muhammed opens one renewal notice PDF on the test site (the Chrome check, REL-015).
 3. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`.
@@ -39,6 +39,7 @@ Updated: 2026-11-27 10:26
 | >> | 4 | OFA-B-361 | The State Manager cell shows its second line as the board draws it; test data for a blank-address and an excluded-branch row (C141) | Functional | ?? | Group 4; after PS group 70 merges |
 | | 4 | O59 tests | Fix the `I open "Reason"` step so both @review-O59 scenarios open the drop-down (stale test, sync 27-11) | Test | 1 | Group 4 |
 | | 4 | O60 | Raise design row: O58's column makes the record's Platform accounts table wider than its card at 1440 and 1680px | Design row | - | Group 4; goes to the designer next round |
+| | 4 | OFA-B-365 | O51 Back Office empty list and O57 DART wording on S20244: words and data in no code or seed since the 26-11 syncs; Back Office requests, which F-211 changed | Functional | 2 | Group 4 |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
@@ -53,25 +54,16 @@ Updated: 2026-11-27 10:26
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: group 70 built (8241b0c6; B-349, B-351, B-353 fixed, not yet committed); not merged)
+## Portfolio Services (pointer: 73a: REL-029 + UAT BaseUrl; then 73b: REL-028, B-363)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 70 | OFA-B-349 | Ready-to-issue scenarios open Issuance first (test-only) | Functional | 1 | Fixed, uncommitted |
-| >> | 70 | OFA-B-351 | The month page draws its checklist card while it loads (P85) | Functional | 2 | Fixed, uncommitted |
-| >> | 70 | OFA-B-353 | Enter the answers on a quarantined row shows "Changed by the OFA Team" and the note reaches the row (S20231) | Functional | 2 | Fixed, uncommitted |
-| | 72 | OFA-F-219 | Adopt SHELL-F-192 (TestKit reference, TestData tool) | Functional | 2 | Built, PS .NET 4567 green (7e48c032); merges with groups 70 and 71 |
 | | X | (PS raises) | The make-up register reset loads TestData.dll without Shell.TestKit.dll beside it, so it still creates in the old place | Functional | ?? | Not tonight |
-| >> | 70 | OFA-B-335 | OFA-B-313 paperclip on the Settings Notes: files on report notes (migration, procedure file list, trail link) | Functional | 2 | Fixed (8241b0c6) |
-| >> | 70 | OFA-F-215 | Accepting an Adviser's answer updates the arrangement | Functional | 4 | Done (8241b0c6) |
-| >> | 70 | OFA-F-217 | Step code for the P81, P84, P85 scenarios (still @skip), with the loading state's entry in shared business-tests/support | Functional | 2 | Done (8241b0c6); shell target pending |
-| >> | 70 | OFA-B-341 | Production `Chrome:Path` set to the path the test site uses (Chrome is on sic2iws1; REL-015), its comment and `ProductionSettingsTests` | Functional | 1 | Fixed (8241b0c6, tests 7e48c032) |
-| >> | 70 | - | Overview "Show every hidden column" times out (key-columns.steps.ts:81): P77 "key columns never cut" and P78 headings at 1280 and 1920 fail on the shell target, alone too (full suite 2026-11-26) | Functional | ?? | After the release |
-| | 73 | REL-028 | Gated prod settings: every email to the UAT mailbox until go-live, mail hold on, timed jobs off until go-live (own switch), guard tests, runbook fix | Functional | 3 | After group 70 merges; blocks the prod release |
-| | 73 | REL-029 | Every Annature email on UAT goes to the UAT mailbox (signers and viewers swapped, mobiles cleared), with start-up guards | Functional | 2 | Group 73; after group 70 merges |
-| | 71 | OFA-B-347 | Flake pass committed c52b99d5 (AttachmentRegistration race, O52 wait); re-runs in the morning window | Functional | ?? | Re-run with group 70's business run |
+| >> | 73a | REL-029 | Every Annature email on UAT goes to the UAT mailbox (signers and viewers swapped, mobiles cleared), with start-up guards | Functional | 2 | Group 73a, urgent: first, then the UAT Signing:BaseUrl commit |
+| >> | 73a | UAT `Signing:BaseUrl` | Separate settings commit: UAT `Signing:BaseUrl` set to the live Annature address for the Annature and Chrome test | Functional | 1 | Group 73a, urgent; after REL-029 |
+| | 73b | REL-028 | Gated prod settings: every email to the UAT mailbox until go-live, mail hold on, timed jobs off until go-live (own switch), guard tests, runbook fix | Functional | 3 | Group 73b, after 73a; blocks the prod release |
+| | 73b | OFA-B-363 | P83 "Issuing the month sends the signing requests" needs the artboards-only line its neighbour has | Functional | 1 | Group 73b |
 | | 70 | - | Handoff and test runbook: Compliance ("Renewal notice", B-157) and Advisor ("Signed renewal notice") now label OFAREN | Functional | 0 | After B-157 is on main |
-| >> | 70 | OFA-B-271 | Send electronically takes the note's attachments, kept on the record, not sent to the signer (migration 0232) | Functional | 2 | Fixed (8241b0c6) |
 | | X | OFA-B-345 | Business scenario for F-215, and the next reference date shown on the record | Functional | ?? | Waits on a design row in the next designer round |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 | | X | OFA-F-209 part 2 | Live DART filing check (part 1, the signing-status reader, moved to ps2) | Functional | - | Blocked: DART retest after the 2nd UAT release |
