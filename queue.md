@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 16:02
+Updated: 2026-11-26 16:04
 
 ## Hub
 
@@ -27,13 +27,14 @@ Updated: 2026-11-26 16:02
 | | C4 | OI-003 | Flaky "The list pages at 25" (arrangements.feature, shell target): find the cause, fix the wait or locator | Functional | 1 | Code side now; runs in its window |
 | | C4 | OI-007 | Flaky under load (P27 export, A14, Closed months, B-068, B4, P38, F-025, "opens to its history"; SQL timeouts): causes and fixes; shared support causes go to Shell | Functional | 3 | In its window |
 | | C4 | B-158, B-159 | Two more flaky tests found in the run: closed-month card height read once (poll it); cull list "show every column" needs the extra time Advisor got 2026-11-17 | Functional | 2 | In its window |
-| | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
+| | C5 | (Compliance raises) | Every wording starts at v1 (its starter): remove the "Does not exist yet" chip, the PLACEHOLDER line and "until then the placeholder is sent"; B-156 and the W44 scenario withdrawn (superseded) | Functional | ?? | After PS's v1 seed; ahead of the test-site testers |
 
 
-## Portfolio Services 2 (pointer: parked; nothing left for the release; the rest is looks (wait) or blocked)
+## Portfolio Services 2 (pointer: wording v1 seed next)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| | 1 | (PS2 raises) | Seed every wording's v1 from its starter (the 20 in `docs/stash/OFA Workflow/references/Wording/Starters/`), in every environment (migration), so no wording is ever without a version; approval details per Muhammed | Functional | ?? | Next; Compliance waits on it |
 | | X | - | Parity backlog from O47: "Signers" label in sentence case; "Salutation" label floats on the outline before typing | Look and Feel | ?? | Rows in parity-backlog.md; for triage |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
