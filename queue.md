@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 11:28
+Updated: 2026-11-26 11:30
 
 ## Now
 
@@ -16,11 +16,11 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 5. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022).
 6. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 
-## Compliance (pointer: F-055 green (980/980), finalizing docs then ready to merge; C4 proving runs after the release)
+## Compliance (pointer: F-055 ready to merge 8e6c2f49, merges after Shell commits; C4 proving runs after the release)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | C4 | COMPLIANCE-DASHBOARD-F-055 | The Compliance API refuses the test sign-in outside the test host, as SHELL-F-190 does (PM-057) | Functional | 2 | .NET green; docs finalizing, then ready to merge |
+| >> | C4 | COMPLIANCE-DASHBOARD-F-055 | The Compliance API refuses the test sign-in outside the test host, as SHELL-F-190 does (PM-057) | Functional | 2 | Ready to merge; waits for Shell's commit (doc overlap) |
 | >> | C4 | OI-003 | Flaky "The list pages at 25" (arrangements.feature, shell target): find the cause, fix the wait or locator | Functional | 1 | Code side now; runs in its window |
 | >> | C4 | OI-007 | Flaky under load (P27 export, A14, Closed months, B-068, B4, P38, F-025, "opens to its history"; SQL timeouts): causes and fixes; shared support causes go to Shell | Functional | 3 | In its window |
 | >> | C4 | B-158, B-159 | Two more flaky tests found in the run: closed-month card height read once (poll it); cull list "show every column" needs the extra time Advisor got 2026-11-17 | Functional | 2 | In its window |
