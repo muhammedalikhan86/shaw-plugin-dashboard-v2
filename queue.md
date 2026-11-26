@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 10:07
+Updated: 2026-11-27 10:15
 
 ## Hub
 
@@ -21,20 +21,20 @@ Updated: 2026-11-27 10:07
 10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
-## Compliance (pointer: B-160 merged 8f76b0f9; W46 with the designer)
+## Compliance (pointer: idle, all merged (SHELL-B-214 scenario pass c395d2e5); W46 with the designer)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | | X | W46 | Renewal notice versions on the board get their own starter v1; 4 Wording scenarios wait on it (@review-W46) | Look and Feel | ?? | Next designer round (prompt with Muhammed) |
 
 
-## Portfolio Services 2 (pointer: group 4, B-355/357/359/361)
+## Portfolio Services 2 (pointer: group 4; B-355 and B-359 built, test data for B-357 in progress, uncommitted)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | >> | 4 | OFA-B-355 | The Exceptions report reads as at the test clock | Functional | 2 | Built (69dff1d9) |
-| >> | 4 | OFA-B-357 | Test data gets a quarantined row with no State Manager (C141) | Functional | 1 | Planning |
-| >> | 4 | OFA-B-359 | The register reset also undoes an earlier run's writes (S20187) | Functional | 2 | Planning |
+| >> | 4 | OFA-B-357 | Test data gets a quarantined row with no State Manager (C141) | Functional | 1 | Building (test data, uncommitted) |
+| >> | 4 | OFA-B-359 | The register reset also undoes an earlier run's writes (S20187) | Functional | 2 | Built (468740fc, migration 0235) |
 | >> | 4 | OFA-B-361 | The State Manager cell shows its second line as the board draws it; test data for a blank-address and an excluded-branch row (C141) | Functional | ?? | Group 4; after PS group 70 merges |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
@@ -50,24 +50,24 @@ Updated: 2026-11-27 10:07
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: group 70 on the stack in its checkout)
+## Portfolio Services (pointer: group 70 built (8241b0c6; B-349, B-351, B-353 fixed, not yet committed); not merged)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 70 | OFA-B-349 | Ready-to-issue scenarios open Issuance first (test-only) | Functional | 1 | Fixed, in group 70 |
-| >> | 70 | OFA-B-351 | The month page draws its checklist card while it loads (P85) | Functional | 2 | Group 70 |
-| >> | 70 | OFA-B-353 | Enter the answers on a quarantined row shows "Changed by the OFA Team" and the note reaches the row (S20231) | Functional | 2 | Group 70; tell hub if bigger |
+| >> | 70 | OFA-B-349 | Ready-to-issue scenarios open Issuance first (test-only) | Functional | 1 | Fixed, uncommitted |
+| >> | 70 | OFA-B-351 | The month page draws its checklist card while it loads (P85) | Functional | 2 | Fixed, uncommitted |
+| >> | 70 | OFA-B-353 | Enter the answers on a quarantined row shows "Changed by the OFA Team" and the note reaches the row (S20231) | Functional | 2 | Fixed, uncommitted |
 | | 72 | OFA-F-219 | Adopt SHELL-F-192 (TestKit reference, TestData tool) | Functional | 2 | Built, PS .NET 4567 green (7e48c032); merges with groups 70 and 71 |
 | | X | (PS raises) | The make-up register reset loads TestData.dll without Shell.TestKit.dll beside it, so it still creates in the old place | Functional | ?? | Not tonight |
-| >> | 70 | (PS raises) | OFA-B-313 paperclip on the Settings Notes: files on report notes (migration, procedure file list, trail link) | Functional | 2 | Split from P2 so the release is not held |
-| >> | 70 | OFA-F-215 | Accepting an Adviser's answer updates the arrangement | Functional | 4 | After the release |
-| >> | 70 | OFA-F-217 | Step code for the P81, P84, P85 scenarios (still @skip), with the loading state's entry in shared business-tests/support | Functional | 2 | After the release |
-| >> | 70 | (PS raises) | Production `Chrome:Path` set to the path the test site uses (Chrome is on sic2iws1; REL-015), its comment and `ProductionSettingsTests` | Functional | 1 | After the release |
+| >> | 70 | OFA-B-335 | OFA-B-313 paperclip on the Settings Notes: files on report notes (migration, procedure file list, trail link) | Functional | 2 | Fixed (8241b0c6) |
+| >> | 70 | OFA-F-215 | Accepting an Adviser's answer updates the arrangement | Functional | 4 | Done (8241b0c6) |
+| >> | 70 | OFA-F-217 | Step code for the P81, P84, P85 scenarios (still @skip), with the loading state's entry in shared business-tests/support | Functional | 2 | Done (8241b0c6); shell target pending |
+| >> | 70 | OFA-B-341 | Production `Chrome:Path` set to the path the test site uses (Chrome is on sic2iws1; REL-015), its comment and `ProductionSettingsTests` | Functional | 1 | Fixed (8241b0c6, tests 7e48c032) |
 | >> | 70 | - | Overview "Show every hidden column" times out (key-columns.steps.ts:81): P77 "key columns never cut" and P78 headings at 1280 and 1920 fail on the shell target, alone too (full suite 2026-11-26) | Functional | ?? | After the release |
 | | 73 | REL-028 | Gated prod settings: every email to the UAT mailbox until go-live, mail hold on, timed jobs off until go-live (own switch), guard tests, runbook fix | Functional | 3 | After group 70 merges; blocks the prod release |
 | | 71 | OFA-B-347 | Flake pass committed c52b99d5 (AttachmentRegistration race, O52 wait); re-runs in the morning window | Functional | ?? | Re-run with group 70's business run |
 | | 70 | - | Handoff and test runbook: Compliance ("Renewal notice", B-157) and Advisor ("Signed renewal notice") now label OFAREN | Functional | 0 | After B-157 is on main |
-| >> | 70 | OFA-B-271 | Send electronically takes the note's attachments, kept on the record, not sent to the signer (migration 0232) | Functional | 2 | Taken in (Muhammed, 2026-11-26); after the release |
+| >> | 70 | OFA-B-271 | Send electronically takes the note's attachments, kept on the record, not sent to the signer (migration 0232) | Functional | 2 | Fixed (8241b0c6) |
 | | X | OFA-B-345 | Business scenario for F-215, and the next reference date shown on the record | Functional | ?? | Waits on a design row in the next designer round |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 | | X | OFA-F-209 part 2 | Live DART filing check (part 1, the signing-status reader, moved to ps2) | Functional | - | Blocked: DART retest after the 2nd UAT release |
@@ -79,7 +79,7 @@ Updated: 2026-11-27 10:07
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 5a | REL-027 | Prod plugin lock: the three OFA plugins show only to the real signed-in Development Team member (Act As keeps working); blank setting = go-live | Functional | 3 | Now; blocks the prod release |
+| >> | 5a | REL-027 | Prod plugin lock: the three OFA plugins show only to the real signed-in Development Team member (Act As keeps working); blank setting = go-live | Functional | 3 | Building (uncommitted in the hub checkout); blocks the prod release |
 | | 6 | - | Board Parity for PLUGIN0-B-004, SHELL-B-210, SHELL-B-212; move-localdb-files.ps1 dry run then move, every stack down | Functional | ?? | Next stack window; the move in Muhammed's window |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |

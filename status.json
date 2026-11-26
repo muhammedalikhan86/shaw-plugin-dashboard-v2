@@ -133,9 +133,9 @@
    "stage": "deploy",
    "start": "2026-11-23",
    "pointsDone": 361.0,
-   "pointsRemaining": 38.0,
-   "pointsTotal": 399.0,
-   "itemsRemaining": 16,
+   "pointsRemaining": 44.0,
+   "pointsTotal": 405.0,
+   "itemsRemaining": 18,
    "itemsRemainingUnsized": [
     "REL-022",
     "REL-024"
@@ -354,8 +354,8 @@
    "basis": "critical path: the latest date of the work still open (User Acceptance Testing). Component lines end at their build (buildDoneOn); every item raised after 2026-11-23 counts in User Acceptance Testing, whatever its component. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 180.34,
-   "pointsRemaining": 71.0,
-   "itemsRemaining": 25
+   "pointsRemaining": 77.0,
+   "itemsRemaining": 27
   }
  },
  "milestones": [
@@ -438,7 +438,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-27T09:53:38+11:00",
+ "updatedAt": "2026-11-27T10:17:22+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -2638,7 +2638,7 @@
   },
   {
    "at": "2026-11-24T02:53:42+11:00",
-   "change": "Shell group 47 landed on main (3674bb54): SHELL-B-184 shared tables no longer re-fit on changes outside a table (5 questionnaire answers: 10 re-fits, 213 ms, down to none), SHELL-B-185 test setup can put a person in two Demo groups, SHELL-B-186 Demo group renamed 'CAT 1 and CAT 2 · Service questions'.",
+   "change": "Shell group 47 landed on main (3674bb54): SHELL-B-184 shared tables no longer re-fit on changes outside a table (5 questionnaire answers: 10 re-fits, 213 ms, down to none), SHELL-B-185 test setup can put a person in two Demo groups, SHELL-B-186 Demo group renamed 'CAT 1 and CAT 2 \u00b7 Service questions'.",
    "pointsDone": 3.0,
    "pointsRaised": 3.0
   },
@@ -3088,6 +3088,11 @@
    "change": "Compliance B-158 to B-162 and Shell B-214 merged",
    "pointsDone": 3.0,
    "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-27T10:17:22+11:00",
+   "change": "Two go-live safety items raised: the OFA screens shown only to the Development Team, and Portfolio Services emails and timed jobs held, until go-live",
+   "pointsRaised": 6.0
   }
  ],
  "foundDuringBuild": {
@@ -3220,6 +3225,20 @@
    "status": "Open"
   },
   {
+   "item": "Live site: the three OFA screens show only to the Development Team until go-live",
+   "size": 3,
+   "phase": "Go-live (set-up until sign-off, then switch on)",
+   "owner": "Development team",
+   "status": "Open"
+  },
+  {
+   "item": "Live site: every Portfolio Services email goes to the test inbox, emails held and timed jobs off until go-live",
+   "size": 3,
+   "phase": "Go-live (set-up until sign-off, then switch on)",
+   "owner": "Development team",
+   "status": "Open"
+  },
+  {
    "item": "Live release, labelled and recorded",
    "size": 2,
    "phase": "Go-live (set-up until sign-off, then switch on)",
@@ -3241,7 +3260,7 @@
    "status": "Open"
   },
   {
-   "item": "Switch on emails, e-signing and DART filing",
+   "item": "Go-live switch-on, in order: emails to real people, timed jobs, e-signing, DART filing, then the OFA screens shown to the business",
    "size": 1,
    "phase": "Live checks (read only)",
    "owner": "Muhammed",
