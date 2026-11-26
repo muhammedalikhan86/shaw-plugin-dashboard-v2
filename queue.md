@@ -16,14 +16,13 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 5. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022).
 6. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 
-## Compliance (pointer: F-055 and C4 code merged da0eb84e; C4 proving runs after the release)
+## Compliance (pointer: waiting; F-055 merged; C4 proving runs after the release)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | C4 | COMPLIANCE-DASHBOARD-F-055 | The Compliance API refuses the test sign-in outside the test host, as SHELL-F-190 does (PM-057) | Functional | 2 | Ready to merge; waits for Shell's commit (doc overlap) |
-| >> | C4 | OI-003 | Flaky "The list pages at 25" (arrangements.feature, shell target): find the cause, fix the wait or locator | Functional | 1 | Code side now; runs in its window |
-| >> | C4 | OI-007 | Flaky under load (P27 export, A14, Closed months, B-068, B4, P38, F-025, "opens to its history"; SQL timeouts): causes and fixes; shared support causes go to Shell | Functional | 3 | In its window |
-| >> | C4 | B-158, B-159 | Two more flaky tests found in the run: closed-month card height read once (poll it); cull list "show every column" needs the extra time Advisor got 2026-11-17 | Functional | 2 | In its window |
+| | C4 | OI-003 | Flaky "The list pages at 25" (arrangements.feature, shell target): find the cause, fix the wait or locator | Functional | 1 | Code side now; runs in its window |
+| | C4 | OI-007 | Flaky under load (P27 export, A14, Closed months, B-068, B4, P38, F-025, "opens to its history"; SQL timeouts): causes and fixes; shared support causes go to Shell | Functional | 3 | In its window |
+| | C4 | B-158, B-159 | Two more flaky tests found in the run: closed-month card height read once (poll it); cull list "show every column" needs the extra time Advisor got 2026-11-17 | Functional | 2 | In its window |
 | | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
 
 
@@ -36,14 +35,13 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: F-170, B-161, book tip, S-Account words merged; B-161 card-height business run in the hub's pre-release window; then A4)
+## Advisor (pointer: parked; F-170 and the words merged; B-161 card-height run in the hub's pre-release window)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | A4 | ADVISOR-DASHBOARD-F-170 | The Advisor API refuses the test sign-in outside the test host, as SHELL-F-190 does (PM-057) | Functional | 3 | Code committed; .NET slot after Shell's, goes in the UAT release |
 | | X | P86 | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | ?? | Waits: Power BI pages hidden until after the OFA work |
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
-| >> | A4 | - | card-looks.steps.ts reads card height once and never retries (same cause as Compliance B-158): poll it | Functional | ?? | With A4 |
+| | A4 | - | card-looks.steps.ts reads card height once and never retries (same cause as Compliance B-158): poll it | Functional | ?? | With A4 |
 | | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Window after PS's flaky group |
 | | A4 | F-144 | The OFA timeline: copy the OFA history section PS and Compliance already have (Luke, 2026-11-26) | Functional | 6 | After the UAT release, with A4 |
 
@@ -64,12 +62,10 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 
-## Shell (pointer: group 4 merged 4ffdf1b4; B-210 and B-212 measurement in the full-suite window)
+## Shell (pointer: waiting; group 4 merged 4ffdf1b4; B-210 and B-212 measurement in the full-suite window)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 4 | (Shell raises) | Secrets into tracked appsettings, as PhoenixV3 does (Muhammed, 2026-11-26): Graph photo values into Shell.WebAPI config (fixes the initials avatar); DEP-9, deployment README, release runbook and ADR-013 amended; deploy/server-secrets scripts removed | Functional | 2 | First; goes in the UAT release |
-| | 4 | B106 | Notification frames: Mark all as read and the close X as mat-button / mat-icon-button in every frame (designer redrew 2026-11-26) | Look and Feel | ?? | After the avatar fix, code only |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
 
