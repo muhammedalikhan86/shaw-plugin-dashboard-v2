@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 10:23
+Updated: 2026-11-27 10:25
 
 ## Hub
 
@@ -67,6 +67,7 @@ Updated: 2026-11-27 10:23
 | >> | 70 | OFA-B-341 | Production `Chrome:Path` set to the path the test site uses (Chrome is on sic2iws1; REL-015), its comment and `ProductionSettingsTests` | Functional | 1 | Fixed (8241b0c6, tests 7e48c032) |
 | >> | 70 | - | Overview "Show every hidden column" times out (key-columns.steps.ts:81): P77 "key columns never cut" and P78 headings at 1280 and 1920 fail on the shell target, alone too (full suite 2026-11-26) | Functional | ?? | After the release |
 | | 73 | REL-028 | Gated prod settings: every email to the UAT mailbox until go-live, mail hold on, timed jobs off until go-live (own switch), guard tests, runbook fix | Functional | 3 | After group 70 merges; blocks the prod release |
+| | 73 | REL-029 | Every Annature email on UAT goes to the UAT mailbox (signers and viewers swapped, mobiles cleared), with start-up guards | Functional | 2 | Group 73; after group 70 merges |
 | | 71 | OFA-B-347 | Flake pass committed c52b99d5 (AttachmentRegistration race, O52 wait); re-runs in the morning window | Functional | ?? | Re-run with group 70's business run |
 | | 70 | - | Handoff and test runbook: Compliance ("Renewal notice", B-157) and Advisor ("Signed renewal notice") now label OFAREN | Functional | 0 | After B-157 is on main |
 | >> | 70 | OFA-B-271 | Send electronically takes the note's attachments, kept on the record, not sent to the signer (migration 0232) | Functional | 2 | Fixed (8241b0c6) |
