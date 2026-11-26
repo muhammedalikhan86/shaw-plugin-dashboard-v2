@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 11:47
+Updated: 2026-11-26 11:58
 
 ## Now
 
@@ -40,7 +40,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: A4 code committed 3c6149ed, book tip 05bc5eef; F-170 .NET slot after Shell, in the release; A3 ebb6fda1 merges after Shell commits)
+## Advisor (pointer: A4 code committed 3c6149ed, book tip 05bc5eef, S-Account words d5781157; F-170 .NET slot after Shell, in the release; A3 ebb6fda1 merges after Shell commits)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
