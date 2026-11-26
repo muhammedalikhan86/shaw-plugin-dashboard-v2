@@ -3,12 +3,12 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 10:33
+Updated: 2026-11-27 10:37
 
 ## Hub
 
 1. UAT redeploy today, 2026-11-27 (Muhammed), after the morning window: Portfolio Services hold lifted: PS groups 70-72 merged (a2b449d0) (ps2's P0 group, OFA-F-211, OFA-F-209 part 1), Compliance (B-158 to B-162, merged 470dbac4), advisor-dashboard (F-144 timeline, A5), and PS groups 70-72 if their business run passes. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
-2a. Annature and Chrome test release (Muhammed, 2026-11-27): the next UAT release after PS group 73 ships REL-029 with UAT `Signing:BaseUrl` set to the live Annature address. Hub drives UAT in Playwright: make the notice PDF, send it, track it on the site; Muhammed reports the UAT mailbox; then the other Annature paths (reminder, remove signer, void, signed PDF). Muhammed asks the other testers to stop using UAT for the test window. Then a redeploy with `Signing:BaseUrl` empty again closes the Annature test.
+2a. Annature and Chrome test release (Muhammed, 2026-11-27): the next UAT release after PS group 73 ships REL-029 with UAT `Signing:BaseUrl` set to the live Annature address. Hub drives UAT in Playwright: make the notice PDF, send it, track it on the site; Muhammed reports the UAT mailbox; then the other Annature paths (reminder, remove signer, void, signed PDF). Muhammed asks the other testers to stop using UAT for the test window; the test date moves to whenever group 73 is ready (no rush, Muhammed 2026-11-27). Then a redeploy with `Signing:BaseUrl` empty again closes the Annature test.
 2. Muhammed opens one renewal notice PDF on the test site (the Chrome check, REL-015).
 3. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`.
 4. Code freeze 2026-12-11. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker.
@@ -54,15 +54,15 @@ Updated: 2026-11-27 10:33
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: 73a: REL-029 + UAT BaseUrl; then 73b: REL-028, B-363)
+## Portfolio Services (pointer: group 73: REL-029, REL-028, B-363, then the UAT BaseUrl commit last)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | | X | (PS raises) | The make-up register reset loads TestData.dll without Shell.TestKit.dll beside it, so it still creates in the old place | Functional | ?? | Not tonight |
-| >> | 73a | REL-029 | Every Annature email on UAT goes to the UAT mailbox (signers and viewers swapped, mobiles cleared), with start-up guards | Functional | 2 | Group 73a, urgent: first, then the UAT Signing:BaseUrl commit |
-| >> | 73a | UAT `Signing:BaseUrl` | Separate settings commit: UAT `Signing:BaseUrl` set to the live Annature address for the Annature and Chrome test | Functional | 1 | Group 73a, urgent; after REL-029 |
-| | 73b | REL-028 | Gated prod settings: every email to the UAT mailbox until go-live, mail hold on, timed jobs off until go-live (own switch), guard tests, runbook fix | Functional | 3 | Group 73b, after 73a; blocks the prod release |
-| | 73b | OFA-B-363 | P83 "Issuing the month sends the signing requests" needs the artboards-only line its neighbour has | Functional | 1 | Group 73b |
+| >> | 73 | REL-029 | Every Annature email on UAT goes to the UAT mailbox (signers and viewers swapped, mobiles cleared), with start-up guards | Functional | 2 | Group 73a, urgent: first, then the UAT Signing:BaseUrl commit |
+| >> | 73 | UAT `Signing:BaseUrl` | Separate settings commit: UAT `Signing:BaseUrl` set to the live Annature address for the Annature and Chrome test | Functional | 1 | Group 73a, urgent; after REL-029 |
+| >> | 73 | REL-028 | Gated prod settings: every email to the UAT mailbox until go-live, mail hold on, timed jobs off until go-live (own switch), guard tests, runbook fix | Functional | 3 | Group 73b, after 73a; blocks the prod release |
+| >> | 73 | OFA-B-363 | P83 "Issuing the month sends the signing requests" needs the artboards-only line its neighbour has | Functional | 1 | Group 73b |
 | | 70 | - | Handoff and test runbook: Compliance ("Renewal notice", B-157) and Advisor ("Signed renewal notice") now label OFAREN | Functional | 0 | After B-157 is on main |
 | | X | OFA-B-345 | Business scenario for F-215, and the next reference date shown on the record | Functional | ?? | Waits on a design row in the next designer round |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
