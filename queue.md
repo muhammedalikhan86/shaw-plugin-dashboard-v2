@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 10:37
+Updated: 2026-11-27 10:39
 
 ## Hub
 
@@ -38,7 +38,7 @@ Updated: 2026-11-27 10:37
 | >> | 4 | OFA-B-359 | The register reset also undoes an earlier run's writes (S20187) | Functional | 2 | Built (468740fc, migration 0235) |
 | >> | 4 | OFA-B-361 | The State Manager cell shows its second line as the board draws it; test data for a blank-address and an excluded-branch row (C141) | Functional | ?? | Group 4; after PS group 70 merges |
 | | 4 | O59 tests | Fix the `I open "Reason"` step so both @review-O59 scenarios open the drop-down (stale test, sync 27-11) | Test | 1 | Group 4 |
-| | 4 | O60 | Raise design row: O58's column makes the record's Platform accounts table wider than its card at 1440 and 1680px | Design row | - | Group 4; goes to the designer next round |
+| | 4 | O60 | Raise design row: O58's column makes the record's Platform accounts table wider than its card at 1440 and 1680px | Design row | - | Group 4; withdrawn (inside O18 scroll box), scenario kept as a guard |
 | | 4 | OFA-B-365 | O51 Back Office empty list and O57 DART wording on S20244: words and data in no code or seed since the 26-11 syncs; Back Office requests, which F-211 changed | Functional | 2 | Group 4 |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
