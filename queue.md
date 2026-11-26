@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 12:45
+Updated: 2026-11-26 12:46
 
 ## Now
 
@@ -69,6 +69,9 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | 5 | SHELL-F-191 | Dev and test databases live in %USERPROFILE%\.databases, not the profile root: dev-up creates them there, the LocalDB sweep looks there, existing ones moved once with every stack down | Functional | 2 | After the release |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
+| | X | PLUGIN0-F-016 | Plugin0 gallery: screen text says Adviser | Look and Feel | 1 | After the release |
+| | X | PLUGIN0-F-017 | Plugin0 gallery: sample State Manager is Marcus Ashcombe | Look and Feel | 1 | After the release |
+| | X | PLUGIN0-B-004 | Plugin0 gallery: OFA Checklist drawn as a timeline, built as expansion panels | Look and Feel | 3 | After the release |
 
 
 ## Hub
