@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 08:18
+Updated: 2026-11-27 08:30
 
 ## Hub
 
@@ -19,7 +19,6 @@ Updated: 2026-11-27 08:18
 8c. Next designer round, rows owed: OFA-B-345 (next reference date on the record); O53 board fix (Move to cull list offers "Deceased estate, no OFA" only when DART marks the estate, per OFA-F-211 A3).
 9. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html) into his design project.
 10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
-11. Skill feedback for Claude Improvements: DEP-9 overruled (secrets in tracked appsettings); no Now section in the queue, Hub first; status-page shape (2026-11-26); shaw-estate databases-and-querying: the DatabaseReader login cannot see availability-group membership or other server-level facts, so never report one from it.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
 ## Compliance (pointer: parked at 65c22a1b; make up waits on Muhammed, the low-memory guard stops it)
