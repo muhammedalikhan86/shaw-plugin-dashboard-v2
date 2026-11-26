@@ -1257,3 +1257,10 @@ mat-dialog-content > div[data-i13]:empty{display:none!important}
 .app-layer table.ot :is(th,td):is(.x250,[classname~="x250"]){min-width:250px;max-width:500px;box-sizing:border-box}
 /* O27: a disabled file field (SOA › Open from DART…) at Material's disabled opacity */
 .app-layer mat-form-field[disabled="true"] .mofi{opacity:.38;cursor:default!important;pointer-events:none}
+
+/* B123: the OFA questionnaire freezes a fourth column, Platform accounts, after Adviser code and S-Account and account name */
+.app-layer table.ot[data-frz*="4"] :is(th,td):nth-child(3){box-sizing:border-box;width:240px;min-width:240px;max-width:240px;box-shadow:none}
+.app-layer table.ot[data-frz*="4"] :is(th,td):nth-child(4){position:sticky;left:384px;z-index:2;background-color:var(--mat-sys-surface);box-shadow:inset -1px 0 0 var(--mat-sys-outline-variant)}
+.app-layer table.ot[data-frz*="4"] tbody tr:nth-child(even)>td:nth-child(4){background-color:inherit}
+.app-layer table.ot[data-frz*="4"] thead th:nth-child(4){z-index:6!important;background-color:var(--mat-sys-surface)!important}
+.app-layer table.ot[data-frz*="4"] tbody td:nth-child(4){z-index:3!important}
