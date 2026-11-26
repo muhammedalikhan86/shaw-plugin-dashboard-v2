@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 13:33
+Updated: 2026-11-26 13:41
 
 ## Now
 
@@ -14,7 +14,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 3. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
 4. Advisor's two Power BI pages (Book of business, and the dashboard with the revenue cards) wait until the OFA work is complete: data security and user segregation come first (Muhammed, 2026-11-26).
 5. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022).
-6. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` with an entry in `uat-notes.json` `changelogs`; after the deploy, update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
+6. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`; after the deploy, update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 
 ## Compliance (pointer: waiting; F-055 merged; C4 proving runs after the release)
 
