@@ -132,10 +132,10 @@
    ],
    "stage": "deploy",
    "start": "2026-11-23",
-   "pointsDone": 361.0,
-   "pointsRemaining": 44.0,
+   "pointsDone": 364.0,
+   "pointsRemaining": 41.0,
    "pointsTotal": 405.0,
-   "itemsRemaining": 18,
+   "itemsRemaining": 17,
    "itemsRemainingUnsized": [
     "REL-022",
     "REL-024"
@@ -302,8 +302,8 @@
    },
    {
     "date": "2026-11-27",
-    "pointsDone": 2344.0,
-    "pointsDoneThatDay": 3.0
+    "pointsDone": 2347.0,
+    "pointsDoneThatDay": 6.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -354,8 +354,8 @@
    "basis": "critical path: the latest date of the work still open (User Acceptance Testing). Component lines end at their build (buildDoneOn); every item raised after 2026-11-23 counts in User Acceptance Testing, whatever its component. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 180.34,
-   "pointsRemaining": 77.0,
-   "itemsRemaining": 27
+   "pointsRemaining": 74.0,
+   "itemsRemaining": 26
   }
  },
  "milestones": [
@@ -438,7 +438,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-27T10:17:22+11:00",
+ "updatedAt": "2026-11-27T10:24:43+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -3093,6 +3093,11 @@
    "at": "2026-11-27T10:17:22+11:00",
    "change": "Two go-live safety items raised: the OFA screens shown only to the Development Team, and Portfolio Services emails and timed jobs held, until go-live",
    "pointsRaised": 6.0
+  },
+  {
+   "at": "2026-11-27T10:24:43+11:00",
+   "change": "Shell production plugin lock done (REL-027): the three OFA screens show only to the Development Team on the live site until go-live",
+   "pointsDone": 3.0
   }
  ],
  "foundDuringBuild": {
@@ -3229,7 +3234,7 @@
    "size": 3,
    "phase": "Go-live (set-up until sign-off, then switch on)",
    "owner": "Development team",
-   "status": "Open"
+   "status": "Done"
   },
   {
    "item": "Live site: every Portfolio Services email goes to the test inbox, emails held and timed jobs off until go-live",
