@@ -3,14 +3,14 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 11:31
+Updated: 2026-11-26 11:33
 
 ## Now
 
 Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orders the workers only.
 
 1. Code freeze 2026-12-11. Everything still to build lands before it.
-2. Today, release-first, one machine window at a time: PS2 OFA-F-230 and AnnatureInterfaceWebAPI .NET slot (now); Shell SHELL-B-211/B-212 .NET slot; PS re-check of its P2 fixes; then the hub's full suite with Shell's B-210 browser measurement; then the UAT release (Muhammed deploys). Everyone else writes code only meanwhile. After the release: Compliance C4 rest, PS 70, Advisor A4.
+2. Today, release-first, one machine window at a time: PS2 OFA-F-230 and AnnatureInterfaceWebAPI .NET slot (now); Shell SHELL-B-211/B-212 .NET slot; Advisor F-170 .NET slot; PS re-check of its P2 fixes; then the hub's full suite with Shell's B-210 browser measurement; then the UAT release (Muhammed deploys). Everyone else writes code only meanwhile. After the release: Compliance C4 rest, PS 70, Advisor A4.
 3. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
 4. Advisor's two Power BI pages (Book of business, and the dashboard with the revenue cards) wait until the OFA work is complete: data security and user segregation come first (Muhammed, 2026-11-26).
 5. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022).
@@ -40,11 +40,11 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: A4 code only (guard, card-looks); A3 ebb6fda1 merges after Shell commits)
+## Advisor (pointer: A4 code committed 3c6149ed; F-170 .NET slot after Shell, in the release; A3 ebb6fda1 merges after Shell commits)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | A4 | (Advisor raises) | The Advisor API refuses the test sign-in outside the test host, as SHELL-F-190 does (PM-057) | Functional | ?? | Code only now |
+| >> | A4 | ADVISOR-DASHBOARD-F-170 | The Advisor API refuses the test sign-in outside the test host, as SHELL-F-190 does (PM-057) | Functional | 3 | Code committed; .NET slot after Shell's, goes in the UAT release |
 | | X | P86 | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | ?? | Waits: Power BI pages hidden until after the OFA work |
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
 | >> | A4 | - | card-looks.steps.ts reads card height once and never retries (same cause as Compliance B-158): poll it | Functional | ?? | With A4 |
