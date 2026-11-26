@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 19:31
+Updated: 2026-11-26 19:37
 
 ## Hub
 
@@ -17,7 +17,7 @@ Updated: 2026-11-26 19:31
 7. With the stack up: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database.
 8. Overnight (Muhammed, 2026-11-26): workers churn their queues; ONE STACK, windows in order ps2, Compliance, PS, Advisor, Shell. When every queued item is done: full parity check (disparity-checker, all components). Do NOT fix its findings: build the decision artifact (each finding: take in or not, board or code wins, a comment box), and wait for Muhammed to hand it back. Old parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
 8a. Designer done 2026-11-26 evening: O57 board run done (756 passed, 7 failed: 4 expected until B-160 merges, 3 being checked); sync commits next. UAT redeploy tomorrow (Muhammed).
-8b. Tonight the low-memory guard stops make up: Compliance and PS wait for Muhammed (restart compliance with CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1, or run make up himself). dotnet-test windows go on: Advisor A4 now, then Shell. Morning window also re-runs @review-C131|C161|C163 x5 on the shell target (SHELL-B-213).
+8b. Tonight the low-memory guard stops make up: Compliance and PS wait for Muhammed (restart compliance with CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1, or run make up himself). dotnet-test windows go on: Advisor A4 now, then Shell. Morning window also re-runs @review-C131|C161|C163 x5 on the shell target (SHELL-B-213). The full suite also runs build-and-cull @review-O53 and expiry-report @review-O54 on the shell target (OFA-F-211).
 8c. Next designer round, rows owed: OFA-B-345 (next reference date on the record); O53 board fix (Move to cull list offers "Deceased estate, no OFA" only when DART marks the estate, per OFA-F-211 A3).
 9. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html) into his design project.
 10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
@@ -35,11 +35,9 @@ Updated: 2026-11-26 19:31
 | >> | C4 | B-161 | Release-build test `AttachmentOptionsValidatorTests.TheHost_FailsAtStartup_OnABadStore("appdata")` fails under load (UAT 2 step 6): cause and fix | Functional | 1 | Now, with C4 |
 
 
-## Portfolio Services 2 (pointer: group 3, OFA-F-211 + OFA-F-209 part 1)
+## Portfolio Services 2 (pointer: group 3 merged 428d67cc; only blocked items left)
 
 | # | Grp | ID | Item | Category | Size | Status |
-| >> | 3 | OFA-F-211 | Remove the emails Luke ruled out: deceased-estate email to the Back Office, the State Manager's ended / terminated / culled emails; expiry-report.feature lines 11 and 25; Adviser's termination email and the weekly Expired report stay (moved from PS) | Functional | 5 | Code + Jest now; .NET at its window |
-| >> | 3 | OFA-F-209 part 1 | Real warehouse signing-status reader replaces the stub, for renewals and Initial OFAs (moved from PS) | Functional | 3 | Code + Jest now; .NET at its window |
 |---|---|---|---|---|---|---|
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
