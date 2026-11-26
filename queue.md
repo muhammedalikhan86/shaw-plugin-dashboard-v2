@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 12:08
+Updated: 2026-11-26 12:09
 
 ## Now
 
@@ -27,14 +27,10 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
 
 
-## Portfolio Services 2 (pointer: F-230, F-232, F-234 merged; nothing left for the release)
+## Portfolio Services 2 (pointer: parked; nothing left for the release; the rest is looks (wait) or blocked)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 44 | OFA-F-230 | The PS API refuses the test sign-in outside the test host, as SHELL-F-190 does for the shell (PM-057) | Functional | 2 | Ready to merge fef48919; waits for Shell's commit (doc overlap) |
-| >> | 44 | REL-014 prep | AnnatureInterfaceWebAPI (own repo, local main, unpushed): login in appsettings (b942f79, done); a deploy script in that repo; build and test routes 5 and 6 | Functional | 2 | Script now; build and tests in the F-230 machine slot; then Muhammed pushes and deploys |
-| >> | 45 | OFA-F-232 | Act As on the PS API cannot reach test-data people (Corinne Abbott, PS O33): adopt the dev-only test-data directory the shell, Advisor and Compliance APIs already have (SHELL-F-108 pattern), Development only | Functional | 3 | Code outside Program.cs now; wiring after the F-230 commit; can follow the release |
-| | 45 | (PS2 raises) | Shaw.Word app registration values into the PS API's tracked appsettings (no server step) | Functional | 1 | With OFA-F-232 |
 | | X | - | Parity backlog from O47: "Signers" label in sentence case; "Salutation" label floats on the outline before typing | Look and Feel | ?? | Rows in parity-backlog.md; for triage |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
