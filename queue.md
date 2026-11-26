@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 10:39
+Updated: 2026-11-27 10:52
 
 ## Hub
 
@@ -71,10 +71,10 @@ Updated: 2026-11-27 10:39
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 
-## Shell (pointer: group 6 parked, waits for a stack window)
+## Shell (pointer: move-localdb-files.ps1 dry run, every stack down)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | 6 | - | Board Parity for PLUGIN0-B-004, SHELL-B-210, SHELL-B-212; move-localdb-files.ps1 dry run then move, every stack down | Functional | ?? | Next stack window; the move in Muhammed's window |
+| >> | 6 | - | move-localdb-files.ps1 dry run then move (parity done, 897fe156), every stack down | Functional | ?? | Next stack window; the move in Muhammed's window |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
