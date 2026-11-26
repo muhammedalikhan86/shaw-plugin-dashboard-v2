@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 09:41
+Updated: 2026-11-27 09:49
 
 ## Hub
 
@@ -21,11 +21,11 @@ Updated: 2026-11-27 09:41
 10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
-## Compliance (pointer: merged 470dbac4; waits on the designer)
+## Compliance (pointer: B-160 merged 8f76b0f9; W46 with the designer)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | X | B-160 (W row) | Six Wording scenarios wait on the designer's B-160 W row (no-version state removed from the board) | Look and Feel | ?? | Next designer round |
+| | X | W46 | Renewal notice versions on the board get their own starter v1; 4 Wording scenarios wait on it (@review-W46) | Look and Feel | ?? | Next designer round (prompt with Muhammed) |
 
 
 ## Portfolio Services 2 (pointer: group 4, B-355/357/359)
