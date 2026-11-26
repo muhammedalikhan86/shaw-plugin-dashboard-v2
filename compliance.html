@@ -431,7 +431,7 @@ const WL = [
 ];
 // the versions the board already drew; every other wording starts at its v1, approved by Compliance and loaded by the OFA tool (B-160, O57)
 const D1 = ["v1", "20-08-2026", "Dervla Keane", "21-08-2026 · Dervla Keane"];
-const WHIST = { rn: { v: "v3", ap: "Dervla Keane · 02-09-2026", ld: "Dervla Keane · 03-09-2026", hist: [["v3", "02-09-2026", "Dervla Keane", "03-09-2026 · Dervla Keane"], ["v2", "11-03-2026", "Dervla Keane", "12-03-2026 · Dervla Keane"], ["v1", "Complii", "—", "01-09-2026 · brought in at go-live"]] } };
+const WHIST = { rn: { v: "v4" /* W46: every wording starts at its v1 starter; the versions it held each move up one */, ap: "Dervla Keane · 02-09-2026", ld: "Dervla Keane · 03-09-2026", hist: [["v4", "02-09-2026", "Dervla Keane", "03-09-2026 · Dervla Keane"], ["v3", "11-03-2026", "Dervla Keane", "12-03-2026 · Dervla Keane"], ["v2", "Complii", "—", "01-09-2026 · brought in at go-live"], ["v1", "01-09-2026", "Compliance", "01-09-2026 · OFA tool"] /* W46: the starter, as the other wordings' starters read */] } };
 ["ann", "conf", "amr", "aeod", "awf"].forEach(id => { WHIST[id] = { v: "v1", ap: "Dervla Keane · 20-08-2026", ld: "Dervla Keane · 21-08-2026", hist: [D1] }; });
 /* O57: each email wording's own subject, naming that email */
 const SUBJS = { conf: "Renewal confirmation", crf: "Renewal follow-up", ccc: "Client closure confirmation", aotr: "OFA termination reminder", aurf: "Unsigned renewal follow-up", aiof: "Initial OFA follow-up", anof: "Fee on a No OFA account", amr: "Questionnaire due today", aeod: "Questionnaire not yet answered", awf: "Weekly follow-up", pre: "Weekly Pending report", xre: "Weekly Expired report" };
