@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 16:04
+Updated: 2026-11-26 16:06
 
 ## Hub
 
@@ -34,7 +34,7 @@ Updated: 2026-11-26 16:04
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | 1 | (PS2 raises) | Seed every wording's v1 from its starter (the 20 in `docs/stash/OFA Workflow/references/Wording/Starters/`), in every environment (migration), so no wording is ever without a version; approval details per Muhammed | Functional | ?? | Next; Compliance waits on it |
+| >> | 1 | OFA-B-337 | Seed every wording's v1 from its starter (the 20 in `docs/stash/OFA Workflow/references/Wording/Starters/`), in every environment (migration), so no wording is ever without a version; approved by Compliance, loaded by the OFA tool, dated the day the seed runs; migration 0227 | Functional | ?? | Next; Compliance waits on it |
 | | X | - | Parity backlog from O47: "Signers" label in sentence case; "Salutation" label floats on the outline before typing | Look and Feel | ?? | Rows in parity-backlog.md; for triage |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
