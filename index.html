@@ -44,10 +44,8 @@ code{font:500 13px/20px "Roboto Mono",Consolas,monospace}
 .badge.up{color:var(--ok)}
 .badge.down{color:var(--bad)}
 .badge.unknown{color:var(--muted)}
-.versions a{color:var(--accent);text-decoration:none}
-.versions a:hover{text-decoration:underline}
-.versions ul{margin:0;padding-left:18px}
-#history[hidden]{display:none}
+#log a{color:var(--accent);text-decoration:none}
+#log a:hover,#log a:focus-visible{text-decoration:underline}
 .gen{color:var(--muted);font-size:13px;margin-top:8px}
 </style>
 </head>
@@ -73,6 +71,15 @@ code{font:500 13px/20px "Roboto Mono",Consolas,monospace}
 </div>
 <p class="gen" id="checked"></p>
 
+<h2>Deployment log</h2>
+<div class="table scroll">
+<table>
+<thead><tr><th scope="col">Deployed</th><th scope="col">Part</th><th scope="col">Release</th><th scope="col">Latest commit in it</th><th scope="col">Changelog</th></tr></thead>
+<tbody id="log"></tbody>
+</table>
+</div>
+<p class="gen" id="generated"></p>
+
 <h2>What is switched off on the test site</h2>
 <div class="panel">
 <ol>
@@ -84,24 +91,6 @@ code{font:500 13px/20px "Roboto Mono",Consolas,monospace}
 </ol>
 </div>
 
-<h2>Deployment log</h2>
-<div class="table scroll">
-<table>
-<thead><tr><th scope="col">Deployed</th><th scope="col">Part</th><th scope="col">Release</th><th scope="col">Latest commit in it</th></tr></thead>
-<tbody id="log"></tbody>
-</table>
-</div>
-<p class="gen" id="generated"></p>
-
-<section id="history" hidden>
-<h2>Updates to this site</h2>
-<div class="table scroll versions">
-<table>
-<thead><tr><th scope="col">Version</th><th scope="col">Updated</th><th scope="col">Changes</th></tr></thead>
-<tbody id="versions"></tbody>
-</table>
-</div>
-</section>
 </main>
 <script src="uat-data.js"></script>
 <script>
@@ -149,38 +138,21 @@ code{font:500 13px/20px "Roboto Mono",Consolas,monospace}
   });
   document.getElementById("checked").textContent=status&&status.checked?"Last checked "+when(status.checked)+". The page shows that check; it does not check live.":"Not checked yet.";
 
+  // Changelogs (uat-notes.json "changelogs": [{from:"YYYY-MM-DD", file, label}]): a deploy links the newest one whose date is on or before it.
+  var CL=(notes.changelogs||[]).slice().sort(function(a,b){return a.from<b.from?1:-1;});
+  function changelogFor(at){var day=String(at).slice(0,10);for(var i=0;i<CL.length;i++){if(CL[i].from<=day)return CL[i];}return null;}
+
   // Log
   var lg=document.getElementById("log");
-  if(!d.deploys.length){var tr0=el("tr");var td0=cell(tr0,"No deploys yet.","muted");td0.colSpan=4;lg.appendChild(tr0);}
+  if(!d.deploys.length){var tr0=el("tr");var td0=cell(tr0,"No deploys yet.","muted");td0.colSpan=5;lg.appendChild(tr0);}
   d.deploys.forEach(function(x){
     var tr=el("tr");
     cell(tr,when(x.at),"nw");cell(tr,NAMES[x.part]||x.part);cell(tr,el("code",x.commit),"nw");cell(tr,x.subject);
+    var cl=changelogFor(x.at);if(cl){var ca=el("a",cl.label||"Changelog (PDF)");ca.href=cl.file;ca.target="_blank";ca.rel="noopener";cell(tr,ca,"nw");}else cell(tr,el("span","—","muted"));
     lg.appendChild(tr);
   });
   if(d.generated)document.getElementById("generated").textContent="Updated "+when(d.generated)+".";
 
-  // This site's own commits
-  var repo="https://github.com/muhammedalikhan86/shaw-plugin-dashboard-v2";
-  function changes(msg){
-    var lines=msg.split("\n");
-    var items=lines.slice(1).filter(function(l){return /^\s*[-*] /.test(l);}).map(function(l){return l.replace(/^\s*[-*] /,"");});
-    return items.length?items:[lines[0]];
-  }
-  fetch("https://api.github.com/repos/muhammedalikhan86/shaw-plugin-dashboard-v2/commits?per_page=100")
-    .then(function(r){return r.ok?r.json():Promise.reject();})
-    .then(function(list){
-      if(!list.length)return;
-      var body=document.getElementById("versions");
-      list.forEach(function(c){
-        var tr=el("tr"),a=el("a"),ul=el("ul");
-        a.href=repo+"/commit/"+c.sha;a.appendChild(el("code",c.sha.slice(0,7)));cell(tr,a,"nw");
-        var tm=el("time",when(c.commit.committer.date));tm.dateTime=new Date(c.commit.committer.date).toISOString();cell(tr,tm,"nw");
-        changes(c.commit.message).forEach(function(x){ul.appendChild(el("li",x));});cell(tr,ul);
-        body.appendChild(tr);
-      });
-      document.getElementById("history").hidden=false;
-    })
-    .catch(function(){});
 })();
 </script>
 </body>

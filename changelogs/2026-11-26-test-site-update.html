@@ -1,0 +1,167 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style>:root{color-scheme:light}@page{margin:16mm}</style>
+<title>Shaw Portal Test Site Update</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Layout: one reading column; two parts (functional, design) each split by product */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #1b2430; --muted: #5a6677; --line: #dde2e9;
+  --accent: #1f4e79; --accent-soft: #e6eef6; --design: #7a4b12; --design-soft: #f6eddf;
+  --display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --body: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11161d; --surface: #18202a; --fg: #e5e9ef; --muted: #9aa6b6; --line: #2a3441;
+  --accent: #8cb8e3; --accent-soft: #1d2d3e; --design: #e2b57a; --design-soft: #2e2418; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11161d; --surface: #18202a; --fg: #e5e9ef; --muted: #9aa6b6; --line: #2a3441;
+  --accent: #8cb8e3; --accent-soft: #1d2d3e; --design: #e2b57a; --design-soft: #2e2418; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 15px/1.6 var(--body); }
+.wrap { max-width: 760px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: grid; gap: 6px; margin-bottom: 28px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font: 600 30px/1.2 var(--display); margin: 0; text-wrap: balance; }
+.lede { color: var(--muted); margin: 0; max-width: 62ch; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 32px; }
+nav a { font-size: 13px; text-decoration: none; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--line); color: var(--fg); background: var(--surface); }
+nav a:focus-visible, nav a:hover { border-color: var(--accent); }
+section.part { margin-top: 36px; }
+.part-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; border-bottom: 2px solid var(--accent); padding-bottom: 6px; }
+.part.design .part-head { border-color: var(--design); }
+h2 { font: 600 22px/1.3 var(--display); margin: 0; }
+.tag { font-size: 12px; padding: 2px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+.part.design .tag { background: var(--design-soft); color: var(--design); }
+h3 { font: 600 16px/1.4 var(--display); margin: 24px 0 8px; }
+ol { margin: 0; padding-left: 1.4em; display: grid; gap: 6px; }
+li { max-width: 68ch; }
+li::marker { color: var(--muted); font-variant-numeric: tabular-nums; }
+.off { margin-top: 36px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; }
+.off h2 { font-size: 17px; }
+.off ul { margin: 8px 0 0; padding-left: 1.2em; }
+</style>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">Shaw Portal · Test site · 26-11-2026</span>
+  <h1>What changed on the test site</h1>
+  <p class="lede">This note lists what has changed on the Shaw Portal test site since the first test release of 24-11-2026. Changes to how the screens work are listed first, then changes to how they look.</p>
+</header>
+<nav hidden>
+  <a href="#functional">How it works</a>
+  <a href="#design">How it looks</a>
+  <a href="#off">Switched off or deferred</a>
+</nav>
+
+<section class="part" id="functional">
+  <div class="part-head"><h2>How it works</h2><span class="tag">Functional changes</span></div>
+
+  <h3>Portfolio Services</h3>
+  <ol>
+    <li>On "Initial OFAs", both "Prepare and send electronically" and "Download to print and sign" now ask for the "Fee basis" ("Estimate" or "Fixed") and offer the tick "The adviser nominates a Reference Date". The letter's wording follows these choices.</li>
+    <li>Both prepare dialogs now list the account's signatories under "Signers", all ticked, with an empty "Salutation" box. The letter goes out only once a salutation is typed and at least one signer is ticked.</li>
+    <li>The Initial OFA letter now carries the typed salutation, the client's name and postal address, and the fee. The print-and-sign letter no longer asks the client to follow a link.</li>
+    <li>An Initial OFA sent electronically may now go to any number of signers, each with their own signature space and name, labelled "Client 1", "Client 2" and so on.</li>
+    <li>"Download to print and sign" now shows the wording in use and takes an optional note, which appears on the download's entry in the Arrangement record's History.</li>
+    <li>The Arrangement record's History now records the signers ticked and the salutation typed for each Initial OFA prepared.</li>
+    <li>On the "Exceptions report", a row submitted for compliance review now offers "Record a follow-up step" ("Adviser told", "Fees refunded" or "Initial OFA sent, waiting for the client", with an optional note). The latest step shows in the row's Decision.</li>
+    <li>On the "Exceptions report", "Ask the adviser for an OFA Notification Form" is no longer offered on a row whose form is already in progress, and the placeholder text is gone from the "Form requested" message and from History.</li>
+    <li>The "Exceptions report" banner now gives the date on which the fees next sync from GridPay.</li>
+    <li>The "Exceptions report" keeps its Cycle selector available when the report could not be loaded, so another month can still be chosen.</li>
+    <li>On the Arrangement record, a Reference Date corrected as "Mistyped" may now be set to a date in the past. A change made at the client's request still cannot be set in the past.</li>
+    <li>The master spreadsheet import in "Settings" now brings in TERMINATED rows, with their Termination Date, and No OFA rows. Only rows with other statuses are held, shown as "Held: status not imported".</li>
+    <li>On the "Renewal tracker", the S-Account now opens the Arrangement record. The "Filter the list" dialog has a "Follow-up step" field, and "Show or hide columns" offers "Account name", "S-Account and account name", "State" and "Adviser and state".</li>
+    <li>In "Settings", "Platforms counted as insurance" now has a search field.</li>
+  </ol>
+
+  <h3>Adviser Dashboard</h3>
+  <ol>
+    <li>On the "Renewal tracker", where a signing email could not be delivered, the failed address is now a link that opens "Pick another email", and the signing request can be sent again to the address picked.</li>
+    <li>On the "Renewal tracker", a signatory whom a follow-up email could not reach now reads "EMAIL NOT DELIVERED", and the address link opens "Pick another email" to send the follow-up again.</li>
+    <li>On the "Renewal tracker", a sent notice's row menu now starts with "Download printable renewal notice", which saves the notice as a PDF named after the S-Account.</li>
+    <li>The S-Account page's Platform accounts card now has an "ASF (excl. GST) · past 12 months" column.</li>
+    <li>A Dealer's Assistant who works for more than one Adviser now sees the S-Account page, its History and attachments, "Add note" and "Add signatory" for the Adviser they picked.</li>
+  </ol>
+
+  <h3>Compliance Dashboard</h3>
+  <ol>
+    <li>On an arrangement record's History, each signer's acceptance evidence now sits on the step that names them: "Accepted by &lt;name&gt;" for an electronic signature, and "Paper copy uploaded for &lt;name&gt;" for a paper copy, labelled "Acceptance evidence · paper".</li>
+    <li>On "Quarantine", "Held for" now counts the hours held: "Under 1 day" for less than 24 hours, then whole days. Its filter counts the same way.</li>
+    <li>On "Signing and expiry", the "Pending" filter now also offers "Status" and "Adviser". Its fields read in the design's order: "Status", "Action required by", "Adviser", "Cycle", "Expiry month" and "Expiry Date".</li>
+    <li>On "Signing and expiry", the "Expired" and "Confirmed off" filters now offer "Adviser", "Platform", "Product", "Expiry month", "Reference Date" and "Expiry Date".</li>
+    <li>The "Cull list" filter now offers "Status" first, with the list's own statuses as its choices.</li>
+    <li>On an arrangement record, Documents now names a filed signed renewal "Renewal notice, &lt;year&gt; · signed", where it showed a code.</li>
+    <li>On "Compliance review", a finding now shows the follow-up step the OFA Team records, such as "Adviser told" or "Initial OFA sent, waiting for the client".</li>
+  </ol>
+
+  <h3>Shaw Portal</h3>
+  <ol>
+    <li>Opening the portal no longer shows "We couldn't confirm who you are right now." when the sign-in check is briefly slow.</li>
+    <li>The Profile page has a new "Release" card showing which release each part of the portal is on.</li>
+    <li>The Profile page no longer lists a person's security groups.</li>
+    <li>Profile photos now show on the test site.</li>
+  </ol>
+</section>
+
+<section class="part design" id="design">
+  <div class="part-head"><h2>How it looks</h2><span class="tag">Design changes</span></div>
+
+  <h3>Portfolio Services</h3>
+  <ol>
+    <li>The "Renewal tracker"'s rows, spacing and alignment now match the approved design, and its cycle line shows the time of issue as well as the date.</li>
+    <li>The page banners take the design's smaller icon. "Settings" no longer shows the late-fees banner, and screens that could not be loaded keep their card title.</li>
+    <li>The "Exceptions report"'s column widths, one-line headings, empty-state icon and "Not set" text now match the approved design.</li>
+    <li>On the "Outbox", "Don't send" stays on one line, the bulk buttons sit on the hold switch's row, the hold icon is smaller, a divider follows the tick-box column, and the "Queued at" date stays on one line.</li>
+    <li>"Settings" now follows the approved design: the report lines sit in grey bands, "Who receives the reports" scrolls within a fixed height, "How long a row stays" is laid out in two rows of two, the notes show an empty state, the "Import" button has its own icon, and the footer text is larger.</li>
+    <li>On the Arrangement record, the Documents card's empty state and the Account History lines now follow the approved design, and system lines name their source.</li>
+    <li>On "The monthly cycle", a closed month's notes heading now names the month ("The cull's notes · &lt;month&gt;"), and the Quarantine list keeps Adviser, State Manager and Extension on one line.</li>
+    <li>On "Initial OFAs", the separate Initial OFAs table shows the S-Account in medium weight. In the prepare dialogs, the tick, the wording box and the "Note" label now sit as the design draws them.</li>
+    <li>On the Adviser review, the month's answers bar now sits inside the "Anniversary List" card, under its toolbar.</li>
+    <li>"Back Office requests" with nothing open now shows only "No open requests".</li>
+  </ol>
+
+  <h3>Adviser Dashboard</h3>
+  <ol>
+    <li>The "Renewal tracker"'s columns, row heights and card heading now match the approved design. The tick-box column comes first and stays in place when the table scrolls sideways.</li>
+    <li>The columns, search box, filter dialog and card heading on "Closures" now match the approved design, and "Business days left" is a right-aligned number column.</li>
+    <li>The "Arrangements" filter fields now follow the design's order: OFA Status, Adviser code, State, Platform, Product, Account type, Wholesale, Payment frequency.</li>
+    <li>On "OFA questionnaire", the State Manager's two tabs share the full width, and page numbers show only when there are more than 10 rows.</li>
+    <li>The sidebar entry now reads "Questionnaire" in full beside its count. The page keeps the title "OFA questionnaire".</li>
+    <li>The S-Account page's Platform accounts table now fits its card without scrolling sideways, with Product wrapping where needed.</li>
+    <li>The ASF ⓘ tip no longer appears on the ASF filter fields of "Initial OFAs", "OFA questionnaire" and "Arrangements". The column headings keep it.</li>
+    <li>The page loading bar now sits between the toolbar and the breadcrumb, as the design draws it.</li>
+    <li>The S-Account page for an account a person may not see now reads "You can't see this account" and "It isn't on your Adviser codes. It may have moved to another Adviser." A missing account reads "Account not found" and "This S-Account doesn't exist or has been closed. Check the link."</li>
+  </ol>
+
+  <h3>Compliance Dashboard</h3>
+  <ol>
+    <li>The "Quarantine" page line now reads "Rows held because the adviser's five business days passed, because the OFA Team moved them there, or because the adviser was taken off the run, grouped by adviser."</li>
+    <li>The "Quarantine" table now fits its card. "Extension" and "Last prompt" widen to their words, so an Extension date reads in full.</li>
+    <li>On "Arrangements", every cell stays on one line, Account name included, and the table scrolls sideways where it does not fit.</li>
+    <li>On an arrangement record, each platform account now reads under three headings: "Platform", "Platform account number" and "Product".</li>
+    <li>The "Mark as reviewed" dialog now reads in full: "Compliance have reviewed this finding. It is recorded, with your name and the time, in the finding's notes and the account's History, and the finding leaves this list."</li>
+    <li>The "Cull list" notes dialog is now the height the design draws, and the "Open document" icon on "Wording" is no longer clipped.</li>
+  </ol>
+
+  <h3>Shaw Portal</h3>
+  <ol>
+    <li>Table filter dialogs now lay out their fields as the designs draw them, and filter fields no longer repeat a column heading's tip.</li>
+    <li>Table columns now open at their set width and widen to fit their words. The "Show or hide columns" menu opens where the design places it.</li>
+    <li>Search results rows now match the approved design.</li>
+    <li>The status track's segments now sit closer together, with their counts centred.</li>
+    <li>The sidebar's "Keep open" switch shows its outline again when off.</li>
+    <li>In the Notifications panel, "Mark all as read" and the close button are now the design's size.</li>
+    <li>Wide action buttons now have even padding.</li>
+  </ol>
+</section>
+
+<aside class="off" id="off">
+  <h2>Switched off or deferred</h2>
+  <ul>
+    <li>The Adviser Dashboard's Book of business and dashboard pages are deferred. They will be released together at a later point.</li>
+    <li>E-signing is off on the test site: signing requests are not sent to clients.</li>
+    <li>Every email the test site sends goes to the testers' mailbox.</li>
+  </ul>
+</aside>
+</div>
+</html>

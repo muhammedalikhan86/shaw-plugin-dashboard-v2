@@ -1,3 +1,10 @@
 {
-  "parts": {}
+  "parts": {},
+  "changelogs": [
+    {
+      "from": "2026-11-25",
+      "file": "changelogs/2026-11-26-test-site-update.pdf",
+      "label": "26-11-2026 update (PDF)"
+    }
+  ]
 }
