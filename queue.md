@@ -3,11 +3,11 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 09:34
+Updated: 2026-11-27 09:40
 
 ## Hub
 
-1. UAT redeploy today, 2026-11-27 (Muhammed), after the morning window: Portfolio Services HELD until PS confirms the last 4 of the 14 failing scenarios (cause found 2026-11-27: the tests, not the app; 10 fixed by a test-only step, ruling 09:34) (ps2's P0 group, OFA-F-211, OFA-F-209 part 1), Compliance (B-158 to B-162, merged 470dbac4), advisor-dashboard (F-144 timeline, A5), and PS groups 70-72 if their business run passes. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
+1. UAT redeploy today, 2026-11-27 (Muhammed), after the morning window: Portfolio Services: hold proposed to lift (no regression; 11 of 14 pass with a test-only step, the rest are older gaps); waiting on Muhammed (ps2's P0 group, OFA-F-211, OFA-F-209 part 1), Compliance (B-158 to B-162, merged 470dbac4), advisor-dashboard (F-144 timeline, A5), and PS groups 70-72 if their business run passes. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 2. Muhammed opens one renewal notice PDF on the test site (the Chrome check, REL-015).
 3. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`.
 4. Code freeze 2026-12-11. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker.
@@ -28,10 +28,13 @@ Updated: 2026-11-27 09:34
 | | X | B-160 (W row) | Six Wording scenarios wait on the designer's B-160 W row (no-version state removed from the board) | Look and Feel | ?? | Next designer round |
 
 
-## Portfolio Services 2 (pointer: group 3 merged 428d67cc; only blocked items left)
+## Portfolio Services 2 (pointer: group 4, B-355/357/359)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 4 | OFA-B-355 | The Exceptions report reads as at the test clock | Functional | 2 | Planning; shell runs wait for a stack window |
+| >> | 4 | OFA-B-357 | Test data gets a quarantined row with no State Manager (C141) | Functional | 1 | Planning |
+| >> | 4 | OFA-B-359 | The register reset also undoes an earlier run's writes (S20187) | Functional | 2 | Planning |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
@@ -46,11 +49,13 @@ Updated: 2026-11-27 09:34
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: group 70 on the stack in its checkout; P0 cause found, test-only)
+## Portfolio Services (pointer: group 70 on the stack in its checkout)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 70 | (PS raises) | Quarantine scenarios from "8 Oct · Ready to issue" open Issuance first (test-only; the app opens a published month on Adviser review by design). 10 scenarios; the other 4 of the 14 being checked alone with a trace | Functional | 1 | Ruled 2026-11-27 09:34; folds into group 70 |
+| >> | 70 | OFA-B-349 | Ready-to-issue scenarios open Issuance first (test-only) | Functional | 1 | Fixed, in group 70 |
+| >> | 70 | OFA-B-351 | The month page draws its checklist card while it loads (P85) | Functional | 2 | Group 70 |
+| >> | 70 | OFA-B-353 | Enter the answers on a quarantined row shows "Changed by the OFA Team" and the note reaches the row (S20231) | Functional | 2 | Group 70; tell hub if bigger |
 | | 72 | OFA-F-219 | Adopt SHELL-F-192 (TestKit reference, TestData tool) | Functional | 2 | Built, PS .NET 4567 green (7e48c032); merges with groups 70 and 71 |
 | | X | (PS raises) | The make-up register reset loads TestData.dll without Shell.TestKit.dll beside it, so it still creates in the old place | Functional | ?? | Not tonight |
 | >> | 70 | (PS raises) | OFA-B-313 paperclip on the Settings Notes: files on report notes (migration, procedure file list, trail link) | Functional | 2 | Split from P2 so the release is not held |
