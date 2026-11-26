@@ -55,10 +55,8 @@ function Replace-Once([string]$text, [string]$find, [string]$with, [string]$what
 
 # Shared assets. The ofa folder's set is a superset of plugin0's, and the files they share are identical.
 $assets = Join-Path $Out 'assets'
-# Copied over, never wiped: assets/ also holds files added here by hand (the xmas images),
-# which the designer's folder does not have.
-if (-not (Test-Path $assets)) { New-Item -ItemType Directory $assets | Out-Null }
-Copy-Item (Join-Path $Source 'ofa\assets\*') $assets -Recurse -Force
+if (Test-Path $assets) { Remove-Item $assets -Recurse -Force }
+Copy-Item (Join-Path $Source 'ofa\assets') $assets -Recurse
 
 # support.js, with the address-bar settings patch
 $s = [IO.File]::ReadAllText((Join-Path $Source 'ofa\support.js'), $utf8)
