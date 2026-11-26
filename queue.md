@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 18:47
+Updated: 2026-11-26 18:54
 
 ## Hub
 
@@ -44,16 +44,13 @@ Updated: 2026-11-26 18:47
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: questionnaire frozen columns, then A4)
+## Advisor (pointer: A4 merged 3e9b20ec; its stack-window checks wait on make up)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 0 | (Advisor raises) | OFA questionnaire: freeze S-Account and Account name too (Muhammed, 2026-11-26: frozen = Adviser code, S-Account and account name, Platform accounts, S-Account, Account name, Platform, Platform account number, Product) | Functional | 1 | Fast lane; for tomorrow's redeploy |
-| | 0 | (Advisor raises) | Placeholder sweep check: grep the app and API for "supplied by", "to be confirmed", "Business to provide" and "Placeholder wording"; fix any left; close items held on the business's words | Functional | ?? | With the fast lane |
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
-| | A4 | P68 (full suite 2026-11-26) | Sidebar count with the sidebar open: the app draws the number grey (rgb 64,64,64), the board white on maroon (the step's locator is fixed, 43f3b42e) | Look and Feel | ?? | After the release |
-| | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Window after PS's flaky group |
-| | A4 | F-144 | The OFA timeline: copy the OFA history section PS and Compliance already have (Luke, 2026-11-26); P97 already drawn | Functional | 6 | After the UAT release |
+| | A4 | P68 (full suite 2026-11-26) | Sidebar count with the sidebar open: the app draws the number grey (rgb 64,64,64), the board white on maroon (the step's locator is fixed, 43f3b42e) | Look and Feel | ?? | Next make-up window (built-app check) |
+| | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Next make-up window, with B-161's business run and the H10 scenarios on the built app |
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
