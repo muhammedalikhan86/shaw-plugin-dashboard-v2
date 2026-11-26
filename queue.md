@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 09:49
+Updated: 2026-11-27 09:57
 
 ## Hub
 
@@ -28,13 +28,14 @@ Updated: 2026-11-27 09:49
 | | X | W46 | Renewal notice versions on the board get their own starter v1; 4 Wording scenarios wait on it (@review-W46) | Look and Feel | ?? | Next designer round (prompt with Muhammed) |
 
 
-## Portfolio Services 2 (pointer: group 4, B-355/357/359)
+## Portfolio Services 2 (pointer: group 4, B-355/357/359/361)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 4 | OFA-B-355 | The Exceptions report reads as at the test clock | Functional | 2 | Planning; shell runs wait for a stack window |
+| >> | 4 | OFA-B-355 | The Exceptions report reads as at the test clock | Functional | 2 | Built (69dff1d9) |
 | >> | 4 | OFA-B-357 | Test data gets a quarantined row with no State Manager (C141) | Functional | 1 | Planning |
 | >> | 4 | OFA-B-359 | The register reset also undoes an earlier run's writes (S20187) | Functional | 2 | Planning |
+| >> | 4 | OFA-B-361 | The State Manager cell shows its second line as the board draws it; test data for a blank-address and an excluded-branch row (C141) | Functional | ?? | Group 4; after PS group 70 merges |
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
