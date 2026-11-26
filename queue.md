@@ -3,14 +3,14 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 12:03
+Updated: 2026-11-26 12:08
 
 ## Now
 
 Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orders the workers only.
 
 1. Code freeze 2026-12-11. Everything still to build lands before it.
-2. Today, release-first, one machine window at a time: AnnatureInterfaceWebAPI deployed; Shell group 4 merged 4ffdf1b4; Advisor merged; PS2 group 45 filtered .NET (about 3 min, now); PS re-check of its P2 fixes; then the hub's full suite with Shell's B-210 browser measurement; then the UAT release (Muhammed deploys). Everyone else writes code only meanwhile. After the release: Compliance C4 rest, PS 70, Advisor A4.
+2. Today, release-first, one machine window at a time: AnnatureInterfaceWebAPI deployed; Shell group 4 merged 4ffdf1b4; Advisor merged; PS2 group 45 merged; PS re-check of its P2 fixes (now); then the hub's full suite with Shell's B-210 browser measurement; then the UAT release (Muhammed deploys). Everyone else writes code only meanwhile. After the release: Compliance C4 rest, PS 70, Advisor A4.
 3. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
 4. Advisor's two Power BI pages (Book of business, and the dashboard with the revenue cards) wait until the OFA work is complete: data security and user segregation come first (Muhammed, 2026-11-26).
 5. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022).
@@ -27,7 +27,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
 
 
-## Portfolio Services 2 (pointer: Annature slot green; F-230 merged 1d3bde77; group 45 (F-232, F-234) in review, filtered .NET after Advisor)
+## Portfolio Services 2 (pointer: F-230, F-232, F-234 merged; nothing left for the release)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
@@ -52,7 +52,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | A4 | F-144 | The OFA timeline: copy the OFA history section PS and Compliance already have (Luke, 2026-11-26) | Functional | 6 | After the UAT release, with A4 |
 
 
-## Portfolio Services (pointer: P2 fixes d79e5a9c, X35 change 5da95a8b; re-check after PS2's slot)
+## Portfolio Services (pointer: P2 fixes d79e5a9c, X35 change 5da95a8b; re-check in the machine window now)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
