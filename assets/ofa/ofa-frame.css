@@ -1264,3 +1264,19 @@ mat-dialog-content > div[data-i13]:empty{display:none!important}
 .app-layer table.ot[data-frz*="4"] tbody tr:nth-child(even)>td:nth-child(4){background-color:inherit}
 .app-layer table.ot[data-frz*="4"] thead th:nth-child(4){z-index:6!important;background-color:var(--mat-sys-surface)!important}
 .app-layer table.ot[data-frz*="4"] tbody td:nth-child(4){z-index:3!important}
+
+/* O57: on a State Manager seat the OFA questionnaire also freezes Adviser · state, right after Adviser code */
+.app-layer table.ot[data-frz*="5"] :is(th,td):nth-child(3){width:160px;min-width:160px;max-width:160px}
+.app-layer table.ot[data-frz*="5"] :is(th,td):nth-child(4){left:304px;box-sizing:border-box;width:240px;min-width:240px;max-width:240px;box-shadow:none}
+.app-layer table.ot[data-frz*="5"] :is(th,td):nth-child(5){position:sticky;left:544px;z-index:2;background-color:var(--mat-sys-surface);box-shadow:inset -1px 0 0 var(--mat-sys-outline-variant)}
+.app-layer table.ot[data-frz*="5"] tbody tr:nth-child(even)>td:nth-child(5){background-color:inherit}
+.app-layer table.ot[data-frz*="5"] thead th:nth-child(5){z-index:6!important;background-color:var(--mat-sys-surface)!important}
+.app-layer table.ot[data-frz*="5"] tbody td:nth-child(5){z-index:3!important}
+
+/* 14c: on the OFA questionnaire, the five columns hidden at first stay frozen when switched on (left is set by ofa-advisor-dashboard's _frzQ) */
+.app-layer table.ot :is(th,td).fzx{position:sticky;z-index:2;background-color:var(--mat-sys-surface)}
+.app-layer table.ot tbody tr:nth-child(even)>td.fzx{background-color:inherit}
+.app-layer table.ot thead th.fzx{z-index:6!important;background-color:var(--mat-sys-surface)!important}
+.app-layer table.ot tbody td.fzx{z-index:3!important}
+.app-layer table.ot :is(th,td).fzx.fzl{box-shadow:inset -1px 0 0 var(--mat-sys-outline-variant)}
+.app-layer table.ot :is(th,td).fzn{box-shadow:none!important}
