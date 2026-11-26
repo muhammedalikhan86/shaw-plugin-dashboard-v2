@@ -54,78 +54,76 @@
     "shell",
     "landing-page"
    ],
-   "pointsDone": 617.0,
+   "pointsDone": 562.0,
    "pointsRemaining": 1.0,
-   "pointsTotal": 618.0,
+   "pointsTotal": 563.0,
    "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
-    "pointsDone": 167.0,
-    "pointsRemaining": 3.0,
-    "pointsTotal": 170.0,
-    "itemsDone": 83,
-    "itemsRemaining": 1
-   }
+    "pointsDone": 152.0,
+    "pointsRemaining": 0,
+    "pointsTotal": 152.0,
+    "itemsDone": 74,
+    "itemsRemaining": 0
+   },
+   "buildDoneOn": "2026-11-24"
   },
   {
    "name": "Portfolio Services",
    "counted": [
     "portfolio-services"
    ],
-   "pointsDone": 1019.0,
-   "pointsRemaining": 30.0,
-   "pointsTotal": 1049.0,
-   "itemsRemaining": 11,
-   "itemsRemainingUnsized": [
-    "OFA-B-066",
-    "OFA-B-067",
-    "OFA-F-118"
-   ],
+   "pointsDone": 885.0,
+   "pointsRemaining": 16.0,
+   "pointsTotal": 901.0,
+   "itemsRemaining": 4,
+   "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 34.0,
-    "pointsRemaining": 0.0,
+    "pointsRemaining": 0,
     "pointsTotal": 34.0,
     "itemsDone": 13,
     "itemsRemaining": 0
-   }
+   },
+   "buildDoneOn": "2026-11-26"
   },
   {
    "name": "Advisor",
    "counted": [
     "advisor-dashboard"
    ],
-   "pointsDone": 621.0,
+   "pointsDone": 557.0,
    "pointsRemaining": 13.0,
-   "pointsTotal": 634.0,
+   "pointsTotal": 570.0,
    "itemsRemaining": 3,
-   "itemsRemainingUnsized": [
-    "ADVISOR-DASHBOARD-F-103"
-   ],
+   "itemsRemainingUnsized": [],
    "foundDuringBuild": {
     "pointsDone": 37.0,
-    "pointsRemaining": 0.0,
+    "pointsRemaining": 0,
     "pointsTotal": 37.0,
     "itemsDone": 19,
     "itemsRemaining": 0
-   }
+   },
+   "buildDoneOn": "2026-11-23"
   },
   {
    "name": "Compliance",
    "counted": [
     "compliance-dashboard"
    ],
-   "pointsDone": 287.0,
-   "pointsRemaining": 6.0,
-   "pointsTotal": 293.0,
-   "itemsRemaining": 4,
+   "pointsDone": 245.0,
+   "pointsRemaining": 3.0,
+   "pointsTotal": 248.0,
+   "itemsRemaining": 1,
    "itemsRemainingUnsized": [],
    "foundDuringBuild": {
-    "pointsDone": 46.0,
-    "pointsRemaining": 0.0,
-    "pointsTotal": 46.0,
-    "itemsDone": 25,
+    "pointsDone": 39.0,
+    "pointsRemaining": 0,
+    "pointsTotal": 39.0,
+    "itemsDone": 20,
     "itemsRemaining": 0
-   }
+   },
+   "buildDoneOn": "2026-11-23"
   },
   {
    "name": "Deployment & Testing",
@@ -134,17 +132,20 @@
    ],
    "stage": "deploy",
    "start": "2026-11-23",
-   "pointsDone": 0.0,
-   "pointsRemaining": 20.0,
-   "pointsTotal": 20.0,
-   "itemsRemaining": 11,
-   "itemsRemainingUnsized": [],
+   "pointsDone": 358.0,
+   "pointsRemaining": 39.0,
+   "pointsTotal": 397.0,
+   "itemsRemaining": 17,
+   "itemsRemainingUnsized": [
+    "REL-022",
+    "REL-024"
+   ],
    "foundDuringBuild": {
-    "pointsDone": 0.0,
-    "pointsRemaining": 0.0,
-    "pointsTotal": 0.0,
-    "itemsDone": 0,
-    "itemsRemaining": 0
+    "pointsDone": 24.0,
+    "pointsRemaining": 5.0,
+    "pointsTotal": 29.0,
+    "itemsDone": 15,
+    "itemsRemaining": 2
    }
   }
  ],
@@ -334,22 +335,22 @@
     "rateWhole": 21.85
    },
    "Deployment & Testing": {
-    "optimistic": "2026-11-27",
-    "likely": "2026-11-27",
-    "pessimistic": "2026-11-27",
+    "optimistic": "2026-11-30",
+    "likely": "2026-11-30",
+    "pessimistic": "2026-11-30",
     "rateLast10": 21.5,
     "rateWhole": 21.48
    }
   },
   "overall": {
-   "optimistic": "2026-11-27",
-   "likely": "2026-11-27",
-   "pessimistic": "2026-11-27",
-   "basis": "critical path: the latest component date (Portfolio Services); pooled-rate dates would be 2026-11-23 / 2026-11-24 / 2026-11-25. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
+   "optimistic": "2026-11-30",
+   "likely": "2026-11-30",
+   "pessimistic": "2026-11-30",
+   "basis": "critical path: the latest date of the work still open (Deployment & Testing). Component lines end at their build (buildDoneOn); every item raised after 2026-11-23 counts in Deployment & Testing, whatever its component. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 180.11,
-   "pointsRemaining": 70.0,
-   "itemsRemaining": 30
+   "pointsRemaining": 72.0,
+   "itemsRemaining": 26
   }
  },
  "milestones": [
@@ -432,7 +433,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-26T09:59:38+11:00",
+ "updatedAt": "2026-11-26T13:42:55+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -3066,14 +3067,19 @@
    "change": "Shell F-189, F-190, B-210 and PS2 OFA-F-213 merged",
    "pointsDone": -20.0,
    "pointsRaised": -25.0
+  },
+  {
+   "at": "2026-11-26T13:42:55+11:00",
+   "change": "Timeline: component lines end at their build; post-build items count in Deployment & Testing",
+   "pointsDone": 0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 284.0,
-  "pointsRemaining": 3.0,
-  "pointsTotal": 287.0,
-  "itemsDone": 140,
-  "itemsRemaining": 1
+  "pointsDone": 286.0,
+  "pointsRemaining": 5.0,
+  "pointsTotal": 291.0,
+  "itemsDone": 141,
+  "itemsRemaining": 2
  },
  "buildCompletedOn": "2026-11-23",
  "deploymentBacklogNote": "The hub refreshes deploymentBacklog and waitingOnOthers from docs/leftovers.md (The stack, Waiting on others) in the hub checkout. The status page draws them as the deployment and testing work table. buildCompletedOn pins the Build finish date the patcher would otherwise reset.",
