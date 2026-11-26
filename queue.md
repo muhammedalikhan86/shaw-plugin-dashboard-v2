@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 16:06
+Updated: 2026-11-26 16:08
 
 ## Hub
 
@@ -24,6 +24,7 @@ Updated: 2026-11-26 16:06
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| | 0 | (Compliance raises) | Placeholder sweep: replace every "[... supplied by the business / Compliance team]", "to be confirmed" and "[Business to provide]" on screen and in emails with plain words that make sense (Muhammed, 2026-11-26); close every item held on the business's words | Functional | ?? | First after the release |
 | | C4 | OI-003 | Flaky "The list pages at 25" (arrangements.feature, shell target): find the cause, fix the wait or locator | Functional | 1 | Code side now; runs in its window |
 | | C4 | OI-007 | Flaky under load (P27 export, A14, Closed months, B-068, B4, P38, F-025, "opens to its history"; SQL timeouts): causes and fixes; shared support causes go to Shell | Functional | 3 | In its window |
 | | C4 | B-158, B-159 | Two more flaky tests found in the run: closed-month card height read once (poll it); cull list "show every column" needs the extra time Advisor got 2026-11-17 | Functional | 2 | In its window |
@@ -44,6 +45,7 @@ Updated: 2026-11-26 16:06
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| | 0 | (Advisor raises) | Placeholder sweep: replace every "[... supplied by the business / Compliance team]", "to be confirmed" and "[Business to provide]" on screen and in emails with plain words that make sense (Muhammed, 2026-11-26); close every item held on the business's words | Functional | ?? | First after the release |
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
 | | X | B122 | Board draws "S-Account and account name" locked (the build already does); its @review-B122 scenario is @skip until the designer is done | Look and Feel | 0 | Designer round 2026-11-26 (2) |
 | | A4 | P68 (full suite 2026-11-26) | Sidebar count with the sidebar open: the app draws the number grey (rgb 64,64,64), the board white on maroon; and the step's `^Initial OFAs` locator misses the board's link (its name starts with the badge number: sidebar-count.steps.ts) | Look and Feel | ?? | After the release |
@@ -56,6 +58,7 @@ Updated: 2026-11-26 16:06
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| | 0 | (PS raises) | Placeholder sweep: replace every "[... supplied by the business / Compliance team]", "to be confirmed" and "[Business to provide]" on screen and in emails with plain words that make sense (Muhammed, 2026-11-26); close every item held on the business's words | Functional | ?? | First after the release |
 | | 70 | (PS raises) | OFA-B-313 paperclip on the Settings Notes: files on report notes (migration, procedure file list, trail link) | Functional | 2 | Split from P2 so the release is not held |
 | | 70 | OFA-F-215 | Accepting an Adviser's answer updates the arrangement | Functional | 4 | After the release |
 | | 70 | OFA-F-217 | Step code for the P81, P84, P85 scenarios (still @skip), with the loading state's entry in shared business-tests/support | Functional | 2 | After the release |
