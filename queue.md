@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 12:46
+Updated: 2026-11-26 12:53
 
 ## Now
 
@@ -41,7 +41,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 |---|---|---|---|---|---|---|
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
-| | A4 | B-161 | Card height polled (code merged); the business run proves it | Functional | ?? | Hub's pre-release window |
+| | A4 | B-161, P68-P72 | Card height polled (code merged), and the P68, P69, P70, P72 checks just switched on: the business run proves them | Functional | ?? | Hub's pre-release window |
 | | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Window after PS's flaky group |
 | | A4 | F-144 | The OFA timeline: copy the OFA history section PS and Compliance already have (Luke, 2026-11-26); P97 already drawn | Functional | 6 | After the UAT release |
 
