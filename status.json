@@ -132,19 +132,19 @@
    ],
    "stage": "deploy",
    "start": "2026-11-23",
-   "pointsDone": 358.0,
-   "pointsRemaining": 39.0,
-   "pointsTotal": 397.0,
-   "itemsRemaining": 17,
+   "pointsDone": 361.0,
+   "pointsRemaining": 38.0,
+   "pointsTotal": 399.0,
+   "itemsRemaining": 16,
    "itemsRemainingUnsized": [
     "REL-022",
     "REL-024"
    ],
    "foundDuringBuild": {
-    "pointsDone": 24.0,
+    "pointsDone": 25.0,
     "pointsRemaining": 5.0,
-    "pointsTotal": 29.0,
-    "itemsDone": 15,
+    "pointsTotal": 30.0,
+    "itemsDone": 16,
     "itemsRemaining": 2
    }
   }
@@ -152,7 +152,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 180.11,
+  "pointsPerWorkingDayWholePeriod": 180.34,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -299,6 +299,11 @@
     "date": "2026-11-26",
     "pointsDone": 2341.0,
     "pointsDoneThatDay": -9.0
+   },
+   {
+    "date": "2026-11-27",
+    "pointsDone": 2344.0,
+    "pointsDoneThatDay": 3.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -307,50 +312,50 @@
   "method": "optimistic = the 2026-11-11 to 2026-11-15 rate (points per calendar day, the pace with the new skills); likely = mean of the two rates; pessimistic = whole-period rate (since 2026-10-28). The forecast counts Mon-Fri working days only; weekend points count in the totals.",
   "perComponent": {
    "Shell & Landing Page": {
-    "optimistic": "2026-11-27",
-    "likely": "2026-11-27",
-    "pessimistic": "2026-11-27",
+    "optimistic": "2026-11-30",
+    "likely": "2026-11-30",
+    "pessimistic": "2026-11-30",
     "rateLast10": 35.55,
     "rateWhole": 36.26
    },
    "Portfolio Services": {
-    "optimistic": "2026-11-27",
-    "likely": "2026-11-27",
-    "pessimistic": "2026-11-27",
+    "optimistic": "2026-11-30",
+    "likely": "2026-11-30",
+    "pessimistic": "2026-11-30",
     "rateLast10": 38.95,
     "rateWhole": 75.87
    },
    "Advisor": {
-    "optimistic": "2026-11-27",
-    "likely": "2026-11-27",
-    "pessimistic": "2026-11-27",
+    "optimistic": "2026-11-30",
+    "likely": "2026-11-30",
+    "pessimistic": "2026-11-30",
     "rateLast10": 18.12,
     "rateWhole": 46.17
    },
    "Compliance": {
-    "optimistic": "2026-11-27",
-    "likely": "2026-11-27",
-    "pessimistic": "2026-11-27",
+    "optimistic": "2026-11-30",
+    "likely": "2026-11-30",
+    "pessimistic": "2026-11-30",
     "rateLast10": 20.38,
     "rateWhole": 21.85
    },
    "User Acceptance Testing": {
-    "optimistic": "2026-11-30",
-    "likely": "2026-11-30",
-    "pessimistic": "2026-11-30",
+    "optimistic": "2026-12-01",
+    "likely": "2026-12-01",
+    "pessimistic": "2026-12-01",
     "rateLast10": 21.5,
-    "rateWhole": 21.48
+    "rateWhole": 21.71
    }
   },
   "overall": {
-   "optimistic": "2026-11-30",
-   "likely": "2026-11-30",
-   "pessimistic": "2026-11-30",
+   "optimistic": "2026-12-01",
+   "likely": "2026-12-01",
+   "pessimistic": "2026-12-01",
    "basis": "critical path: the latest date of the work still open (User Acceptance Testing). Component lines end at their build (buildDoneOn); every item raised after 2026-11-23 counts in User Acceptance Testing, whatever its component. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 180.11,
-   "pointsRemaining": 72.0,
-   "itemsRemaining": 26
+   "rateWhole": 180.34,
+   "pointsRemaining": 71.0,
+   "itemsRemaining": 25
   }
  },
  "milestones": [
@@ -381,22 +386,22 @@
   },
   {
    "name": "Shell & Landing Page build complete (likely)",
-   "date": "2026-11-27",
+   "date": "2026-11-30",
    "kind": "forecast"
   },
   {
    "name": "Portfolio Services build complete (likely)",
-   "date": "2026-11-27",
+   "date": "2026-11-30",
    "kind": "forecast"
   },
   {
    "name": "Advisor build complete (likely)",
-   "date": "2026-11-27",
+   "date": "2026-11-30",
    "kind": "forecast"
   },
   {
    "name": "Compliance build complete (likely)",
-   "date": "2026-11-27",
+   "date": "2026-11-30",
    "kind": "forecast"
   },
   {
@@ -433,7 +438,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-27T08:17:40+11:00",
+ "updatedAt": "2026-11-27T09:53:38+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -3077,13 +3082,19 @@
    "at": "2026-11-27T08:17:40+11:00",
    "change": "Go-live set-up done 2026-11-26: the live OFA database created on db1, the e-signing service live, the live web server set up for Portfolio Services and Compliance",
    "pointsDone": 5
+  },
+  {
+   "at": "2026-11-27T09:53:38+11:00",
+   "change": "Compliance B-158 to B-162 and Shell B-214 merged",
+   "pointsDone": 3.0,
+   "pointsRaised": 2.0
   }
  ],
  "foundDuringBuild": {
-  "pointsDone": 286.0,
+  "pointsDone": 287.0,
   "pointsRemaining": 5.0,
-  "pointsTotal": 291.0,
-  "itemsDone": 141,
+  "pointsTotal": 292.0,
+  "itemsDone": 142,
   "itemsRemaining": 2
  },
  "buildCompletedOn": "2026-11-23",
