@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 19:24
+Updated: 2026-11-26 19:30
 
 ## Hub
 
@@ -18,6 +18,7 @@ Updated: 2026-11-26 19:24
 8. Overnight (Muhammed, 2026-11-26): workers churn their queues; ONE STACK, windows in order ps2, Compliance, PS, Advisor, Shell. When every queued item is done: full parity check (disparity-checker, all components). Do NOT fix its findings: build the decision artifact (each finding: take in or not, board or code wins, a comment box), and wait for Muhammed to hand it back. Old parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
 8a. Designer done 2026-11-26 evening: O57 board run done (756 passed, 7 failed: 4 expected until B-160 merges, 3 being checked); sync commits next. UAT redeploy tomorrow (Muhammed).
 8b. Tonight the low-memory guard stops make up: Compliance and PS wait for Muhammed (restart compliance with CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1, or run make up himself). dotnet-test windows go on: Advisor A4 now, then Shell. Morning window also re-runs @review-C131|C161|C163 x5 on the shell target (SHELL-B-213).
+8c. Next designer round, rows owed: OFA-B-345 (next reference date on the record); O53 board fix (Move to cull list offers "Deceased estate, no OFA" only when DART marks the estate, per OFA-F-211 A3).
 9. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html) into his design project.
 10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
 11. Skill feedback for Claude Improvements: DEP-9 overruled (secrets in tracked appsettings); no Now section in the queue, Hub first; status-page shape (2026-11-26); shaw-estate databases-and-querying: the DatabaseReader login cannot see availability-group membership or other server-level facts, so never report one from it.
