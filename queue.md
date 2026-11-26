@@ -3,11 +3,11 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 09:17
+Updated: 2026-11-27 09:34
 
 ## Hub
 
-1. UAT redeploy today, 2026-11-27 (Muhammed), after the morning window: Portfolio Services HELD (14 business scenarios fail from "8 Oct · Ready to issue" on main's PS code too; PS diagnosing, cause not found yet; notes in its handoff §0a, parked 24b33a38) (ps2's P0 group, OFA-F-211, OFA-F-209 part 1), Compliance (B-158 to B-162, merged 470dbac4), advisor-dashboard (F-144 timeline, A5), and PS groups 70-72 if their business run passes. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
+1. UAT redeploy today, 2026-11-27 (Muhammed), after the morning window: Portfolio Services HELD until PS confirms the last 4 of the 14 failing scenarios (cause found 2026-11-27: the tests, not the app; 10 fixed by a test-only step, ruling 09:34) (ps2's P0 group, OFA-F-211, OFA-F-209 part 1), Compliance (B-158 to B-162, merged 470dbac4), advisor-dashboard (F-144 timeline, A5), and PS groups 70-72 if their business run passes. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 2. Muhammed opens one renewal notice PDF on the test site (the Chrome check, REL-015).
 3. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`.
 4. Code freeze 2026-12-11. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker.
@@ -46,11 +46,11 @@ Updated: 2026-11-27 09:17
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: branch held at 7e48c032; diagnosing a P0 regression on main)
+## Portfolio Services (pointer: group 70 on the stack in its checkout; P0 cause found, test-only)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | P0 | (PS raises) | Regression on main: from "8 Oct · Ready to issue" the cycle stays at Adviser review (no Quarantine list tab, no Month selector); 14 scenarios fail on main's and the branch's PS code. Prove the cause (OFA-F-209 part 1 looks unlikely: the real signing reader loads only with Signing:BaseUrl set), propose the fix. Next: did these pass in the 26-11 full suite, rule out today's date, one quarantine scenario alone with a trace | Functional | ?? | Parked 24b33a38 for the RAM upgrade; resumes first, on a fresh stack; gates the PS redeploy |
+| >> | 70 | (PS raises) | Quarantine scenarios from "8 Oct · Ready to issue" open Issuance first (test-only; the app opens a published month on Adviser review by design). 10 scenarios; the other 4 of the 14 being checked alone with a trace | Functional | 1 | Ruled 2026-11-27 09:34; folds into group 70 |
 | | 72 | OFA-F-219 | Adopt SHELL-F-192 (TestKit reference, TestData tool) | Functional | 2 | Built, PS .NET 4567 green (7e48c032); merges with groups 70 and 71 |
 | | X | (PS raises) | The make-up register reset loads TestData.dll without Shell.TestKit.dll beside it, so it still creates in the old place | Functional | ?? | Not tonight |
 | >> | 70 | (PS raises) | OFA-B-313 paperclip on the Settings Notes: files on report notes (migration, procedure file list, trail link) | Functional | 2 | Split from P2 so the release is not held |
