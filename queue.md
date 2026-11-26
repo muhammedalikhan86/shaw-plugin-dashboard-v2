@@ -3,12 +3,12 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 14:57
+Updated: 2026-11-26 15:28
 
 ## Hub
 
 1. UAT 2 release at 16:15 today (Luke asked for the delay); Muhammed deploys. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
-2. After the UAT 2 deploy: Muhammed creates the live `ShawPortal-OngoingFeeArrangements` database (REL-026) and opens one renewal notice PDF on the test site (the Chrome check, REL-015).
+2. After the UAT 2 deploy: Muhammed opens one renewal notice PDF on the test site (the Chrome check, REL-015).
 3. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`.
 4. Code freeze 2026-12-11. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker.
 5. Advisor's two Power BI pages (Book of business, and the dashboard with the revenue cards) wait until the OFA work is complete (Muhammed, 2026-11-26).
