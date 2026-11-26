@@ -3,24 +3,24 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 11:27
+Updated: 2026-11-26 11:28
 
 ## Now
 
 Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orders the workers only.
 
 1. Code freeze 2026-12-11. Everything still to build lands before it.
-2. Today, release-first, one machine window at a time: Compliance F-055 .NET slot (now); PS2 OFA-F-230 .NET slot; Shell SHELL-B-211/B-212 .NET slot; PS re-check of its P2 fixes; then the hub's full suite with Shell's B-210 browser measurement; then the UAT release (Muhammed deploys). Everyone else writes code only meanwhile. After the release: Compliance C4 rest, PS 70, Advisor A4.
+2. Today, release-first, one machine window at a time: PS2 OFA-F-230 and AnnatureInterfaceWebAPI .NET slot (now); Shell SHELL-B-211/B-212 .NET slot; PS re-check of its P2 fixes; then the hub's full suite with Shell's B-210 browser measurement; then the UAT release (Muhammed deploys). Everyone else writes code only meanwhile. After the release: Compliance C4 rest, PS 70, Advisor A4.
 3. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
 4. Advisor's two Power BI pages (Book of business, and the dashboard with the revenue cards) wait until the OFA work is complete: data security and user segregation come first (Muhammed, 2026-11-26).
 5. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022).
 6. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 
-## Compliance (pointer: F-055 in its .NET slot now; C4 code committed c0eed260, proving runs after the release)
+## Compliance (pointer: F-055 green (980/980), finalizing docs then ready to merge; C4 proving runs after the release)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | C4 | COMPLIANCE-DASHBOARD-F-055 | The Compliance API refuses the test sign-in outside the test host, as SHELL-F-190 does (PM-057) | Functional | 2 | In its .NET slot now, then ready to merge |
+| >> | C4 | COMPLIANCE-DASHBOARD-F-055 | The Compliance API refuses the test sign-in outside the test host, as SHELL-F-190 does (PM-057) | Functional | 2 | .NET green; docs finalizing, then ready to merge |
 | >> | C4 | OI-003 | Flaky "The list pages at 25" (arrangements.feature, shell target): find the cause, fix the wait or locator | Functional | 1 | Code side now; runs in its window |
 | >> | C4 | OI-007 | Flaky under load (P27 export, A14, Closed months, B-068, B4, P38, F-025, "opens to its history"; SQL timeouts): causes and fixes; shared support causes go to Shell | Functional | 3 | In its window |
 | >> | C4 | B-158, B-159 | Two more flaky tests found in the run: closed-month card height read once (poll it); cull list "show every column" needs the extra time Advisor got 2026-11-17 | Functional | 2 | In its window |
@@ -31,7 +31,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 44 | OFA-F-230 | The PS API refuses the test sign-in outside the test host, as SHELL-F-190 does for the shell (PM-057) | Functional | 2 | Code done; .NET slot after Compliance, merges before the UAT release |
+| >> | 44 | OFA-F-230 | The PS API refuses the test sign-in outside the test host, as SHELL-F-190 does for the shell (PM-057) | Functional | 2 | In its .NET slot now; merges before the UAT release |
 | >> | 44 | REL-014 prep | AnnatureInterfaceWebAPI (own repo, local main, unpushed): login in appsettings (b942f79, done); a deploy script in that repo; build and test routes 5 and 6 | Functional | 2 | Script now; build and tests in the F-230 machine slot; then Muhammed pushes and deploys |
 | >> | 45 | OFA-F-232 | Act As on the PS API cannot reach test-data people (Corinne Abbott, PS O33): adopt the dev-only test-data directory the shell, Advisor and Compliance APIs already have (SHELL-F-108 pattern), Development only | Functional | 3 | Code outside Program.cs now; wiring after the F-230 commit; can follow the release |
 | | 45 | (PS2 raises) | Shaw.Word app registration values into the PS API's tracked appsettings (no server step) | Functional | 1 | With OFA-F-232 |
