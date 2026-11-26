@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 19:00
+Updated: 2026-11-26 19:05
 
 ## Hub
 
@@ -44,14 +44,13 @@ Updated: 2026-11-26 19:00
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: group A5, parity lines and small fixes)
+## Advisor (pointer: A5 merged; idle until the morning make-up window)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | A5 | PM-101, PM-102, PM-115, parity | Questionnaire ASF heading on one line; past-12-months gap 4px; Forecast fees grey; S-Account Platform accounts heading info icon after the words, text black; grid-resize-handle tokens; ADV-051 against SHELL-ADR-028; SqlReaderBaseCancellationTests look; "Marcus Delahunt" specs to Marcus Ashcombe | Look and Feel | ?? | Now, no make up |
-| | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
 | | A4 | P68 (full suite 2026-11-26) | Sidebar count with the sidebar open: the app draws the number grey (rgb 64,64,64), the board white on maroon (the step's locator is fixed, 43f3b42e) | Look and Feel | ?? | Next make-up window (built-app check) |
 | | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Next make-up window, with B-161's business run and the H10 scenarios on the built app |
+| | A4 | PM-115 | SqlReaderBaseCancellationTests: looped run under load to prove the missed-cancel cause | Functional | ?? | Next make-up window |
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
