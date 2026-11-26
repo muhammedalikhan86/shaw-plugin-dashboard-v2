@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 19:37
+Updated: 2026-11-26 19:44
 
 ## Hub
 
@@ -53,11 +53,11 @@ Updated: 2026-11-26 19:37
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: group 72, OFA-F-219; groups 70 and 71 wait on make up)
+## Portfolio Services (pointer: branch held at 7e48c032, groups 70-72; merges after the morning business run)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 72 | OFA-F-219 | Adopt SHELL-F-192: LocalDB test databases via Shell.TestKit.LocalDbDatabaseFiles (adds a TestKit reference to the tests and the TestData tool) | Functional | ?? | Built b019f356; test:dotnet (PS, Advisor, Compliance) in its window now |
+| | 72 | OFA-F-219 | Adopt SHELL-F-192 (TestKit reference, TestData tool) | Functional | 2 | Built, PS .NET 4567 green (7e48c032); merges with groups 70 and 71 |
 | | X | (PS raises) | The make-up register reset loads TestData.dll without Shell.TestKit.dll beside it, so it still creates in the old place | Functional | ?? | Not tonight |
 | >> | 70 | (PS raises) | OFA-B-313 paperclip on the Settings Notes: files on report notes (migration, procedure file list, trail link) | Functional | 2 | Split from P2 so the release is not held |
 | >> | 70 | OFA-F-215 | Accepting an Adviser's answer updates the arrangement | Functional | 4 | After the release |
