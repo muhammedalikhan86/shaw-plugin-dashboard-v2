@@ -3,20 +3,20 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 12:00
+Updated: 2026-11-26 12:01
 
 ## Now
 
 Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orders the workers only.
 
 1. Code freeze 2026-12-11. Everything still to build lands before it.
-2. Today, release-first, one machine window at a time: PS2 Annature slot done green (Muhammed pushes and deploys AnnatureInterfaceWebAPI); Shell SHELL-B-211/B-212 .NET slot (now); Advisor F-170 .NET slot; PS2 group 45 filtered .NET (about 3 min); PS re-check of its P2 fixes; then the hub's full suite with Shell's B-210 browser measurement; then the UAT release (Muhammed deploys). Everyone else writes code only meanwhile. After the release: Compliance C4 rest, PS 70, Advisor A4.
+2. Today, release-first, one machine window at a time: PS2 Annature slot done green (Muhammed pushes and deploys AnnatureInterfaceWebAPI); Shell group 4 merged 4ffdf1b4; Advisor F-170 .NET slot (now); PS2 group 45 filtered .NET (about 3 min); PS re-check of its P2 fixes; then the hub's full suite with Shell's B-210 browser measurement; then the UAT release (Muhammed deploys). Everyone else writes code only meanwhile. After the release: Compliance C4 rest, PS 70, Advisor A4.
 3. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
 4. Advisor's two Power BI pages (Book of business, and the dashboard with the revenue cards) wait until the OFA work is complete: data security and user segregation come first (Muhammed, 2026-11-26).
 5. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022).
 6. After each test-site deploy: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 
-## Compliance (pointer: F-055 ready to merge 8e6c2f49, merges after Shell commits; C4 proving runs after the release)
+## Compliance (pointer: F-055 and C4 code merged da0eb84e; C4 proving runs after the release)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
@@ -27,7 +27,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
 
 
-## Portfolio Services 2 (pointer: Annature build, tests and deploy dry run in its machine slot now; F-230 ready to merge)
+## Portfolio Services 2 (pointer: Annature slot green; F-230 merged 1d3bde77; group 45 (F-232, F-234) in review, filtered .NET after Advisor)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
@@ -40,7 +40,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: A4 code committed 3c6149ed, book tip 05bc5eef, S-Account words d5781157; F-170 .NET slot after Shell, in the release; A3 ebb6fda1 merges after Shell commits)
+## Advisor (pointer: A4 code committed 3c6149ed, book tip 05bc5eef, S-Account words d5781157; F-170 .NET slot after Shell, in the release; A3 merged 0f4d78d0)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
@@ -52,7 +52,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | A4 | F-144 | The OFA timeline: copy the OFA history section PS and Compliance already have (Luke, 2026-11-26) | Functional | 6 | After the UAT release, with A4 |
 
 
-## Portfolio Services (pointer: P2 fixes d79e5a9c, X35 change 5da95a8b; re-check after Advisor's slot)
+## Portfolio Services (pointer: P2 fixes d79e5a9c, X35 change 5da95a8b; re-check after PS2's slot)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
@@ -68,7 +68,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 
-## Shell (pointer: group 4, avatar credentials into config, then B106; B-210 measurement in the full-suite window)
+## Shell (pointer: group 4 merged 4ffdf1b4; B-210 and B-212 measurement in the full-suite window)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
