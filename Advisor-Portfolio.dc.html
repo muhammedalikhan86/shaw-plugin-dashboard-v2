@@ -875,7 +875,7 @@ class Component extends DCLogic {
       this._bookHid = {}; FC.forEach(l => { if (!VIS.includes(l)) this._bookHid[l] = true; });
       const hidNow = Object.assign({}, this._bookHid, (s.hid || {})[id] || {}); this._nnmVis = NNC.some(l => !hidNow[l]);
       const dirty = fN || q || JSON.stringify(F) !== JSON.stringify(bk.f0 || {}) || (bk.mon0 != null && mon !== bk.mon0) || Object.keys((s.hid || {})[id] || {}).length;
-      const title = "Book of business", sub = "S-Account → client → platform account → product. Funds Under Advice is the sum of the holdings at the close of the Reporting date chosen above; Net New Money is for that month. Read only.";
+      const title = "Book of business", sub = "Every S-Account on your Adviser codes and departments, one row each. Search, filter, choose columns or download to Excel." /* B120 */;
       // B55: the book's other states, drawn inside the table card (Tweaks › States › bookState)
       const bs = this.props.bookState || "Loaded", monL = mon === "12" ? "the last 12 months" : M[mon].long, stCard = (pt) => block("Card", 24, { noTools: true, title, sub, parts: [pt] });
       if (bs === "Reading") blocks.push(stCard(Object.assign(part("Empty", { title: "Reading the book", text: null }), { isEmpty: false, busy: true, busyName: "Reading the book" })));
