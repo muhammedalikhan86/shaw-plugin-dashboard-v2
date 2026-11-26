@@ -3,11 +3,11 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 08:30
+Updated: 2026-11-27 08:55
 
 ## Hub
 
-1. UAT redeploy today, 2026-11-27 (Muhammed), after the morning window: Portfolio Services (ps2's P0 group, OFA-F-211, OFA-F-209 part 1), Compliance (B-160, B-162, once merged), advisor-dashboard (F-144 timeline, A5), and PS groups 70-72 if their business run passes. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
+1. UAT redeploy today, 2026-11-27 (Muhammed), after the morning window: Portfolio Services (ps2's P0 group, OFA-F-211, OFA-F-209 part 1), Compliance (B-158 to B-162, merged 470dbac4), advisor-dashboard (F-144 timeline, A5), and PS groups 70-72 if their business run passes. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 2. Muhammed opens one renewal notice PDF on the test site (the Chrome check, REL-015).
 3. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`.
 4. Code freeze 2026-12-11. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker.
@@ -15,21 +15,17 @@ Updated: 2026-11-27 08:30
 6. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022). Done 2026-11-26: the live OFA database on db1 (REL-021, REL-026), the e-signing service live (REL-014), the live web server set-up (REL-025).
 7. With the stack up: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database.
 8. Overnight (Muhammed, 2026-11-26): workers churn their queues; ONE STACK, windows in order ps2, Compliance, PS, Advisor, Shell. When every queued item is done: full parity check (disparity-checker, all components). Do NOT fix its findings: build the decision artifact (each finding: take in or not, board or code wins, a comment box), and wait for Muhammed to hand it back. Old parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
-8b. Morning window (make up, one stack): Compliance B-160 group, then PS groups 70-72 business run (P81/P84/P85/P77/P78 and OFA-B-347's six), then the full suite (with @review-O53, @review-O54, and @review-C131|C161|C163 x5 for SHELL-B-213), then Advisor's A4 stack checks and Shell's parity checks. make up was stopped overnight by the low-memory guard: Muhammed frees memory first.
+8b. Morning window (make up, one stack, the hub starts and stops it): PS OFA-B-347's six on the compliance stack, then the stack moves to the PS checkout for group 70 (P81/P84/P85/P77/P78), then the full suite (with @review-O53, @review-O54, and @review-C131|C161|C163 x5 for SHELL-B-213), then Advisor's A4 stack checks and Shell's parity checks. make up was stopped overnight by the low-memory guard: Muhammed frees memory first.
 8c. Next designer round, rows owed: OFA-B-345 (next reference date on the record); O53 board fix (Move to cull list offers "Deceased estate, no OFA" only when DART marks the estate, per OFA-F-211 A3).
 9. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html) into his design project.
 10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
-## Compliance (pointer: parked at 65c22a1b; make up waits on Muhammed, the low-memory guard stops it)
+## Compliance (pointer: merged 470dbac4; waits on the designer)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | C4 | OI-003 | Flaky "The list pages at 25" (arrangements.feature, shell target): find the cause, fix the wait or locator | Functional | 1 | Code side now; runs in its window |
-| >> | C4 | OI-007 | Flaky under load (P27 export, A14, Closed months, B-068, B4, P38, F-025, "opens to its history"; SQL timeouts): causes and fixes; shared support causes go to Shell | Functional | 3 | In its window |
-| >> | C4 | B-158, B-159 | Two more flaky tests found in the run: closed-month card height read once (poll it); cull list "show every column" needs the extra time Advisor got 2026-11-17 | Functional | 2 | In its window |
-| | 1 | B-160, B-162 | No-version state removed (2c2fe473); OFA Checklist notes no longer overlap (c177c9e8). Committed; .NET and business runs at the hub's go | Functional | ?? | OFA-B-337 is on main; runs when make up can start |
-| >> | C4 | B-161 | Release-build test `AttachmentOptionsValidatorTests.TheHost_FailsAtStartup_OnABadStore("appdata")` fails under load (UAT 2 step 6): cause and fix | Functional | 1 | Now, with C4 |
+| | X | B-160 (W row) | Six Wording scenarios wait on the designer's B-160 W row (no-version state removed from the board) | Look and Feel | ?? | Next designer round |
 
 
 ## Portfolio Services 2 (pointer: group 3 merged 428d67cc; only blocked items left)
