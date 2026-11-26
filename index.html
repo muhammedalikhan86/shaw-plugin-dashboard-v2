@@ -162,9 +162,12 @@ a.glyph:hover,a.glyph:focus-visible{outline:2px solid var(--accent);outline-offs
 
   // Log
   var lg=document.getElementById("log");
+  function day(s){return new Date(s+"T00:00:00").toLocaleDateString("en-AU",{dateStyle:"medium"});}
+  function releaseDay(r){var first=null;d.deploys.forEach(function(x){if(releaseFor(x.at)===r&&(!first||x.at<first))first=x.at;});return first?first.slice(0,10):r.from;}
   function releaseRow(r,deployed){
     var tr=el("tr",null,"rel");
-    var td=cell(tr,null);td.colSpan=4;
+    cell(tr,el("strong",day(releaseDay(r))),"nw");
+    var td=cell(tr,null);td.colSpan=3;
     td.appendChild(el("strong",r.name));
     td.appendChild(el("span",deployed?"":" · not deployed yet","muted"));
     cell(tr,changelogCell(r),"nw");
