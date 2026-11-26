@@ -17,7 +17,7 @@ Updated: 2026-11-26 14:57
 8. Parity round 2: when Muhammed says. Parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
 9. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html) into his design project.
 10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
-11. Skill feedback for Claude Improvements: DEP-9 overruled (secrets in tracked appsettings); no Now section in the queue, Hub first; status-page shape (2026-11-26).
+11. Skill feedback for Claude Improvements: DEP-9 overruled (secrets in tracked appsettings); no Now section in the queue, Hub first; status-page shape (2026-11-26); shaw-estate databases-and-querying: the DatabaseReader login cannot see availability-group membership or other server-level facts, so never report one from it.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
 ## Compliance (pointer: waiting; F-055 merged; C4 proving runs after the release)
