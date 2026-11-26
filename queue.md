@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 15:28
+Updated: 2026-11-26 15:47
 
 ## Hub
 
@@ -39,13 +39,13 @@ Updated: 2026-11-26 15:28
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: parked; F-170 and the words merged; B-161 card-height run in the hub's pre-release window)
+## Advisor (pointer: parked; B-161, P69, P72 proven in the full suite; A4 after the release)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 | | X | - | Parity backlog lines from the A2 board check: OFA questionnaire filter (board: ASF (excl. GST) from/to); S-Account ASF heading info icon after "past 12 months" | Look and Feel | ?? | For triage |
-| | A4 | B-161, P68-P72 | Card height polled (code merged), and the P68, P69, P70, P72 checks just switched on: the business run proves them | Functional | ?? | Hub's pre-release window |
+| | A4 | P70 (full suite 2026-11-26) | The board lets an Adviser switch "S-Account and account name" off; the build locks it (shell target passes). Design row for the board, then the board check passes | Look and Feel | ?? | After the release |
 | | A4 | P68 (full suite 2026-11-26) | Sidebar count with the sidebar open: the app draws the number grey (rgb 64,64,64), the check wants white on maroon; and the check cannot find "Initial OFAs" on the board | Look and Feel | ?? | After the release |
 | | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Window after PS's flaky group |
 | | A4 | F-144 | The OFA timeline: copy the OFA history section PS and Compliance already have (Luke, 2026-11-26); P97 already drawn | Functional | 6 | After the UAT release |
@@ -63,7 +63,7 @@ Updated: 2026-11-26 15:28
 | | 70 | - | Overview "Show every hidden column" times out (key-columns.steps.ts:81): P77 "key columns never cut" and P78 headings at 1280 and 1920 fail on the shell target, alone too (full suite 2026-11-26) | Functional | ?? | After the release |
 | | 70 | - | 9 flaky tests (AttachmentRegistration, ExpiryRegister, exceptions-report x3, ofa-checklist x2, quarantine, QuarantineReadEndpoint): causes and fixes | Functional | ?? | Window after Advisor A3's check |
 | | 70 | - | Handoff and test runbook: Compliance ("Renewal notice", B-157) and Advisor ("Signed renewal notice") now label OFAREN | Functional | 0 | After B-157 is on main |
-| | X | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Held for Muhammed's intake |
+| | 70 | OFA-B-271 | Send electronically takes the note's attachments (board draws the row; API takes no files) | Functional | 2 | Taken in (Muhammed, 2026-11-26); after the release |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 | | X | OFA-F-209 | Real signing-status reader (renewals and Initial OFAs) + live DART filing check (split from F-138, which is Done) | Functional | 3 | Blocked: DART retest after the 2nd UAT release (likely 2026-11-27) |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
