@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 19:10
+Updated: 2026-11-26 19:20
 
 ## Hub
 
@@ -54,17 +54,17 @@ Updated: 2026-11-26 19:10
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: group 70 at b1ed3006 waits on make up; group 71 flake pass now)
+## Portfolio Services (pointer: group 72, OFA-F-219; groups 70 and 71 wait on make up)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | 72 | (raises) | Adopt SHELL-F-192: LocalDB test databases via Shell.TestKit.LocalDbDatabaseFiles (adds a TestKit reference to the tests and the TestData tool) | Functional | ?? | Code now; dotnet test in a window |
+| >> | 72 | OFA-F-219 | Adopt SHELL-F-192: LocalDB test databases via Shell.TestKit.LocalDbDatabaseFiles (adds a TestKit reference to the tests and the TestData tool) | Functional | ?? | Code now; dotnet test in a window |
 | >> | 70 | (PS raises) | OFA-B-313 paperclip on the Settings Notes: files on report notes (migration, procedure file list, trail link) | Functional | 2 | Split from P2 so the release is not held |
 | >> | 70 | OFA-F-215 | Accepting an Adviser's answer updates the arrangement | Functional | 4 | After the release |
 | >> | 70 | OFA-F-217 | Step code for the P81, P84, P85 scenarios (still @skip), with the loading state's entry in shared business-tests/support | Functional | 2 | After the release |
 | >> | 70 | (PS raises) | Production `Chrome:Path` set to the path the test site uses (Chrome is on sic2iws1; REL-015), its comment and `ProductionSettingsTests` | Functional | 1 | After the release |
 | >> | 70 | - | Overview "Show every hidden column" times out (key-columns.steps.ts:81): P77 "key columns never cut" and P78 headings at 1280 and 1920 fail on the shell target, alone too (full suite 2026-11-26) | Functional | ?? | After the release |
-| >> | 71 | - | 9 flaky tests (AttachmentRegistration, ExpiryRegister, exceptions-report x3, ofa-checklist x2, quarantine, QuarantineReadEndpoint): causes and fixes | Functional | ?? | Code-only pass now; re-runs in the morning window with group 70's business run |
+| | 71 | OFA-B-347 | Flake pass committed c52b99d5 (AttachmentRegistration race, O52 wait); re-runs in the morning window | Functional | ?? | Re-run with group 70's business run |
 | | 70 | - | Handoff and test runbook: Compliance ("Renewal notice", B-157) and Advisor ("Signed renewal notice") now label OFAREN | Functional | 0 | After B-157 is on main |
 | >> | 70 | OFA-B-271 | Send electronically takes the note's attachments, kept on the record, not sent to the signer (migration 0232) | Functional | 2 | Taken in (Muhammed, 2026-11-26); after the release |
 | | X | OFA-B-345 | Business scenario for F-215, and the next reference date shown on the record | Functional | ?? | Waits on a design row in the next designer round |
@@ -74,10 +74,11 @@ Updated: 2026-11-26 19:10
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 
-## Shell (pointer: idle; its window checks wait for the morning)
+## Shell (pointer: group 8, shared settle wait)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 8 | (raises) | common.steps.ts: `I open` and the drop-down of `I choose … for …` end with openScreen's settle wait (App.steady, public wrapper); from PS's OFA-B-347 (checklist C131/C161, Quarantine C163) | Functional | ?? | Code now; re-run in the morning full suite |
 | | 6 | - | Board Parity for PLUGIN0-B-004, SHELL-B-210, SHELL-B-212; move-localdb-files.ps1 dry run then move, every stack down | Functional | ?? | Next stack window; the move in Muhammed's window |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
