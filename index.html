@@ -37,6 +37,11 @@ tr:last-child td{border-bottom:0}
 td.nw{white-space:nowrap}
 code{font:500 13px/20px "Roboto Mono",Consolas,monospace}
 .muted{color:var(--muted)}
+tr.rel td{background:var(--bg);border-top:1px solid var(--line)}
+.glyphs{display:inline-flex;gap:12px}
+a.glyph{display:inline-flex;color:var(--accent);border-radius:4px}
+a.glyph svg{width:20px;height:20px}
+a.glyph:hover,a.glyph:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .note{color:var(--warn)}
 .okmark{color:var(--ok)}
 .badge{display:inline-flex;align-items:center;gap:6px;font-weight:500;white-space:nowrap}
@@ -138,17 +143,41 @@ code{font:500 13px/20px "Roboto Mono",Consolas,monospace}
   });
   document.getElementById("checked").textContent=status&&status.checked?"Last checked "+when(status.checked)+". The page shows that check; it does not check live.":"Not checked yet.";
 
-  // Changelogs (uat-notes.json "changelogs": [{from:"YYYY-MM-DD", file, label}]): a deploy links the newest one whose date is on or before it.
-  var CL=(notes.changelogs||[]).slice().sort(function(a,b){return a.from<b.from?1:-1;});
-  function changelogFor(at){var day=String(at).slice(0,10);for(var i=0;i<CL.length;i++){if(CL[i].from<=day)return CL[i];}return null;}
+  // Releases (uat-notes.json "releases": [{name, from:"YYYY-MM-DD", html, pdf}]). Each release gets a heading row in the
+  // log, with its changelog glyphs; a deploy sits under the newest release whose date is on or before it.
+  var REL=(notes.releases||[]).slice().sort(function(a,b){return a.from<b.from?1:-1;});
+  function releaseFor(at){var day=String(at).slice(0,10);for(var i=0;i<REL.length;i++){if(REL[i].from<=day)return REL[i];}return null;}
+  var GLYPH={
+    page:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v14H6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6M9 13h8M9 17h8" fill="none" stroke="currentColor" stroke-width="2"/></svg>',
+    pdf:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 17v4h16v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+  };
+  function glyph(kind,href,label,download){var a=el("a",null,"glyph");a.href=href;a.title=label;a.setAttribute("aria-label",label);a.target="_blank";a.rel="noopener";if(download)a.setAttribute("download","");a.innerHTML=GLYPH[kind];return a;}
+  function changelogCell(r){
+    if(!r||(!r.html&&!r.pdf))return el("span","—","muted");
+    var w=el("span",null,"glyphs");
+    if(r.html)w.appendChild(glyph("page",r.html,"Read the changelog"));
+    if(r.pdf)w.appendChild(glyph("pdf",r.pdf,"Download the changelog (PDF)",true));
+    return w;
+  }
 
   // Log
   var lg=document.getElementById("log");
-  if(!d.deploys.length){var tr0=el("tr");var td0=cell(tr0,"No deploys yet.","muted");td0.colSpan=5;lg.appendChild(tr0);}
+  function releaseRow(r,deployed){
+    var tr=el("tr",null,"rel");
+    var td=cell(tr,null);td.colSpan=4;
+    td.appendChild(el("strong",r.name));
+    td.appendChild(el("span",deployed?"":" · not deployed yet","muted"));
+    cell(tr,changelogCell(r),"nw");
+    lg.appendChild(tr);
+  }
+  var shown={};
+  REL.forEach(function(r){if(!d.deploys.some(function(x){return releaseFor(x.at)===r;})){releaseRow(r,false);shown[r.name]=1;}});
+  if(!d.deploys.length&&!REL.length){var tr0=el("tr");var td0=cell(tr0,"No deploys yet.","muted");td0.colSpan=5;lg.appendChild(tr0);}
   d.deploys.forEach(function(x){
+    var r=releaseFor(x.at);
+    if(r&&!shown[r.name]){releaseRow(r,true);shown[r.name]=1;}
     var tr=el("tr");
-    cell(tr,when(x.at),"nw");cell(tr,NAMES[x.part]||x.part);cell(tr,el("code",x.commit),"nw");cell(tr,x.subject);
-    var cl=changelogFor(x.at);if(cl){var ca=el("a",cl.label||"Changelog (PDF)");ca.href=cl.file;ca.target="_blank";ca.rel="noopener";cell(tr,ca,"nw");}else cell(tr,el("span","—","muted"));
+    cell(tr,when(x.at),"nw");cell(tr,NAMES[x.part]||x.part);cell(tr,el("code",x.commit),"nw");cell(tr,x.subject);cell(tr,null);
     lg.appendChild(tr);
   });
   if(d.generated)document.getElementById("generated").textContent="Updated "+when(d.generated)+".";

@@ -1,10 +1,15 @@
 {
   "parts": {},
-  "changelogs": [
+  "releases": [
     {
+      "name": "UAT 1 deployment",
+      "from": "2026-11-24"
+    },
+    {
+      "name": "UAT 2 deployment",
       "from": "2026-11-25",
-      "file": "changelogs/2026-11-26-test-site-update.pdf",
-      "label": "26-11-2026 update (PDF)"
+      "html": "changelogs/2026-11-26-test-site-update.html",
+      "pdf": "changelogs/2026-11-26-test-site-update.pdf"
     }
   ]
 }
