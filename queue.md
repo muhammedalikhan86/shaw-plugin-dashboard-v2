@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 11:30
+Updated: 2026-11-26 11:31
 
 ## Now
 
@@ -27,11 +27,11 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | B-156 (W44) | No-version slot line and subtitle: the board has placeholder words only | Look and Feel | 1 | Held: the business's words (next round) |
 
 
-## Portfolio Services 2 (pointer: OFA-F-230, the test sign-in guard on the PS API; .NET slot after Compliance)
+## Portfolio Services 2 (pointer: Annature build, tests and deploy dry run in its machine slot now; F-230 ready to merge)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 44 | OFA-F-230 | The PS API refuses the test sign-in outside the test host, as SHELL-F-190 does for the shell (PM-057) | Functional | 2 | In its .NET slot now; merges before the UAT release |
+| >> | 44 | OFA-F-230 | The PS API refuses the test sign-in outside the test host, as SHELL-F-190 does for the shell (PM-057) | Functional | 2 | Ready to merge fef48919; waits for Shell's commit (doc overlap) |
 | >> | 44 | REL-014 prep | AnnatureInterfaceWebAPI (own repo, local main, unpushed): login in appsettings (b942f79, done); a deploy script in that repo; build and test routes 5 and 6 | Functional | 2 | Script now; build and tests in the F-230 machine slot; then Muhammed pushes and deploys |
 | >> | 45 | OFA-F-232 | Act As on the PS API cannot reach test-data people (Corinne Abbott, PS O33): adopt the dev-only test-data directory the shell, Advisor and Compliance APIs already have (SHELL-F-108 pattern), Development only | Functional | 3 | Code outside Program.cs now; wiring after the F-230 commit; can follow the release |
 | | 45 | (PS2 raises) | Shaw.Word app registration values into the PS API's tracked appsettings (no server step) | Functional | 1 | With OFA-F-232 |
