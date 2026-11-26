@@ -16,7 +16,10 @@
   --done:#3987e5;--done-soft:#184f95;--track:#2A2A28;--weekend:#191918;--forecast:#3987e5;--added:#f0605a;--added-soft:#7a2a27;--deploy:#f59a2e;--deploy-soft:#7a4a14}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/22px Roboto,"Helvetica Neue",Arial,sans-serif}
-header{background:#000;padding:16px}
+header{background:#000;padding:16px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+#queueLink{font:500 14px/20px Roboto,"Helvetica Neue",Arial,sans-serif;color:#fff;background:var(--accent);border:0;border-radius:20px;padding:8px 20px;cursor:pointer;text-decoration:none}
+#queueLink:hover{filter:brightness(1.08)}
+#queueLink:focus-visible{outline:2px solid #fff;outline-offset:2px}
 header img{width:150px;height:auto;display:block}
 main{max-width:1080px;margin:0 auto;padding:32px 16px 48px}
 h1{font-weight:400;font-size:26px;line-height:34px;margin:0 0 8px}
@@ -71,7 +74,7 @@ svg text{font-family:Roboto,"Helvetica Neue",Arial,sans-serif}
 .err{color:var(--accent)}
 .muted{color:var(--muted)}
 code{font:500 12px/18px "Roboto Mono",Consolas,monospace}
-/* Build work: the four figures stacked in one card, the component table to its right. */
+/* The four figures stacked in one card, the component table to its right. */
 .buildgrid{display:grid;grid-template-columns:240px minmax(0,1fr);gap:16px;align-items:stretch}
 .buildgrid th,.buildgrid td{padding:10px 8px}
 .buildgrid .stack .stat+.stat{border-top:1px solid var(--line);margin-top:14px;padding-top:14px}
@@ -89,7 +92,11 @@ details.acc[open]>summary{border-bottom:1px solid var(--line);border-radius:12px
 .found .fig{font-variant-numeric:tabular-nums}
 .found .bar{flex:0 0 160px}
 .found p{flex:1 1 100%;margin:0;color:var(--muted);font-size:13px;line-height:18px}
-/* Pace: deployment and testing work is orange; points added (found along the way) stay red in every phase. */
+/* Pace: User Acceptance Testing work is orange; points added (found along the way) stay red in every phase. */
+/* Pace is a collapsible section, closed by default: its heading is the toggle. */
+details.sec{margin:36px 0 0;border-top:0;padding:0;font-size:inherit;line-height:inherit;color:inherit}
+details.sec>summary{color:var(--ink);font-weight:400;font-size:20px;line-height:28px;margin:0 0 4px -4px;gap:10px}
+details.sec>summary::before{width:8px;height:8px;color:var(--accent)}
 .sw.deploy{background:var(--deploy)}
 .pace-deploy{fill:var(--deploy)}
 .pace-deploy.we{fill:var(--deploy-soft)}
@@ -103,7 +110,7 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
 </style>
 </head>
 <body>
-<header><a href="index.html"><img src="assets/logo-primary-reversed-3x.png" alt="Shaw and Partners - back to the start page"></a></header>
+<header><a href="index.html"><img src="assets/logo-primary-reversed-3x.png" alt="Shaw and Partners - back to the start page"></a><a id="queueLink" href="queue.html">Queue</a></header>
 <main>
 <h1>Project Status</h1>
 <p class="lede" id="lede">Loading…</p>
@@ -113,24 +120,14 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
 <div class="row3" id="phases"></div>
 
 <h2>Timeline</h2>
-<p class="sub">Actual dates are solid; forecast dates are striped, with the optimistic to pessimistic range as a whisker. Each component's line ends at its build; work raised after the build counts in Deployment &amp; Testing.</p>
+<p class="sub">Actual dates are solid; forecast dates are striped, with the optimistic to pessimistic range as a whisker. Each component's line ends at its build; work raised after the build counts in User Acceptance Testing.</p>
 <div class="card">
 <div class="legend"><span><i class="sw" style="background:var(--done)"></i>Actual</span><span><i class="sw" style="background:repeating-linear-gradient(135deg,var(--forecast) 0 3px,transparent 3px 6px);border:1px solid var(--forecast)"></i>Forecast (likely)</span><span><svg width="18" height="10"><line x1="1" y1="5" x2="17" y2="5" stroke="currentColor" stroke-width="2"/><line x1="1" y1="1" x2="1" y2="9" stroke="currentColor" stroke-width="2"/><line x1="17" y1="1" x2="17" y2="9" stroke="currentColor" stroke-width="2"/></svg>Forecast range</span><span><svg width="12" height="12"><path d="M6 1 L11 6 L6 11 L1 6Z" fill="var(--ink)"/></svg>Event</span><span><i class="sw" style="background:var(--accent);width:2px"></i>Today</span><span><i class="sw" style="background:var(--weekend);border:1px solid var(--line)"></i>Weekend</span></div>
 <div class="tlwrap" id="tlwrap"><svg id="timelineLabels" class="tl-labels" aria-hidden="true"></svg><svg id="timeline" role="img" aria-label="Project timeline"></svg></div>
 </div>
 <div class="card" style="margin-top:16px;padding:0"><details class="acc"><summary>Timeline dates</summary><div class="tablewrap"><table id="dates"></table></div></details></div>
 
-<h2>Pace</h2>
-<p class="sub">Points completed (blue; orange for deployment and testing work) and points added to scope (red, in every phase) each day. Weekend bars are overnight runs: their points count, but weekends never count as days in the forecast.</p>
-<div class="card">
-<div class="legend"><span><i class="sw" style="background:var(--done)"></i>Points done</span><span><i class="sw deploy"></i>Points done: deployment and testing</span><span><i class="sw" style="background:var(--added)"></i>Points added</span><span><i class="sw" style="background:var(--done-soft)"></i>Weekend (overnight runs)</span><span><i class="sw" style="background:var(--weekend);border:1px solid var(--line)"></i>Weekend</span></div>
-<div class="chartwrap"><svg id="pace" role="img" aria-label="Points completed and points added per day"></svg></div>
-<p class="sub" id="paceNote" style="margin:10px 0 0"></p>
-</div>
-
-<h2>Build work</h2>
-<p class="caveat" id="buildLine"></p>
-<h3 class="minor">Deployment and testing</h3>
+<h2>User Acceptance Testing</h2>
 <p class="sub">Putting the product on a test site, testing it with the business, and going live. Sizes are in points.</p>
 <div class="row4" id="stats"></div>
 <div class="card tablewrap" style="margin-top:16px"><table id="backlog"></table></div>
@@ -140,8 +137,14 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
 <p class="sub">Every change to these figures, newest first, with the time it was recorded (Sydney time).</p>
 <div class="card tablewrap logwrap" id="updatesWrap"><table id="updates"></table></div>
 
-<h2>Where the numbers come from</h2>
-<div class="card tablewrap"><table id="sources"></table></div>
+<details class="sec" id="paceSec"><summary>Pace</summary>
+<p class="sub">Points completed (blue; orange for User Acceptance Testing work) and points added to scope (red, in every phase) each day. Weekend bars are overnight runs: their points count, but weekends never count as days in the forecast.</p>
+<div class="card">
+<div class="legend"><span><i class="sw" style="background:var(--done)"></i>Points done</span><span><i class="sw deploy"></i>Points done: User Acceptance Testing</span><span><i class="sw" style="background:var(--added)"></i>Points added</span><span><i class="sw" style="background:var(--done-soft)"></i>Weekend (overnight runs)</span><span><i class="sw" style="background:var(--weekend);border:1px solid var(--line)"></i>Weekend</span></div>
+<div class="chartwrap"><svg id="pace" role="img" aria-label="Points completed and points added per day"></svg></div>
+<p class="sub" id="paceNote" style="margin:10px 0 0"></p>
+</div>
+</details>
 <div id="tip" role="tooltip"></div>
 </main>
 <!-- Test-site deploys and releases (generated by update-uat-data.ps1); the timeline draws without it. -->
@@ -186,7 +189,7 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
 
   function render(S){
     var asOf=d(S.asOf),allComps=S.components,fc=S.forecast,ov0=fc.overall;
-    // Build components carry no "stage"; a staged one (deployment and testing) is shown on its own rows.
+    // Build components carry no "stage"; a staged one (User Acceptance Testing) is shown on its own rows.
     var comps=allComps.filter(function(c){return !c.stage;}),relComps=allComps.filter(function(c){return c.stage;});
     var ov={rateLast10:ov0.rateLast10,basis:ov0.basis};
     ["optimistic","likely","pessimistic"].forEach(function(k){var v=comps.map(function(c){return (fc.perComponent[c.name]||{})[k];}).filter(Boolean).sort();ov[k]=v.length?v[v.length-1]:ov0[k];});
@@ -221,10 +224,8 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
         return phase(p,st,col,[["Start",p.start?f(p.start)+tag(p):"Not planned yet"],["End",p.end?f(p.end)+tag(p):"Not planned yet"]]);
       }).join("");
 
-    // ---- Build work: one line for the finished build, then deployment and testing only.
-    // The build figures (components, found during build, churn) stay in status.json for the patcher; they are not drawn.
-    $("buildLine").innerHTML='<b style="font-weight:500">The build is '+n(done/total*100)+'% done and complete.</b> The Build phase finished on '+f(build.end)+
-      '. The work now is deploying the test site (test data), acceptance testing, and the phases after it.';
+    // ---- User Acceptance Testing work (the staged bucket). The build figures (components, found during build, churn)
+    // stay in status.json for the patcher; they are not drawn.
     var rd=0,rr=0,ri=0;relComps.forEach(function(c){rd+=c.pointsDone;rr+=c.pointsRemaining;ri+=c.itemsRemaining;});
     var rt=rd+rr,rp=rt?rd/rt*100:0,bl=S.deploymentBacklog||[];
     function stat(label,value,note){return '<div class="card stat"><div class="label">'+label+'</div><div class="value">'+value+'</div><div class="note">'+note+'</div></div>';}
@@ -235,13 +236,16 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
       stat("Items left",ri,ri===1?"item still to do":"items still to do");
     var bt='<thead><tr><th>Work</th><th class="num">Size</th><th>Phase</th><th>Who</th><th>Status</th></tr></thead><tbody>',bs=0;
     bl.forEach(function(r){bs+=r.size||0;bt+="<tr><td>"+esc(r.item)+'</td><td class="num">'+n(r.size||0)+"</td><td>"+esc(r.phase)+"</td><td>"+esc(r.owner)+"</td><td>"+esc(r.status)+"</td></tr>";});
-    if(!bl.length)bt+='<tr><td colspan="5" class="muted">No deployment and testing work listed yet.</td></tr>';
+    if(!bl.length)bt+='<tr><td colspan="5" class="muted">No User Acceptance Testing work listed yet.</td></tr>';
     else bt+='<tr><td><b style="font-weight:500">All</b></td><td class="num"><b style="font-weight:500">'+n(bs)+'</b></td><td colspan="3"></td></tr>';
     $("backlog").innerHTML=bt+"</tbody>";
     $("backlogNote").textContent="Acceptance testing is Luke's own testing, so it carries no sized work here."+
       (S.waitingOnOthers?" A further "+S.waitingOnOthers+" things are waiting on people outside the team (IT, the database team, Luke and the business); they are not sized.":"");
 
-    drawPace(S);
+    var paceSec=$("paceSec"),paceW=0;
+    function pace(){if(!paceSec.open)return;var w=$("pace").parentNode.clientWidth;if(w===paceW)return;paceW=w;$("pace").innerHTML="";drawPace(S);}
+    paceSec.addEventListener("toggle",pace);
+    addEventListener("resize",pace);
     drawTimeline(S,asOf,ov,build,buildDone,later);
 
     // ---- Dates table
@@ -265,11 +269,6 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
     fitLog();
     addEventListener("resize",fitLog);
 
-    // ---- Sources
-    var so='<thead><tr><th>Number</th><th>Source</th></tr></thead><tbody>';
-    S.sources.forEach(function(x){so+="<tr><td>"+esc(x.number)+"</td><td><code>"+esc(x.file)+"</code></td></tr>";});
-    so+='<tr><td>forecast method</td><td>'+esc(fc.method)+'</td></tr></tbody>';
-    $("sources").innerHTML=so;
   }
 
   // Show at most 15 log rows; every other row stays in the table and scrolls inside the card.
@@ -284,7 +283,7 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
     var ser=S.velocity.series,svg=$("pace");
     var W=Math.max(640,$("pace").parentNode.clientWidth||640),H=240,L=40,R=8,T=16,B=40;
     svg.setAttribute("viewBox","0 0 "+W+" "+H);svg.setAttribute("width",W);svg.setAttribute("height",H);
-    // Deployment and testing points done each day, from log lines that name a REL- item.
+    // User Acceptance Testing points done each day, from log lines that name a REL- item.
     var dep={};(S.log||[]).forEach(function(e){if(!(e.pointsDone>0)||!/\bREL-\d+/.test(e.change||""))return;var k=String(e.at).slice(0,10);dep[k]=(dep[k]||0)+e.pointsDone;});
     var add={},addFrom=null;(S.log||[]).forEach(function(e){if(e.pointsRaised==null)return;var k=String(e.at).slice(0,10);add[k]=(add[k]||0)+e.pointsRaised;if(!addFrom||k<addFrom)addFrom=k;});
     var max=0;ser.forEach(function(p){max=Math.max(max,p.pointsDoneThatDay,add[p.date]||0);});
@@ -302,13 +301,13 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
       var bar=function(val,bx0,fill,base,cls){if(!(val>0))return;base=base||0;var y0=y(base),h=Math.max(2,y0-y(base+val)),r=Math.min(4,bw/2,h);
         var a0={d:"M"+bx0+","+y0+"V"+(y0-h+r)+"q0,-"+r+" "+r+",-"+r+"H"+(bx0+bw-r)+"q"+r+",0 "+r+","+r+"V"+y0+"Z"};if(cls)a0["class"]=cls;else a0.fill=fill;
         s("path",a0,svg);};
-      // Build work at the bottom, deployment and testing stacked on top in orange.
+      // Build work at the bottom, User Acceptance Testing stacked on top in orange.
       if(dv>0&&bv>0)s("rect",{x:bx,y:y(bv)-1,width:bw,height:y(0)-y(bv)+1,fill:we?"var(--done-soft)":"var(--done)"},svg);
       else bar(bv,bx,we?"var(--done-soft)":"var(--done)");
       bar(dv,bx,null,bv,we?"pace-deploy we":"pace-deploy");
       bar(a,bx+bw,we?"var(--added-soft)":"var(--added)");
       var hit=s("rect",{x:x,y:T,width:cw,height:H-T-B,fill:"transparent",tabindex:0,
-        "data-tip":"<b>"+fmt(t,true)+"</b>"+(we?" (weekend)":"")+"<br><span style=\"color:var(--done)\">"+n(v)+" points done</span>"+(dv>0?"<br><span class=\"tip-deploy\">"+n(dv)+" of them deployment and testing</span>":"")+(hasA?"<br><span style=\"color:var(--added)\">"+((a||0)<0?"−"+n(-a):"+"+n(a||0))+" points added</span>":"")+"<br>"+n(p.pointsDone)+" points in the record so far"},svg);
+        "data-tip":"<b>"+fmt(t,true)+"</b>"+(we?" (weekend)":"")+"<br><span style=\"color:var(--done)\">"+n(v)+" points done</span>"+(dv>0?"<br><span class=\"tip-deploy\">"+n(dv)+" of them User Acceptance Testing</span>":"")+(hasA?"<br><span style=\"color:var(--added)\">"+((a||0)<0?"−"+n(-a):"+"+n(a||0))+" points added</span>":"")+"<br>"+n(p.pointsDone)+" points in the record so far"},svg);
       if(i===ser.length-1||new Date(t).getUTCDay()===1||i===0){
         var lb=s("text",{x:x+cw/2,y:H-B+16,"text-anchor":"middle","font-size":11,fill:"var(--faint)"},svg);lb.textContent=short(t);}
     });
@@ -407,10 +406,10 @@ h3.minor{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 4px}
         whisker(d(ov.optimistic),d(ov.pessimistic),yy+12,"<b>Build forecast range</b><br>"+f(ov.optimistic)+" – "+f(ov.pessimistic));
         label(d(ov.pessimistic)+DAY,yy,short(d(ov.likely)));
       }else if(r.k==="comp"&&!r.c.stage){
-        // A build component's line ends at its build (ruling 2026-11-26); later items count in Deployment & Testing.
+        // A build component's line ends at its build (ruling 2026-11-26); later items count in User Acceptance Testing.
         var bd=r.c.buildDoneOn||S.buildCompletedOn||build.end,be2=d(bd)+DAY,cs0=r.c.start?d(r.c.start):bStart;
         bar(cs0,be2,yy,"<b>"+esc(r.c.name)+"</b><br>"+fmt(cs0)+" to "+f(bd)+" (done)<br>"+n(r.c.pointsDone)+" of "+n(r.c.pointsTotal)+" points done"+
-          (r.c.pointsRemaining?"; "+n(r.c.pointsRemaining)+" left from the build":"")+"<br>Items raised after "+f(S.buildCompletedOn)+" count in Deployment &amp; Testing.");
+          (r.c.pointsRemaining?"; "+n(r.c.pointsRemaining)+" left from the build":"")+"<br>Items raised after "+f(S.buildCompletedOn)+" count in User Acceptance Testing.");
         label(be2,yy,"Done "+short(d(bd)));
       }else if(r.k==="comp"){
         var p=fc[r.c.name],cs=r.c.start?d(r.c.start):bStart;

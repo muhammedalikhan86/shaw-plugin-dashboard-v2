@@ -1,5 +1,6 @@
 # Regenerates queue-data.js from queue.md so queue.html also works opened from the folder (file://),
 # where a browser blocks fetch('queue.md'). The hub copies queue.md here and then runs this script.
+# It copies queue.md as it is; queue.html itself drops any "Now" section and puts "Hub" first, so a refresh keeps that shape.
 $ErrorActionPreference = 'Stop'
 $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 $md = [System.IO.File]::ReadAllText((Join-Path $here 'queue.md'), [System.Text.Encoding]::UTF8)

@@ -3,18 +3,22 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 14:11
+Updated: 2026-11-26 14:57
 
-## Now
+## Hub
 
-Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orders the workers only.
-
-1. Code freeze 2026-12-11. Everything still to build lands before it.
-2. Today, release-first, one machine window at a time: AnnatureInterfaceWebAPI deployed; Shell group 4 merged 4ffdf1b4; Advisor merged; PS2 group 45 merged; PS P2 merged ed9bf87a; the hub's full suite done (Jest, .NET green; reds are tests and looks, none hold the release); then the UAT release (Muhammed deploys). Everyone else writes code only meanwhile. After the release: Compliance C4 rest, PS 70, Advisor A4.
-3. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker: a blocked worker takes its next unblocked item.
-4. Advisor's two Power BI pages (Book of business, and the dashboard with the revenue cards) wait until the OFA work is complete: data security and user segregation come first (Muhammed, 2026-11-26).
-5. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022).
-6. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`; after the deploy, update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
+1. UAT 2 release at 16:15 today (Luke asked for the delay); Muhammed deploys. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
+2. After the UAT 2 deploy: Muhammed creates the live `ShawPortal-OngoingFeeArrangements` database (REL-026) and opens one renewal notice PDF on the test site (the Chrome check, REL-015).
+3. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`.
+4. Code freeze 2026-12-11. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker.
+5. Advisor's two Power BI pages (Book of business, and the dashboard with the revenue cards) wait until the OFA work is complete (Muhammed, 2026-11-26).
+6. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022).
+7. With the stack up: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database.
+8. Parity round 2: when Muhammed says. Parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
+9. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html) into his design project.
+10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
+11. Skill feedback for Claude Improvements: DEP-9 overruled (secrets in tracked appsettings); no Now section in the queue, Hub first; status-page shape (2026-11-26).
+12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
 ## Compliance (pointer: waiting; F-055 merged; C4 proving runs after the release)
 
@@ -76,15 +80,3 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | X | PLUGIN0-F-016 | Plugin0 gallery: screen text says Adviser | Look and Feel | 1 | After the release |
 | | X | PLUGIN0-F-017 | Plugin0 gallery: sample State Manager is Marcus Ashcombe | Look and Feel | 1 | After the release |
 | | X | PLUGIN0-B-004 | Plugin0 gallery: OFA Checklist drawn as a timeline, built as expansion panels | Look and Feel | 3 | After the release |
-
-
-## Hub
-
-1. Next test-site deploy: PS group 58 (notices) and deploy 2 (SHELL-F-184, rollback rehearsal).
-2. With the stack up, after OFA-F-202: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database.
-3. Parity round 2: when Muhammed says, after every P1 fix. Parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
-4. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html, from the repo) into his design project.
-5. Next designer round: P97 (Advisor board gets the OFA history section), once Advisor writes the row.
-6. Owed: npm run test:business:coverage and make design-checks, in a machine window.
-7. Skill feedback for Claude Improvements: the shaw-estate skill's DEP-9 (secrets out of appsettings) is overruled; secrets go in tracked appsettings (Muhammed, 2026-11-26).
-8. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.

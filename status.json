@@ -126,7 +126,7 @@
    "buildDoneOn": "2026-11-23"
   },
   {
-   "name": "Deployment & Testing",
+   "name": "User Acceptance Testing",
    "counted": [
     "leftovers"
    ],
@@ -334,7 +334,7 @@
     "rateLast10": 20.38,
     "rateWhole": 21.85
    },
-   "Deployment & Testing": {
+   "User Acceptance Testing": {
     "optimistic": "2026-11-30",
     "likely": "2026-11-30",
     "pessimistic": "2026-11-30",
@@ -346,7 +346,7 @@
    "optimistic": "2026-11-30",
    "likely": "2026-11-30",
    "pessimistic": "2026-11-30",
-   "basis": "critical path: the latest date of the work still open (Deployment & Testing). Component lines end at their build (buildDoneOn); every item raised after 2026-11-23 counts in Deployment & Testing, whatever its component. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
+   "basis": "critical path: the latest date of the work still open (User Acceptance Testing). Component lines end at their build (buildDoneOn); every item raised after 2026-11-23 counts in User Acceptance Testing, whatever its component. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 180.11,
    "pointsRemaining": 72.0,
@@ -405,7 +405,7 @@
    "kind": "actual"
   },
   {
-   "name": "Deployment and testing starts",
+   "name": "User Acceptance Testing starts",
    "date": "2026-11-23",
    "kind": "actual"
   }
@@ -3082,7 +3082,7 @@
   "itemsRemaining": 2
  },
  "buildCompletedOn": "2026-11-23",
- "deploymentBacklogNote": "The hub refreshes deploymentBacklog and waitingOnOthers from docs/leftovers.md (The stack, Waiting on others) in the hub checkout. The status page draws them as the deployment and testing work table. buildCompletedOn pins the Build finish date the patcher would otherwise reset.",
+ "deploymentBacklogNote": "The hub refreshes deploymentBacklog and waitingOnOthers from docs/leftovers.md (The stack, Waiting on others) in the hub checkout. The status page draws them as the User Acceptance Testing work table. buildCompletedOn pins the Build finish date the patcher would otherwise reset.",
  "deploymentBacklog": [
   {
    "item": "Decision record for the test site",

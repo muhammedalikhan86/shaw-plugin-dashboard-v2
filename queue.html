@@ -185,8 +185,16 @@ out.addEventListener('mousemove',e=>{const p=e.target.closest('.pill');if(p)show
 out.addEventListener('mouseleave',()=>qtip.style.display='none');
 out.addEventListener('focusin',e=>{const p=e.target.closest('.pill');if(p){const r=p.getBoundingClientRect();showTip(p,r.left,r.bottom)}});
 out.addEventListener('focusout',()=>qtip.style.display='none');
+// A section is an h2 and everything up to the next h2. "Now" is never shown, even if queue.md has one; "Hub" always comes first.
+function sectionOf(h){const els=[h];let n=h.nextElementSibling;while(n&&n.tagName!=='H2'){els.push(n);n=n.nextElementSibling}return els}
+function shapeSections(){
+  out.querySelectorAll('h2').forEach(h=>{if(/^now\b/i.test(h.textContent.trim()))sectionOf(h).forEach(e=>e.remove())});
+  const hub=[...out.querySelectorAll('h2')].find(h=>/^hub\b/i.test(h.textContent.trim())),first=out.querySelector('h2');
+  if(hub&&hub!==first)sectionOf(hub).forEach(e=>out.insertBefore(e,first));
+}
 function render(md){
   out.innerHTML=marked.parse(md);
+  shapeSections();
   buildMap();
   out.querySelectorAll('table').forEach(t=>{const w=document.createElement('div');w.className='scroll';t.parentNode.insertBefore(w,t);w.appendChild(t);
     t.querySelectorAll('tbody tr').forEach(tr=>{if(tr.cells[0]&&tr.cells[0].textContent.trim()==='>>')tr.classList.add('now')})});
