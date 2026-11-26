@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 18:46
+Updated: 2026-11-26 18:47
 
 ## Hub
 
@@ -34,9 +34,11 @@ Updated: 2026-11-26 18:46
 | >> | C4 | B-161 | Release-build test `AttachmentOptionsValidatorTests.TheHost_FailsAtStartup_OnABadStore("appdata")` fails under load (UAT 2 step 6): cause and fix | Functional | 1 | Now, with C4 |
 
 
-## Portfolio Services 2 (pointer: queue clear; only blocked items left)
+## Portfolio Services 2 (pointer: group 3, OFA-F-211 + OFA-F-209 part 1)
 
 | # | Grp | ID | Item | Category | Size | Status |
+| >> | 3 | OFA-F-211 | Remove the emails Luke ruled out: deceased-estate email to the Back Office, the State Manager's ended / terminated / culled emails; expiry-report.feature lines 11 and 25; Adviser's termination email and the weekly Expired report stay (moved from PS) | Functional | 5 | Code + Jest now; .NET at its window |
+| >> | 3 | OFA-F-209 part 1 | Real warehouse signing-status reader replaces the stub, for renewals and Initial OFAs (moved from PS) | Functional | 3 | Code + Jest now; .NET at its window |
 |---|---|---|---|---|---|---|
 | | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
@@ -55,7 +57,7 @@ Updated: 2026-11-26 18:46
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: group 70 now; email-wording files wait for OFA-B-339)
+## Portfolio Services (pointer: group 70 built and reviewed; waits on make up)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
@@ -63,14 +65,13 @@ Updated: 2026-11-26 18:46
 | >> | 70 | OFA-F-215 | Accepting an Adviser's answer updates the arrangement | Functional | 4 | After the release |
 | >> | 70 | OFA-F-217 | Step code for the P81, P84, P85 scenarios (still @skip), with the loading state's entry in shared business-tests/support | Functional | 2 | After the release |
 | >> | 70 | (PS raises) | Production `Chrome:Path` set to the path the test site uses (Chrome is on sic2iws1; REL-015), its comment and `ProductionSettingsTests` | Functional | 1 | After the release |
-| | 71 | OFA-F-211 | Remove the emails Luke ruled out: the deceased-estate email to the Back Office (the tool only reads it from DART) and the State Manager's ended / terminated / culled emails (PRD and PMBook corrected at P2 finalize); design rows O53, O54 sent; update expiry-report.feature lines 11 and 25 (still expect the State Manager email) | Functional | 5 | After OFA-B-339 is on main (same email files); Adviser's termination email and the weekly Expired report stay |
 | >> | 70 | - | Overview "Show every hidden column" times out (key-columns.steps.ts:81): P77 "key columns never cut" and P78 headings at 1280 and 1920 fail on the shell target, alone too (full suite 2026-11-26) | Functional | ?? | After the release |
 | | 70 | - | 9 flaky tests (AttachmentRegistration, ExpiryRegister, exceptions-report x3, ofa-checklist x2, quarantine, QuarantineReadEndpoint): causes and fixes | Functional | ?? | Window after Advisor A3's check |
 | | 70 | - | Handoff and test runbook: Compliance ("Renewal notice", B-157) and Advisor ("Signed renewal notice") now label OFAREN | Functional | 0 | After B-157 is on main |
 | >> | 70 | OFA-B-271 | Send electronically takes the note's attachments, kept on the record, not sent to the signer (migration 0232) | Functional | 2 | Taken in (Muhammed, 2026-11-26); after the release |
 | | X | OFA-B-345 | Business scenario for F-215, and the next reference date shown on the record | Functional | ?? | Waits on a design row in the next designer round |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
-| | X | OFA-F-209 | Real signing-status reader (renewals and Initial OFAs) + live DART filing check (split from F-138, which is Done) | Functional | 3 | Blocked: DART retest after the 2nd UAT release (likely 2026-11-27) |
+| | X | OFA-F-209 part 2 | Live DART filing check (part 1, the signing-status reader, moved to ps2) | Functional | - | Blocked: DART retest after the 2nd UAT release |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
