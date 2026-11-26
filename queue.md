@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 11:33
+Updated: 2026-11-26 11:39
 
 ## Now
 
@@ -52,7 +52,7 @@ Release, waiting-on-people and go-live work: `docs/leftovers.md`. This file orde
 | | A4 | F-144 | The OFA timeline: copy the OFA history section PS and Compliance already have (Luke, 2026-11-26) | Functional | 6 | After the UAT release, with A4 |
 
 
-## Portfolio Services (pointer: P2 fixes committed d79e5a9c; re-check after Shell's slot)
+## Portfolio Services (pointer: P2 fixes d79e5a9c plus X35 change (action hidden once asked, placeholder gone) in one commit; re-check after Shell's slot)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
