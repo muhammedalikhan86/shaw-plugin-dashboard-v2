@@ -3,21 +3,19 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-26 19:44
+Updated: 2026-11-27 08:18
 
 ## Hub
 
-1. UAT redeploy tomorrow (Muhammed): Portfolio Services (ps2's P0 group), Compliance (B-160, B-162), advisor-dashboard (frozen columns), and whatever else merges by then. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
+1. UAT redeploy today, 2026-11-27 (Muhammed), after the morning window: Portfolio Services (ps2's P0 group, OFA-F-211, OFA-F-209 part 1), Compliance (B-160, B-162, once merged), advisor-dashboard (F-144 timeline, A5), and PS groups 70-72 if their business run passes. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 2. Muhammed opens one renewal notice PDF on the test site (the Chrome check, REL-015).
-2a. Designer: O57 (no placeholders on any board, 14a-14c questionnaire) and the answers to its questions; sync when the designer says done.
 3. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`.
 4. Code freeze 2026-12-11. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker.
 5. Advisor's two Power BI pages (Book of business, and the dashboard with the revenue cards) wait until the OFA work is complete (Muhammed, 2026-11-26).
-6. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022).
+6. Go-live gate (before prod): only the OFA database reads DataWarehouse and PowerBI (REL-022). Done 2026-11-26: the live OFA database on db1 (REL-021, REL-026), the e-signing service live (REL-014), the live web server set-up (REL-025).
 7. With the stack up: load the wording starters (`docs/stash/OFA Workflow/references/Wording/Starters/`) into Muhammed's local database.
 8. Overnight (Muhammed, 2026-11-26): workers churn their queues; ONE STACK, windows in order ps2, Compliance, PS, Advisor, Shell. When every queued item is done: full parity check (disparity-checker, all components). Do NOT fix its findings: build the decision artifact (each finding: take in or not, board or code wins, a comment box), and wait for Muhammed to hand it back. Old parity page: https://claude.ai/artifact/HJAEsCkiTKGybrYJPW54AU
-8a. Designer done 2026-11-26 evening: O57 board run done (756 passed, 7 failed: 4 expected until B-160 merges, 3 being checked); sync commits next. UAT redeploy tomorrow (Muhammed).
-8b. Tonight the low-memory guard stops make up: Compliance and PS wait for Muhammed (restart compliance with CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1, or run make up himself). dotnet-test windows go on: Advisor A4 now, then Shell. Morning window also re-runs @review-C131|C161|C163 x5 on the shell target (SHELL-B-213). The full suite also runs build-and-cull @review-O53 and expiry-report @review-O54 on the shell target (OFA-F-211).
+8b. Morning window (make up, one stack): Compliance B-160 group, then PS groups 70-72 business run (P81/P84/P85/P77/P78 and OFA-B-347's six), then the full suite (with @review-O53, @review-O54, and @review-C131|C161|C163 x5 for SHELL-B-213), then Advisor's A4 stack checks and Shell's parity checks. make up was stopped overnight by the low-memory guard: Muhammed frees memory first.
 8c. Next designer round, rows owed: OFA-B-345 (next reference date on the record); O53 board fix (Move to cull list offers "Deceased estate, no OFA" only when DART marks the estate, per OFA-F-211 A3).
 9. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html) into his design project.
 10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
