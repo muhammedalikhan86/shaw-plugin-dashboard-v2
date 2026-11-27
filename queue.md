@@ -3,12 +3,12 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 12:07
+Updated: 2026-11-27 12:17
 
 ## Hub
 
 1. UAT redeploy today, 2026-11-27 (Muhammed), after the morning window: Portfolio Services hold lifted: PS groups 70-72 merged (a2b449d0) (ps2's P0 group, OFA-F-211, OFA-F-209 part 1), Compliance (B-158 to B-162, merged 470dbac4), advisor-dashboard (F-144 timeline, A5), and PS groups 70-72 if their business run passes. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
-2a. Annature and Chrome test release (Muhammed, 2026-11-27): switch-on merged 32908cb9; waits for the push and the UAT deploy. the next UAT release after PS group 73 ships REL-029 with UAT `Signing:BaseUrl` set to the live Annature address. Hub drives UAT in Playwright: make the notice PDF, send it, track it on the site; Muhammed reports the UAT mailbox; then the other Annature paths (reminder, remove signer, void, signed PDF). Muhammed asks the other testers to stop using UAT for the test window; the test date moves to whenever group 73 is ready (no rush, Muhammed 2026-11-27). Then a redeploy with `Signing:BaseUrl` empty again closes the Annature test.
+2a. Annature and Chrome test: PAUSED (Muhammed, 2026-11-27), continues later. Deployed to UAT; the retry stopped at a 502 wrapping IIS 401.1 from the Annature interface (nothing sent). Waits on the IIS log line from sic2iws1. UAT keeps Signing:BaseUrl set (sends fail safely, redirect to the UAT mailbox stays on). ps neutralises c2bf171b with a revert commit on its branch (no rewrite); when Muhammed ends the test, the closing step is a revert of that commit.
 2. Muhammed opens one renewal notice PDF on the test site (the Chrome check, REL-015).
 3. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`.
 4. Code freeze 2026-12-11. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker.
@@ -36,7 +36,6 @@ Updated: 2026-11-27 12:07
 | | 5 | OFA-B-371 | Blank fee line on the notice: check the UAT seed first; data fix closes it | Functional | 1 | Group 5 (UAT findings, 27-11) |
 | | 5 | OFA-B-373 | A month with no cycle yet is normal: no 404 console error for cull notes | Functional | 1 | Group 5 (UAT findings, 27-11) |
 | | 5 | OFA-B-375 | Remove "The Initial OFA is prepared from Compliance's approved wording." from both prepare dialogs; board row O62 | Functional | 1 | Group 5 (UAT findings, 27-11) |
-| | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Privacy ruling: convert in the signed-in user's own OneDrive. Shaw.Word 2.2.0 (per-user overload) being written locally for Muhammed's review; then the app passes the user's UPN; timed jobs have no user, so a ShawWord-path wording can't convert there |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
@@ -49,17 +48,14 @@ Updated: 2026-11-27 12:07
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: group 74: OFA-B-367, then OFA-F-221 and the B-363 board run in a stack window)
+## Portfolio Services (pointer: group 75, OFA-F-120 on Shaw.Word 2.2.0; c2bf171b neutralised by a revert)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | X | (PS raises) | The make-up register reset loads TestData.dll without Shell.TestKit.dll beside it, so it still creates in the old place | Functional | ?? | Not tonight |
-| >> | 73 | UAT `Signing:BaseUrl` | Separate settings commit: UAT `Signing:BaseUrl` set to the live Annature address for the Annature and Chrome test | Functional | 1 | Merged 32908cb9; merges when Muhammed schedules the Annature test |
-| >> | 74 | OFA-B-367 | 4 .NET tests build renewals from today minus 140 days and went past Expiry Date today; calendar drift, not group 73 | Functional | ?? | Group 74 |
-| | 74 | OFA-F-221 | Register reset through Shell.TestKit (needs a stack window) | Functional | 4 | Group 74, after B-367 |
-| | 74 | OFA-B-363 board run | Run the P83 scenario on the board (built and merged; not yet run) | Test | - | Group 74 stack window |
-| | 70 | - | Handoff and test runbook: Compliance ("Renewal notice", B-157) and Advisor ("Signed renewal notice") now label OFAREN | Functional | 0 | After B-157 is on main |
-| | X | OFA-B-345 | Business scenario for F-215, and the next reference date shown on the record | Functional | ?? | Waits on a design row in the next designer round |
+| >> | 75 | OFA-F-120 | Word converter on Shaw.Word 2.2.0: convert in the signed-in user's own OneDrive (per-user overload, user's UPN); timed jobs refuse a ShawWord-path wording | Functional | - | Group 75; live check waits on IT's admin consent for Graph Files.ReadWrite.All
+| | 75 | - | Handoff and runbook: OFAREN labels for Compliance and Advisor | Functional | 0 | Group 75, if B-157 is on main
+| | 75 | (PS raises) | The make-up register reset loads TestData.dll without Shell.TestKit.dll beside it, so it still creates in the old place | Functional | ?? | Group 75: check it is still real after F-221 |
+| | | X | OFA-B-345 | Business scenario for F-215, and the next reference date shown on the record | Functional | ?? | Waits on a design row in the next designer round |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 | | X | OFA-F-209 part 2 | Live DART filing check (part 1, the signing-status reader, moved to ps2) | Functional | - | Blocked: DART retest after the 2nd UAT release |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
