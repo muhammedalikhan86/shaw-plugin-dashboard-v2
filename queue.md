@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 14:55
+Updated: 27-11-2026 14:57
 
 ## Hub
 
@@ -18,7 +18,7 @@ Updated: 27-11-2026 14:55
 8b. Morning window (make up, one stack, the hub starts and stops it): PS OFA-B-347's six on the compliance stack, then the stack moves to the PS checkout for group 70 (P81/P84/P85/P77/P78), then the full suite (with @review-O53, @review-O54, and @review-C131|C161|C163 x5 for SHELL-B-213), then Advisor's A4 stack checks and Shell's parity checks. make up was stopped overnight by the low-memory guard: Muhammed frees memory first.
 8c. Next designer round, rows owed: OFA-B-345 (next reference date on the record); O53 board fix (Move to cull list offers "Deceased estate, no OFA" only when DART marks the estate, per OFA-F-211 A3).
 9. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html) into his design project.
-10. Notice window height: 80% accepted (Muhammed 27-11). O63 at 80% merged 6cf1f802, x2 on the shell passed. Compliance M40 at 80% to come, then the hub runs M40 x2.
+10. Notice windows (Compliance "Open as sent", PS "Preview renewal notice"): Muhammed now wants 90% of the screen height in the built app, and the viewer's top gap equal to its right gap (title moves into the left column; bottom unchanged). Compliance owns the shared CSS and board, ps follows. The hub runs @review-M40 and @review-O63 x2 when both land.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
 ## Compliance (pointer: parked 9cfbf994, B-164 merged d6df5db1)
