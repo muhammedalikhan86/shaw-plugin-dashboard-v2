@@ -3,13 +3,13 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 12:29
+Updated: 2026-11-27 13:11
 
 ## Hub
 
 1. UAT redeploy today, 2026-11-27 (Muhammed), after the morning window: Portfolio Services hold lifted: PS groups 70-72 merged (a2b449d0) (ps2's P0 group, OFA-F-211, OFA-F-209 part 1), Compliance (B-158 to B-162, merged 470dbac4), advisor-dashboard (F-144 timeline, A5), and PS groups 70-72 if their business run passes. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 2a. Annature and Chrome test: PAUSED (Muhammed, 2026-11-27), continues later. Deployed to UAT; the retry stopped at a 502 wrapping IIS 401.1 from the Annature interface (nothing sent). Waits on the IIS log line from sic2iws1. UAT keeps Signing:BaseUrl set (sends fail safely, redirect to the UAT mailbox stays on). The holding revert 7ffc9fd8 (merged 31dd33f4) cancels c2bf171b; when Muhammed ends the test, the closing step is a revert of 7ffc9fd8, then a UAT deploy.
-2b. OFA-F-120 live check (Muhammed): IT gives admin consent for Graph Files.ReadWrite.All on the Shaw.Word app; then one live conversion confirms the signed-in user's own OneDrive and that their mail address = UPN (PS handoff section 0). Shaw.Word 2.2.0 merged 31dd33f4.
+2b. OFA-F-120 live check: no IT ask; app f815113d already holds Graph Files.ReadWrite.All (Muhammed, 2026-11-27). ps runs a local live check (ShawWord__Enabled=true for its stack only). Then Muhammed decides whether UAT turns ShawWord:Enabled on (a settings commit and a UAT deploy).
 2. Muhammed opens one renewal notice PDF on the test site (the Chrome check, REL-015).
 3. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`.
 4. Code freeze 2026-12-11. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker.
@@ -49,7 +49,7 @@ Updated: 2026-11-27 12:29
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: parked bc66bda6, group 75 merged 31dd33f4; rest of the queue blocked)
+## Portfolio Services (pointer: OFA-F-120 local live check; group 75 merged 31dd33f4)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
