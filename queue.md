@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 12:17
+Updated: 2026-11-27 12:20
 
 ## Hub
 
@@ -28,7 +28,7 @@ Updated: 2026-11-27 12:17
 |---|---|---|---|---|---|---|
 
 
-## Portfolio Services 2 (pointer: OFA-B-377 merged 20613c10; group 5, the UAT findings)
+## Portfolio Services 2 (pointer: group 5 committed 79ff80d7, main merged in d87ea864; shell checks in a stack window next)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
