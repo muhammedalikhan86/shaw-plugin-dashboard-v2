@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 17:01
+Updated: 2026-11-27 17:03
 
 ## Hub
 
@@ -30,7 +30,7 @@ Updated: 2026-11-27 17:01
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | REL-029 | Close the Annature test: Done; the mailbox issue noted as IT's | Doc | 1 | Muhammed 27-11 |
+| >> | 1 | REL-029 | Close the Annature test: Done; the mailbox issue noted as IT's | Doc | 1 | Built eaa1df8d; merge main in (4 doc conflicts with OFA-F-242) |
 | >> | 1 | - | Every date in the engineering docs written YYYY-MM-DD (business documents keep DD-MM-YYYY) | Doc | 2 | Muhammed 27-11 |
 | >> | 1 | OFA-F-209 part 2, OFA-F-062 | Mark both scheduled for the week of 2026-11-30 | Doc | - | Muhammed 27-11 |
 | | X | OFA-F-209 part 2 | Live DART filing check | Functional | - | Week of 2026-11-30, Muhammed's DART retest |
