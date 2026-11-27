@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 14:47
+Updated: 27-11-2026 14:51
 
 ## Hub
 
@@ -18,7 +18,7 @@ Updated: 27-11-2026 14:47
 8b. Morning window (make up, one stack, the hub starts and stops it): PS OFA-B-347's six on the compliance stack, then the stack moves to the PS checkout for group 70 (P81/P84/P85/P77/P78), then the full suite (with @review-O53, @review-O54, and @review-C131|C161|C163 x5 for SHELL-B-213), then Advisor's A4 stack checks and Shell's parity checks. make up was stopped overnight by the low-memory guard: Muhammed frees memory first.
 8c. Next designer round, rows owed: OFA-B-345 (next reference date on the record); O53 board fix (Move to cull list offers "Deceased estate, no OFA" only when DART marks the estate, per OFA-F-211 A3).
 9. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html) into his design project.
-10. Next stack window: closed-months @review-M40 x2 (COMPLIANCE-DASHBOARD-B-164) and preview-renewal-notice @review-O63 x2 (OFA-B-380), on the shell target. Owed: npm run test:business:coverage and make design-checks, in a machine window.
+10. Hub stack run 27-11: @review-M40 and @review-O63 FAILED x2 each (window 80% of screen height, test wants 90%). Stopped, with Muhammed.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
 ## Compliance (pointer: parked 9cfbf994, B-164 merged d6df5db1)
@@ -35,11 +35,10 @@ Updated: 27-11-2026 14:47
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: F-174, test people act as their seats on UAT; F-171 held)
+## Advisor (pointer: parked, F-174 merged 38248737; switch on the F-240 cases when it merges)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | ADVISOR-DASHBOARD-F-174 | UAT: Act As the test people (national.seat, marcus.ashcombe) shows their seats; national.seat on the UAT national-seat list | Functional | 1 | Re-scoped 27-11 |
 | | X | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Open, Could: not reproduced in A4 (evidence in the PMBook); revisit only if it recurs |
 | | X | PM-115 | SqlReaderBaseCancellationTests: looped run under load to prove the missed-cancel cause | Functional | ?? | Open, Could: not reproduced in A4 (evidence in the PMBook); revisit only if it recurs |
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
