@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 11:15
+Updated: 2026-11-27 11:45
 
 ## Hub
 
@@ -69,7 +69,7 @@ Updated: 2026-11-27 11:15
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 
-## Shell (pointer: parked; localdb move waits for a quiet moment, no worker testing)
+## Shell (pointer: parked f5cb6ff6 (-Y done, SHELL-F-194); the localdb move waits for a quiet moment)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
