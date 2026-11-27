@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 14:35
+Updated: 27-11-2026 14:36
 
 ## Hub
 
@@ -27,10 +27,11 @@ Updated: 27-11-2026 14:35
 |---|---|---|---|---|---|---|
 
 
-## Portfolio Services 2 (pointer: parked b2dfc738, group 6 merged 13275c7a; rest of the queue blocked)
+## Portfolio Services 2 (pointer: easy test logins vic.sm, nsw.sm, qld.sm)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 1 | (raising) | Test logins for Act As on UAT: vic.sm, nsw.sm, qld.sm added beside national.seat | Functional | ?? | Go 27-11 |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
