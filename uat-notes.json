@@ -25,6 +25,11 @@
       "note": "Running the previous version; the current version goes out with the next live release."
     },
     {
+      "part": "shell-api",
+      "state": "up",
+      "note": "Running the previous version; the current version goes out with the next live release."
+    },
+    {
       "part": "landing-page-web",
       "state": "up",
       "note": "Running the previous version; the current version goes out with the next live release."
