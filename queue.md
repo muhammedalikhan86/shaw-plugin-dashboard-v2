@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 14:13
+Updated: 27-11-2026 14:14
 
 ## Hub
 
@@ -27,7 +27,7 @@ Updated: 27-11-2026 14:13
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | (raising) | UAT only: developers (Development Team - Sydney) pass every role gate, front end and back end | Functional | ?? | Urgent, Muhammed 27-11; testers blocked on UAT |
+| >> | 1 | COMPLIANCE-DASHBOARD-B-163 | UAT only: developers (Development Team - Sydney) pass every role gate, front end and back end | Functional | ?? | Urgent, Muhammed 27-11; testers blocked on UAT |
 
 
 ## Portfolio Services 2 (pointer: parked b2dfc738, group 6 merged 13275c7a; rest of the queue blocked)
@@ -41,7 +41,7 @@ Updated: 27-11-2026 14:13
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | (raising) | UAT only: developers (Development Team - Sydney) pass every role gate, front end and back end | Functional | ?? | Urgent, Muhammed 27-11; testers blocked on UAT |
+| >> | 1 | ADVISOR-DASHBOARD-F-173 | UAT only: developers (Development Team - Sydney) pass every role gate, front end and back end | Functional | ?? | Urgent, Muhammed 27-11; testers blocked on UAT |
 | | X | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Open, Could: not reproduced in A4 (evidence in the PMBook); revisit only if it recurs |
 | | X | PM-115 | SqlReaderBaseCancellationTests: looped run under load to prove the missed-cancel cause | Functional | ?? | Open, Could: not reproduced in A4 (evidence in the PMBook); revisit only if it recurs |
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
