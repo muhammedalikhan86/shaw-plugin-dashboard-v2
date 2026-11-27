@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 15:18
+Updated: 27-11-2026 15:22
 
 ## Hub
 
@@ -25,7 +25,7 @@ Updated: 27-11-2026 15:18
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | X | COMPLIANCE-DASHBOARD-B-165 | "A notice opens as it was sent" expects "Dear Elio" but the data says "Elio": check against the wording rule, record which is wrong | Functional | ?? | After the UAT release (Could) |
+| | 1 | COMPLIANCE-DASHBOARD-B-165 | "A notice opens as it was sent" expects "Dear Elio" but the data says "Elio": check against the wording rule, record which is wrong | Functional | ?? | Go after UAT 5 (Muhammed 27-11); hub sends the go on "released" |
 
 
 ## Portfolio Services 2 (pointer: artboard account-number clash; OFA-F-240 merged 0ef84c17)
