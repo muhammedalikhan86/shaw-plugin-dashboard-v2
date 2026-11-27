@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 11:10
+Updated: 2026-11-27 11:12
 
 ## Hub
 
@@ -43,7 +43,7 @@ Updated: 2026-11-27 11:10
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: idle, A4 merged f3828923; F-171 held by Muhammed, nothing else queued)
+## Advisor (pointer: parked 1759b4e1; F-171 held by Muhammed, nothing else queued)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
