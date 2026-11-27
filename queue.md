@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 15:11
+Updated: 27-11-2026 15:18
 
 ## Hub
 
@@ -53,7 +53,7 @@ Updated: 27-11-2026 15:11
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 | | X | OFA-F-209 part 2 | Live DART filing check (part 1, the signing-status reader, moved to ps2) | Functional | - | Blocked: DART retest after the 2nd UAT release |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
-| | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
+| | 1 | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | ?? | Go after UAT 5 (Muhammed 27-11); hub sends the go on "released" |
 
 
 ## Shell (pointer: idle, SHELL-F-196 on main 716b8efa)
