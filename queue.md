@@ -3,11 +3,11 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 18:30
+Updated: 2026-11-27 18:39
 
 ## Hub
 
-1. Next UAT deploy (UAT 7), hub releases it (Muhammed's go 27-11). Waits on: shell's SHELL-B-217 and SHELL-B-218, advisor's F-177 work if done in time, then one more full run (ps2's B-382/B-345, advisor F-171/F-176, compliance F-008 and reds are merged). A stuck item is left out rather than holding the release. Already in: search finds pages in all three plugins (all merged: OFA-F-243, ADVISOR-DASHBOARD-F-175, COMPLIANCE-DASHBOARD-F-056), the expanded table floor (SHELL-B-216, merged), ps2's account renumber (OFA-F-242), and whatever else merges by then. Release when the last search item merges.
+1. Next UAT deploy (UAT 7), hub releases it (Muhammed's go 27-11). Waits on: advisor's F-177 work if done in time, then one more full run (ps2's B-382/B-345, shell B-217/B-218, advisor F-171/F-176, compliance F-008 and reds are merged). A stuck item is left out rather than holding the release. Already in: search finds pages in all three plugins (all merged: OFA-F-243, ADVISOR-DASHBOARD-F-175, COMPLIANCE-DASHBOARD-F-056), the expanded table floor (SHELL-B-216, merged), ps2's account renumber (OFA-F-242), and whatever else merges by then. Release when the last search item merges.
 2. Week of 2026-11-30, scheduled (Muhammed 27-11): Muhammed's DART retest (OFA-F-209 part 2) and the February-peak load test (OFA-F-062). Monday 2026-11-30: Muhammed sends Luke the product-correction re-ask (OFA-F-141).
 3. Next designer round, once the current sync lands: carry W47 (Field library) and the 1280 x 720 floor on the seven boards; rows owed: the board's Q13 margin note (a declined notice is not a close, Luke 27-11) to drop; OFA-B-345 (next reference date on the record); O53 board fix (Move to cull list offers "Deceased estate, no OFA" only when DART marks the estate, OFA-F-211 A3).
 4. Each test-site release: the business changelog (page and PDF) in v2 `changelogs/` with a row in `uat-notes.json`.
@@ -18,12 +18,10 @@ Updated: 2026-11-27 18:30
 9. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 10. Not ours: the testers' mailbox cannot receive mail it sends to itself (Mimecast); IT's issue. Annature testing is closed (REL-029 Done, 27-11).
 
-## Shell (pointer: >> SHELL-B-217)
+## Shell (pointer: idle, stand by for the final full run)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | SHELL-B-218 | Business tests: one plugin's test clock no longer moves another plugin's mid-scenario (compliance "10 days left", PS exceptions-report month) | Bug | ?? | Same group; UAT 7 |
-| >> | 1 | SHELL-B-217 | Plugin0 pinned-columns test: header row scrolled to the end lands at 1418 | Bug | 1 | Building; UAT 7 |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (Muhammed 2026-11-25) |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 
