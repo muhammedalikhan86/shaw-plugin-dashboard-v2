@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 17:22
+Updated: 2026-11-27 17:25
 
 ## Hub
 
@@ -26,11 +26,10 @@ Updated: 2026-11-27 17:22
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (Muhammed 2026-11-25) |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 
-## Portfolio Services (pointer: >> Luke's 27-11 answers)
+## Portfolio Services (pointer: waiting for the full browser run's failures)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | - | Luke's 27-11 answers in the docs (built 1d0ee9f8); merge main in (5 doc clashes with SHELL-F-199's pointers); build-docx BASE made relative | Doc | ?? | Resend |
 | | X | OFA-F-209 part 2 | Live DART filing check | Functional | - | Week of 2026-11-30, Muhammed's DART retest |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Week of 2026-11-30 |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (his 27-11 reply answered the date, not the product; re-ask) |
