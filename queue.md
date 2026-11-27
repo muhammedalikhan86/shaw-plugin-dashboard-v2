@@ -3,11 +3,11 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 16:56
+Updated: 27-11-2026 16:58
 
 ## Hub
 
-1. Next UAT deploy (UAT 7): search finds pages in all three plugins (PS OFA-F-243 merged; advisor F-175 and compliance F-056 building), the expanded table floor (SHELL-B-216), ps2's account renumber (OFA-F-242), and whatever else merges by then. Release when the last search item merges.
+1. Next UAT deploy (UAT 7): search finds pages in all three plugins (all merged: OFA-F-243, ADVISOR-DASHBOARD-F-175, COMPLIANCE-DASHBOARD-F-056), the expanded table floor (SHELL-B-216), ps2's account renumber (OFA-F-242), and whatever else merges by then. Release when the last search item merges.
 2. Week of 2026-11-30, scheduled (Muhammed 27-11): Muhammed's DART retest (OFA-F-209 part 2) and the February-peak load test (OFA-F-062).
 3. Next designer round, once the current sync lands: carry W47 (Field library) and the 1280 x 720 floor on the seven boards; rows owed: OFA-B-345 (next reference date on the record); O53 board fix (Move to cull list offers "Deceased estate, no OFA" only when DART marks the estate, OFA-F-211 A3).
 4. Each test-site release: the business changelog (page and PDF) in v2 `changelogs/` with a row in `uat-notes.json`.
@@ -42,20 +42,19 @@ Updated: 27-11-2026 16:56
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | >> | 1 | OFA-F-242 | Move the 2 board account numbers that clash with live data (S20338 to S9970032, S18577 to S9970033) | Functional | ?? | Final test run |
+| | 2 | (raising) | The six test logins move to a test-only branch so they never count as a branch's people (F-240 regression) | Bug | 1 | Ruled by hub 27-11 |
 | | 2 | OFA-B-345 | Business scenario for F-215 now; the next reference date on the record after its design row | Functional | 2 | After F-242 |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: SharePoint live check, after go-live |
 
-## Advisor (pointer: >> F-175 search finds pages)
+## Advisor (pointer: >> F-171 DA portfolio)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | ADVISOR-DASHBOARD-F-175 | Search finds the OFA Dashboard's five pages; data search removed; plus the governance doc fixes | Functional | 3 | Building |
-| | 2 | ADVISOR-DASHBOARD-F-171 (P86) | The Dealer's Assistant's portfolio shows the picked Adviser's clients | Functional | 2 | Queued (Muhammed 27-11) |
+| >> | 1 | ADVISOR-DASHBOARD-F-171 (P86) | The Dealer's Assistant's portfolio shows the picked Adviser's clients | Functional | 2 | Building |
 | | X | PM-114..PM-126, PM-115 | Flaky business tests | Functional | ?? | Could: revisit only if they recur |
 
-## Compliance (pointer: >> F-056 search finds pages)
+## Compliance (pointer: >> F-008 business scenarios)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | COMPLIANCE-DASHBOARD-F-056 | Search finds pages; data search removed; plus the governance doc fixes | Functional | ?? | Building |
-| | 2 | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every screen item | Functional | ?? | After F-056 |
+| >> | 1 | COMPLIANCE-DASHBOARD-F-008 | Business scenarios for every screen item | Functional | ?? | Building |
