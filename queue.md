@@ -3,11 +3,11 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 14:57
+Updated: 27-11-2026 14:59
 
 ## Hub
 
-1. Next UAT deploy (UAT 5), Portfolio Services, Compliance Dashboard and Advisor Dashboard: the UAT developer bypass (SHELL-F-195 docs, COMPLIANCE-DASHBOARD-B-163 merged 38b9a693, PS item, ADVISOR-DASHBOARD-F-173) and the bigger notice PDF windows (Compliance, PS). Also the Act As test logins (shell Act As on UAT, advisor F-174, ps2 test logins). RELEASE GATE (Muhammed 27-11): Act As proven before release: in-process UAT-environment tests in shell and advisor, then the hub drives a local stack and Acts As national.seat, vic.sm, nsw.sm, qld.sm hannah.ilves.da, rowan.achebe.da and briony.glenarvon.da, checking each view, with screenshots. Command with -SkipTests -Y only after that passes and Muhammed has pushed main. Changelog first (item 3). After it: the Word check (Compliance wording preview as Muhammed), then OFA-F-120 Done; update-uat-status.ps1 then update-uat-data.ps1.
+1. Next UAT deploy (UAT 5), Portfolio Services, Compliance Dashboard and Advisor Dashboard: the UAT developer bypass (SHELL-F-195 docs, COMPLIANCE-DASHBOARD-B-163 merged 38b9a693, PS item, ADVISOR-DASHBOARD-F-173) and the bigger notice PDF windows (Compliance, PS). Also the Act As test logins (shell Act As on UAT, advisor F-174, ps2 test logins). Before the Act As check on UAT, Muhammed runs `pwsh -File scriptsAtAt-warehouse-load.ps1` from main (loads the OFA-F-240 test logins into UAT Misc). RELEASE GATE (Muhammed 27-11): Act As proven before release: in-process UAT-environment tests in shell and advisor, then the hub drives a local stack and Acts As national.seat, vic.sm, nsw.sm, qld.sm hannah.ilves.da, rowan.achebe.da and briony.glenarvon.da, checking each view, with screenshots. Command with -SkipTests -Y only after that passes and Muhammed has pushed main. Changelog first (item 3). After it: the Word check (Compliance wording preview as Muhammed), then OFA-F-120 Done; update-uat-status.ps1 then update-uat-data.ps1.
 2a. Annature test (REL-029): S20338 sent 13:40 (204) but its mail never got past Mimecast. Second send S18577 (Kit Brack, Estimate, "Dear Kit") at 14:30, 204. Neither mail reached the UAT mailbox; Likely cause: sending from the testers mailbox to itself needs an IT setting change (Muhammed, 27-11). Parked; focus moves to releasing and testing the rest. Blocked until IT answers. After that: then the other Annature paths (reminder, remove signer, void, signed PDF). Closing step when Muhammed ends the test: revert 7ffc9fd8, then a UAT deploy.
 3. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`.
 4. Code freeze 2026-12-11. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker.
@@ -27,15 +27,15 @@ Updated: 27-11-2026 14:57
 |---|---|---|---|---|---|---|
 
 
-## Portfolio Services 2 (pointer: easy test logins vic.sm, nsw.sm, qld.sm)
+## Portfolio Services 2 (pointer: artboard account-number clash; OFA-F-240 merged 0ef84c17)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | (raising) | Test logins for Act As on UAT: vic.sm, nsw.sm, qld.sm (with their Adviser hierarchy) and DAs hannah.ilves.da (also Tobias Marlow), rowan.achebe.da, briony.glenarvon.da (OFA-F-240, built, suites running), beside national.seat | Functional | ?? | Go 27-11 |
+| >> | 1 | (raising) | Move the 2 artboard account numbers that now clash with live (make test-data-check, 22 cells) | Functional | ?? | Go 27-11 |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: parked, F-174 merged 38248737; switch on the F-240 cases when it merges)
+## Advisor (pointer: switching on the F-240 Act As cases in UatActAsHostTests)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
