@@ -193,10 +193,10 @@ h3.sub{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 8px}
   });
   document.getElementById("checked").textContent=status&&status.checked?"Last checked "+when(status.checked)+". The page shows that check; it does not check live.":"Not checked yet.";
 
-  // Releases (uat-notes.json "releases": [{name, from:"YYYY-MM-DD", html, pdf}]). Each release gets a heading row in the
-  // log, with its changelog glyphs; a deploy sits under the newest release whose date is on or before it.
+  // Releases (uat-notes.json "releases": [{name, from:"YYYY-MM-DD" or "YYYY-MM-DDTHH:mm" when two share a day, html, pdf}]). Each release gets a heading row in the
+  // log, with its changelog glyphs; a deploy sits under the newest release whose date (and time, if given) is on or before it.
   var REL=(notes.releases||[]).slice().sort(function(a,b){return a.from<b.from?1:-1;});
-  function releaseFor(at){var day=String(at).slice(0,10);for(var i=0;i<REL.length;i++){if(REL[i].from<=day)return REL[i];}return null;}
+  function releaseFor(at){at=String(at);for(var i=0;i<REL.length;i++){if(REL[i].from<=at)return REL[i];}return null;}
   var GLYPH={
     page:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v14H6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6M9 13h8M9 17h8" fill="none" stroke="currentColor" stroke-width="2"/></svg>',
     pdf:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 17v4h16v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
@@ -213,7 +213,7 @@ h3.sub{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 8px}
   // Log
   var lg=document.getElementById("log");
   function day(s){return new Date(s+"T00:00:00").toLocaleDateString("en-AU",{dateStyle:"medium"});}
-  function releaseDay(r){var first=null;d.deploys.forEach(function(x){if(releaseFor(x.at)===r&&(!first||x.at<first))first=x.at;});return first?first.slice(0,10):r.from;}
+  function releaseDay(r){var first=null;d.deploys.forEach(function(x){if(releaseFor(x.at)===r&&(!first||x.at<first))first=x.at;});return (first||r.from).slice(0,10);}
   function releaseRow(r,deployed){
     var tr=el("tr",null,"rel");
     cell(tr,el("strong",day(releaseDay(r))),"nw");
