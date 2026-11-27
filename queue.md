@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 17:30
+Updated: 2026-11-27 17:31
 
 ## Hub
 
@@ -42,11 +42,11 @@ Updated: 2026-11-27 17:30
 | | 2 | OFA-B-345 | Business scenario for F-215 now; the next reference date on the record after its design row | Functional | 2 | After B-382 |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: SharePoint live check, after go-live |
 
-## Advisor (pointer: >> F-171 DA portfolio, then the Portfolio and Book switch)
+## Advisor (pointer: F-171 + F-176 built fb2b45ab, merge after the full run)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | ADVISOR-DASHBOARD-F-176 | Portfolio and the Book of business come back behind one switch: on in Development and UAT, off in Production | Functional | 3 | SHELL-F-199 merged; pull main; for UAT 7 |
+| >> | 1 | ADVISOR-DASHBOARD-F-176 | Portfolio and the Book of business come back behind one switch: on in Development and UAT, off in Production | Functional | 3 | Built fb2b45ab with F-171; hub merges after the full run; advisor runs its business tests |
 | >> | 1 | ADVISOR-DASHBOARD-F-171 (P86) | The Dealer's Assistant's portfolio shows the picked Adviser's clients | Functional | 2 | Building |
 | | X | PM-114..PM-126, PM-115 | Flaky business tests | Functional | ?? | Could: revisit only if they recur |
 
