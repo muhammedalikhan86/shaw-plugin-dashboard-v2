@@ -17,5 +17,35 @@
       "html": "changelogs/2026-11-27-test-site-update.html",
       "pdf": "changelogs/2026-11-27-test-site-update.pdf"
     }
+  ],
+  "prodStatus": [
+    {
+      "part": "shell-web",
+      "state": "up",
+      "note": "Running the previous version; the current version goes out with the next live release."
+    },
+    {
+      "part": "landing-page-web",
+      "state": "up",
+      "note": "Running the previous version; the current version goes out with the next live release."
+    }
+  ],
+  "prodManual": [
+    {
+      "item": "Electronic signing service deployed to the live site, with the envelope look-up that Portfolio Services relies on.",
+      "date": "2026-11-26"
+    },
+    {
+      "item": "Live OFA database created.",
+      "date": "2026-11-26"
+    },
+    {
+      "item": "Live OFA database confirmed reachable, and Portfolio Services, the Adviser Dashboard and the Compliance Dashboard set to use it.",
+      "date": "2026-11-26"
+    },
+    {
+      "item": "Live web server set up for Portfolio Services and the Compliance Dashboard: their app pools, applications and folders created.",
+      "date": "2026-11-26"
+    }
   ]
 }

@@ -62,6 +62,8 @@ a.glyph:hover,a.glyph:focus-visible{outline:2px solid var(--accent);outline-offs
 .tabs [role=tab]:hover{color:var(--ink)}
 .tabs [role=tab][aria-selected="true"]:hover{color:var(--accent)}
 .tabs [role=tab]:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+/* Prod tab: live-site set-up done by hand (no deploy tags). */
+h3.sub{font-weight:500;font-size:16px;line-height:24px;margin:24px 0 8px}
 </style>
 </head>
 <body>
@@ -94,7 +96,7 @@ a.glyph:hover,a.glyph:focus-visible{outline:2px solid var(--accent);outline-offs
 <div role="tabpanel" id="panel-status-prod" aria-labelledby="tab-status-prod" hidden>
 <div class="table">
 <table>
-<thead><tr><th scope="col">Status</th><th scope="col">Part</th><th scope="col">Release</th><th scope="col">Last released</th></tr></thead>
+<thead><tr><th scope="col">Status</th><th scope="col">Part</th><th scope="col">Release</th><th scope="col">Last released</th><th scope="col">Note</th></tr></thead>
 <tbody id="prodparts"></tbody>
 </table>
 </div>
@@ -109,7 +111,7 @@ a.glyph:hover,a.glyph:focus-visible{outline:2px solid var(--accent);outline-offs
 <div role="tabpanel" id="panel-log-uat" aria-labelledby="tab-log-uat">
 <div class="table scroll">
 <table>
-<thead><tr><th scope="col">Deployed</th><th scope="col">Part</th><th scope="col">Release</th><th scope="col">Latest commit in it</th><th scope="col">Changelog</th></tr></thead>
+<thead><tr><th scope="col">Deployed</th><th scope="col">Part</th><th scope="col">Release</th><th scope="col">Changelog</th></tr></thead>
 <tbody id="log"></tbody>
 </table>
 </div>
@@ -123,6 +125,14 @@ a.glyph:hover,a.glyph:focus-visible{outline:2px solid var(--accent);outline-offs
 </table>
 </div>
 <p class="gen" id="prodgenerated"></p>
+<h3 class="sub">Set up by hand</h3>
+<p class="lede">Set-up on the live site done by hand, before the release scripts were used. It has no deploy record of its own.</p>
+<div class="table">
+<table>
+<thead><tr><th scope="col">Date</th><th scope="col">Item</th></tr></thead>
+<tbody id="prodmanual"></tbody>
+</table>
+</div>
 </div>
 
 <h2>What is switched off on the test site</h2>
@@ -207,7 +217,7 @@ a.glyph:hover,a.glyph:focus-visible{outline:2px solid var(--accent);outline-offs
   function releaseRow(r,deployed){
     var tr=el("tr",null,"rel");
     cell(tr,el("strong",day(releaseDay(r))),"nw");
-    var td=cell(tr,null);td.colSpan=3;
+    var td=cell(tr,null);td.colSpan=2;
     td.appendChild(el("strong",r.name));
     td.appendChild(el("span",deployed?"":" · not deployed yet","muted"));
     cell(tr,changelogCell(r),"nw");
@@ -215,12 +225,12 @@ a.glyph:hover,a.glyph:focus-visible{outline:2px solid var(--accent);outline-offs
   }
   var shown={};
   REL.forEach(function(r){if(!d.deploys.some(function(x){return releaseFor(x.at)===r;})){releaseRow(r,false);shown[r.name]=1;}});
-  if(!d.deploys.length&&!REL.length){var tr0=el("tr");var td0=cell(tr0,"No deploys yet.","muted");td0.colSpan=5;lg.appendChild(tr0);}
+  if(!d.deploys.length&&!REL.length){var tr0=el("tr");var td0=cell(tr0,"No deploys yet.","muted");td0.colSpan=4;lg.appendChild(tr0);}
   d.deploys.forEach(function(x){
     var r=releaseFor(x.at);
     if(r&&!shown[r.name]){releaseRow(r,true);shown[r.name]=1;}
     var tr=el("tr");
-    cell(tr,when(x.at),"nw");cell(tr,NAMES[x.part]||x.part);cell(tr,el("code",x.commit),"nw");cell(tr,x.subject);cell(tr,null);
+    cell(tr,when(x.at),"nw");cell(tr,NAMES[x.part]||x.part);cell(tr,el("code",x.commit),"nw");cell(tr,null);
     lg.appendChild(tr);
   });
   if(d.generated)document.getElementById("generated").textContent="Updated "+when(d.generated)+".";
@@ -230,16 +240,23 @@ a.glyph:hover,a.glyph:focus-visible{outline:2px solid var(--accent);outline-offs
   var P=d.prod||{},pDeploys=(P.deploys||[]).slice().sort(function(a,b){return a.at<b.at?1:-1;});
   var pStatus=P.status||null,pChecks=(pStatus&&pStatus.parts)||{},pLatest={},pCount={};
   pDeploys.forEach(function(x){pCount[x.part]=(pCount[x.part]||0)+1;if(!pLatest[x.part])pLatest[x.part]=x;});
+  // uat-notes.json "prodStatus": [{part, state:"up"|"down", note}], recorded by hand (the page never checks the live site).
+  // A part with neither a hand-kept state, a check nor a live deploy reads Not deployed.
+  var pHand={};(notes.prodStatus||[]).forEach(function(h){pHand[h.part]=h;});
+  function handBadge(h){var kind=h.state==="up"?"up":h.state==="down"?"down":"unknown";
+    var s=el("span",null,"badge "+kind);s.innerHTML=ICONS[kind];s.appendChild(document.createTextNode(kind==="up"?"Up":kind==="down"?"Down":"Not checked"));return s;}
+  function notDeployed(){var s=el("span",null,"badge unknown");s.innerHTML=ICONS.unknown;s.appendChild(document.createTextNode("Not deployed"));return s;}
   var ptb=document.getElementById("prodparts");
   PARTS.forEach(function(p){
-    var x=pLatest[p[0]],c=pChecks[p[0]],tr=el("tr");
-    cell(tr,badge(c),"nw");
+    var x=pLatest[p[0]],c=pChecks[p[0]],h=pHand[p[0]],tr=el("tr");
+    cell(tr,h?handBadge(h):(c||x?badge(c):notDeployed()),"nw");
     cell(tr,p[1]);
-    cell(tr,x&&x.version?el("code",x.version):el("span","Not released","muted"),"nw");
+    cell(tr,x&&x.version?el("code",x.version):el("span",h?"Previous version":"Not released","muted"),"nw");
     cell(tr,x?when(x.at)+(pCount[p[0]]>1?" ("+pCount[p[0]]+" releases)":""):"","nw");
+    cell(tr,h&&h.note?el("span",h.note,"note"):null);
     ptb.appendChild(tr);
   });
-  document.getElementById("prodchecked").textContent=pStatus&&pStatus.checked?"Last checked "+when(pStatus.checked)+". The page shows that check; it does not check live.":"Not checked yet.";
+  document.getElementById("prodchecked").textContent=pStatus&&pStatus.checked?"Last checked "+when(pStatus.checked)+". The page shows that check; it does not check live.":((notes.prodStatus||[]).length?"Recorded by hand. The page does not check the live site.":"Not checked yet.");
   var PREL=(notes.prodReleases||[]).slice().sort(function(a,b){return a.from<b.from?1:-1;});
   function prodReleaseFor(at){var dd=String(at).slice(0,10);for(var i=0;i<PREL.length;i++){if(PREL[i].from<=dd)return PREL[i];}return null;}
   var plg=document.getElementById("prodlog");
@@ -264,6 +281,10 @@ a.glyph:hover,a.glyph:focus-visible{outline:2px solid var(--accent);outline-offs
     plg.appendChild(tr);
   });
   if(d.generated)document.getElementById("prodgenerated").textContent="Updated "+when(d.generated)+".";
+  // uat-notes.json "prodManual": [{item, date:"YYYY-MM-DD" or ""}], newest first; a blank date stays blank.
+  var pm=document.getElementById("prodmanual"),PM=(notes.prodManual||[]).slice().sort(function(a,b){return (a.date||"")<(b.date||"")?1:-1;});
+  if(!PM.length){var tm=el("tr");var tdm=cell(tm,"Nothing set up by hand yet.","muted");tdm.colSpan=2;pm.appendChild(tm);}
+  PM.forEach(function(m){var tr=el("tr");cell(tr,m.date?day(m.date):"","nw");cell(tr,m.item);pm.appendChild(tr);});
 
   // ---- Tabs: arrow keys, Home and End move between tabs; the choice is remembered per viewer (default UAT).
   function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){}return null;}

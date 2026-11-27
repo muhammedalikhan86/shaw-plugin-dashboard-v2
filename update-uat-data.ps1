@@ -3,9 +3,10 @@
 # uat-status.json (the last service check, written by update-uat-status.ps1).
 # It also reads the live site's deploy tags (deploy/prod/<part>-<yyyyMMdd-HHmmss>) into prod.deploys
 # (part, at, version: the tag's stamp), for the Prod tabs. Read only: git for-each-ref, nothing else.
-# uat-notes.json may carry prodReleases (same shape as releases) for the Prod log.
+# uat-notes.json may carry prodReleases (same shape as releases) for the Prod log, prodManual (live-site set-up done
+# by hand: [{item, date}]) and prodStatus (live parts' state, recorded by hand: [{part, state, note}]).
 # The hub runs it after each test-site deploy, then commits and pushes this repo.
-# This repo is public: only part names, commits, commit subjects and times go out. Never a server
+# This repo is public: only part names, commits and times go out. Never a server
 # name, share path, address or person's email.
 param(
     [string]$Source = (Join-Path (Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)) 'shaw-plugin-dashboard')
@@ -13,18 +14,17 @@ param(
 $ErrorActionPreference = 'Stop'
 $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 
-$lines = @(git -C $Source for-each-ref 'refs/tags/deploy/uat' --format='%(refname:short)|%(objectname:short=8)|%(contents:subject)')
+$lines = @(git -C $Source for-each-ref 'refs/tags/deploy/uat' --format='%(refname:short)|%(objectname:short=8)')
 if ($LASTEXITCODE -ne 0) { throw "git for-each-ref failed in $Source" }
 
 $deploys = foreach ($line in $lines) {
-    $name, $sha, $subject = $line -split '\|', 3
+    $name, $sha = $line -split '\|', 2
     if ($name -notmatch '^deploy/uat/(?<part>.+)-(?<d>\d{8})-(?<t>\d{6})$') { continue }
     $when = [datetime]::ParseExact($Matches.d + $Matches.t, 'yyyyMMddHHmmss', $null)
     [ordered]@{
         part    = $Matches.part
         at      = $when.ToString('yyyy-MM-ddTHH:mm:ss')
         commit  = $sha
-        subject = $subject
     }
 }
 $deploys = @($deploys | Sort-Object { $_.at } -Descending)
