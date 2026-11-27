@@ -16,6 +16,12 @@
       "from": "2026-11-27",
       "html": "changelogs/2026-11-27-test-site-update.html",
       "pdf": "changelogs/2026-11-27-test-site-update.pdf"
+    },
+    {
+      "name": "UAT 4 deployment",
+      "from": "2026-11-27",
+      "html": "changelogs/2026-11-27-test-site-update-2.html",
+      "pdf": "changelogs/2026-11-27-test-site-update-2.pdf"
     }
   ],
   "prodStatus": [
