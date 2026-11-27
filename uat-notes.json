@@ -28,6 +28,12 @@
       "from": "2026-11-27T15:27",
       "html": "changelogs/2026-11-27-test-site-update-3.html",
       "pdf": "changelogs/2026-11-27-test-site-update-3.pdf"
+    },
+    {
+      "name": "UAT 6 deployment",
+      "from": "2026-11-27T16:47",
+      "html": "changelogs/2026-11-27-test-site-update-4.html",
+      "pdf": "changelogs/2026-11-27-test-site-update-4.pdf"
     }
   ],
   "prodStatus": [
