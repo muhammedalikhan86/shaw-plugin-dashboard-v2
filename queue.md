@@ -3,13 +3,13 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 13:40
+Updated: 2026-11-27 13:41
 
 ## Hub
 
 1. UAT redeploy today, 2026-11-27 (Muhammed), after the morning window: Portfolio Services hold lifted: PS groups 70-72 merged (a2b449d0) (ps2's P0 group, OFA-F-211, OFA-F-209 part 1), Compliance (B-158 to B-162, merged 470dbac4), advisor-dashboard (F-144 timeline, A5), and PS groups 70-72 if their business run passes. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
 2a. Annature and Chrome test (REL-029): Initial OFA S20338 SENT to Annature on UAT at 13:40 (204) after the loopback fix and the gMSA_Intranet allow-list. Next: Muhammed checks the UAT mailbox and the Annature site; then the other Annature paths (reminder, remove signer, void, signed PDF). Closing step when Muhammed ends the test: revert 7ffc9fd8, then a UAT deploy.
-2b. Next UAT deploy, ready on main 7289dd83 (after the push): Portfolio Services with ps2 group 5 (B-369, B-371, B-373, B-375) and the UAT Word converter on (d8fe2aa2). Changelog ready (v2 123ff35, UAT 4). After it: one ShawWord notice on UAT, then OFA-F-120 Done; update-uat-status.ps1 then update-uat-data.ps1.
+2b. Next UAT deploy (UAT 4), ready on main 13275c7a (after the push): Portfolio Services and Compliance Dashboard, with ps2 group 6 (OFA-F-238 preview salutation), ps2 group 5 (B-369, B-371, B-373, B-375) and the UAT Word converter on (d8fe2aa2). Changelog ready (v2 123ff35, UAT 4). After it: one ShawWord notice on UAT, then OFA-F-120 Done; update-uat-status.ps1 then update-uat-data.ps1.
 2. Muhammed opens one renewal notice PDF on the test site (the Chrome check, REL-015).
 3. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`.
 4. Code freeze 2026-12-11. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker.
@@ -29,11 +29,10 @@ Updated: 2026-11-27 13:40
 |---|---|---|---|---|---|---|
 
 
-## Portfolio Services 2 (pointer: group 6, OFA-F-238; group 5 merged 7289dd83)
+## Portfolio Services 2 (pointer: parked b2dfc738, group 6 merged 13275c7a; rest of the queue blocked)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 6 | OFA-F-238 | The wording preview's sample salutation follows the wording's slot, so a renewal notice preview doesn't say Dear Dear | Functional | 1 | Group 6
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
