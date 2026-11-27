@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 15:52
+Updated: 27-11-2026 15:57
 
 ## Hub
 
@@ -56,10 +56,9 @@ Updated: 27-11-2026 15:52
 | | 1 | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | ?? | Go after UAT 5 (Muhammed 27-11); hub sends the go on "released" |
 
 
-## Shell (pointer: >> UAT lock checks the real caller, urgent)
+## Shell (pointer: idle, SHELL-B-215 on main 6ec17194)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | SHELL-B-(new) | On UAT the plugin lock checks the signed-in tester, not the person acted as, so test logins see their plugins | Functional | 1 | Urgent, blocks UAT testing |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
