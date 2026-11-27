@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 17:48
+Updated: 2026-11-27 17:54
 
 ## Hub
 
@@ -47,6 +47,7 @@ Updated: 2026-11-27 17:48
 |---|---|---|---|---|---|---|
 | >> | 1 | ADVISOR-DASHBOARD-F-176 | Portfolio and the Book of business come back behind one switch: on in Development and UAT, off in Production | Functional | 3 | Built fb2b45ab with F-171; hub merges after the full run; advisor runs its business tests |
 | >> | 1 | ADVISOR-DASHBOARD-F-171 (P86) | The Dealer's Assistant's portfolio shows the picked Adviser's clients | Functional | 2 | Building |
+| | 2 | (raising) | Version-2 scenarios on the built app: 18 Portfolio/Book scenarios tagged not-built, then triaged (rewrite to test data, or a bug per real defect); plus the questionnaire column order (Platform accounts before Status) | Functional | ?? | After group 1; what's done before the final full run goes into UAT 7 |
 | | X | PM-114..PM-126, PM-115 | Flaky business tests | Functional | ?? | Could: revisit only if they recur |
 
 ## Compliance (pointer: F-008 built cbb382be, merges after the full browser run)
