@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 18:42
+Updated: 2026-11-27 18:43
 
 ## Hub
 
@@ -29,7 +29,7 @@ Updated: 2026-11-27 18:42
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | 1 | (raising) | Seed Portfolio figures for the advisor test seats X91–X99 (holdings, Net New Money, revenue, SMA rows), like F-102/F-103 | Functional | 3 | After UAT 7; advisor B-162 reads them |
+| | 1 | OFA-F-245 | Seed Portfolio figures for the advisor test seats X91–X99 (holdings, Net New Money, revenue, SMA rows), like F-102/F-103 | Functional | 3 | After UAT 7; advisor B-162 reads them |
 | | X | OFA-F-209 part 2 | Live DART filing check | Functional | - | Week of 2026-11-30, Muhammed's DART retest |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Week of 2026-11-30 |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (his 27-11 reply answered the date, not the product; re-ask) |
