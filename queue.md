@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 16:58
+Updated: 2026-11-27 17:01
 
 ## Hub
 
@@ -37,13 +37,12 @@ Updated: 27-11-2026 16:58
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Week of 2026-11-30 |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 
-## Portfolio Services 2 (pointer: >> OFA-F-242 account renumber)
+## Portfolio Services 2 (pointer: >> OFA-B-382 State Manager count)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | OFA-F-242 | Move the 2 board account numbers that clash with live data (S20338 to S9970032, S18577 to S9970033) | Functional | ?? | Final test run |
-| | 2 | (raising) | The six test logins move to a test-only branch so they never count as a branch's people (F-240 regression) | Bug | 1 | Ruled by hub 27-11 |
-| | 2 | OFA-B-345 | Business scenario for F-215 now; the next reference date on the record after its design row | Functional | 2 | After F-242 |
+| >> | 1 | OFA-B-382 | Advisor's State Manager scenarios count 14 advisers, matching the Quarantine-list seed (was 10); plus a PS test that pins Marcus's 14 people | Bug | 1 | Ruled by hub 27-11 |
+| | 2 | OFA-B-345 | Business scenario for F-215 now; the next reference date on the record after its design row | Functional | 2 | After B-382 |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: SharePoint live check, after go-live |
 
 ## Advisor (pointer: >> F-171 DA portfolio)
