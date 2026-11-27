@@ -132,14 +132,13 @@
    ],
    "stage": "deploy",
    "start": "2026-11-23",
-   "pointsDone": 390.0,
-   "pointsRemaining": 41.0,
-   "pointsTotal": 431.0,
-   "itemsRemaining": 19,
+   "pointsDone": 405.0,
+   "pointsRemaining": 34.0,
+   "pointsTotal": 439.0,
+   "itemsRemaining": 16,
    "itemsRemainingUnsized": [
     "REL-022",
-    "REL-024",
-    "OFA-B-361"
+    "REL-024"
    ],
    "foundDuringBuild": {
     "pointsDone": 25.0,
@@ -153,7 +152,7 @@
  "velocity": {
   "pointsPerWorkingDay": 113.0,
   "window": "2026-11-11 to 2026-11-15 (5 days, weekends included), the pace with the new skills",
-  "pointsPerWorkingDayWholePeriod": 180.34,
+  "pointsPerWorkingDayWholePeriod": 181.49,
   "wholePeriodWorkingDays": 13,
   "series": [
    {
@@ -303,8 +302,8 @@
    },
    {
     "date": "2026-11-27",
-    "pointsDone": 2373.0,
-    "pointsDoneThatDay": 32.0
+    "pointsDone": 2388.0,
+    "pointsDoneThatDay": 47.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -345,7 +344,7 @@
     "likely": "2026-12-01",
     "pessimistic": "2026-12-01",
     "rateLast10": 21.5,
-    "rateWhole": 21.71
+    "rateWhole": 22.86
    }
   },
   "overall": {
@@ -354,9 +353,9 @@
    "pessimistic": "2026-12-01",
    "basis": "critical path: the latest date of the work still open (User Acceptance Testing). Component lines end at their build (buildDoneOn); every item raised after 2026-11-23 counts in User Acceptance Testing, whatever its component. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
-   "rateWhole": 180.34,
-   "pointsRemaining": 74.0,
-   "itemsRemaining": 28
+   "rateWhole": 181.49,
+   "pointsRemaining": 67.0,
+   "itemsRemaining": 25
   }
  },
  "milestones": [
@@ -439,7 +438,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-27T11:03:04+11:00",
+ "updatedAt": "2026-11-27T12:21:18+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -3111,6 +3110,12 @@
    "change": "Portfolio Services group 73 merged: on the live site every email goes to the test inbox and timed jobs stay off until go-live; on the test site every e-signing email goes to the test inbox; one test fix. The test site switch-on for e-signing waits for the joint test. One follow-up raised (B-367)",
    "pointsDone": 6.0,
    "pointsRaised": 2.0
+  },
+  {
+   "at": "2026-11-27T12:21:18+11:00",
+   "change": "Portfolio Services group 74 merged (B-367, F-221), with the earlier Portfolio Services second-checkout group 4 (B-355, B-357, B-359, B-361, B-365), B-377 and Shell F-194; four follow-ups raised from the UAT Annature test (B-369 to B-375)",
+   "pointsDone": 15.0,
+   "pointsRaised": 8.0
   }
  ],
  "foundDuringBuild": {
