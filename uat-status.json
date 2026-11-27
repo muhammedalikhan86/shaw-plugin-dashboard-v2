@@ -1,5 +1,5 @@
 {
-    "checked":  "2026-11-27T14:04:03",
+    "checked":  "2026-11-27T15:27:56",
     "parts":  {
                   "shell-web":  {
                                     "up":  true,
@@ -9,7 +9,7 @@
                   "shell-api":  {
                                     "up":  true,
                                     "code":  200,
-                                    "commit":  "3294ccad"
+                                    "commit":  "6bfa9f38"
                                 },
                   "landing-page-web":  {
                                            "up":  true,
@@ -24,7 +24,7 @@
                   "portfolio-services-api":  {
                                                  "up":  true,
                                                  "code":  200,
-                                                 "commit":  "8d2271ac"
+                                                 "commit":  "5b3d40c9"
                                              },
                   "advisor-dashboard-web":  {
                                                 "up":  true,
@@ -34,7 +34,7 @@
                   "advisor-dashboard-api":  {
                                                 "up":  true,
                                                 "code":  200,
-                                                "commit":  "3294ccad"
+                                                "commit":  "6bfa9f38"
                                             },
                   "compliance-dashboard-web":  {
                                                    "up":  true,
@@ -44,7 +44,7 @@
                   "compliance-dashboard-api":  {
                                                    "up":  true,
                                                    "code":  200,
-                                                   "commit":  "8d2271ac"
+                                                   "commit":  "5b3d40c9"
                                                }
               }
 }
