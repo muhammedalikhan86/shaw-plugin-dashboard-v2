@@ -3,11 +3,11 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 14:36
+Updated: 27-11-2026 14:37
 
 ## Hub
 
-1. Next UAT deploy (UAT 5), Portfolio Services, Compliance Dashboard and Advisor Dashboard: the UAT developer bypass (SHELL-F-195 docs, COMPLIANCE-DASHBOARD-B-163 merged 38b9a693, PS item, ADVISOR-DASHBOARD-F-173) and the bigger notice PDF windows (Compliance, PS). Command with -SkipTests -Y once all are merged and Muhammed has pushed main. Changelog first (item 3). After it: the Word check (Compliance wording preview as Muhammed), then OFA-F-120 Done; update-uat-status.ps1 then update-uat-data.ps1.
+1. Next UAT deploy (UAT 5), Portfolio Services, Compliance Dashboard and Advisor Dashboard: the UAT developer bypass (SHELL-F-195 docs, COMPLIANCE-DASHBOARD-B-163 merged 38b9a693, PS item, ADVISOR-DASHBOARD-F-173) and the bigger notice PDF windows (Compliance, PS). Also the Act As test logins (shell Act As on UAT, advisor F-174, ps2 test logins). RELEASE GATE (Muhammed 27-11): Act As proven before release: in-process UAT-environment tests in shell and advisor, then the hub drives a local stack and Acts As national.seat, vic.sm, nsw.sm, qld.sm, vic.da, nsw.da, qld.da, checking each view, with screenshots. Command with -SkipTests -Y only after that passes and Muhammed has pushed main. Changelog first (item 3). After it: the Word check (Compliance wording preview as Muhammed), then OFA-F-120 Done; update-uat-status.ps1 then update-uat-data.ps1.
 2a. Annature test (REL-029): S20338 sent 13:40 (204) but its mail never got past Mimecast. Second send S18577 (Kit Brack, Estimate, "Dear Kit") at 14:30, 204. Next: Muhammed sees the held mail arrive and checks the Annature site; then the other Annature paths (reminder, remove signer, void, signed PDF). Closing step when Muhammed ends the test: revert 7ffc9fd8, then a UAT deploy.
 3. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`.
 4. Code freeze 2026-12-11. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker.
