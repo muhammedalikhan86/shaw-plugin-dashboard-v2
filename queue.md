@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 11:09
+Updated: 2026-11-27 11:10
 
 ## Hub
 
@@ -22,14 +22,13 @@ Updated: 2026-11-27 11:09
 10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
-## Compliance (pointer: idle, all merged (SHELL-B-214 scenario pass c395d2e5); W46 with the designer)
+## Compliance (pointer: idle, queue empty; W46 done in the 27-11 round)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | X | W46 | Renewal notice versions on the board get their own starter v1; 4 Wording scenarios wait on it (@review-W46) | Look and Feel | ?? | Next designer round (prompt with Muhammed) |
 
 
-## Portfolio Services 2 (pointer: group 4; B-355 and B-359 built, test data for B-357 in progress, uncommitted)
+## Portfolio Services 2 (pointer: group 4 shell checks on its stack (offset 40), then finalize)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
@@ -44,12 +43,12 @@ Updated: 2026-11-27 11:09
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: idle, A4 merged f3828923)
+## Advisor (pointer: idle, A4 merged f3828923; F-171 held by Muhammed, nothing else queued)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | A4 | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Next make-up window, with B-161's business run and the H10 scenarios on the built app |
-| | A4 | PM-115 | SqlReaderBaseCancellationTests: looped run under load to prove the missed-cancel cause | Functional | ?? | Next make-up window |
+| | X | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Open, Could: not reproduced in A4 (evidence in the PMBook); revisit only if it recurs |
+| | X | PM-115 | SqlReaderBaseCancellationTests: looped run under load to prove the missed-cancel cause | Functional | ?? | Open, Could: not reproduced in A4 (evidence in the PMBook); revisit only if it recurs |
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
