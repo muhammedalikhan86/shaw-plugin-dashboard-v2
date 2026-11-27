@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 11:49
+Updated: 2026-11-27 11:52
 
 ## Hub
 
@@ -28,18 +28,15 @@ Updated: 2026-11-27 11:49
 |---|---|---|---|---|---|---|
 
 
-## Portfolio Services 2 (pointer: group 4 .NET run after the O52 fix; then a stack window to recheck O52 and O59)
+## Portfolio Services 2 (pointer: group 4 merged 1994a5e5; next group 5 = the UAT findings)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 4 | OFA-B-355 | The Exceptions report reads as at the test clock | Functional | 2 | Built (69dff1d9) |
-| >> | 4 | OFA-B-357 | Test data gets a quarantined row with no State Manager (C141) | Functional | 1 | Building (test data, uncommitted) |
-| >> | 4 | OFA-B-359 | The register reset also undoes an earlier run's writes (S20187) | Functional | 2 | Built (468740fc, migration 0235) |
-| >> | 4 | OFA-B-361 | The State Manager cell shows its second line as the board draws it; test data for a blank-address and an excluded-branch row (C141) | Functional | ?? | Group 4; after PS group 70 merges |
-| | 4 | O59 tests | Fix the `I open "Reason"` step so both @review-O59 scenarios open the drop-down (stale test, sync 27-11) | Test | 1 | Group 4 |
-| | 4 | O60 | Raise design row: O58's column makes the record's Platform accounts table wider than its card at 1440 and 1680px | Design row | - | Group 4; withdrawn (inside O18 scroll box), scenario kept as a guard |
-| | 4 | OFA-B-365 | O51 Back Office empty list and O57 DART wording on S20244: words and data in no code or seed since the 26-11 syncs; Back Office requests, which F-211 changed | Functional | 2 | Group 4 |
-| | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Blocked: IT drive check after the 2nd UAT release |
+| | 5 | OFA-B-369 | Notice greets "Dear Dear": the starter stays word for word, the salutation field drops its Dear | Functional | 1 | Group 5 (UAT findings, 27-11) |
+| | 5 | OFA-B-371 | Blank fee line on the notice: check the UAT seed first; data fix closes it | Functional | 1 | Group 5 (UAT findings, 27-11) |
+| | 5 | OFA-B-373 | A month with no cycle yet is normal: no 404 console error for cull notes | Functional | 1 | Group 5 (UAT findings, 27-11) |
+| | 5 | OFA-B-375 | Remove "The Initial OFA is prepared from Compliance's approved wording." from both prepare dialogs; board row O62 | Functional | 1 | Group 5 (UAT findings, 27-11) |
+| | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Library fix chosen (Shaw.Word 2.1.1 with a DriveId setting, Muhammed 27-11): waits for the drive ID from the app registration's owner and a TFS branch |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
@@ -67,10 +64,6 @@ Updated: 2026-11-27 11:49
 | | X | OFA-F-209 part 2 | Live DART filing check (part 1, the signing-status reader, moved to ps2) | Functional | - | Blocked: DART retest after the 2nd UAT release |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
-| | 75 | OFA-B-369 | Notice greets "Dear Dear": the starter stays word for word, the salutation field drops its Dear | 1 | After group 74 |
-| | 75 | OFA-B-371 | Blank fee line on the notice: check the UAT seed first; data fix closes it | 1 | After group 74 |
-| | 75 | OFA-B-373 | A month with no cycle yet is normal: no 404 console error for cull notes | 1 | After group 74 |
-| | 75 | OFA-B-375 | Remove "The Initial OFA is prepared from Compliance's approved wording." from both prepare dialogs; board row O62 | 1 | After group 74 |
 
 
 ## Shell (pointer: parked f5cb6ff6 (-Y done, SHELL-F-194); the localdb move waits for a quiet moment)
