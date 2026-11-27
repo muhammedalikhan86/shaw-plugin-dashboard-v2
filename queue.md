@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 14:38
+Updated: 27-11-2026 14:41
 
 ## Hub
 
@@ -18,7 +18,7 @@ Updated: 27-11-2026 14:38
 8b. Morning window (make up, one stack, the hub starts and stops it): PS OFA-B-347's six on the compliance stack, then the stack moves to the PS checkout for group 70 (P81/P84/P85/P77/P78), then the full suite (with @review-O53, @review-O54, and @review-C131|C161|C163 x5 for SHELL-B-213), then Advisor's A4 stack checks and Shell's parity checks. make up was stopped overnight by the low-memory guard: Muhammed frees memory first.
 8c. Next designer round, rows owed: OFA-B-345 (next reference date on the record); O53 board fix (Move to cull list offers "Deceased estate, no OFA" only when DART marks the estate, per OFA-F-211 A3).
 9. At the next switch to Muhammed's account: he uploads the two returned shell boards (NotificationPanel.dc.html, Main.dc.html) into his design project.
-10. Next stack window: closed-months @review-M40 x2 on the shell target (COMPLIANCE-DASHBOARD-B-164). Owed: npm run test:business:coverage and make design-checks, in a machine window.
+10. Next stack window: closed-months @review-M40 x2 (COMPLIANCE-DASHBOARD-B-164) and preview-renewal-notice @review-O63 x2 (OFA-B-380), on the shell target. Owed: npm run test:business:coverage and make design-checks, in a machine window.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
 ## Compliance (pointer: parked 9cfbf994, B-164 merged d6df5db1)
@@ -45,11 +45,10 @@ Updated: 27-11-2026 14:38
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: big Preview renewal notice window, copying B-164)
+## Portfolio Services (pointer: idle, all left is blocked)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | (raising) | Preview renewal notice window: same big-PDF layout as Compliance | UI | ?? | Go 27-11; pattern from COMPLIANCE-DASHBOARD-B-164 (d6df5db1) |
 | | | X | OFA-B-345 | Business scenario for F-215, and the next reference date shown on the record | Functional | ?? | Waits on a design row in the next designer round |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 | | X | OFA-F-209 part 2 | Live DART filing check (part 1, the signing-status reader, moved to ps2) | Functional | - | Blocked: DART retest after the 2nd UAT release |
