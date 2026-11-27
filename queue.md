@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 14:32
+Updated: 27-11-2026 14:33
 
 ## Hub
 
@@ -34,11 +34,11 @@ Updated: 27-11-2026 14:32
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: F-174, real seats under Act As on UAT; F-171 held)
+## Advisor (pointer: F-174, test people act as their seats on UAT; F-171 held)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | ADVISOR-DASHBOARD-F-174 | UAT: Act As a real person (Chris.Smith, sam.elliott) shows their seat over the test rows | Functional | 2 | Go 27-11 |
+| >> | 1 | ADVISOR-DASHBOARD-F-174 | UAT: Act As the test people (national.seat, marcus.ashcombe) shows their seats; national.seat on the UAT national-seat list | Functional | 1 | Re-scoped 27-11 |
 | | X | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Open, Could: not reproduced in A4 (evidence in the PMBook); revisit only if it recurs |
 | | X | PM-115 | SqlReaderBaseCancellationTests: looped run under load to prove the missed-cancel cause | Functional | ?? | Open, Could: not reproduced in A4 (evidence in the PMBook); revisit only if it recurs |
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
