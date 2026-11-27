@@ -35,11 +35,10 @@ Updated: 2026-11-27 17:56
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Week of 2026-11-30 |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (his 27-11 reply answered the date, not the product; re-ask) |
 
-## Portfolio Services 2 (pointer: >> master-list:310 tag)
+## Portfolio Services 2 (pointer: idle, nothing doable until a design row or a routed red)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | OFA-B-345 | Tag master-list:310 (Next Reference Date column, O58) not-built until built | Bug | - | UAT 7 |
 | | X | OFA-B-345 | The next reference date on the record (scenario part merged) | Functional | 1 | Waits on its design row |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: SharePoint live check, after go-live |
 
