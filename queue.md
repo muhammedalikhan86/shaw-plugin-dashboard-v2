@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 16:48
+Updated: 27-11-2026 16:51
 
 ## Hub
 
@@ -54,9 +54,11 @@ Updated: 27-11-2026 16:48
 | | 1 | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | ?? | Go after UAT 5 (Muhammed 27-11); hub sends the go on "released" |
 
 
-## Shell (pointer: idle, SHELL-F-198 on main 20a01276)
+## Shell (pointer: >> docs fixes, then expanded table floor)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 1 | (new) | Docs: landing change log and handoff for B-008, old DB name in the ADRs, two dates | Doc | 1 | Hub governance check 27-11 |
+| | 2 | SHELL-B-(new) | The expanded table view keeps 1280 x 720 and scrolls, like the page | Look | ?? | Muhammed 27-11 |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
