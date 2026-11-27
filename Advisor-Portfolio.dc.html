@@ -202,7 +202,7 @@ mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel>.body{padding:0 24px
 .pr{min-height:57px;border-bottom:1px solid var(--mat-sys-surface-container-high);transition:background-color .15s}
 .pr:hover{background:var(--mat-sys-surface-container)}
 .rolebox{max-height:156px;overflow-y:auto;padding-right:8px}
-body{min-width:708px}
+body{min-width:1280px;min-height:720px}
 .page{min-width:0}
 </style>
 <style>
@@ -685,7 +685,7 @@ const REV8 = ["Domestic Equities", "Options", "International", "Lodgements", "SM
 const FUA_T = ["CHESS Registered", "SMA", "Leveraged Equities", "Macquarie Wrap", "Cash Management Account", "Other (6)", "Powerwrap", "Colonial First Wrap", "AET", "Asgard", "NAB Equity Lending", "Bell Potter", "Spectrum", "Treasury Direct Bond", "EFG"];
 const kfmt = (v) => v === 0 ? "$0" : v < 1e4 ? "$" + Math.round(v).toLocaleString("en-AU") : v < 1e6 ? "$" + (v / 1e3).toFixed(1) + "K" : "$" + (v / 1e6).toFixed(2) + "M";
 const mfmt = (v) => v === 0 ? "–" : v < 1e6 ? "$" + (v / 1e3).toFixed(1) + "K" : v < 1e9 ? "$" + (v / 1e6).toFixed(2) + "M" : "$" + (v / 1e9).toFixed(2) + "B";
-function tableFor(id, names) {
+function tableFor(id, names, pcRow) { /* B91: pcRow, the seat holds personal codes */
   const fig = (seed, base, spread, zeroP) => { let z = seed; return seq(seed, names.length, base, spread).map(v => { z = (z * 9301 + 49297) % 233280; return z / 233280 < zeroP ? 0 : Math.max(0, Math.round(v)); }); };
   let cols, data, fmt;
   if (id === "t-gr") { cols = REV8; fmt = kfmt; data = REV8.map((_, i) => fig(61 + i, [14e3, 400, 300, 9e3, 12e3, 400, 35e3, 150][i], [12e3, 600, 500, 10e3, 12e3, 600, 25e3, 300][i], [0, .7, .8, 0, .1, .75, 0, .9][i])); }
@@ -700,8 +700,11 @@ function tableFor(id, names) {
   const head = [{ label: "Adviser", cls: "stick", arrow: true }].concat(cols.map(c => ({ label: c, cls: "num", fold: c === "Other (6)" }))).concat([{ label: prof ? "MARGIN %" : "TOTAL", cls: "num tot" }]);
   const rows = names.map((n, r) => { const vals = data.map(c => c[r]), sum = vals.reduce((a, b) => a + b, 0);
     return { cells: [{ v: n, cls: "stick nm" }].concat(vals.map(v => ({ v: fmt(v), cls: "num" }))).concat([{ v: prof ? Math.round(vals[2] / Math.max(1, vals[0]) * 100) + "%" : fmt(sum), cls: "num tot" }]) }; });
-  const tots = data.map(c => c.reduce((a, b) => a + b, 0)), all = tots.reduce((a, b) => a + b, 0);
-  const total = [{ v: "Total · " + names.length + (names.length === 1 ? " adviser" : " advisers"), cls: "stick" }].concat(tots.map(v => ({ v: fmt(v), cls: "num" }))).concat([{ v: prof ? Math.round(tots[2] / Math.max(1, tots[0]) * 100) + "%" : fmt(all), cls: "num tot" }]);
+  /* B91: for a person who holds personal codes, one row follows the Advisers' rows: the value of the accounts on their personal codes. The Total includes it */
+  const pc = id === "t-fua" && pcRow ? FUA_T.map((_, i) => i < 6 ? [8.4e6, 1.9e6, 0, 2.6e6, 0.7e6, 0.3e6][i] : 0) : null;
+  if (pc) rows.push({ cls: "pcr", cells: [{ v: "Your personal codes", cls: "stick nm" }].concat(pc.map(v => ({ v: fmt(v), cls: "num" }))).concat([{ v: fmt(pc.reduce((a, b) => a + b, 0)), cls: "num tot" }]) });
+  const tots = data.map((c, i) => c.reduce((a, b) => a + b, 0) + (pc ? pc[i] : 0)), all = tots.reduce((a, b) => a + b, 0);
+  const total = [{ v: "Total · " + names.length + (names.length === 1 ? " adviser" : " advisers"), cls: "stick" }].concat(tots.map(v => ({ v: pc && v === 0 ? "$0" /* B91: a platform nobody holds shows 0 in the Total */ : fmt(v), cls: "num" }))).concat([{ v: prof ? Math.round(tots[2] / Math.max(1, tots[0]) * 100) + "%" : fmt(all), cls: "num tot" }]);
   return { cols: head, rows, total };
 }
 // the advisers a seat can see, in the Adviser picker's order
@@ -850,7 +853,7 @@ class Component extends DCLogic {
             if (bx[k2] || this._all) ps.forEach(pa => rows.push(...paRows(x, pa, k2, "40px"))); } return rows; } }));
       units.sort((p, q2) => q2.fig - p.fig);
       const GR = (l) => HOLD.includes(l) || l === "Funds Under Advice" ? "Holdings" : NNC.includes(l) ? "Net New Money" : SMC.includes(l) ? "SMA models" : "Ongoing fee arrangement";
-      const cols = [col(first, { w: "260px" }), col("Account name", { w: "200px" }), col("Adviser", { w: "136px" }), col("Type", { w: "88px" }), col("Class", { w: "88px" }), col("Opened", { w: "104px", cls: "nw" })].concat(FC.map(l => numC.includes(l) ? ncol(l, "1%", { grp: GR(l) }) : l === "Expiry Date" ? col(l, { w: "112px", tip: "Reference Date + 150 days", tipIcon: true, grp: GR(l) }) : col(l, { w: "112px", grp: GR(l) })));
+      const cols = [col(first, { w: "260px" }), col("Account name", { w: "200px", pin: true }), col("Adviser", { w: "136px", pin: true }) /* P89: the three frozen columns are ticked and disabled in Show or hide columns */, col("Type", { w: "88px" }), col("Class", { w: "88px" }), col("Opened", { w: "104px", cls: "nw" })].concat(FC.map(l => numC.includes(l) ? ncol(l, "1%", { grp: GR(l) }) : l === "Expiry Date" ? col(l, { w: "112px", tip: "Reference Date + 150 days", tipIcon: true, grp: GR(l) }) : col(l, { w: "112px", grp: GR(l) })));
       const raw = (s.cq || {})[id] || "", q = raw.trim().toLowerCase(), fA = (s.cf || {})[id] || {}, fN = Object.keys(fA).length;
       const txt = (c) => !c ? "" : [c.v, c.sub, c.chip].filter(Boolean).join(" ");
       const mv = (c) => !c ? [] : [c.chip || c.v].filter(x => x != null && x !== "" && x !== "—").map(String);
@@ -894,7 +897,7 @@ class Component extends DCLogic {
       const allNames = seatNames(seat), pk = this._pick(seat), pS = this._pickSet(seat), names = pS && !pk ? allNames.filter(n => pS.includes(n.replace(/ \(you\)$/, ""))) : pk ? allNames.filter(n => n.replace(/ \(you\)$/, "") === pk) : allNames;
       s.order.filter(id0 => !s.hidden.includes(id0)).map(id0 => CARDS.find(c => c.id === id0)).filter(c => c && (mgr || !c.table) && (mgr || !c.mgr) && (!c.nat || (seat === "nat" && !s.natAdv)) && !(this._isDa() && DA_NOREV.includes(c.id))).forEach(c => { const z = this.sizeOf(c);
         if (!c.table) { blocks.push({ isChartCard: true, cid: c.id, span: z.w, rows: z.h, title: c.title, sub: c.sub, asAt: c.asAt, info: c.tip || c.sub /* B72; O57: every card has its own tip */, domId: "ad-" + c.id, ...this.a11yOf(c.id, c.title), bookTip: "Open the book · " + c.title, /* P55 (B65) */ book: CB[c.id] ? () => this.openBook(CB[c.id], c.id === "nnm" ? repIx : null) : null }); return; }
-        const t = tableFor(c.id, names);
+        const t = tableFor(c.id, names, this._effSeat() === "own2" && names.some(n => / \(you\)$/.test(n)));
         blocks.push(Object.assign(block("Card", z.w, { expId: c.id, fix: "true", h: "100%", title: c.title, sub: null, tipAfter: t.noTotal ? "Shaw grid rate is Shaw commission as a percentage of total gross revenue. Net to Shaw is Shaw commission less allowance paid and direct cost, a blank counting as nil. Shaw gross revenue % is net to Shaw as a percentage of total gross revenue." : names.length + (names.length === 1 ? " adviser" : " advisers") + " · Total sums the selection · " + c.asAt + ". " + c.sub + ".", /* P53: the ⓘ follows the title; P58: the board's string, then the card's own note; B68: the profitability card's tip is the business's definition */ foot2src: t.noTotal ? null : Object.assign({ _first: t.total[0].v }, Object.fromEntries(t.cols.map((h, j) => [h.label === "TOTAL" ? "Total" : h.label === "MARGIN %" ? "Margin %" : h.label, t.total[j].v]).slice(1))), parts: [part("Table", { scroll: "true", fit: [["Adviser", "12%"]], cols: t.cols.map(h => col(h.label === "TOTAL" ? "Total" : h.label === "MARGIN %" ? "Margin %" : h.label, { cls: /num/.test(h.cls) ? "num" : "" })), rows: t.rows.map(rw => ({ cells: rw.cells.map((x, j) => j === 0 ? (mgr ? { v: x.v, rec: () => { const nm = String(x.v).replace(/ \(you\)$/, ""); /* P59: until the Adviser chip filter (ADVISOR-DASHBOARD-F-071) is built, the name opens the book with the Adviser picker set and no chip; B8's chipped book stays the target, shown with the Adviser name link state */ if (this.props.advLink === "Adviser chip (target)") return this.openBook("fua", null, null, nm); this.setState({ natAdv: nm }); this.openBook("fua", null, null); }, tip: "Open " + String(x.v).replace(/ \(you\)$/, "") + "'s book", fw: "500" } : { v: x.v }) : { v: x.v, cls: /num/.test(x.cls) ? "num" : "" }) })), minW: "max-content" })] }), { cid: c.id, rows: z.h })); });
     }
     // generic table tools for the detail tables: search, filters (not on figures)
@@ -986,7 +989,7 @@ class Component extends DCLogic {
         return { dateOpen: open, dateExpanded: open ? "true" : "false", dateBorder: open ? "var(--mat-sys-primary)" : "var(--mat-sys-surface-container-highest)", dateRing: open ? "inset 0 0 0 1px var(--mat-sys-primary)" : "none", repDate: s.repDate,
           toggleDate: () => this.setState({ dateOpen: !open, advOpen: false }), closeDate: () => this.setState({ dateOpen: false }),
           dateOpts: months.map(mo => { const on = mo === s.repDate; return { label: mo, on, sel: on ? "true" : "false", bg: on ? "var(--mat-sys-secondary-container)" : "transparent", fg: on ? "var(--mat-sys-on-secondary-container)" : "var(--mat-sys-on-surface)", pick: () => this.setState({ repDate: mo, dateOpen: false }) }; }) }; })(),
-      cards: order.map(c => { const span = s.spans[c.id] || c.span, t = c.table ? tableFor(c.id, names) : null;
+      cards: order.map(c => { const span = s.spans[c.id] || c.span, t = c.table ? tableFor(c.id, names, this._effSeat() === "own2" && names.some(n => / \(you\)$/.test(n))) : null;
         return { id: c.id, title: c.title, sub: c.table ? names.length + (names.length === 1 ? " adviser" : " advisers") + " · Total sums the selection" : c.sub, asAt: c.asAt, info: c.tip || c.sub /* B72; O57: every card has its own tip */, span, h: c.table ? "400px" : "340px",
           isChart: !c.table, isTable: !!c.table, domId: "ad-" + c.id, cols: t ? t.cols : [], rows: t ? t.rows : [], total: t && t.total ? t.total : [],
           left: move(c.id, -1), up: move(c.id, -2), down: move(c.id, 2), right: move(c.id, 1), hide: () => this.setState({ hidden: s.hidden.concat([c.id]) }),

@@ -186,7 +186,7 @@ mat-accordion:is(.da,[classname~="da"]) mat-expansion-panel>.body{padding:0 24px
 .pr{min-height:57px;border-bottom:1px solid var(--mat-sys-surface-container-high);transition:background-color .15s}
 .pr:hover{background:var(--mat-sys-surface-container)}
 .rolebox{max-height:156px;overflow-y:auto;padding-right:8px}
-body{min-width:708px}
+body{min-width:1280px;min-height:720px}
 .page{min-width:0}
 
 
@@ -1280,3 +1280,26 @@ mat-dialog-content > div[data-i13]:empty{display:none!important}
 .app-layer table.ot tbody td.fzx{z-index:3!important}
 .app-layer table.ot :is(th,td).fzx.fzl{box-shadow:inset -1px 0 0 var(--mat-sys-outline-variant)}
 .app-layer table.ot :is(th,td).fzn{box-shadow:none!important}
+/* M40 (Compliance), the notice document window, for any board's window that shows a notice: the screen's width less the backdrop's 24px a side, and 90% of its height; the title, the sub line and the details sit in a 320px column on the left that scrolls on its own, and the notice fills the rest at full height from the content's top padding, so its top gap is its right gap, 24px. Under 840px the details stack above the notice and the window scrolls. */
+mat-dialog:is(.notice-document-dialog,[classname~="notice-document-dialog"]){width:100%!important;max-width:none!important;height:90vh!important;max-height:none!important}
+mat-dialog:is(.notice-document-dialog,[classname~="notice-document-dialog"])>mat-dialog-content{flex:1 1 auto;min-height:0;overflow:hidden!important;padding-top:24px}
+.notice-document-dialog__title,.notice-document-dialog__subtitle{padding:0!important}
+.notice-document-dialog__subtitle{margin-bottom:0}
+.notice-document-dialog__body{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:320px minmax(0,1fr);gap:24px}
+.notice-document-dialog__details{min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:16px;overscroll-behavior:contain}
+.notice-document-dialog__pairs{margin:0;display:flex;flex-direction:column;border-top:1px solid var(--mat-sys-outline-variant);border-bottom:1px solid var(--mat-sys-outline-variant)}
+.notice-document-dialog__pairs>div{display:flex;flex-direction:column;gap:4px;padding:8px 0}
+.notice-document-dialog__pairs dd{margin:0;font:var(--mat-sys-body-large)}
+.notice-document-dialog__viewer{min-height:0;display:flex}
+.notice-document-dialog__viewer>*{flex:1 1 auto;min-height:0}
+@media (max-width:839.98px){
+mat-dialog:is(.notice-document-dialog,[classname~="notice-document-dialog"])>mat-dialog-content{overflow-y:auto!important}
+.notice-document-dialog__body{flex:none;grid-template-columns:minmax(0,1fr);grid-template-rows:auto 70vh}
+.notice-document-dialog__details{overflow:visible}
+}
+/* W47 (Compliance): the Field library. The window is the screen's width less 24px a side, up to 1280px; the search stays at the top
+   and the table scrolls on its own under a frozen header row, so no row ever shows above the header. */
+mat-dialog:is(.field-library-dialog,[classname~="field-library-dialog"]){width:min(1280px,100%)!important;max-width:none!important}
+mat-dialog:is(.field-library-dialog,[classname~="field-library-dialog"])>mat-dialog-content{overflow:hidden!important}
+mat-dialog:is(.field-library-dialog,[classname~="field-library-dialog"]) .l3scroll{flex:1 1 auto!important;min-height:0;max-height:none!important;overflow:auto!important}
+mat-dialog:is(.field-library-dialog,[classname~="field-library-dialog"]) .l3scroll th[mat-header-cell]{z-index:2}
