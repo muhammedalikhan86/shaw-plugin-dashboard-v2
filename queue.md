@@ -3,11 +3,11 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 17:25
+Updated: 2026-11-27 17:30
 
 ## Hub
 
-1. Next UAT deploy (UAT 7), waits on ADVISOR-DASHBOARD-F-176 (Portfolio and Book switch; SHELL-F-199 merged) and a full browser run after it: search finds pages in all three plugins (all merged: OFA-F-243, ADVISOR-DASHBOARD-F-175, COMPLIANCE-DASHBOARD-F-056), the expanded table floor (SHELL-B-216, merged), ps2's account renumber (OFA-F-242), and whatever else merges by then. Release when the last search item merges.
+1. Next UAT deploy (UAT 7), hub releases it (Muhammed's go 27-11). Waits on: ADVISOR-DASHBOARD-F-176 (Portfolio and Book switch), COMPLIANCE-DASHBOARD-F-008, ps2's OFA-B-382 and OFA-B-345, shell's SHELL-B-217, every fix for the full browser run's failures, then one more full run. A stuck item is left out rather than holding the release. Already in: search finds pages in all three plugins (all merged: OFA-F-243, ADVISOR-DASHBOARD-F-175, COMPLIANCE-DASHBOARD-F-056), the expanded table floor (SHELL-B-216, merged), ps2's account renumber (OFA-F-242), and whatever else merges by then. Release when the last search item merges.
 2. Week of 2026-11-30, scheduled (Muhammed 27-11): Muhammed's DART retest (OFA-F-209 part 2) and the February-peak load test (OFA-F-062). Monday 2026-11-30: Muhammed sends Luke the product-correction re-ask (OFA-F-141).
 3. Next designer round, once the current sync lands: carry W47 (Field library) and the 1280 x 720 floor on the seven boards; rows owed: the board's Q13 margin note (a declined notice is not a close, Luke 27-11) to drop; OFA-B-345 (next reference date on the record); O53 board fix (Move to cull list offers "Deceased estate, no OFA" only when DART marks the estate, OFA-F-211 A3).
 4. Each test-site release: the business changelog (page and PDF) in v2 `changelogs/` with a row in `uat-notes.json`.
