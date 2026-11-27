@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 11:01
+Updated: 2026-11-27 11:03
 
 ## Hub
 
@@ -54,13 +54,15 @@ Updated: 2026-11-27 11:01
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: group 74: OFA-B-367 next)
+## Portfolio Services (pointer: group 74: OFA-B-367, then OFA-F-221 and the B-363 board run in a stack window)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | | X | (PS raises) | The make-up register reset loads TestData.dll without Shell.TestKit.dll beside it, so it still creates in the old place | Functional | ?? | Not tonight |
 | >> | 73 | UAT `Signing:BaseUrl` | Separate settings commit: UAT `Signing:BaseUrl` set to the live Annature address for the Annature and Chrome test | Functional | 1 | Held on the PS branch (30efcbf9); merges when Muhammed schedules the Annature test |
 | >> | 74 | OFA-B-367 | 4 .NET tests build renewals from today minus 140 days and went past Expiry Date today; calendar drift, not group 73 | Functional | ?? | Group 74 |
+| | 74 | OFA-F-221 | Register reset through Shell.TestKit (needs a stack window) | Functional | 4 | Group 74, after B-367 |
+| | 74 | OFA-B-363 board run | Run the P83 scenario on the board (built and merged; not yet run) | Test | - | Group 74 stack window |
 | | 70 | - | Handoff and test runbook: Compliance ("Renewal notice", B-157) and Advisor ("Signed renewal notice") now label OFAREN | Functional | 0 | After B-157 is on main |
 | | X | OFA-B-345 | Business scenario for F-215, and the next reference date shown on the record | Functional | ?? | Waits on a design row in the next designer round |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
