@@ -1,0 +1,112 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style>:root{color-scheme:light}@page{margin:16mm}</style>
+<title>Shaw Portal Test Site Update</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Layout: one reading column; two parts (functional, design) each split by product */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #1b2430; --muted: #5a6677; --line: #dde2e9;
+  --accent: #1f4e79; --accent-soft: #e6eef6; --design: #7a4b12; --design-soft: #f6eddf;
+  --display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --body: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11161d; --surface: #18202a; --fg: #e5e9ef; --muted: #9aa6b6; --line: #2a3441;
+  --accent: #8cb8e3; --accent-soft: #1d2d3e; --design: #e2b57a; --design-soft: #2e2418; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11161d; --surface: #18202a; --fg: #e5e9ef; --muted: #9aa6b6; --line: #2a3441;
+  --accent: #8cb8e3; --accent-soft: #1d2d3e; --design: #e2b57a; --design-soft: #2e2418; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 15px/1.6 var(--body); }
+.wrap { max-width: 760px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: grid; gap: 6px; margin-bottom: 28px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font: 600 30px/1.2 var(--display); margin: 0; text-wrap: balance; }
+.lede { color: var(--muted); margin: 0; max-width: 62ch; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 32px; }
+nav a { font-size: 13px; text-decoration: none; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--line); color: var(--fg); background: var(--surface); }
+nav a:focus-visible, nav a:hover { border-color: var(--accent); }
+section.part { margin-top: 36px; }
+.part-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; border-bottom: 2px solid var(--accent); padding-bottom: 6px; }
+.part.design .part-head { border-color: var(--design); }
+h2 { font: 600 22px/1.3 var(--display); margin: 0; }
+.tag { font-size: 12px; padding: 2px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+.part.design .tag { background: var(--design-soft); color: var(--design); }
+h3 { font: 600 16px/1.4 var(--display); margin: 24px 0 8px; }
+ol { margin: 0; padding-left: 1.4em; display: grid; gap: 6px; }
+li { max-width: 68ch; }
+li::marker { color: var(--muted); font-variant-numeric: tabular-nums; }
+.off { margin-top: 36px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; }
+.off h2 { font-size: 17px; }
+.off ul { margin: 8px 0 0; padding-left: 1.2em; }
+</style>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">Shaw Portal · Test site · 27-11-2026</span>
+  <h1>What changed on the test site</h1>
+  <p class="lede">This note lists what has changed on the Shaw Portal test site since the test release of 26-11-2026. Changes to how the screens work are listed first, then changes to how they look.</p>
+</header>
+<nav hidden>
+  <a href="#functional">How it works</a>
+  <a href="#design">How it looks</a>
+  <a href="#off">Switched off or deferred</a>
+</nav>
+
+<section class="part" id="functional">
+  <div class="part-head"><h2>How it works</h2><span class="tag">Functional changes</span></div>
+
+  <h3>Portfolio Services</h3>
+  <ol>
+    <li>Every e-signing envelope the test site sends through Annature now goes to the testers' mailbox, for every signer, and never to a client.</li>
+    <li>The tool no longer emails the State Manager when an arrangement ends, is terminated or is culled, and no longer emails the Back Office about a deceased estate. The "Cull list" no longer offers "Email the Back Office".</li>
+    <li>"Deceased estate, no OFA" is now offered only for an S-Account that DART marks as a deceased estate.</li>
+    <li>Accepting an Adviser's answer now updates the arrangement's payment frequency and Next Reference Date from that answer.</li>
+    <li>A note on the reports in "Settings" may now carry files, added with the paperclip button.</li>
+    <li>"Prepare and send electronically" now takes optional files with its note. The files are kept with the send on the Arrangement record's History and are never sent to the signer.</li>
+    <li>Every wording now starts at version 1, its approved starter, so each email always has an approved wording in effect. Emails no longer carry "[Placeholder wording, awaiting approval]", and a version with no subject is sent under the email's standard subject.</li>
+    <li>On a quarantined row, answers entered by the OFA Team now read "CHANGED BY THE OFA TEAM", and the note saved with them shows on the row.</li>
+  </ol>
+
+  <h3>Adviser Dashboard</h3>
+  <ol>
+    <li>On the S-Account page, the "OFA History" tab now lists one line per OFA period, each opening that OFA's acceptance details, issuance date and OFA PDF. The list follows the period chosen and "Search History", and shows its count.</li>
+  </ol>
+
+  <h3>Compliance Dashboard</h3>
+  <ol>
+    <li>On "Wording", every wording now shows its version in effect. The "Does not exist yet" label, the placeholder box and "Load the first version" are gone.</li>
+  </ol>
+</section>
+
+<section class="part design" id="design">
+  <div class="part-head"><h2>How it looks</h2><span class="tag">Design changes</span></div>
+
+  <h3>Portfolio Services</h3>
+  <ol>
+    <li>In both prepare dialogs, the "Signers" label is in sentence case and the "Salutation" label always sits above its box.</li>
+    <li>While the "OFA Checklist" loads, its card and "Month" selector now show.</li>
+  </ol>
+
+  <h3>Adviser Dashboard</h3>
+  <ol>
+    <li>On the S-Account page's Platform accounts card, the ASF ⓘ tip now ends each ASF heading, after "past 12 months" or "forecast next 12 months", as the design draws it.</li>
+    <li>On "OFA questionnaire", S-Account and Account name, once shown, stay in place with the other fixed columns when the table scrolls sideways.</li>
+  </ol>
+
+  <h3>Compliance Dashboard</h3>
+  <ol>
+    <li>On the "OFA Checklist", the notes under "Cull the Anniversary List" now keep their full height, so a long note is no longer cut or overlapped by the next.</li>
+  </ol>
+</section>
+
+<aside class="off" id="off">
+  <h2>Switched off or deferred</h2>
+  <ul>
+    <li>The Adviser Dashboard's Book of business and dashboard pages are deferred. They will be released together at a later point.</li>
+    <li>For a short, agreed test window, the test site sends real e-signing envelopes through Annature, all to the testers' mailbox. Testers are asked to pause their own testing during that window. Outside it, e-signing is off on the test site and signing requests are not sent to clients.</li>
+    <li>Every email the test site sends goes to the testers' mailbox.</li>
+  </ul>
+</aside>
+</div>
+</html>
