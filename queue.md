@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 17:31
+Updated: 2026-11-27 17:48
 
 ## Hub
 
@@ -34,12 +34,11 @@ Updated: 2026-11-27 17:31
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Week of 2026-11-30 |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (his 27-11 reply answered the date, not the product; re-ask) |
 
-## Portfolio Services 2 (pointer: >> OFA-B-382 State Manager count)
+## Portfolio Services 2 (pointer: waiting for the full browser run's failures)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | OFA-B-382 | Advisor's State Manager scenarios count 14 advisers, matching the Quarantine-list seed (was 10); plus a PS test that pins Marcus's 14 people | Bug | 1 | Ruled by hub 27-11 |
-| | 2 | OFA-B-345 | Business scenario for F-215 now; the next reference date on the record after its design row | Functional | 2 | After B-382 |
+| | X | OFA-B-345 | The next reference date on the record (scenario part merged) | Functional | 1 | Waits on its design row |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: SharePoint live check, after go-live |
 
 ## Advisor (pointer: F-171 + F-176 built fb2b45ab, merge after the full run)
