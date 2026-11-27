@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 16:00
+Updated: 27-11-2026 16:04
 
 ## Hub
 
@@ -25,6 +25,7 @@ Updated: 27-11-2026 16:00
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| | 2 | (new) | Shell search finds pages: names, card titles and subtitles; data search held pending Muhammed | Functional | ?? | After the Field library group |
 | >> | 1 | (new) | Field library: frozen header sits flush at the top (build bug), header frozen on the board too, dialog wider, Used by column twice as wide | Look | ?? | Muhammed's direct ask 27-11 |
 
 
@@ -40,15 +41,17 @@ Updated: 27-11-2026 16:00
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 1 | (new) | Shell search finds pages (OFA Dashboard's five): names, card titles and subtitles; data search held pending Muhammed | Functional | ?? | Muhammed 27-11 |
 | | X | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Open, Could: not reproduced in A4 (evidence in the PMBook); revisit only if it recurs |
 | | X | PM-115 | SqlReaderBaseCancellationTests: looped run under load to prove the missed-cancel cause | Functional | ?? | Open, Could: not reproduced in A4 (evidence in the PMBook); revisit only if it recurs |
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: idle, all left is blocked)
+## Portfolio Services (pointer: >> search finds pages)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 1 | (new) | Shell search finds pages: page names, card titles and subtitles link to their page; data search held pending Muhammed | Functional | ?? | Muhammed 27-11 |
 | | | X | OFA-B-345 | Business scenario for F-215, and the next reference date shown on the record | Functional | ?? | Waits on a design row in the next designer round |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 | | X | OFA-F-209 part 2 | Live DART filing check (part 1, the signing-status reader, moved to ps2) | Functional | - | Blocked: DART retest after the 2nd UAT release |
@@ -60,6 +63,7 @@ Updated: 27-11-2026 16:00
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| | 2 | (new) | Search contract: plugins answer with pages' names, card titles and subtitles, never data | Doc | 1 | After SHELL-F-197 |
 | >> | 1 | SHELL-F-197 | Minimum page size 1280px wide (confirmed) by 720px high (confirmed): below it the page scrolls instead of squashing | Look | ?? | Muhammed's direct ask 27-11 |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
