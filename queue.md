@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 17:56
+Updated: 2026-11-27 18:03
 
 ## Hub
 
@@ -22,6 +22,7 @@ Updated: 2026-11-27 17:56
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 1 | SHELL-B-218 | Business tests: one plugin's test clock no longer moves another plugin's mid-scenario (compliance "10 days left") | Bug | ?? | Same group; UAT 7 |
 | >> | 1 | SHELL-B-217 | Plugin0 pinned-columns test: header row scrolled to the end lands at 1418 | Bug | 1 | Building; UAT 7 |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (Muhammed 2026-11-25) |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
@@ -51,8 +52,7 @@ Updated: 2026-11-27 17:56
 | | 2 | (raising) | Version-2 scenarios on the built app: 18 Portfolio/Book scenarios tagged not-built, then triaged (rewrite to test data, or a bug per real defect); plus the questionnaire column order (Platform accounts before Status) | Functional | ?? | After group 1; what's done before the final full run goes into UAT 7 |
 | | X | PM-114..PM-126, PM-115 | Flaky business tests | Functional | ?? | Could: revisit only if they recur |
 
-## Compliance (pointer: >> full-run reds)
+## Compliance (pointer: idle, stand by for the final full run)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | (raising) | Full-run reds: search step locator needs .first() (arrangements:612); Period field (flaky); 10 days left (clock) | Bug | ?? | UAT 7 |
