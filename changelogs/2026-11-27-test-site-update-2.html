@@ -50,7 +50,6 @@ li::marker { color: var(--muted); font-variant-numeric: tabular-nums; }
 <nav hidden>
   <a href="#functional">How it works</a>
   <a href="#design">How it looks</a>
-  <a href="#off">Switched off or deferred</a>
 </nav>
 
 <section class="part" id="functional">
@@ -62,6 +61,12 @@ li::marker { color: var(--muted); font-variant-numeric: tabular-nums; }
     <li>The fee line on the renewal notice preview is now filled. One test record lacked its fee forecast; that test data has been corrected.</li>
     <li>Opening a month that has no cycle yet no longer causes an error behind the scenes. The cull notes simply show none.</li>
     <li>Wordings prepared as Word documents can now be turned into PDFs on the test site, using the signed-in person's own OneDrive. The overnight sending run does not convert these wordings; a person sends them.</li>
+    <li>Electronic signing tests through Annature have resumed on the test site. The first Initial OFA has been sent for signature successfully.</li>
+  </ol>
+
+  <h3>Compliance Dashboard</h3>
+  <ol>
+    <li>The Compliance Team's wording preview now greets the sample client correctly for renewal notice wordings, so it no longer reads "Dear Dear".</li>
   </ol>
 </section>
 
@@ -74,12 +79,5 @@ li::marker { color: var(--muted); font-variant-numeric: tabular-nums; }
   </ol>
 </section>
 
-<aside class="off" id="off">
-  <h2>Switched off or deferred</h2>
-  <ul>
-    <li>Electronic signing tests through Annature are paused while the connection between the test site and the signing service is set up.</li>
-    <li>On the Compliance Dashboard, the wording preview may still show "Dear Dear" for renewal notice wordings until the next update.</li>
-  </ul>
-</aside>
 </div>
 </html>
