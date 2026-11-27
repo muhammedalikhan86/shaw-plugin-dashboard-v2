@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 14:21
+Updated: 27-11-2026 14:27
 
 ## Hub
 
@@ -35,21 +35,19 @@ Updated: 27-11-2026 14:21
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: UAT developer bypass; F-171 held)
+## Advisor (pointer: parked 27deb549, F-173 merged 6151f64e; F-171 held)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | ADVISOR-DASHBOARD-F-173 | UAT only: developers (Development Team - Sydney) pass every role gate, front end and back end | Functional | ?? | Urgent, Muhammed 27-11; testers blocked on UAT |
 | | X | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Open, Could: not reproduced in A4 (evidence in the PMBook); revisit only if it recurs |
 | | X | PM-115 | SqlReaderBaseCancellationTests: looped run under load to prove the missed-cancel cause | Functional | ?? | Open, Could: not reproduced in A4 (evidence in the PMBook); revisit only if it recurs |
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: UAT developer bypass, incl. the preview 403)
+## Portfolio Services (pointer: B-379 merged 691edbc8; next the bigger PDF window, waits on Compliance)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | OFA-B-379 | UAT only: developers (Development Team - Sydney) pass every role gate, front end and back end | Functional | ?? | Committed fba0a493; full PS suite running |
 | | 2 | (raising) | Preview renewal notice window: same big-PDF layout as Compliance | UI | ?? | After the UAT bypass; waits on Compliance's pattern |
 | | | X | OFA-B-345 | Business scenario for F-215, and the next reference date shown on the record | Functional | ?? | Waits on a design row in the next designer round |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
