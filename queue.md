@@ -59,10 +59,11 @@ Updated: 27-11-2026 16:10
 | | 1 | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | ?? | Go after UAT 5 (Muhammed 27-11); hub sends the go on "released" |
 
 
-## Shell (pointer: >> minimum page width)
+## Shell (pointer: >> SHELL-F-198 search contract)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | 2 | (new) | Search contract: plugins answer with pages' names, card titles and subtitles, never data | Doc | 1 | After SHELL-F-197 |
+| >> | 1 | SHELL-F-198 | Search contract: plugins answer with pages' names, card titles and subtitles, never data | Doc | 1 | Building |
+| | 2 | LANDING-PAGE-B-008 | The nameless greeting browser test fails on spaces around the greeting | Bug | ?? | Raised 27-11 |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
