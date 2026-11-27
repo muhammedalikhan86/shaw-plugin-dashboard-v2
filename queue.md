@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 11:52
+Updated: 2026-11-27 11:54
 
 ## Hub
 
@@ -36,7 +36,7 @@ Updated: 2026-11-27 11:52
 | | 5 | OFA-B-371 | Blank fee line on the notice: check the UAT seed first; data fix closes it | Functional | 1 | Group 5 (UAT findings, 27-11) |
 | | 5 | OFA-B-373 | A month with no cycle yet is normal: no 404 console error for cull notes | Functional | 1 | Group 5 (UAT findings, 27-11) |
 | | 5 | OFA-B-375 | Remove "The Initial OFA is prepared from Compliance's approved wording." from both prepare dialogs; board row O62 | Functional | 1 | Group 5 (UAT findings, 27-11) |
-| | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Library fix chosen (Shaw.Word 2.1.1 with a DriveId setting, Muhammed 27-11): waits for the drive ID from the app registration's owner and a TFS branch |
+| | X | OFA-F-120 | Word converter: Shaw.Word uploads to an empty drive ID | Functional | - | Shaw.Word 2.1.1 (DriveId setting) written locally, builds; waits for Muhammed's TFS branch and review, then the drive ID, then our appsetting |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
