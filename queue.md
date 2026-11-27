@@ -3,11 +3,11 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 18:03
+Updated: 2026-11-27 18:07
 
 ## Hub
 
-1. Next UAT deploy (UAT 7), hub releases it (Muhammed's go 27-11). Waits on: ADVISOR-DASHBOARD-F-176 (Portfolio and Book switch), ps2's OFA-B-382 and OFA-B-345, shell's SHELL-B-217, every fix for the full browser run's failures, then one more full run. A stuck item is left out rather than holding the release. Already in: search finds pages in all three plugins (all merged: OFA-F-243, ADVISOR-DASHBOARD-F-175, COMPLIANCE-DASHBOARD-F-056), the expanded table floor (SHELL-B-216, merged), ps2's account renumber (OFA-F-242), and whatever else merges by then. Release when the last search item merges.
+1. Next UAT deploy (UAT 7), hub releases it (Muhammed's go 27-11). Waits on: ps2's OFA-B-382 and OFA-B-345, shell's SHELL-B-217, every fix for the full browser run's failures, then one more full run. A stuck item is left out rather than holding the release. Already in: search finds pages in all three plugins (all merged: OFA-F-243, ADVISOR-DASHBOARD-F-175, COMPLIANCE-DASHBOARD-F-056), the expanded table floor (SHELL-B-216, merged), ps2's account renumber (OFA-F-242), and whatever else merges by then. Release when the last search item merges.
 2. Week of 2026-11-30, scheduled (Muhammed 27-11): Muhammed's DART retest (OFA-F-209 part 2) and the February-peak load test (OFA-F-062). Monday 2026-11-30: Muhammed sends Luke the product-correction re-ask (OFA-F-141).
 3. Next designer round, once the current sync lands: carry W47 (Field library) and the 1280 x 720 floor on the seven boards; rows owed: the board's Q13 margin note (a declined notice is not a close, Luke 27-11) to drop; OFA-B-345 (next reference date on the record); O53 board fix (Move to cull list offers "Deceased estate, no OFA" only when DART marks the estate, OFA-F-211 A3).
 4. Each test-site release: the business changelog (page and PDF) in v2 `changelogs/` with a row in `uat-notes.json`.
@@ -43,13 +43,11 @@ Updated: 2026-11-27 18:03
 | | X | OFA-B-345 | The next reference date on the record (scenario part merged) | Functional | 1 | Waits on its design row |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: SharePoint live check, after go-live |
 
-## Advisor (pointer: F-171 + F-176 built fb2b45ab, merge after the full run)
+## Advisor (pointer: >> ADVISOR-DASHBOARD-F-177 triage)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | ADVISOR-DASHBOARD-F-176 | Portfolio and the Book of business come back behind one switch: on in Development and UAT, off in Production | Functional | 3 | Built fb2b45ab with F-171; hub merges after the full run; advisor runs its business tests |
-| >> | 1 | ADVISOR-DASHBOARD-F-171 (P86) | The Dealer's Assistant's portfolio shows the picked Adviser's clients | Functional | 2 | Building |
-| | 2 | (raising) | Version-2 scenarios on the built app: 18 Portfolio/Book scenarios tagged not-built, then triaged (rewrite to test data, or a bug per real defect); plus the questionnaire column order (Platform accounts before Status) | Functional | ?? | After group 1; what's done before the final full run goes into UAT 7 |
+| >> | 2 | ADVISOR-DASHBOARD-F-177 | Version-2 scenarios on the built app (15 tagged not-built): triage, rewrite to test data or a bug per real defect; plus questionnaire column order x3, Notes column x2, S18530 | Functional | 3 | Triage; what's done before the final full run goes into UAT 7 |
 | | X | PM-114..PM-126, PM-115 | Flaky business tests | Functional | ?? | Could: revisit only if they recur |
 
 ## Compliance (pointer: idle, stand by for the final full run)
