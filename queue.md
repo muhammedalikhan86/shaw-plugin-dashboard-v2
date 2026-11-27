@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 17:09
+Updated: 2026-11-27 17:13
 
 ## Hub
 
@@ -27,13 +27,14 @@ Updated: 2026-11-27 17:09
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (Muhammed 2026-11-25) |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 
-## Portfolio Services (pointer: waiting for the full browser run's failures)
+## Portfolio Services (pointer: >> Luke's 27-11 answers)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 1 | - | Take in Luke's 27-11 answers: a declined notice is not a close, the tool does nothing, the fee stays on; joint-account signing goes to compliance 2026-12-02; the product correction is still open | Doc | ?? | Muhammed 27-11 |
 | | X | OFA-F-209 part 2 | Live DART filing check | Functional | - | Week of 2026-11-30, Muhammed's DART retest |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Week of 2026-11-30 |
-| | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
+| | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (his 27-11 reply answered the date, not the product; re-ask) |
 
 ## Portfolio Services 2 (pointer: >> OFA-B-382 State Manager count)
 
