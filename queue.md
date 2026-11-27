@@ -31,7 +31,7 @@ Updated: 27-11-2026 14:36
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | (raising) | Test logins for Act As on UAT: vic.sm, nsw.sm, qld.sm added beside national.seat | Functional | ?? | Go 27-11 |
+| >> | 1 | (raising) | Test logins for Act As on UAT: vic.sm, nsw.sm, qld.sm (with their Adviser hierarchy) and vic.da, nsw.da, qld.da (linked to Advisers), beside national.seat | Functional | ?? | Go 27-11 |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
