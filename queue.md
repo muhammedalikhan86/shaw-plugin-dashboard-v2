@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 14:14
+Updated: 27-11-2026 14:16
 
 ## Hub
 
@@ -23,11 +23,10 @@ Updated: 27-11-2026 14:14
 10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
-## Compliance (pointer: UAT developer bypass)
+## Compliance (pointer: parked 5075d434, B-163 merged 38b9a693)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | COMPLIANCE-DASHBOARD-B-163 | UAT only: developers (Development Team - Sydney) pass every role gate, front end and back end | Functional | ?? | Urgent, Muhammed 27-11; testers blocked on UAT |
 
 
 ## Portfolio Services 2 (pointer: parked b2dfc738, group 6 merged 13275c7a; rest of the queue blocked)
