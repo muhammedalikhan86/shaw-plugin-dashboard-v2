@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 14:43
+Updated: 27-11-2026 14:45
 
 ## Hub
 
@@ -56,10 +56,9 @@ Updated: 27-11-2026 14:43
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 
-## Shell (pointer: Act As finds test people on UAT)
+## Shell (pointer: idle, SHELL-F-196 on main 716b8efa)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | (raising) | UAT: Act As finds the test-data people (directory copy on UAT, Misc) | Functional | ?? | Go 27-11; advisor F-174 end-to-end waits on it |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
