@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 18:39
+Updated: 2026-11-27 18:42
 
 ## Hub
 
@@ -29,6 +29,7 @@ Updated: 2026-11-27 18:39
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| | 1 | (raising) | Seed Portfolio figures for the advisor test seats X91–X99 (holdings, Net New Money, revenue, SMA rows), like F-102/F-103 | Functional | 3 | After UAT 7; advisor B-162 reads them |
 | | X | OFA-F-209 part 2 | Live DART filing check | Functional | - | Week of 2026-11-30, Muhammed's DART retest |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Week of 2026-11-30 |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (his 27-11 reply answered the date, not the product; re-ask) |
@@ -40,11 +41,12 @@ Updated: 2026-11-27 18:39
 | | X | OFA-B-345 | The next reference date on the record (scenario part merged) | Functional | 1 | Waits on its design row |
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: SharePoint live check, after go-live |
 
-## Advisor (pointer: >> ADVISOR-DASHBOARD-F-177 triage)
+## Advisor (pointer: >> ADVISOR-DASHBOARD-F-177, finishing for UAT 7)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 2 | ADVISOR-DASHBOARD-F-177 | Version-2 scenarios on the built app (15 tagged not-built): triage, rewrite to test data or a bug per real defect; plus questionnaire column order x3, Notes column x2, S18530 | Functional | 3 | Triage; what's done before the final full run goes into UAT 7 |
+| >> | 2 | ADVISOR-DASHBOARD-F-177 | Questionnaire scenarios (Notes x2, column order x3) and the History tabs scenario on S20114 | Functional | 3 | Finishing; into UAT 7 |
+| | 3 | ADVISOR-DASHBOARD-B-162 | Book and Portfolio read the seeded figures for test people; then the 8 book scenarios are rewritten once to seeded data and the 6 blocked ones switched on | Bug | 3 | After UAT 7; waits on PS seeding |
 | | X | PM-114..PM-126, PM-115 | Flaky business tests | Functional | ?? | Could: revisit only if they recur |
 
 ## Compliance (pointer: idle, stand by for the final full run)
