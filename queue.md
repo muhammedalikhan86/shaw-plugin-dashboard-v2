@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 12:04
+Updated: 2026-11-27 12:07
 
 ## Hub
 
@@ -28,11 +28,10 @@ Updated: 2026-11-27 12:04
 |---|---|---|---|---|---|---|
 
 
-## Portfolio Services 2 (pointer: URGENT OFA-B-377, an AR number for test adviser X91 for the Annature retry; then group 5)
+## Portfolio Services 2 (pointer: OFA-B-377 merged 20613c10; group 5, the UAT findings)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 5a | OFA-B-377 | Test adviser X91 gets an AR number, so an electronic Initial OFA can be sent on UAT (Annature retry today) | Functional | 1 | Urgent: committed alone, merged first |
 | | 5 | OFA-B-369 | Notice greets "Dear Dear": the starter stays word for word, the salutation field drops its Dear | Functional | 1 | Group 5 (UAT findings, 27-11) |
 | | 5 | OFA-B-371 | Blank fee line on the notice: check the UAT seed first; data fix closes it | Functional | 1 | Group 5 (UAT findings, 27-11) |
 | | 5 | OFA-B-373 | A month with no cycle yet is normal: no 404 console error for cull notes | Functional | 1 | Group 5 (UAT findings, 27-11) |
