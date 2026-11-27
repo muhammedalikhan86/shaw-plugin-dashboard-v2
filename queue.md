@@ -3,13 +3,13 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 13:22
+Updated: 2026-11-27 13:34
 
 ## Hub
 
 1. UAT redeploy today, 2026-11-27 (Muhammed), after the morning window: Portfolio Services hold lifted: PS groups 70-72 merged (a2b449d0) (ps2's P0 group, OFA-F-211, OFA-F-209 part 1), Compliance (B-158 to B-162, merged 470dbac4), advisor-dashboard (F-144 timeline, A5), and PS groups 70-72 if their business run passes. After it: update-uat-status.ps1, then update-uat-data.ps1 in v2, then commit and push.
-2a. Annature and Chrome test: PAUSED (Muhammed, 2026-11-27), continues later. Deployed to UAT; the retry stopped at a 502 wrapping IIS 401.1 from the Annature interface (nothing sent). Waits on the IIS log line from sic2iws1. UAT keeps Signing:BaseUrl set (sends fail safely, redirect to the UAT mailbox stays on). The holding revert 7ffc9fd8 (merged 31dd33f4) cancels c2bf171b; when Muhammed ends the test, the closing step is a revert of 7ffc9fd8, then a UAT deploy. Retry 13:19 after the Annature pool identity change: same 401.1; next checks: Security event 4625, loopback (nslookup vs ipconfig, BackConnectionHostNames).
-2b. OFA-F-120: UAT ShawWord:Enabled=true merged d8fe2aa2 (PS group 77); ships in the next UAT deploy with ps2's group 5. After it: one ShawWord notice on UAT, then F-120 Done.
+2a. Annature and Chrome test: PAUSED (Muhammed, 2026-11-27), continues later. Deployed to UAT; the retry stopped at a 502 wrapping IIS 401.1 from the Annature interface (nothing sent). Waits on the IIS log line from sic2iws1. UAT keeps Signing:BaseUrl set (sends fail safely, redirect to the UAT mailbox stays on). The holding revert 7ffc9fd8 (merged 31dd33f4) cancels c2bf171b; when Muhammed ends the test, the closing step is a revert of 7ffc9fd8, then a UAT deploy. Retry 13:19 after the Annature pool identity change: same 401.1; next checks: Security event 4625, loopback (nslookup vs ipconfig, BackConnectionHostNames). 13:31: loopback fixed (BackConnectionHostNames); now 403 from the Annature allow-list (Callers:Allowed holds only SHAW\gMSA_ShawApps$; UAT calls as SHAW\gMSA_Intranet$). Waits on Muhammed's pick.
+2b. Next UAT deploy, ready on main 7289dd83 (after the push): Portfolio Services with ps2 group 5 (B-369, B-371, B-373, B-375) and the UAT Word converter on (d8fe2aa2). Before it: the business changelog in v2. After it: one ShawWord notice on UAT, then OFA-F-120 Done; update-uat-status.ps1 then update-uat-data.ps1.
 2. Muhammed opens one renewal notice PDF on the test site (the Chrome check, REL-015).
 3. Each test-site release: before it, the business changelog (how it works, how it looks, switched off or deferred) as a PDF in v2 `changelogs/<date>-test-site-update.pdf` (and its page `.html`) with a release row in `uat-notes.json` `releases`.
 4. Code freeze 2026-12-11. Work order: UAT bugs from the OFA Team, then what helps testers, then other functional items, then look and feel. No idle worker.
@@ -29,14 +29,11 @@ Updated: 2026-11-27 13:22
 |---|---|---|---|---|---|---|
 
 
-## Portfolio Services 2 (pointer: group 5 committed 79ff80d7, main merged in d87ea864; shell checks in a stack window next)
+## Portfolio Services 2 (pointer: group 6, OFA-F-238; group 5 merged 7289dd83)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | 5 | OFA-B-369 | Notice greets "Dear Dear": the starter stays word for word, the salutation field drops its Dear | Functional | 1 | Group 5 (UAT findings, 27-11) |
-| | 5 | OFA-B-371 | Blank fee line on the notice: check the UAT seed first; data fix closes it | Functional | 1 | Group 5 (UAT findings, 27-11) |
-| | 5 | OFA-B-373 | A month with no cycle yet is normal: no 404 console error for cull notes | Functional | 1 | Group 5 (UAT findings, 27-11) |
-| | 5 | OFA-B-375 | Remove "The Initial OFA is prepared from Compliance's approved wording." from both prepare dialogs; board row O62 | Functional | 1 | Group 5 (UAT findings, 27-11) |
+| >> | 6 | OFA-F-238 | The wording preview's sample salutation follows the wording's slot, so a renewal notice preview doesn't say Dear Dear | Functional | 1 | Group 6
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
