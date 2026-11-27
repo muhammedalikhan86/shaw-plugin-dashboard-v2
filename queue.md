@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 16:10
+Updated: 27-11-2026 16:12
 
 ## Hub
 
@@ -21,12 +21,11 @@ Updated: 27-11-2026 16:10
 10. Notice windows 90% tall with the title beside the PDF: compliance e21dd12e and ps OFA-B-381 e4b009c2 merged; @review-M40 and @review-O63 x2 on the shell passed (8/0), board 4/0. Compliance raises the "Dear Elio" salutation red as an X item after the release.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
-## Compliance (pointer: >> Field library dialog)
+## Compliance (pointer: >> F-056 search finds pages)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | 2 | (new) | Shell search finds pages: names, card titles and subtitles; existing data search removed | Functional | ?? | After the Field library group |
-| >> | 1 | (new) | Field library: frozen header sits flush at the top (build bug), header frozen on the board too, dialog wider, Used by column twice as wide | Look | ?? | Muhammed's direct ask 27-11 |
+| >> | 1 | COMPLIANCE-DASHBOARD-F-056 | Shell search finds pages: names, card titles and subtitles; existing data search removed | Functional | ?? | Building |
 
 
 ## Portfolio Services 2 (pointer: artboard account-number clash; OFA-F-240 merged 0ef84c17)
