@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 14:16
+Updated: 27-11-2026 14:18
 
 ## Hub
 
@@ -23,10 +23,11 @@ Updated: 27-11-2026 14:16
 10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
-## Compliance (pointer: parked 5075d434, B-163 merged 38b9a693)
+## Compliance (pointer: bigger PDF in notice windows)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 1 | (raising) | Notice PDF windows: PDF fills the window, details in a left column; board first, no designer | UI | ?? | Muhammed 27-11; sets the pattern for ps |
 
 
 ## Portfolio Services 2 (pointer: parked b2dfc738, group 6 merged 13275c7a; rest of the queue blocked)
@@ -51,6 +52,7 @@ Updated: 27-11-2026 14:16
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | >> | 1 | (raising) | UAT only: developers (Development Team - Sydney) pass every role gate, front end and back end | Functional | ?? | Urgent, Muhammed 27-11; testers blocked on UAT |
+| | 2 | (raising) | Preview renewal notice window: same big-PDF layout as Compliance | UI | ?? | After the UAT bypass; waits on Compliance's pattern |
 | | | X | OFA-B-345 | Business scenario for F-215, and the next reference date shown on the record | Functional | ?? | Waits on a design row in the next designer round |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 | | X | OFA-F-209 part 2 | Live DART filing check (part 1, the signing-status reader, moved to ps2) | Functional | - | Blocked: DART retest after the 2nd UAT release |
