@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 10:53
+Updated: 2026-11-27 11:01
 
 ## Hub
 
@@ -54,15 +54,13 @@ Updated: 2026-11-27 10:53
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: group 73: REL-029, REL-028, B-363, then the UAT BaseUrl commit last)
+## Portfolio Services (pointer: group 74: OFA-B-367 next)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
 | | X | (PS raises) | The make-up register reset loads TestData.dll without Shell.TestKit.dll beside it, so it still creates in the old place | Functional | ?? | Not tonight |
-| >> | 73 | REL-029 | Every Annature email on UAT goes to the UAT mailbox (signers and viewers swapped, mobiles cleared), with start-up guards | Functional | 2 | Group 73a, urgent: first, then the UAT Signing:BaseUrl commit |
-| >> | 73 | UAT `Signing:BaseUrl` | Separate settings commit: UAT `Signing:BaseUrl` set to the live Annature address for the Annature and Chrome test | Functional | 1 | Group 73a, urgent; after REL-029 |
-| >> | 73 | REL-028 | Gated prod settings: every email to the UAT mailbox until go-live, mail hold on, timed jobs off until go-live (own switch), guard tests, runbook fix | Functional | 3 | Group 73b, after 73a; blocks the prod release |
-| >> | 73 | OFA-B-363 | P83 "Issuing the month sends the signing requests" needs the artboards-only line its neighbour has | Functional | 1 | Group 73b |
+| >> | 73 | UAT `Signing:BaseUrl` | Separate settings commit: UAT `Signing:BaseUrl` set to the live Annature address for the Annature and Chrome test | Functional | 1 | Held on the PS branch (30efcbf9); merges when Muhammed schedules the Annature test |
+| >> | 74 | OFA-B-367 | 4 .NET tests build renewals from today minus 140 days and went past Expiry Date today; calendar drift, not group 73 | Functional | ?? | Group 74 |
 | | 70 | - | Handoff and test runbook: Compliance ("Renewal notice", B-157) and Advisor ("Signed renewal notice") now label OFAREN | Functional | 0 | After B-157 is on main |
 | | X | OFA-B-345 | Business scenario for F-215, and the next reference date shown on the record | Functional | ?? | Waits on a design row in the next designer round |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |

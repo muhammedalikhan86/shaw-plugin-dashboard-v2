@@ -132,10 +132,10 @@
    ],
    "stage": "deploy",
    "start": "2026-11-23",
-   "pointsDone": 384.0,
-   "pointsRemaining": 45.0,
-   "pointsTotal": 429.0,
-   "itemsRemaining": 21,
+   "pointsDone": 390.0,
+   "pointsRemaining": 41.0,
+   "pointsTotal": 431.0,
+   "itemsRemaining": 19,
    "itemsRemainingUnsized": [
     "REL-022",
     "REL-024",
@@ -303,8 +303,8 @@
    },
    {
     "date": "2026-11-27",
-    "pointsDone": 2367.0,
-    "pointsDoneThatDay": 26.0
+    "pointsDone": 2373.0,
+    "pointsDoneThatDay": 32.0
    }
   ],
   "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 53 points: 46 finished before that date and 7 marked Done in the PMBooks with no date."
@@ -355,8 +355,8 @@
    "basis": "critical path: the latest date of the work still open (User Acceptance Testing). Component lines end at their build (buildDoneOn); every item raised after 2026-11-23 counts in User Acceptance Testing, whatever its component. OFA work only: Plugin0 (the component library) is left out, finished and remaining.",
    "rateLast10": 113.0,
    "rateWhole": 180.34,
-   "pointsRemaining": 78.0,
-   "itemsRemaining": 30
+   "pointsRemaining": 74.0,
+   "itemsRemaining": 28
   }
  },
  "milestones": [
@@ -439,7 +439,7 @@
   }
  ],
  "seriesNote": "The daily record starts on 2026-10-28, so it leaves out 38 points finished before that date. Plugin0 (the component library) is not OFA work and is left out of every figure.",
- "updatedAt": "2026-11-27T10:35:16+11:00",
+ "updatedAt": "2026-11-27T11:03:04+11:00",
  "log": [
   {
    "at": "2026-11-14T16:21:15+11:00",
@@ -3105,6 +3105,12 @@
    "change": "Portfolio Services groups 70-72 merged: notes carry files on the reports and the Initial OFA send, an accepted answer updates the arrangement, production Chrome path, test fixes; two follow-ups raised (B-363, B-365)",
    "pointsDone": 20.0,
    "pointsRaised": 22.0
+  },
+  {
+   "at": "2026-11-27T11:03:04+11:00",
+   "change": "Portfolio Services group 73 merged: on the live site every email goes to the test inbox and timed jobs stay off until go-live; on the test site every e-signing email goes to the test inbox; one test fix. The test site switch-on for e-signing waits for the joint test. One follow-up raised (B-367)",
+   "pointsDone": 6.0,
+   "pointsRaised": 2.0
   }
  ],
  "foundDuringBuild": {
@@ -3248,7 +3254,14 @@
    "size": 3,
    "phase": "Go-live (set-up until sign-off, then switch on)",
    "owner": "Development team",
-   "status": "Open"
+   "status": "Done"
+  },
+  {
+   "item": "Test site: every e-signing email goes to the test inbox, ready for the e-signing test",
+   "size": 2,
+   "phase": "Go-live (set-up until sign-off, then switch on)",
+   "owner": "Development team",
+   "status": "Done"
   },
   {
    "item": "Live release, labelled and recorded",
