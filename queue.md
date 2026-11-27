@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 14:08
+Updated: 27-11-2026 14:09
 
 ## Hub
 
@@ -23,10 +23,11 @@ Updated: 27-11-2026 14:08
 10. Owed: npm run test:business:coverage and make design-checks, in a machine window.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
-## Compliance (pointer: idle, queue empty; W46 done in the 27-11 round)
+## Compliance (pointer: UAT developer bypass)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 1 | (raising) | UAT only: developers (Development Team - Sydney) pass every role gate, front end and back end | Functional | ?? | Urgent, Muhammed 27-11; testers blocked on UAT |
 
 
 ## Portfolio Services 2 (pointer: parked b2dfc738, group 6 merged 13275c7a; rest of the queue blocked)
@@ -36,19 +37,21 @@ Updated: 27-11-2026 14:08
 | | X | OFA-F-032 | Attachment mover | Functional | - | Blocked: Muhammed's SharePoint live check, after go-live |
 
 
-## Advisor (pointer: parked 1759b4e1; F-171 held by Muhammed, nothing else queued)
+## Advisor (pointer: UAT developer bypass; F-171 held)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 1 | (raising) | UAT only: developers (Development Team - Sydney) pass every role gate, front end and back end | Functional | ?? | Urgent, Muhammed 27-11; testers blocked on UAT |
 | | X | PM-114..PM-126 | 13 flaky business tests: find each cause, fix the wait or locator; shared-support causes go to Shell | Functional | ?? | Open, Could: not reproduced in A4 (evidence in the PMBook); revisit only if it recurs |
 | | X | PM-115 | SqlReaderBaseCancellationTests: looped run under load to prove the missed-cancel cause | Functional | ?? | Open, Could: not reproduced in A4 (evidence in the PMBook); revisit only if it recurs |
 | | X | F-171 (P86) | The DA (Dealer's Assistant) seat's portfolio shows the picked Adviser's clients (Tobias, not Hannah); the designer has drawn it (synced 1ebe768e) | Functional | 2 | Waits: Power BI pages hidden until after the OFA work |
 
 
-## Portfolio Services (pointer: parked 8765b6c3, group 77 merged d8fe2aa2; rest of the queue blocked)
+## Portfolio Services (pointer: UAT developer bypass, incl. the preview 403)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 1 | (raising) | UAT only: developers (Development Team - Sydney) pass every role gate, front end and back end | Functional | ?? | Urgent, Muhammed 27-11; testers blocked on UAT |
 | | | X | OFA-B-345 | Business scenario for F-215, and the next reference date shown on the record | Functional | ?? | Waits on a design row in the next designer round |
 | | X | OFA-F-141 | Correct a product, logged in the trail (plus migration 0222) | Functional | 5 | Blocked: Luke (a or b) |
 | | X | OFA-F-209 part 2 | Live DART filing check (part 1, the signing-status reader, moved to ps2) | Functional | - | Blocked: DART retest after the 2nd UAT release |
@@ -56,9 +59,10 @@ Updated: 27-11-2026 14:08
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 
-## Shell (pointer: parked afa9189a, localdb move done)
+## Shell (pointer: UAT developer bypass; SHELL-ADR-031 decision 8 first)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
+| >> | 1 | (raising) | UAT only: developers (Development Team - Sydney) pass every role gate, front end and back end | Functional | ?? | Urgent, Muhammed 27-11; testers blocked on UAT |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
