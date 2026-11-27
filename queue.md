@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 14:06
+Updated: 27-11-2026 14:08
 
 ## Hub
 
@@ -56,10 +56,9 @@ Updated: 27-11-2026 14:06
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
 
 
-## Shell (pointer: running the localdb move, approved by Muhammed 27-11)
+## Shell (pointer: parked afa9189a, localdb move done)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 6 | - | move-localdb-files.ps1: dry run done (34 DBs, 1.71 GB); make clean-localdb then -Apply when no worker runs .NET tests (hub schedules), every stack down | Functional | ?? | Go given 27-11; all stacks down |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
