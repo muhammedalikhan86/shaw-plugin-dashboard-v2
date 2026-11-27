@@ -60,6 +60,6 @@ Updated: 27-11-2026 15:58
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| >> | 1 | SHELL-F-(new) | Minimum page width (default 1280px): below it the page scrolls sideways instead of squashing | Look | ?? | Muhammed's direct ask 27-11 |
+| >> | 1 | SHELL-F-(new) | Minimum page width 1280px (confirmed): below it the page scrolls sideways instead of squashing | Look | ?? | Muhammed's direct ask 27-11 |
 | | X | PM-059 | No rate limiting | Functional | - | Kept, not now (Muhammed) |
 | | X | SHELL-F-176 | Move committed credentials to a secrets store | Functional | 3 | Held until after go-live (user, 2026-11-25) |
