@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 27-11-2026 15:22
+Updated: 27-11-2026 15:34
 
 ## Hub
 
@@ -21,11 +21,10 @@ Updated: 27-11-2026 15:22
 10. Notice windows 90% tall with the title beside the PDF: compliance e21dd12e and ps OFA-B-381 e4b009c2 merged; @review-M40 and @review-O63 x2 on the shell passed (8/0), board 4/0. Compliance raises the "Dear Elio" salutation red as an X item after the release.
 12. End sweep, last: after the designer's work is synced, built and hand-tested; every parity check.
 
-## Compliance (pointer: parked, notice window merged e21dd12e)
+## Compliance (pointer: parked, B-165 merged)
 
 | # | Grp | ID | Item | Category | Size | Status |
 |---|---|---|---|---|---|---|
-| | 1 | COMPLIANCE-DASHBOARD-B-165 | "A notice opens as it was sent" expects "Dear Elio" but the data says "Elio": check against the wording rule, record which is wrong | Functional | ?? | Go after UAT 5 (Muhammed 27-11); hub sends the go on "released" |
 
 
 ## Portfolio Services 2 (pointer: artboard account-number clash; OFA-F-240 merged 0ef84c17)
