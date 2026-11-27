@@ -3,7 +3,7 @@
 What each worker does next, in order. Forward view only: what is next, never what is behind. Ordered from `docs/leftovers.md` and the PMBooks' open rows; finished work is recorded only in its PMBook.
 **>>** = being worked on now. Grp = group, lowest runs first; X = waiting, grouped once it is free.
 
-Updated: 2026-11-27 11:45
+Updated: 2026-11-27 11:48
 
 ## Hub
 
@@ -67,6 +67,9 @@ Updated: 2026-11-27 11:45
 | | X | OFA-F-209 part 2 | Live DART filing check (part 1, the signing-status reader, moved to ps2) | Functional | - | Blocked: DART retest after the 2nd UAT release |
 | | X | OFA-F-062 | February-peak load test | Functional | 3 | Blocked: test site after the live deploy (Muhammed) |
 | | X | - | Rename local databases to `ShawPortal-OngoingFeeArrangements-*` | Functional | - | Blocked: when Muhammed says |
+| | 75 | OFA-B-369 | Notice greets "Dear Dear": the starter stays word for word, the salutation field drops its Dear | 1 | After group 74 |
+| | 75 | OFA-B-371 | Blank fee line on the notice: check the UAT seed first; data fix closes it | 1 | After group 74 |
+| | 75 | OFA-B-373 | A month with no cycle yet is normal: no 404 console error for cull notes | 1 | After group 74 |
 
 
 ## Shell (pointer: parked f5cb6ff6 (-Y done, SHELL-F-194); the localdb move waits for a quiet moment)
